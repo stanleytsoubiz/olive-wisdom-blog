@@ -1,0 +1,85 @@
+name: "🏆 智能圖片品質自動更新"
+
+on:
+  # 每週一凌晨 3:00 (台北時間 = UTC+8，所以 cron 設 19:00 UTC 前一天)
+  schedule:
+    - cron: '0 19 * * 0'   # 每週日 UTC 19:00 = 週一 03:00 台北時間
+
+  # 手動觸發（支援 DRY_RUN 測試）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'DRY_RUN：只分析不替換（true/false）'
+        required: false
+        default: 'false'
+      score_threshold:
+        description: '品質閾值（低於此分數觸發替換，預設 6）'
+        required: false
+        default: '6'
+      max_replace:
+        description: '單次最多替換張數（預設 5）'
+        required: false
+        default: '5'
+
+jobs:
+  auto-refresh-images:
+    name: "圖片品質評分 & 自動補強"
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: "📥 Checkout 倉庫"
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: "⚙️ 設定 Node.js 22 (LTS)"
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: "🏆 執行智能圖片評分 & 自動替換"
+        env:
+          SKYWORK_API_KEY:  ${{ secrets.SKYWORK_API_KEY }}
+          GH_PAT:           ${{ secrets.GH_PAT }}
+          DRY_RUN:          ${{ github.event.inputs.dry_run || 'false' }}
+          SCORE_THRESHOLD:  ${{ github.event.inputs.score_threshold || '6' }}
+          MAX_REPLACE:      ${{ github.event.inputs.max_replace || '5' }}
+          REPO_OWNER:       ${{ github.repository_owner }}
+          REPO_NAME:        ${{ github.event.repository.name }}
+          # 告訴腳本改用本地 git 模式（寫檔後由 workflow 推送）
+          USE_GIT_COMMIT:   "true"
+        run: node scripts/auto-refresh-images.js
+
+      - name: "📤 Git Commit & Push images.json"
+        if: success()
+        run: |
+          if [ -f /tmp/images_updated.json ]; then
+            cp /tmp/images_updated.json public/data/images.json
+            git config user.name  "Olive Wisdom Bot"
+            git config user.email "bot@olive-wisdom.com"
+            git add public/data/images.json
+            git diff --cached --quiet || git commit -m "🤖 auto: 智能圖片品質更新 $(date '+%Y-%m-%d')"
+            git push
+            echo "✅ images.json 已 commit 並推送"
+          else
+            echo "ℹ️ 無更新檔案，跳過 commit"
+          fi
+
+      - name: "🚀 觸發 Cloudflare Pages 重新部署"
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch origin main
+          BEHIND=$(git rev-list HEAD..origin/main --count)
+          if [ "$BEHIND" -gt "0" ]; then
+            echo "✅ 偵測到更新，Cloudflare Pages 將自動重新部署"
+            git pull origin main
+          else
+            echo "ℹ️ 已是最新版本"
+          fi

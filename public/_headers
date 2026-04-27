@@ -1,0 +1,55 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-XSS-Protection: 1; mode=block
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# ── JS/CSS/靜態資源（hash 名稱 = immutable）────────────────────
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  Vary: Accept-Encoding
+
+# ── 圖片快取 1 年 ──────────────────────────────────────────────
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── 字型快取 1 年 ──────────────────────────────────────────────
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── 資料 JSON：短快取（Admin 更新 5 分鐘內生效）──────────────
+/data/*.json
+  Cache-Control: public, max-age=300, must-revalidate
+  Vary: Accept-Encoding
+
+# ── HTML + 入口：永不快取 ──────────────────────────────────────
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Link: </hero-grove.webp>; rel=preload; as=image; type="image/webp"
+
+# ── enhancements.js 短快取 ─────────────────────────────────────
+/enhancements.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# ── Admin：不快取、不索引 ──────────────────────────────────────
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store, no-cache

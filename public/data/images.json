@@ -1,0 +1,185 @@
+{
+  "_meta": {
+    "version": "2.0.0",
+    "lastUpdated": "2026-04-19",
+    "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
+    "adminEditable": true,
+    "schema": "url + alt + source + prompt + generated_at + quality_score",
+    "last_updated": "2026-04-17T08:55:29.344Z",
+    "auto_refresh": {
+      "last_run": "2026-04-17T08:55:29.344Z",
+      "replaced": 16,
+      "score_threshold": 7.5
+    },
+    "lastSelectedUpdate": {
+      "date": "2026-04-19T01:30:14.992Z",
+      "count": 13,
+      "keys": [
+        "posts::polyphenols-sirt1-longevity-2026",
+        "posts::evoo-buying-guide-2026",
+        "posts::mediterranean-diet-anti-aging-women-2026",
+        "posts::olive-tree-ancient-civilization-heritage",
+        "posts::oleocanthal-anti-inflammation-brain-protection",
+        "posts::hydroxytyrosol-brain-cognition-memory",
+        "posts::olive-oil-terroir-spain-greece-italy",
+        "posts::squalene-olive-oil-skin-beauty-molecular",
+        "posts::oleocanthal-pungency-anti-inflammation",
+        "posts::morning-ritual-evoo-metabolism",
+        "posts::evoo-sensory-evaluation-ioc-standards",
+        "posts::olive-oil-fraud-detection-authentic-vs-fake",
+        "posts::olive-oil-polyphenol-content-how-to-verify"
+      ]
+    },
+    "_selectedCommitMsg": "update 13 images: 多酚與 SIRT1：橄欖油如何啟, 特級初榨橄欖油完全選購指南：從產, 地中海飲食與女性抗衰老：科學"
+  },
+  "hero": {
+    "homepage": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/84d4623e5aee4dda99d6637b99ac31c7_94f26.png",
+      "alt": "知橄生活 — 以科學與美學，精煉您的健康時光",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "stunning overhead flat lay premium olive oil bottle, fresh olives on branch, mediterranean herbs, warm golden light, luxury food photography, editorial style, dark marble background",
+      "generated_at": "2026-04-17",
+      "quality_score": 8
+    },
+    "blog": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/43fae6b928664e1b91fb8e62351047b9_f427d.png",
+      "alt": "橄欖油知識庫",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "beautiful olive grove rows morning mist, golden hour light filtering leaves, tuscany landscape, aerial perspective, travel food photography, cinematic wide angle",
+      "generated_at": "2026-04-17",
+      "quality_score": 8
+    },
+    "about": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/c57c8276f37a4a2abd4a0d7a1bacc589_d0cfd.png",
+      "alt": "關於知橄生活",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "close-up fresh pressed olive oil golden surface ripples, mediterranean lifestyle, knowledge elegance concept, warm editorial tone, fine dining photography",
+      "generated_at": "2026-04-17",
+      "quality_score": 8
+    }
+  },
+  "posts": {
+    "polyphenols-sirt1-longevity-2026": {
+      "url": "https://images.unsplash.com/photo-1738944910367-1544d7c1184a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1200",
+      "alt": "多酚與 SIRT1：橄欖油如何啟動長壽基因的科學解析",
+      "credit": "Unsplash",
+      "source": "unsplash",
+      "generated_at": "2026-04-19",
+      "quality_score": 9.0
+    },
+    "evoo-buying-guide-2026": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/ce0f5566628147188ebcc33534f7e175_4c1b0.png",
+      "alt": "特級初榨橄欖油完全選購指南",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "curated premium extra virgin olive oil bottles collection, elegant retail display, dark glass artisan bottles, warm luxury product photography, golden hour light, food styling",
+      "generated_at": "2026-04-17",
+      "quality_score": 8
+    },
+    "mediterranean-diet-anti-aging-women-2026": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/4e13ed9b8d55434daf1db0fe2d809af1_7e605.png",
+      "alt": "地中海飲食與女性抗衰老",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "vibrant mediterranean table spread, colorful vegetables fish olive oil herbs, elegant woman dining, anti-aging lifestyle, warm afternoon light, food lifestyle photography",
+      "generated_at": "2026-04-17",
+      "quality_score": 9.5
+    },
+    "olive-tree-ancient-civilization-heritage": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/7c6e503d6ec349d6aa0aa91b5e992216_9be28.png",
+      "alt": "橄欖樹的不死傳說",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "ancient gnarled olive tree two thousand years old, dramatic golden sunset, stone wall ruins, historical Mediterranean civilization, epic landscape photography, cinematic atmosphere",
+      "generated_at": "2026-04-17",
+      "quality_score": 10
+    },
+    "oleocanthal-anti-inflammation-brain-protection": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/0b12fe98ad674377bb5c6294cd09f2fc_d1c42.png",
+      "alt": "油橄欖醛的抗炎密碼",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "human brain silhouette glowing olive green light, anti-inflammation shield, neuroscience visualization, mediterranean olive branch overlay, dramatic dark background, artistic medical photography",
+      "generated_at": "2026-04-17",
+      "quality_score": 9.5
+    },
+    "hydroxytyrosol-brain-cognition-memory": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/652adb38b9734a52bb8924925390f29d_3ef5f.png",
+      "alt": "羥基酪醇與大腦記憶",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "neurons firing golden light, olive oil molecular structure overlay, brain cognition enhancement, glowing synapses, olive green gold tones, scientific macro photography, harvard lab aesthetic",
+      "generated_at": "2026-04-17",
+      "quality_score": 9
+    },
+    "olive-oil-terroir-spain-greece-italy": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/21efe059834d48fdb33d24f0285fb2de_fe61b.png",
+      "alt": "橄欖油的風土密碼",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "three mediterranean landscapes montage, olive grove terroir, Spain Greece Italy landmarks, golden sunset over ancient olive trees, travel food photography, cinematic wide shot",
+      "generated_at": "2026-04-17",
+      "quality_score": 10
+    },
+    "squalene-olive-oil-skin-beauty-molecular": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/6121d0fbc8a3466fb8557d5fc8af1e45_0f0b7.png",
+      "alt": "橄欖油護膚的分子美學",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "woman luminous glowing skin, drops golden olive oil on cheek, beauty molecular concept, squalene skin barrier, luxury beauty photography, soft diffused lighting, elegance",
+      "generated_at": "2026-04-17",
+      "quality_score": 10
+    },
+    "oleocanthal-pungency-anti-inflammation": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/5be6f88930b24b40bb22796d30142dd3_86b5d.png",
+      "alt": "橄欖油辣喉感背後的分子秘密",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "close-up fresh green olive being cold-pressed, golden-green oil droplet falling, macro photography, dark moody background, pungent sensation concept, cinematic dramatic lighting",
+      "generated_at": "2026-04-17",
+      "quality_score": 8
+    },
+    "morning-ritual-evoo-metabolism": {
+      "url": "https://images.unsplash.com/photo-1515332362415-ee763c974cce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1200",
+      "alt": "每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？",
+      "credit": "Unsplash",
+      "source": "unsplash",
+      "generated_at": "2026-04-19",
+      "quality_score": 9.0
+    },
+    "evoo-sensory-evaluation-ioc-standards": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/1bf7c22a57b7469d8d47e9ec5ade4473_dfdf0.png",
+      "alt": "橄欖油感官評鑑 IOC 標準",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "professional olive oil tasting, expert smelling cobalt blue glass, sensory evaluation, white tablecloth, warm studio lighting, sommelier aesthetic, food photography",
+      "generated_at": "2026-04-17",
+      "quality_score": 9
+    },
+    "olive-oil-fraud-detection-authentic-vs-fake": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/5f267745bd334f2c8c472bbaba2b61f2_db346.png",
+      "alt": "橄欖油真假辨別",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "two olive oil bottles comparison authentic vs fake, magnifying glass revealing truth, laboratory forensic concept, dramatic split lighting, yellow warning tones, investigative photography",
+      "generated_at": "2026-04-17",
+      "quality_score": 9.5
+    },
+    "olive-oil-polyphenol-content-how-to-verify": {
+      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/acd68586463e4e9e8717cee51f43ba5e_2c82d.png",
+      "alt": "橄欖油多酚含量驗證",
+      "credit": "Unsplash",
+      "source": "skywork_ai",
+      "prompt": "laboratory testing olive oil samples, polyphenol analysis equipment, scientific glass tubes golden liquid, precision measurement, clean clinical food science photography",
+      "generated_at": "2026-04-17",
+      "quality_score": 9
+    }
+  },
+  "fallback": {
+    "post": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
+    "hero": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1920&auto=format&fit=crop&q=80"
+  }
+}

@@ -1,0 +1,47 @@
+name: 自動同步文章並部署
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/posts/**'   # 任何 Markdown 文章變動觸發
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync articles to JS bundle
+        run: python3 scripts/sync-articles.py
+
+      - name: Check if bundle changed
+        id: diff
+        run: |
+          git diff --quiet public/assets/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit updated bundle
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add public/assets/
+          git commit -m "🤖 自動同步：更新前台文章資料 [skip ci]"
+          git push
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=olive-wisdom --branch=main

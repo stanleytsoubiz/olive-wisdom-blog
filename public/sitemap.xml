@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- 主要頁面 -->
+  <url><loc>https://olive-wisdom.com/</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://olive-wisdom.com/about</loc><lastmod>2026-04-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <!-- 欄目頁面 -->
+  <url><loc>https://olive-wisdom.com/heritage</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://olive-wisdom.com/science</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://olive-wisdom.com/selection</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://olive-wisdom.com/lifestyle</loc><lastmod>2026-04-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <!-- 文章頁面 -->
+  <url><loc>https://olive-wisdom.com/article/olive-tree-ancient-civilization-heritage</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/hydroxytyrosol-brain-cognition-memory</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/oleocanthal-anti-inflammation-brain-protection</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/oleocanthal-pungency-anti-inflammation</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/polyphenols-sirt1-longevity-2026</loc><lastmod>2026-04-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/evoo-sensory-evaluation-ioc-standards</loc><lastmod>2026-04-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/olive-oil-fraud-detection-authentic-vs-fake</loc><lastmod>2026-04-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/olive-oil-polyphenol-content-how-to-verify</loc><lastmod>2026-04-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/evoo-buying-guide-2026</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/morning-ritual-evoo-metabolism</loc><lastmod>2026-04-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/olive-oil-terroir-spain-greece-italy</loc><lastmod>2026-04-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/squalene-olive-oil-skin-beauty-molecular</loc><lastmod>2026-04-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olive-wisdom.com/article/mediterranean-diet-anti-aging-women-2026</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Block AI training bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Sitemap declaration
+Sitemap: https://olive-wisdom.com/sitemap.xml
