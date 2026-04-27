@@ -1,9 +1,7 @@
-name: "Deploy Original SPA to Cloudflare Pages"
+name: "Build and Deploy Next.js to Cloudflare Pages"
 on:
   push:
     branches: [main]
-    paths:
-      - 'public/**'
   workflow_dispatch:
 
 jobs:
@@ -19,20 +17,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '18'
+          cache: 'npm'
 
-      - name: Install Wrangler
-        run: npm install -g wrangler@latest
+      - name: Install dependencies
+        run: npm install
 
-      - name: List public/ contents
-        run: ls -la public/ && ls -la public/assets/
+      - name: Build Next.js (OpenNext)
+        run: npm run build:cf
 
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          wrangler pages deploy public \
+          npx wrangler pages deploy .open-next \
             --project-name olive-wisdom \
             --branch main \
             --commit-dirty=true
+          --commit-dirty=true

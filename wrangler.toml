@@ -1,6 +1,7 @@
-name = "olive-wisdom-blog"
+name = "olive-wisdom"
 compatibility_date = "2024-09-23"
-pages_build_output_dir = "public"
+pages_build_output_dir = ".open-next"
 
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://olive-wisdom.com"
+
