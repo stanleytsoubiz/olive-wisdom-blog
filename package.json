@@ -14,7 +14,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.43.0",
     "gray-matter": "^4.0.3",
-    "next": "14.3.0",
+    "next": "14.2.21",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -36,3 +36,4 @@
     "node": ">=18.0.0"
   }
 }
+
