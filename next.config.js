@@ -14,28 +14,6 @@ const nextConfig = {
     minimumCacheTTL: 86400,     // 1 day cache
   },
 
-  // ── Security & performance headers ───────────────────────────────────────
-  // Note: static export ignores headers() in next.config.js. 
-  // We rely on public/_headers and public/_redirects for Cloudflare.
-
-  // ── Build tolerances ──────────────────────────────────────────────────────
-  typescript: { ignoreBuildErrors: true },
-  eslint:     { ignoreDuringBuilds: true },
-};
-
-module.exports = nextConfig;
-icrophone=(), geolocation=()' },
-        ],
-      },
-      {
-        source: '/(.*)\.(png|jpg|jpeg|webp|avif|svg|ico|woff2)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-    ];
-  },
-
   // ── Build tolerances ──────────────────────────────────────────────────────
   typescript: { ignoreBuildErrors: true },
   eslint:     { ignoreDuringBuilds: true },
