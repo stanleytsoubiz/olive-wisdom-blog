@@ -8,6 +8,13 @@ coverImage: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200
 author: "Olive Wisdom Editorial"
 readTime: 8
 tags: ["EVOO", "Polyphenols", "Buying Guide", "IOC Standards", "2026 Trends"]
+faq:
+  - q: "What is the minimum polyphenol content I should look for in EVOO?"
+    a: "According to EFSA health claim standards, EVOO needs to contain at least 250mg/kg total polyphenols to deliver measurable cardiovascular protection (specifically 5mg/day of hydroxytyrosol and its derivatives). However, for maximum benefit, look for oils with 400-800mg/kg. Top-tier oils certified by NYIOOC Gold Award winners often exceed 500mg/kg. Always request a Certificate of Analysis (CoA) from the supplier to verify polyphenol content before purchasing."
+  - q: "How long does high-polyphenol EVOO stay fresh after opening?"
+    a: "After opening, high-quality EVOO should ideally be consumed within 60-90 days to preserve maximum polyphenol content. Research shows polyphenol levels drop by approximately 40% within 3 months of opening when stored at room temperature. To extend freshness: store in a dark, cool location (ideally 15-18°C), keep the cap tightly sealed after each use, avoid storing near heat sources like stovetops, and consider purchasing smaller bottles (250-500ml) if you don't use olive oil frequently."
+  - q: "Is Italian olive oil really better than Spanish or Greek?"
+    a: "No — this is largely a branding myth. Spain produces approximately 45% of the world's olive oil and consistently wins the most NYIOOC Gold Awards. Greek Koroneiki variety oils frequently achieve the highest polyphenol content of any cultivar globally. Italian olive oil benefits from superior brand recognition and premium pricing, but blind taste tests and chemical analysis consistently show Spanish and Greek oils matching or exceeding Italian quality benchmarks. Focus on harvest date, certifications, and polyphenol data rather than country of origin alone."
 ---
 
 # 2026 EVOO Buying Guide: How to Select High-Polyphenol Oils Like a Scientist

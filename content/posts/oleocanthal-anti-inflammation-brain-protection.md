@@ -16,6 +16,13 @@ sources:
   - "Parkinson, L. & Keast, R. (2014). Oleocanthal—A Dietary Anti-Inflammatory Agent. Nutrients."
 coverAlt: "橄欖油倒入玻璃碗的特寫，展現高多酚EVOO的天然辣感抗炎分子特性｜知橄生活"
 focusKeyword: "油橄欖醛抗炎"
+faq:
+  - q: "Oleocanthal 真的和布洛芬一樣有效嗎？"
+    a: "2005 年《Nature》期刊刊登的里程碑研究（Beauchamp et al.）首次證實，Oleocanthal 透過抑制 COX-1 和 COX-2 酶的機制產生抗炎效果，與 Ibuprofen（布洛芬）的作用路徑高度相似。研究估算，50g 高多酚橄欖油中的 Oleocanthal 劑量，相當於約 1/10 的成人布洛芬劑量。雖劑量較低，但長期每日攝取累積的慢性抗炎效果已有流行病學數據支持。"
+  - q: "如何確認橄欖油含有足夠的 Oleocanthal？"
+    a: "最直接的指標是喉嚨感官反應：吞嚥後 3-5 秒，喉嚨後部出現辛辣刺激感（俗稱「嗆感」）即為 Oleocanthal 的標誌性反應。品油師以「咳嗽次數」評估濃度：一咳為中等，二至三咳為高濃度。化學上，可要求廠商提供 CoA 報告中的 Oleocanthal 含量（通常以 mg/kg 標示），優質油款通常在 200-500mg/kg 之間。"
+  - q: "Oleocanthal 能預防阿茲海默症嗎？"
+    a: "現有研究顯示正向關聯，但尚無確定性結論。2013 年《ACS Chemical Neuroscience》的研究發現，Oleocanthal 能促進大腦清除 β-澱粉樣蛋白（Aβ）的機制，這是阿茲海默症的關鍵病理物質。動物實驗顯示記憶改善效果顯著。然而大規模人體臨床試驗仍在進行中，目前不宜宣稱其具有預防疾病的直接功效，長期高多酚飲食對認知健康的保護作用仍是目前科學界最強的支持。"
 ---
 
 ## 那一道嗆，不是缺陷——它是訊號
