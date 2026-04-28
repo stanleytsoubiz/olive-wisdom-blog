@@ -1,9 +1,12 @@
 ---
 title: "2026 羥基酪醇與腦健康：橄欖油預防認知衰退的科學實踐"
+slug: "hydroxytyrosol-brain-cognition-2026"
 date: "2026-04-28"
 excerpt: "深入探討特級初榨橄欖油中的核心成分——羥基酪醇 (Hydroxytyrosol)，及其在 2026 年神經科學研究中對記憶力與認知健康的保護作用。"
-category: "科學研究"
+category: "science"
+coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/652adb38b9734a52bb8924925390f29d_3ef5f.png"
 author: "Olive Wisdom 編輯部"
+readTime: 9
 tags: ["羥基酪醇", "腦健康", "神經保護", "特級初榨橄欖油", "2026 科學"]
 ---
 
