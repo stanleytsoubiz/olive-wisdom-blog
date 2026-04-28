@@ -1,12 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import SearchBar from '@/components/SearchBar';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { PostFrontmatter } from '@/lib/posts';
-import type { ImagesData } from '@/lib/images';
 import type { ImagesData } from '@/lib/images';
 
 const CATEGORY_MAP: Record<string, { label: string; bgColor: string }> = {
@@ -43,17 +40,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
 
   return (
     <>
-      {/* Search Bar */}
-      <div className="max-w-5xl mx-auto px-6 py-6">
-        <SearchBar initialValue={searchQuery} />
-        {searchQuery && (
-          <p className="text-center text-sm text-gray-400 mt-2 font-sans">
-            搜尋「<strong className="text-olive-600">{searchQuery}</strong>」的結果
-          </p>
-        )}
-      </div>
-
-      {/* Category Tabs */}}
+      {/* Category Tabs */}
       <div className="sticky top-16 z-40 bg-white border-b border-olive-100 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 overflow-x-auto">
           <div className="flex gap-1 py-3 min-w-max px-1">
@@ -95,14 +82,13 @@ export default function BlogFilter({ posts, imagesData }: Props) {
           </div>
         ) : (
           <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* 文章計數 */}
-          {filtered.length > 0 && (
-            <div className="col-span-full mb-2 text-xs text-gray-400 font-sans">
-              共 <strong className="text-olive-600">{filtered.length}</strong> 篇
-              {activeCat !== 'all' && <span> {CATEGORY_MAP[activeCat as keyof typeof CATEGORY_MAP]?.label || activeCat}</span>} 文章
-            </div>
-          )}
-          {filtered.map((post) => {
+            {filtered.length > 0 && (
+              <div className="col-span-full mb-2 text-xs text-gray-400 font-sans">
+                共 <strong className="text-olive-600">{filtered.length}</strong> 篇
+                {activeCat && <span> {CATEGORY_MAP[activeCat as keyof typeof CATEGORY_MAP]?.label || activeCat}</span>} 文章
+              </div>
+            )}
+            {filtered.map((post) => {
               const catInfo = CATEGORY_MAP[post.category] ?? { label: post.category, bgColor: 'bg-gray-100 text-gray-700' };
               return (
                 <article key={post.slug} className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden group">
@@ -111,7 +97,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                       <div className="relative h-44 sm:h-52 overflow-hidden">
                         <Image
                           src={(imagesData?.posts?.[post.slug]?.url) || post.coverImage || ''}
-                          alt={`${post.title} — ${CATEGORY_MAP[post.category]?.label || "橄欖油"} | 知橄生活`}
+                          alt={`${post.title} — ${CATEGORY_MAP[post.category]?.label || '橄欖油'} | 知橄生活`}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                           sizes="(max-width: 768px) 100vw, 33vw"
