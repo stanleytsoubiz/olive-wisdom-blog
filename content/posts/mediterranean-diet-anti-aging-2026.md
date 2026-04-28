@@ -1,5 +1,6 @@
 ---
 title: "2026 地中海抗老實踐手冊：如何在都市生活中達成 100% 橄欖多酚覆蓋"
+slug: "mediterranean-diet-anti-aging-2026"
 date: "2026-04-29"
 excerpt: "地中海飲食不僅僅是關於橄欖油。本手冊教您如何在 2026 年的高節奏都市生活中，透過數據化的飲食管理，實現端粒保護與細胞抗老。"
 category: "lifestyle"

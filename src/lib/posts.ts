@@ -4,6 +4,11 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
+export interface FaqItem {
+  q: string;
+  a: string;
+}
+
 export interface PostFrontmatter {
   title: string;
   slug: string;
@@ -17,6 +22,7 @@ export interface PostFrontmatter {
   sources?: string[];
   coverAlt?: string;       // SEO-optimized alt text (falls back to title if absent)
   focusKeyword?: string;   // Primary SEO keyword for this article
+  faq?: FaqItem[];         // Article-specific FAQ for Featured Snippets & GEO
 }
 
 export interface Post extends PostFrontmatter {

@@ -244,46 +244,63 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
 
-      {/* FAQ Schema — auto-generated based on article content */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
+      {/* FAQ Schema — article-specific when faq[] present, fallback to category defaults */}
+      {(post.faq && post.faq.length > 0) ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: post.faq.map((item) => ({
                 '@type': 'Question',
-                name: `${post.title.replace(/[？?：:]/g, '').slice(0, 40)} — 這篇文章的核心問題是什麼？`,
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: post.excerpt,
-                },
-              },
-              {
-                '@type': 'Question',
-                name: post.category === 'science'
-                  ? '橄欖油的多酚和健康功效有科學根據嗎？'
-                  : post.category === 'heritage' || post.category === 'culture'
-                  ? '橄欖油在歷史上扮演什麼角色？'
-                  : post.category === 'lifestyle'
-                  ? '如何在日常生活中正確使用特級初榨橄欖油？'
-                  : '如何選購真正高品質的特級初榨橄欖油？',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: post.category === 'science'
-                    ? '是的。根據 PREDIMED 研究（發表於 NEJM）、哈佛醫學院和 EFSA 的研究，特級初榨橄欖油中的多酚化合物具有科學支持的抗炎、抗氧化和心血管保護功效。'
+                name: item.q,
+                acceptedAnswer: { '@type': 'Answer', text: item.a },
+              })),
+            }),
+          }}
+        />
+      ) : (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: post.category === 'science'
+                    ? '橄欖油的多酚和健康功效有科學根據嗎？'
                     : post.category === 'heritage' || post.category === 'culture'
-                    ? '橄欖油在人類文明中已有 3,000 年以上的歷史，從古埃及的聖禮儀式、希臘羅馬的經濟命脈到文藝復興藝術，均有深刻記載。'
+                    ? '橄欖油在歷史上扮演什麼角色？'
                     : post.category === 'lifestyle'
-                    ? '建議每日晨間空腹攝取 1-2 湯匙高多酚特級初榨橄欖油，用於涼拌和低溫烹飪，避免高溫煎炸破壞多酚活性成分。'
-                    : '選購時注意：(1) 標示「特級初榨 Extra Virgin」認證，(2) 確認酸度 ≤0.8%，(3) 標示收穫年份和多酚含量，(4) 選擇遮光深色玻璃瓶裝。',
+                    ? '如何在日常生活中正確使用特級初榨橄欖油？'
+                    : '如何選購真正高品質的特級初榨橄欖油？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: post.category === 'science'
+                      ? '是的。根據 PREDIMED 研究（發表於 NEJM）、哈佛醫學院和 EFSA 的研究，特級初榨橄欖油中的多酚化合物具有科學支持的抗炎、抗氧化和心血管保護功效。'
+                      : post.category === 'heritage' || post.category === 'culture'
+                      ? '橄欖油在人類文明中已有 3,000 年以上的歷史，從古埃及的聖禮儀式、希臘羅馬的經濟命脈到文藝復興藝術，均有深刻記載。'
+                      : post.category === 'lifestyle'
+                      ? '建議每日晨間空腹攝取 1-2 湯匙高多酚特級初榨橄欖油，用於涼拌和低溫烹飪，避免高溫煎炸破壞多酚活性成分。'
+                      : '選購時注意：(1) 標示「特級初榨 Extra Virgin」認證，(2) 確認酸度 ≤0.8%，(3) 標示收穫年份和多酚含量，(4) 選擇遮光深色玻璃瓶裝。',
+                  },
                 },
-              },
-            ],
-          }),
-        }}
-      />
+                {
+                  '@type': 'Question',
+                  name: '知橄生活的橄欖油推薦有商業利益衝突嗎？',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: '知橄生活所有內容均基於 IOC 國際橄欖理事會標準與學術文獻，公正聲明載於每篇文章底部。若文章含有聯盟行銷連結，將依法揭露並不影響推薦判斷。',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+      )}
 
       {/* Cover Image */}
       {coverImageUrl && (
@@ -348,6 +365,35 @@ export default async function BlogPostPage({ params }: Props) {
           className="prose-custom"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
+
+        {/* FAQ Accordion — article-specific Q&A for SEO Featured Snippets */}
+        {post.faq && post.faq.length > 0 && (
+          <div className="mt-12 pt-8 border-t border-olive-100">
+            <h2 className="text-xl font-bold text-olive-800 mb-6 flex items-center gap-2">
+              <span>💬</span> 常見問題
+            </h2>
+            <div className="space-y-3">
+              {post.faq.map((item, i) => (
+                <details
+                  key={i}
+                  className="group border border-olive-200 rounded-xl overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between px-5 py-4 cursor-pointer bg-olive-50 hover:bg-olive-100 transition-colors list-none">
+                    <span className="font-semibold text-olive-800 text-sm leading-relaxed pr-4">
+                      {item.q}
+                    </span>
+                    <span className="text-olive-500 shrink-0 text-lg group-open:rotate-180 transition-transform duration-200">
+                      ▾
+                    </span>
+                  </summary>
+                  <div className="px-5 py-4 text-gray-600 text-sm leading-relaxed bg-white">
+                    {item.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Sources */}
         {post.sources && post.sources.length > 0 && (

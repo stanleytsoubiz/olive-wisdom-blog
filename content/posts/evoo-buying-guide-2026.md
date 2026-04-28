@@ -47,4 +47,13 @@ In 2026, any premium brand should provide a **Certificate of Analysis (CoA)** wi
 - Peroxide Value (target: below 10 meq/kg)
 - K232 and K270 values
 
-*Disclosure: This guide is for educational purposes only. Always consult with a healthcare provider before starting high-dosage polyphenol regimens.*
+---
+
+*Disclosure: This guide is for educational purposes. Some product links may be affiliate links, which support our science-based editorial mission. Always consult with a healthcare provider before starting high-dosage polyphenol regimens.*
+
+---
+
+## 延伸閱讀
+
+- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油，而您的舌頭可能是最後一道防線？](/blog/olive-oil-fraud-detection-authentic-vs-fake)
