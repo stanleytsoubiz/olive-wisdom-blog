@@ -9,9 +9,10 @@ const nextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'picture-search.skywork.ai' },
+      { protocol: 'https', hostname: 'bnotescoffee.com' },
     ],
     formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 86400,     // 1 day cache
+    minimumCacheTTL: 86400,
   },
 
   // ── Build tolerances ──────────────────────────────────────────────────────
