@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Static export removed — using OpenNext Cloudflare adapter (opennextjs-cloudflare)
   trailingSlash: true,
-
-  // ── Image optimisation ───────────────────────────────────────────────────
   images: {
-    unoptimized: true,          // required for static export
+    unoptimized: true,
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'picture-search.skywork.ai' },

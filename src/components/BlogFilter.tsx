@@ -28,15 +28,33 @@ interface Props {
 }
 
 export default function BlogFilter({ posts, imagesData }: Props) {
-  const [activeCat, setActiveCat] = useState('');
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get('q') || '';
+  const initialCat = searchParams.get('cat') || '';
+  
+  const [activeCat, setActiveCat] = useState(initialCat);
 
-  const filtered = activeCat
-    ? posts.filter((p) => {
-        const c = p.category?.toLowerCase();
-        if (activeCat === 'culture') return c === 'culture' || c === 'heritage';
-        return c === activeCat;
-      })
-    : posts;
+  useEffect(() => {
+    if (initialCat) setActiveCat(initialCat);
+  }, [initialCat]);
+
+  const filtered = posts.filter((p) => {
+    // Category filter
+    const matchesCat = activeCat
+      ? (activeCat === 'culture' 
+          ? (p.category === 'culture' || p.category === 'heritage')
+          : p.category === activeCat)
+      : true;
+
+    // Search filter
+    const matchesSearch = searchQuery
+      ? (p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         p.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+         (p.tags || []).some(t => t.toLowerCase().includes(searchQuery.toLowerCase())))
+      : true;
+
+    return matchesCat && matchesSearch;
+  });
 
   return (
     <>
