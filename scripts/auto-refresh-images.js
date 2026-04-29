@@ -69,7 +69,29 @@ const ARTICLE_IMAGE_PROMPTS = {
   "blog":
     "beautiful olive grove rows morning mist, golden hour light filtering leaves, tuscany landscape, aerial perspective, travel food photography, cinematic wide angle",
   "about":
-    "close-up fresh pressed olive oil golden surface ripples, mediterranean lifestyle, knowledge elegance concept, warm editorial tone, fine dining photography"
+    "close-up fresh pressed olive oil golden surface ripples, mediterranean lifestyle, knowledge elegance concept, warm editorial tone, fine dining photography",
+
+  // ── 2026 年 新增文章 Prompts ────────────────────────────
+  "2026-evoo-quality-polyphenol-index":
+    "olive oil polyphenol molecular structure visualization, laboratory glass vials with golden liquid, scientific data charts on dark background, precision measurement aesthetic, extra virgin olive oil quality testing, high-tech science photography",
+  "hydroxytyrosol-brain-cognition-2026":
+    "neural network brain scan glowing olive green gold light, hydroxytyrosol molecular structure overlay, 2026 neuroscience research visualization, MRI brain with mediterranean olive branch, bioluminescent synapse photography, dark dramatic scientific",
+  "mediterranean-diet-anti-aging-2026":
+    "vibrant mediterranean diet 2026 anti-aging spread, colorful vegetables olive oil fish nuts legumes, telomere longevity concept elegant woman wellness, warm golden light editorial food photography, healthy aging lifestyle",
+  "polyphenol-decay-science-2026":
+    "olive oil oxidation time-lapse science concept, UV light penetrating glass bottle molecular decay, polyphenol half-life chemistry visualization, dark laboratory moody, before after quality comparison, scientific photography",
+  "olive-oil-ancient-egypt-ritual-heritage":
+    "ancient egypt olive oil ceremony ritual, hieroglyphics stone wall golden amphora, torch lit temple atmosphere 3000 BCE, archaeological heritage documentary, cinematic warm amber tones, historical food photography",
+  "olive-oil-renaissance-art-science-history":
+    "renaissance workshop painting olive oil lamp candle, Leonardo da Vinci manuscripts olive branch motif, antique books art history, warm amber chiaroscuro light, italian renaissance aesthetic documentary",
+  "olive-oil-silk-road-trade-history":
+    "ancient silk road merchant caravan desert sunset amphora olive oil trade, Mediterranean to Asia route, camels historical journey, dramatic golden dusk cinematic landscape, historical documentary photography",
+  "olive-oil-storage-guide-2026":
+    "premium olive oil dark glass bottle cool dark pantry storage, temperature light oxygen protection concept, elegant kitchen organization, UV rays blocked diagram, proper storage lifestyle photography, warm moody ambient light",
+  "olive-oil-vs-avocado-oil-complete-comparison":
+    "olive oil versus avocado oil scientific comparison flat lay, both dark bottles side by side white marble, fresh olives avocado halves, polyphenol molecular comparison, editorial food science photography",
+  "olive-oil-complete-buying-guide-2026":
+    "premium extra virgin olive oil buying guide 2026, multiple artisan dark glass bottles arranged elegantly, harvest date certificate of analysis visible, moody editorial product photography, olive green gold palette, expert curation"
 };
 
 const BRAND_SUFFIX = 'extra virgin olive oil, professional photography, warm mediterranean light, 16:9 cinematic';

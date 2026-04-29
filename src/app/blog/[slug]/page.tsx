@@ -21,6 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: '文章不存在' };
+
+  // Dynamic branded OG image via Edge Function
+  const ogImageUrl = `https://olive-wisdom.com/api/og?title=${encodeURIComponent(post.title)}&cat=${encodeURIComponent(post.category ?? 'science')}&rt=${encodeURIComponent(String(post.readTime ?? 8))}`;
+
   return {
     title: `${post.title}｜知橄生活`,
     description: post.excerpt,
@@ -32,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       siteName: '知橄生活 Olive Wisdom',
       locale: 'zh_TW',
-      images: [{ url: post.coverImage, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImageUrl, width: 1200, height: 630, alt: post.title }],
     },
     alternates: {
       canonical: `https://olive-wisdom.com/blog/${slug}`,
@@ -46,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       site: '@OliveWisdomTW',
       title: post.title,
       description: post.excerpt,
-      images: [post.coverImage],
+      images: [ogImageUrl],
     },
   };
 }

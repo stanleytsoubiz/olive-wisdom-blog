@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "2.0.0",
-    "lastUpdated": "2026-04-19",
+    "lastUpdated": "2026-04-29",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -176,6 +176,86 @@
       "prompt": "laboratory testing olive oil samples, polyphenol analysis equipment, scientific glass tubes golden liquid, precision measurement, clean clinical food science photography",
       "generated_at": "2026-04-17",
       "quality_score": 9
+    },
+    "2026-evoo-quality-polyphenol-index": {
+      "url": "https://bnotescoffee.com/images/ai/evoo-polyphenol-science.jpg",
+      "alt": "2026 高多酚橄欖油品質指數",
+      "source": "manual",
+      "prompt": "olive oil polyphenol molecular structure visualization, laboratory glass vials with golden liquid, scientific data charts, dark elegant background, precision measurement aesthetic, extra virgin olive oil quality testing",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "hydroxytyrosol-brain-cognition-2026": {
+      "url": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&auto=format&fit=crop&q=80",
+      "alt": "2026 羥基酪醇腦健康科學",
+      "source": "manual",
+      "prompt": "neural network brain scan glowing olive green gold light, hydroxytyrosol molecular structure overlay, 2026 neuroscience research, MRI brain visualization, mediterranean olive branch DNA helix, bioluminescent scientific photography",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "mediterranean-diet-anti-aging-2026": {
+      "url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&auto=format&fit=crop&q=80",
+      "alt": "2026 地中海抗老飲食實踐",
+      "source": "manual",
+      "prompt": "vibrant mediterranean diet spread 2026, colorful vegetables olive oil fish nuts legumes, healthy aging lifestyle, warm golden light, telomere longevity concept, editorial food photography, elegant 35 plus woman wellness",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "polyphenol-decay-science-2026": {
+      "url": "https://bnotescoffee.com/images/ai/evoo-decay-science.jpg",
+      "alt": "橄欖油多酚衰減科學",
+      "source": "manual",
+      "prompt": "time-lapse olive oil oxidation science, molecular decay visualization, UV light glass bottle degradation, dark elegant laboratory concept, polyphenol half-life chemistry, before after quality comparison, scientific moody photography",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "olive-oil-ancient-egypt-ritual-heritage": {
+      "url": "https://images.unsplash.com/photo-1588703851099-c3e5f1e4a9e2?w=1200&q=80",
+      "alt": "橄欖油古埃及儀式遺產",
+      "source": "manual",
+      "prompt": "ancient egypt olive oil ritual ceremony, hieroglyphics carved stone wall, golden olive oil amphorae, torch lit temple atmosphere, archaeological heritage, cinematic warm tones, historical food documentary photography",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "olive-oil-renaissance-art-science-history": {
+      "url": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1200&q=80",
+      "alt": "橄欖油文藝復興藝術科學史",
+      "source": "manual",
+      "prompt": "renaissance painting detail olive oil lamp candle light, Leonardo da Vinci workshop atmosphere, antique manuscripts olive branch motif, warm amber tones, art history documentary photography, italian renaissance aesthetic",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "olive-oil-silk-road-trade-history": {
+      "url": "https://images.unsplash.com/photo-1569974507005-6dc61f97fb5e?w=1200&q=80",
+      "alt": "橄欖油絲路貿易歷史",
+      "source": "manual",
+      "prompt": "ancient silk road merchant caravan desert sunset, amphora olive oil traded goods, Mediterranean to Asia trade route map, camels historical route, dramatic golden dusk landscape, cinematic historical documentary photography",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "olive-oil-storage-guide-2026": {
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80",
+      "alt": "橄欖油正確保存方法指南",
+      "source": "manual",
+      "prompt": "premium olive oil dark glass bottle in cool dark pantry shelf, proper storage concept, temperature light oxygen protection, elegant kitchen organization, warm moody ambient light, lifestyle product photography",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "olive-oil-vs-avocado-oil-complete-comparison": {
+      "url": "https://images.unsplash.com/photo-1506484381205-f7945653044d?w=1200&auto=format&fit=crop&q=80",
+      "alt": "橄欖油vs酪梨油完整科學比較",
+      "source": "manual",
+      "prompt": "olive oil versus avocado oil scientific comparison flat lay, both bottles side by side on marble, fresh olives and avocado halves, molecular comparison concept, laboratory precision, editorial food science photography",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
+    },
+    "olive-oil-complete-buying-guide-2026": {
+      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
+      "alt": "橄欖油選購完全指南 2026",
+      "source": "manual",
+      "prompt": "premium extra virgin olive oil selection guide 2026, multiple artisan dark bottles arranged elegantly, harvest date labels visible, Certificate of Analysis document, moody editorial product photography, olive green gold palette",
+      "generated_at": "2026-04-29",
+      "quality_score": 4.5
     }
   },
   "fallback": {
