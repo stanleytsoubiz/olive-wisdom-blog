@@ -3,40 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --olive-primary: #7a8f3a;
-  --gold-accent:   #d4a843;
+  --olive-primary: #4a5824;
+  --gold-accent:   #c4a96a;
+  --ink:           #1a1a1a;
+  --muted:         #6b7280;
+  --surface:       #fafaf7;
 }
 
 body {
-  /* next/font CSS variable takes priority, fallback to Georgia */
   font-family: var(--font-serif), Georgia, Cambria, 'Times New Roman', serif;
+  color: var(--ink);
 }
 .font-sans {
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* ── Editorial Button ──────────────────────────────────────── */
 .btn-primary {
-  @apply bg-olive-600 hover:bg-olive-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200;
+  @apply bg-olive-800 hover:bg-olive-900 text-white font-sans font-semibold
+         py-3 px-8 transition-colors duration-200 tracking-wide text-sm uppercase;
 }
 
-.card {
-  @apply bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+/* ── Editorial Card (magazine-style, no rounded corners) ──── */
+.card-editorial {
+  @apply bg-white border border-stone-200 hover:border-olive-400
+         transition-all duration-300 overflow-hidden;
+}
+.card-editorial:hover {
+  transform: translateY(-2px);
 }
 
-/* ── Category Badges ───────────────────────────────────── */
-.badge-science   { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800; }
-.badge-lifestyle { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800; }
-.badge-health    { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-rose-100 text-rose-800; }
-.badge-culture   { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800; }
-.badge-heritage  { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800; }
+/* ── Category Accent Line (top border) ─────────────────────── */
+.cat-line-science   { @apply border-t-2 border-emerald-600; }
+.cat-line-lifestyle { @apply border-t-2 border-amber-600; }
+.cat-line-health    { @apply border-t-2 border-rose-600; }
+.cat-line-culture   { @apply border-t-2 border-purple-700; }
+.cat-line-heritage  { @apply border-t-2 border-purple-700; }
+.cat-line-guide     { @apply border-t-2 border-olive-600; }
 
-/* ── Card hover 一致規範 ─────────────────────────────────── */
-.card-hover {
-  @apply hover:shadow-xl hover:-translate-y-1 transition-all duration-300;
+/* ── Category Badge (minimal text style) ───────────────────── */
+.badge-science   { @apply text-emerald-700 font-sans font-semibold text-xs tracking-widest uppercase; }
+.badge-lifestyle { @apply text-amber-700 font-sans font-semibold text-xs tracking-widest uppercase; }
+.badge-health    { @apply text-rose-700 font-sans font-semibold text-xs tracking-widest uppercase; }
+.badge-culture   { @apply text-purple-800 font-sans font-semibold text-xs tracking-widest uppercase; }
+.badge-heritage  { @apply text-purple-800 font-sans font-semibold text-xs tracking-widest uppercase; }
+
+/* ── Reading Typography ──────────────────────────────────────── */
+.prose-olive h2 {
+  @apply text-2xl font-bold text-olive-900 mt-14 mb-5 leading-tight tracking-tight;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
 }
+.prose-olive h3 { @apply text-xl font-bold text-olive-800 mt-10 mb-4 leading-snug; }
+.prose-olive p  { @apply text-gray-700 leading-[1.85] mb-5 text-[1.05rem]; }
+.prose-olive blockquote {
+  @apply border-l-[3px] border-gold-400 pl-6 italic text-olive-800 my-8 text-lg leading-relaxed;
+}
+.prose-olive ul { @apply list-none pl-0 my-4 space-y-2; }
+.prose-olive ul li::before { content: "—"; @apply text-gold-400 mr-3 font-light; }
+.prose-olive strong { @apply text-olive-900 font-bold; }
 
-/* ── Reading Typography ──────────────────────────────────── */
-.prose-olive h2 { @apply text-2xl font-bold text-olive-800 mt-12 mb-4; }
-.prose-olive h3 { @apply text-xl font-bold text-olive-700 mt-8 mb-3; }
-.prose-olive p  { @apply text-gray-700 leading-relaxed mb-4; }
-.prose-olive blockquote { @apply border-l-4 border-gold-400 pl-6 italic text-olive-700 my-6; }
+/* ── Editorial Divider ──────────────────────────────────────── */
+.divider-gold {
+  @apply flex items-center gap-4 my-8;
+}
+.divider-gold::before,
+.divider-gold::after {
+  content: '';
+  @apply flex-1 h-px bg-stone-200;
+}

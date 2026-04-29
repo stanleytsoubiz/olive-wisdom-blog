@@ -111,13 +111,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-olive-100 shadow-sm">
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-2xl">🫒</span>
-              <div className="flex flex-col leading-none">
-                <span className="text-sm font-bold text-olive-800 group-hover:text-olive-600 transition-colors">
+            <Link href="/" className="flex items-center gap-3 group">
+              {/* SVG olive mark */}
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="flex-shrink-0">
+                <ellipse cx="14" cy="14" rx="5" ry="8" fill="#4a5824" transform="rotate(-20 14 14)" />
+                <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#7a8f3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+                <path d="M14 8 Q9 6 8 12" stroke="#4a5824" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.7"/>
+              </svg>
+              <div className="flex flex-col leading-none gap-0.5">
+                <span className="text-sm font-bold text-olive-900 group-hover:text-olive-700 transition-colors tracking-tight">
                   知橄生活
                 </span>
-                <span className="text-xs text-olive-500 tracking-widest uppercase">Olive Wisdom</span>
+                <span className="text-[10px] text-olive-500 tracking-[0.25em] uppercase font-sans">Olive Wisdom</span>
               </div>
             </Link>
 
@@ -127,9 +132,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-gray-600 hover:text-olive-700 font-medium transition-colors"
+                  className="text-sm text-stone-500 hover:text-olive-800 font-sans font-medium transition-colors tracking-wide relative group/nav"
                 >
                   {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-olive-600 group-hover/nav:w-full transition-all duration-300" />
                 </Link>
               ))}
             </nav>

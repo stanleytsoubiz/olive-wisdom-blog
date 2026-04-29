@@ -114,7 +114,7 @@ export default async function HomePage() {
           </div>
           {featuredPost && (
             <Link href={`/blog/${featuredPost.slug}`} className="block mb-8 group">
-              <article className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all overflow-hidden grid md:grid-cols-2">
+              <article className="card-editorial overflow-hidden grid md:grid-cols-2">
                 {featuredPost.coverImage && (
                   <div className="relative h-64 md:h-80">
                     <Image src={(imagesData.posts?.[featuredPost.slug]?.url) || featuredPost.coverImage} alt={featuredPost.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
@@ -135,18 +135,16 @@ export default async function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {restPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <article className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden h-full">
-                  {post.coverImage && (
-                    <div className="relative h-44 overflow-hidden">
-                      <Image src={(imagesData.posts?.[post.slug]?.url) || post.coverImage} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" unoptimized />
-                    </div>
-                  )}
-                  <div className="p-5">
-                    <h3 className="font-bold text-olive-800 mb-2 text-sm leading-snug line-clamp-2 group-hover:text-olive-600 transition-colors">{post.title}</h3>
-                    <p className="text-xs text-gray-500 line-clamp-2 mb-3">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
-                      <span>{post.readTime} 分鐘閱讀</span>
-                      <span className="text-olive-600 font-medium">閱讀 →</span>
+                <article className="card-editorial h-full flex flex-col">
+                  <div className="relative h-44 overflow-hidden bg-stone-100 flex-shrink-0">
+                    <Image src={(imagesData.posts?.[post.slug]?.url) || post.coverImage} alt={post.title} fill className="object-cover group-hover:scale-[1.04] transition-transform duration-500" unoptimized />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="font-bold text-olive-900 mb-2 text-base leading-snug line-clamp-2 group-hover:text-olive-700 transition-colors tracking-tight flex-1">{post.title}</h3>
+                    <p className="text-xs text-stone-500 line-clamp-2 mb-3 leading-relaxed">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-xs font-sans pt-3 border-t border-stone-100">
+                      <span className="text-stone-400">{post.readTime} MIN READ</span>
+                      <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
                     </div>
                   </div>
                 </article>
