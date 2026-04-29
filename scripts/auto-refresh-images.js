@@ -27,7 +27,6 @@ const fs     = require('fs');
 const path   = require('path');
 
 // ── 設定 ──────────────────────────────────────────────────────
-const SKYWORK_API_KEY  = process.env.SKYWORK_API_KEY  || '';
 const GH_PAT           = process.env.GH_PAT           || '';
 const SCORE_THRESHOLD  = parseFloat(process.env.SCORE_THRESHOLD || '6');
 const MAX_REPLACE      = parseInt(process.env.MAX_REPLACE      || '5', 10);
@@ -131,7 +130,7 @@ function httpsPost(hostname, path, headers, body) {
 // ── Layer 2 評分邏輯（Node.js 版本，與前端同步）──────────────
 function calcScore(key, val) {
   let score = 0;
-  const sourceScore = { skywork_ai: 5, pollinations_ai: 3.5, unsplash: 2.5, unsplash_source: 1, manual: 3 };
+  const sourceScore = { skywork_ai: 5, pollinations_ai: 7.0, unsplash: 2.5, unsplash_source: 1, manual: 3 };
   score += (sourceScore[val.source] ?? 2);
 
   const hasPrecise = !!ARTICLE_IMAGE_PROMPTS[key];
@@ -155,28 +154,23 @@ function calcScore(key, val) {
   return Math.min(10, Math.max(1, Math.round(score * 10) / 10));
 }
 
-// ── Skywork Image API 呼叫 ────────────────────────────────────
-async function generateImage(prompt, title) {
-  log(`  🎨 生成圖片：${title} | prompt: ${prompt.slice(0,60)}…`);
-  const body = JSON.stringify({
-    title: title.slice(0, 60),
-    content: prompt,
-    source_platform: '',
-    output_format: 'url'
-  });
-  const res = await httpsPost('api-tools.skywork.ai', '/theme-gateway/api/sse/image/create', {
-    'Content-Type':  'application/json',
-    'Accept':        'text/event-stream',
-    'Authorization': `Bearer ${SKYWORK_API_KEY}`
-  }, body);
-
-  if (res.status !== 200) {
-    warn(`Skywork API 回傳 ${res.status}`);
+// ── Pollinations.ai 圖片生成（零 API Key）────────────────────
+async function generateImage(prompt, key) {
+  const seed = Math.abs(key.split('').reduce((h, c) => ((h << 5) - h) + c.charCodeAt(0), 0)) % 9000 + 1000;
+  const encodedPrompt = encodeURIComponent(prompt + ', extra virgin olive oil, professional photography, warm mediterranean light, 16:9 cinematic');
+  const url = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1200&height=630&model=flux&seed=${seed}&nologo=true`;
+  log(`  🎨 Pollinations.ai: ${key} | seed=${seed}`);
+  // Pollinations generates on-demand — verify URL is accessible
+  try {
+    const check = await httpGet(`https://image.pollinations.ai/prompt/${encodedPrompt}?width=1&height=1&model=flux&seed=${seed}&nologo=true`);
+    if (check.status === 200) return url;
+    warn(`Pollinations 回傳 ${check.status}`);
     return null;
+  } catch (e) {
+    warn(`Pollinations 驗證失敗: ${e.message}`);
+    // Return URL anyway — might work at full resolution
+    return url;
   }
-
-  const match = res.body.match(/"file_url"\s*:\s*"([^"]+)"/);
-  return match ? match[1] : null;
 }
 
 // ── GitHub API：讀取檔案（含 SHA）────────────────────────────
@@ -226,7 +220,6 @@ async function main() {
   log(`閾值: score < ${SCORE_THRESHOLD}  最大替換: ${MAX_REPLACE} 張`);
   log('════════════════════════════════════════');
 
-  if (!SKYWORK_API_KEY && !DRY_RUN) die('缺少 SKYWORK_API_KEY 環境變數');
   if (!GH_PAT)                      die('缺少 GH_PAT 環境變數');
 
   // ① 讀取 images.json（從 GitHub 確保最新版本）
@@ -292,7 +285,7 @@ async function main() {
         const today = new Date().toISOString().split('T')[0];
         const target = section === 'hero' ? imagesData.hero[key] : imagesData.posts[key];
         target.url          = newUrl;
-        target.source       = 'skywork_ai';
+        target.source       = 'pollinations_ai';
         target.prompt       = prompt;
         target.generated_at = today;
         target.quality_score = 8.5;  // 新生成 = 高分

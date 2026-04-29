@@ -44,7 +44,6 @@ jobs:
 
       - name: "🏆 執行智能圖片評分 & 自動替換"
         env:
-          SKYWORK_API_KEY:  ${{ secrets.SKYWORK_API_KEY }}
           GH_PAT:           ${{ secrets.GH_PAT }}
           DRY_RUN:          ${{ github.event.inputs.dry_run || 'false' }}
           SCORE_THRESHOLD:  ${{ github.event.inputs.score_threshold || '6' }}
