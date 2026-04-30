@@ -27,9 +27,12 @@ jobs:
       - name: Build with OpenNext for Cloudflare Pages
         run: npm run build:cf
 
+      - name: Prepare worker for Pages Advanced Mode
+        run: mv .open-next/worker.js .open-next/_worker.js
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+          command: pages deploy .open-next --project-name=olive-wisdom --branch=main
