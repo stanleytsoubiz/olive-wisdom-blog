@@ -22,8 +22,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return { title: '文章不存在' };
 
-  // Dynamic branded OG image via Edge Function
-  const ogImageUrl = `https://olive-wisdom.com/api/og?title=${encodeURIComponent(post.title)}&cat=${encodeURIComponent(post.category ?? 'science')}&rt=${encodeURIComponent(String(post.readTime ?? 8))}`;
+  // Static AI-branded cover image as OG image (dynamic /api/og bypassed for CF Pages compat)
+  const coverPath = post.coverImage ?? `/images/covers/${slug}.jpg`;
+  const ogImageUrl = coverPath.startsWith('http')
+    ? coverPath
+    : `https://olive-wisdom.com${coverPath}`;
 
   return {
     title: `${post.title}｜知橄生活`,
