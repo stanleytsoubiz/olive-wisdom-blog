@@ -3,8 +3,6 @@ name: "Build and Deploy to Cloudflare Pages (OpenNext)"
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'content/posts/**'   # 純文章更新由 auto-deploy.yml 處理
   workflow_dispatch:
 
 jobs:
