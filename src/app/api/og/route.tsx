@@ -11,13 +11,11 @@
  *   rt     — 閱讀時間（分鐘）
  *   en     — 英文副標（可選，顯示 category label）
  *
- * Runtime: Cloudflare Edge（opennextjs-cloudflare 相容）
+ * Runtime: Cloudflare Pages（opennextjs-cloudflare 統一處理，無需 edge 標記）
  */
 
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
-
-export const runtime = 'edge';
 
 // ── 分類設定 ──────────────────────────────────────────────
 const CATEGORY_CONFIG: Record<string, { en: string; color: string; accent: string }> = {
