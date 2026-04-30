@@ -39,9 +39,21 @@ jobs:
           git commit -m "🤖 自動同步：更新前台文章資料 [skip ci]"
           git push
 
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build with OpenNext for Cloudflare Pages
+        run: npm run build:cf
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=olive-wisdom --branch=main
+          command: pages deploy .open-next --project-name=olive-wisdom --branch=main

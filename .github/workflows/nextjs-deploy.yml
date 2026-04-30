@@ -1,7 +1,10 @@
-name: "Build and Deploy Next.js to Cloudflare Pages"
+name: "Build and Deploy to Cloudflare Pages (OpenNext)"
+
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'content/posts/**'   # 純文章更新由 auto-deploy.yml 處理
   workflow_dispatch:
 
 jobs:
@@ -14,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -23,15 +26,12 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build Next.js (Static Export)
-        run: npm run build
+      - name: Build with OpenNext for Cloudflare Pages
+        run: npm run build:cf
 
       - name: Deploy to Cloudflare Pages
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          npx wrangler pages deploy out \
-            --project-name olive-wisdom \
-            --branch main \
-            --commit-dirty=true
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy .open-next --project-name=olive-wisdom --branch=main
