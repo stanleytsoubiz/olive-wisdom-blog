@@ -1,28 +1,12 @@
-import type { OpenNextConfig } from "@opennextjs/cloudflare";
+import { defineCloudflareConfig } from "@opennextjs/cloudflare";
 
-const config: OpenNextConfig = {
-  default: {
-    override: {
-      wrapper: "cloudflare-node",
-      converter: "edge",
-      proxyExternalRequest: "fetch",
-      incrementalCache: "dummy",
-      tagCache: "dummy",
-      queue: "dummy",
-    },
-  },
-  edgeExternals: ["node:crypto"],
-  middleware: {
-    external: true,
-    override: {
-      wrapper: "cloudflare-edge",
-      converter: "edge",
-      proxyExternalRequest: "fetch",
-      incrementalCache: "dummy",
-      tagCache: "dummy",
-      queue: "dummy",
-    },
-  },
-};
-
-export default config;
+/**
+ * OpenNext configuration for Cloudflare Pages
+ *
+ * Uses defineCloudflareConfig() which:
+ * - Sets wrapper: "cloudflare-node" for the server function
+ * - Sets wrapper: "cloudflare-edge" for middleware
+ * - Enables cloudflare.useWorkerdCondition: true (required for esbuild alias compat)
+ * - Defaults all caches to "dummy" (no R2/KV required)
+ */
+export default defineCloudflareConfig();
