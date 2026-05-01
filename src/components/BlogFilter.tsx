@@ -7,21 +7,21 @@ import Image from 'next/image';
 import type { PostFrontmatter } from '@/lib/posts';
 import type { ImagesData } from '@/lib/images';
 
-const CATEGORY_MAP: Record<string, { label: string; en: string; catLine: string; badge: string }> = {
-  science:   { label: '科學萃取', en: 'Science',   catLine: 'cat-line-science',   badge: 'badge-science' },
-  lifestyle: { label: '餐桌美學', en: 'Lifestyle',  catLine: 'cat-line-lifestyle', badge: 'badge-lifestyle' },
-  health:    { label: '品味鑑賞', en: 'Selection',  catLine: 'cat-line-health',    badge: 'badge-health' },
-  culture:   { label: '知性史詩', en: 'Heritage',   catLine: 'cat-line-culture',   badge: 'badge-culture' },
-  heritage:  { label: '知性史詩', en: 'Heritage',   catLine: 'cat-line-heritage',  badge: 'badge-heritage' },
-  guide:     { label: '選購指南', en: 'Guide',      catLine: 'cat-line-guide',     badge: 'badge-science' },
+const CATEGORY_MAP: Record<string, { label: string; en: string }> = {
+  science:   { label: '科學萃取', en: 'Science'   },
+  lifestyle: { label: '餐桌美學', en: 'Lifestyle'  },
+  health:    { label: '品味鑑賞', en: 'Selection'  },
+  culture:   { label: '知性史詩', en: 'Heritage'   },
+  heritage:  { label: '知性史詩', en: 'Heritage'   },
+  guide:     { label: '選購指南', en: 'Guide'      },
 };
 
 const CAT_TABS = [
-  { key: '', label: '全部', en: 'All' },
-  { key: 'science',   label: '科學萃取', en: 'Science' },
-  { key: 'health',    label: '品味鑑賞', en: 'Selection' },
-  { key: 'lifestyle', label: '餐桌美學', en: 'Lifestyle' },
-  { key: 'culture',   label: '知性史詩', en: 'Heritage' },
+  { key: '', label: '全部' },
+  { key: 'science',   label: '科學萃取' },
+  { key: 'health',    label: '品味鑑賞' },
+  { key: 'lifestyle', label: '餐桌美學' },
+  { key: 'culture',   label: '知性史詩' },
 ];
 
 interface Props {
@@ -55,7 +55,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
 
   return (
     <>
-      {/* ── Editorial Category Bar ── */}
+      {/* ── Category Navigation ── */}
       <div className="sticky top-16 z-40 bg-white border-b border-stone-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center gap-0 overflow-x-auto scrollbar-hide">
@@ -66,36 +66,32 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                   key={tab.key}
                   onClick={() => setActiveCat(tab.key)}
                   className={`relative px-5 py-4 font-sans text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-200 ${
-                    isActive
-                      ? 'text-olive-800'
-                      : 'text-stone-400 hover:text-stone-700'
+                    isActive ? 'text-olive-900' : 'text-stone-400 hover:text-stone-600'
                   }`}
                 >
                   {tab.label}
                   {tab.key === '' && (
-                    <span className="ml-1 text-xs opacity-50">({posts.length})</span>
+                    <span className="ml-1 text-xs opacity-40">({posts.length})</span>
                   )}
-                  {/* Active underline */}
                   {isActive && (
-                    <span className="absolute bottom-0 left-5 right-5 h-[2px] bg-olive-700" />
+                    <span className="absolute bottom-0 left-5 right-5 h-[2px] bg-olive-800" />
                   )}
                 </button>
               );
             })}
-            {/* Right separator + count */}
-            <div className="ml-auto pl-4 py-4 text-xs font-sans text-stone-400 whitespace-nowrap flex-shrink-0">
-              {filtered.length} 篇文章
+            <div className="ml-auto pl-4 py-4 text-[11px] font-sans text-stone-400 whitespace-nowrap flex-shrink-0">
+              {filtered.length} 篇
             </div>
           </div>
         </div>
       </div>
 
       {/* ── Articles ── */}
-      <section className="max-w-6xl mx-auto py-12 px-6">
+      <section className="max-w-6xl mx-auto py-14 px-6">
         {filtered.length === 0 ? (
-          <div className="text-center py-32 border border-stone-200">
-            <p className="font-sans text-stone-400 tracking-widest uppercase text-sm mb-4">No Articles</p>
-            <p className="text-stone-500 mb-6">此欄目文章準備中，敬請期待</p>
+          <div className="text-center py-32">
+            <p className="font-sans text-stone-400 tracking-widest uppercase text-xs mb-4">No Articles</p>
+            <p className="text-stone-500 mb-6 text-sm">此欄目文章準備中，敬請期待</p>
             <button
               onClick={() => setActiveCat('')}
               className="font-sans text-sm text-olive-600 hover:text-olive-800 underline underline-offset-4"
@@ -105,42 +101,43 @@ export default function BlogFilter({ posts, imagesData }: Props) {
           </div>
         ) : (
           <>
-            {/* ── Featured Article (full-width) ── */}
+            {/* ── Featured Article ── */}
             {featured && (
-              <Link href={`/blog/${featured.slug}`} className="block group mb-12">
-                <article className={`card-editorial ${CATEGORY_MAP[featured.category]?.catLine ?? 'cat-line-science'} grid md:grid-cols-5`}>
-                  {/* Image: 3/5 */}
-                  <div className="relative md:col-span-3 aspect-video md:aspect-auto md:h-96 overflow-hidden bg-stone-100">
+              <Link href={`/blog/${featured.slug}`} className="block group mb-16">
+                <article className="grid md:grid-cols-5 gap-0">
+                  {/* Image — 3/5, no rounded corners, no border */}
+                  <div className="relative md:col-span-3 aspect-video md:aspect-auto md:h-[420px] overflow-hidden bg-stone-100">
                     <Image
                       src={(imagesData?.posts?.[featured.slug]?.url) || featured.coverImage || ''}
                       alt={featured.title}
                       fill
-                      className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                      className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                       sizes="(max-width: 768px) 100vw, 60vw"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10" />
                   </div>
-                  {/* Content: 2/5 */}
-                  <div className="md:col-span-2 p-8 md:p-10 flex flex-col justify-between bg-white">
-                    <div>
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className={CATEGORY_MAP[featured.category]?.badge ?? 'badge-science'}>
-                          {CATEGORY_MAP[featured.category]?.en ?? 'Science'}
-                        </span>
-                        <span className="text-stone-300">·</span>
-                        <span className="font-sans text-xs text-stone-400 tracking-wide">
-                          {featured.readTime} MIN READ
-                        </span>
-                      </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-olive-900 leading-tight mb-4 tracking-tight group-hover:text-olive-700 transition-colors">
-                        {featured.title}
-                      </h2>
-                      <p className="text-stone-500 text-sm leading-relaxed line-clamp-4">
-                        {featured.excerpt}
-                      </p>
+                  {/* Text panel — 2/5 */}
+                  <div className="md:col-span-2 flex flex-col justify-center px-0 md:px-10 py-8 md:py-0">
+                    {/* Category + read time */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase">
+                        {CATEGORY_MAP[featured.category]?.label ?? featured.category}
+                      </span>
+                      <span className="text-stone-200">—</span>
+                      <span className="text-[10px] font-sans text-stone-400 tracking-wide">
+                        {featured.readTime} min read
+                      </span>
                     </div>
-                    <div className="flex items-center justify-between mt-6 pt-5 border-t border-stone-100">
+                    {/* Headline */}
+                    <h2 className="text-2xl md:text-[1.75rem] font-bold text-stone-900 leading-[1.25] mb-4 tracking-tight group-hover:text-olive-800 transition-colors">
+                      {featured.title}
+                    </h2>
+                    {/* Excerpt */}
+                    <p className="text-stone-500 text-sm leading-[1.8] line-clamp-3 mb-6 font-sans">
+                      {featured.excerpt}
+                    </p>
+                    {/* Byline */}
+                    <div className="flex items-center justify-between border-t border-stone-100 pt-5">
                       <span className="font-sans text-xs text-stone-400">
                         {new Date(featured.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
                       </span>
@@ -153,54 +150,58 @@ export default function BlogFilter({ posts, imagesData }: Props) {
               </Link>
             )}
 
-            {/* ── Section divider ── */}
+            {/* ── Section Divider ── */}
             {rest.length > 0 && featured && (
-              <div className="flex items-center gap-4 mb-10">
+              <div className="flex items-center gap-5 mb-12">
                 <div className="h-px flex-1 bg-stone-200" />
-                <span className="font-sans text-xs tracking-[0.25em] text-stone-400 uppercase">更多文章</span>
+                <span className="font-sans text-[10px] tracking-[0.25em] text-stone-400 uppercase">更多文章</span>
                 <div className="h-px flex-1 bg-stone-200" />
               </div>
             )}
 
-            {/* ── Secondary grid (2 col then 3 col) ── */}
+            {/* ── Article Grid — NYT-style borderless cards ── */}
             {rest.length > 0 && (
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
                 {rest.map((post) => {
-                  const cat = CATEGORY_MAP[post.category] ?? { label: post.category, en: 'Article', catLine: 'cat-line-science', badge: 'badge-science' };
+                  const cat = CATEGORY_MAP[post.category] ?? { label: post.category, en: 'Article' };
                   const imgUrl = (imagesData?.posts?.[post.slug]?.url) || post.coverImage || '';
                   return (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                      <article className={`card-editorial ${cat.catLine} h-full flex flex-col`}>
-                        {/* Image */}
-                        <div className="relative aspect-video overflow-hidden bg-stone-100 flex-shrink-0">
+                      <article className="flex flex-col h-full">
+                        {/* Image — clean frame, no border */}
+                        <div className="relative aspect-video overflow-hidden bg-stone-100 mb-4 flex-shrink-0">
                           {imgUrl && (
                             <Image
                               src={imgUrl}
                               alt={post.title}
                               fill
-                              className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                              className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             />
                           )}
                         </div>
-                        {/* Content */}
-                        <div className="p-6 flex flex-col flex-1">
-                          <div className="flex items-center gap-2 mb-3">
-                            <span className={cat.badge}>{cat.en}</span>
-                            <span className="text-stone-300 font-sans text-xs">·</span>
-                            <span className="font-sans text-xs text-stone-400">{post.readTime} MIN</span>
-                          </div>
-                          <h2 className="text-lg font-bold text-olive-900 mb-2 leading-snug tracking-tight group-hover:text-olive-700 transition-colors line-clamp-2 flex-1">
+                        {/* Text — stacked, no container box */}
+                        <div className="flex flex-col flex-1">
+                          {/* Category label */}
+                          <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-2">
+                            {cat.label}
+                          </p>
+                          {/* Headline */}
+                          <h2 className="text-[1rem] font-bold text-stone-900 leading-snug tracking-tight mb-2 line-clamp-2 flex-1 group-hover:text-olive-800 transition-colors">
                             {post.title}
                           </h2>
-                          <p className="text-sm text-stone-500 line-clamp-2 mb-4 leading-relaxed">
+                          {/* Excerpt */}
+                          <p className="text-xs text-stone-500 line-clamp-2 mb-4 leading-relaxed font-sans">
                             {post.excerpt}
                           </p>
-                          <div className="flex items-center justify-between pt-4 border-t border-stone-100">
-                            <span className="font-sans text-xs text-stone-400">
+                          {/* Byline */}
+                          <div className="flex items-center justify-between pt-3 border-t border-stone-100">
+                            <span className="font-sans text-[11px] text-stone-400">
                               {new Date(post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}
+                              <span className="mx-2 text-stone-200">·</span>
+                              {post.readTime} min
                             </span>
-                            <span className="font-sans text-xs text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">
+                            <span className="font-sans text-[11px] text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">
                               閱讀 →
                             </span>
                           </div>

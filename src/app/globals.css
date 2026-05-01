@@ -24,29 +24,27 @@ body {
          py-3 px-8 transition-colors duration-200 tracking-wide text-sm uppercase;
 }
 
-/* ── Editorial Card (magazine-style, no rounded corners) ──── */
+/* ── Editorial Card — borderless, authoritative ────────────── */
+/* NYT/Atlantic style: content floats in whitespace, no container box */
 .card-editorial {
-  @apply bg-white border border-stone-200 hover:border-olive-400
-         transition-all duration-300 overflow-hidden;
-}
-.card-editorial:hover {
-  transform: translateY(-2px);
+  @apply bg-white transition-all duration-300 overflow-hidden;
 }
 
-/* ── Category Accent Line (top border) ─────────────────────── */
-.cat-line-science   { @apply border-t-2 border-emerald-600; }
-.cat-line-lifestyle { @apply border-t-2 border-amber-600; }
-.cat-line-health    { @apply border-t-2 border-rose-600; }
-.cat-line-culture   { @apply border-t-2 border-purple-700; }
-.cat-line-heritage  { @apply border-t-2 border-purple-700; }
-.cat-line-guide     { @apply border-t-2 border-olive-600; }
+/* ── Category Label — single brand color, uniform ──────────── */
+/* All categories use olive; content & label text differentiates them */
+.cat-line-science   {}
+.cat-line-lifestyle {}
+.cat-line-health    {}
+.cat-line-culture   {}
+.cat-line-heritage  {}
+.cat-line-guide     {}
 
-/* ── Category Badge (minimal text style) ───────────────────── */
-.badge-science   { @apply text-emerald-700 font-sans font-semibold text-xs tracking-widest uppercase; }
-.badge-lifestyle { @apply text-amber-700 font-sans font-semibold text-xs tracking-widest uppercase; }
-.badge-health    { @apply text-rose-700 font-sans font-semibold text-xs tracking-widest uppercase; }
-.badge-culture   { @apply text-purple-800 font-sans font-semibold text-xs tracking-widest uppercase; }
-.badge-heritage  { @apply text-purple-800 font-sans font-semibold text-xs tracking-widest uppercase; }
+/* ── Category Badge — unified olive, no rainbow ────────────── */
+.badge-science   { @apply text-olive-600 font-sans font-semibold text-[10px] tracking-[0.15em] uppercase; }
+.badge-lifestyle { @apply text-olive-600 font-sans font-semibold text-[10px] tracking-[0.15em] uppercase; }
+.badge-health    { @apply text-olive-600 font-sans font-semibold text-[10px] tracking-[0.15em] uppercase; }
+.badge-culture   { @apply text-stone-500 font-sans font-semibold text-[10px] tracking-[0.15em] uppercase; }
+.badge-heritage  { @apply text-stone-500 font-sans font-semibold text-[10px] tracking-[0.15em] uppercase; }
 
 /* ── Reading Typography (prose-olive: legacy) ────────────────── */
 .prose-olive h2 {
@@ -96,13 +94,13 @@ body {
 .prose-custom ol { margin: 1rem 0 1.25rem; padding-left: 1.5rem; }
 .prose-custom li { margin-bottom: 0.5rem; }
 .prose-custom blockquote {
-  border-left: 4px solid #c4a96a;
-  padding: 0.75rem 1rem 0.75rem 1.25rem;
-  margin: 1.5rem 0;
-  background: #f9f7f0;
-  border-radius: 0 0.75rem 0.75rem 0;
+  border-left: 3px solid #c4a96a;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2rem 0;
   font-style: italic;
   color: #4a5824;
+  font-size: 1.15rem;
+  line-height: 1.75;
 }
 .prose-custom a {
   color: #4a5824;

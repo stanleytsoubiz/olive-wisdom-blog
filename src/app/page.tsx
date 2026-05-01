@@ -188,12 +188,12 @@ export default async function HomePage() {
               </Link>
             </div>
 
-            {/* Featured story — Kinfolk wide layout */}
+            {/* Featured story — authoritative split layout */}
             {featuredPost && (
               <Link href={`/blog/${featuredPost.slug}`} className="group block mb-16">
-                <article className="grid md:grid-cols-[5fr_4fr] gap-0 overflow-hidden">
-                  {/* Image — no border radius, no card shadow */}
-                  <div className="relative aspect-video md:aspect-auto md:h-[420px] overflow-hidden bg-stone-200">
+                <article className="grid md:grid-cols-[5fr_4fr] gap-0">
+                  {/* Image */}
+                  <div className="relative aspect-video md:aspect-auto md:h-[420px] overflow-hidden bg-stone-100">
                     <Image
                       src={(imagesData.posts?.[featuredPost.slug]?.url) || featuredPost.coverImage}
                       alt={featuredPost.title} fill
@@ -202,28 +202,27 @@ export default async function HomePage() {
                       priority
                     />
                   </div>
-                  {/* Editorial text panel */}
-                  <div className="bg-white flex flex-col justify-center px-8 md:px-12 py-10 md:py-14
-                                  border-t border-r border-b border-stone-200 md:border-l-0">
-                    <p className="text-[10px] font-sans font-semibold text-gold-600 tracking-[0.3em] uppercase mb-5">
-                      本期精選
+                  {/* Text panel — no border box, use left separator line on md+ */}
+                  <div className="flex flex-col justify-center px-0 md:px-10 py-8 md:py-0 md:border-l md:border-stone-100">
+                    <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-4">
+                      最新深度報導
                     </p>
-                    <h2 className="text-2xl md:text-3xl font-bold text-olive-900 leading-[1.25] mb-5
-                                   group-hover:text-olive-700 transition-colors tracking-tight">
+                    <h2 className="text-2xl md:text-[1.75rem] font-bold text-stone-900 leading-[1.25] mb-4
+                                   group-hover:text-olive-800 transition-colors tracking-tight">
                       {featuredPost.title}
                     </h2>
-                    <p className="text-stone-500 text-sm leading-[1.85] mb-7 line-clamp-4 font-sans">
+                    <p className="text-stone-500 text-sm leading-[1.85] mb-6 line-clamp-4 font-sans">
                       {featuredPost.excerpt}
                     </p>
-                    <div className="flex items-center gap-4 text-[11px] font-sans text-stone-400 mb-8 pt-5 border-t border-stone-100">
-                      <span className="font-semibold text-olive-600">{featuredPost.author || '知橄研究室'}</span>
-                      <span>·</span>
-                      <span>{featuredPost.readTime} 分鐘閱讀</span>
-                      <span>·</span>
+                    <div className="flex items-center gap-3 text-[11px] font-sans text-stone-400 mb-6 pt-5 border-t border-stone-100">
+                      <span className="text-olive-600 font-medium">{featuredPost.author || '知橄研究室'}</span>
+                      <span className="text-stone-200">·</span>
+                      <span>{featuredPost.readTime} min read</span>
+                      <span className="text-stone-200">·</span>
                       <span>{new Date(featuredPost.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
                     </div>
-                    <span className="text-sm font-semibold text-olive-700 group-hover:text-olive-900
-                                     transition-colors font-sans tracking-wide">
+                    <span className="text-sm font-medium text-olive-700 group-hover:text-olive-900
+                                     transition-colors font-sans">
                       深度閱讀 →
                     </span>
                   </div>
@@ -231,36 +230,39 @@ export default async function HomePage() {
               </Link>
             )}
 
-            {/* Secondary articles — editorial grid, no card borders */}
+            {/* Secondary articles — NYT-style borderless grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-              {restPosts.slice(0, 4).map((post, i) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                  <article>
-                    {/* Image */}
-                    <div className="relative aspect-video overflow-hidden bg-stone-200 mb-4">
-                      <Image
-                        src={(imagesData.posts?.[post.slug]?.url) || post.coverImage}
-                        alt={post.title} fill
-                        className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      />
-                    </div>
-                    {/* Text */}
-                    <h3 className="font-bold text-olive-900 text-[0.95rem] leading-snug mb-2
-                                   group-hover:text-olive-700 transition-colors tracking-tight line-clamp-3">
-                      {post.title}
-                    </h3>
-                    <p className="text-[11px] font-sans text-stone-400 line-clamp-2 leading-relaxed mb-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400">
-                      <span>{post.readTime} MIN</span>
-                      <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
-                      <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
-                    </div>
-                  </article>
-                </Link>
-              ))}
+              {restPosts.slice(0, 4).map((post) => {
+                const catLabel = { science:'科學萃取', lifestyle:'餐桌美學', health:'品味鑑賞', culture:'知性史詩', heritage:'知性史詩', guide:'選購指南' }[post.category] ?? post.category;
+                return (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+                    <article>
+                      {/* Image */}
+                      <div className="relative aspect-video overflow-hidden bg-stone-100 mb-4">
+                        <Image
+                          src={(imagesData.posts?.[post.slug]?.url) || post.coverImage}
+                          alt={post.title} fill
+                          className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        />
+                      </div>
+                      {/* Text */}
+                      <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-2">
+                        {catLabel}
+                      </p>
+                      <h3 className="font-bold text-stone-900 text-[0.95rem] leading-snug mb-2
+                                     group-hover:text-olive-800 transition-colors tracking-tight line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400 pt-3 border-t border-stone-100 mt-3">
+                        <span>{post.readTime} min</span>
+                        <span className="text-stone-200">·</span>
+                        <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
+                      </div>
+                    </article>
+                  </Link>
+                );
+              })}
             </div>
 
           </div>
