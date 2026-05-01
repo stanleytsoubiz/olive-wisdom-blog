@@ -12,12 +12,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/genai": "^1.51.0",
     "@supabase/supabase-js": "^2.43.0",
     "gray-matter": "^4.0.3",
     "next": "^15.5.15",
     "pagefind": "^1.5.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "ws": "^8.20.0"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.0.0",

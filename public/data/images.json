@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "version": "2.0.0",
-    "lastUpdated": "2026-04-29",
+    "version": "3.0.0",
+    "lastUpdated": "2026-05-01",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -35,6 +35,11 @@
       "last_run": "2026-04-29T12:29:37.283Z",
       "generated": 10,
       "total_articles": 23
+    },
+    "last_google_imagen_run": {
+      "date": "2026-05-01T11:04:15.767Z",
+      "generated": 25,
+      "total_articles": 29
     }
   },
   "hero": {
@@ -77,58 +82,52 @@
       "prompt": "glowing DNA double helix surrounded by olive oil polyphenol molecules, SIRT1 longevity gene activation concept, bioluminescent molecular structure, scientific visualization macro"
     },
     "evoo-buying-guide-2026": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/ce0f5566628147188ebcc33534f7e175_4c1b0.png",
-      "alt": "特級初榨橄欖油完全選購指南",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "curated premium extra virgin olive oil bottles collection, elegant retail display, dark glass artisan bottles, warm luxury product photography, golden hour light, food styling",
-      "generated_at": "2026-04-17",
-      "quality_score": 8
+      "url": "/images/covers/evoo-buying-guide-2026.jpg",
+      "alt": "Evoo Buying Guide 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "curated premium extra virgin olive oil bottles collection, elegant product display, dark artisan glass bottles row, warm"
     },
     "mediterranean-diet-anti-aging-women-2026": {
       "url": "/images/covers/mediterranean-diet-anti-aging-women-2026.jpg",
-      "alt": "地中海飲食與女性抗衰老",
-      "credit": "Unsplash",
-      "source": "pollinations_ai_local",
-      "prompt": "elegant mediterranean woman 35 plus radiant health, colorful anti-aging food spread olive oil center, longevity lifestyle concept, warm afternoon light editorial",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Mediterranean Diet Anti Aging Women 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "mediterranean woman lifestyle concept, 40+ vitality, olive grove breakfast scene, EVOO morning ritual, warm golden light"
     },
     "olive-tree-ancient-civilization-heritage": {
       "url": "/images/covers/olive-tree-ancient-civilization-heritage.jpg",
-      "alt": "橄欖樹的不死傳說",
-      "credit": "Unsplash",
-      "source": "pollinations_ai_local",
-      "prompt": "ancient gnarled thousand-year-old olive tree dramatic golden sunset, stone ruins Mediterranean civilization, epic landscape history, cinematic atmosphere heritage",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Olive Tree Ancient Civilization Heritage",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "ancient gnarled millennial olive tree trunk and roots, golden hour dramatic light, Crete or Attica Mediterranean landsca"
     },
     "oleocanthal-anti-inflammation-brain-protection": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/0b12fe98ad674377bb5c6294cd09f2fc_d1c42.png",
-      "alt": "油橄欖醛的抗炎密碼",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "human brain silhouette glowing olive green light, anti-inflammation shield, neuroscience visualization, mediterranean olive branch overlay, dramatic dark background, artistic medical photography",
-      "generated_at": "2026-04-17",
-      "quality_score": 9.5
+      "url": "/images/covers/oleocanthal-anti-inflammation-brain-protection.jpg",
+      "alt": "Oleocanthal Anti Inflammation Brain Protection",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "brain silhouette with anti-inflammation golden shield radiance, oleocanthal molecules forming protective barrier, medite"
     },
     "hydroxytyrosol-brain-cognition-memory": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/652adb38b9734a52bb8924925390f29d_3ef5f.png",
-      "alt": "羥基酪醇與大腦記憶",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "neurons firing golden light, olive oil molecular structure overlay, brain cognition enhancement, glowing synapses, olive green gold tones, scientific macro photography, harvard lab aesthetic",
-      "generated_at": "2026-04-17",
-      "quality_score": 9
+      "url": "/images/covers/hydroxytyrosol-brain-cognition-memory.jpg",
+      "alt": "Hydroxytyrosol Brain Cognition Memory",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "human brain neural network glowing golden synapses, olive molecular structure overlay, cognition memory enhancement conc"
     },
     "olive-oil-terroir-spain-greece-italy": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/21efe059834d48fdb33d24f0285fb2de_fe61b.png",
-      "alt": "橄欖油的風土密碼",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "three mediterranean landscapes montage, olive grove terroir, Spain Greece Italy landmarks, golden sunset over ancient olive trees, travel food photography, cinematic wide shot",
-      "generated_at": "2026-04-17",
-      "quality_score": 10
+      "url": "/images/covers/olive-oil-terroir-spain-greece-italy.jpg",
+      "alt": "Olive Oil Terroir Spain Greece Italy",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "three mediterranean olive grove landscapes panorama, golden sunset over ancient olive trees, terroir concept, travel edi"
     },
     "squalene-olive-oil-skin-beauty-molecular": {
       "url": "/images/covers/squalene-olive-oil-skin-beauty-molecular.jpg",
@@ -140,22 +139,20 @@
       "quality_score": 8.5
     },
     "oleocanthal-pungency-anti-inflammation": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/5be6f88930b24b40bb22796d30142dd3_86b5d.png",
-      "alt": "橄欖油辣喉感背後的分子秘密",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "close-up fresh green olive being cold-pressed, golden-green oil droplet falling, macro photography, dark moody background, pungent sensation concept, cinematic dramatic lighting",
-      "generated_at": "2026-04-17",
-      "quality_score": 8
+      "url": "/images/covers/oleocanthal-pungency-anti-inflammation.jpg",
+      "alt": "Oleocanthal Pungency Anti Inflammation",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "extreme macro fresh green olive cold-pressed, golden-green oil droplet suspended mid-air, molecular pungency concept, dr"
     },
     "morning-ritual-evoo-metabolism": {
       "url": "/images/covers/morning-ritual-evoo-metabolism.jpg",
-      "alt": "每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？",
-      "credit": "Unsplash",
-      "source": "pollinations_ai_local",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5,
-      "prompt": "elegant morning ritual golden EVOO spoonful ceramic spoon, soft sunlight streaming through window, minimalist Japanese-inspired lifestyle, wooden table fresh herbs bokeh"
+      "alt": "Morning Ritual Evoo Metabolism",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "elegant morning ritual tablespoon of golden EVOO, white ceramic spoon soft sunrise light, minimalist lifestyle photograp"
     },
     "evoo-sensory-evaluation-ioc-standards": {
       "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/1bf7c22a57b7469d8d47e9ec5ade4473_dfdf0.png",
@@ -167,30 +164,28 @@
       "quality_score": 9
     },
     "olive-oil-fraud-detection-authentic-vs-fake": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/5f267745bd334f2c8c472bbaba2b61f2_db346.png",
-      "alt": "橄欖油真假辨別",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "two olive oil bottles comparison authentic vs fake, magnifying glass revealing truth, laboratory forensic concept, dramatic split lighting, yellow warning tones, investigative photography",
-      "generated_at": "2026-04-17",
-      "quality_score": 9.5
+      "url": "/images/covers/olive-oil-fraud-detection-authentic-vs-fake.jpg",
+      "alt": "Olive Oil Fraud Detection Authentic Vs Fake",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "two olive oil bottles comparison authentic vs counterfeit, forensic laboratory concept, magnifying glass revealing molec"
     },
     "olive-oil-polyphenol-content-how-to-verify": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/acd68586463e4e9e8717cee51f43ba5e_2c82d.png",
-      "alt": "橄欖油多酚含量驗證",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "laboratory testing olive oil samples, polyphenol analysis equipment, scientific glass tubes golden liquid, precision measurement, clean clinical food science photography",
-      "generated_at": "2026-04-17",
-      "quality_score": 9
+      "url": "/images/covers/olive-oil-polyphenol-content-how-to-verify.jpg",
+      "alt": "Olive Oil Polyphenol Content How To Verify",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "laboratory glass tubes with golden olive oil samples, polyphenol spectrometer analysis, scientific equipment precision, "
     },
     "2026-evoo-quality-polyphenol-index": {
-      "url": "https://image.pollinations.ai/prompt/olive%20oil%20polyphenol%20molecular%20structure%20visualization%2C%20laboratory%20glass%20vials%20with%20golden%20liquid%2C%20scientific%20data%20charts%20on%20dark%20background%2C%20precision%20measurement%20aesthetic%2C%20extra%20virgin%20olive%20oil%20quality%20testing%2C%20high-tech%20science%20photography?width=1200&height=630&model=flux&seed=1001&nologo=true",
-      "alt": "2026 高多酚橄欖油品質指數",
-      "source": "pollinations_ai",
-      "prompt": "olive oil polyphenol molecular structure visualization, laboratory glass vials with golden liquid, scientific data charts, dark elegant background, precision measurement aesthetic, extra virgin olive oil quality testing",
-      "generated_at": "2026-04-29",
-      "quality_score": 7.5
+      "url": "/images/covers/2026-evoo-quality-polyphenol-index.jpg",
+      "alt": "2026 Evoo Quality Polyphenol Index",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "premium extra virgin olive oil quality certification, molecular polyphenol visualization data overlay, artisan dark glas"
     },
     "hydroxytyrosol-brain-cognition-2026": {
       "url": "https://image.pollinations.ai/prompt/neural%20network%20brain%20scan%20glowing%20olive%20green%20gold%20light%2C%20hydroxytyrosol%20molecular%20structure%20overlay%2C%202026%20neuroscience%20research%20visualization%2C%20MRI%20brain%20with%20mediterranean%20olive%20branch%2C%20bioluminescent%20synapse%20photography%2C%20dark%20dramatic%20scientific?width=1200&height=630&model=flux&seed=1002&nologo=true",
@@ -202,67 +197,115 @@
     },
     "mediterranean-diet-anti-aging-2026": {
       "url": "/images/covers/mediterranean-diet-anti-aging-2026.jpg",
-      "alt": "2026 地中海抗老飲食實踐",
-      "source": "pollinations_ai_local",
-      "prompt": "vibrant mediterranean diet anti-aging table 2026, colorful vegetables fish olive oil legumes nuts arrangement, telomere longevity concept, warm golden lifestyle editorial",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Mediterranean Diet Anti Aging 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "mediterranean longevity concept, elegant 40+ lifestyle, olive branches, colorful vegetables, EVOO bottle, golden light, "
     },
     "polyphenol-decay-science-2026": {
-      "url": "https://image.pollinations.ai/prompt/olive%20oil%20oxidation%20time-lapse%20science%20concept%2C%20UV%20light%20penetrating%20glass%20bottle%20molecular%20decay%2C%20polyphenol%20half-life%20chemistry%20visualization%2C%20dark%20laboratory%20moody%2C%20before%20after%20quality%20comparison%2C%20scientific%20photography?width=1200&height=630&model=flux&seed=1004&nologo=true",
-      "alt": "橄欖油多酚衰減科學",
-      "source": "pollinations_ai",
-      "prompt": "time-lapse olive oil oxidation science, molecular decay visualization, UV light glass bottle degradation, dark elegant laboratory concept, polyphenol half-life chemistry, before after quality comparison, scientific moody photography",
-      "generated_at": "2026-04-29",
-      "quality_score": 7.5
+      "url": "/images/covers/polyphenol-decay-science-2026.jpg",
+      "alt": "Polyphenol Decay Science 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "olive oil bottle with UV light oxidation concept, time-lapse molecular degradation visualization, polyphenol half-life s"
     },
     "olive-oil-ancient-egypt-ritual-heritage": {
       "url": "/images/covers/olive-oil-ancient-egypt-ritual-heritage.jpg",
-      "alt": "橄欖油古埃及儀式遺產",
-      "source": "pollinations_ai_local",
-      "prompt": "ancient egypt olive oil ceremony ritual stone altar, hieroglyphics carved wall golden amphorae, torch lit temple 3000 BCE, archaeological documentary cinematic amber",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Olive Oil Ancient Egypt Ritual Heritage",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "ancient Egyptian alabaster olive oil vessel, hieroglyphic stone wall, golden candlelight archaeological photography, mus"
     },
     "olive-oil-renaissance-art-science-history": {
       "url": "/images/covers/olive-oil-renaissance-art-science-history.jpg",
-      "alt": "橄欖油文藝復興藝術科學史",
-      "source": "pollinations_ai_local",
-      "prompt": "renaissance workshop Florence olive oil lamp candle chiaroscuro light, Leonardo da Vinci style manuscripts olive branch, antique scientific instruments, Italian art history",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Olive Oil Renaissance Art Science History",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "Renaissance painting detail with olive oil vessel, Flemish still life aesthetic, Old Master oil lamp, gold-leaf frame fr"
     },
     "olive-oil-silk-road-trade-history": {
       "url": "/images/covers/olive-oil-silk-road-trade-history.jpg",
-      "alt": "橄欖油絲路貿易歷史",
-      "source": "pollinations_ai_local",
-      "prompt": "ancient silk road caravan desert sunset, amphora olive oil traded goods camels, Mediterranean to Asia trade route epic landscape, cinematic historical documentary",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Olive Oil Silk Road Trade History",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "ancient Silk Road trading amphora olive oil vessel, desert caravan archaeology, weathered terracotta with golden oil, hi"
     },
     "olive-oil-storage-guide-2026": {
       "url": "/images/covers/olive-oil-storage-guide-2026.jpg",
-      "alt": "橄欖油正確保存方法指南",
-      "source": "pollinations_ai_local",
-      "prompt": "premium olive oil dark glass bottle in cool dark pantry shelf, temperature and light protection concept, elegant kitchen organization, UV protection diagram overlay, lifestyle",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Olive Oil Storage Guide 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "dark glass olive oil bottle perfect storage environment, cool dim mediterranean cellar, terracotta tile backdrop, preser"
     },
     "olive-oil-vs-avocado-oil-complete-comparison": {
       "url": "/images/covers/olive-oil-vs-avocado-oil-complete-comparison.jpg",
-      "alt": "橄欖油vs酪梨油完整科學比較",
-      "source": "pollinations_ai_local",
-      "prompt": "olive oil versus avocado oil scientific comparison, two premium dark bottles side by side on white marble, fresh olives and avocado halves, molecular polyphenol comparison editorial",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5
+      "alt": "Olive Oil Vs Avocado Oil Complete Comparison",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "side by side premium olive oil and avocado oil bottles, elegant comparison still life, complementary green tones, dark m"
     },
     "olive-oil-complete-buying-guide-2026": {
-      "url": "https://image.pollinations.ai/prompt/premium%20extra%20virgin%20olive%20oil%20buying%20guide%202026%2C%20multiple%20artisan%20dark%20glass%20bottles%20arranged%20elegantly%2C%20harvest%20date%20certificate%20of%20analysis%20visible%2C%20moody%20editorial%20product%20photography%2C%20olive%20green%20gold%20palette%2C%20expert%20curation?width=1200&height=630&model=flux&seed=1010&nologo=true",
-      "alt": "橄欖油選購完全指南 2026",
-      "source": "pollinations_ai",
-      "prompt": "premium extra virgin olive oil selection guide 2026, multiple artisan dark bottles arranged elegantly, harvest date labels visible, Certificate of Analysis document, moody editorial product photography, olive green gold palette",
-      "generated_at": "2026-04-29",
-      "quality_score": 7.5
+      "url": "/images/covers/olive-oil-complete-buying-guide-2026.jpg",
+      "alt": "Olive Oil Complete Buying Guide 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "sophisticated olive oil selection guide, multiple premium EVOO bottles comparison, labels visible, sophisticated retail "
+    },
+    "olive-oil-daily-intake-dosage-science": {
+      "url": "/images/covers/olive-oil-daily-intake-dosage-science.jpg",
+      "alt": "Olive Oil Daily Intake Dosage Science",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "precise elegant tablespoon of golden extra virgin olive oil, morning ritual concept, soft morning light, wooden table, m"
+    },
+    "olive-oil-cooking-heat-stability-smoke-point": {
+      "url": "/images/covers/olive-oil-cooking-heat-stability-smoke-point.jpg",
+      "alt": "Olive Oil Cooking Heat Stability Smoke Point",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "olive oil golden stream pouring into hot cast iron skillet, smoke point visualization, high temperature cooking science "
+    },
+    "olive-oil-grades-classification-complete-guide": {
+      "url": "/images/covers/olive-oil-grades-classification-complete-guide.jpg",
+      "alt": "Olive Oil Grades Classification Complete Guide",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "five different grade olive oil bottles elegantly arranged, classification spectrum from extra virgin to pomace, premium "
+    },
+    "olive-oil-health-benefits-science-complete": {
+      "url": "/images/covers/olive-oil-health-benefits-science-complete.jpg",
+      "alt": "Olive Oil Health Benefits Science Complete",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "dynamic body silhouette with seven glowing health benefit zones highlighted, olive branch and molecular structure overla"
+    },
+    "olive-oil-shelf-life-oxidation-storage": {
+      "url": "/images/covers/olive-oil-shelf-life-oxidation-storage.jpg",
+      "alt": "Olive Oil Shelf Life Oxidation Storage",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "olive oil bottle with subtle oxidation concept, before and after quality comparison, molecular decay visualization, cale"
+    },
+    "predimed-study-complete-explainer-olive-oil-heart": {
+      "url": "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jpg",
+      "alt": "Predimed Study Complete Explainer Olive Oil Heart",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "human heart diagram with olive oil molecular protection, PREDIMED research concept visualization, cardiovascular health "
     }
   },
   "fallback": {
