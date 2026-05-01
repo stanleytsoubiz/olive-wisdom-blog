@@ -1,2 +1,5 @@
 /admin/* /admin/index.html 200
+# Slug renames — 301 permanent redirects
+/blog/predimed-study-explained /blog/predimed-study-explained/ 301
+/blog/predimed-study-explained/ /blog/ 301
 # /* /index.html 200

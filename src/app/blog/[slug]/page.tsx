@@ -219,19 +219,39 @@ export default async function BlogPostPage({ params }: Props) {
             '@type': 'Article',
             headline: post.title,
             description: post.excerpt,
-            image: post.coverImage,
+            image: {
+              '@type': 'ImageObject',
+              url: post.coverImage,
+              caption: `${post.title} — 知橄生活 Olive Wisdom`,
+            },
             datePublished: post.date,
             dateModified: post.date,
-            author: { '@type': 'Organization', name: post.author || '知橄生活研究團隊', url: 'https://olive-wisdom.com' },
+            author: {
+              '@type': 'Organization',
+              name: post.author || '知橄生活研究團隊',
+              url: 'https://olive-wisdom.com/about',
+            },
             publisher: {
               '@type': 'Organization',
               name: '知橄生活 Olive Wisdom',
               url: 'https://olive-wisdom.com',
+              logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico' },
             },
             url: `https://olive-wisdom.com/blog/${slug}`,
             mainEntityOfPage: { '@type': 'WebPage', '@id': `https://olive-wisdom.com/blog/${slug}` },
             inLanguage: 'zh-TW',
             wordCount: post.content ? post.content.split(/\s+/).length : undefined,
+            keywords: (post.tags || []).join(', '),
+            about: { '@type': 'Thing', name: '特級初榨橄欖油', sameAs: 'https://www.wikidata.org/wiki/Q192698' },
+            speakable: {
+              '@type': 'SpeakableSpecification',
+              cssSelector: ['.article-excerpt', 'h1', 'h2', 'h3'],
+            },
+            isPartOf: {
+              '@type': 'Blog',
+              name: '知橄生活 Olive Wisdom',
+              url: 'https://olive-wisdom.com/blog',
+            },
           }),
         }}
       />
@@ -349,7 +369,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Excerpt callout */}
-        <div className="bg-gradient-to-br from-olive-50 to-gold-50 border-l-4 border-olive-500 rounded-r-xl px-6 py-5 mb-10">
+        <div className="article-excerpt bg-gradient-to-br from-olive-50 to-gold-50 border-l-4 border-olive-500 rounded-r-xl px-6 py-5 mb-10">
           <p className="text-gray-600 leading-relaxed italic text-base">{post.excerpt}</p>
         </div>
 
