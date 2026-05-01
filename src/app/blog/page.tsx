@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     description: '深度文章庫，引用 150+ 篇學術文獻，探索橄欖油分子科學、歷史文化與生活美學。',
     url: 'https://olive-wisdom.com/blog',
     type: 'website',
-    images: [{ url: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80', width: 1200, height: 630, alt: '知橄生活知識庫' }],
+    images: [{ url: 'https://olive-wisdom.com/hero-grove.webp', width: 1200, height: 630, alt: '知橄生活知識庫' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: '知橄生活知識庫 — 橄欖油科學深度文章',
     description: '深度文章庫，探索橄欖油分子科學、歷史文化與生活美學。',
-    images: ['https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80'],
+    images: ['https://olive-wisdom.com/hero-grove.webp'],
   },
   alternates: {
     canonical: 'https://olive-wisdom.com/blog',
