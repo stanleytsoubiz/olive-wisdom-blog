@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ══════════════════════════════════════
+         基礎 SEO
+    ══════════════════════════════════════ -->
+    <title>知橄生活 Olive Wisdom — 以科學與美學，精煉您的健康時光</title>
+    <meta name="description" content="知橄生活 Olive Wisdom，為 35+ 知性追求者打造的橄欖油科學與美學空間。以嚴謹科研實證，引導您認識液態黃金的健康奧秘：多酚、SIRT1、羥基酪醇、地中海飲食完整知識庫。" />
+    <meta name="author" content="知橄生活 Olive Wisdom" />
+    <meta name="keywords" content="橄欖油,特級初榨橄欖油,EVOO,地中海飲食,抗衰老,多酚,羥基酪醇,SIRT1,橄欖苦苷,健康飲食,女性保健,台灣橄欖油推薦" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="M59hCe9kdllyuhUHkoWUZdkDEp-0ONqeS3I7EIt9cTs" />
+    <link rel="canonical" href="https://olive-wisdom.com/" />
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: preconnect 關鍵第三方域名
+         提前 TCP+TLS 握手，節省 100-300ms
+    ══════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://picture-search.skywork.ai" />
+    <link rel="dns-prefetch" href="https://image.pollinations.ai" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+    <link rel="dns-prefetch" href="https://ebsnnonpaoytoqcqcpyv.supabase.co" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#3d6b3f" />
+    <meta name="msapplication-TileColor" content="#3d6b3f" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="知橄生活 Olive Wisdom" />
+    <meta property="og:title" content="知橄生活 Olive Wisdom — 以科學與美學，精煉您的健康時光" />
+    <meta property="og:description" content="地中海千年智慧 × 分子醫學實證。為 35+ 知性追求者打造的橄欖油科學與生活美學空間。" />
+    <meta property="og:url" content="https://olive-wisdom.com/" />
+    <meta property="og:image" content="https://olive-wisdom.com/hero-grove.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="知橄生活 Olive Wisdom — 以科學與美學，精煉您的健康時光" />
+    <meta property="og:locale" content="zh_TW" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="知橄生活 Olive Wisdom" />
+    <meta name="twitter:description" content="地中海千年智慧 × 分子醫學實證。橄欖油科學與美學的知識空間。" />
+    <meta name="twitter:image" content="https://olive-wisdom.com/hero-grove.jpg" />
+
+    <!-- 結構化資料 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "知橄生活 Olive Wisdom",
+      "description": "為 35+ 知性追求者打造的橄欖油科學與美學空間，以嚴謹科研實證探索地中海飲食與長壽之道。",
+      "url": "https://olive-wisdom.com",
+      "inLanguage": "zh-TW",
+      "publisher": {
+        "@type": "Organization",
+        "name": "知橄生活 Olive Wisdom",
+        "url": "https://olive-wisdom.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://olive-wisdom.com/icon-512.png",
+          "width": 512,
+          "height": 512
+        }
+      }
+    }
+    </script>
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: LCP 圖片 preload（hero）
+         fetchpriority=high 確保最優先下載
+    ══════════════════════════════════════ -->
+    <link rel="preload" as="image" href="/hero-grove.webp"
+      imagesrcset="/hero-grove.webp 1x"
+      type="image/webp"
+      fetchpriority="high" />
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: modulepreload JS bundle
+         讓瀏覽器提前解析/編譯 JS，縮短 TTI
+    ══════════════════════════════════════ -->
+    <link rel="modulepreload" href="/assets/index-B1FB1B1B.js" />
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: Critical Inline CSS
+         首屏最小樣式（layout + hero）直接內嵌
+         避免 FOUC 且無需等待外部 CSS
+         124KB 的 Tailwind CSS 用 preload 非阻擋載入
+    ══════════════════════════════════════ -->
+    <style>
+      /* === Reset & Base === */
+      *,*::before,*::after{box-sizing:border-box}
+      html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+      body{margin:0;padding:0;font-family:'Noto Sans TC','Noto Serif TC',
+        -apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei',
+        system-ui,sans-serif;
+        background:#faf9f7;color:#1a1a18;line-height:1.6}
+      #root{min-height:100vh}
+
+      /* === Hero Skeleton（首屏 LCP 容器）=== */
+      /* ⚠️ 重要：不能用 z-index < 0，否則 LCP 算法忽略此元素 */
+      #hero-skeleton{
+        position:fixed;top:0;left:0;right:0;bottom:0;
+        z-index:0;background:#1a1a12;overflow:hidden;
+        pointer-events:none;
+      }
+      #hero-skeleton img{
+        width:100%;height:100%;object-fit:cover;
+        opacity:.8;display:block;
+      }
+      /* React root 覆蓋在 skeleton 上方 */
+      #root{
+        position:relative;z-index:1;
+        min-height:100vh;
+      }
+
+      /* === Nav placeholder（防 CLS）=== */
+      nav,header{display:block}
+
+      /* === 字型預備 fallback（避免 FOIT）=== */
+      @font-face{
+        font-family:'system-zh';
+        src:local('PingFang TC'),local('Noto Sans TC'),
+            local('Microsoft JhengHei'),local('Heiti TC');
+        font-display:swap;
+      }
+
+      /* === Loading indicator === */
+      #root:empty::after{
+        content:'';
+        display:block;
+        width:100vw;height:100vh;
+        background:transparent;
+      }
+    
+    /* ── Mobile Tab Bar ──────────────────────────── */
+    #ow-tab-bar {
+      display: none; /* 桌面版預設隱藏 */
+    }
+    @media (max-width: 768px) {
+      #ow-tab-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        z-index: 9999;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-top: 1px solid rgba(0,0,0,0.08);
+        padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 -2px 12px rgba(0,0,0,0.06);
+      }
+      #ow-tab-bar a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        color: #888;
+        text-decoration: none;
+        font-size: 10px;
+        font-family: 'Noto Sans TC', sans-serif;
+        padding: 4px 8px;
+        border-radius: 8px;
+        transition: color 0.2s;
+        min-width: 48px;
+      }
+      #ow-tab-bar a.active { color: #4a5824; }
+      #ow-tab-bar a svg {
+        width: 22px; height: 22px;
+        stroke: currentColor;
+      }
+      body { padding-bottom: 65px; }
+    }
+
+    /* ── Header Nav 間距修復 v2 ─────────────────────── */
+    /* 確保 Header nav 連結清楚可見（白色文字 + 文字陰影）並有充足間距 */
+    header nav {
+      display: flex !important;
+      align-items: center;
+      gap: 1.75rem !important;  /* 28px 間距，清晰分隔連結 */
+    }
+    /* 覆蓋所有 Tailwind class 的顏色設定，強制白色 + 陰影 */
+    header nav a,
+    header nav a.text-muted-foreground,
+    header nav a[class*="text-muted"],
+    header nav a[class*="text-foreground"],
+    header nav [class*="tracking-wide"] {
+      color: rgba(255, 255, 255, 0.92) !important;  /* 白色，高對比 */
+      text-shadow: 0 1px 4px rgba(0,0,0,0.55), 0 0 8px rgba(0,0,0,0.25) !important;
+      white-space: nowrap;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: color 0.2s ease, background-color 0.2s ease !important;
+    }
+    header nav a:hover,
+    header nav a[class*="text-primary"] {
+      color: #ffffff !important;
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+
+    /* ══════════════════════════════════════════
+       📱 行動端 RWD 修復 v1.0（P1 診斷修正）
+       問題：Header nav 溢出、Hero icon列溢出、Footer多欄
+    ══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+
+      /* 1. 隱藏桌機版 Header 導航連結（手機用底部 Tab Bar）*/
+      /* 多層選擇器確保覆蓋 React Tailwind className */
+      body header nav,
+      body header nav.flex,
+      body header [role="navigation"],
+      #root header nav,
+      #root header [class*="flex"][class*="items"],
+      header > div > nav,
+      header > div > div > nav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
+      }
+      /* 保留 Logo 可見，Header 緊湊 */
+      header {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      /* 保留 header 右側 訂閱 / 搜尋 button */
+      header button[class*="rounded"],
+      header a[class*="button"],
+      header > div > div:last-child {
+        display: flex !important;
+      }
+
+      /* 2. Hero 底部 icon/stats 列改為 2 欄 grid，防止橫向溢出 */
+      /* 針對 hero section 中 flex-row 的 icon badge 列 */
+      section [class*="hero"] .flex.flex-row,
+      [class*="hero-"] .flex.flex-row,
+      .flex.flex-row.items-center.gap-6,
+      .flex.flex-row.items-center.gap-4 {
+        flex-wrap: wrap;
+        gap: 0.5rem !important;
+      }
+
+      /* 3. Footer 多欄 → 單欄 */
+      footer .grid,
+      footer [class*="grid-cols"] {
+        grid-template-columns: 1fr !important;
+      }
+      footer .flex.flex-row {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+      }
+
+      /* 4. 文章卡片：確保 100% 寬不溢出 */
+      [class*="card"],
+      article {
+        max-width: 100% !important;
+        overflow: hidden !important;
+      }
+
+      /* 5. 訂閱欄：input + button 垂直堆疊 */
+      form.flex.flex-row,
+      [class*="subscribe"] .flex.flex-row,
+      .flex.flex-row input[type="email"] {
+        flex-direction: column !important;
+        width: 100% !important;
+      }
+      input[type="email"] {
+        width: 100% !important;
+        border-radius: 8px !important;
+      }
+
+      /* 6. 防止任何元素造成橫向滾動 */
+      body, #root {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+    }
+
+
+    /* ══════════════════════════════════════════
+       ♿ Accessibility 修復 v1.0（P6 Lighthouse）
+       1. 提升小字體對比度
+       2. Button ARIA label 補強（JS bundle 按鈕）
+    ══════════════════════════════════════════ */
+
+    /* 1. 提升 text-[10px] / text-[11px] 的字體大小與顏色 */
+    span.text-\[10px\],
+    [class*="text-\\[10px\\]"],
+    span[class*="text-[10"] {
+      font-size: 12px !important;
+      color: #4a5568 !important;   /* 深灰，確保足夠對比 */
+    }
+    span.text-\[11px\],
+    [class*="text-\\[11px\\]"],
+    span[class*="text-[11"] {
+      font-size: 12px !important;
+      color: #4a5568 !important;
+    }
+    /* 文章卡片標籤/日期小字 */
+    a.group span[class*="text-["] {
+      font-size: 12px !important;
+      color: #4a5568 !important;
+    }
+
+    /* 2. Header button 無 ARIA label 補強 via CSS content */
+    header button:not([aria-label]):not([title]) {
+      position: relative;
+    }
+
+    </style>
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: Google Fonts — 輕量化版
+         v1：5 字型家族 + 多 weight → 約 6 個請求
+         v2：精簡到 2 主要字型，其餘 system fallback
+         改進：fonts.googleapis.com 連線後立即請求，display=swap
+    ══════════════════════════════════════ -->
+    <link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" />
+    </noscript>
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: 主 CSS 非阻擋載入
+         Tailwind 124KB 用 preload+onload 非阻擋
+         Critical inline CSS 已確保首屏無 FOUC
+    ══════════════════════════════════════ -->
+    <link rel="preload" as="style" href="assets/index-p6_Wl8sT.css"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="assets/index-p6_Wl8sT.css" /></noscript>
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: 主 JS Bundle（defer）
+         type=module 本身 defer，加 defer 確保跨瀏覽器一致
+    ══════════════════════════════════════ -->
+    <script type="module" crossorigin defer src="assets/index-B1FB1B1B.js"></script>
+
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: GA4（完全延遲到 onload 後）
+         舊：<head> 內直接執行 → 阻擋 parser，增加 TBT
+         新：inline script 僅定義 gtag stub，真正 GA 等 onload
+         效果：消除 GA4 造成的 TBT（約 200-400ms）
+    ══════════════════════════════════════ -->
+    <script>
+      // GA4 stub（極輕量，不阻擋渲染）
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F677F1NW5F');
+    </script>
+    <!-- GA4 script：async 確保不阻擋，移到 head 末尾減少衝突 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F677F1NW5F"></script>
+
+  </head>
+  <body>
+    <!-- ══════════════════════════════════════
+         ⚡ PERF: Hero Skeleton（LCP 核心優化）
+         在 React 載入前直接渲染 LCP 圖片
+         使用 <picture> 支援 WebP/JPEG fallback
+         React mount 後 MutationObserver 自動隱藏
+    ══════════════════════════════════════ -->
+    <div id="hero-skeleton" aria-hidden="true">
+      <picture>
+        <source type="image/webp" srcset="/hero-grove.webp" />
+        <img
+          src="/hero-grove.jpg"
+          alt=""
+          width="1280" height="720"
+          fetchpriority="high"
+          decoding="async"
+          loading="eager"
+          elementtiming="hero-image"
+        />
+      </picture>
+    </div>
+
+    <!-- Hero skeleton 移除（最輕量版，不影響 TBT）-->
+    <script>
+      (function() {
+        function tryHide() {
+          var sk = document.getElementById('hero-skeleton');
+          if (!sk) return;
+          var r = document.getElementById('root');
+          if (r && r.children.length) {
+            sk.style.cssText='opacity:0;transition:opacity .25s';
+            setTimeout(function(){sk && sk.parentNode && sk.parentNode.removeChild(sk);}, 300);
+          } else {
+            /* 只監聽 #root 的直接子節點，代價極低 */
+            if (r) {
+              var obs = new MutationObserver(function(_,o){o.disconnect();tryHide();});
+              obs.observe(r, {childList:true});
+            } else {
+              /* #root 還沒解析，等 DOMContentLoaded */
+              document.addEventListener('DOMContentLoaded', function() {
+                var root = document.getElementById('root');
+                if (root) {
+                  var obs2 = new MutationObserver(function(_,o){o.disconnect();tryHide();});
+                  obs2.observe(root, {childList:true});
+                }
+              }, {once:true});
+            }
+          }
+        }
+        tryHide();
+      })();
+    </script>
+
+    <div id="root"></div>
+
+    <!-- ⚡ PERF: 圖片 lazy loading（load 後 idle 執行）-->
+    <script>
+      window.addEventListener('load', function() {
+        var fn = function() {
+          document.querySelectorAll('img:not([loading]):not([elementtiming])').forEach(function(img) {
+            img.loading = 'lazy';
+            img.decoding = 'async';
+          });
+          if (window.innerWidth <= 768) {
+            // Skywork images: no URL param manipulation needed (CDN handles it)
+          }
+        };
+        'requestIdleCallback' in window ? requestIdleCallback(fn, {timeout:4000}) : setTimeout(fn, 100);
+      }, {once:true});
+    </script>
+
+    <!-- ══════════════════════════════════════
+         第三方腳本（全部延遲到 load 後）
+    ══════════════════════════════════════ -->
+    <!-- Cloudflare Pages Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "d2b8a3cbda1c406da9f2295d85380fd0"}'></script>
+
+    <!-- enhancements.js（defer，React bundle 後執行）-->
+    <script src="/enhancements.js" defer></script>
+  
+  <!-- ══════════════════════════════════════
+       MOBILE TAB BAR（手機底部固定導航）
+       手機版快速分類導航，提升內容直達性
+  ══════════════════════════════════════ -->
+  <div id="ow-tab-bar" role="navigation" aria-label="主要導航">
+    <a href="#/" id="tab-home" aria-label="首頁">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+        <path d="M9 21V12h6v9"/>
+      </svg>
+      首頁
+    </a>
+    <a href="#/science" id="tab-science" aria-label="科學萃取">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 3v7L4.5 17A2 2 0 006.3 20h11.4a2 2 0 001.8-3L15 10V3"/>
+        <path d="M9 3h6M8 13h8"/>
+      </svg>
+      科學
+    </a>
+    <a href="#/selection" id="tab-selection" aria-label="品味鑑賞">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+      </svg>
+      鑑賞
+    </a>
+    <a href="#/heritage" id="tab-heritage" aria-label="知性史詩">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 22V8M12 8l-4 4M12 8l4 4"/>
+        <path d="M3 22h18M5 22V10l7-7 7 7v12"/>
+      </svg>
+      歷史
+    </a>
+    <a href="#/lifestyle" id="tab-lifestyle" aria-label="餐桌美學">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+      </svg>
+      生活
+    </a>
+  </div>
+  <script>
+    /* Tab Bar Active State 管理 */
+    (function(){
+      function updateTabBar(){
+        var hash = window.location.hash || '#/';
+        var tabs = document.querySelectorAll('#ow-tab-bar a');
+        tabs.forEach(function(a){
+          a.classList.remove('active');
+          if(hash === '#/' || hash === '') {
+            if(a.id==='tab-home') a.classList.add('active');
+          } else if(a.getAttribute('href') && hash.startsWith(a.getAttribute('href'))) {
+            a.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('hashchange', updateTabBar);
+      window.addEventListener('load', updateTabBar);
+      updateTabBar();
+    })();
+  </script>
+
+  <!-- ♿ Accessibility: aria-label patch for unlabeled buttons -->
+  <script>
+    (function() {
+      function patchAriaLabels() {
+        // 修補 Header 中沒有 aria-label 的 button
+        var headerBtns = document.querySelectorAll('header button:not([aria-label])');
+        headerBtns.forEach(function(btn) {
+          var svg = btn.querySelector('svg');
+          var text = btn.textContent.trim();
+          if (!text && svg) {
+            // 根據 button class 或位置推測用途
+            var cls = btn.className || '';
+            if (cls.includes('search') || cls.includes('magnif')) {
+              btn.setAttribute('aria-label', '搜尋');
+            } else if (cls.includes('menu') || cls.includes('burger') || cls.includes('hamb')) {
+              btn.setAttribute('aria-label', '展開選單');
+            } else {
+              btn.setAttribute('aria-label', '按鈕');
+            }
+          }
+        });
+        // 修補 Tab Bar 如果有 button
+        var tabBtns = document.querySelectorAll('#ow-tab-bar button:not([aria-label])');
+        tabBtns.forEach(function(btn, i) {
+          var labels = ['首頁', '科學', '鑑賞', '歷史', '生活'];
+          btn.setAttribute('aria-label', labels[i] || ('導航 ' + (i+1)));
+        });
+      }
+      // 在 React mount 後執行
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() { setTimeout(patchAriaLabels, 1500); });
+      } else {
+        setTimeout(patchAriaLabels, 1500);
+      }
+      // 監聽 SPA 路由變化
+      window.addEventListener('hashchange', function() { setTimeout(patchAriaLabels, 500); });
+    })();
+  </script>
+
+
+  <!-- 📱 Mobile nav hide via JS (CSS specificity override) -->
+  <script>
+    (function() {
+      var isMobile = window.innerWidth <= 768;
+      if (!isMobile) return;
+
+      function hideHeaderNav() {
+        var header = document.querySelector('header');
+        if (!header) return;
+        // 找所有 nav 或包含多個 link 的 flex 容器
+        var nav = header.querySelector('nav');
+        if (nav) {
+          nav.style.setProperty('display', 'none', 'important');
+          nav.setAttribute('aria-hidden', 'true');
+        }
+        // 也隱藏 header 內直接包含 a[href] 的 div/flex 容器（非 logo）
+        var divs = header.querySelectorAll('div');
+        divs.forEach(function(div) {
+          var links = div.querySelectorAll('a');
+          // 如果 div 裡有 3 個以上 link 且不是 logo，就隱藏
+          if (links.length >= 3) {
+            var isLogo = div.closest('[class*="logo"]') || (div.querySelectorAll('a').length === 1);
+            if (!isLogo) {
+              div.style.setProperty('display', 'none', 'important');
+            }
+          }
+        });
+      }
+
+      // 用 MutationObserver 等 React 渲染完
+      var obs = new MutationObserver(function() {
+        if (document.querySelector('header nav, header > div > nav')) {
+          hideHeaderNav();
+        }
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+
+      // 也在 load 後再跑一次
+      window.addEventListener('load', function() {
+        setTimeout(hideHeaderNav, 500);
+        setTimeout(hideHeaderNav, 1500);
+      });
+
+      // hashchange 後也跑
+      window.addEventListener('hashchange', function() {
+        setTimeout(hideHeaderNav, 300);
+      });
+    })();
+  </script>
+
+</body>

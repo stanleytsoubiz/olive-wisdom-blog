@@ -1,0 +1,3295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>知橄生活 Admin — 知識庫管理後台</title>
+<meta name="robots" content="noindex,nofollow"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        olive: { 50:'#f7f8f0',100:'#edf0dc',200:'#d7ddb4',300:'#bac485',400:'#9aab59',500:'#7a8f3a',600:'#5f712c',700:'#4a5824',800:'#3d481e',900:'#343d1b' },
+        gold:  { 400:'#d4a843',500:'#b8902a' }
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .serif { font-family: 'Noto Serif TC', serif; }
+  .fade-in { animation: fadeIn .35s ease; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
+  .tab-active { border-bottom: 2px solid #4a5824; color: #4a5824; font-weight:600; }
+  pre { white-space:pre-wrap; word-break:break-word; }
+  .stat-card:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(74,88,36,.15); }
+  .article-row:hover { background:#f7f8f0; }
+  #toast { transition:all .3s; }
+  .badge-science   { background:#d1fae5;color:#065f46; }
+  .badge-lifestyle { background:#fef3c7;color:#92400e; }
+  .badge-health    { background:#fce7f3;color:#9d174d; }
+  .badge-heritage  { background:#ede9fe;color:#5b21b6; }
+  .badge-culture   { background:#ede9fe;color:#5b21b6; }
+  .badge-selection { background:#e0f2fe;color:#075985; }
+  .badge-default   { background:#e5e7eb;color:#374151; }
+  textarea.editor  { font-family:'Menlo','Consolas',monospace;font-size:13px;line-height:1.6;resize:vertical; }
+  .preview-content h2 { font-size:1.3rem;font-weight:700;color:#3d481e;margin:1.5rem 0 .5rem;border-bottom:2px solid #d7ddb4;padding-bottom:.25rem; }
+  .preview-content h3 { font-size:1.1rem;font-weight:600;color:#4a5824;margin:1.2rem 0 .4rem; }
+  .preview-content p  { color:#374151;line-height:1.8;margin-bottom:.8rem; }
+  .preview-content strong { color:#343d1b;font-weight:700; }
+  .preview-content ul { list-style:disc;padding-left:1.5rem;margin-bottom:.8rem; }
+  .preview-content li { color:#374151;margin-bottom:.25rem; }
+  .preview-content table { width:100%;border-collapse:collapse;margin:1rem 0; }
+  .preview-content th { background:#4a5824;color:#fff;padding:.5rem .75rem;font-size:.85rem; }
+  .preview-content td { border:1px solid #d7ddb4;padding:.5rem .75rem;font-size:.9rem; }
+  .preview-content blockquote { border-left:4px solid #9aab59;background:#f7f8f0;padding:.75rem 1rem;margin:1rem 0;border-radius:0 .5rem .5rem 0;color:#5f712c;font-style:italic; }
+  /* ── 精選更新模式樣式 ── */
+  .select-card-label { opacity: 0; pointer-events: none; transition: opacity 0.15s; }
+    .select-mode-active .select-card { cursor: pointer; }
+    .select-mode-active .select-card-label { opacity: 1; pointer-events: auto; }
+  .select-mode-active
+  .select-mode-active .select-card:hover { box-shadow: 0 0 0 2px #38bdf8; }
+  body:not(.select-mode-active) .select-checkbox-icon { display: none !important; }
+    .select-mode-active
+  .select-mode-active .select-card.ring-2 .select-checkbox-icon .check-icon { display: block !important; }
+
+</style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+<!-- ═══════════════════════════════════════
+     LOGIN SCREEN
+═══════════════════════════════════════ -->
+<div id="loginScreen" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-olive-900 via-olive-800 to-olive-700">
+  <div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-sm mx-4 fade-in">
+    <div class="text-center mb-8">
+      <div class="w-14 h-14 bg-olive-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <span class="text-2xl">🫒</span>
+      </div>
+      <h1 class="serif text-2xl font-bold text-olive-900">知橄生活</h1>
+      <p class="text-sm text-gray-400 mt-1 tracking-widest uppercase">Admin Portal</p>
+    </div>
+    <div id="loginError" class="hidden bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl mb-5"></div>
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1.5">管理員密碼</label>
+        <input id="pwInput" type="password" placeholder="輸入管理密碼" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()"
+          class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-olive-500 focus:border-transparent"/>
+      </div>
+      <button type="button" id="btn-login" onclick="doLogin()"
+        class="w-full bg-olive-700 hover:bg-olive-800 text-white font-semibold py-3 rounded-xl transition-all text-sm shadow-sm hover:shadow-md">
+        進入後台
+      </button>
+    </form>
+    <p class="text-xs text-gray-300 text-center mt-6">olive-wisdom.com · 管理後台 v2.0</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     MAIN ADMIN SHELL
+═══════════════════════════════════════ -->
+<div id="adminShell" class="hidden min-h-screen flex flex-col">
+
+  <!-- Top Bar -->
+  <header class="bg-olive-900 text-white h-14 flex items-center px-5 gap-4 shadow-lg sticky top-0 z-50">
+    <div class="flex items-center gap-2 flex-1">
+      <span class="text-xl">🫒</span>
+      <div>
+        <span class="serif font-bold text-sm">知橄生活</span>
+        <span class="text-olive-400 text-xs ml-1.5 tracking-wider uppercase">Admin</span>
+      </div>
+    </div>
+    <nav class="hidden md:flex items-center gap-1 text-sm">
+      <button onclick="showTab('dashboard')" id="tab-dashboard" class="tab-btn px-4 py-2 rounded-lg hover:bg-olive-800 transition text-olive-200 tab-active">📊 總覽</button>
+      <button onclick="showTab('articles')"  id="tab-articles"  class="tab-btn px-4 py-2 rounded-lg hover:bg-olive-800 transition text-olive-200">📝 文章管理</button>
+      <button onclick="showTab('subscribers')" id="tab-subscribers" class="tab-btn px-4 py-2 rounded-lg hover:bg-olive-800 transition text-olive-200">📮 訂閱者</button>
+      <button onclick="showTab('messages')"  id="tab-messages"  class="tab-btn px-4 py-2 rounded-lg hover:bg-olive-800 transition text-olive-200">✉️ 聯絡信箱</button>
+      <button onclick="showTab('images')"   id="tab-images"   class="tab-btn px-4 py-2 rounded-lg hover:bg-olive-800 transition text-olive-200">🖼️ 圖片管理</button>
+      <button onclick="showTab('ai')"       id="tab-ai"       class="tab-btn px-4 py-2 rounded-lg hover:bg-olive-800 transition text-olive-200">✨ AI 生成</button>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="https://olive-wisdom.com" target="_blank" class="text-olive-300 hover:text-white text-xs flex items-center gap-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        官網
+      </a>
+      <button onclick="logout()" class="text-olive-400 hover:text-white text-xs">登出</button>
+    </div>
+  </header>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed top-16 right-4 z-50 hidden bg-olive-800 text-white text-sm px-5 py-3 rounded-xl shadow-xl"></div>
+
+  <!-- Content -->
+  <main class="flex-1 p-5 md:p-7 max-w-7xl mx-auto w-full">
+
+    <!-- ── DASHBOARD ── -->
+    <div id="panel-dashboard" class="fade-in">
+      <div class="mb-6">
+        <h2 class="serif text-2xl font-bold text-olive-900">總覽儀表板</h2>
+        <p class="text-gray-400 text-sm mt-1">知橄生活知識庫 · 即時數據</p>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="stat-card bg-white rounded-2xl p-5 shadow-sm border border-gray-100 transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-2xl">📝</span>
+            <span class="text-xs bg-olive-100 text-olive-700 px-2 py-0.5 rounded-full">文章</span>
+          </div>
+          <div class="text-3xl font-bold text-olive-800" id="stat-articles">—</div>
+          <div class="text-xs text-gray-400 mt-1">知識庫文章總數</div>
+        </div>
+        <div class="stat-card bg-white rounded-2xl p-5 shadow-sm border border-gray-100 transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-2xl">👁</span>
+            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">瀏覽</span>
+          </div>
+          <div id="stat-views" class="text-3xl font-bold text-blue-700">—</div>
+          <div class="text-xs text-gray-400 mt-1">累計文章瀏覽次數</div>
+        </div>
+        <div class="stat-card bg-white rounded-2xl p-5 shadow-sm border border-gray-100 transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-2xl">📮</span>
+            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">訂閱</span>
+          </div>
+          <div id="stat-subs" class="text-3xl font-bold text-emerald-700">—</div>
+          <div class="text-xs text-gray-400 mt-1">電子報訂閱者</div>
+        </div>
+        <div class="stat-card bg-white rounded-2xl p-5 shadow-sm border border-gray-100 transition-all">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-2xl">✉️</span>
+            <span class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-full">待讀</span>
+          </div>
+          <div id="stat-msgs" class="text-3xl font-bold text-rose-700">—</div>
+          <div class="text-xs text-gray-400 mt-1">未讀聯絡訊息</div>
+        </div>
+      </div>
+
+      <!-- Article Performance Table -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-6">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <h3 class="font-semibold text-olive-800 text-sm">📊 文章表現排行</h3>
+          <button onclick="loadDashboard()" class="text-xs text-olive-600 hover:text-olive-800 flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            重新整理
+          </button>
+        </div>
+        <div id="perf-table" class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 text-xs text-gray-500 uppercase tracking-wider">
+              <tr>
+                <th class="px-5 py-3 text-left">文章標題</th>
+                <th class="px-4 py-3 text-left">欄目</th>
+                <th class="px-4 py-3 text-left">發布日期</th>
+                <th class="px-4 py-3 text-right">閱讀時間</th>
+                <th class="px-4 py-3 text-right">瀏覽數</th>
+                <th class="px-4 py-3 text-center">操作</th>
+              </tr>
+            </thead>
+            <tbody id="perf-tbody" class="divide-y divide-gray-50"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Stats by Category -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+          <h3 class="font-semibold text-olive-800 text-sm mb-4">📂 欄目分佈</h3>
+          <div id="cat-breakdown" class="space-y-3"></div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+          <h3 class="font-semibold text-olive-800 text-sm mb-4">🔗 快速連結</h3>
+          <div class="space-y-2">
+            <a href="https://olive-wisdom.com" target="_blank" class="flex items-center gap-3 p-3 rounded-xl hover:bg-olive-50 transition group">
+              <span class="text-lg">🌐</span>
+              <div><p class="text-sm font-medium text-olive-800 group-hover:text-olive-600">官方網站</p><p class="text-xs text-gray-400">olive-wisdom.com</p></div>
+            </a>
+            <a href="https://supabase.com/dashboard/project/ebsnnonpaoytoqcqcpyv" target="_blank" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition group">
+              <span class="text-lg">🗄️</span>
+              <div><p class="text-sm font-medium text-blue-700 group-hover:text-blue-900">Supabase 資料庫</p><p class="text-xs text-gray-400">ebsnnonpaoytoqcqcpyv</p></div>
+            </a>
+            <a href="https://github.com/stanleytsoubiz/olive-wisdom-blog" target="_blank" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition group">
+              <span class="text-lg">💻</span>
+              <div><p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">GitHub 原始碼</p><p class="text-xs text-gray-400">stanleytsoubiz/olive-wisdom-blog</p></div>
+            </a>
+            <a href="https://dash.cloudflare.com" target="_blank" class="flex items-center gap-3 p-3 rounded-xl hover:bg-orange-50 transition group">
+              <span class="text-lg">☁️</span>
+              <div><p class="text-sm font-medium text-orange-700 group-hover:text-orange-900">Cloudflare Pages</p><p class="text-xs text-gray-400">部署管理</p></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ARTICLES ── -->
+    <div id="panel-articles" class="hidden fade-in">
+      <div id="article-list-view">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h2 class="serif text-2xl font-bold text-olive-900">文章管理</h2>
+            <p class="text-gray-400 text-sm mt-1">預覽、編輯知識庫文章內容</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="loadPostsJson()" class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-xl transition flex items-center gap-1">
+              🔄 重新載入
+            </button>
+            <button onclick="savePostsToGitHub()" id="btn-save-posts-json" class="text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-xl transition flex items-center gap-1">
+              🚀 儲存 posts.json
+            </button>
+            <select id="catFilter" onchange="filterArticles()" class="text-sm border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-500">
+              <option value="">全部欄目</option>
+              <option value="science">科學萃取</option>
+              <option value="health">品味鑑賞</option>
+              <option value="lifestyle">餐桌美學</option>
+              <option value="heritage">知性史詩</option>
+              <option value="selection">品味鑑賞</option>
+            </select>
+            <button onclick="newArticle()" class="bg-olive-700 hover:bg-olive-800 text-white font-semibold px-4 py-2 rounded-xl text-sm transition flex items-center gap-1.5 whitespace-nowrap">
+              ✚ 新建文章
+            </button>
+          </div>
+        </div>
+
+        <div id="articles-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-5"></div>
+      </div>
+
+      <!-- Article Editor -->
+      <div id="article-editor-view" class="hidden">
+        <div class="flex items-center gap-3 mb-6">
+          <button onclick="closeEditor()" class="text-sm text-olive-600 hover:text-olive-800 flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            返回文章列表
+          </button>
+          <span class="text-gray-300">|</span>
+          <h2 id="editor-title" class="serif text-lg font-bold text-olive-900 line-clamp-1 flex-1">編輯文章</h2>
+          <button onclick="if(currentSlug){const a=ARTICLES.find(x=>x.slug===currentSlug);if(a)deleteArticle(currentSlug,a.title);}" 
+            title="刪除此文章" class="ml-auto text-xs text-red-400 hover:text-red-600 hover:bg-red-50 px-3 py-1.5 rounded-lg transition flex items-center gap-1 border border-red-200 hover:border-red-400">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            刪除文章
+          </button>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-5">
+          <!-- Left: Frontmatter + Markdown Editor -->
+          <div class="space-y-4">
+            <!-- Frontmatter Fields -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+              <h3 class="text-sm font-semibold text-olive-800 mb-4 flex items-center gap-2">
+                <span>⚙️</span> 文章設定
+              </h3>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-xs text-gray-500 mb-1 block">標題</label>
+                  <input id="edit-title" type="text" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+                </div>
+                <div>
+                  <label class="text-xs text-gray-500 mb-1 block">欄目</label>
+                  <select id="edit-category" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400">
+                    <option value="science">科學萃取</option>
+                    <option value="lifestyle">餐桌美學</option>
+                    <option value="health">品味鑑賞</option>
+                    <option value="heritage">知性史詩</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-xs text-gray-500 mb-1 block">發布日期</label>
+                  <input id="edit-date" type="date" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+                </div>
+                <div>
+                  <label class="text-xs text-gray-500 mb-1 block">閱讀時間（分鐘）</label>
+                  <input id="edit-readTime" type="number" min="1" max="60" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+                </div>
+                <div class="col-span-2">
+                  <label class="text-xs text-gray-500 mb-1 block">封面圖片 URL</label>
+                  <input id="edit-cover" type="url" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400" placeholder="https://images.unsplash.com/..."/>
+                </div>
+                <div class="col-span-2">
+                  <label class="text-xs text-gray-500 mb-1 block">文章摘要</label>
+                  <textarea id="edit-excerpt" rows="2" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400 resize-none"></textarea>
+                </div>
+                <div class="col-span-2">
+                  <label class="text-xs text-gray-500 mb-1 block">標籤（逗號分隔）</label>
+                  <input id="edit-tags" type="text" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400" placeholder="多酚, SIRT1, 抗衰老"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- Markdown Editor -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-sm font-semibold text-olive-800 flex items-center gap-2"><span>✍️</span> 文章內容（Markdown）</h3>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs text-gray-400" id="char-count">0 字元</span>
+                  <button onclick="copyMarkdown()" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-600 px-3 py-1.5 rounded-lg transition">複製</button>
+                </div>
+              </div>
+              <textarea id="edit-content" class="editor w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-olive-400 h-96 text-xs"
+                oninput="updatePreview();updateCharCount()"></textarea>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="flex gap-3">
+              <button onclick="copyFullMarkdown()" class="bg-olive-100 hover:bg-olive-200 text-olive-800 font-medium py-3 px-4 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                📋 複製 MD
+              </button>
+              <button onclick="saveToGitHub()" id="btn-save-gh"  class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                🚀 儲存並推送 GitHub
+              </button>
+              <button onclick="openArticlePreview()" class="bg-olive-700 hover:bg-olive-800 text-white font-medium py-3 px-4 rounded-xl text-sm transition flex items-center justify-center gap-2">
+                🔗 預覽
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Live Preview -->
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-fit sticky top-20">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-sm font-semibold text-olive-800 flex items-center gap-2"><span>👁</span> 即時預覽</h3>
+              <span class="text-xs text-gray-400">Markdown 渲染</span>
+            </div>
+            <!-- Cover preview -->
+            <div id="preview-cover" class="relative h-40 rounded-xl overflow-hidden mb-4 bg-gray-100">
+              <img id="preview-cover-img" src="" alt="" class="w-full h-full object-cover"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                <div>
+                  <span id="preview-badge" class="text-xs px-2 py-1 rounded-full bg-olive-600 text-white">欄目</span>
+                  <p id="preview-title-overlay" class="text-white font-bold mt-1 text-base leading-tight"></p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-gray-400 mb-4">
+              <span id="preview-date">📅 —</span>
+              <span id="preview-rt">⏱️ — 分鐘</span>
+            </div>
+            <div id="preview-excerpt" class="text-sm text-gray-500 italic bg-olive-50 border-l-4 border-olive-400 px-4 py-2.5 rounded-r-xl mb-4"></div>
+            <div id="preview-content" class="preview-content text-sm overflow-y-auto max-h-96 pr-1 text-gray-700"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SUBSCRIBERS ── -->
+    <div id="panel-subscribers" class="hidden fade-in">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="serif text-2xl font-bold text-olive-900">訂閱者管理</h2>
+          <p class="text-gray-400 text-sm mt-1">電子報訂閱者清單與管理</p>
+        </div>
+        <button onclick="loadSubscribers()" class="text-sm bg-olive-700 hover:bg-olive-800 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          重新整理
+        </button>
+      </div>
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div id="subs-summary" class="px-6 py-4 bg-olive-50 border-b border-olive-100 text-sm text-olive-700"></div>
+        <div id="subs-table-wrap" class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 text-xs text-gray-500 uppercase">
+              <tr>
+                <th class="px-5 py-3 text-left">#</th>
+                <th class="px-5 py-3 text-left">電子信箱</th>
+                <th class="px-5 py-3 text-left">訂閱時間</th>
+                <th class="px-5 py-3 text-left">來源</th>
+                <th class="px-5 py-3 text-center">狀態</th>
+              </tr>
+            </thead>
+            <tbody id="subs-tbody" class="divide-y divide-gray-50"></tbody>
+          </table>
+        </div>
+        <div id="subs-empty" class="hidden text-center py-16 text-gray-400">
+          <div class="text-4xl mb-3">📮</div>
+          <p class="text-sm">尚無訂閱者資料</p>
+          <p class="text-xs mt-1">確認 Supabase 連線設定</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── MESSAGES ── -->
+    <div id="panel-messages" class="hidden fade-in">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="serif text-2xl font-bold text-olive-900">聯絡信箱</h2>
+          <p class="text-gray-400 text-sm mt-1">讀者聯絡訊息管理</p>
+        </div>
+        <button onclick="loadMessages()" class="text-sm bg-olive-700 hover:bg-olive-800 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          重新整理
+        </button>
+      </div>
+      <div id="msgs-list" class="space-y-4"></div>
+      <div id="msgs-empty" class="hidden text-center py-16 text-gray-400">
+        <div class="text-4xl mb-3">✉️</div>
+        <p class="text-sm">暫無聯絡訊息</p>
+      </div>
+    </div>
+
+    <!-- ── IMAGES MANAGEMENT ── -->
+    <div id="panel-images" class="hidden fade-in">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="serif text-2xl font-bold text-olive-900">🖼️ 圖片管理</h2>
+          <p class="text-gray-400 text-sm mt-1">動態管理網站所有圖片 · 修改後即時推送 GitHub 無需重新 Build</p>
+        </div>
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="loadImagesJson()" class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            重新載入
+          </button>
+          <button onclick="runImageScoring()" id="btn-score-all" class="text-sm bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+            🏆 品質評分
+          </button>
+          <button onclick="batchGenerateImages()" id="btn-batch-ai" class="text-sm bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+            🎨 AI 批次更新
+          </button>
+          <button onclick="saveImagesToGitHub()" id="btn-save-images" class="text-sm bg-olive-700 hover:bg-olive-800 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            🚀 推送 GitHub
+          </button>
+          <button onclick="toggleSelectMode()" id="btn-select-mode"
+            class="text-sm bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            ☑️ 精選更新
+          </button>
+        </div>
+      </div>
+
+      <!-- ── 精選更新工具列（進入選取模式後顯示）── -->
+      <div id="select-toolbar" class="hidden mb-5 bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-200 rounded-2xl p-4">
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="flex items-center gap-2 mr-2">
+            <span class="text-sm font-semibold text-sky-700">已選取</span>
+            <span id="select-count-badge"
+              class="inline-flex items-center justify-center min-w-[2rem] h-7 px-2 rounded-full bg-sky-600 text-white text-sm font-bold shadow-sm">0</span>
+            <span class="text-sm text-gray-400">張</span>
+          </div>
+          <div class="w-px h-6 bg-sky-200"></div>
+          <button onclick="selectAll()" class="text-xs bg-white hover:bg-sky-50 border border-sky-200 text-sky-700 px-3 py-1.5 rounded-lg transition font-medium flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            全選
+          </button>
+          <button onclick="selectBySection('hero')" class="text-xs bg-white hover:bg-sky-50 border border-sky-200 text-sky-700 px-3 py-1.5 rounded-lg transition font-medium">
+            🏠 Hero 橫幅
+          </button>
+          <button onclick="selectBySection('posts')" class="text-xs bg-white hover:bg-sky-50 border border-sky-200 text-sky-700 px-3 py-1.5 rounded-lg transition font-medium">
+            📝 文章封面
+          </button>
+          <button onclick="clearSelection()" class="text-xs bg-white hover:bg-red-50 border border-red-200 text-red-500 px-3 py-1.5 rounded-lg transition font-medium flex items-center gap-1">
+            <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            清除
+          </button>
+          <div class="flex-1"></div>
+          <button onclick="batchGenerateSelected()" id="btn-batch-selected"
+            class="text-sm bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-4 py-2 rounded-xl transition font-medium flex items-center gap-1.5"
+            disabled style="opacity:0.4;cursor:not-allowed">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3l14 9-14 9V3z"/></svg>
+            ✨ AI 重新生成選取
+          </button>
+          <button onclick="saveSelectedToGitHub()" id="btn-push-selected"
+            class="text-sm bg-olive-700 hover:bg-olive-800 text-white px-4 py-2 rounded-xl transition font-medium flex items-center gap-1.5"
+            disabled style="opacity:0.4;cursor:not-allowed">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+            🚀 推送選取項
+          </button>
+          <button onclick="toggleSelectMode()" class="text-sm text-gray-400 hover:text-gray-600 px-3 py-2 rounded-xl transition flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            離開
+          </button>
+        </div>
+        <div id="selected-list-preview" class="hidden mt-3 pt-3 border-t border-sky-200">
+          <p class="text-xs text-sky-600 font-medium mb-2">已選取圖片：</p>
+          <div id="selected-chips" class="flex flex-wrap gap-1.5"></div>
+        </div>
+      </div>
+
+      <!-- 批次 AI 更新進度區 (預設隱藏) -->
+      <div id="batch-progress-panel" class="hidden bg-gradient-to-br from-violet-50 to-purple-50 border border-violet-200 rounded-2xl p-5 mb-6">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-violet-800 flex items-center gap-2">
+            <span class="text-lg">🎨</span> AI 批次封面圖更新
+            <span id="batch-status-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-violet-100 text-violet-700 font-normal">準備中</span>
+          </h3>
+          <button onclick="cancelBatchGenerate()" id="btn-batch-cancel" class="text-xs text-gray-500 hover:text-red-500 transition">✕ 取消</button>
+        </div>
+        <!-- 進度條 -->
+        <div class="bg-white/60 rounded-full h-2.5 mb-3 overflow-hidden">
+          <div id="batch-progress-bar" class="h-full bg-gradient-to-r from-violet-500 to-purple-500 rounded-full transition-all duration-500" style="width:0%"></div>
+        </div>
+        <!-- 統計 -->
+        <div class="flex gap-4 text-sm mb-3">
+          <span class="text-green-600 font-medium">✅ 完成 <span id="batch-done">0</span></span>
+          <span class="text-violet-600 font-medium">⏳ 生成中 <span id="batch-running">0</span></span>
+          <span class="text-gray-400">⏰ 排隊 <span id="batch-pending">0</span></span>
+          <span class="text-red-400">❌ 失敗 <span id="batch-failed">0</span></span>
+          <span class="text-gray-500 ml-auto">共 <span id="batch-total">0</span> 張</span>
+        </div>
+        <!-- 當前進行項目 -->
+        <div id="batch-current-item" class="text-xs text-violet-600 bg-white/50 rounded-lg px-3 py-2 font-mono truncate">等待開始…</div>
+        <!-- 完成後顯示推送按鈕 -->
+        <div id="batch-done-actions" class="hidden mt-3 flex gap-2">
+          <button onclick="saveImagesToGitHub()" class="flex-1 bg-olive-700 hover:bg-olive-800 text-white text-sm py-2 rounded-xl transition font-medium">🚀 一鍵推送 GitHub + 部署</button>
+          <button onclick="document.getElementById('batch-progress-panel').classList.add('hidden')" class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-600 px-4 py-2 rounded-xl transition">關閉</button>
+        </div>
+      </div>
+
+      <!-- ══ 品質評分儀表板（預設隱藏，點「品質評分」展開）══ -->
+      <div id="score-dashboard" class="hidden mb-6">
+        <!-- 評分總覽卡 -->
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-5 mb-4">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-amber-800 flex items-center gap-2">
+              <span class="text-lg">🏆</span> 圖片品質評分總覽
+              <span id="score-status-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700 font-normal">點擊「品質評分」開始分析</span>
+            </h3>
+            <button onclick="document.getElementById('score-dashboard').classList.add('hidden')" class="text-xs text-gray-400 hover:text-gray-600 transition">✕ 關閉</button>
+          </div>
+          <!-- 統計卡片列 -->
+          <div class="grid grid-cols-4 gap-3 mb-4">
+            <div class="bg-white rounded-xl p-3 text-center shadow-sm">
+              <div id="score-total" class="text-2xl font-bold text-gray-700">—</div>
+              <div class="text-xs text-gray-400 mt-0.5">總圖片數</div>
+            </div>
+            <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-green-200">
+              <div id="score-excellent" class="text-2xl font-bold text-green-600">—</div>
+              <div class="text-xs text-green-500 mt-0.5">🟢 優秀 (8-10)</div>
+            </div>
+            <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-yellow-200">
+              <div id="score-medium" class="text-2xl font-bold text-yellow-500">—</div>
+              <div class="text-xs text-yellow-500 mt-0.5">🟡 普通 (6-7)</div>
+            </div>
+            <div class="bg-white rounded-xl p-3 text-center shadow-sm border border-red-200">
+              <div id="score-poor" class="text-2xl font-bold text-red-500">—</div>
+              <div class="text-xs text-red-400 mt-0.5">🔴 需補強 (&lt;6)</div>
+            </div>
+          </div>
+          <!-- 評分進度條 -->
+          <div class="bg-white/60 rounded-full h-3 overflow-hidden mb-3" id="score-bar-container" style="display:none">
+            <div id="score-bar-good" class="h-full bg-green-400 float-left transition-all duration-700" style="width:0%"></div>
+            <div id="score-bar-med"  class="h-full bg-yellow-400 float-left transition-all duration-700" style="width:0%"></div>
+            <div id="score-bar-bad"  class="h-full bg-red-400  float-left transition-all duration-700" style="width:0%"></div>
+          </div>
+          <!-- 行動按鈕 -->
+          <div id="score-action-btns" class="hidden flex gap-2 flex-wrap">
+            <button onclick="filterImagesByScore('poor')" class="text-sm bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 rounded-lg transition">🔴 僅顯示需補強</button>
+            <button onclick="filterImagesByScore('medium')" class="text-sm bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1.5 rounded-lg transition">🟡 顯示中等以下</button>
+            <button onclick="filterImagesByScore('all')" class="text-sm bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1.5 rounded-lg transition">全部顯示</button>
+            <button onclick="batchUpgradeByScore()" class="text-sm bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-3 py-1.5 rounded-lg transition font-semibold ml-auto">✨ 一鍵補強低分圖片</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 篩選器列（評分後顯示） -->
+      <div id="filter-bar" class="hidden flex items-center gap-2 mb-4 bg-white rounded-xl px-4 py-2 shadow-sm border border-gray-100">
+        <span class="text-xs text-gray-500 font-medium">篩選：</span>
+        <button onclick="filterImagesByScore('all')" id="filter-btn-all" class="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 transition font-medium active-filter">全部</button>
+        <button onclick="filterImagesByScore('poor')" id="filter-btn-poor" class="text-xs px-3 py-1 rounded-full bg-red-50 text-red-500 hover:bg-red-100 transition">🔴 需補強</button>
+        <button onclick="filterImagesByScore('medium')" id="filter-btn-medium" class="text-xs px-3 py-1 rounded-full bg-yellow-50 text-yellow-600 hover:bg-yellow-100 transition">🟡 普通</button>
+        <button onclick="filterImagesByScore('excellent')" id="filter-btn-excellent" class="text-xs px-3 py-1 rounded-full bg-green-50 text-green-600 hover:bg-green-100 transition">🟢 優秀</button>
+        <span class="text-xs text-gray-400 ml-2">排序：</span>
+        <button onclick="sortImagesBy('score')" class="text-xs px-3 py-1 rounded-full bg-amber-50 text-amber-600 hover:bg-amber-100 transition">評分 ↑↓</button>
+        <button onclick="sortImagesBy('date')" class="text-xs px-3 py-1 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 transition">日期 ↑↓</button>
+        <span id="filter-result-count" class="text-xs text-gray-400 ml-auto"></span>
+      </div>
+
+      <!-- Hero Images Section -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+        <h3 class="font-bold text-olive-800 text-lg mb-4 flex items-center gap-2">
+          <span class="w-8 h-8 bg-olive-100 rounded-lg flex items-center justify-center text-sm">🏠</span>
+          Hero 橫幅圖片
+        </h3>
+        <div class="grid md:grid-cols-3 gap-4" id="hero-images-grid">
+          <!-- Rendered by JS -->
+          <div class="text-center py-8 text-gray-400 col-span-3">
+            <div class="animate-pulse text-2xl mb-2">⏳</div>
+            <p class="text-sm">載入中...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post Cover Images Section -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-bold text-olive-800 text-lg flex items-center gap-2">
+            <span class="w-8 h-8 bg-olive-100 rounded-lg flex items-center justify-center text-sm">📝</span>
+            文章封面圖片
+          </h3>
+          <span class="text-xs text-gray-400 bg-gray-50 px-3 py-1 rounded-full" id="post-images-count">載入中...</span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4" id="post-images-grid">
+          <div class="text-center py-8 text-gray-400 col-span-2">
+            <div class="animate-pulse text-2xl mb-2">⏳</div>
+            <p class="text-sm">載入中...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AI GENERATION ── -->
+    <div id="panel-ai" class="hidden fade-in">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="serif text-2xl font-bold text-olive-900">✨ AI 文章生成</h2>
+          <p class="text-gray-400 text-sm mt-1">輸入主題關鍵字 → AI 自動生成完整知橄知識庫文章 → 一鍵推送部署</p>
+        </div>
+        <div class="flex gap-2 items-center">
+          <span id="ai-status-badge" class="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-500">待機中</span>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- 左欄：設定 -->
+        <div class="space-y-4">
+          <!-- API Key 設定 -->
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <h3 class="font-bold text-olive-800 mb-3 flex items-center gap-2 text-sm">
+              <span class="w-6 h-6 bg-olive-100 rounded-md flex items-center justify-center">🔑</span>API 設定
+            </h3>
+            <div class="space-y-3">
+              <div>
+                <label class="text-xs font-medium text-gray-500 mb-1 block">AI API 端點</label>
+                <select id="ai-provider" onchange="onAiProviderChange()" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400">
+                  <option value="skywork">Skywork AI（推薦）</option>
+                  <option value="openai">OpenAI GPT-4o</option>
+                  <option value="claude">Claude 3.5 Sonnet</option>
+                  <option value="custom">自訂 API 端點</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500 mb-1 block">API Key <span class="text-gray-300">（儲存於本次 Session）</span></label>
+                <input id="ai-api-key" type="password" placeholder="sk-..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500 mb-1 block">GitHub PAT <span class="text-gray-300">（跨 Session 持久化）</span></label>
+                <div class="flex gap-2">
+                  <input id="gh-pat-input" type="password" placeholder="github_pat_..." value=""
+                    class="flex-1 text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+                  <button onclick="savePatFromInput()" class="text-xs bg-olive-600 hover:bg-olive-700 text-white px-3 py-2 rounded-lg transition font-medium whitespace-nowrap">
+                    儲存 PAT
+                  </button>
+                  <button onclick="clearPatStorage()" class="text-xs bg-red-100 hover:bg-red-200 text-red-600 px-2 py-2 rounded-lg transition" title="清除已存 PAT">
+                    ✕
+                  </button>
+                </div>
+                <p id="gh-pat-status" class="text-xs text-gray-400 mt-1">
+                  目前狀態：<span id="gh-pat-state-text">尚未設定</span>
+                </p>
+              </div>
+              <div id="ai-custom-endpoint-wrap" class="hidden">
+                <label class="text-xs font-medium text-gray-500 mb-1 block">自訂 API 端點 URL</label>
+                <input id="ai-custom-endpoint" type="url" placeholder="https://api.example.com/v1/chat/completions" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+              </div>
+              <button onclick="testApiKey()" class="w-full text-sm bg-gray-50 hover:bg-gray-100 text-gray-700 py-2 rounded-lg transition">🔍 測試 API 連線</button>
+            </div>
+          </div>
+
+          <!-- 生成設定 -->
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <h3 class="font-bold text-olive-800 mb-3 flex items-center gap-2 text-sm">
+              <span class="w-6 h-6 bg-olive-100 rounded-md flex items-center justify-center">⚙️</span>生成設定
+            </h3>
+            <div class="space-y-3">
+              <div>
+                <label class="text-xs font-medium text-gray-500 mb-1 block">文章主題 / 關鍵字 <span class="text-red-400">*</span></label>
+                <input id="ai-topic" type="text" placeholder="例：橄欖油多酚與免疫系統的關係" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="text-xs font-medium text-gray-500 mb-1 block">欄目分類</label>
+                  <select id="ai-category" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400">
+                    <option value="science">科學萃取</option>
+                    <option value="lifestyle">餐桌美學</option>
+                    <option value="health">品味鑑賞</option>
+                    <option value="heritage">知性史詩</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-xs font-medium text-gray-500 mb-1 block">目標閱讀時間</label>
+                  <select id="ai-readtime" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400">
+                    <option value="6">6 分鐘（~1200字）</option>
+                    <option value="8" selected>8 分鐘（~1600字）</option>
+                    <option value="10">10 分鐘（~2000字）</option>
+                    <option value="12">12 分鐘（~2400字）</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500 mb-1 block">目標讀者</label>
+                <input id="ai-audience" type="text" value="35-55歲知性追求者，關注健康與地中海生活美學" class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400"/>
+              </div>
+              <div>
+                <label class="text-xs font-medium text-gray-500 mb-1 block">補充說明 / 參考資料（選填）</label>
+                <textarea id="ai-context" rows="3" placeholder="可貼入研究摘要、補充要求..." class="w-full text-sm border border-gray-200 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400 resize-none"></textarea>
+              </div>
+              <button onclick="generateArticle()" id="btn-ai-generate" class="w-full bg-gradient-to-r from-olive-700 to-olive-600 hover:from-olive-800 hover:to-olive-700 text-white font-semibold py-3 rounded-xl transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                <span id="ai-btn-icon">✨</span>
+                <span id="ai-btn-text">AI 生成文章</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右欄：預覽與結果 -->
+        <div class="space-y-4">
+          <!-- 生成進度 -->
+          <div id="ai-progress-card" class="hidden bg-white rounded-2xl shadow-sm border border-olive-200 p-5">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-full bg-olive-100 flex items-center justify-center text-lg animate-spin">⚙️</div>
+              <div>
+                <div class="text-sm font-semibold text-olive-800" id="ai-progress-title">AI 正在生成中...</div>
+                <div class="text-xs text-gray-400" id="ai-progress-step">分析主題關鍵字</div>
+              </div>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-1.5">
+              <div id="ai-progress-bar" class="bg-olive-500 h-1.5 rounded-full transition-all duration-500" style="width:0%"></div>
+            </div>
+          </div>
+
+          <!-- 生成結果 -->
+          <div id="ai-result-card" class="hidden bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-bold text-olive-800 text-sm flex items-center gap-2">✅ 生成完成</h3>
+              <div class="flex gap-2">
+                <button onclick="sendToEditor()" class="text-xs bg-olive-50 hover:bg-olive-100 text-olive-700 px-3 py-1.5 rounded-lg transition font-medium">📝 送入編輯器</button>
+                <button onclick="publishDirectly()" id="btn-publish-direct" class="text-xs bg-olive-700 hover:bg-olive-800 text-white px-3 py-1.5 rounded-lg transition font-medium">🚀 直接發布</button>
+              </div>
+            </div>
+            <!-- 文章 meta 預覽 -->
+            <div class="grid grid-cols-2 gap-3 mb-4 text-xs">
+              <div class="bg-gray-50 rounded-lg p-3">
+                <div class="text-gray-400 mb-1">標題</div>
+                <div id="ai-result-title" class="font-medium text-olive-900 leading-snug"></div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-3">
+                <div class="text-gray-400 mb-1">Slug</div>
+                <div id="ai-result-slug" class="font-mono text-olive-700 break-all"></div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-3">
+                <div class="text-gray-400 mb-1">摘要</div>
+                <div id="ai-result-excerpt" class="text-gray-700 leading-snug line-clamp-3"></div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-3">
+                <div class="text-gray-400 mb-1">標籤</div>
+                <div id="ai-result-tags" class="text-olive-600"></div>
+              </div>
+            </div>
+            <!-- 封面圖預覽區塊 -->
+            <div class="mb-4 rounded-xl overflow-hidden border border-gray-100">
+              <div class="bg-gray-50 px-4 py-2 flex items-center justify-between">
+                <span class="text-xs font-medium text-gray-500">🖼️ AI 自動生成封面圖</span>
+                <span id="ai-cover-source-badge" class="text-xs text-olive-600 font-medium bg-olive-50 px-2 py-0.5 rounded-full">生成中…</span>
+              </div>
+              <div class="relative bg-gray-100" style="aspect-ratio:1200/630">
+                <img id="ai-cover-preview-img" src="" alt="封面圖預覽"
+                     class="w-full h-full object-cover"
+                     style="min-height:160px"
+                     onload="document.getElementById('ai-cover-loading').style.display='none'"
+                     onerror="this.src='/hero-grove.jpg'; document.getElementById('ai-cover-loading').style.display='none'"/>
+                <div class="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-300 text-xs" id="ai-cover-loading">
+                  <span class="animate-pulse">🖼️ 封面圖載入中…</span>
+                </div>
+              </div>
+              <div class="bg-gray-50 px-3 py-2 flex gap-2 items-center">
+                <input id="ai-cover-url-display" type="text" readonly
+                       class="flex-1 text-xs font-mono text-gray-500 bg-white border border-gray-200 rounded px-2 py-1 truncate"
+                       placeholder="封面圖 URL 將自動填入…"/>
+                <button onclick="regenerateCoverImage()"
+                        class="text-xs bg-olive-50 hover:bg-olive-100 text-olive-700 px-3 py-1 rounded-lg transition whitespace-nowrap">
+                  🔄 重新生成
+                </button>
+              </div>
+            </div>
+            <!-- 內容預覽 -->
+            <div class="border border-gray-100 rounded-xl overflow-hidden">
+              <div class="bg-gray-50 px-4 py-2 flex items-center justify-between">
+                <span class="text-xs font-medium text-gray-500">文章內容預覽</span>
+                <button onclick="toggleAiPreview()" class="text-xs text-olive-600 hover:text-olive-800">切換 Markdown / 預覽</button>
+              </div>
+              <div id="ai-content-raw" class="p-4 text-xs font-mono text-gray-600 max-h-64 overflow-y-auto leading-relaxed whitespace-pre-wrap"></div>
+              <div id="ai-image-suggestions" class="mt-3"></div>
+              <div id="ai-content-preview" class="hidden p-4 prose prose-sm max-w-none max-h-64 overflow-y-auto preview-content"></div>
+            </div>
+          </div>
+
+          <!-- 提示框 -->
+          <div id="ai-hint-card" class="bg-gradient-to-br from-olive-50 to-olive-100 rounded-2xl border border-olive-200 p-5">
+            <h3 class="font-bold text-olive-800 mb-2 text-sm">💡 使用說明</h3>
+            <ul class="text-xs text-olive-700 space-y-1.5">
+              <li>① 在左側輸入文章主題關鍵字（愈具體愈好）</li>
+              <li>② 選擇欄目分類與目標閱讀時間</li>
+              <li>③ 點「AI 生成文章」— 約 15-30 秒</li>
+              <li>④ 審閱右欄生成結果，可選：</li>
+              <li class="pl-3">→「送入編輯器」手動修改後再發布</li>
+              <li class="pl-3">→「直接發布」立即推送 GitHub + 部署</li>
+            </ul>
+            <div class="mt-3 pt-3 border-t border-olive-200">
+              <p class="text-xs text-olive-600 font-medium">📌 Skywork API Key 取得方式</p>
+              <p class="text-xs text-olive-500 mt-1">登入 <a href="https://skywork.ai" target="_blank" class="underline">skywork.ai</a> → 設定 → API Keys → 建立新 Key</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════ -->
+<script>
+// ── Config ────────────────────────────────────────
+const ADMIN_PASSWORD = 'Olive2026';  // Updated  // 可直接修改此密碼
+function doLogin() {
+  var pw = document.getElementById('pwInput').value;
+  if (pw === ADMIN_PASSWORD) {
+    sessionStorage.setItem('ow_admin', '1');
+    document.getElementById('loginScreen').classList.add('hidden');
+    document.getElementById('adminShell').classList.remove('hidden');
+    loadPostsJson();
+  } else {
+    var err = document.getElementById('loginError');
+    err.textContent = 'Wrong password. Please try again.';
+    err.classList.remove('hidden');
+    document.getElementById('pwInput').value = '';
+    setTimeout(function() { err.classList.add('hidden'); }, 3000);
+  }
+}
+
+const SUPABASE_URL   = 'https://ebsnnonpaoytoqcqcpyv.supabase.co';
+const SUPABASE_ANON  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVic25ub25wYW95dG9xY3FjcHl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0Nzg5NjQsImV4cCI6MjA5MDA1NDk2NH0.jkYwfunPrJhDQqLAEOBUOmZZYKZyc_4TMLyvFU1sBKQ';
+const GITHUB_REPO   = 'stanleytsoubiz/olive-wisdom-blog';
+const GITHUB_BRANCH = 'main';
+function getGithubPAT() {
+  // sessionStorage 優先（當次登入），fallback 到 localStorage（跨會話持久）
+  return sessionStorage.getItem('ow_gh_pat') || localStorage.getItem('ow_gh_pat') || '';
+}
+function setGithubPAT(pat) {
+  var p = pat.trim();
+  sessionStorage.setItem('ow_gh_pat', p);
+  localStorage.setItem('ow_gh_pat', p);
+}
+
+// ── GitHub PAT 管理函數 ──
+function savePatFromInput() {
+  var inp = document.getElementById('gh-pat-input');
+  if (!inp) return;
+  var v = inp.value.trim();
+  if (!v) { toast('請輸入 PAT', 'error'); return; }
+  setGithubPAT(v);
+  inp.value = '';
+  updatePatStatus();
+  toast('GitHub PAT 已儲存', 'success');
+}
+function clearPatStorage() {
+  sessionStorage.removeItem('ow_gh_pat');
+  localStorage.removeItem('ow_gh_pat');
+  var inp = document.getElementById('gh-pat-input');
+  if (inp) inp.value = '';
+  updatePatStatus();
+  toast('PAT 已清除', 'info');
+}
+function updatePatStatus() {
+  var el = document.getElementById('gh-pat-state-text');
+  if (!el) return;
+  var pat = getGithubPAT();
+  if (pat) {
+    el.textContent = '已存入 (' + pat.slice(0,12) + '...)';
+    el.className = 'text-emerald-600 font-medium';
+  } else {
+    el.textContent = '尚未設定';
+    el.className = 'text-red-400';
+  }
+}
+
+// ── Articles data — 動態載入 posts.json ─────────────
+// ARTICLES 從 public/data/posts.json 動態載入，不再硬碼
+// 初始為空陣列，loadPostsJson() 載入後填充
+let ARTICLES = [];
+let postsJsonLoaded = false;
+
+const CAT_MAP = {
+  science:'科學萃取', lifestyle:'餐桌美學', health:'品味鑑賞', heritage:'知性史詩', culture:'知性史詩', selection:'品味鑑賞'
+};
+
+// ── Auth ──────────────────────────────────────────
+function checkAuth() {
+  return sessionStorage.getItem('ow_admin') === '1';
+}
+function logout() {
+  sessionStorage.removeItem('ow_admin');
+  document.getElementById('adminShell').classList.add('hidden');
+  document.getElementById('loginScreen').classList.remove('hidden');
+}
+// 頁面載入時從 localStorage 回填已儲存的 keys
+window.addEventListener('DOMContentLoaded', () => {
+  // ① 初始化登入表單 + 自動登入判斷（DOM 已就緒）
+  initAdmin();
+
+  // ② 回填 Skywork AI Key
+  const savedAiKey = localStorage.getItem('ow_ai_key');
+  if (savedAiKey) {
+    const el = document.getElementById('ai-api-key');
+    if (el && !el.value) el.value = savedAiKey;
+    sessionStorage.setItem('ow_ai_key', savedAiKey);
+  }
+  // ③ 同步 PAT 到 sessionStorage
+  const savedPat = localStorage.getItem('ow_gh_pat');
+  if (savedPat) sessionStorage.setItem('ow_gh_pat', savedPat);
+});
+
+// ── DOM 初始化（確保 DOM 已完全載入再綁定）──────────────────
+function initAdmin() {
+  // 登入表單綁定
+  const loginForm = document.getElementById('loginForm');
+  if (loginForm) {
+    loginForm.onsubmit = function(e) {
+      e.preventDefault();
+      const pw = document.getElementById('pwInput').value;
+      if (pw === ADMIN_PASSWORD) {
+        sessionStorage.setItem('ow_admin','1');
+        document.getElementById('loginScreen').classList.add('hidden');
+        document.getElementById('adminShell').classList.remove('hidden');
+        loadPostsJson();
+        setTimeout(() => updatePatStatus(), 200);
+      } else {
+        const err = document.getElementById('loginError');
+        err.textContent = '密碼錯誤，請重試';
+        err.classList.remove('hidden');
+        document.getElementById('pwInput').value = '';
+        setTimeout(() => err.classList.add('hidden'), 3000);
+      }
+    };
+  }
+  // 若已登入（sessionStorage 有效），直接進後台
+  if (checkAuth()) {
+    document.getElementById('loginScreen').classList.add('hidden');
+    document.getElementById('adminShell').classList.remove('hidden');
+    loadPostsJson();
+    setTimeout(() => updatePatStatus(), 200);
+  }
+}
+
+// ── Toast ─────────────────────────────────────────
+function toast(msg, type='success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `fixed top-16 right-4 z-50 text-sm px-5 py-3 rounded-xl shadow-xl ${
+    type === 'error' ? 'bg-red-600 text-white' : 'bg-olive-800 text-white'
+  }`;
+  t.classList.remove('hidden');
+  setTimeout(() => t.classList.add('hidden'), 3000);
+}
+
+// ── Tab navigation ────────────────────────────────
+function showTab(tab) {
+  ['dashboard','articles','subscribers','messages','images','ai'].forEach(t => {
+    document.getElementById('panel-'+t).classList.toggle('hidden', t !== tab);
+    const btn = document.getElementById('tab-'+t);
+    if (btn) {
+      btn.classList.toggle('tab-active', t === tab);
+      btn.classList.toggle('text-white', t === tab);
+    }
+  });
+  if (tab === 'subscribers') loadSubscribers();
+  if (tab === 'messages') loadMessages();
+  if (tab === 'articles') { if (!postsJsonLoaded) loadPostsJson(); else renderArticles(); }
+  if (tab === 'images') loadImagesJson();
+  if (tab === 'ai') setTimeout(() => updatePatStatus(), 50);
+  if (tab === 'dashboard') { if (!postsJsonLoaded) loadPostsJson(); else loadDashboard(); }
+}
+
+// ── Supabase fetch ────────────────────────────────
+async function sbFetch(path, opts={}) {
+  try {
+    const r = await fetch(SUPABASE_URL + '/rest/v1/' + path, {
+      headers: {
+        'apikey': SUPABASE_ANON,
+        'Authorization': 'Bearer ' + SUPABASE_ANON,
+        'Content-Type': 'application/json',
+        ...opts.headers
+      },
+      ...opts
+    });
+    if (!r.ok) return null;
+    return r.json();
+  } catch { return null; }
+}
+
+// ── Dashboard ─────────────────────────────────────
+async function loadDashboard() {
+  // Fetch views
+  const views = await sbFetch('article_views?select=slug,views&order=views.desc');
+  let subs = await sbFetch('subscribers?select=id,status&status=eq.active');
+  if (!subs) subs = await sbFetch('subscribers?select=id,status') ||
+                    await sbFetch('subscribers?select=id');
+  const msgs   = await sbFetch('contact_messages?select=id,read&read=eq.false') ||
+                 await sbFetch('contacts?select=id,is_read&is_read=eq.false');
+
+  // Total views
+  const totalViews = views ? views.reduce((s,v) => s + (v.views||0), 0) : null;
+  document.getElementById('stat-views').textContent = totalViews !== null ? totalViews.toLocaleString() : '—';
+  document.getElementById('stat-subs').textContent  = subs ? subs.length : '—';
+  document.getElementById('stat-msgs').textContent  = msgs ? msgs.length : '—';
+  // 動態更新文章總數
+  const artCount = (postsData && postsData.posts) ? postsData.posts.length : (ARTICLES ? ARTICLES.length : null);
+  if (artCount !== null) document.getElementById('stat-articles').textContent = artCount;
+
+  // Build view map
+  const viewMap = {};
+  if (views) views.forEach(v => viewMap[v.slug] = v.views);
+
+  // Perf table
+  const sorted = [...ARTICLES].sort((a,b) => (viewMap[b.slug]||0) - (viewMap[a.slug]||0));
+  const tbody = document.getElementById('perf-tbody');
+  tbody.innerHTML = sorted.map((a,i) => `
+    <tr class="article-row transition-colors cursor-pointer" onclick="openEditor('${a.slug}');showTab('articles')">
+      <td class="px-5 py-3.5">
+        <div class="flex items-center gap-3">
+          <span class="text-xs text-gray-400 w-5">${i+1}</span>
+          <div>
+            <p class="font-medium text-olive-800 text-xs leading-snug line-clamp-2 max-w-xs">${a.title}</p>
+          </div>
+        </div>
+      </td>
+      <td class="px-4 py-3.5"><span class="badge-${a.category} text-xs px-2.5 py-1 rounded-full font-medium">${CAT_MAP[a.category]||a.category}</span></td>
+      <td class="px-4 py-3.5 text-xs text-gray-500">${a.date}</td>
+      <td class="px-4 py-3.5 text-xs text-gray-500 text-right">${a.readTime} 分鐘</td>
+      <td class="px-4 py-3.5 text-right">
+        <span class="font-semibold text-sm ${viewMap[a.slug] ? 'text-olive-700' : 'text-gray-300'}">
+          ${viewMap[a.slug] !== undefined ? viewMap[a.slug].toLocaleString() : '—'}
+        </span>
+      </td>
+      <td class="px-4 py-3.5 text-center">
+        <a href="https://olive-wisdom.com/article/${a.slug}" target="_blank" onclick="event.stopPropagation()"
+           class="text-xs text-olive-600 hover:text-olive-800 hover:underline">↗ 預覽</a>
+      </td>
+    </tr>`).join('');
+
+  // Category breakdown
+  const catCount = {};
+  ARTICLES.forEach(a => { catCount[a.category] = (catCount[a.category]||0)+1; });
+  const catDiv = document.getElementById('cat-breakdown');
+  catDiv.innerHTML = Object.entries(catCount).map(([c,n]) => {
+    const pct = Math.round(n/ARTICLES.length*100);
+    return `<div>
+      <div class="flex items-center justify-between text-xs mb-1">
+        <span class="font-medium text-gray-700">${CAT_MAP[c]||c}</span>
+        <span class="text-gray-400">${n} 篇</span>
+      </div>
+      <div class="h-2 bg-gray-100 rounded-full overflow-hidden">
+        <div class="h-full bg-olive-500 rounded-full" style="width:${pct}%"></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Articles ──────────────────────────────────────
+let currentFilter = '';  // 文章分類篩選 + 圖片評分篩選（共用）
+function filterArticles() {
+  currentFilter = document.getElementById('catFilter').value;
+  renderArticles();
+}
+function renderArticles() {
+  const filtered = currentFilter
+    ? ARTICLES.filter(a => a.category === currentFilter || (currentFilter === 'heritage' && a.category === 'culture') || (currentFilter === 'selection' && (a.category === 'selection' || a.category === 'health')))
+    : ARTICLES;
+  document.getElementById('articles-grid').innerHTML = filtered.map(a => `
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-all group cursor-pointer relative" onclick="openEditor('${a.slug}')">
+      <div class="relative h-40 overflow-hidden bg-gray-100">
+        <img src="${a.cover}" alt="${a.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'"/>
+        <div class="absolute top-3 left-3">
+          <span class="badge-${a.category} text-xs px-2.5 py-1 rounded-full font-medium shadow-sm">${CAT_MAP[a.category]||a.category}</span>
+        </div>
+        <button onclick="event.stopPropagation();deleteArticle('${a.slug}','${a.title.replace(/'/g,"\\'")}')" title="刪除文章"
+          class="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-6 h-6 text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md">✕</button>
+      </div>
+      <div class="p-4">
+        <h3 class="text-sm font-bold text-olive-800 leading-snug line-clamp-2 mb-2 group-hover:text-olive-600 transition-colors">${a.title}</h3>
+        <p class="text-xs text-gray-400 line-clamp-2 mb-3">${a.excerpt}</p>
+        <div class="flex items-center justify-between text-xs text-gray-400">
+          <span>${a.date} · ${a.readTime}分鐘</span>
+          <span class="text-olive-600 font-medium group-hover:underline">編輯 →</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+
+// ── Delete Article ────────────────────────────────
+async function deleteArticle(slug, title) {
+  if (!confirm(`確定要刪除文章「${title}」？\n\n此操作將從 GitHub 移除 Markdown 檔並更新 posts.json，無法復原。`)) return;
+  if (!getGithubPAT()) {
+    const pat = prompt('請輸入 GitHub Personal Access Token（PAT）：');
+    if (!pat) return;
+    setGithubPAT(pat.trim());
+  }
+  toast('🗑️ 刪除中...', 'info');
+  const apiBase = `https://api.github.com/repos/${GITHUB_REPO}/contents`;
+  const mdPath  = `content/posts/${slug}.md`;
+  const ghHeaders = {
+    'Authorization': `token ${getGithubPAT()}`,
+    'Accept': 'application/vnd.github.v3+json'
+  };
+  try {
+    // 1. 取得 md 檔案 SHA
+    const getR = await fetch(`${apiBase}/${mdPath}`, { headers: ghHeaders });
+    if (getR.ok) {
+      const fData = await getR.json();
+      await fetch(`${apiBase}/${mdPath}`, {
+        method: 'DELETE',
+        headers: { ...ghHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: `🗑️ 刪除文章：${title}`, sha: fData.sha, branch: GITHUB_BRANCH })
+      });
+    }
+    // 2. 更新 posts.json（移除該篇）
+    if (postsData && postsData.posts) {
+      postsData.posts = postsData.posts.filter(p => p.slug !== slug);
+      ARTICLES = ARTICLES.filter(a => a.slug !== slug);
+      await savePostsToGitHub();
+    }
+    toast(`✅ 已刪除：${title}`, 'success');
+    renderArticles();
+  } catch(e) {
+    toast(`❌ 刪除失敗：${e.message}`, 'error');
+  }
+}
+
+// ── Editor ────────────────────────────────────────
+let currentSlug = null;
+async function openEditor(slug) {
+  currentSlug = slug;
+  const a = ARTICLES.find(x => x.slug === slug);
+  if (!a) return;
+
+  document.getElementById('article-list-view').classList.add('hidden');
+  document.getElementById('article-editor-view').classList.remove('hidden');
+  document.getElementById('editor-title').textContent = a.title;
+
+  // Fill frontmatter fields
+  document.getElementById('edit-title').value    = a.title;
+  document.getElementById('edit-category').value = a.category;
+  document.getElementById('edit-date').value     = a.date;
+  document.getElementById('edit-readTime').value = a.readTime;
+  document.getElementById('edit-cover').value    = a.cover;
+  document.getElementById('edit-excerpt').value  = a.excerpt;
+
+  // Fetch article content from GitHub raw
+  const rawUrl = `https://raw.githubusercontent.com/stanleytsoubiz/olive-wisdom-blog/main/content/posts/${slug}.md`;
+  document.getElementById('edit-content').value = '載入中...';
+  try {
+    const resp = await fetch(rawUrl + '?nocache=' + Date.now());
+    if (resp.ok) {
+      const md = await resp.text();
+      const bodyMatch = md.match(/^---[\s\S]*?---\n+([\s\S]*)$/);
+      const body = bodyMatch ? bodyMatch[1] : md;
+      document.getElementById('edit-content').value = body;
+    } else {
+      document.getElementById('edit-content').value = '（無法取得內容，請確認 GitHub 連線）';
+    }
+  } catch {
+    document.getElementById('edit-content').value = '（載入失敗）';
+  }
+  updatePreview();
+  updateCharCount();
+  // ⑥ 啟動草稿自動儲存 + 嘗試載入已存草稿
+  startDraftAutoSave();
+  loadDraftForSlug(slug).then(draft => {
+    if (draft && draft.content && draft.content !== document.getElementById('edit-content').value) {
+      const indicator = document.getElementById('draft-save-indicator');
+      if (indicator) {
+        indicator.innerHTML = `⚡ 發現草稿（${new Date(draft.saved_at).toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'})}）<button onclick="restoreDraft()" class="ml-2 underline text-olive-600">還原</button>`;
+        indicator.className = 'text-xs text-amber-600';
+      }
+      window._pendingDraft = draft;
+    }
+  });
+}
+function restoreDraft() {
+  const d = window._pendingDraft;
+  if (!d) return;
+  if (d.title)    document.getElementById('edit-title').value    = d.title;
+  if (d.category) document.getElementById('edit-category').value = d.category;
+  if (d.date)     document.getElementById('edit-date').value     = d.date;
+  if (d.cover)    document.getElementById('edit-cover').value    = d.cover;
+  if (d.excerpt)  document.getElementById('edit-excerpt').value  = d.excerpt;
+  if (d.tags)     document.getElementById('edit-tags').value     = d.tags;
+  if (d.read_time) document.getElementById('edit-readTime').value = d.read_time;
+  if (d.content)  document.getElementById('edit-content').value  = d.content;
+  updatePreview(); updateCharCount();
+  toast('✅ 草稿已還原', 'success');
+  document.getElementById('draft-save-indicator').textContent = '✅ 草稿已還原';
+}
+
+function closeEditor() {
+  stopDraftAutoSave();
+  document.getElementById('article-list-view').classList.remove('hidden');
+  document.getElementById('article-editor-view').classList.add('hidden');
+  currentSlug = null;
+}
+
+// ── Preview ───────────────────────────────────────
+function updatePreview() {
+  const content = document.getElementById('edit-content').value;
+  const title   = document.getElementById('edit-title').value;
+  const cover   = document.getElementById('edit-cover').value;
+  const cat     = document.getElementById('edit-category').value;
+  const date    = document.getElementById('edit-date').value;
+  const rt      = document.getElementById('edit-readTime').value;
+  const excerpt = document.getElementById('edit-excerpt').value;
+
+  document.getElementById('preview-cover-img').src = cover;
+  document.getElementById('preview-title-overlay').textContent = title;
+  document.getElementById('preview-badge').textContent = CAT_MAP[cat]||cat;
+  document.getElementById('preview-date').textContent  = '📅 ' + date;
+  document.getElementById('preview-rt').textContent    = '⏱️ ' + rt + ' 分鐘';
+  document.getElementById('preview-excerpt').textContent = excerpt;
+  document.getElementById('preview-content').innerHTML = mdToHtml(content);
+}
+
+function mdToHtml(md) {
+  return md
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm,  '<h2>$2</h2>'.replace('$2','$1'))
+    .replace(/^# (.+)$/gm,   '<h2>$1</h2>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,    '<em>$1</em>')
+    .replace(/^> (.+)$/gm,    '<blockquote>$1</blockquote>')
+    .replace(/^[-*] (.+)$/gm, '<li>$1</li>')
+    .replace(/^---$/gm,       '<hr/>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/^(?!<[h|l|b|p|h])/gm, '<p>')
+    .replace(/<\/p>/g, '</p>');
+}
+
+function updateCharCount() {
+  const len = document.getElementById('edit-content').value.length;
+  document.getElementById('char-count').textContent = len.toLocaleString() + ' 字元';
+}
+
+// ── GitHub API: 儲存文章 ─────────────────────────────
+async function saveToGitHub() {
+  if (!currentSlug) return;
+  if (!getGithubPAT()) {
+    const pat = prompt('請輸入 GitHub Personal Access Token（PAT）：\n（只需輸入一次，將儲存於本次 Session）');
+    if (!pat) return;
+    setGithubPAT(pat.trim());
+  }
+  const btn = document.getElementById('btn-save-gh');
+  const a   = ARTICLES.find(x => x.slug === currentSlug);
+  const tags = (document.getElementById('edit-tags').value || '橄欖油').split(',').map(t=>t.trim()).filter(Boolean);
+  const title    = document.getElementById('edit-title').value;
+  const category = document.getElementById('edit-category').value;
+  const date     = document.getElementById('edit-date').value;
+  const readTime = document.getElementById('edit-readTime').value;
+  const cover    = document.getElementById('edit-cover').value;
+  const excerpt  = document.getElementById('edit-excerpt').value;
+  const content  = document.getElementById('edit-content').value;
+
+  const fullMd = `---
+title: "${title}"
+slug: "${currentSlug}"
+date: "${date}"
+category: "${category}"
+excerpt: "${excerpt}"
+coverImage: "${cover}"
+author: "知橄生活研究團隊"
+readTime: ${readTime}
+tags: [${tags.map(t=>`"${t}"`).join(', ')}]
+---
+
+${content}`;
+
+  const path = `content/posts/${currentSlug}.md`;
+  const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`;
+
+  btn.disabled = true;
+  btn.textContent = '⏳ 推送中...';
+
+  try {
+    // 先取得現有檔案 SHA（更新時需要）
+    let sha = '';
+    try {
+      const getResp = await fetch(apiUrl, {
+        headers: { 'Authorization': `token ${getGithubPAT()}`, 'Accept': 'application/vnd.github.v3+json' }
+      });
+      if (getResp.ok) {
+        const fileData = await getResp.json();
+        sha = fileData.sha || '';
+      }
+    } catch(e) {}
+
+    const body = {
+      message: `✏️ 更新文章：${title}`,
+      content: btoa(unescape(encodeURIComponent(fullMd))),
+      branch: GITHUB_BRANCH
+    };
+    if (sha) body.sha = sha;
+
+    const resp = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${getGithubPAT()}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (resp.ok) {
+      toast("✅ 已推送到 GitHub！CI/CD 自動部署中...", "success"); deleteDraft(currentSlug);
+      btn.textContent = '✅ 已推送';
+      // 同步更新 posts.json 的 coverImage metadata
+      if (postsData) {
+        const post = postsData.posts.find(p => p.slug === currentSlug);
+        if (post) {
+          post.title = title; post.category = category;
+          post.date = date; post.readTime = parseInt(readTime)||post.readTime;
+          post.coverImage = cover; post.excerpt = excerpt;
+          post.tags = tags;
+        }
+      }
+      setTimeout(() => { btn.disabled=false; btn.textContent='🚀 儲存並推送 GitHub'; }, 3000);
+    } else {
+      const err = await resp.json();
+      toast('❌ 推送失敗：' + (err.message||resp.status), 'error');
+      btn.disabled = false;
+      btn.textContent = '🚀 儲存並推送 GitHub';
+    }
+  } catch(e) {
+    toast('❌ 網路錯誤：' + e.message, 'error');
+    btn.disabled = false;
+    btn.textContent = '🚀 儲存並推送 GitHub';
+  }
+}
+
+// ── 新建文章 ──────────────────────────────────────
+function newArticle() {
+  const today = new Date().toISOString().split('T')[0];
+  // 產生 slug：從標題輸入後自動生成，先用 placeholder
+  const newSlug = 'new-article-' + Date.now();
+
+  // 加入暫時 entry
+  const tempArticle = {
+    slug: newSlug,
+    title: '新文章標題（請修改）',
+    category: 'science',
+    date: today,
+    readTime: 8,
+    cover: '/hero-grove.jpg',
+    excerpt: '文章摘要（請修改）'
+  };
+  ARTICLES.unshift(tempArticle);
+  currentSlug = newSlug;
+
+  // 切換到編輯器
+  document.getElementById('article-list-view').classList.add('hidden');
+  document.getElementById('article-editor-view').classList.remove('hidden');
+  document.getElementById('editor-title').textContent = '✚ 新建文章';
+
+  // 填入預設值
+  document.getElementById('edit-title').value    = tempArticle.title;
+  document.getElementById('edit-category').value = tempArticle.category;
+  document.getElementById('edit-date').value     = tempArticle.date;
+  document.getElementById('edit-readTime').value = tempArticle.readTime;
+  document.getElementById('edit-cover').value    = tempArticle.cover;
+  document.getElementById('edit-excerpt').value  = tempArticle.excerpt;
+  document.getElementById('edit-tags').value     = '橄欖油';
+  document.getElementById('edit-content').value  = `## 前言
+
+在此撰寫文章引言...
+
+## 第一章節
+
+內文...
+
+## 結語
+
+結論...
+
+---
+
+*參考資料：*
+`;
+
+  // 監聽標題修改自動更新 slug
+  document.getElementById('edit-title').addEventListener('input', function() {
+    const t = this.value.trim();
+    if (t && currentSlug && currentSlug.startsWith('new-article-')) {
+      // 簡易 slug 建議（僅供參考，需手動設定）
+    }
+  }, { once: false });
+
+  updatePreview();
+  updateCharCount();
+  toast('💡 請填寫文章內容，完成後點擊「儲存並推送 GitHub」');
+}
+
+function copyMarkdown() {
+  navigator.clipboard.writeText(document.getElementById('edit-content').value);
+  toast('已複製 Markdown 內容');
+}
+
+function copyFullMarkdown() {
+  if (!currentSlug) return;
+  const a = ARTICLES.find(x => x.slug === currentSlug);
+  const tags = document.getElementById('edit-tags').value || '橄欖油';
+  const fm = `---
+title: "${document.getElementById('edit-title').value}"
+slug: "${currentSlug}"
+date: "${document.getElementById('edit-date').value}"
+category: "${document.getElementById('edit-category').value}"
+excerpt: "${document.getElementById('edit-excerpt').value}"
+coverImage: "${document.getElementById('edit-cover').value}"
+author: "知橄生活研究團隊"
+readTime: ${document.getElementById('edit-readTime').value}
+tags: [${tags.split(',').map(t=>`"${t.trim()}"`).join(', ')}]
+---
+
+${document.getElementById('edit-content').value}`;
+  navigator.clipboard.writeText(fm);
+  toast('已複製完整 Markdown（含 frontmatter）');
+}
+
+function openArticlePreview() {
+  if (!currentSlug) return;
+  window.open(`https://olive-wisdom.com/article/${currentSlug}`, '_blank');
+}
+
+// ── Subscribers ───────────────────────────────────
+async function loadSubscribers() {
+  const data = await sbFetch('subscribers?select=id,email,created_at,source,status&order=created_at.desc&limit=200');
+  const tbody = document.getElementById('subs-tbody');
+  const empty = document.getElementById('subs-empty');
+
+  if (!data || data.length === 0) {
+    tbody.innerHTML = '';
+    empty.classList.remove('hidden');
+    document.getElementById('subs-summary').textContent = '尚無訂閱者（資料表可能尚未建立，請在 Supabase 建立 subscribers 表）';
+    return;
+  }
+  empty.classList.add('hidden');
+  const active = data.filter(s => s.status !== 'inactive');
+  document.getElementById('subs-summary').textContent =
+    `共 ${data.length} 位訂閱者，${active.length} 位有效訂閱`;
+
+  tbody.innerHTML = data.map((s,i) => `
+    <tr class="hover:bg-gray-50 transition-colors">
+      <td class="px-5 py-3 text-xs text-gray-400">${i+1}</td>
+      <td class="px-5 py-3 text-sm font-medium text-gray-800">${s.email}</td>
+      <td class="px-5 py-3 text-xs text-gray-500">${s.created_at ? new Date(s.created_at).toLocaleString('zh-TW') : '—'}</td>
+      <td class="px-5 py-3 text-xs text-gray-400">${s.source||'website'}</td>
+      <td class="px-5 py-3 text-center">
+        <span class="text-xs px-2 py-0.5 rounded-full ${s.status !== 'inactive' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-400'}">
+          ${s.status !== 'inactive' ? '✓ 有效' : '停用'}
+        </span>
+      </td>
+    </tr>`).join('');
+}
+
+// ── Messages ──────────────────────────────────────
+async function loadMessages() {
+  // Try both table names
+  let data = await sbFetch('contact_messages?select=*&order=submitted_at.desc&limit=50');
+  if (!data) data = await sbFetch('contacts?select=*&order=created_at.desc&limit=50');
+
+  const list  = document.getElementById('msgs-list');
+  const empty = document.getElementById('msgs-empty');
+
+  if (!data || data.length === 0) {
+    list.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+  list.innerHTML = data.map(m => {
+    const ts = m.submitted_at || m.created_at || '';
+    const isRead = m.read || m.is_read;
+    return `
+    <div class="bg-white rounded-2xl shadow-sm border ${isRead ? 'border-gray-100' : 'border-olive-300'} p-5 transition-all hover:shadow-md">
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-olive-100 flex items-center justify-center text-olive-700 font-bold text-sm">
+            ${(m.name||'?').charAt(0).toUpperCase()}
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800 text-sm">${m.name||'—'}</p>
+            <p class="text-xs text-gray-400">${m.email||'—'}</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          ${!isRead ? '<span class="w-2 h-2 bg-olive-500 rounded-full"></span>' : ''}
+          <span class="text-xs text-gray-400">${ts ? new Date(ts).toLocaleString('zh-TW') : '—'}</span>
+        </div>
+      </div>
+      <div class="mt-3 pl-12">
+        <p class="text-sm text-gray-600 leading-relaxed whitespace-pre-wrap">${m.message||''}</p>
+        <a href="mailto:${m.email}?subject=Re:%20知橄生活回覆" class="inline-flex items-center gap-1 mt-3 text-xs text-olive-600 hover:text-olive-800 hover:underline">
+          ↩ 回覆此訊息
+        </a>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Initialize ────────────────────────────────────
+document.getElementById('edit-cover').addEventListener('input', updatePreview);
+document.getElementById('edit-title').addEventListener('input', updatePreview);
+document.getElementById('edit-category').addEventListener('change', updatePreview);
+document.getElementById('edit-date').addEventListener('change', updatePreview);
+document.getElementById('edit-readTime').addEventListener('input', updatePreview);
+document.getElementById('edit-excerpt').addEventListener('input', updatePreview);
+
+// ══════════════════════════════════════════════════
+//  🖼️  IMAGES.JSON 管理模組
+// ══════════════════════════════════════════════════
+let imagesData = null; // 載入後的 images.json 資料
+const IMAGES_JSON_PATH = 'public/data/images.json';
+
+// 動態載入 images.json（從 CDN / GitHub Raw，加 cache-bust）
+async function loadImagesJson() {
+  const heroGrid = document.getElementById('hero-images-grid');
+  const postGrid = document.getElementById('post-images-grid');
+  heroGrid.innerHTML = '<div class="col-span-3 text-center py-6 text-gray-400"><div class="animate-pulse text-2xl mb-2">⏳</div><p class="text-sm">正在載入 images.json…</p></div>';
+  postGrid.innerHTML = '<div class="col-span-2 text-center py-6 text-gray-400"><div class="animate-pulse text-2xl mb-2">⏳</div><p class="text-sm">正在載入…</p></div>';
+
+  try {
+    // 優先從 GitHub raw 載入（確保最新），加 cache-bust
+    const ts = Date.now();
+    const rawUrl = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${IMAGES_JSON_PATH}?t=${ts}`;
+    const resp = await fetch(rawUrl);
+    if (!resp.ok) throw new Error('無法載入 images.json (HTTP ' + resp.status + ')');
+    imagesData = await resp.json();
+    renderImagesPanel();
+    toast('✅ images.json 已載入', 'success');
+  } catch(e) {
+    // fallback：嘗試本地 /data/images.json
+    try {
+      const resp2 = await fetch('/data/images.json?t=' + Date.now());
+      if (!resp2.ok) throw new Error('本地載入失敗');
+      imagesData = await resp2.json();
+      renderImagesPanel();
+      toast('⚠️ 已從本地快取載入 images.json', 'success');
+    } catch(e2) {
+      heroGrid.innerHTML = `<div class="col-span-3 text-center py-8 text-red-400"><div class="text-3xl mb-2">❌</div><p class="text-sm">載入失敗：${e.message}</p><p class="text-xs mt-1 text-gray-400">請確認 GitHub PAT 已設定或網路正常</p></div>`;
+      postGrid.innerHTML = '';
+    }
+  }
+}
+
+// 渲染圖片管理面板
+function renderImagesPanel() {
+  if (!imagesData) return;
+
+  // ── Hero 圖片 ──
+  const heroMap = { homepage:'首頁 Hero', blog:'文章列表頁', about:'關於頁面' };
+  const heroGrid = document.getElementById('hero-images-grid');
+  heroGrid.innerHTML = Object.entries(imagesData.hero || {}).map(([key, val]) => {
+    const srcBadge = getSourceBadge(val.source || 'unsplash');
+    return `
+    <div class="border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-all select-card" id="img-card-hero-${key}" data-section="hero" data-key="${key}" data-source="${val.source||'unsplash'}" data-score="0" onclick="if(selectModeActive){toggleSelectImage('hero','${key}',this);}">
+      <div class="relative h-32 bg-gray-100 overflow-hidden">
+        <img src="${val.url}" alt="${val.alt||key}" class="w-full h-full object-cover" id="img-preview-hero-${key}" onerror="this.src='/hero-grove.jpg'"/>
+        <label class="absolute top-2 left-2 z-10 flex items-center gap-1.5 cursor-pointer select-card-label group/cb"
+          onclick="event.stopPropagation();toggleSelectImage('hero','${key}',document.getElementById('img-card-hero-'+String('${key}')))"
+          title="選取此圖片">
+          <input type="checkbox" id="chk-hero-${key}" class="sr-only" data-section="hero" data-key="${key}">
+          <span class="w-5 h-5 rounded-md border-2 border-white/80 bg-white/20 backdrop-blur-sm flex items-center justify-center shadow transition-all select-checkbox-icon">
+            <svg class="w-3 h-3 text-white hidden check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <span class="bg-white/90 text-xs font-semibold text-olive-700 px-2 py-0.5 rounded-full">${heroMap[key]||key}</span>
+        </label>
+        <div class="absolute top-2 right-2 flex flex-col items-end gap-0.5" id="img-badge-hero-${key}">
+          ${srcBadge}
+          <span id="score-badge-hero-${key}" class="hidden text-xs px-1.5 py-0.5 rounded-md font-bold"></span>
+        </div>
+      </div>
+      <div class="p-3">
+        <label class="text-xs font-medium text-gray-500 mb-1 block">圖片 URL</label>
+        <input type="url"
+          id="hero-url-${key}"
+          value="${val.url}"
+          oninput="updateImageData('hero','${key}',this.value)"
+          class="w-full text-xs border border-gray-200 rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-olive-400"
+          placeholder="https://images.unsplash.com/..."/>
+        <div class="flex gap-1 mt-2">
+          <button onclick="previewHeroImage('${key}')" class="flex-1 text-xs bg-gray-50 hover:bg-gray-100 text-gray-600 px-2 py-1 rounded-lg transition">👁 預覽</button>
+          <button onclick="openUnsplashPicker('hero','${key}')" class="flex-1 text-xs bg-olive-50 hover:bg-olive-100 text-olive-700 px-2 py-1 rounded-lg transition">🔍 搜圖</button>
+          <button onclick="generateImageForSlug('hero','${key}')" id="btn-ai-img-hero-${key}" class="flex-1 text-xs bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-2 py-1 rounded-lg transition font-medium">✨ AI</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // ── 文章封面圖片 ──
+  const postGrid = document.getElementById('post-images-grid');
+  const postEntries = Object.entries(imagesData.posts || {});
+  document.getElementById('post-images-count').textContent = `共 ${postEntries.length} 篇`;
+
+  // 用 ARTICLES 陣列對應標題（若有）
+  const articleTitleMap = {};
+  ARTICLES.forEach(a => { articleTitleMap[a.slug] = a.title; });
+
+  postGrid.innerHTML = postEntries.map(([slug, val]) => {
+    const title = articleTitleMap[slug] || slug;
+    const shortTitle = title.length > 28 ? title.slice(0, 28) + '…' : title;
+    const srcBadge = getSourceBadge(val.source || 'unsplash');
+    const genDate = val.generated_at ? `<span class="text-gray-300 ml-1">${val.generated_at}</span>` : '';
+    return `
+    <div class="border border-gray-100 rounded-xl overflow-hidden hover:shadow-md transition-all select-card" id="img-card-posts-${slug}" data-section="posts" data-key="${slug}" data-source="${val.source||'unsplash'}" data-score="0" onclick="if(selectModeActive){toggleSelectImage('posts','${slug}',this);}">
+      <div class="relative h-28 bg-gray-100 overflow-hidden">
+        <img src="${val.url}" alt="${val.alt||slug}" class="w-full h-full object-cover" id="img-preview-posts-${slug}" onerror="this.src='/hero-grove.jpg'"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <label class="absolute top-2 left-2 z-10 flex items-center cursor-pointer select-card-label group/cb"
+          onclick="event.stopPropagation();toggleSelectImage('posts','${slug}',document.getElementById('img-card-posts-'+String('${slug}')))"
+          title="選取此圖片">
+          <input type="checkbox" id="chk-posts-${slug}" class="sr-only" data-section="posts" data-key="${slug}">
+          <span class="w-5 h-5 rounded-md border-2 border-white/80 bg-white/20 backdrop-blur-sm flex items-center justify-center shadow transition-all select-checkbox-icon">
+            <svg class="w-3 h-3 text-white hidden check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </span>
+        </label>
+        <div class="absolute bottom-2 left-2 right-2 text-white text-xs font-medium leading-tight line-clamp-1">${shortTitle}</div>
+        <div class="absolute top-2 right-2 flex flex-col items-end gap-0.5" id="img-badge-posts-${slug}">
+          ${srcBadge}${genDate}
+          <span id="score-badge-posts-${slug}" class="hidden text-xs px-1.5 py-0.5 rounded-md font-bold shadow"></span>
+        </div>
+      </div>
+      <div class="p-3">
+        <div class="text-xs text-gray-400 mb-1.5 font-mono truncate">${slug}</div>
+        <input type="url"
+          id="post-url-${slug}"
+          value="${val.url}"
+          oninput="updateImageData('posts','${slug}',this.value)"
+          class="w-full text-xs border border-gray-200 rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-olive-400"
+          placeholder="https://images.unsplash.com/..."/>
+        <div class="flex gap-1 mt-2">
+          <button onclick="previewPostImage('${slug}')" class="flex-1 text-xs bg-gray-50 hover:bg-gray-100 text-gray-600 px-2 py-1 rounded-lg transition">👁 預覽</button>
+          <button onclick="openUnsplashPicker('posts','${slug}')" class="flex-1 text-xs bg-olive-50 hover:bg-olive-100 text-olive-700 px-2 py-1 rounded-lg transition">🔍 搜圖</button>
+          <button onclick="generateImageForSlug('posts','${slug}')" id="btn-ai-img-posts-${slug}" class="flex-1 text-xs bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white px-2 py-1 rounded-lg transition font-medium">✨ AI</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════════════════════════════════
+// 🏆 Layer 2：智能圖片品質評分引擎
+// 評分維度：source 品質 + prompt 精準度 + 新鮮度 + 主題相關性
+// 輸出：1–10 分；< 6 = 🔴需補強  6–7 = 🟡普通  8+ = 🟢優秀
+// ══════════════════════════════════════════════════════════════════
+
+// 分數計算（同時更新 imagesData 的 quality_score）
+function calcImageScore(section, key, val) {
+  let score = 0;
+
+  // ① source 品質基底分 (0–5)
+  const sourceScore = {
+    skywork_ai: 5, pollinations_ai: 3.5,
+    unsplash: 2.5, unsplash_source: 1, manual: 3, undefined: 2
+  };
+  score += (sourceScore[val.source] ?? 2);
+
+  // ② prompt 精準度 (0–2)
+  const hasPrecisePrompt = (
+    (typeof ARTICLE_IMAGE_PROMPTS !== 'undefined' && ARTICLE_IMAGE_PROMPTS[key]) ||
+    (val.prompt && val.prompt.length > 30)
+  );
+  const hasAnyPrompt = val.prompt && val.prompt.length > 5;
+  if (hasPrecisePrompt) score += 2;
+  else if (hasAnyPrompt) score += 1;
+
+  // ③ 新鮮度 (0–1)：30 天內 +1，90 天內 +0.5
+  if (val.generated_at) {
+    const daysDiff = (Date.now() - new Date(val.generated_at)) / 86400000;
+    if (daysDiff <= 30) score += 1;
+    else if (daysDiff <= 90) score += 0.5;
+  }
+
+  // ④ 主題相關性 (0–2)：prompt 與 slug keyword 重疊
+  if (val.prompt && key) {
+    const keyWords = key.replace(/-/g,' ').split(' ').filter(w => w.length > 3);
+    const promptLow = val.prompt.toLowerCase();
+    const overlap = keyWords.filter(w => promptLow.includes(w)).length;
+    score += Math.min(2, overlap * 0.5);
+  } else if (typeof ARTICLE_IMAGE_PROMPTS !== 'undefined' && ARTICLE_IMAGE_PROMPTS[key]) {
+    score += 1.5; // 有精準對應表 → 主題相關性高
+  }
+
+  const finalScore = Math.min(10, Math.max(1, Math.round(score * 10) / 10));
+  // 回寫到 imagesData
+  if (imagesData) {
+    const target = section === 'hero' ? imagesData.hero?.[key] : imagesData.posts?.[key];
+    if (target) target.quality_score = finalScore;
+  }
+  return finalScore;
+}
+
+// 分數對應的 badge HTML + 卡片邊框 class
+function getScoreBadge(score) {
+  if (score >= 8)  return { html: '<span class="text-xs bg-green-500 text-white px-1.5 py-0.5 rounded-md font-bold shadow">🟢 '+score.toFixed(1)+'</span>', border: 'border-green-300 ring-1 ring-green-200', tier: 'excellent' };
+  if (score >= 6)  return { html: '<span class="text-xs bg-yellow-400 text-white px-1.5 py-0.5 rounded-md font-bold shadow">🟡 '+score.toFixed(1)+'</span>', border: 'border-yellow-300 ring-1 ring-yellow-200', tier: 'medium' };
+  return           { html: '<span class="text-xs bg-red-500   text-white px-1.5 py-0.5 rounded-md font-bold shadow animate-pulse">🔴 '+score.toFixed(1)+'</span>', border: 'border-red-400 ring-2 ring-red-300', tier: 'poor' };
+}
+
+// ── 執行全部評分
+function runImageScoring() {
+  if (!imagesData) { toast('❌ 請先載入 images.json', 'error'); return; }
+
+  const dashboard = document.getElementById('score-dashboard');
+  const filterBar = document.getElementById('filter-bar');
+  dashboard.classList.remove('hidden');
+  filterBar.classList.remove('hidden');
+  document.getElementById('score-status-badge').textContent = '評分中…';
+
+  let excellent = 0, medium = 0, poor = 0, total = 0;
+  const allCards = [];
+
+  // 評分 Hero
+  Object.entries(imagesData.hero || {}).forEach(([key, val]) => {
+    const score = calcImageScore('hero', key, val);
+    const { html, border, tier } = getScoreBadge(score);
+    const card = document.getElementById('img-card-hero-'+key);
+    const badge = document.getElementById('score-badge-hero-'+key);
+    if (badge) { badge.innerHTML = html; badge.classList.remove('hidden'); }
+    if (card) {
+      card.dataset.score = score;
+      card.dataset.tier = tier;
+      card.className = card.className.replace(/border-\S+ ring-\d+ ring-\S+/g,'').trim();
+      if (tier !== 'excellent') card.classList.add(...border.split(' '));
+    }
+    if (tier === 'excellent') excellent++; else if (tier === 'medium') medium++; else poor++;
+    total++;
+    allCards.push({ id: 'img-card-hero-'+key, score, tier });
+  });
+
+  // 評分 Posts
+  Object.entries(imagesData.posts || {}).forEach(([slug, val]) => {
+    const score = calcImageScore('posts', slug, val);
+    const { html, border, tier } = getScoreBadge(score);
+    const card = document.getElementById('img-card-posts-'+slug);
+    const badge = document.getElementById('score-badge-posts-'+slug);
+    if (badge) { badge.innerHTML = html; badge.classList.remove('hidden'); }
+    if (card) {
+      card.dataset.score = score;
+      card.dataset.tier = tier;
+      card.className = card.className.replace(/border-\S+ ring-\d+ ring-\S+/g,'').trim();
+      if (tier !== 'excellent') card.classList.add(...border.split(' '));
+    }
+    if (tier === 'excellent') excellent++; else if (tier === 'medium') medium++; else poor++;
+    total++;
+    allCards.push({ id: 'img-card-posts-'+slug, score, tier });
+  });
+
+  // 更新統計
+  document.getElementById('score-total').textContent = total;
+  document.getElementById('score-excellent').textContent = excellent;
+  document.getElementById('score-medium').textContent = medium;
+  document.getElementById('score-poor').textContent = poor;
+  document.getElementById('score-status-badge').textContent = '評分完成 ✅';
+  document.getElementById('score-action-btns').classList.remove('hidden');
+
+  // 進度條視覺化
+  const barContainer = document.getElementById('score-bar-container');
+  barContainer.style.display = 'block';
+  document.getElementById('score-bar-good').style.width = (excellent/total*100) + '%';
+  document.getElementById('score-bar-med').style.width  = (medium/total*100) + '%';
+  document.getElementById('score-bar-bad').style.width  = (poor/total*100) + '%';
+
+  // toast 摘要
+  const msg = poor > 0
+    ? `🏆 評分完成：🟢${excellent} 🟡${medium} 🔴${poor}（${poor} 張需補強）`
+    : `🏆 評分完成：全部 ${total} 張圖片品質良好！🟢${excellent} 🟡${medium}`;
+  toast(msg, poor > 0 ? 'warning' : 'success');
+}
+
+// ── 篩選器（依等級顯示/隱藏卡片）
+// ── 篩選器狀態（與 filterArticles 共用 currentFilter 變數）
+// let currentFilter = 'all';  ← 已在行918定義，不重複宣告
+let currentSort = null;
+
+function filterImagesByScore(tier) {
+  currentFilter = tier;
+  const allCards = document.querySelectorAll('[id^="img-card-"]');
+  let visible = 0;
+  allCards.forEach(card => {
+    const cardTier = card.dataset.tier || 'all';
+    let show = tier === 'all';
+    if (tier === 'poor')      show = cardTier === 'poor';
+    if (tier === 'medium')    show = cardTier === 'poor' || cardTier === 'medium';
+    if (tier === 'excellent') show = cardTier === 'excellent';
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  // 更新按鈕樣式
+  ['all','poor','medium','excellent'].forEach(t => {
+    const btn = document.getElementById('filter-btn-'+t);
+    if (btn) btn.classList.toggle('ring-2', t === tier);
+  });
+  const countEl = document.getElementById('filter-result-count');
+  if (countEl) countEl.textContent = tier === 'all' ? '' : `顯示 ${visible} 張`;
+}
+
+// ── 排序
+function sortImagesBy(by) {
+  const postGrid = document.getElementById('post-images-grid');
+  const cards = Array.from(postGrid.querySelectorAll('[id^="img-card-posts-"]'));
+  if (!cards.length) return;
+
+  currentSort = (currentSort === by) ? by + '_desc' : by;
+  const desc = currentSort.endsWith('_desc');
+
+  cards.sort((a, b) => {
+    let va, vb;
+    if (by === 'score') {
+      va = parseFloat(a.dataset.score || 0);
+      vb = parseFloat(b.dataset.score || 0);
+    } else { // date
+      const slugA = a.id.replace('img-card-posts-','');
+      const slugB = b.id.replace('img-card-posts-','');
+      va = imagesData?.posts?.[slugA]?.generated_at || '0';
+      vb = imagesData?.posts?.[slugB]?.generated_at || '0';
+    }
+    return desc ? (va > vb ? -1 : 1) : (va < vb ? -1 : 1);
+  });
+  cards.forEach(c => postGrid.appendChild(c));
+  toast(`已依${by === 'score' ? '評分' : '日期'}${desc?' (高→低)':' (低→高)'} 排序`, 'info');
+}
+
+// ── 一鍵補強低分圖片（呼叫 batchGenerateImages 但僅處理 poor/medium 圖片）
+async function batchUpgradeByScore() {
+  if (!imagesData) { toast('❌ 請先執行品質評分', 'error'); return; }
+  const poorCards = Array.from(document.querySelectorAll('[data-tier="poor"]'));
+  if (!poorCards.length) { toast('✅ 沒有需要補強的圖片！', 'success'); return; }
+
+  const confirmed = confirm(
+    `🔴 發現 ${poorCards.length} 張低分圖片需要補強。\n\n` +
+    poorCards.map(c => '• ' + c.id.replace('img-card-','')).join('\n') +
+    '\n\n使用 Skywork AI 自動重新生成這些圖片？'
+  );
+  if (!confirmed) return;
+
+  const skyworkKey = document.getElementById('ai-api-key')?.value?.trim() || sessionStorage.getItem('ow_ai_key') || '';
+  if (!skyworkKey) { toast('❌ 請先填入 Skywork API Key', 'error'); return; }
+
+  for (const card of poorCards) {
+    const [, section, ...keyParts] = card.id.split('-');
+    const key = keyParts.join('-');
+    toast(`✨ 補強中：${key.slice(0,30)}…`, 'info');
+    try {
+      await generateImageForSlug(section, key);
+    } catch(e) {
+      console.warn('補強失敗:', key, e);
+    }
+  }
+  toast('🎉 低分圖片補強完成！請重新評分確認效果', 'success');
+  // 重新評分
+  setTimeout(runImageScoring, 500);
+}
+
+// ══════════════════════════════════════════════
+// 🎨 圖片來源 Badge 輔助函式
+// ══════════════════════════════════════════════
+function getSourceBadge(source) {
+  const badges = {
+    'skywork_ai':      '<span class="inline-flex items-center gap-0.5 text-xs bg-violet-600 text-white px-1.5 py-0.5 rounded-md font-semibold">✨ Skywork</span>',
+    'pollinations_ai': '<span class="inline-flex items-center gap-0.5 text-xs bg-blue-500 text-white px-1.5 py-0.5 rounded-md font-semibold">🤖 AI</span>',
+    'unsplash':        '<span class="inline-flex items-center gap-0.5 text-xs bg-black/60 text-white px-1.5 py-0.5 rounded-md">📷 Unsplash</span>',
+    'manual':          '<span class="inline-flex items-center gap-0.5 text-xs bg-gray-500/70 text-white px-1.5 py-0.5 rounded-md">✏️ 手動</span>',
+  };
+  return badges[source] || badges['unsplash'];
+}
+
+// ══════════════════════════════════════════════
+// ✨ 單張 AI 圖片生成（個別按鈕觸發）
+// ══════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════
+// 🎯 精準視覺 Prompt 對應表（英文 → Skywork Image API 最佳化）
+// 每篇文章手工設計，確保圖片精準對焦主題與內容
+// ══════════════════════════════════════════════════════════════
+const ARTICLE_IMAGE_PROMPTS = {
+  // ── 科學萃取類 ──
+  "polyphenols-sirt1-longevity-2026":
+    "glowing DNA double helix surrounded by olive oil molecules, longevity science concept, green molecular structure, dark background, bioluminescent glow, scientific visualization, macro photography",
+  "oleocanthal-pungency-anti-inflammation":
+    "close-up fresh green olive being cold-pressed, golden-green oil droplet falling, macro photography, dark moody background, pungent sensation concept, cinematic dramatic lighting",
+  "oleocanthal-anti-inflammation-brain-protection":
+    "human brain silhouette glowing olive green light, anti-inflammation shield, neuroscience visualization, mediterranean olive branch overlay, dramatic dark background, artistic medical photography",
+  "hydroxytyrosol-brain-cognition-memory":
+    "neurons firing golden light, olive oil molecular structure overlay, brain cognition enhancement, glowing synapses, olive green gold tones, scientific macro photography, harvard lab aesthetic",
+  "olive-oil-polyphenol-content-how-to-verify":
+    "laboratory testing olive oil samples, polyphenol analysis equipment, scientific glass tubes golden liquid, precision measurement, clean clinical food science photography",
+  "evoo-sensory-evaluation-ioc-standards":
+    "professional olive oil tasting, expert smelling cobalt blue glass, sensory evaluation, white tablecloth, warm studio lighting, sommelier aesthetic, food photography",
+  "morning-ritual-evoo-metabolism":
+    "elegant morning ritual, golden extra virgin olive oil spoonful, white ceramic spoon, soft sunlight through window, minimalist lifestyle photography, wooden table, fresh herbs",
+  // ── 品味鑑賞類 ──
+  "olive-oil-fraud-detection-authentic-vs-fake":
+    "two olive oil bottles comparison authentic vs fake, magnifying glass revealing truth, laboratory forensic concept, dramatic split lighting, yellow warning tones, investigative photography",
+  "evoo-buying-guide-2026":
+    "curated premium extra virgin olive oil bottles collection, elegant retail display, dark glass artisan bottles, warm luxury product photography, golden hour light, food styling",
+  "olive-oil-terroir-spain-greece-italy":
+    "three mediterranean landscapes montage, olive grove terroir, Spain Greece Italy landmarks, golden sunset over ancient olive trees, travel food photography, cinematic wide shot",
+  "squalene-olive-oil-skin-beauty-molecular":
+    "woman luminous glowing skin, drops golden olive oil on cheek, beauty molecular concept, squalene skin barrier, luxury beauty photography, soft diffused lighting, elegance",
+  // ── 餐桌美學類 ──
+  "mediterranean-diet-anti-aging-women-2026":
+    "vibrant mediterranean table spread, colorful vegetables fish olive oil herbs, elegant woman dining, anti-aging lifestyle, warm afternoon light, food lifestyle photography",
+  // ── 知性史詩類 ──
+  "olive-tree-ancient-civilization-heritage":
+    "ancient gnarled olive tree two thousand years old, dramatic golden sunset, stone wall ruins, historical Mediterranean civilization, epic landscape photography, cinematic atmosphere",
+  // ── Hero 圖片 ──
+  "homepage":
+    "stunning overhead flat lay premium olive oil bottle, fresh olives on branch, mediterranean herbs, warm golden light, luxury food photography, editorial style, dark marble background",
+  "blog":
+    "beautiful olive grove rows morning mist, golden hour light filtering leaves, tuscany landscape, aerial perspective, travel food photography, cinematic wide angle",
+  "about":
+    "close-up fresh pressed olive oil golden surface ripples, mediterranean lifestyle, knowledge elegance concept, warm editorial tone, fine dining photography"
+};
+
+// 智能 slug keyword → 視覺 prompt 解析（兜底邏輯）
+function buildSmartImagePrompt(slug, chineseTitle) {
+  // 優先使用精準對應表
+  if (ARTICLE_IMAGE_PROMPTS[slug]) return ARTICLE_IMAGE_PROMPTS[slug];
+
+  // 從 posts.json 取得已儲存的 imagePrompt（AI 文章生成時自動填入）
+  if (imagesData && imagesData.posts && imagesData.posts[slug] && imagesData.posts[slug].prompt) {
+    const stored = imagesData.posts[slug].prompt;
+    if (stored && stored.length > 10) return stored;
+  }
+
+  // slug keyword 智能解析 → 英文視覺描述
+  const keywordMap = [
+    { keys:['polyphenol','phenol'],  visual:'polyphenol molecules floating in golden olive oil, antioxidant concept, scientific macro photography' },
+    { keys:['brain','neuro','cognit','memory','neuron'], visual:'brain neural network glowing golden light, cognitive health concept, medical visualization' },
+    { keys:['skin','beauty','squalene','molecular'],     visual:'glowing skin closeup, luxury beauty concept, olive oil skincare, soft light photography' },
+    { keys:['fraud','fake','authentic','verify'],        visual:'investigative laboratory olive oil quality test, magnifying glass, forensic photography' },
+    { keys:['sensory','tasting','ioc','evaluat'],        visual:'professional olive oil tasting, cobalt blue glass, sommelier evaluation, warm studio light' },
+    { keys:['longevity','sirt','aging','anti-ag'],       visual:'longevity concept, healthy aging, mediterranean lifestyle, golden light bokeh photography' },
+    { keys:['morning','ritual','metabolism','daily'],    visual:'morning wellness ritual, golden olive oil spoon, sunlight kitchen, minimalist lifestyle' },
+    { keys:['terroir','spain','greece','italy','origin'],visual:'mediterranean landscape olive grove, terroir concept, golden sunset, cinematic travel photography' },
+    { keys:['heritage','ancient','history','civiliz'],   visual:'ancient olive tree thousand years old, stone ruins, epic historical landscape, golden hour' },
+    { keys:['diet','food','table','meal','cook'],        visual:'mediterranean table spread colorful fresh food, lifestyle photography, warm natural light' },
+    { keys:['guide','buying','select','quality','how'],  visual:'premium olive oil bottle selection, expert curation, luxury product photography, dark background' },
+    { keys:['inflammation','protect','health','prevent'],visual:'protective shield concept, health wellness, olive branch symbolism, clean medical photography' },
+  ];
+
+  const slugLower = slug.toLowerCase();
+  const titleLower = (chineseTitle || '').toLowerCase();
+  for (const { keys, visual } of keywordMap) {
+    if (keys.some(k => slugLower.includes(k) || titleLower.includes(k))) {
+      return visual + ', extra virgin olive oil, professional photography, warm mediterranean light, 16:9';
+    }
+  }
+
+  // 最終兜底：品牌一致性 prompt
+  return 'premium extra virgin olive oil, mediterranean lifestyle concept, professional food photography, warm golden light, elegant minimal composition, 16:9 cinematic';
+}
+
+async function generateImageForSlug(section, key) {
+  const skyworkKey = (sessionStorage.getItem('ow_ai_key') || localStorage.getItem('ow_ai_key') || document.getElementById('ai-api-key')?.value) || '';
+  if (!skyworkKey) {
+    toast('❌ 請先在 AI 生成頁填入 Skywork API Key', 'error'); return;
+  }
+
+  const btn = document.getElementById(`btn-ai-img-${section}-${key}`);
+  if (btn) { btn.disabled = true; btn.textContent = '⏳'; btn.classList.add('opacity-60'); }
+
+  // ── 精準 Prompt 構建（三層優先順序）──
+  const articleTitleMap = {};
+  if (typeof ARTICLES !== 'undefined') ARTICLES.forEach(a => { articleTitleMap[a.slug] = a.title; });
+  const chineseTitle = articleTitleMap[key] || '';
+  const heroLabels = { homepage:'首頁 Hero 橫幅', blog:'文章列表頁橫幅', about:'關於頁面橫幅' };
+  const label = section === 'hero' ? (heroLabels[key] || key) : chineseTitle;
+  const prompt = section === 'hero'
+    ? (ARTICLE_IMAGE_PROMPTS[key] || buildSmartImagePrompt(key, label))
+    : buildSmartImagePrompt(key, chineseTitle);
+
+  // 顯示生成中提示
+  const badgeEl = document.getElementById(`img-badge-${section}-${key}`);
+  if (badgeEl) badgeEl.innerHTML = '<span class="text-xs bg-violet-600/80 text-white px-1.5 py-0.5 rounded-md animate-pulse">⏳ 生成中</span>';
+
+  try {
+    toast(`✨ 正在為「${label.slice(0,20)}…」生成 AI 封面圖`, 'info');
+    const result = await autoGenerateCoverImage(prompt, label);
+
+    // 更新 UI
+    const inputEl = document.getElementById(
+      section === 'hero' ? `hero-url-${key}` : `post-url-${key}`
+    );
+    if (inputEl) inputEl.value = result.url;
+
+    const imgPreview = document.getElementById(`img-preview-${section}-${key}`);
+    if (imgPreview) { imgPreview.src = result.url; }
+
+    // 更新 imagesData（含 metadata）
+    const today = new Date().toISOString().split('T')[0];
+    const target = section === 'hero' ? imagesData.hero[key] : imagesData.posts[key];
+    if (target) {
+      target.url = result.url;
+      target.source = result.source;
+      target.prompt = prompt;
+      target.generated_at = today;
+    }
+
+    // 更新 badge
+    if (badgeEl) badgeEl.innerHTML = getSourceBadge(result.source) + `<span class="text-white/70 text-xs ml-0.5">${today}</span>`;
+
+    // 標記有未儲存變更
+    const saveBtn = document.getElementById('btn-save-images');
+    if (saveBtn) saveBtn.classList.add('ring-2','ring-yellow-400');
+    toast(`✅ AI 封面圖生成完成（${result.source}）— 記得推送 GitHub！`, 'success');
+    // 刷新圖片列表 UI
+    setTimeout(() => { if (typeof renderImagesPanel === 'function') renderImagesPanel(); }, 100);
+
+  } catch(e) {
+    toast('❌ AI 圖片生成失敗：' + e.message, 'error');
+    if (badgeEl) badgeEl.innerHTML = getSourceBadge('unsplash');
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '✨ AI'; btn.classList.remove('opacity-60'); }
+  }
+}
+
+// ══════════════════════════════════════════════
+// 🎨 批次 AI 更新所有圖片
+// ══════════════════════════════════════════════
+let batchCancelFlag = false;
+
+async function batchGenerateImages() {
+  const skyworkKey = (sessionStorage.getItem('ow_ai_key') || localStorage.getItem('ow_ai_key') || document.getElementById('ai-api-key')?.value) || '';
+  if (!skyworkKey) {
+    toast('❌ 請先在 AI 生成頁填入 Skywork API Key，再執行批次更新', 'error'); return;
+  }
+  if (!imagesData) { toast('❌ 請先載入 images.json', 'error'); return; }
+
+  // 確認
+  const confirmed = confirm(
+    '🎨 AI 批次更新將為所有圖片生成 Skywork AI 商業級封面圖。\n\n' +
+    '• Hero 圖片：3 張\n• 文章封面：' + Object.keys(imagesData.posts||{}).length + ' 張\n\n' +
+    '預估時間：每張約 30 秒，共 ' + Math.ceil((3 + Object.keys(imagesData.posts||{}).length) * 30 / 60) + ' 分鐘\n\n確定開始？'
+  );
+  if (!confirmed) return;
+
+  batchCancelFlag = false;
+  const panel = document.getElementById('batch-progress-panel');
+  panel.classList.remove('hidden');
+  document.getElementById('batch-done-actions').classList.add('hidden');
+
+  // 收集所有任務
+  const tasks = [];
+  Object.keys(imagesData.hero || {}).forEach(k => tasks.push({ section:'hero', key:k }));
+  Object.keys(imagesData.posts || {}).forEach(k => tasks.push({ section:'posts', key:k }));
+
+  const total = tasks.length;
+  let done = 0, failed = 0;
+  document.getElementById('batch-total').textContent = total;
+  document.getElementById('batch-status-badge').textContent = '進行中';
+  document.getElementById('batch-btn') && (document.getElementById('btn-batch-ai').disabled = true);
+
+  for (let i = 0; i < tasks.length; i++) {
+    if (batchCancelFlag) { document.getElementById('batch-status-badge').textContent = '已取消'; break; }
+
+    const { section, key } = tasks[i];
+    const articleTitleMap = {};
+    if (typeof ARTICLES !== 'undefined') ARTICLES.forEach(a => { articleTitleMap[a.slug] = a.title; });
+    const heroLabels = { homepage:'首頁 Hero 橫幅', blog:'文章列表頁橫幅', about:'關於頁面橫幅' };
+    const label = section === 'hero' ? (heroLabels[key]||key) : (articleTitleMap[key]||key);
+
+    // 更新 UI 進度
+    document.getElementById('batch-pending').textContent = total - done - failed - 1;
+    document.getElementById('batch-running').textContent = 1;
+    document.getElementById('batch-current-item').textContent = `[${i+1}/${total}] 生成中：${label}`;
+    document.getElementById('batch-progress-bar').style.width = Math.round((i / total) * 100) + '%';
+
+    try {
+      await generateImageForSlug(section, key);
+      done++;
+    } catch(e) {
+      failed++;
+    }
+
+    document.getElementById('batch-done').textContent = done;
+    document.getElementById('batch-failed').textContent = failed;
+    document.getElementById('batch-running').textContent = 0;
+
+    // 間隔 3 秒（Skywork SSE image API 本身需要 ~25 秒，generateImageForSlug 已 await）
+    if (i < tasks.length - 1 && !batchCancelFlag) await new Promise(r => setTimeout(r, 3000));
+  }
+
+  // 完成
+  document.getElementById('batch-progress-bar').style.width = '100%';
+  document.getElementById('batch-status-badge').textContent = batchCancelFlag ? '已取消' : `完成 ✅`;
+  document.getElementById('batch-current-item').textContent = batchCancelFlag
+    ? '批次已取消'
+    : `全部完成！${done} 張成功，${failed} 張失敗`;
+  document.getElementById('batch-pending').textContent = 0;
+  document.getElementById('batch-done-actions').classList.remove('hidden');
+  document.getElementById('btn-batch-ai').disabled = false;
+  if (!batchCancelFlag) toast(`🎉 批次完成！${done}/${total} 張已生成。請推送 GitHub 更新前台。`, 'success');
+}
+
+function cancelBatchGenerate() {
+  batchCancelFlag = true;
+  toast('⚠️ 批次生成已取消', 'warning');
+}
+
+// ══════════════════════════════════════════════
+// 即時更新 imagesData 記憶體（升級版：含 source 標記）
+// ══════════════════════════════════════════════
+function updateImageData(section, key, url) {
+  if (!imagesData) return;
+  const today = new Date().toISOString().split('T')[0];
+  if (section === 'hero') {
+    if (!imagesData.hero[key]) imagesData.hero[key] = {};
+    imagesData.hero[key].url = url;
+    imagesData.hero[key].source = 'manual';
+    imagesData.hero[key].generated_at = today;
+  } else if (section === 'posts') {
+    if (!imagesData.posts[key]) imagesData.posts[key] = {};
+    imagesData.posts[key].url = url;
+    imagesData.posts[key].source = 'manual';
+    imagesData.posts[key].generated_at = today;
+  }
+  // 即時更新預覽縮圖
+  const imgEl = document.getElementById(`img-preview-${section}-${key}`);
+  if (imgEl && url) imgEl.src = url;
+  // 更新 badge
+  const badgeEl = document.getElementById(`img-badge-${section}-${key}`);
+  if (badgeEl) badgeEl.innerHTML = getSourceBadge('manual');
+}
+
+// 預覽 Hero 圖片（在新視窗）
+function previewHeroImage(key) {
+  const url = document.getElementById('hero-url-' + key)?.value;
+  if (url) window.open(url, '_blank');
+}
+function previewPostImage(slug) {
+  const url = document.getElementById('post-url-' + slug)?.value;
+  if (url) window.open(url, '_blank');
+}
+
+// 開啟 Unsplash 搜尋（在新分頁，回來後手動複製 URL）
+function openUnsplashPicker(section, key) {
+  const query = section === 'hero' ? 'olive oil mediterranean' : (key.replace(/-/g,' ').split(' ').slice(0,3).join(' '));
+  const url = `https://unsplash.com/s/photos/${encodeURIComponent(query + ' olive')}`;
+  toast('💡 選好圖片後，點右鍵複製圖片網址貼回 URL 欄', 'success');
+  window.open(url, '_blank');
+}
+
+// 將修改後的 images.json 推送到 GitHub
+
+// ── 同步 images.json 封面圖 URL 到 markdown frontmatter ─────────────────
+async function syncMarkdownFrontmatter() {
+  if (!imagesData || !imagesData.posts) return;
+  var pat = getGithubPAT();
+  if (!pat) return;
+  var headers = { 'Authorization': 'token ' + pat, 'Accept': 'application/vnd.github.v3+json' };
+  var base = 'https://api.github.com/repos/' + GITHUB_REPO + '/contents/content/posts/';
+  var successCount = 0, failCount = 0;
+
+  for (var slug in imagesData.posts) {
+    var newUrl = imagesData.posts[slug].url;
+    if (!newUrl) continue;
+    try {
+      // 讀取 markdown 檔案
+      var resp = await fetch(base + slug + '.md', { headers: headers });
+      if (!resp.ok) { failCount++; continue; }
+      var data = await resp.json();
+      var decoded = atob(data.content.replace(/\n/g, ''));
+      // 用 TextDecoder 處理 UTF-8
+      var bytes = Uint8Array.from(decoded, function(c) { return c.charCodeAt(0); });
+      var mdText = new TextDecoder('utf-8').decode(bytes);
+      // 替換 coverImage 行
+      var updated = mdText.replace(
+        /^(coverImage:\s*)["']?[^"'\r\n]+["']?/m,
+        'coverImage: "' + newUrl + '"'
+      );
+      if (updated === mdText) { continue; } // 已是最新，跳過
+      // 推送更新
+      var encoded = btoa(unescape(encodeURIComponent(updated)));
+      var putResp = await fetch(base + slug + '.md', {
+        method: 'PUT',
+        headers: { ...headers, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: 'sync: update coverImage for ' + slug,
+          content: encoded,
+          sha: data.sha,
+          branch: GITHUB_BRANCH
+        })
+      });
+      if (putResp.ok) { successCount++; } else { failCount++; }
+    } catch(e) { failCount++; }
+  }
+  if (successCount > 0) {
+    toast('✅ 已同步更新 ' + successCount + ' 篇文章封面圖到 markdown', 'info');
+  }
+}
+
+// ── 同步 images.json 封面圖到 posts.json（前台 SPA 資料來源）──────────────
+async function syncPostsJson() {
+  if (!imagesData || !imagesData.posts) return;
+  var pat = getGithubPAT();
+  if (!pat) return;
+  var headers = { 'Authorization': 'token ' + pat, 'Accept': 'application/vnd.github.v3+json' };
+  var postsJsonUrl = 'https://api.github.com/repos/' + GITHUB_REPO + '/contents/public/data/posts.json';
+  try {
+    // 讀取 posts.json
+    var resp = await fetch(postsJsonUrl, { headers: headers });
+    if (!resp.ok) return;
+    var fileData = await resp.json();
+    var decoded = atob(fileData.content.replace(/\n/g,''));
+    var bytes = Uint8Array.from(decoded, function(c){ return c.charCodeAt(0); });
+    var jsonText = new TextDecoder('utf-8').decode(bytes);
+    var postsData = JSON.parse(jsonText);
+
+    // 找 posts 陣列（支援 {posts:[...]} 或 [...] 格式）
+    var postsArr = Array.isArray(postsData) ? postsData : (postsData.posts || []);
+    var changed = 0;
+    postsArr.forEach(function(p) {
+      var slug = p.slug;
+      if (slug && imagesData.posts[slug] && imagesData.posts[slug].url) {
+        var newUrl = imagesData.posts[slug].url;
+        if (p.coverImage !== newUrl || p.image !== newUrl) {
+          p.coverImage = newUrl;
+          p.image = newUrl; // SPA 讀取 e.image 欄位
+          changed++;
+        }
+      }
+    });
+
+    if (changed === 0) return; // 無需更新
+
+    // 推送 posts.json
+    var updatedJson = JSON.stringify(postsData, null, 2);
+    var encoded = btoa(unescape(encodeURIComponent(updatedJson)));
+    var putResp = await fetch(postsJsonUrl, {
+      method: 'PUT',
+      headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: 'sync: update coverImage in posts.json (' + changed + ' posts)',
+        content: encoded,
+        sha: fileData.sha,
+        branch: GITHUB_BRANCH
+      })
+    });
+    if (putResp.ok) {
+      toast('✅ posts.json 封面圖已同步（' + changed + ' 篇）', 'info');
+    }
+  } catch(e) {
+    console.warn('syncPostsJson failed:', e);
+  }
+}
+
+
+
+async function saveImagesToGitHub() {
+  if (!imagesData) {
+    toast('❌ 尚未載入 images.json，請先切換到圖片管理頁', 'error');
+    return;
+  }
+  if (!getGithubPAT()) {
+    const pat = prompt('請輸入 GitHub Personal Access Token（PAT）：\n（需要 repo 寫入權限，只需輸入一次）');
+    if (!pat) return;
+    setGithubPAT(pat.trim());
+  }
+
+  const btn = document.getElementById('btn-save-images');
+  btn.disabled = true;
+  btn.textContent = '⏳ 推送中...';
+
+  try {
+    // 更新 _meta.lastUpdated
+    imagesData._meta = imagesData._meta || {};
+    imagesData._meta.lastUpdated = new Date().toISOString().split('T')[0];
+
+    const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${IMAGES_JSON_PATH}`;
+    const headers = { 'Authorization': `token ${getGithubPAT()}`, 'Accept': 'application/vnd.github.v3+json' };
+
+    // 取得現有 SHA
+    let sha = '';
+    try {
+      const getResp = await fetch(apiUrl, { headers });
+      if (getResp.ok) { sha = (await getResp.json()).sha || ''; }
+    } catch(e) {}
+
+    const jsonStr = JSON.stringify(imagesData, null, 2);
+    const body = {
+      message: '🖼️ 更新 images.json — Admin 後台圖片管理',
+      content: btoa(unescape(encodeURIComponent(jsonStr))),
+      branch: GITHUB_BRANCH
+    };
+    if (sha) body.sha = sha;
+
+    const resp = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+
+    if (resp.ok) {
+      toast('✅ images.json 已推送 GitHub！Cloudflare Pages 自動部署中...', 'success');
+      // ✅ 延遲 2 秒後再同步 posts.json（等 GitHub 完成上次 commit）
+      setTimeout(function() {
+        syncPostsJson().catch(function(e){ console.warn('sync posts.json failed:', e); });
+      }, 2000);
+      btn.textContent = '✅ 已推送';
+      setTimeout(() => { btn.disabled = false; btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg> 🚀 推送 GitHub'; }, 3000);
+    } else {
+      const err = await resp.json();
+      toast('❌ 推送失敗：' + (err.message || resp.status), 'error');
+      btn.disabled = false;
+      btn.textContent = '🚀 推送 GitHub';
+    }
+  } catch(e) {
+    toast('❌ 網路錯誤：' + e.message, 'error');
+    btn.disabled = false;
+    btn.textContent = '🚀 推送 GitHub';
+  }
+}
+// ── END IMAGES MODULE ─────────────────────────────
+
+// ══════════════════════════════════════════════════
+//  📋  POSTS.JSON 管理模組
+// ══════════════════════════════════════════════════
+const POSTS_JSON_PATH = 'public/data/posts.json';
+let postsData = null; // 完整的 posts.json 物件
+
+// 動態載入 posts.json
+async function loadPostsJson() {
+  try {
+    const ts = Date.now();
+    const rawUrl = `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${POSTS_JSON_PATH}?t=${ts}`;
+    const resp = await fetch(rawUrl);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    postsData = await resp.json();
+    // 填充 ARTICLES（供其他函數使用）
+    ARTICLES = postsData.posts.map(p => ({
+      slug: p.slug, title: p.title, category: p.category,
+      date: p.date, readTime: p.readTime, cover: p.coverImage,
+      excerpt: p.excerpt
+    }));
+    postsJsonLoaded = true;
+    // 根據當前 tab 執行對應動作
+    const activeTab = document.querySelector('.tab-active')?.id?.replace('tab-','') || 'dashboard';
+    if (activeTab === 'articles') renderArticles();
+    else loadDashboard();
+  } catch(e) {
+    // fallback：用本地路徑
+    try {
+      const r2 = await fetch('/data/posts.json?t=' + Date.now());
+      if (!r2.ok) throw new Error('local fail');
+      postsData = await r2.json();
+      ARTICLES = postsData.posts.map(p => ({
+        slug: p.slug, title: p.title, category: p.category,
+        date: p.date, readTime: p.readTime, cover: p.coverImage, excerpt: p.excerpt
+      }));
+      postsJsonLoaded = true;
+      const activeTab = document.querySelector('.tab-active')?.id?.replace('tab-','') || 'dashboard';
+      if (activeTab === 'articles') renderArticles(); else loadDashboard();
+    } catch(e2) {
+      toast('⚠️ posts.json 載入失敗，使用預設資料：' + e.message, 'error');
+      postsJsonLoaded = true; // 防止無限重試
+      loadDashboard();
+    }
+  }
+}
+
+// 將修改後的 posts.json 推送到 GitHub
+async function savePostsToGitHub() {
+  if (!postsData) { toast('❌ 尚未載入 posts.json', 'error'); return; }
+  if (!getGithubPAT()) {
+    const pat = prompt('請輸入 GitHub Personal Access Token（PAT）：');
+    if (!pat) return;
+    setGithubPAT(pat.trim());
+  }
+  const btn = document.getElementById('btn-save-posts-json');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ 推送中...'; }
+
+  try {
+    postsData._meta.lastUpdated = new Date().toISOString().split('T')[0];
+    postsData._meta.totalPosts = postsData.posts.length;
+    const apiUrl = `https://api.github.com/repos/${GITHUB_REPO}/contents/${POSTS_JSON_PATH}`;
+    const headers = { 'Authorization': `token ${getGithubPAT()}`, 'Accept': 'application/vnd.github.v3+json' };
+    let sha = '';
+    try { const g = await fetch(apiUrl, {headers}); if(g.ok) sha = (await g.json()).sha||''; } catch(e) {}
+    const body = {
+      message: '📋 更新 posts.json — Admin 後台文章管理',
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(postsData, null, 2)))),
+      branch: GITHUB_BRANCH
+    };
+    if (sha) body.sha = sha;
+    const resp = await fetch(apiUrl, { method:'PUT', headers:{...headers,'Content-Type':'application/json'}, body: JSON.stringify(body) });
+    if (resp.ok) {
+      toast('✅ posts.json 已推送 GitHub！Cloudflare Pages 自動部署中...', 'success');
+      if (btn) { btn.textContent = '✅ 已推送'; setTimeout(() => { btn.disabled=false; btn.textContent='🚀 儲存 posts.json'; }, 3000); }
+    } else {
+      const err = await resp.json();
+      toast('❌ 推送失敗：' + (err.message || resp.status), 'error');
+      if (btn) { btn.disabled=false; btn.textContent='🚀 儲存 posts.json'; }
+    }
+  } catch(e) {
+    toast('❌ 錯誤：' + e.message, 'error');
+    if (btn) { btn.disabled=false; btn.textContent='🚀 儲存 posts.json'; }
+  }
+}
+
+// 從 posts.json 更新 ARTICLES 中某篇文章的 metadata
+function updatePostMeta(slug, field, value) {
+  if (!postsData) return;
+  const post = postsData.posts.find(p => p.slug === slug);
+  if (!post) return;
+  if (field === 'readTime') post[field] = parseInt(value) || post[field];
+  else post[field] = value;
+  // 同步更新 ARTICLES 快取
+  const art = ARTICLES.find(a => a.slug === slug);
+  if (art) {
+    if (field === 'category') art.category = value;
+    if (field === 'date') art.date = value;
+    if (field === 'coverImage') art.cover = value;
+    if (field === 'excerpt') art.excerpt = value;
+  }
+}
+// ── END POSTS MODULE ──────────────────────────────
+
+// ══════════════════════════════════════════════════
+//  ✨  AI 文章生成模組
+// ══════════════════════════════════════════════════
+let aiGeneratedArticle = null; // 最新生成的文章物件
+
+// Provider 切換
+function onAiProviderChange() {
+  const p = document.getElementById('ai-provider').value;
+  document.getElementById('ai-custom-endpoint-wrap').classList.toggle('hidden', p !== 'custom');
+  const keyInput = document.getElementById('ai-api-key');
+  keyInput.placeholder = p === 'skywork' ? 'sky-...' : p === 'openai' ? 'sk-...' : p === 'claude' ? 'sk-ant-...' : 'Bearer ...';
+}
+
+// 取得 API 端點設定
+function getAiEndpoint() {
+  const p = document.getElementById('ai-provider').value;
+  // Skywork 走 theme-gateway SSE（支援 CORS），其餘用標準 OpenAI 格式
+  if (p === 'skywork') return { url:'https://api-tools.skywork.ai/theme-gateway/api/sse/doc/create', model:'skywork-doc', mode:'skywork_sse' };
+  if (p === 'openai')  return { url:'https://api.openai.com/v1/chat/completions', model:'gpt-4o', mode:'openai' };
+  if (p === 'claude')  return { url:'https://api.anthropic.com/v1/messages', model:'claude-3-5-sonnet-20241022', mode:'claude' };
+  return { url: document.getElementById('ai-custom-endpoint').value, model:'gpt-4o', mode:'openai' };
+}
+
+// 進度更新
+function setAiProgress(pct, step) {
+  document.getElementById('ai-progress-bar').style.width = pct + '%';
+  document.getElementById('ai-progress-step').textContent = step;
+}
+function setAiBadge(text, color='gray') {
+  const b = document.getElementById('ai-status-badge');
+  b.textContent = text;
+  b.className = `text-xs px-3 py-1 rounded-full bg-${color}-100 text-${color}-700`;
+}
+
+// 測試 API 連線
+async function testApiKey() {
+  const key = document.getElementById('ai-api-key').value.trim();
+  if (!key) { toast('❌ 請先填入 API Key', 'error'); return; }
+  const { url, model, mode } = getAiEndpoint();
+  try {
+    if (mode === 'skywork_sse') {
+      // Skywork：用 SSE 端點測試，送一個最短請求
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json', 'Accept':'text/event-stream', 'Authorization':'Bearer '+key },
+        body: JSON.stringify({ title:'Test', content:'Hello', source_platform:'', output_format:'markdown' })
+      });
+      if (resp.ok || resp.status === 204) { toast('✅ Skywork API 連線成功！', 'success'); setAiBadge('已連線','olive'); }
+      else { toast('❌ Skywork API 錯誤：HTTP '+resp.status,'error'); }
+    } else {
+      const resp = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json', 'Authorization':'Bearer '+key },
+        body: JSON.stringify({ model, messages:[{role:'user',content:'Hi, reply OK only'}], max_tokens:5 })
+      });
+      if (resp.ok) { toast('✅ API 連線成功！', 'success'); setAiBadge('已連線','olive'); }
+      else { const e=await resp.json(); toast('❌ API 錯誤：'+(e.error?.message||resp.status),'error'); }
+    }
+  } catch(e) { toast('❌ 連線失敗：'+e.message,'error'); }
+}
+
+// 主生成函數
+async function generateArticle() {
+  const key   = document.getElementById('ai-api-key').value.trim();
+  const topic = document.getElementById('ai-topic').value.trim();
+  if (!key)   { toast('❌ 請填入 API Key', 'error'); return; }
+  if (!topic) { toast('❌ 請填入文章主題', 'error'); return; }
+  // 同步 Skywork Key 到 sessionStorage，確保 autoGenerateCoverImage 也能取到
+  if (key.startsWith('sk-skywork')) sessionStorage.setItem('ow_ai_key', key); localStorage.setItem('ow_ai_key', key);
+
+  const category = document.getElementById('ai-category').value;
+  const readTime = parseInt(document.getElementById('ai-readtime').value);
+  const audience = document.getElementById('ai-audience').value;
+  const context  = document.getElementById('ai-context').value;
+  const wordCount = readTime * 200;
+  const catLabel = { science:'科學萃取', lifestyle:'餐桌美學', health:'品味鑑賞', heritage:'知性史詩' }[category];
+
+  // UI 狀態
+  const btn = document.getElementById('btn-ai-generate');
+  btn.disabled = true;
+  document.getElementById('ai-btn-icon').textContent = '⏳';
+  document.getElementById('ai-btn-text').textContent = 'AI 生成中...';
+  document.getElementById('ai-progress-card').classList.remove('hidden');
+  document.getElementById('ai-result-card').classList.add('hidden');
+  document.getElementById('ai-hint-card').classList.add('hidden');
+  setAiBadge('生成中…','yellow');
+  setAiProgress(10, '解析主題與關鍵字');
+
+  const systemPrompt = `你是「知橄生活 Olive Wisdom」的首席知識編輯，專攻橄欖油科學、地中海飲食與健康美學領域的深度知識寫作。
+請根據指定主題，以繁體中文撰寫一篇完整的知識庫文章，風格為「知性嚴謹 × 優雅可讀」。
+目標讀者：${audience}
+
+🎯 SEO 核心規範（E-E-A-T 標準）：
+- 標題需含主關鍵字，格式建議：「[數字/問句]：[核心知識]」
+- 文章開頭 150 字內自然嵌入主關鍵字 1-2 次
+- 每個 H2 標題後加一句強調該段核心論點的句子（作為搜尋摘要錨點）
+- 結尾加一段「延伸閱讀」（3 個內部連結建議，格式：[連結文字](/blog/相關-slug)）
+- 全文內部連結建議：至少 3 個，連結至站內相關文章（使用 /blog/slug 格式）
+
+📋 輸出格式規定（JSON，不加任何 markdown code block）：
+{
+  "title": "完整文章標題（含主關鍵字，吸引人、含問句或數字佐證，30-60字）",
+  "slug": "英文-連字號格式-含主關鍵字-不超過50字元",
+  "excerpt": "150-180字摘要，第一句點出核心問題，第二句給出驚人數據，第三句說明讀者收穫",
+  "focusKeyword": "SEO 主關鍵字（1-3個中文字，高搜尋量）",
+  "tags": ["主標籤","副標籤1","副標籤2","副標籤3","LSI關鍵字"],
+  "coverKeyword": "Unsplash 搜尋用英文關鍵字（3-4字，精準描述視覺主體）",
+  "imagePrompt": "英文攝影提示詞，20-30字，格式：[主體+細節] [環境+材質] [光線+色調] [攝影風格]，品牌風格：warm golden mediterranean professional food photography",
+  "internalLinks": ["/blog/slug-1", "/blog/slug-2", "/blog/slug-3"],
+  "content": "完整Markdown文章正文（約${wordCount}字，不含frontmatter）"
+}
+
+📚 文章正文結構要求（強制）：
+## [H2：含關鍵字的開場問題標題]（問題引入，製造好奇，建立情境）
+## [H2：核心科學原理]（1-2個H2，每段配科學數據+引用）
+### [H3：子論點]（可選，細化機制）
+## [H2：實際應用或選購指南]（橋接科學到生活）
+## [H2：科學數據比較]（使用 Markdown 表格，≥ 4 列）
+## 結論：[行動召喚短語]（具體建議，情感收尾）
+
+## 延伸閱讀
+- [文章標題1](相關slug)
+- [文章標題2](相關slug)
+- [文章標題3](相關slug)
+---
+✍️ 寫作品質規定：
+- 全文字數不低於 ${wordCount} 字（不達標請繼續補充）
+- 科學數據加 *（來源縮寫，年份）* 標注（如：*PREDIMED研究，2018*）
+- 禁止使用「總結來說」「綜上所述」等陳腔濫調
+- 每段結尾用一句「知橄洞見」提煉核心（加粗）
+- E-E-A-T 原則：展示橄欖油專業經驗、知識深度、可信賴性`;
+
+  const userPrompt = `欄目：${catLabel}（${category}）
+目標閱讀時間：${readTime}分鐘（約${wordCount}字）
+主題關鍵字：${topic}
+${context ? '補充說明：' + context : ''}
+SEO 主關鍵字建議：${topic.split(/[，,\s]+/)[0]}
+目標讀者痛點：理性消費、追求品質生活、重視健康科學
+
+請嚴格按照 JSON 格式生成完整文章，確保 content 欄位字數不低於 ${wordCount} 字。`;
+
+  try {
+    setAiProgress(30, '呼叫 AI API…');
+    const { url, model, mode } = getAiEndpoint();
+    const provider = document.getElementById('ai-provider').value;
+
+    let raw;
+
+    // ── Skywork SSE 模式（theme-gateway，支援 CORS）──
+    if (mode === 'skywork_sse') {
+      setAiProgress(40, 'Skywork AI 生成中（約30秒）…');
+      const sseBody = {
+        title: topic.slice(0, 60),
+        content: `${systemPrompt}\n\n---\n${userPrompt}`,
+        source_platform: '',
+        output_format: 'markdown'
+      };
+      const sseResp = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'text/event-stream',
+          'Authorization': `Bearer ${key}`
+        },
+        body: JSON.stringify(sseBody)
+      });
+      if (!sseResp.ok) throw new Error(`Skywork API 錯誤 HTTP ${sseResp.status}`);
+      const sseText = await sseResp.text();
+      setAiProgress(70, '解析 Skywork 回應…');
+      // 從 SSE stream 抓取所有 content_chunk 拼接
+      const chunks = [];
+      const chunkMatches = sseText.matchAll(/"chunk"\s*:\s*"((?:[^"\\]|\\.)*)"/g);
+      for (const m of chunkMatches) chunks.push(m[1].replace(/\\n/g,'\n').replace(/\\"/g,'"').replace(/\\\\/g,'\\'));
+      raw = chunks.join('');
+      // 如果是 HTML，嘗試提取 body 內容轉換成純文字
+      if (raw.includes('<!DOCTYPE') || raw.includes('<html')) {
+        // 提取 body 文字內容
+        raw = raw.replace(/<style[\s\S]*?<\/style>/gi,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+      }
+      // 嘗試從回應中找 JSON
+      const jsonMatch = raw.match(/\{[\s\S]*"title"[\s\S]*"content"[\s\S]*\}/);
+      if (jsonMatch) {
+        raw = jsonMatch[0];
+      } else {
+        // 若無 JSON，把原始內容當作文章 content，自動補全 JSON 結構
+        const autoSlug = topic.toLowerCase().replace(/\s+/g,'-').replace(/[^\w\u4e00-\u9fff-]/g,'').slice(0,50).replace(/[\u4e00-\u9fff]/g,'') || 'article-' + Date.now();
+        raw = JSON.stringify({
+          title: topic,
+          slug: autoSlug || 'article-' + Date.now(),
+          excerpt: raw.slice(0,150).replace(/\n/g,' '),
+          tags: [topic, '橄欖油', '知橄生活'],
+          coverKeyword: topic.split(' ').slice(0,3).join(' ') + ' olive oil',
+          imagePrompt: 'olive oil bottle mediterranean food photography warm lighting professional',
+          content: raw
+        });
+      }
+    } else {
+      // ── 標準 OpenAI / Claude 模式 ──
+      let body, headers;
+      if (provider === 'claude') {
+        headers = { 'Content-Type':'application/json', 'x-api-key':key, 'anthropic-version':'2023-06-01' };
+        body = { model, max_tokens:4096, system:systemPrompt, messages:[{role:'user',content:userPrompt}] };
+      } else {
+        headers = { 'Content-Type':'application/json', 'Authorization':'Bearer '+key };
+        body = { model, max_tokens:4096, temperature:0.7,
+          messages:[{role:'system',content:systemPrompt},{role:'user',content:userPrompt}] };
+      }
+      setAiProgress(50, 'AI 正在撰寫文章…');
+      const resp = await fetch(url, { method:'POST', headers, body:JSON.stringify(body) });
+      if (!resp.ok) {
+        const e = await resp.json();
+        throw new Error(e.error?.message || `HTTP ${resp.status}`);
+      }
+      const data = await resp.json();
+      setAiProgress(80, '解析 AI 回應…');
+      raw = provider === 'claude'
+        ? data.content?.[0]?.text
+        : data.choices?.[0]?.message?.content;
+      if (!raw) throw new Error('API 回應格式異常');
+    }
+
+    // 清除可能的 ```json ``` 包裝
+    raw = raw.replace(/^```json\s*/,'').replace(/\s*```$/,'').trim();
+
+    let parsed;
+    try { parsed = JSON.parse(raw); }
+    catch(e) {
+      // 嘗試提取 JSON
+      const m = raw.match(/\{[\s\S]*\}/);
+      if (m) parsed = JSON.parse(m[0]);
+      else throw new Error('無法解析 AI 回應為 JSON：' + raw.slice(0,200));
+    }
+
+    setAiProgress(90, '生成完成！自動選取封面圖…');
+    aiGeneratedArticle = {
+      slug: parsed.slug || topic.toLowerCase().replace(/\s+/g,'-').replace(/[^\w-]/g,'').slice(0,50),
+      title: parsed.title || topic,
+      category, readTime,
+      excerpt: parsed.excerpt || '',
+      tags: parsed.tags || [topic],
+      coverKeyword: parsed.coverKeyword || 'olive oil',
+      imagePrompt: parsed.imagePrompt || '',
+      content: parsed.content || '',
+      date: new Date().toISOString().split('T')[0],
+      author: '知橄生活研究團隊',
+      coverImage: ''
+    };
+
+    // ── 自動生成封面圖 ──
+    const coverResult = await autoGenerateCoverImage(
+      parsed.imagePrompt || '',
+      parsed.coverKeyword || topic
+    );
+    aiGeneratedArticle.coverImage = coverResult.url;
+    setAiProgress(100, '封面圖已生成！');
+
+    // 渲染結果
+    document.getElementById('ai-result-title').textContent   = aiGeneratedArticle.title;
+    document.getElementById('ai-result-slug').textContent    = aiGeneratedArticle.slug;
+    document.getElementById('ai-result-excerpt').textContent = aiGeneratedArticle.excerpt;
+    document.getElementById('ai-result-tags').textContent    = aiGeneratedArticle.tags.join('、');
+    document.getElementById('ai-content-raw').textContent    = aiGeneratedArticle.content;
+    document.getElementById('ai-content-preview').innerHTML  = mdToHtml(aiGeneratedArticle.content);
+
+    // ── 渲染封面圖預覽 ──
+    const coverPreviewEl = document.getElementById('ai-cover-preview-img');
+    const coverSourceEl  = document.getElementById('ai-cover-source-badge');
+    const coverUrlEl     = document.getElementById('ai-cover-url-display');
+    if (coverPreviewEl) {
+      coverPreviewEl.src = coverResult.url;
+      coverPreviewEl.onerror = () => {
+        coverPreviewEl.src = '/hero-grove.jpg';
+      };
+    }
+    if (coverSourceEl) {
+      const sourceLabels = {
+        'pollinations_ai': '🤖 AI 生成（Pollinations）',
+        'unsplash_source': '📷 Unsplash 攝影庫'
+      };
+      coverSourceEl.textContent = sourceLabels[coverResult.source] || coverResult.source;
+    }
+    if (coverUrlEl) coverUrlEl.value = coverResult.url;
+
+    document.getElementById('ai-progress-card').classList.add('hidden');
+    document.getElementById('ai-result-card').classList.remove('hidden');
+    setAiBadge('生成成功 ✅','olive');
+    toast(`✅ 文章與封面圖生成完成！（${coverResult.source}）`, 'success');
+    showImageSuggestions(aiGeneratedArticle.coverKeyword || topic);
+  } catch(e) {
+    document.getElementById('ai-progress-card').classList.add('hidden');
+    document.getElementById('ai-hint-card').classList.remove('hidden');
+    setAiBadge('生成失敗','red');
+    toast('❌ 生成失敗：' + e.message, 'error');
+  } finally {
+    btn.disabled = false;
+    document.getElementById('ai-btn-icon').textContent = '✨';
+    document.getElementById('ai-btn-text').textContent = 'AI 生成文章';
+  }
+}
+
+// 切換 Markdown / 預覽
+function toggleAiPreview() {
+  const raw  = document.getElementById('ai-content-raw');
+  const prev = document.getElementById('ai-content-preview');
+  raw.classList.toggle('hidden');
+  prev.classList.toggle('hidden');
+}
+
+// 送入文章編輯器
+function sendToEditor() {
+  if (!aiGeneratedArticle) return;
+  currentSlug = aiGeneratedArticle.slug;
+  // 建立暫時 ARTICLES 項目
+  if (!ARTICLES.find(a => a.slug === currentSlug)) {
+    ARTICLES.unshift({ slug:currentSlug, title:aiGeneratedArticle.title,
+      category:aiGeneratedArticle.category, date:aiGeneratedArticle.date,
+      readTime:aiGeneratedArticle.readTime, cover:aiGeneratedArticle.coverImage,
+      excerpt:aiGeneratedArticle.excerpt });
+  }
+  // 切換到文章管理並開啟編輯器
+  showTab('articles');
+  setTimeout(() => openEditor(currentSlug), 100);
+  toast('📝 已送入編輯器，請確認後再發布', 'success');
+}
+
+// 直接發布（生成 .md + 更新 posts.json + 推送 GitHub）
+async function publishDirectly() {
+  if (!aiGeneratedArticle) return;
+  if (!getGithubPAT()) {
+    const pat = prompt('請輸入 GitHub Personal Access Token（PAT）：');
+    if (!pat) return;
+    setGithubPAT(pat.trim());
+  }
+  const btn = document.getElementById('btn-publish-direct');
+  btn.disabled = true; btn.textContent = '⏳ 發布中…';
+
+  const a = aiGeneratedArticle;
+  const fullMd = `---
+title: "${a.title}"
+slug: "${a.slug}"
+date: "${a.date}"
+category: "${a.category}"
+excerpt: "${a.excerpt.replace(/"/g,"'")}"
+coverImage: "${a.coverImage}"
+author: "${a.author}"
+readTime: ${a.readTime}
+tags: [${a.tags.map(t=>`"${t}"`).join(', ')}]
+---
+
+${a.content}`;
+
+  const headers = { 'Authorization':`token ${getGithubPAT()}`, 'Accept':'application/vnd.github.v3+json', 'Content-Type':'application/json' };
+  const mdPath  = `content/posts/${a.slug}.md`;
+  const mdApi   = `https://api.github.com/repos/${GITHUB_REPO}/contents/${mdPath}`;
+
+  try {
+    // 1. 推送 .md 文章檔
+    setAiBadge('推送文章中…','yellow');
+    let mdSha = '';
+    try { const g=await fetch(mdApi,{headers}); if(g.ok) mdSha=(await g.json()).sha||''; } catch(e){}
+    const mdBody = { message:`✨ AI 生成：${a.title}`, content:btoa(unescape(encodeURIComponent(fullMd))), branch:GITHUB_BRANCH };
+    if (mdSha) mdBody.sha = mdSha;
+    const mdResp = await fetch(mdApi, { method:'PUT', headers, body:JSON.stringify(mdBody) });
+    if (!mdResp.ok) throw new Error('推送 .md 失敗：' + (await mdResp.json()).message);
+
+    // 2. 更新 posts.json
+    setAiBadge('更新 posts.json…','yellow');
+    if (postsData) {
+      postsData.posts.unshift({ slug:a.slug, title:a.title, date:a.date, category:a.category,
+        excerpt:a.excerpt, coverImage:a.coverImage, author:a.author, readTime:a.readTime,
+        tags:a.tags, sources:[], published:true, filename:`${a.slug}.md` });
+      postsData._meta.totalPosts = postsData.posts.length;
+      postsData._meta.lastUpdated = a.date;
+      const pjApi = `https://api.github.com/repos/${GITHUB_REPO}/contents/${POSTS_JSON_PATH}`;
+      let pjSha=''; try{const g=await fetch(pjApi,{headers});if(g.ok) pjSha=(await g.json()).sha||'';}catch(e){}
+      const pjBody={ message:`📋 posts.json 新增 AI 文章：${a.title}`,
+        content:btoa(unescape(encodeURIComponent(JSON.stringify(postsData,null,2)))),
+        branch:GITHUB_BRANCH };
+      if(pjSha) pjBody.sha=pjSha;
+      await fetch(pjApi,{method:'PUT',headers,body:JSON.stringify(pjBody)});
+    }
+
+    setAiBadge('發布成功 🎉','olive');
+    toast(`🎉 文章「${a.title}」已發布！Cloudflare Pages 部署中…`, 'success');
+    btn.textContent = '✅ 已發布';
+    // 更新 ARTICLES 快取
+    ARTICLES.unshift({ slug:a.slug, title:a.title, category:a.category, date:a.date,
+      readTime:a.readTime, cover:a.coverImage, excerpt:a.excerpt });
+    setTimeout(() => { btn.disabled=false; btn.textContent='🚀 直接發布'; }, 4000);
+  } catch(e) {
+    toast('❌ 發布失敗：' + e.message, 'error');
+    setAiBadge('發布失敗','red');
+    btn.disabled=false; btn.textContent='🚀 直接發布';
+  }
+}
+// ── END AI MODULE ─────────────────────────────────
+
+// ══════════════════════════════════════════════════
+//  ⑤-A  封面圖自動生成主函式（雙備援）
+// ══════════════════════════════════════════════════
+/**
+ * 根據 imagePrompt（AI 精準提示詞）或 fallbackKeyword 自動產生封面圖 URL
+ * 策略：Skywork Image API（主）→ Pollinations AI（次）→ Unsplash Source（備援）
+ */
+async function autoGenerateCoverImage(imagePrompt, fallbackKeyword) {
+  const brandSuffix = 'olive oil mediterranean lifestyle, professional photography, warm golden light';
+  // 精準 prompt（來自 ARTICLE_IMAGE_PROMPTS 或 buildSmartImagePrompt）直接使用，不稀釋
+  // 若無精準 prompt（AI 文章自動生成情境），才追加品牌風格後綴
+  const isGenericPrompt = !imagePrompt || imagePrompt.length < 20;
+  const fullPrompt = isGenericPrompt
+    ? `${fallbackKeyword} ${brandSuffix}`
+    : imagePrompt;  // 精準 prompt 直接傳入，不追加
+
+  // ── 主策略：Skywork Image API（商業級品質）
+  // 優先從 input 直接讀取（跨分頁也有效），再從 sessionStorage
+  const skyworkKey = document.getElementById('ai-api-key')?.value?.trim()
+                     || sessionStorage.getItem('ow_ai_key') || '';
+  if (skyworkKey && skyworkKey.length > 10) { // 支援各種 API key 格式
+    try {
+      const badge = document.getElementById('ai-cover-source-badge');
+      if (badge) badge.textContent = '⏳ Skywork AI 生成中（約25秒）…';
+
+      const resp = await fetch('https://api-tools.skywork.ai/theme-gateway/api/sse/image/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'text/event-stream',
+          'Authorization': `Bearer ${skyworkKey}`
+        },
+        body: JSON.stringify({
+          title: fullPrompt.slice(0, 60),
+          content: fullPrompt,
+          style: { aspect_ratio: '16:9' },
+          options: { resolution: '1K' },
+          source_platform: ''
+        })
+      });
+
+      if (resp.ok) {
+        const text = await resp.text();
+        // 從 SSE stream 解析 success event 的 file_url
+        const successMatch = text.match(/"file_url"\s*:\s*"([^"]+)"/);
+        if (successMatch && successMatch[1]) {
+          console.log('[封面圖] Skywork AI 生成成功！');
+          return { url: successMatch[1], source: 'skywork_ai', prompt: fullPrompt };
+        }
+      }
+    } catch(e) {
+      console.warn('[封面圖] Skywork Image API 失敗，切換 Pollinations:', e.message);
+    }
+  }
+
+  // ── 次策略：Pollinations.ai（完全免費）
+  try {
+    const encodedPrompt = encodeURIComponent(fullPrompt + ', 16:9 aspect ratio');
+    const seed = Math.floor(Math.random() * 999999);
+    const url = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1200&height=630&nologo=true&seed=${seed}&model=flux`;
+    console.log('[封面圖] 使用 Pollinations AI 生成');
+    return { url, source: 'pollinations_ai', prompt: fullPrompt };
+  } catch(e) {
+    console.warn('[封面圖] Pollinations 失敗，切換 Unsplash:', e.message);
+  }
+
+  // ── 備援策略：Unsplash Source
+  const query = encodeURIComponent((fallbackKeyword || 'olive oil') + ' olive mediterranean');
+  const url = `https://source.unsplash.com/1200x630/?${query}&sig=${Date.now()}`;
+  console.log('[封面圖] 使用 Unsplash Source 備援');
+  return { url, source: 'unsplash_source', prompt: fallbackKeyword };
+}
+
+// ══════════════════════════════════════════════════
+//  ⑤  Unsplash AI 圖片建議模組
+// ══════════════════════════════════════════════════
+// 根據關鍵字從 Unsplash 取得推薦圖片（不需 API Key）
+async function fetchUnsplashSuggestions(keyword, count=6) {
+  const queries = [keyword, keyword+' olive oil', keyword+' mediterranean'].slice(0, count);
+  const base = 'https://source.unsplash.com/800x500/?';
+  return queries.map((q,i) => ({
+    url: base + encodeURIComponent(q) + '&sig=' + (Date.now()+i),
+    thumb: base + encodeURIComponent(q) + '&sig=' + (Date.now()+i),
+    query: q
+  }));
+}
+
+// AI 生成完成後自動顯示 Unsplash 圖片建議
+async function showImageSuggestions(keyword) {
+  const container = document.getElementById('ai-image-suggestions');
+  if (!container) return;
+  container.innerHTML = '<p class="text-xs text-gray-400 py-2 animate-pulse">🔍 搜尋相關圖片…</p>';
+  const suggestions = await fetchUnsplashSuggestions(keyword);
+  container.innerHTML = `
+    <p class="text-xs font-medium text-gray-500 mb-2">🖼️ 建議封面圖（點擊選用）</p>
+    <div class="grid grid-cols-3 gap-1.5">
+      ${suggestions.map((s,i) => `
+        <div class="relative cursor-pointer rounded-lg overflow-hidden border-2 border-transparent hover:border-olive-500 transition-all group"
+             onclick="selectSuggestedImage('${s.url}', this)">
+          <img src="${s.url}" class="w-full h-16 object-cover" loading="lazy"
+               onerror="this.parentElement.style.display='none'"/>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all flex items-center justify-center">
+            <span class="text-white text-xs opacity-0 group-hover:opacity-100">選用</span>
+          </div>
+        </div>`).join('')}
+    </div>`;
+}
+function selectSuggestedImage(url, el) {
+  if (aiGeneratedArticle) aiGeneratedArticle.coverImage = url;
+  document.querySelectorAll('#ai-image-suggestions .border-olive-500').forEach(e=>e.classList.remove('border-olive-500'));
+  el.classList.add('border-olive-500');
+  // 同步更新封面圖預覽
+  const previewImg = document.getElementById('ai-cover-preview-img');
+  const urlInput   = document.getElementById('ai-cover-url-display');
+  const badge      = document.getElementById('ai-cover-source-badge');
+  if (previewImg) previewImg.src = url;
+  if (urlInput)   urlInput.value = url;
+  if (badge)      badge.textContent = '📷 Unsplash 手動選取';
+  toast('✅ 封面圖已選用', 'success');
+}
+
+// 重新生成封面圖（🔄 按鈕）
+async function regenerateCoverImage() {
+  if (!aiGeneratedArticle) return;
+  const badge  = document.getElementById('ai-cover-source-badge');
+  const imgEl  = document.getElementById('ai-cover-preview-img');
+  const urlEl  = document.getElementById('ai-cover-url-display');
+  if (badge) badge.textContent = '⏳ 重新生成中…';
+  toast('🔄 正在重新生成封面圖…', 'info');
+  const result = await autoGenerateCoverImage(
+    aiGeneratedArticle.imagePrompt || '',
+    aiGeneratedArticle.coverKeyword || 'olive oil'
+  );
+  aiGeneratedArticle.coverImage = result.url;
+  if (imgEl)  imgEl.src = result.url;
+  if (urlEl)  urlEl.value = result.url;
+  if (badge) {
+      const labels = { 'skywork_ai':'🎨 Skywork AI 生成', 'pollinations_ai':'🤖 AI 生成（Pollinations）', 'unsplash_source':'📷 Unsplash 攝影庫' };
+    badge.textContent = labels[result.source] || result.source;
+  }
+  toast('✅ 封面圖已重新生成！', 'success');
+}
+
+// ══════════════════════════════════════════════════
+//  ⑥  Supabase 草稿自動儲存模組
+// ══════════════════════════════════════════════════
+let draftTimer = null;
+let lastSavedDraftSlug = '';
+
+// 初始化 drafts 表（如不存在則建立）
+async function ensureDraftsTable() {
+  // 嘗試 select，若表不存在靜默忽略（不透過 RPC 建立，需手動在 Supabase 建立）
+  try { await sbFetch('drafts?select=id&limit=1'); } catch(e) { /* ignore */ }
+}
+
+// 自動儲存草稿到 Supabase
+async function autoSaveDraft() {
+  const slug = currentSlug;
+  if (!slug || slug.startsWith('new-article-')) return;
+  const draft = {
+    slug,
+    title:     (document.getElementById('edit-title')?.value || '').trim(),
+    category:  document.getElementById('edit-category')?.value || 'science',
+    date:      document.getElementById('edit-date')?.value || '',
+    cover:     document.getElementById('edit-cover')?.value || '',
+    excerpt:   document.getElementById('edit-excerpt')?.value || '',
+    tags:      document.getElementById('edit-tags')?.value || '',
+    read_time: parseInt(document.getElementById('edit-readTime')?.value) || 8,
+    content:   document.getElementById('edit-content')?.value || '',
+    saved_at:  new Date().toISOString()
+  };
+  if (!draft.title && !draft.content) return;
+  try {
+    await sbFetch('drafts', {
+      method: 'POST',
+      headers: { 'Prefer': 'resolution=merge-duplicates' },
+      body: JSON.stringify(draft)
+    });
+    lastSavedDraftSlug = slug;
+    const indicator = document.getElementById('draft-save-indicator');
+    if (indicator) {
+      indicator.textContent = '✅ 草稿已儲存 ' + new Date().toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'});
+      indicator.className = 'text-xs text-olive-600';
+    }
+  } catch(e) {
+    const indicator = document.getElementById('draft-save-indicator');
+    if (indicator) { indicator.textContent = '⚠️ 草稿儲存失敗'; indicator.className = 'text-xs text-red-400'; }
+  }
+}
+
+// 啟動自動儲存計時器（30 秒一次）
+function startDraftAutoSave() {
+  if (draftTimer) clearInterval(draftTimer);
+  draftTimer = setInterval(autoSaveDraft, 30000);
+}
+function stopDraftAutoSave() {
+  if (draftTimer) { clearInterval(draftTimer); draftTimer = null; }
+}
+
+// 載入草稿
+async function loadDraftForSlug(slug) {
+  if (!slug) return null;
+  try {
+    const data = await sbFetch(`drafts?slug=eq.${encodeURIComponent(slug)}&select=*&limit=1`);
+    return data?.[0] || null;
+  } catch(e) { return null; }
+}
+
+// 刪除草稿（文章成功推送後清除）
+async function deleteDraft(slug) {
+  try { await sbFetch(`drafts?slug=eq.${encodeURIComponent(slug)}`, {method:'DELETE'}); } catch(e){}
+}
+// ── END WEEK3 MODULE ──────────────────────────────
+
+
+// ================================================================
+//  Selected Update Module (ASCII-safe, syntax-verified)  v2.0
+// ================================================================
+
+let selectedImages = new Set();
+let selectModeActive = false;
+
+function removeChip(btn) {
+  var s = btn.getAttribute('data-sec');
+  var k = btn.getAttribute('data-key');
+  var card = document.getElementById('img-card-' + s + '-' + k);
+  toggleSelectImage(s, k, card);
+}
+
+function toggleSelectMode() {
+  selectModeActive = !selectModeActive;
+  var toolbar = document.getElementById('select-toolbar');
+  var btn = document.getElementById('btn-select-mode');
+  if (selectModeActive) {
+    toolbar.classList.remove('hidden');
+    document.body.classList.add('select-mode-active');
+    btn.classList.remove('bg-sky-500','hover:bg-sky-600');
+    btn.classList.add('bg-sky-700','hover:bg-sky-800','ring-2','ring-sky-300');
+    btn.textContent = '[Select ON]';
+    toast('Select mode: click image checkboxes to pick', 'info');
+  } else {
+    toolbar.classList.add('hidden');
+    document.body.classList.remove('select-mode-active');
+    btn.classList.remove('bg-sky-700','hover:bg-sky-800','ring-2','ring-sky-300');
+    btn.classList.add('bg-sky-500','hover:bg-sky-600');
+    btn.textContent = '\u2611\uFE0F Featured Update';
+    clearSelection();
+  }
+}
+
+function toggleSelectImage(section, key, cardEl) {
+  if (!selectModeActive) return;
+  var id = section + '::' + key;
+  // 找 checkbox input
+  var chkInput = document.getElementById('chk-' + section + '-' + key);
+  // 找同一 label 下的圖示 span（checkbox 的下一個 span sibling）
+  var iconSpan = chkInput ? chkInput.nextElementSibling : null;
+  var checkIcon = iconSpan ? iconSpan.querySelector('.check-icon') : null;
+
+  if (selectedImages.has(id)) {
+    selectedImages.delete(id);
+    if (chkInput) chkInput.checked = false;
+    if (cardEl)   cardEl.classList.remove('ring-2','ring-sky-500','shadow-lg','selected-card');
+    if (iconSpan) { iconSpan.classList.remove('bg-sky-500','border-sky-500'); iconSpan.classList.add('bg-white/20','border-white/80'); }
+    if (checkIcon) checkIcon.classList.add('hidden');
+  } else {
+    selectedImages.add(id);
+    if (chkInput) chkInput.checked = true;
+    if (cardEl)   cardEl.classList.add('ring-2','ring-sky-500','shadow-lg','selected-card');
+    if (iconSpan) { iconSpan.classList.add('bg-sky-500','border-sky-500'); iconSpan.classList.remove('bg-white/20','border-white/80'); }
+    if (checkIcon) checkIcon.classList.remove('hidden');
+  }
+  updateSelectUI();
+}
+
+function selectAll() {
+  document.querySelectorAll('div[data-section][data-key]').forEach(function(card) {
+    var s = card.dataset.section, k = card.dataset.key;
+    if (s && k && !selectedImages.has(s + '::' + k)) toggleSelectImage(s, k, card);
+  });
+}
+
+function selectBySection(section) {
+  document.querySelectorAll('div[data-section="' + section + '"][data-key]').forEach(function(card) {
+    var k = card.dataset.key;
+    if (k && !selectedImages.has(section + '::' + k)) toggleSelectImage(section, k, card);
+  });
+}
+
+function clearSelection() {
+  selectedImages.forEach(function(id) {
+    var parts = id.split('::'); var s = parts[0], k = parts[1];
+    var card = document.getElementById('img-card-' + s + '-' + k);
+    if (card) { card.classList.remove('ring-2','ring-sky-500','shadow-lg'); }
+    var ci = document.querySelector('#chk-' + s + '-' + k + ' ~ span .check-icon');
+    if (ci) ci.classList.add('hidden');
+    var cs = document.querySelector('#chk-' + s + '-' + k + ' ~ span');
+    if (cs) { cs.classList.remove('bg-sky-500','border-sky-400'); cs.classList.add('bg-white/20','border-white/80'); }
+  });
+  selectedImages.clear();
+  updateSelectUI();
+}
+
+function updateSelectUI() {
+  var n = selectedImages.size;
+  var badge = document.getElementById('select-count-badge');
+  if (badge) badge.textContent = n;
+
+  var btnAI = document.getElementById('btn-batch-selected');
+  var btnPush = document.getElementById('btn-push-selected');
+  if (btnAI) { btnAI.disabled = n === 0; btnAI.style.opacity = n > 0 ? '1' : '0.4'; btnAI.style.cursor = n > 0 ? '' : 'not-allowed'; }
+  if (btnPush) { btnPush.disabled = n === 0; btnPush.style.opacity = n > 0 ? '1' : '0.4'; btnPush.style.cursor = n > 0 ? '' : 'not-allowed'; }
+
+  var preview = document.getElementById('selected-list-preview');
+  var chips = document.getElementById('selected-chips');
+  if (!preview || !chips) return;
+
+  if (n === 0) { preview.classList.add('hidden'); chips.innerHTML = ''; return; }
+  preview.classList.remove('hidden');
+
+  var aMap = {};
+  if (typeof ARTICLES !== 'undefined') ARTICLES.forEach(function(a) { aMap[a.slug] = a.title; });
+  var hLabels = { homepage: 'Hero Home', blog: 'Hero Blog', about: 'Hero About' };
+
+  chips.innerHTML = Array.from(selectedImages).map(function(id) {
+    var parts = id.split('::'); var s = parts[0], k = parts[1];
+    var lbl = (s === 'hero' ? (hLabels[k] || k) : (aMap[k] || k)).toString().slice(0, 18);
+    var icon = s === 'hero' ? '&#127968;' : '&#128221;';
+    return '<span class="select-chip inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-100 text-sky-700 text-xs font-medium border border-sky-200">'
+      + icon + ' ' + lbl
+      + '<button data-sec="' + s + '" data-key="' + k + '" onclick="removeChip(this)" class="ml-0.5 text-sky-400 hover:text-red-500">&times;</button>'
+      + '</span>';
+  }).join('');
+}
+
+async function batchGenerateSelected() {
+  if (selectedImages.size === 0) { toast('No images selected', 'error'); return; }
+  var sk = (sessionStorage.getItem('ow_ai_key') || localStorage.getItem('ow_ai_key') || (document.getElementById('ai-api-key') ? document.getElementById('ai-api-key').value : '')).trim();
+  if (!sk) { toast('Please enter Skywork API Key in AI tab first', 'error'); return; }
+  if (!imagesData) { toast('Please load images.json first', 'error'); return; }
+
+  var tasks = Array.from(selectedImages).map(function(id) {
+    var parts = id.split('::'); return { section: parts[0], key: parts[1] };
+  });
+  var mins = Math.ceil(tasks.length * 30 / 60);
+  if (!confirm('AI regenerate ' + tasks.length + ' selected images?\nEst. ' + mins + ' min. Do not close the page.\n\nContinue?')) return;
+
+  batchCancelFlag = false;
+  var panel = document.getElementById('batch-progress-panel');
+  if (panel) {
+    panel.classList.remove('hidden');
+    var doneActions = document.getElementById('batch-done-actions');
+    if (doneActions) doneActions.classList.add('hidden');
+    document.getElementById('batch-total').textContent = tasks.length;
+    document.getElementById('batch-status-badge').textContent = 'Generating...';
+    document.getElementById('batch-done').textContent = 0;
+    document.getElementById('batch-failed').textContent = 0;
+    document.getElementById('batch-pending').textContent = tasks.length;
+    document.getElementById('batch-running').textContent = 0;
+  }
+
+  var aMap = {};
+  if (typeof ARTICLES !== 'undefined') ARTICLES.forEach(function(a) { aMap[a.slug] = a.title; });
+  var hLabels = { homepage: 'Hero Home Banner', blog: 'Blog List Banner', about: 'About Page Banner' };
+
+  var done = 0, failed = 0;
+  for (var i = 0; i < tasks.length; i++) {
+    if (batchCancelFlag) { if (document.getElementById('batch-status-badge')) document.getElementById('batch-status-badge').textContent = 'Cancelled'; break; }
+    var t = tasks[i];
+    var lbl = t.section === 'hero' ? (hLabels[t.key] || t.key) : (aMap[t.key] || t.key);
+    if (panel) {
+      document.getElementById('batch-pending').textContent = tasks.length - done - failed - 1;
+      document.getElementById('batch-running').textContent = 1;
+      var labelEl = document.getElementById('batch-label');
+      if (labelEl) labelEl.textContent = '(' + (i+1) + '/' + tasks.length + ') ' + lbl.slice(0,30);
+    }
+    try {
+      await generateImageForSlug(t.section, t.key);
+      done++;
+      if (panel) document.getElementById('batch-done').textContent = done;
+    } catch(e) {
+      failed++;
+      if (panel) document.getElementById('batch-failed').textContent = failed;
+    }
+    var bar = document.getElementById('batch-progress-bar');
+    if (bar) bar.style.width = Math.round((done + failed) / tasks.length * 100) + '%';
+    if (i < tasks.length - 1) await new Promise(function(r) { setTimeout(r, 800); });
+  }
+
+  if (panel) {
+    document.getElementById('batch-status-badge').textContent = done === tasks.length ? 'Done!' : ('Done ' + done + '/' + tasks.length);
+    document.getElementById('batch-running').textContent = 0;
+    document.getElementById('batch-pending').textContent = 0;
+    var doneActions2 = document.getElementById('batch-done-actions');
+    if (doneActions2) doneActions2.classList.remove('hidden');
+  }
+  toast('Generated: ' + done + ' OK' + (failed > 0 ? ', ' + failed + ' failed' : ''), done === tasks.length ? 'success' : 'warning');
+}
+
+async function saveSelectedToGitHub() {
+  if (selectedImages.size === 0) { toast('No images selected', 'error'); return; }
+  if (!imagesData) { toast('Please load images.json first', 'error'); return; }
+  if (!getGithubPAT()) {
+    var pat = prompt('Enter GitHub Personal Access Token (repo write access required):');
+    if (!pat) return;
+    setGithubPAT(pat);
+  }
+  var aMap = {};
+  if (typeof ARTICLES !== 'undefined') ARTICLES.forEach(function(a) { aMap[a.slug] = a.title; });
+  var hLabels = { homepage: 'Hero Home', blog: 'Hero Blog', about: 'Hero About' };
+  var listStr = Array.from(selectedImages).map(function(id) {
+    var parts = id.split('::'); var s = parts[0], k = parts[1];
+    return '  - ' + (s === 'hero' ? (hLabels[k] || k) : (aMap[k] || k) || k).toString().slice(0, 20);
+  }).join('\n');
+  if (!confirm('Push ' + selectedImages.size + ' selected images to GitHub?\n\n' + listStr + '\n\nCloudflare will auto-redeploy. Continue?')) return;
+
+  imagesData._meta = imagesData._meta || {};
+  imagesData._meta.lastUpdated = new Date().toISOString().split('T')[0];
+  imagesData._meta.lastSelectedUpdate = {
+    date: new Date().toISOString(),
+    count: selectedImages.size,
+    keys: Array.from(selectedImages)
+  };
+
+  var selectedLabels = Array.from(selectedImages).map(function(id) {
+    var parts = id.split('::'); var s = parts[0], k = parts[1];
+    return (s === 'hero' ? (hLabels[k] || k) : (aMap[k] || k) || k).toString().slice(0, 16);
+  }).join(', ');
+
+  imagesData._meta._selectedCommitMsg = 'update ' + selectedImages.size + ' images: ' + selectedLabels.slice(0, 50);
+
+  await saveImagesToGitHub();
+
+  setTimeout(function() {
+    clearSelection();
+    if (selectModeActive) toggleSelectMode();
+  }, 1800);
+}
+// ================================================================
+
+</script>
+</body>
+</html>

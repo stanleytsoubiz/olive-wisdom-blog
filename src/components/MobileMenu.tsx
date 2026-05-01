@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const NAV_LINKS = [
-  { href: '/heritage', label: '知性史詩', icon: '📜', desc: '橄欖油的文化傳承' },
-  { href: '/science',  label: '科學萃取', icon: '🔬', desc: '多酚科學與健康研究' },
-  { href: '/selection',label: '品味鑑賞', icon: '🫒', desc: 'EVOO 選購與品鑑' },
-  { href: '/lifestyle', label: '餐桌美學', icon: '🍽', desc: '地中海飲食生活' },
-  { href: '/about',    label: '關於知橄', icon: 'ℹ️',  desc: '編輯團隊與使命' },
+  { href: '/blog?cat=culture',    label: '知性史詩', icon: '📜', desc: '橄欖油的文化傳承' },
+  { href: '/blog?cat=science',    label: '科學萃取', icon: '🔬', desc: '多酚科學與健康研究' },
+  { href: '/blog?cat=health',     label: '品味鑑賞', icon: '🫒', desc: 'EVOO 選購與品鑑' },
+  { href: '/blog?cat=lifestyle',  label: '餐桌美學', icon: '🍽', desc: '地中海飲食生活' },
+  { href: '/about',               label: '關於知橄', icon: 'ℹ️',  desc: '編輯團隊與使命' },
+  { href: '/topics',              label: '所有主題', icon: '🏷️', desc: '依主題瀏覽知識庫' },
 ];
 
 export default function MobileMenu() {

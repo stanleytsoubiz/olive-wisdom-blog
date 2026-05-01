@@ -514,31 +514,47 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Related Articles */}
+      {/* Related Articles — Kinfolk editorial style */}
       {related.length > 0 && (
-        <section className="bg-olive-50 py-14 px-6">
+        <section className="bg-[#fafaf7] py-16 px-6 border-t border-stone-200">
           <div className="max-w-[900px] mx-auto">
-            <h2 className="text-xl font-bold text-olive-800 mb-6">同欄目精選文章</h2>
-            <div className="grid md:grid-cols-3 gap-5">
-              {related.map((rel) => (
+            {/* Section header */}
+            <div className="flex items-center gap-5 mb-10">
+              <span className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.3em] uppercase whitespace-nowrap">
+                延伸閱讀
+              </span>
+              <div className="h-px flex-1 bg-stone-200" />
+              <Link href="/blog" className="text-[10px] font-sans font-semibold text-olive-600 hover:text-olive-800 tracking-[0.2em] uppercase transition-colors whitespace-nowrap">
+                所有文章 →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {related.map((rel, i) => (
                 <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group">
-                  <article className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden">
+                  <article>
+                    {/* Image — no border radius, no shadow */}
                     {rel.coverImage && (
-                      <div className="relative h-36 overflow-hidden">
+                      <div className="relative h-40 overflow-hidden bg-stone-200 mb-4">
                         <Image
                           src={rel.coverImage}
                           alt={`${rel.title} — 知橄生活 Olive Wisdom`}
                           fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
                           unoptimized
                         />
+                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[9px] font-sans font-semibold text-stone-500 tracking-widest uppercase">
+                          No.{String(i + 1).padStart(2, '0')}
+                        </div>
                       </div>
                     )}
-                    <div className="p-4">
-                      <h3 className="text-sm font-bold text-olive-800 line-clamp-2 group-hover:text-olive-600 transition-colors">
-                        {rel.title}
-                      </h3>
-                      <p className="text-xs text-gray-400 mt-2">{rel.readTime} 分鐘閱讀</p>
+                    <h3 className="text-[0.95rem] font-bold text-olive-900 leading-snug line-clamp-2 mb-2
+                                   group-hover:text-olive-700 transition-colors tracking-tight">
+                      {rel.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400">
+                      <span>{rel.readTime} MIN</span>
+                      <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
+                      <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
                     </div>
                   </article>
                 </Link>

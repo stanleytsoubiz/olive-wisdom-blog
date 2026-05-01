@@ -1,0 +1,95 @@
+{
+  "name": "知橄生活 Olive Wisdom",
+  "short_name": "知橄生活",
+  "description": "橄欖油科學與地中海美學知識庫——以科學與美學，精煉您的健康時光",
+  "lang": "zh-TW",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f9f7f2",
+  "theme_color": "#4a5824",
+  "categories": [
+    "food",
+    "health",
+    "education",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "科學萃取",
+      "short_name": "科學",
+      "description": "橄欖油分子科學與多酚研究",
+      "url": "/blog?cat=science",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "品味鑑賞",
+      "short_name": "品味",
+      "description": "選購指南與感官評鑑",
+      "url": "/blog?cat=health",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "訂閱週報",
+      "short_name": "訂閱",
+      "description": "每週橄欖油知識精選",
+      "url": "/#subscribe",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1280&auto=format&fit=crop&q=80",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "知橄生活首頁"
+    }
+  ]
+}

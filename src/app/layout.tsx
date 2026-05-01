@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import MobileMenu from '@/components/MobileMenu';
+import SubscribeForm from '@/components/SubscribeForm';
+import { getAllPosts } from '@/lib/posts';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import './globals.css';
 
@@ -65,14 +67,17 @@ export const metadata: Metadata = {
 };
 
 const NAV_LINKS = [
-  { href: '/blog?cat=culture', label: '知性史詩' },
   { href: '/blog?cat=science', label: '科學萃取' },
   { href: '/blog?cat=health', label: '品味鑑賞' },
   { href: '/blog?cat=lifestyle', label: '餐桌美學' },
+  { href: '/blog?cat=culture', label: '知性史詩' },
+  { href: '/topics', label: '所有主題' },
   { href: '/about', label: '關於知橄' },
 ];
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Dynamic footer: show 4 most recent posts
+  const recentPosts = getAllPosts().slice(0, 4);
   return (
     <html lang="zh-TW" className={`${notoSerifTC.variable} ${notoSansTC.variable}`}>
       <head>
@@ -98,15 +103,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: '知橄生活 Olive Wisdom',
+              alternateName: ['Olive Wisdom', '知橄生活'],
               url: 'https://olive-wisdom.com',
-              logo: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=80',
-              description: '為 35+ 知性追求者打造的橄欖油科學與美學空間',
-              sameAs: ['https://olive-wisdom.com'],
+              logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico', caption: '知橄生活 Olive Wisdom' },
+              description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等 150+ 篇學術文獻的橄欖油知識平台。',
+              knowsAbout: ['橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚', '羥基酪醇', 'PREDIMED 研究', '抗老化科學'],
+              sameAs: ['https://olive-wisdom.com', 'https://olive-wisdom.com/about', 'https://olive-wisdom.com/editorial-standards'],
+              publishingPrinciples: 'https://olive-wisdom.com/editorial-standards',
+              ethicsPolicy: 'https://olive-wisdom.com/editorial-standards',
+              correctionsPolicy: 'https://olive-wisdom.com/editorial-standards',
             }),
           }}
         />
       </head>
-      <body className={`bg-olive-50 text-gray-800 font-serif antialiased min-h-screen flex flex-col ${notoSerifTC.variable} ${notoSansTC.variable}`}>
+      <body className={`bg-[#fafaf7] text-gray-800 font-serif antialiased min-h-screen flex flex-col ${notoSerifTC.variable} ${notoSansTC.variable}`}>
         {/* Global Header */}
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-olive-100 shadow-sm">
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -190,34 +200,34 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </ul>
             </div>
 
-            {/* 深度專題 */}
+            {/* 最新文章 — dynamic */}
             <div>
-              <p className="text-white font-semibold text-sm mb-4">深度專題</p>
-              <ul className="space-y-2 text-sm text-olive-300">
-                <li><Link href="/blog/polyphenols-sirt1-longevity-2026" className="hover:text-white transition-colors">多酚與抗衰老</Link></li>
-                <li><Link href="/blog/evoo-buying-guide-2026" className="hover:text-white transition-colors">EVOO 選購指南</Link></li>
-                <li><Link href="/blog/mediterranean-diet-anti-aging-women-2026" className="hover:text-white transition-colors">地中海長壽飲食</Link></li>
-                <li><Link href="/blog/hydroxytyrosol-brain-cognition-memory" className="hover:text-white transition-colors">羥基酪醇與大腦</Link></li>
+              <p className="text-white font-semibold text-sm mb-4">最新文章</p>
+              <ul className="space-y-3 text-sm">
+                {recentPosts.map((post) => (
+                  <li key={post.slug}>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-olive-300 hover:text-white transition-colors leading-snug line-clamp-2 block"
+                    >
+                      {post.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* 訂閱 */}
             <div>
-              <p className="text-white font-semibold text-sm mb-4">訂閱知橄週報</p>
-              <p className="text-sm text-olive-300 mb-3">每週一封，精選最新橄欖油研究與生活美學靈感。</p>
-              <form action="/api/subscribe" method="POST" className="flex gap-2">
-                <input
-                  type="email" name="email" required placeholder="您的電子郵件"
-                  className="flex-1 text-sm bg-olive-800 border border-olive-600 text-white placeholder-olive-400 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-olive-400 min-w-0"
-                />
-                <button
-                  type="submit"
-                  className="bg-gold-400 hover:bg-gold-500 text-olive-900 text-sm font-semibold px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
-                >
-                  訂閱
-                </button>
-              </form>
-              <p className="text-xs text-olive-400 mt-2">訂閱即贈《橄欖油品飲師口袋手冊》PDF</p>
+              <p className="text-white font-semibold text-sm mb-3">訂閱知橄週報</p>
+              <p className="text-xs text-olive-300 mb-4 leading-relaxed">每週精選橄欖油研究・免費・隨時可取消</p>
+              <Link
+                href="/#subscribe"
+                className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-300 text-olive-900 text-sm font-bold px-5 py-2.5 rounded-xl transition-colors"
+              >
+                🫒 立即訂閱
+              </Link>
+              <p className="text-xs text-olive-400 mt-3">訂閱即贈《橄欖油品飲師口袋手冊》PDF</p>
             </div>
           </div>
 
@@ -225,10 +235,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="border-t border-olive-700">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-olive-200 text-center sm:text-left">
               <p>© 2026 知橄生活 OLIVE WISDOM. ALL RIGHTS RESERVED.</p>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4 justify-center sm:justify-end">
+                <Link href="/editorial-standards" className="hover:text-white transition-colors">編輯標準</Link>
+                <Link href="/topics" className="hover:text-white transition-colors">所有主題</Link>
                 <Link href="/privacy" className="hover:text-white transition-colors">隱私政策</Link>
                 <Link href="/terms" className="hover:text-white transition-colors">使用條款</Link>
-                <Link href="/about" className="hover:text-white transition-colors">關於我們</Link>
+                <Link href="/about" className="hover:text-white transition-colors">關於知橄</Link>
               </div>
             </div>
           </div>
