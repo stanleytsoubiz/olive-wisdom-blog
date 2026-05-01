@@ -1,4 +1,4 @@
-name: "Build and Deploy to Cloudflare Pages (OpenNext)"
+name: "Build and Deploy to Cloudflare Pages (Static Export)"
 
 on:
   push:
@@ -24,27 +24,12 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build with OpenNext for Cloudflare Pages
-        run: npm run build:cf
-
-      - name: Restructure for Pages Advanced Mode
-        run: |
-          # Static assets (CSS/JS) must sit at the deployment root so URLs like
-          # /_next/static/foo.css map to actual files. opennextjs puts them in
-          # .open-next/assets/, while worker dependencies (cloudflare/,
-          # middleware/, server-functions/, .build/) sit one level above.
-          # We deploy .open-next/assets/ as the root and move the worker plus
-          # its relative-import dependencies into it.
-          mv .open-next/cloudflare .open-next/assets/
-          mv .open-next/middleware .open-next/assets/
-          mv .open-next/server-functions .open-next/assets/
-          mv .open-next/.build .open-next/assets/
-          mv .open-next/worker.js .open-next/assets/_worker.js
-          ls -la .open-next/assets/ | head -25
+      - name: Build static site
+        run: npm run build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .open-next/assets --project-name=olive-wisdom --branch=main
+          command: pages deploy out --project-name=olive-wisdom --branch=main

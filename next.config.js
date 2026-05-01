@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export removed — using OpenNext Cloudflare adapter (opennextjs-cloudflare)
+  // Pure static HTML export — deployed to Cloudflare Pages as static files
+  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
