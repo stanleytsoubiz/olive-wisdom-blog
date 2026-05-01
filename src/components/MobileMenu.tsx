@@ -91,6 +91,19 @@ export default function MobileMenu() {
           {/* 分隔線 */}
           <div className="border-t border-olive-100 my-4" />
 
+          {/* 搜尋 */}
+          <Link
+            href="/search"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-olive-50 transition-colors"
+          >
+            <span className="text-xl">🔍</span>
+            <div>
+              <p className="text-sm font-semibold text-olive-800">搜尋文章</p>
+              <p className="text-xs text-gray-400 mt-0.5">全文搜尋知識庫</p>
+            </div>
+          </Link>
+
           {/* 文章快速入口 */}
           <Link
             href="/blog"

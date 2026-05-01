@@ -365,7 +365,7 @@ export default async function BlogPostPage({ params }: Props) {
       <TableOfContents htmlContent={htmlContent} />
 
       {/* Article Body */}
-      <article className="max-w-[680px] mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16">
+      <article className="max-w-[680px] mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16" data-pagefind-body>
         {/* Meta bar */}
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-8 pb-6 border-b border-gray-100">
           <span className="flex items-center gap-1">✍️ <span className="text-gray-600">{post.author}</span></span>

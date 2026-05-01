@@ -118,7 +118,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className={`bg-[#fafaf7] text-gray-800 font-serif antialiased min-h-screen flex flex-col ${notoSerifTC.variable} ${notoSansTC.variable}`}>
         {/* Global Header */}
-        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-olive-100 shadow-sm">
+        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-olive-100 shadow-sm" data-pagefind-ignore>
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
@@ -183,7 +183,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <div className="flex-1">{children}</div>
 
         {/* Global Footer */}
-        <footer className="bg-olive-900 text-olive-200">
+        <footer className="bg-olive-900 text-olive-200" data-pagefind-ignore>
           <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {/* Brand */}
             <div className="md:col-span-1">
