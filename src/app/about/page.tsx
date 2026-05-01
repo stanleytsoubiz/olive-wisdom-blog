@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#fafaf7]">
       {/* E-E-A-T Organization Schema */}
       <script
         type="application/ld+json"
@@ -56,18 +56,20 @@ export default function AboutPage() {
         }}
       />
       {/* Hero */}
-      <section className="relative h-72 md:h-96 overflow-hidden">
+      <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1600&auto=format&fit=crop&q=80"
           alt="知橄生活 — 關於我們"
           fill className="object-cover" priority unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-olive-900/60 to-olive-800/80" />
-        <div className="absolute inset-0 flex items-center justify-center text-center text-white px-6">
-          <div>
-            <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-3">About Us</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-3">關於知橄生活</h1>
-            <p className="text-olive-200 text-lg">真正的選擇，始於真正的理解。</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent" />
+        {/* Bottom-anchored */}
+        <div className="absolute bottom-0 left-0 right-0 px-6 pb-8">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-gold-400 text-[10px] font-sans font-semibold tracking-[0.35em] uppercase mb-3">About Us</p>
+            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2">關於知橄生活</h1>
+            <p className="text-olive-200 text-base font-sans">真正的選擇，始於真正的理解。</p>
           </div>
         </div>
       </section>
@@ -90,7 +92,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="bg-olive-50 rounded-2xl p-8 border border-olive-100">
+          <div className="bg-white border border-stone-200 p-8">
             <h3 className="text-lg font-bold text-olive-800 mb-6">品牌三位一體</h3>
             <div className="space-y-5">
               {[
@@ -146,7 +148,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="space-y-10 mb-16">
           {[
             {
               emoji: '🔬',
@@ -173,25 +175,29 @@ export default function AboutPage() {
               publications: '覆蓋 15+ 主要產油國風土數據',
             },
           ].map((member) => (
-            <div key={member.role} className="bg-white rounded-2xl shadow-sm border border-olive-100 p-7 hover:shadow-md transition-shadow">
-              <div className="text-4xl mb-4">{member.emoji}</div>
-              <h3 className="font-bold text-olive-800 text-lg mb-1">{member.name}</h3>
-              <p className="text-xs text-olive-500 tracking-wider uppercase mb-3">{member.role}</p>
-              <p className="text-sm text-gray-500 mb-4 leading-relaxed">{member.expertise}</p>
-              <ul className="space-y-1 mb-4">
-                {member.credentials.map((c) => (
-                  <li key={c} className="text-xs text-gray-500 flex items-start gap-2">
-                    <span className="text-olive-400 mt-0.5">✓</span>{c}
-                  </li>
-                ))}
-              </ul>
-              <p className="text-xs font-medium text-olive-600 bg-olive-50 px-3 py-1.5 rounded-lg">{member.publications}</p>
+            <div key={member.role} className="border-b border-stone-200 pb-10 last:border-0">
+              <div className="flex items-start gap-6">
+                <div className="text-4xl shrink-0 mt-1">{member.emoji}</div>
+                <div className="flex-1">
+                  <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase mb-1">{member.role}</p>
+                  <h3 className="font-bold text-olive-900 text-xl mb-1">{member.name}</h3>
+                  <p className="text-sm text-olive-600 font-sans mb-3">{member.expertise}</p>
+                  <ul className="space-y-1 mb-3">
+                    {member.credentials.map((c) => (
+                      <li key={c} className="text-sm text-stone-500 flex gap-2">
+                        <span className="text-olive-400 shrink-0">✓</span>{c}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-xs font-sans font-semibold text-olive-600">{member.publications}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
         {/* 引用機構信賴標章 */}
-        <div className="bg-gradient-to-r from-olive-50 to-gold-50 rounded-2xl p-8 border border-olive-100">
+        <div className="border border-stone-200 bg-white px-8 py-6">
           <p className="text-center text-xs text-olive-600 tracking-widest uppercase mb-6">引用來源與合作機構</p>
           <div className="flex flex-wrap justify-center gap-4">
             {['PREDIMED Study', 'Harvard T.H. Chan', 'EFSA', 'IOC', 'NEJM', 'JAMA Internal Medicine', 'Frontiers in Nutrition', 'Nature Medicine'].map((org) => (
@@ -204,18 +210,18 @@ export default function AboutPage() {
       </section>
 
       {/* 我們的承諾 */}
-      <section className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h2 className="text-2xl font-bold text-olive-800 mb-6">我們對讀者的承諾</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-2xl font-bold text-olive-800 mb-6 text-center">我們對讀者的承諾</h2>
+        <div className="grid md:grid-cols-3 gap-0 border border-stone-200 divide-x divide-stone-200">
           {[
             { icon: '📖', title: '引用透明', desc: '每篇文章附完整參考文獻，數字可追溯' },
             { icon: '🚫', title: '不接業配', desc: '知橄生活不接受橄欖油品牌廣告，確保客觀立場' },
             { icon: '🎓', title: '持續深耕', desc: '每週發布經過深度研究的知識庫文章' },
           ].map((item) => (
-            <div key={item.title} className="bg-white rounded-xl shadow-sm p-6 text-center">
-              <span className="text-3xl">{item.icon}</span>
-              <h3 className="font-bold text-olive-800 mt-3 mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+            <div key={item.title} className="px-8 py-6">
+              <span className="text-2xl">{item.icon}</span>
+              <h3 className="font-bold text-olive-900 mt-3 mb-2">{item.title}</h3>
+              <p className="text-sm text-stone-500 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

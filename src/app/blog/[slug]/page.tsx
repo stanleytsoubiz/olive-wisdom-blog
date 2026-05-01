@@ -202,10 +202,19 @@ export default async function BlogPostPage({ params }: Props) {
   const htmlContent = markdownToHtml(post.content);
   const catInfo = CATEGORY_MAP[post.category] ?? { label: post.category, badgeClass: 'bg-gray-100 text-gray-700' };
 
-  // Related posts
+  // Related posts — tag overlap scoring (sharedTags×3 + sameCategory×1)
+  const postTags = new Set(post.tags || []);
   const related = getAllPosts()
-    .filter((p) => p.slug !== slug && p.category === post.category)
-    .slice(0, 3);
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      const sharedTags = (p.tags || []).filter((t) => postTags.has(t)).length;
+      const sameCategory = p.category === post.category ? 1 : 0;
+      return { post: p, score: sharedTags * 3 + sameCategory };
+    })
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((s) => s.post);
 
   return (
     <main className="min-h-screen bg-white">

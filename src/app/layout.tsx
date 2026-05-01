@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80',
+        url: 'https://olive-wisdom.com/hero-grove.webp',
         width: 1200,
         height: 630,
         alt: '知橄生活 Olive Wisdom',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     creator: '@OliveWisdomTW',
     title: '知橄生活 Olive Wisdom',
     description: '為 35+ 知性追求者打造的橄欖油科學與美學空間',
-    images: ['https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80'],
+    images: ['https://olive-wisdom.com/hero-grove.webp'],
   },
   alternates: {
     canonical: 'https://olive-wisdom.com',
