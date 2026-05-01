@@ -13,11 +13,40 @@ export const metadata: Metadata = {
   description: '知橄生活 Olive Wisdom，為 35+ 知性追求者打造的橄欖油科學與美學空間。探索多酚、SIRT1、羥基酪醇、地中海飲食完整知識庫。',
 };
 
-const CATEGORIES = [
-  { href: '/blog?cat=culture', label: '知性史詩', en: 'Heritage', desc: '追溯地中海千年的文明足跡，探索橄欖樹與人類命運交織的史詩。', icon: '🏛️', color: 'from-purple-800 to-purple-600' },
-  { href: '/blog?cat=science', label: '科學萃取', en: 'Science', desc: '分子醫學、多酚機制、學術研究解析；深度科普給知性的您。', icon: '🔬', color: 'from-emerald-800 to-emerald-600' },
-  { href: '/blog?cat=health', label: '品味鑑賞', en: 'Selection', desc: '感官鑑賞、IOC 評分標準、產地風土、辨別真偽的完整指南。', icon: '🏆', color: 'from-amber-800 to-amber-600' },
-  { href: '/blog?cat=lifestyle', label: '餐桌美學', en: 'Lifestyle', desc: '晨間儀式、烹飪技法、護膚程序——將橄欖油融入您的生活美學。', icon: '✨', color: 'from-rose-800 to-rose-600' },
+// 意圖入口導航
+const INTENT_HUBS = [
+  {
+    href: '/blog?cat=health',
+    question: '我想選一瓶好油',
+    desc: '不被行銷話術騙——讀我們的鑑別指南',
+    icon: '🫒',
+    accent: 'border-amber-400',
+    tag: '選購指南',
+  },
+  {
+    href: '/blog?cat=science',
+    question: '我想懂科學依據',
+    desc: '多酚、PREDIMED、羥基酪醇——讀實證',
+    icon: '🔬',
+    accent: 'border-emerald-400',
+    tag: '科學實證',
+  },
+  {
+    href: '/blog?cat=lifestyle',
+    question: '我想用在料理上',
+    desc: '發煙點、風味搭配、晨間儀式——實用指南',
+    icon: '🍳',
+    accent: 'border-rose-400',
+    tag: '料理應用',
+  },
+  {
+    href: '/blog?cat=culture',
+    question: '我想讀深度故事',
+    desc: '三千年橄欖文明史詩——知性的閱讀體驗',
+    icon: '📖',
+    accent: 'border-purple-400',
+    tag: '知性史詩',
+  },
 ];
 
 export default async function HomePage() {
@@ -56,100 +85,177 @@ export default async function HomePage() {
         })),
       }) }} />
 
-      {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <Image src={heroSrc} alt={heroAlt} fill className="object-cover" priority sizes="100vw" quality={85} />
-        <div className="absolute inset-0 bg-gradient-to-b from-olive-900/70 via-olive-800/60 to-olive-900/80" />
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-          <p className="text-gold-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">以科學與美學，精煉您的健康時光</p>
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight">
-            知橄生活
-            <span className="block text-2xl md:text-3xl font-light tracking-[0.2em] text-olive-200 mt-2">OLIVE WISDOM</span>
-          </h1>
-          <p className="text-lg md:text-xl text-olive-100 max-w-2xl mx-auto mb-10 leading-relaxed">
-            橄欖油文化・地中海美學・健康飲食智慧<br />
-            <span className="text-base text-olive-200">為 35+ 知性追求者打造的橄欖油深度知識空間</span>
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/blog" className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-500 text-olive-900 font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-lg hover:-translate-y-0.5">探索知識庫 →</Link>
-            <a href="#subscribe" className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur text-white font-medium px-8 py-4 rounded-xl border border-white/40 transition-all">訂閱電子報</a>
-          </div>
-        </div>
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-        </div>
-      </section>
+      {/* Hero — Kinfolk 底部錨定式 editorial */}
+      <section className="relative h-[88vh] min-h-[520px] max-h-[800px] overflow-hidden">
+        <Image src={heroSrc} alt={heroAlt} fill className="object-cover object-center" priority sizes="100vw" quality={90} />
+        {/* Bottom-anchored gradient — darkens bottom for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        {/* Top strip — subtle brand */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent" />
 
-      {/* 四大欄目 */}
-      <section className="max-w-6xl mx-auto py-20 px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-olive-800 mb-3">四大知識欄目</h2>
-          <p className="text-gray-500">從文明史詩到分子科學，為您精煉橄欖油的完整知識圖譜</p>
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {CATEGORIES.map((cat) => (
-            <Link key={cat.href} href={cat.href}>
-              <div className={`relative bg-gradient-to-br ${cat.color} text-white rounded-2xl p-6 h-44 flex flex-col justify-between hover:shadow-xl transition-all hover:-translate-y-1 group overflow-hidden`}>
-                <div className="absolute top-0 right-0 text-6xl opacity-20 -translate-y-2 translate-x-2">{cat.icon}</div>
-                <div>
-                  <p className="text-xs font-medium tracking-widest uppercase opacity-70 mb-1">{cat.en}</p>
-                  <h3 className="text-xl font-bold">{cat.label}</h3>
-                </div>
-                <p className="text-sm opacity-80 leading-relaxed line-clamp-2">{cat.desc}</p>
+        {/* Kinfolk-style bottom-anchored headline */}
+        <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 md:pb-14">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-gold-400 text-[11px] font-sans font-semibold tracking-[0.35em] uppercase mb-4">
+              以科學與美學，精煉您的健康時光
+            </p>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.02] tracking-tight mb-4">
+              知橄生活
+            </h1>
+            <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-8">
+              <p className="text-olive-200 text-base md:text-lg max-w-md leading-relaxed">
+                華語世界最公正的橄欖油知識平台——<br className="hidden sm:block" />
+                不接業配・引用學術・敢說真話
+              </p>
+              <div className="flex gap-3 flex-shrink-0">
+                <Link href="/blog"
+                  className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-300 text-olive-900
+                             font-semibold text-sm px-6 py-3 rounded-xl transition-all
+                             hover:shadow-lg hover:-translate-y-0.5 active:scale-95">
+                  探索知識庫 →
+                </Link>
+                <a href="#intent"
+                  className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur
+                             text-white text-sm font-medium px-6 py-3 rounded-xl
+                             border border-white/30 transition-all">
+                  我想找什麼
+                </a>
               </div>
-            </Link>
-          ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 精選文章 */}
-      {latestPosts.length > 0 && (
-        <section className="max-w-6xl mx-auto py-4 px-6 pb-20">
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <h2 className="text-3xl font-bold text-olive-800">精選知識</h2>
-              <p className="text-gray-500 text-sm mt-1">以嚴謹科研實證，探索橄欖油的健康奧秘</p>
-            </div>
-            <Link href="/blog" className="text-olive-600 hover:text-olive-800 text-sm font-medium flex items-center gap-1">查看全部 <span>→</span></Link>
+      {/* ── 意圖入口導航 — "我想找什麼" ────────────────────────── */}
+      <section id="intent" className="bg-white border-b border-stone-100">
+        <div className="max-w-5xl mx-auto px-6 py-12">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px flex-1 bg-stone-200" />
+            <p className="text-xs font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase whitespace-nowrap">
+              您今天想要…
+            </p>
+            <div className="h-px flex-1 bg-stone-200" />
           </div>
-          {featuredPost && (
-            <Link href={`/blog/${featuredPost.slug}`} className="block mb-8 group">
-              <article className="card-editorial overflow-hidden grid md:grid-cols-2">
-                {featuredPost.coverImage && (
-                  <div className="relative h-64 md:h-80">
-                    <Image src={(imagesData.posts?.[featuredPost.slug]?.url) || featuredPost.coverImage} alt={featuredPost.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
-                  </div>
-                )}
-                <div className="p-8 flex flex-col justify-center">
-                  <span className="text-xs bg-olive-100 text-olive-700 px-3 py-1 rounded-full inline-block w-fit mb-3 font-medium">最新文章</span>
-                  <h3 className="text-2xl font-bold text-olive-800 mb-3 leading-tight group-hover:text-olive-600 transition-colors">{featuredPost.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">{featuredPost.excerpt}</p>
-                  <div className="flex items-center gap-3 text-xs text-gray-400">
-                    <span>⏱️ {featuredPost.readTime} 分鐘</span>
-                    <span>📅 {new Date(featuredPost.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                  </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {INTENT_HUBS.map((hub) => (
+              <Link key={hub.href} href={hub.href} className="group">
+                <div className={`h-full border-t-[3px] ${hub.accent} bg-white hover:bg-stone-50
+                                 rounded-b-xl p-5 transition-all duration-200
+                                 hover:shadow-md hover:-translate-y-0.5`}>
+                  <div className="text-3xl mb-3">{hub.icon}</div>
+                  <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-widest uppercase mb-1">
+                    {hub.tag}
+                  </p>
+                  <h3 className="font-bold text-olive-900 text-base leading-snug mb-2 group-hover:text-olive-700 transition-colors">
+                    {hub.question}
+                  </h3>
+                  <p className="text-xs text-stone-500 leading-relaxed font-sans">
+                    {hub.desc}
+                  </p>
+                  <p className="text-xs text-olive-600 font-semibold font-sans mt-3 group-hover:text-olive-800 transition-colors">
+                    開始閱讀 →
+                  </p>
                 </div>
-              </article>
-            </Link>
-          )}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {restPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <article className="card-editorial h-full flex flex-col">
-                  <div className="relative h-44 overflow-hidden bg-stone-100 flex-shrink-0">
-                    <Image src={(imagesData.posts?.[post.slug]?.url) || post.coverImage} alt={post.title} fill className="object-cover group-hover:scale-[1.04] transition-transform duration-500" unoptimized />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 精選知識 — Kinfolk Editorial Layout ─────────────────── */}
+      {latestPosts.length > 0 && (
+        <section className="bg-[#fafaf7] py-20 px-6">
+          <div className="max-w-5xl mx-auto">
+
+            {/* Section header — minimal editorial */}
+            <div className="flex items-center gap-5 mb-14">
+              <span className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.3em] uppercase whitespace-nowrap">
+                最新深度報導
+              </span>
+              <div className="h-px flex-1 bg-stone-200" />
+              <Link href="/blog" className="text-[10px] font-sans font-semibold text-olive-600 hover:text-olive-800 tracking-[0.2em] uppercase transition-colors whitespace-nowrap">
+                瀏覽全部 →
+              </Link>
+            </div>
+
+            {/* Featured story — Kinfolk wide layout */}
+            {featuredPost && (
+              <Link href={`/blog/${featuredPost.slug}`} className="group block mb-16">
+                <article className="grid md:grid-cols-[5fr_4fr] gap-0 overflow-hidden">
+                  {/* Image — no border radius, no card shadow */}
+                  <div className="relative h-72 md:h-[420px] overflow-hidden bg-stone-200">
+                    <Image
+                      src={(imagesData.posts?.[featuredPost.slug]?.url) || featuredPost.coverImage}
+                      alt={featuredPost.title} fill
+                      className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                      unoptimized priority
+                    />
                   </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <h3 className="font-bold text-olive-900 mb-2 text-base leading-snug line-clamp-2 group-hover:text-olive-700 transition-colors tracking-tight flex-1">{post.title}</h3>
-                    <p className="text-xs text-stone-500 line-clamp-2 mb-3 leading-relaxed">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs font-sans pt-3 border-t border-stone-100">
-                      <span className="text-stone-400">{post.readTime} MIN READ</span>
-                      <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
+                  {/* Editorial text panel */}
+                  <div className="bg-white flex flex-col justify-center px-8 md:px-12 py-10 md:py-14
+                                  border-t border-r border-b border-stone-200 md:border-l-0">
+                    <p className="text-[10px] font-sans font-semibold text-gold-600 tracking-[0.3em] uppercase mb-5">
+                      本期精選
+                    </p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-olive-900 leading-[1.25] mb-5
+                                   group-hover:text-olive-700 transition-colors tracking-tight">
+                      {featuredPost.title}
+                    </h2>
+                    <p className="text-stone-500 text-sm leading-[1.85] mb-7 line-clamp-4 font-sans">
+                      {featuredPost.excerpt}
+                    </p>
+                    <div className="flex items-center gap-4 text-[11px] font-sans text-stone-400 mb-8 pt-5 border-t border-stone-100">
+                      <span className="font-semibold text-olive-600">{featuredPost.author || '知橄研究室'}</span>
+                      <span>·</span>
+                      <span>{featuredPost.readTime} 分鐘閱讀</span>
+                      <span>·</span>
+                      <span>{new Date(featuredPost.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
                     </div>
+                    <span className="text-sm font-semibold text-olive-700 group-hover:text-olive-900
+                                     transition-colors font-sans tracking-wide">
+                      深度閱讀 →
+                    </span>
                   </div>
                 </article>
               </Link>
-            ))}
+            )}
+
+            {/* Secondary articles — editorial grid, no card borders */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+              {restPosts.slice(0, 4).map((post, i) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+                  <article>
+                    {/* Image */}
+                    <div className="relative h-40 overflow-hidden bg-stone-200 mb-4">
+                      <Image
+                        src={(imagesData.posts?.[post.slug]?.url) || post.coverImage}
+                        alt={post.title} fill
+                        className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                        unoptimized
+                      />
+                      {/* Issue number — editorial touch */}
+                      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[9px] font-sans font-semibold text-stone-500 tracking-widest uppercase">
+                        No.{String(i + 2).padStart(2, '0')}
+                      </div>
+                    </div>
+                    {/* Text */}
+                    <h3 className="font-bold text-olive-900 text-[0.95rem] leading-snug mb-2
+                                   group-hover:text-olive-700 transition-colors tracking-tight line-clamp-3">
+                      {post.title}
+                    </h3>
+                    <p className="text-[11px] font-sans text-stone-400 line-clamp-2 leading-relaxed mb-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400">
+                      <span>{post.readTime} MIN</span>
+                      <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
+                      <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+
           </div>
         </section>
       )}

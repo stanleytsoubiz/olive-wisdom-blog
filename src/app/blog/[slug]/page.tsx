@@ -175,7 +175,7 @@ function markdownToHtml(md: string): string {
 
     // Paragraph
     closeList(); closeTable(); closeBlockquote();
-    result.push(`<p class="text-gray-700 leading-loose mb-4 text-[1.05rem]">${inline(line)}</p>`);
+    result.push(`<p class="text-gray-700 leading-[1.875] mb-5 text-[1.125rem]">${inline(line)}</p>`);
   }
 
   closeList(); closeTable(); closeBlockquote();
@@ -336,7 +336,7 @@ export default async function BlogPostPage({ params }: Props) {
       <TableOfContents htmlContent={htmlContent} />
 
       {/* Article Body */}
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16">
+      <article className="max-w-[680px] mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16">
         {/* Meta bar */}
         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-8 pb-6 border-b border-gray-100">
           <span className="flex items-center gap-1">✍️ <span className="text-gray-600">{post.author}</span></span>
@@ -436,18 +436,56 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </article>
 
-      {/* Author Card + Share */}
-      <section className="max-w-3xl mx-auto px-6 py-8">
-        <div className="bg-olive-50 border border-olive-100 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-          <div className="w-14 h-14 rounded-full bg-olive-200 flex items-center justify-center text-2xl flex-shrink-0">🫒</div>
-          <div className="flex-1">
-            <p className="font-bold text-olive-800 mb-0.5">{post.author || '知橄生活研究團隊'}</p>
-            <p className="text-xs text-gray-500 font-sans leading-relaxed">
-              由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等 150+ 篇學術文獻。
-            </p>
+      {/* Author Trust Block — E-E-A-T 升級版 */}
+      <section className="max-w-[680px] mx-auto px-4 sm:px-6 py-8">
+        <div className="bg-white border border-olive-100 rounded-2xl overflow-hidden shadow-sm">
+          {/* Top bar */}
+          <div className="bg-gradient-to-r from-olive-800 to-olive-700 px-6 py-3 flex items-center gap-2">
+            <span className="text-xs font-sans font-semibold text-olive-200 tracking-widest uppercase">編輯公信力聲明</span>
           </div>
-          <div className="flex-shrink-0">
-            <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />
+          {/* Author info */}
+          <div className="p-6">
+            <div className="flex flex-col sm:flex-row items-start gap-5">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-olive-600 to-olive-800 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">🫒</div>
+              <div className="flex-1 min-w-0">
+                <p className="font-bold text-olive-900 text-base mb-0.5">{post.author || '知橄生活研究團隊'}</p>
+                <p className="text-xs text-olive-600 font-sans mb-3">知橄生活 Olive Wisdom 編輯部</p>
+                <p className="text-sm text-gray-600 font-sans leading-relaxed">
+                  本文由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，
+                  並引用 PREDIMED、哈佛醫學院、EFSA、IOC 等機構的學術文獻。
+                  所有科學主張皆可追溯至原始研究來源。
+                </p>
+                {/* Trust badges */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {[
+                    { icon: '📚', label: '引用文獻可查' },
+                    { icon: '🚫', label: '無業配廣告' },
+                    { icon: '✅', label: 'IOC 標準對標' },
+                    { icon: '🔄', label: '定期更新內容' },
+                  ].map((badge) => (
+                    <span key={badge.label}
+                      className="inline-flex items-center gap-1 text-xs font-sans font-medium
+                                 bg-olive-50 text-olive-700 border border-olive-200
+                                 px-2.5 py-1 rounded-full">
+                      <span>{badge.icon}</span>{badge.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            {/* Divider */}
+            <div className="border-t border-olive-100 mt-5 pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="text-xs text-gray-400 font-sans flex items-center gap-4">
+                <span>📅 發布：{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <span>⏱️ {post.readTime} 分鐘閱讀</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <a href="/about" className="text-xs text-olive-600 hover:text-olive-800 font-sans underline underline-offset-2 transition-colors">
+                  了解我們的編輯標準 →
+                </a>
+                <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -455,7 +493,7 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Related Articles */}
       {related.length > 0 && (
         <section className="bg-olive-50 py-14 px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-[900px] mx-auto">
             <h2 className="text-xl font-bold text-olive-800 mb-6">同欄目精選文章</h2>
             <div className="grid md:grid-cols-3 gap-5">
               {related.map((rel) => (
