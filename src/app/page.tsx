@@ -19,32 +19,28 @@ const INTENT_HUBS = [
     href: '/blog?cat=health',
     question: '我想選一瓶好油',
     desc: '不被行銷話術騙——讀我們的鑑別指南',
-    icon: '🫒',
-    accent: 'border-amber-400',
+    accent: 'border-olive-400',
     tag: '選購指南',
   },
   {
     href: '/blog?cat=science',
     question: '我想懂科學依據',
     desc: '多酚、PREDIMED、羥基酪醇——讀實證',
-    icon: '🔬',
-    accent: 'border-emerald-400',
-    tag: '科學實證',
+    accent: 'border-olive-600',
+    tag: '科學萃取',
   },
   {
     href: '/blog?cat=lifestyle',
     question: '我想用在料理上',
     desc: '發煙點、風味搭配、晨間儀式——實用指南',
-    icon: '🍳',
-    accent: 'border-rose-400',
-    tag: '料理應用',
+    accent: 'border-gold-400',
+    tag: '餐桌美學',
   },
   {
     href: '/blog?cat=culture',
     question: '我想讀深度故事',
     desc: '三千年橄欖文明史詩——知性的閱讀體驗',
-    icon: '📖',
-    accent: 'border-purple-400',
+    accent: 'border-stone-400',
     tag: '知性史詩',
   },
 ];
@@ -155,11 +151,9 @@ export default async function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {INTENT_HUBS.map((hub) => (
               <Link key={hub.href} href={hub.href} className="group">
-                <div className={`h-full border-t-[3px] ${hub.accent} bg-white hover:bg-stone-50
-                                 rounded-b-xl p-5 transition-all duration-200
-                                 hover:shadow-md hover:-translate-y-0.5`}>
-                  <div className="text-3xl mb-3">{hub.icon}</div>
-                  <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-widest uppercase mb-1">
+                <div className={`h-full border-t-[2px] ${hub.accent} bg-white hover:bg-stone-50
+                                 p-5 transition-all duration-200 hover:shadow-sm`}>
+                  <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-3">
                     {hub.tag}
                   </p>
                   <h3 className="font-bold text-olive-900 text-base leading-snug mb-2 group-hover:text-olive-700 transition-colors">
@@ -168,7 +162,7 @@ export default async function HomePage() {
                   <p className="text-xs text-stone-500 leading-relaxed font-sans">
                     {hub.desc}
                   </p>
-                  <p className="text-xs text-olive-600 font-semibold font-sans mt-3 group-hover:text-olive-800 transition-colors">
+                  <p className="text-xs text-olive-600 font-medium font-sans mt-4 group-hover:text-olive-800 transition-colors">
                     開始閱讀 →
                   </p>
                 </div>
@@ -250,10 +244,6 @@ export default async function HomePage() {
                         className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
-                      {/* Issue number — editorial touch */}
-                      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[9px] font-sans font-semibold text-stone-500 tracking-widest uppercase">
-                        No.{String(i + 2).padStart(2, '0')}
-                      </div>
                     </div>
                     {/* Text */}
                     <h3 className="font-bold text-olive-900 text-[0.95rem] leading-snug mb-2

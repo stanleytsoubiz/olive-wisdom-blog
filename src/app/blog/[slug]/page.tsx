@@ -182,12 +182,12 @@ function markdownToHtml(md: string): string {
   return result.join('\n');
 }
 
-const CATEGORY_MAP: Record<string, { label: string; badgeClass: string }> = {
-  science:   { label: '科學萃取', badgeClass: 'bg-emerald-100 text-emerald-800' },
-  lifestyle: { label: '餐桌美學', badgeClass: 'bg-amber-100 text-amber-800' },
-  health:    { label: '品味鑑賞', badgeClass: 'bg-rose-100 text-rose-800' },
-  culture:   { label: '知性史詩', badgeClass: 'bg-purple-100 text-purple-800' },
-  heritage:  { label: '知性史詩', badgeClass: 'bg-purple-100 text-purple-800' },
+const CATEGORY_MAP: Record<string, { label: string; badgeClass: string; accentColor: string }> = {
+  science:   { label: '科學萃取', badgeClass: 'bg-olive-100 text-olive-800',  accentColor: 'text-olive-600' },
+  lifestyle: { label: '餐桌美學', badgeClass: 'bg-gold-100 text-gold-800',    accentColor: 'text-gold-600' },
+  health:    { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
+  culture:   { label: '知性史詩', badgeClass: 'bg-stone-100 text-stone-700',  accentColor: 'text-stone-600' },
+  heritage:  { label: '知性史詩', badgeClass: 'bg-stone-100 text-stone-700',  accentColor: 'text-stone-600' },
 };
 
 export default async function BlogPostPage({ params }: Props) {
@@ -338,26 +338,43 @@ export default async function BlogPostPage({ params }: Props) {
         />
       )}
 
-      {/* Cover Image */}
+      {/* ── Article Header — clean editorial above image ─────── */}
+      <div className="border-b border-stone-100 bg-white">
+        <div className="max-w-[740px] mx-auto px-6 pt-10 pb-8">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-[11px] font-sans text-stone-400 tracking-wide mb-6">
+            <Link href="/" className="hover:text-olive-600 transition-colors">首頁</Link>
+            <span>/</span>
+            <Link href="/blog" className="hover:text-olive-600 transition-colors">知識庫</Link>
+            <span>/</span>
+            <span className={`font-semibold ${catInfo.accentColor ?? 'text-olive-600'}`}>{catInfo.label}</span>
+          </nav>
+          {/* Title */}
+          <h1 className="text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-5 max-w-[640px]">
+            {post.title}
+          </h1>
+          {/* Byline */}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] font-sans text-stone-500 border-t border-stone-100 pt-5">
+            <span className="font-medium text-olive-700">{post.author || '知橄生活研究團隊'}</span>
+            <span className="text-stone-300">|</span>
+            <span>{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span className="text-stone-300">|</span>
+            <span>{post.readTime} 分鐘閱讀</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Cover Image — full-width, no text overlay */}
       {coverImageUrl && (
-        <div className="relative aspect-video md:aspect-auto md:h-[480px] w-full">
+        <div className="relative aspect-video md:aspect-auto md:h-[460px] w-full bg-stone-100">
           <Image
             src={coverImageUrl}
-            alt={post.coverAlt || `${post.title}｜${post.category === "science" ? "橄欖油科學" : post.category === "heritage" || post.category === "culture" ? "橄欖油歷史" : post.category === "lifestyle" ? "地中海飲食" : "特級初榨橄欖油"} — 知橄生活`}
+            alt={post.coverAlt || `${post.title} — 知橄生活 Olive Wisdom`}
             fill
             className="object-cover"
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 px-6 py-8 max-w-4xl mx-auto">
-            <span className={`text-xs font-semibold px-3 py-1.5 rounded-full mb-4 inline-block ${catInfo.badgeClass}`}>
-              {catInfo.label}
-            </span>
-            <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight mt-2 max-w-3xl">
-              {post.title}
-            </h1>
-          </div>
         </div>
       )}
 
@@ -365,22 +382,11 @@ export default async function BlogPostPage({ params }: Props) {
       <TableOfContents htmlContent={htmlContent} />
 
       {/* Article Body */}
-      <article className="max-w-[680px] mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16" data-pagefind-body>
-        {/* Meta bar */}
-        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-8 pb-6 border-b border-gray-100">
-          <span className="flex items-center gap-1">✍️ <span className="text-gray-600">{post.author}</span></span>
-          <span className="flex items-center gap-1">
-            📅 <span className="text-gray-600">
-              {new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </span>
-          </span>
-          <span className="flex items-center gap-1">⏱️ <span className="text-gray-600">{post.readTime} 分鐘閱讀</span></span>
-        </div>
-
-        {/* Excerpt callout */}
-        <div className="article-excerpt bg-gradient-to-br from-olive-50 to-gold-50 border-l-4 border-olive-500 rounded-r-xl px-6 py-5 mb-10">
-          <p className="text-gray-600 leading-relaxed italic text-base">{post.excerpt}</p>
-        </div>
+      <article className="max-w-[680px] mx-auto px-4 sm:px-6 pt-10 pb-16" data-pagefind-body>
+        {/* Lead / Excerpt */}
+        <p className="article-excerpt text-[1.15rem] text-stone-600 leading-[1.8] mb-10 font-sans border-l-[3px] border-olive-400 pl-5 italic">
+          {post.excerpt}
+        </p>
 
         {/* Affiliate Disclosure */}
         <AffiliateDisclosure content={post.content} />
@@ -409,8 +415,8 @@ export default async function BlogPostPage({ params }: Props) {
         {/* FAQ Accordion — article-specific Q&A for SEO Featured Snippets */}
         {post.faq && post.faq.length > 0 && (
           <div className="mt-12 pt-8 border-t border-olive-100">
-            <h2 className="text-xl font-bold text-olive-800 mb-6 flex items-center gap-2">
-              <span>💬</span> 常見問題
+            <h2 className="text-xl font-bold text-olive-800 mb-6 tracking-tight">
+              常見問題
             </h2>
             <div className="space-y-3">
               {post.faq.map((item, i) => (
@@ -438,8 +444,8 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Sources */}
         {post.sources && post.sources.length > 0 && (
           <div className="mt-12 pt-8 border-t border-olive-100">
-            <h3 className="text-lg font-bold text-olive-800 mb-4 flex items-center gap-2">
-              <span>📚</span> 參考文獻
+            <h3 className="text-sm font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-4">
+              參考文獻
             </h3>
             <ol className="space-y-2">
               {post.sources.map((src, i) => (
@@ -469,56 +475,42 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </article>
 
-      {/* Author Trust Block — E-E-A-T 升級版 */}
+      {/* Author Trust Block — editorial byline style */}
       <section className="max-w-[680px] mx-auto px-4 sm:px-6 py-8">
-        <div className="bg-white border border-olive-100 rounded-2xl overflow-hidden shadow-sm">
-          {/* Top bar */}
-          <div className="bg-gradient-to-r from-olive-800 to-olive-700 px-6 py-3 flex items-center gap-2">
-            <span className="text-xs font-sans font-semibold text-olive-200 tracking-widest uppercase">編輯公信力聲明</span>
+        <div className="border-t border-stone-200 pt-8">
+          <div className="flex flex-col sm:flex-row items-start gap-5">
+            {/* Avatar — simple monogram */}
+            <div className="w-12 h-12 rounded-full bg-olive-100 border border-olive-200 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+                <ellipse cx="14" cy="14" rx="5" ry="8" fill="#4a5824" transform="rotate(-20 14 14)" />
+                <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#7a8f3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-semibold text-olive-900 text-[0.95rem] mb-0.5">{post.author || '知橄生活研究團隊'}</p>
+              <p className="text-xs text-stone-400 font-sans mb-3 tracking-wide">知橄生活 Olive Wisdom 編輯部</p>
+              <p className="text-sm text-stone-500 font-sans leading-relaxed">
+                由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，
+                引用 PREDIMED、哈佛醫學院、EFSA、IOC 等學術文獻。
+                所有科學主張均可追溯至原始研究來源。
+              </p>
+              {/* Trust tags — text only, no emoji */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {['引用文獻可查', '無業配廣告', 'IOC 標準對標', '定期更新'].map((label) => (
+                  <span key={label}
+                    className="text-[11px] font-sans font-medium text-olive-600 border border-olive-200 px-2.5 py-0.5 rounded-sm">
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          {/* Author info */}
-          <div className="p-6">
-            <div className="flex flex-col sm:flex-row items-start gap-5">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-olive-600 to-olive-800 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm">🫒</div>
-              <div className="flex-1 min-w-0">
-                <p className="font-bold text-olive-900 text-base mb-0.5">{post.author || '知橄生活研究團隊'}</p>
-                <p className="text-xs text-olive-600 font-sans mb-3">知橄生活 Olive Wisdom 編輯部</p>
-                <p className="text-sm text-gray-600 font-sans leading-relaxed">
-                  本文由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，
-                  並引用 PREDIMED、哈佛醫學院、EFSA、IOC 等機構的學術文獻。
-                  所有科學主張皆可追溯至原始研究來源。
-                </p>
-                {/* Trust badges */}
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {[
-                    { icon: '📚', label: '引用文獻可查' },
-                    { icon: '🚫', label: '無業配廣告' },
-                    { icon: '✅', label: 'IOC 標準對標' },
-                    { icon: '🔄', label: '定期更新內容' },
-                  ].map((badge) => (
-                    <span key={badge.label}
-                      className="inline-flex items-center gap-1 text-xs font-sans font-medium
-                                 bg-olive-50 text-olive-700 border border-olive-200
-                                 px-2.5 py-1 rounded-full">
-                      <span>{badge.icon}</span>{badge.label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-            {/* Divider */}
-            <div className="border-t border-olive-100 mt-5 pt-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="text-xs text-gray-400 font-sans flex items-center gap-4">
-                <span>📅 發布：{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                <span>⏱️ {post.readTime} 分鐘閱讀</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <a href="/about" className="text-xs text-olive-600 hover:text-olive-800 font-sans underline underline-offset-2 transition-colors">
-                  了解我們的編輯標準 →
-                </a>
-                <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />
-              </div>
-            </div>
+          {/* Bottom row */}
+          <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <a href="/editorial-standards" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
+              編輯標準與公正聲明 →
+            </a>
+            <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />
           </div>
         </div>
       </section>
@@ -541,19 +533,16 @@ export default async function BlogPostPage({ params }: Props) {
               {related.map((rel, i) => (
                 <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group">
                   <article>
-                    {/* Image — no border radius, no shadow */}
-                    {rel.coverImage && (
-                      <div className="relative h-40 overflow-hidden bg-stone-200 mb-4">
+                    {/* Image */}
+                    {(imagesData.posts?.[rel.slug]?.url || rel.coverImage) && (
+                      <div className="relative aspect-video overflow-hidden bg-stone-200 mb-4">
                         <Image
-                          src={rel.coverImage}
+                          src={imagesData.posts?.[rel.slug]?.url || rel.coverImage || ''}
                           alt={`${rel.title} — 知橄生活 Olive Wisdom`}
                           fill
                           className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                          unoptimized
+                          sizes="(max-width: 768px) 100vw, 33vw"
                         />
-                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[9px] font-sans font-semibold text-stone-500 tracking-widest uppercase">
-                          No.{String(i + 1).padStart(2, '0')}
-                        </div>
                       </div>
                     )}
                     <h3 className="text-[0.95rem] font-bold text-olive-900 leading-snug line-clamp-2 mb-2
