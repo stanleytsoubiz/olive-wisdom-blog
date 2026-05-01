@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/build-posts-data.mjs && next build",
+    "build": "node scripts/build-posts-data.mjs && next build && npx pagefind --site out --output-path out/pagefind",
     "build:cf": "node scripts/build-posts-data.mjs && opennextjs-cloudflare build",
     "preview": "opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare deploy",
@@ -15,16 +15,17 @@
     "@supabase/supabase-js": "^2.43.0",
     "gray-matter": "^4.0.3",
     "next": "^15.5.15",
+    "pagefind": "^1.5.2",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.0.0",
-    "esbuild": "0.25.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "esbuild": "0.25.4",
     "eslint": "^8",
     "eslint-config-next": "^15.5.15",
     "postcss": "^8",
@@ -36,4 +37,3 @@
     "node": ">=18.0.0"
   }
 }
-

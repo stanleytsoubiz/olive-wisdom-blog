@@ -150,6 +150,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               ))}
             </nav>
 
+            {/* Desktop search icon */}
+            <Link
+              href="/search"
+              aria-label="搜尋文章"
+              className="hidden md:flex items-center justify-center w-9 h-9 rounded-lg hover:bg-olive-50 transition-colors text-stone-500 hover:text-olive-700"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </Link>
+
             {/* CTA */}
             <Link
               href="/#subscribe"
@@ -160,7 +171,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
             {/* Mobile: search icon + hamburger */}
             <div className="md:hidden flex items-center gap-1">
-              <Link href="/blog" aria-label="搜尋文章" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-olive-50 transition-colors text-olive-600">
+              <Link href="/search" aria-label="搜尋文章" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-olive-50 transition-colors text-olive-600">
                 🔍
               </Link>
               <MobileMenu />
