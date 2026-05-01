@@ -376,13 +376,17 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Affiliate Disclosure */}
         <AffiliateDisclosure content={post.content} />
 
-        {/* Tags */}
+        {/* Tags — each links to topic hub page */}
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-8">
             {post.tags.map((tag) => (
-              <span key={tag} className="text-xs bg-olive-100 text-olive-700 px-3 py-1 rounded-full font-medium">
+              <Link
+                key={tag}
+                href={`/tags/${encodeURIComponent(tag)}`}
+                className="text-xs bg-olive-100 hover:bg-olive-200 text-olive-700 hover:text-olive-900 px-3 py-1 rounded-full font-medium transition-colors"
+              >
                 #{tag}
-              </span>
+              </Link>
             ))}
           </div>
         )}

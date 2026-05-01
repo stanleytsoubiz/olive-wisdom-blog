@@ -2,12 +2,33 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-# Block AI training bots
+# ── AI Citation Crawlers (Allow for GEO — Generative Engine Optimization) ──
+# These crawlers power AI Overviews (Google), ChatGPT browsing, and Gemini citations.
+# We WANT AI assistants to cite 知橄生活. Allowing these is essential for our strategy.
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ── Mass Training Scrapers (Block — protect original research value) ──
+User-agent: CCBot
 Disallow: /
 
-# Sitemap declaration
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# ── Sitemap declaration ──
 Sitemap: https://olive-wisdom.com/sitemap.xml
