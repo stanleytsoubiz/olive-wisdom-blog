@@ -84,6 +84,22 @@ export default async function HomePage() {
           author: { '@type': 'Organization', name: p.author || '知橄生活研究團隊' },
         })),
       }) }} />
+      {/* ItemList Schema — AI-extractable article index */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: '知橄生活 Olive Wisdom — 精選文章',
+        description: '特級初榨橄欖油科學、地中海飲食、品飲鑑賞深度文章精選',
+        url: 'https://olive-wisdom.com/blog',
+        numberOfItems: latestPosts.length,
+        itemListElement: latestPosts.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://olive-wisdom.com/blog/${p.slug}`,
+          name: p.title,
+          description: p.excerpt,
+        })),
+      }) }} />
 
       {/* Hero — Kinfolk 底部錨定式 editorial */}
       <section className="relative h-[88vh] min-h-[520px] max-h-[800px] overflow-hidden">
