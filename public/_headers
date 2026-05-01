@@ -15,7 +15,11 @@
   Cache-Control: public, max-age=31536000, immutable
   Vary: Accept-Encoding
 
-# ── 圖片快取 1 年 ──────────────────────────────────────────────
+# ── 文章封面圖（會更新，不用 immutable）──────────────────────
+/images/covers/*
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# ── 其他圖片快取 1 年 ──────────────────────────────────────────
 /*.jpg
   Cache-Control: public, max-age=31536000, immutable
 
