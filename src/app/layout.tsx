@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import MobileMenu from '@/components/MobileMenu';
+import BottomNav from '@/components/BottomNav';
 import SubscribeForm from '@/components/SubscribeForm';
 import { getAllPosts } from '@/lib/posts';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
@@ -169,18 +169,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               訂閱專欄
             </Link>
 
-            {/* Mobile: search icon + hamburger */}
-            <div className="md:hidden flex items-center gap-1">
-              <Link href="/search" aria-label="搜尋文章" className="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-olive-50 transition-colors text-olive-600">
-                🔍
-              </Link>
-              <MobileMenu />
-            </div>
+            {/* Mobile: logo already on left, nothing extra needed — BottomNav handles navigation */}
           </div>
         </header>
 
-        {/* Page Content */}
-        <div className="flex-1">{children}</div>
+        {/* Page Content — add bottom padding on mobile for BottomNav */}
+        <div className="flex-1 pb-[60px] md:pb-0" style={{ paddingBottom: 'max(60px, calc(60px + env(safe-area-inset-bottom)))' }}>
+          {children}
+        </div>
+
+        {/* Bottom Navigation — mobile only */}
+        <BottomNav />
 
         {/* Global Footer */}
         <footer className="bg-olive-900 text-olive-200" data-pagefind-ignore>

@@ -340,14 +340,14 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Cover Image */}
       {coverImageUrl && (
-        <div className="relative h-[40vw] min-h-[200px] max-h-[260px] md:h-[480px] w-full">
+        <div className="relative aspect-video md:aspect-auto md:h-[480px] w-full">
           <Image
             src={coverImageUrl}
             alt={post.coverAlt || `${post.title}｜${post.category === "science" ? "橄欖油科學" : post.category === "heritage" || post.category === "culture" ? "橄欖油歷史" : post.category === "lifestyle" ? "地中海飲食" : "特級初榨橄欖油"} — 知橄生活`}
             fill
             className="object-cover"
+            sizes="100vw"
             priority
-            unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-6 py-8 max-w-4xl mx-auto">

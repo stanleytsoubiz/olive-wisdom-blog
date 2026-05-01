@@ -199,12 +199,13 @@ export default async function HomePage() {
               <Link href={`/blog/${featuredPost.slug}`} className="group block mb-16">
                 <article className="grid md:grid-cols-[5fr_4fr] gap-0 overflow-hidden">
                   {/* Image — no border radius, no card shadow */}
-                  <div className="relative h-72 md:h-[420px] overflow-hidden bg-stone-200">
+                  <div className="relative aspect-video md:aspect-auto md:h-[420px] overflow-hidden bg-stone-200">
                     <Image
                       src={(imagesData.posts?.[featuredPost.slug]?.url) || featuredPost.coverImage}
                       alt={featuredPost.title} fill
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
-                      unoptimized priority
+                      sizes="(max-width: 768px) 100vw, 55vw"
+                      priority
                     />
                   </div>
                   {/* Editorial text panel */}
@@ -242,12 +243,12 @@ export default async function HomePage() {
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                   <article>
                     {/* Image */}
-                    <div className="relative h-40 overflow-hidden bg-stone-200 mb-4">
+                    <div className="relative aspect-video overflow-hidden bg-stone-200 mb-4">
                       <Image
                         src={(imagesData.posts?.[post.slug]?.url) || post.coverImage}
                         alt={post.title} fill
                         className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                       {/* Issue number — editorial touch */}
                       <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[9px] font-sans font-semibold text-stone-500 tracking-widest uppercase">

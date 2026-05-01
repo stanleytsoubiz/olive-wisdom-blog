@@ -110,7 +110,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
               <Link href={`/blog/${featured.slug}`} className="block group mb-12">
                 <article className={`card-editorial ${CATEGORY_MAP[featured.category]?.catLine ?? 'cat-line-science'} grid md:grid-cols-5`}>
                   {/* Image: 3/5 */}
-                  <div className="relative md:col-span-3 h-64 md:h-96 overflow-hidden bg-stone-100">
+                  <div className="relative md:col-span-3 aspect-video md:aspect-auto md:h-96 overflow-hidden bg-stone-100">
                     <Image
                       src={(imagesData?.posts?.[featured.slug]?.url) || featured.coverImage || ''}
                       alt={featured.title}
@@ -118,7 +118,6 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
                       sizes="(max-width: 768px) 100vw, 60vw"
                       priority
-                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10" />
                   </div>
@@ -173,7 +172,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                       <article className={`card-editorial ${cat.catLine} h-full flex flex-col`}>
                         {/* Image */}
-                        <div className="relative h-48 overflow-hidden bg-stone-100 flex-shrink-0">
+                        <div className="relative aspect-video overflow-hidden bg-stone-100 flex-shrink-0">
                           {imgUrl && (
                             <Image
                               src={imgUrl}
@@ -181,7 +180,6 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                               fill
                               className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                              unoptimized
                             />
                           )}
                         </div>

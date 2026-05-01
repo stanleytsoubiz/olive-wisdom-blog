@@ -52,116 +52,117 @@ const HERO         = args.includes('--hero');
 const MISSING_ONLY = args.includes('--missing-only');
 const SLUG_ARG     = (args.find(a => a.startsWith('--slug=')) || '').replace('--slug=', '');
 
-// ── 品牌 DNA — 統一視覺後綴 ─────────────────────────────────────
+// ── 品牌 DNA — 統一視覺後綴（真實攝影風格） ─────────────────────
 const BRAND_DNA = [
-  'olive wisdom editorial photography',
-  'dark moody background deep olive green (#1A2A1C)',
-  'warm gold accent lighting (#A8894A)',
-  'premium mediterranean lifestyle',
-  'cinematic 16:9',
-  'photorealistic ultra high quality',
+  'premium editorial food photography',
+  'natural diffused window light',
+  'shallow depth of field',
+  'muted earth tones warm olive honey palette',
+  'Kinfolk magazine aesthetic',
+  'shot on medium format camera',
+  '16:9 cinematic crop',
   'no text no watermark no logo no person',
 ].join(', ');
 
-// ── 文章 Prompts（每篇精心設計） ────────────────────────────────
+// ── 文章 Prompts（真實攝影風格，無 AI 合成感） ──────────────────
 const COVER_PROMPTS = {
   // ── 科學萃取 ───────────────────────────────────────────────────
   'polyphenols-sirt1-longevity-2026':
-    'glowing DNA double helix surrounded by golden olive oil polyphenol molecules, SIRT1 longevity gene activation concept, bioluminescent molecular structure, scientific visualization macro photography',
+    'golden extra virgin olive oil poured into small glass vial on white marble, dried botanical herbs scattered nearby, open scientific journal, warm afternoon window light still life, macro close-up',
 
   'hydroxytyrosol-brain-cognition-memory':
-    'human brain neural network glowing golden synapses, olive molecular structure overlay, cognition memory enhancement concept, neuroscience visualization, dark studio',
+    'small amber glass bottles with golden olive extract on linen cloth, fresh olive sprig, white ceramic mortar with herbs, soft natural light flat lay, apothecary still life',
 
   'hydroxytyrosol-brain-cognition-2026':
-    'glowing neural network structure with golden antioxidant molecule pathways, bioluminescent synapse visualization, olive oil droplet molecular concept, abstract science art, deep dark background',
+    'premium olive oil in elegant dark glass bottle beside fresh green herbs and small vial, marble surface, warm diffused light, minimalist science editorial still life',
 
   'oleocanthal-anti-inflammation-brain-protection':
-    'brain silhouette with anti-inflammation golden shield radiance, oleocanthal molecules forming protective barrier, mediterranean olive branch, dramatic dark background medical fine art',
+    'fresh green olives with olive branch and golden oil drizzle on white linen, anti-inflammatory herbs turmeric rosemary beside, overhead flat lay, natural morning light',
 
   'oleocanthal-pungency-anti-inflammation':
-    'extreme macro fresh green olive cold-pressed, golden-green oil droplet suspended mid-air, molecular pungency concept, dramatic split cinematic lighting, ultra sharp focus',
+    'extreme macro fresh green olive cross-section on dark slate, golden oil droplet emerging from center, shallow depth of field bokeh, natural side light, fine food photography',
 
   'olive-oil-polyphenol-content-how-to-verify':
-    'laboratory glass tubes with golden olive oil samples, polyphenol spectrometer analysis, scientific equipment precision, clean food science photography, clinical white and gold',
+    'premium EVOO bottle with official quality certificate beside it, magnifying glass resting on label, clean white wooden desk, soft window light, authenticity verification still life',
 
   'polyphenol-decay-science-2026':
-    'olive oil bottle with UV light oxidation concept, time-lapse molecular degradation visualization, polyphenol half-life science, amber bottle contrast fresh vs aged',
+    'two identical olive oil bottles side by side, one golden fresh one darker aged, white marble surface, clean window light comparison still life, quality and freshness concept',
 
   '2026-evoo-quality-polyphenol-index':
-    'premium extra virgin olive oil quality certification, molecular polyphenol visualization data overlay, artisan dark glass bottle close-up, precision measurement aesthetic',
+    'single artisan dark glass EVOO bottle with quality seal on white marble, sprig of olive branch, warm side light, minimalist premium product photography, editorial clean',
 
   // ── 品味鑑賞 / Selection ────────────────────────────────────────
   'evoo-sensory-evaluation-ioc-standards':
-    'cobalt blue IOC olive oil tasting glass with golden olive oil, sensory evaluation setup, premium artisan tasting room still life, luxury food photography warm studio light, elegant tableware',
+    'cobalt blue professional olive oil tasting glass filled with golden oil, white linen napkin, tasting notes notebook and pen, warm afternoon light still life, sommelier evaluation setup',
 
   'evoo-buying-guide-2026':
-    'curated premium extra virgin olive oil bottles collection, elegant product display, dark artisan glass bottles row, warm luxury food photography, golden hour light',
+    'three premium extra virgin olive oil bottles on aged wooden shelf, warm kitchen morning light filtering through window, rustic Mediterranean pantry, editorial still life',
 
   'olive-oil-complete-buying-guide-2026':
-    'sophisticated olive oil selection guide, multiple premium EVOO bottles comparison, labels visible, sophisticated retail still life, magazine editorial style',
+    'curated selection of EVOO bottles with visible labels on white marble counter, shopping guide concept, natural diffused light, clean editorial food photography',
 
   'olive-oil-fraud-detection-authentic-vs-fake':
-    'two olive oil bottles comparison authentic vs counterfeit, forensic laboratory concept, magnifying glass revealing molecular truth, dramatic split lighting investigation',
+    'two olive oil bottles on marble, authentic dark glass beside pale suspicious imitation, magnifying glass resting between them, natural side light, investigative still life',
 
   'olive-oil-terroir-spain-greece-italy':
-    'three mediterranean olive grove landscapes panorama, golden sunset over ancient olive trees, terroir concept, travel editorial photography, cinematic wide angle',
+    'three small ceramic bowls with different regional olive oils, terroir concept, Mediterranean tiles background, natural window light overhead, food geography still life',
 
   'olive-oil-vs-avocado-oil-complete-comparison':
-    'side by side premium olive oil and avocado oil bottles, elegant comparison still life, complementary green tones, dark marble surface, food styling editorial',
+    'olive oil and avocado oil bottles side by side on white marble, sliced avocado and fresh olives between them, warm kitchen light, comparison food photography editorial',
 
   'olive-oil-storage-guide-2026':
-    'dark glass olive oil bottle perfect storage environment, cool dim mediterranean cellar, terracotta tile backdrop, preservation concept, moody atmospheric photography',
+    'dark glass olive oil bottle in cool wooden cabinet with terracotta tiles, away from light and heat, Mediterranean kitchen atmosphere, warm but dim ambient light, proper storage scene',
 
-  // ── 新文章（本次 Session 新增）─────────────────────────────────
+  // ── 健康科學 ───────────────────────────────────────────────────
   'olive-oil-cooking-heat-stability-smoke-point':
-    'olive oil golden stream pouring into hot cast iron skillet, smoke point visualization, high temperature cooking science concept, dramatic kitchen photography, fire and steam',
+    'golden olive oil stream pouring into hot cast iron skillet on kitchen stove, steam rising gently, warm kitchen bokeh background, natural cooking photography, editorial food moment',
 
   'olive-oil-grades-classification-complete-guide':
-    'five different grade olive oil bottles elegantly arranged, classification spectrum from extra virgin to pomace, premium product photography, dark stone surface, editorial layout',
+    'four olive oil bottles lined up from premium dark glass to light plastic, grade comparison concept, white marble surface, clean studio light, product classification editorial',
 
   'predimed-study-complete-explainer-olive-oil-heart':
-    'human heart diagram with olive oil molecular protection, PREDIMED research concept visualization, cardiovascular health science, golden molecular shield around anatomical heart',
+    'heart-healthy Mediterranean breakfast spread, EVOO bottle, fresh tomatoes, whole grain bread, olives, nuts on rustic wooden table, warm morning light, diet science editorial',
 
   'olive-oil-shelf-life-oxidation-storage':
-    'olive oil bottle with subtle oxidation concept, before and after quality comparison, molecular decay visualization, calendar time concept, dark dramatic still life',
+    'two olive oil bottles on windowsill, one fresh vibrant gold one oxidized amber, calendar page beside, soft natural light, freshness and time concept still life',
 
   'olive-oil-daily-intake-dosage-science':
-    'precise elegant tablespoon of golden extra virgin olive oil, morning ritual concept, soft morning light, wooden table, minimalist lifestyle food photography, dosage science',
+    'elegant wooden tablespoon filled with golden extra virgin olive oil resting on white linen, morning light casting soft shadow, minimalist dosage ritual photography',
 
   'olive-oil-health-benefits-science-complete':
-    'dynamic body silhouette with seven glowing health benefit zones highlighted, olive branch and molecular structure overlay, comprehensive wellness visualization, dark medical art',
+    'lush Mediterranean breakfast scene: EVOO bottle, fresh olives, green vegetables, almonds, tomatoes, whole grain on white marble, health and vitality editorial flat lay',
 
   // ── 餐桌美學 Lifestyle ─────────────────────────────────────────
   'morning-ritual-evoo-metabolism':
-    'elegant morning ritual tablespoon of golden EVOO, white ceramic spoon soft sunrise light, minimalist lifestyle photography, wooden farmhouse table, fresh rosemary herbs',
+    'morning ritual: white ceramic tablespoon of golden EVOO beside espresso cup on wooden tray, soft sunrise window light, fresh rosemary sprig, minimalist lifestyle photography',
 
   'olive-oil-ancient-egypt-ritual-heritage':
-    'ancient Egyptian alabaster olive oil vessel, hieroglyphic stone wall, golden candlelight archaeological photography, museum-quality historical still life',
+    'ancient alabaster vessel and terracotta amphora with golden oil, dried botanical elements, warm candlelight glow, archaeological museum aesthetic still life, warm amber tones',
 
   'olive-tree-ancient-civilization-heritage':
-    'ancient gnarled millennial olive tree trunk and roots, golden hour dramatic light, Crete or Attica Mediterranean landscape, UNESCO heritage feel, epic wide angle',
+    'ancient gnarled millennial olive tree with massive twisted trunk, golden hour sunlight through silver-green leaves, Mediterranean landscape, wide angle heritage photography',
 
   'olive-oil-renaissance-art-science-history':
-    'Renaissance painting detail with olive oil vessel, Flemish still life aesthetic, Old Master oil lamp, gold-leaf frame fragment, warm chiaroscuro dramatic lighting',
+    'ornate Flemish-style still life with ceramic olive oil flask, dried herbs, old leather-bound books, candlelight on dark wooden table, chiaroscuro Old Master photography',
 
   'olive-oil-silk-road-trade-history':
-    'ancient Silk Road trading amphora olive oil vessel, desert caravan archaeology, weathered terracotta with golden oil, historical documentary photography, warm amber tones',
+    'weathered terracotta amphora with golden olive oil beside ancient map and compass, warm amber light, archaeological documentary photography, historical trading still life',
 
-  // ── 科學萃取 其他 ──────────────────────────────────────────────
+  // ── 美容與生活 ─────────────────────────────────────────────────
   'squalene-olive-oil-skin-beauty-molecular':
-    'squalene molecular structure visualization, olive oil droplets with luminous beauty science concept, cosmetic ingredient macro photography, golden molecular bonds on dark background, premium science editorial',
+    'amber cosmetic vial of olive squalene beside fresh olive sprig on white marble, small green leaves, soft natural light close-up, luxury beauty ingredient still life',
 
   'mediterranean-diet-anti-aging-2026':
-    'mediterranean longevity concept, elegant 40+ lifestyle, olive branches, colorful vegetables, EVOO bottle, golden light, anti-aging healthy living editorial photography',
+    'vibrant Mediterranean longevity food spread: EVOO bottle, colorful vegetables, fresh herbs, olive branch, ceramic bowls on white linen, warm golden natural light flat lay',
 
   'mediterranean-diet-anti-aging-women-2026':
-    'mediterranean woman lifestyle concept, 40+ vitality, olive grove breakfast scene, EVOO morning ritual, warm golden light, female wellness editorial photography',
+    'Mediterranean morning wellness scene: golden olive oil, fresh figs, pomegranate, herbs, ceramic cup on terracotta tile, warm feminine lifestyle editorial photography',
 };
 
 // ── Hero 圖片 Prompts ────────────────────────────────────────────
 const HERO_PROMPTS = {
   homepage:
-    'stunning mediterranean olive grove aerial view at golden hour, rows of silver-green olive trees, warm sunrise light, cinematic landscape photography, premium brand hero image, wide panoramic',
+    'panoramic Mediterranean olive grove at golden hour sunrise, rows of ancient silver-green olive trees stretching to horizon, warm amber light filtering through leaves, wide cinematic landscape photography, serene and majestic',
   blog:
     'elegant mediterranean lifestyle flat lay, premium olive oil bottle, fresh olives on branch, linen textile, warm editorial photography, knowledge and culture concept',
   about:

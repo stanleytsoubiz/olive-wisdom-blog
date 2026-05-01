@@ -37,8 +37,8 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-01T11:04:15.767Z",
-      "generated": 25,
+      "date": "2026-05-01T15:08:39.644Z",
+      "generated": 5,
       "total_articles": 29
     }
   },
@@ -87,7 +87,7 @@
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
-      "prompt": "curated premium extra virgin olive oil bottles collection, elegant product display, dark artisan glass bottles row, warm"
+      "prompt": "three premium extra virgin olive oil bottles on aged wooden shelf, warm kitchen morning light filtering through window, "
     },
     "mediterranean-diet-anti-aging-women-2026": {
       "url": "/images/covers/mediterranean-diet-anti-aging-women-2026.jpg",
@@ -144,7 +144,7 @@
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
-      "prompt": "extreme macro fresh green olive cold-pressed, golden-green oil droplet suspended mid-air, molecular pungency concept, dr"
+      "prompt": "extreme macro fresh green olive cross-section on dark slate, golden oil droplet emerging from center, shallow depth of f"
     },
     "morning-ritual-evoo-metabolism": {
       "url": "/images/covers/morning-ritual-evoo-metabolism.jpg",
@@ -185,15 +185,15 @@
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
-      "prompt": "premium extra virgin olive oil quality certification, molecular polyphenol visualization data overlay, artisan dark glas"
+      "prompt": "single artisan dark glass EVOO bottle with quality seal on white marble, sprig of olive branch, warm side light, minimal"
     },
     "hydroxytyrosol-brain-cognition-2026": {
-      "url": "https://image.pollinations.ai/prompt/neural%20network%20brain%20scan%20glowing%20olive%20green%20gold%20light%2C%20hydroxytyrosol%20molecular%20structure%20overlay%2C%202026%20neuroscience%20research%20visualization%2C%20MRI%20brain%20with%20mediterranean%20olive%20branch%2C%20bioluminescent%20synapse%20photography%2C%20dark%20dramatic%20scientific?width=1200&height=630&model=flux&seed=1002&nologo=true",
-      "alt": "2026 羥基酪醇腦健康科學",
-      "source": "pollinations_ai",
-      "prompt": "neural network brain scan glowing olive green gold light, hydroxytyrosol molecular structure overlay, 2026 neuroscience research, MRI brain visualization, mediterranean olive branch DNA helix, bioluminescent scientific photography",
-      "generated_at": "2026-04-29",
-      "quality_score": 7.5
+      "url": "/images/covers/hydroxytyrosol-brain-cognition-2026.jpg",
+      "alt": "Hydroxytyrosol Brain Cognition 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-01",
+      "quality_score": 9,
+      "prompt": "premium olive oil in elegant dark glass bottle beside fresh green herbs and small vial, marble surface, warm diffused li"
     },
     "mediterranean-diet-anti-aging-2026": {
       "url": "/images/covers/mediterranean-diet-anti-aging-2026.jpg",
@@ -217,7 +217,7 @@
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
-      "prompt": "ancient Egyptian alabaster olive oil vessel, hieroglyphic stone wall, golden candlelight archaeological photography, mus"
+      "prompt": "ancient alabaster vessel and terracotta amphora with golden oil, dried botanical elements, warm candlelight glow, archae"
     },
     "olive-oil-renaissance-art-science-history": {
       "url": "/images/covers/olive-oil-renaissance-art-science-history.jpg",
