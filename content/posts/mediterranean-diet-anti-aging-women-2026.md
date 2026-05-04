@@ -7,7 +7,7 @@ excerpt: "針對 35-55 歲女性族群，地中海飲食在荷爾蒙平衡、骨
 coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/4e13ed9b8d55434daf1db0fe2d809af1_7e605.png"
 author: "知橄生活研究團隊"
 readTime: 7
-tags: ["地中海飲食", "女性健康", "抗衰老", "荷爾蒙", "骨質疏鬆"]
+tags: ["地中海飲食", "女性健康", "抗衰老", "荷爾蒙"]
 sources:
   - "SWAN Study (Study of Women's Health Across the Nation)"
   - "Annals of Internal Medicine, 2023"

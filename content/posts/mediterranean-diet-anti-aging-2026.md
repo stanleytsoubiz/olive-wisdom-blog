@@ -6,10 +6,17 @@ excerpt: "地中海飲食不僅僅是關於橄欖油。本手冊教您如何在 
 category: "lifestyle"
 author: "知橄生活 編輯部"
 readTime: 10
-tags: ["地中海飲食", "抗老", "橄欖油", "2026 指南", "細胞健康"]
+tags: ["地中海飲食", "抗老", "橄欖油", "2026 指南"]
 focusKeyword: "地中海飲食抗老"
 coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&auto=format&fit=crop&q=80"
 coverAlt: "色彩豐富的地中海風格餐盤，橄欖油、蔬菜與魚類的健康組合"
+sources:
+  - "Estruch, R. et al. (2013). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet. New England Journal of Medicine, 368:1279-1290. https://doi.org/10.1056/NEJMoa1200303"
+  - "Boccardi, V. et al. (2021). Modulation of Telomere Length by Mediterranean Diet, Caloric Restriction, and Exercise: Results from PREDIMED-Plus Study. Antioxidants, 10(10):1596. https://pubmed.ncbi.nlm.nih.gov/34679731/"
+  - "Canudas, S. et al. (2020). Mediterranean Diet and Telomere Length: A Systematic Review and Meta-Analysis. Advances in Nutrition, 11(6):1544-1554. https://pmc.ncbi.nlm.nih.gov/articles/PMC7666892/"
+  - "Caruso, D. et al. (2023). Hydroxytyrosol Interference with Inflammaging via Modulation of Inflammation and Autophagy. Nutrients, 15(4):1070. https://pmc.ncbi.nlm.nih.gov/articles/PMC10096543/"
+  - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033."
+  - "European Commission (2012). Commission Regulation (EU) No 432/2012. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
 faq:
   - q: "地中海飲食最核心的抗老機制是什麼？"
     a: "地中海飲食的抗老效果來自三個協同機制：(1) 端粒保護——多酚和 Omega-3 脂肪酸透過抑制慢性炎症（Inflammaging），減緩端粒縮短速率，而端粒長度是細胞老化的直接指標；(2) 粒線體功能維護——橄欖油多酚激活 SIRT1/AMPK 通路，改善細胞能量代謝效率；(3) 腸道菌相優化——高纖維、多酚豐富的飲食結構維持腸道健康菌群，而腸道菌相與系統性炎症、免疫功能和心理健康均有密切關聯。"
@@ -31,7 +38,7 @@ faq:
 
 端粒（Telomere）是染色體末端的保護帽，每次細胞分裂都會縮短一段。端粒長度是目前最直接的細胞生物年齡指標。
 
-西班牙 PREDIMED-Plus 研究（2020）追蹤 1,983 名受試者的端粒長度，發現嚴格遵循地中海飲食模式的群體，五年後端粒縮短速率比對照組慢 **28%**。機制在於：Omega-3 脂肪酸和橄欖多酚透過抑制慢性低度炎症（Inflammaging），減少每次細胞分裂時的氧化損傷，從而保護端粒。
+PREDIMED-Plus 研究（Boccardi et al., 2021）探討地中海飲食、熱量限制與運動對端粒長度的影響，是目前最具規模的飲食介入端粒研究之一。研究結果顯示，地中海飲食模式對端粒縮短具有保護趨勢；另一項系統性回顧與統合分析（Canudas et al., 2020，納入 14 項研究）確認較高的地中海飲食依從性與較長的端粒長度之間呈正相關。機制在於：Omega-3 脂肪酸和橄欖多酚透過抑制慢性低度炎症（Inflammaging），減少每次細胞分裂時的氧化損傷，從而保護端粒。
 
 ### 機制二：粒線體功能維護（細胞能量引擎）
 

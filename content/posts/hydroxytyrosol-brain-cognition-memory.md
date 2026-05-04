@@ -4,7 +4,7 @@ slug: "hydroxytyrosol-brain-cognition-memory"
 date: "2026-04-02"
 author: "知橄生活研究團隊"
 category: "science"
-tags: ["科學萃取", "羥基酪醇", "Hydroxytyrosol", "大腦認知", "記憶力", "神經保護"]
+tags: ["科學萃取", "羥基酪醇", "Hydroxytyrosol", "大腦認知"]
 excerpt: "橄欖油中含量最豐富的多酚——羥基酪醇（Hydroxytyrosol），其抗氧化力是維生素C的15倍。最新神經科學研究揭示，它能穿越血腦屏障，直接保護神經元，是您認知能力最忠實的分子夥伴。"
 coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/652adb38b9734a52bb8924925390f29d_3ef5f.png"
 readTime: 8

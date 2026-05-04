@@ -4,7 +4,7 @@ slug: "oleocanthal-anti-inflammation-brain-protection"
 date: "2026-04-05"
 author: "知橄生活研究團隊"
 category: "science"
-tags: ["科學萃取", "油橄欖醛", "Oleocanthal", "抗炎", "大腦健康", "阿茲海默症"]
+tags: ["科學萃取", "油橄欖醛", "Oleocanthal", "抗炎"]
 excerpt: "當您吞嚥優質橄欖油時，喉嚨深處那道辛辣感不是品質缺陷，而是油橄欖醛（Oleocanthal）正在執行任務的信號。最新神經科學研究揭示，這個分子可能是您大腦最強力的天然抗炎盾牌。"
 coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/0b12fe98ad674377bb5c6294cd09f2fc_d1c42.png"
 readTime: 8

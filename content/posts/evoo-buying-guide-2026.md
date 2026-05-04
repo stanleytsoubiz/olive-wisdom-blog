@@ -7,9 +7,16 @@ category: "science"
 coverImage: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80"
 author: "Olive Wisdom Editorial"
 readTime: 10
-tags: ["EVOO", "Polyphenols", "Buying Guide", "IOC Standards", "2026 Trends"]
+tags: ["EVOO", "Polyphenols", "Buying Guide", "IOC Standards"]
 focusKeyword: "EVOO buying guide 2026"
 coverAlt: "High-polyphenol extra virgin olive oil being poured into a tasting glass against natural light"
+sources:
+  - "European Commission (2012). Commission Regulation (EU) No 432/2012 establishing a list of permitted health claims made on foods. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
+  - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
+  - "International Olive Council (IOC). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 17 — 2019. https://www.internationaloliveoil.org/"
+  - "Aparicio, R. & Harwood, J. (Eds.). (2013). Handbook of Olive Oil: Analysis and Properties (2nd ed.). Springer. [Polyphenol decay rates and packaging retention data]"
+  - "Cicerale, S. et al. (2010). Biological Activities of Phenolic Compounds Present in Virgin Olive Oil. International Journal of Molecular Sciences, 11(2):458–479. https://doi.org/10.3390/ijms11020458"
+  - "Beauchamp, G.K. et al. (2005). Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil. Nature, 437:45–46. https://doi.org/10.1038/437045a"
 faq:
   - q: "What is the minimum polyphenol content I should look for in EVOO?"
     a: "According to EFSA health claim standards, EVOO needs to contain at least 250mg/kg total polyphenols to deliver measurable cardiovascular protection (specifically 5mg/day of hydroxytyrosol and its derivatives). However, for maximum benefit, look for oils with 400-800mg/kg. Top-tier oils certified by NYIOOC Gold Award winners often exceed 500mg/kg. Always request a Certificate of Analysis (CoA) from the supplier to verify polyphenol content before purchasing."

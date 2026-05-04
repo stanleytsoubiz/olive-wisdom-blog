@@ -4,7 +4,7 @@ slug: "olive-oil-daily-intake-dosage-science"
 date: "2026-05-01"
 author: "知橄生活研究團隊"
 category: "health"
-tags: ["品味鑑賞", "橄欖油攝取量", "地中海飲食", "每日劑量", "EFSA", "科學實證"]
+tags: ["品味鑑賞", "橄欖油攝取量", "地中海飲食", "每日劑量"]
 excerpt: "「每天要喝多少橄欖油才有效？」是橄欖油消費者最常提出的問題之一。本文從 EFSA 官方健康聲稱、PREDIMED 研究設計、酚類化合物最低有效劑量三個角度，給出一個有科學依據的答案——以及如何將橄欖油科學地融入日常飲食的實用策略。"
 coverImage: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80"
 readTime: 9

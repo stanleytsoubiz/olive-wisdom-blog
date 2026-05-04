@@ -4,7 +4,7 @@ slug: "olive-oil-polyphenol-content-how-to-verify"
 date: "2026-04-11"
 author: "知橄生活研究團隊"
 category: "selection"
-tags: ["品味鑑賞", "多酚含量", "橄欖油選購", "EFSA認證", "羥基酪醇"]
+tags: ["品味鑑賞", "多酚含量", "橄欖油選購", "EFSA認證"]
 excerpt: "EFSA 規定每日 5mg 羥基酪醇可保護 LDL 免受氧化，但市面上 90% 的橄欖油標籤根本不標示多酚含量。這篇文章教您用三個方法，在沒有數據的情況下做出聰明選擇。"
 coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/acd68586463e4e9e8717cee51f43ba5e_2c82d.png"
 readTime: 8

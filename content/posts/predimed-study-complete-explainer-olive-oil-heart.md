@@ -4,7 +4,7 @@ slug: "predimed-study-complete-explainer-olive-oil-heart"
 date: "2026-05-01"
 author: "知橄生活研究團隊"
 category: "science"
-tags: ["科學萃取", "PREDIMED研究", "地中海飲食", "心血管健康", "橄欖油科學", "隨機對照試驗", "多酚"]
+tags: ["科學萃取", "PREDIMED研究", "地中海飲食", "心血管健康"]
 excerpt: "2013 年，PREDIMED（地中海飲食心血管預防研究）發表於《新英格蘭醫學期刊》，結論震驚醫學界：補充橄欖油的地中海飲食組，心血管事件發生率降低 30%。這項研究為何如此重要？它的方法論是什麼？後來的爭議與修正又說明了什麼？"
 coverImage: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=1200&auto=format&fit=crop&q=80"
 readTime: 13

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getAllPosts } from '@/lib/posts';
 import { getImages, getHeroImage } from '@/lib/images';
 import SubscribeForm from '@/components/SubscribeForm';
-import ContactForm from '@/components/ContactForm';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -294,18 +293,19 @@ export default async function HomePage() {
         <p className="text-gray-500 mb-8 max-w-lg mx-auto">
           每週一封，精選最新橄欖油研究、地中海生活美學靈感，直送您的信箱。<br />
           訂閱即贈《橄欖油品飲師口袋手冊》PDF。<br />
-          <span className="text-olive-600 font-medium">已有 8,000+ 知性讀者每週與我們一同探索橄欖智慧 🫒</span>
+          <span className="text-olive-600 font-medium">持續成長的知性讀者社群，每週與我們一同探索橄欖智慧</span>
         </p>
         <SubscribeForm />
       </section>
 
-      {/* 聯絡 */}
-      <section className="max-w-2xl mx-auto py-20 px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-olive-800 mb-3">聯絡知橄生活</h2>
-          <p className="text-gray-500">有合作提案、讀者迴響或問題，歡迎與我們聯繫</p>
-        </div>
-        <ContactForm />
+      {/* 聯絡入口 */}
+      <section className="py-10 px-6 text-center border-t border-stone-100">
+        <p className="text-sm font-sans text-stone-400">
+          有合作提案或讀者迴響？
+          <a href="/contact" className="text-olive-600 hover:text-olive-800 underline underline-offset-4 ml-1 transition-colors">
+            聯絡我們
+          </a>
+        </p>
       </section>
     </main>
   );

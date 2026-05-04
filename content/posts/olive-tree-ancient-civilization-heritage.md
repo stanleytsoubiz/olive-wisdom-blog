@@ -4,7 +4,7 @@ slug: "olive-tree-ancient-civilization-heritage"
 date: "2026-04-08"
 author: "知橄生活研究團隊"
 category: "heritage"
-tags: ["知性史詩", "橄欖文明", "地中海歷史", "古希臘", "文化遺產"]
+tags: ["知性史詩", "橄欖文明", "地中海歷史", "古希臘"]
 excerpt: "在克里特島的高地，一棵樹齡逾三千年的橄欖古木至今仍在結果。它不只是植物學奇蹟，更是人類最早對健康、美學與神聖的集體選擇——那個選擇，一直延續到您今日的餐桌。"
 coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/7c6e503d6ec349d6aa0aa91b5e992216_9be28.png"
 readTime: 9
