@@ -63,8 +63,8 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
 
       {/* ── Floating TOC button + slide-up drawer (all screens) ── */}
       <div>
-        {/* Floating TOC button — appears after scrolling 5%, all screens */}
-        {progress > 5 && (
+        {/* Floating TOC button — appears after scrolling 20%, all screens */}
+        {progress > 20 && (
           <button
             onClick={() => setMobileOpen(true)}
             className="fixed bottom-20 right-4 md:bottom-8 md:right-6 z-40
