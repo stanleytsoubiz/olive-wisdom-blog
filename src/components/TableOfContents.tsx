@@ -67,7 +67,8 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
         {progress > 20 && (
           <button
             onClick={() => setMobileOpen(true)}
-            className="fixed bottom-20 right-4 md:bottom-8 md:right-6 z-40
+            style={{ bottom: 'calc(80px + env(safe-area-inset-bottom))' }}
+            className="fixed right-4 md:right-6 z-40
                        bg-olive-700 text-white rounded-full
                        w-11 h-11 flex items-center justify-center
                        shadow-lg shadow-olive-900/20

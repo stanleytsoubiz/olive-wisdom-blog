@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import BottomNav from '@/components/BottomNav';
 import SubscribeForm from '@/components/SubscribeForm';
+import ScrollHeader from '@/components/ScrollHeader';
+import MobileMenu from '@/components/MobileMenu';
 import { getAllPosts } from '@/lib/posts';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import './globals.css';
@@ -118,7 +120,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className={`bg-[#FAF8F4] text-[#2C2416] font-sans antialiased min-h-screen flex flex-col ${notoSerifTC.variable} ${notoSansTC.variable}`}>
         {/* Global Header */}
-        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-olive-100 shadow-sm" data-pagefind-ignore>
+        <ScrollHeader>
           <div className="max-w-6xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
@@ -169,9 +171,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               訂閱專欄
             </Link>
 
-            {/* Mobile: logo already on left, nothing extra needed — BottomNav handles navigation */}
+            {/* Mobile hamburger menu */}
+            <MobileMenu />
           </div>
-        </header>
+        </ScrollHeader>
 
         {/* Page Content — add bottom padding on mobile for BottomNav */}
         <div className="flex-1 pb-[60px] md:pb-0" style={{ paddingBottom: 'max(60px, calc(60px + env(safe-area-inset-bottom)))' }}>
