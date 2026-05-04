@@ -58,60 +58,18 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
         />
       </div>
 
-      {/* ── Desktop TOC — sidebar (lg+) ────────────────────────── */}
-      <nav
-        aria-label="文章目錄"
-        className="hidden lg:block fixed top-24 right-6 xl:right-8 w-52 xl:w-56
-                   bg-white/92 backdrop-blur-md border border-olive-100
-                   rounded-2xl p-5 shadow-sm
-                   max-h-[calc(100vh-120px)] overflow-y-auto
-                   scrollbar-thin scrollbar-thumb-olive-200"
-      >
-        <p className="text-[10px] text-olive-500 font-sans font-semibold tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
-          <span className="w-4 h-px bg-olive-300 inline-block" />
-          文章目錄
-        </p>
-        <ul className="space-y-1">
-          {toc.map((item) => (
-            <li key={item.id} style={{ paddingLeft: item.level === 3 ? '10px' : '0' }}>
-              <button
-                onClick={() => handleTocClick(item.id)}
-                className={`w-full text-left text-[11px] leading-snug py-1 px-2 rounded-lg transition-all duration-150 cursor-pointer
-                  ${active === item.id
-                    ? 'text-olive-700 font-semibold bg-olive-50'
-                    : 'text-gray-400 hover:text-olive-600 hover:bg-olive-50/50'
-                  }`}
-              >
-                {item.level === 3 && <span className="text-olive-300 mr-1 text-[9px]">└</span>}
-                {item.text.slice(0, 34)}{item.text.length > 34 ? '…' : ''}
-              </button>
-            </li>
-          ))}
-        </ul>
-        {/* Mini progress indicator */}
-        <div className="mt-4 pt-3 border-t border-olive-100">
-          <div className="flex items-center justify-between text-[10px] text-olive-400 mb-1">
-            <span>閱讀進度</span>
-            <span>{Math.round(progress)}%</span>
-          </div>
-          <div className="h-1 bg-olive-100 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-gradient-to-r from-olive-500 to-gold-400 transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-        </div>
-      </nav>
+      {/* ── Desktop TOC sidebar removed — Kinfolk editorial style ── */}
+      {/* 桌機不顯示固定側邊欄，避免遮蓋正文。改用全螢幕浮動按鈕模式。 */}
 
-      {/* ── Mobile TOC — floating button + slide-up drawer ──────── */}
-      <div className="lg:hidden">
-        {/* Floating TOC button — appears after scrolling 5% */}
+      {/* ── Floating TOC button + slide-up drawer (all screens) ── */}
+      <div>
+        {/* Floating TOC button — appears after scrolling 5%, all screens */}
         {progress > 5 && (
           <button
             onClick={() => setMobileOpen(true)}
-            className="fixed bottom-20 right-4 z-40
+            className="fixed bottom-20 right-4 md:bottom-8 md:right-6 z-40
                        bg-olive-700 text-white rounded-full
-                       w-12 h-12 flex items-center justify-center
+                       w-11 h-11 flex items-center justify-center
                        shadow-lg shadow-olive-900/20
                        transition-all duration-200 hover:bg-olive-800 active:scale-95"
             aria-label="開啟文章目錄"
