@@ -175,7 +175,7 @@ function markdownToHtml(md: string): string {
 
     // Paragraph
     closeList(); closeTable(); closeBlockquote();
-    result.push(`<p class="text-gray-700 leading-[1.875] mb-5 text-[1.125rem]">${inline(line)}</p>`);
+    result.push(`<p class="text-gray-700 leading-[1.85] mb-5">${inline(line)}</p>`);
   }
 
   closeList(); closeTable(); closeBlockquote();
@@ -340,7 +340,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ── Article Header — clean editorial above image ─────── */}
       <div className="border-b border-stone-100 bg-white">
-        <div className="max-w-[740px] mx-auto px-6 pt-10 pb-8">
+        <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-10 pb-8">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-[11px] font-sans text-stone-400 tracking-wide mb-6">
             <Link href="/" className="hover:text-olive-600 transition-colors">首頁</Link>

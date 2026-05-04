@@ -5,13 +5,13 @@
 :root {
   --olive-primary: #4a5824;
   --gold-accent:   #c4a96a;
-  --ink:           #1a1a1a;
-  --muted:         #6b7280;
-  --surface:       #fafaf7;
+  --ink:           #2C2416;
+  --muted:         #6B5E4E;
+  --surface:       #FAF8F4;
 }
 
 body {
-  font-family: var(--font-serif), Georgia, Cambria, 'Times New Roman', serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif;
   color: var(--ink);
 }
 .font-sans {
@@ -63,14 +63,24 @@ body {
 
 /* ── prose-custom: Article body base (used in blog/[slug]/page.tsx) ── */
 .prose-custom {
-  font-size: 1.125rem;   /* 18px */
-  line-height: 1.875;
+  font-size: 1.0625rem;   /* 17px mobile-first */
+  line-height: 1.85;
   color: #374151;
 }
 .prose-custom p {
   margin-bottom: 1.25rem;
-  font-size: 1.125rem;
-  line-height: 1.875;
+  font-size: 1.0625rem;   /* 17px */
+  line-height: 1.85;
+}
+@media (min-width: 768px) {
+  .prose-custom {
+    font-size: 1.125rem;  /* 18px desktop */
+    line-height: 1.875;
+  }
+  .prose-custom p {
+    font-size: 1.125rem;
+    line-height: 1.875;
+  }
 }
 .prose-custom h2 {
   font-size: 1.5rem;

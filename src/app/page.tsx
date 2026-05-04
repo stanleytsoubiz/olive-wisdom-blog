@@ -106,7 +106,7 @@ export default async function HomePage() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent" />
 
         {/* Kinfolk-style bottom-anchored headline */}
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 md:pb-14">
+        <div className="absolute bottom-0 left-0 right-0 px-5 md:px-6 pb-10 md:pb-14">
           <div className="max-w-5xl mx-auto">
             <p className="text-gold-400 text-[11px] font-sans font-semibold tracking-[0.35em] uppercase mb-4">
               以科學與美學，精煉您的健康時光
@@ -140,7 +140,7 @@ export default async function HomePage() {
 
       {/* ── 意圖入口導航 — "我想找什麼" ────────────────────────── */}
       <section id="intent" className="bg-white border-b border-stone-100">
-        <div className="max-w-5xl mx-auto px-6 py-12">
+        <div className="max-w-5xl mx-auto px-5 md:px-6 py-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-stone-200" />
             <p className="text-xs font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase whitespace-nowrap">
@@ -174,7 +174,7 @@ export default async function HomePage() {
 
       {/* ── 精選知識 — Kinfolk Editorial Layout ─────────────────── */}
       {latestPosts.length > 0 && (
-        <section className="bg-[#fafaf7] py-20 px-6">
+        <section className="bg-[#FAF8F4] py-16 px-5 md:px-6">
           <div className="max-w-5xl mx-auto">
 
             {/* Section header — minimal editorial */}
