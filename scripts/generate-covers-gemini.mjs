@@ -157,6 +157,14 @@ const COVER_PROMPTS = {
 
   'mediterranean-diet-anti-aging-women-2026':
     'Mediterranean morning wellness scene: golden olive oil, fresh figs, pomegranate, herbs, ceramic cup on terracotta tile, warm feminine lifestyle editorial photography',
+
+  // ── 料理應用 ───────────────────────────────────────────────────
+  'olive-oil-cooking-science-can-evoo-stir-fry':
+    'cast iron skillet with golden olive oil shimmering on wooden kitchen surface, fresh garlic cloves and rosemary sprig beside, warm morning window light from side, Mediterranean home cooking still life, editorial food photography, no smoke no fire',
+
+  // ── 認證指南 ───────────────────────────────────────────────────
+  'olive-oil-pdo-dop-igp-certification-guide':
+    'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',
 };
 
 // ── Hero 圖片 Prompts ────────────────────────────────────────────

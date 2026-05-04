@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "lastUpdated": "2026-05-01",
+    "lastUpdated": "2026-05-04",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-01T15:08:39.644Z",
-      "generated": 5,
-      "total_articles": 29
+      "date": "2026-05-04T14:28:05.601Z",
+      "generated": 1,
+      "total_articles": 31
     }
   },
   "hero": {
@@ -295,17 +295,33 @@
       "url": "/images/covers/olive-oil-shelf-life-oxidation-storage.jpg",
       "alt": "Olive Oil Shelf Life Oxidation Storage",
       "source": "google_imagen4",
-      "generated_at": "2026-05-01",
+      "generated_at": "2026-05-04",
       "quality_score": 9,
-      "prompt": "olive oil bottle with subtle oxidation concept, before and after quality comparison, molecular decay visualization, cale"
+      "prompt": "two olive oil bottles on windowsill, one fresh vibrant gold one oxidized amber, calendar page beside, soft natural light"
     },
     "predimed-study-complete-explainer-olive-oil-heart": {
       "url": "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jpg",
       "alt": "Predimed Study Complete Explainer Olive Oil Heart",
       "source": "google_imagen4",
-      "generated_at": "2026-05-01",
+      "generated_at": "2026-05-04",
       "quality_score": 9,
-      "prompt": "human heart diagram with olive oil molecular protection, PREDIMED research concept visualization, cardiovascular health "
+      "prompt": "heart-healthy Mediterranean breakfast spread, EVOO bottle, fresh tomatoes, whole grain bread, olives, nuts on rustic woo"
+    },
+    "olive-oil-cooking-science-can-evoo-stir-fry": {
+      "url": "/images/covers/olive-oil-cooking-science-can-evoo-stir-fry.jpg",
+      "alt": "Olive Oil Cooking Science Can Evoo Stir Fry",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-04",
+      "quality_score": 9,
+      "prompt": "cast iron skillet with golden olive oil shimmering on wooden kitchen surface, fresh garlic cloves and rosemary sprig bes"
+    },
+    "olive-oil-pdo-dop-igp-certification-guide": {
+      "url": "/images/covers/olive-oil-pdo-dop-igp-certification-guide.jpg",
+      "alt": "Olive Oil Pdo Dop Igp Certification Guide",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-04",
+      "quality_score": 9,
+      "prompt": "three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracott"
     }
   },
   "fallback": {
