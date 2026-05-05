@@ -179,6 +179,16 @@ const COVER_PROMPTS = {
   'olive-oil-evoo-vs-regular-complete-comparison':
     'two premium olive oil bottles side by side on aged marble — one dark glass labeled extra virgin, one lighter — split composition with warm afternoon light, quality comparison editorial concept, Mediterranean kitchen backdrop, Kinfolk photography style, no text',
 
+  // ── 新文章 2026-05-05 ──────────────────────────────────────────
+  'olive-oil-weight-loss-science':
+    'fresh Mediterranean salad bowl with arugula, cherry tomatoes, and a generous drizzle of golden extra virgin olive oil, white ceramic bowl on aged marble surface, soft natural light, healthy Mediterranean lifestyle editorial, Kinfolk food photography style, no text',
+
+  'olive-oil-after-opening-shelf-life':
+    'half-opened premium dark glass olive oil bottle on warm wooden kitchen windowsill, soft afternoon light, subtle oxidation concept, Mediterranean kitchen atmosphere, Kinfolk editorial still life, muted earth tones, no text',
+
+  'olive-oil-calories-fatty-acid-composition':
+    'wooden measuring spoon filled with golden extra virgin olive oil beside a small scientific notebook showing molecular diagrams, clean white marble surface, warm diffused light, nutrition science editorial concept, Kinfolk minimalist style, no text',
+
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',

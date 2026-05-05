@@ -1,5 +1,24 @@
 [
   {
+    "title": "橄欖油開封後可以放多久？避免氧化的黃金保存法則",
+    "slug": "olive-oil-after-opening-shelf-life",
+    "date": "2026-05-05",
+    "excerpt": "橄欖油開封後暴露於空氣中，氧化速度加快。IOC 建議開封後 3–6 個月內用完，容量選擇也直接影響新鮮度。五感判斷法教你識別已氧化的油。",
+    "category": "guide",
+    "coverImage": "/images/covers/olive-oil-after-opening-shelf-life.jpg",
+    "author": "知橄生活編輯團隊",
+    "readTime": 7,
+    "tags": [
+      "橄欖油開封後",
+      "橄欖油保存",
+      "橄欖油氧化",
+      "橄欖油新鮮度",
+      "特級初榨橄欖油"
+    ],
+    "focusKeyword": "橄欖油開封後",
+    "coverAlt": "半開的橄欖油深色玻璃瓶，廚房窗台，溫暖午後光線"
+  },
+  {
     "title": "橄欖油苦澀辣口是好是壞？感官評鑑的科學解釋",
     "slug": "olive-oil-bitterness-pungency-quality-guide",
     "date": "2026-05-05",
@@ -43,6 +62,26 @@
         "a": "IOC 感官評分系統將苦味和辛辣感以 0–10 的強度分為三級：Robust（強，>6.0）、Medium（中，3.0–6.0）、Delicate（淡，<3.0）。品質良好的特級初榨橄欖油至少應有輕微的苦辣感；完全沒有苦辣感的「溫和」橄欖油，多酚含量通常偏低，新鮮度或果實成熟度值得留意。"
       }
     ]
+  },
+  {
+    "title": "橄欖油熱量多少？脂肪酸組成與每日用量的完整計算指南",
+    "slug": "olive-oil-calories-fatty-acid-composition",
+    "date": "2026-05-05",
+    "excerpt": "橄欖油每 15ml 約 120 大卡，含 73% 油酸（MUFA）。IOC 規範油酸 ≥55%，USDA 數據完整解析脂肪酸組成。附料理用量換算表與每日熱量計算框架。",
+    "category": "health",
+    "coverImage": "/images/covers/olive-oil-calories-fatty-acid-composition.jpg",
+    "author": "知橄生活編輯團隊",
+    "readTime": 7,
+    "tags": [
+      "橄欖油熱量",
+      "橄欖油卡路里",
+      "脂肪酸組成",
+      "MUFA",
+      "特級初榨橄欖油",
+      "料理換算"
+    ],
+    "focusKeyword": "橄欖油熱量",
+    "coverAlt": "木製量匙盛著金色橄欖油，旁邊有熱量計算本，白色背景"
   },
   {
     "title": "橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略",
@@ -95,7 +134,7 @@
     "category": "guide",
     "coverImage": "/images/covers/olive-oil-evoo-vs-regular-complete-comparison.jpg",
     "author": "知橄生活編輯團隊",
-    "readTime": 16,
+    "readTime": 17,
     "tags": [],
     "focusKeyword": "",
     "coverAlt": "特級初榨橄欖油和一般橄欖油到底差在哪裡？IOC 標準全解析"
@@ -173,6 +212,26 @@
         "a": "兩者在遮光效果上相當，密封完整的鐵罐甚至優於玻璃瓶（完全不透光）。重要的是，無論哪種容器，使用後都要立刻旋緊瓶蓋，避免空氣殘留在瓶內加速氧化。"
       }
     ]
+  },
+  {
+    "title": "橄欖油真的能幫助減肥嗎？油酸、飽足感與代謝的科學解析",
+    "slug": "olive-oil-weight-loss-science",
+    "date": "2026-05-05",
+    "excerpt": "橄欖油不是減肥食品，但 MUFA 確實影響飽足感荷爾蒙 GLP-1 與 PYY。PREDIMED 數據顯示地中海飲食組體重管理優於低脂組，科學解析背後機制。",
+    "category": "health",
+    "coverImage": "/images/covers/olive-oil-weight-loss-science.jpg",
+    "author": "知橄生活編輯團隊",
+    "readTime": 8,
+    "tags": [
+      "橄欖油減肥",
+      "MUFA",
+      "飽足感",
+      "地中海飲食",
+      "體重管理",
+      "GLP-1"
+    ],
+    "focusKeyword": "橄欖油減肥",
+    "coverAlt": "白色餐盤上的沙拉淋上橄欖油，清晨光線，極簡健康感"
   },
   {
     "title": "橄欖油料理全科學：特級初榨到底能不能炒菜？",
