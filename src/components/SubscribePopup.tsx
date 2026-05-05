@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { trackSubscribe } from '@/components/GoogleAnalytics';
 
 const SUPABASE_URL  = process.env.NEXT_PUBLIC_SUPABASE_URL  || '';
 const SUPABASE_ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -62,6 +63,7 @@ export default function SubscribePopup() {
       if (res.ok || res.status === 201 || res.status === 204) {
         setStatus('success');
         setMessage('訂閱成功！下期週報見 🫒');
+        trackSubscribe('popup');
       } else if (res.status === 409) {
         setStatus('success');
         setMessage('您已是知橄週報訂閱者 🫒');

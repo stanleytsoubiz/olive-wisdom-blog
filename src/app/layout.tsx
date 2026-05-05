@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SubscribeForm from '@/components/SubscribeForm';
 import ScrollHeader from '@/components/ScrollHeader';
 import MobileMenu from '@/components/MobileMenu';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { getAllPosts } from '@/lib/posts';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import './globals.css';
@@ -117,6 +118,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           }}
         />
       </head>
+      <GoogleAnalytics />
       <body className={`bg-[#FAF8F4] text-[#2C2416] font-sans antialiased min-h-screen flex flex-col ${notoSerifTC.variable} ${notoSansTC.variable}`}>
         {/* Global Header */}
         <ScrollHeader>
