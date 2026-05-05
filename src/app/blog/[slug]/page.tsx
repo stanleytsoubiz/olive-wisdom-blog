@@ -230,7 +230,10 @@ export default async function BlogPostPage({ params }: Props) {
             description: post.excerpt,
             image: {
               '@type': 'ImageObject',
-              url: post.coverImage,
+              url: (() => {
+                const raw = coverImageUrl || post.coverImage || '';
+                return raw.startsWith('http') ? raw : `https://olive-wisdom.com${raw}`;
+              })(),
               caption: `${post.title} — 知橄生活 Olive Wisdom`,
             },
             datePublished: post.date,
