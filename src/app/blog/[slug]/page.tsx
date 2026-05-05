@@ -110,7 +110,7 @@ function markdownToHtml(md: string): string {
       closeList(); closeTable(); closeBlockquote();
       const _h2t = line.replace(/^## /, '');
       const _h2id = 'h-' + _h2t.replace(/[^\w\u4e00-\u9fff]/g,'').slice(0,20).toLowerCase() + '-' + result.length;
-      result.push(`<h2 id="${_h2id}" class="text-2xl font-bold text-olive-800 mt-12 mb-4 pb-2 border-b-2 border-olive-200">${inline(_h2t)}</h2>`);
+      result.push(`<h2 id="${_h2id}" class="text-2xl font-bold text-olive-800 mt-12 mb-4">${inline(_h2t)}</h2>`);
       continue;
     }
     if (/^# (.+)$/.test(line)) {
@@ -131,7 +131,7 @@ function markdownToHtml(md: string): string {
     if (/^> (.+)$/.test(line)) {
       closeList(); closeTable();
       if (!inBlockquote) {
-        result.push('<blockquote class="border-l-4 border-olive-400 bg-olive-50 pl-5 pr-4 py-3 rounded-r-xl my-6 italic text-gray-600">');
+        result.push('<blockquote class="border-l-[3px] border-gold-400 pl-6 my-8 italic text-olive-900 text-[1.125rem] leading-[1.75]">');
         inBlockquote = true;
       }
       result.push(`<p class="mb-1">${inline(line.replace(/^> /, ''))}</p>`);
@@ -161,7 +161,7 @@ function markdownToHtml(md: string): string {
     if (/^[-*+] (.+)$/.test(line)) {
       closeTable(); closeBlockquote();
       if (!inList) { result.push('<ul class="list-none space-y-2 my-4 pl-4">'); inList = true; }
-      result.push(`<li class="flex gap-2 text-gray-700 leading-relaxed"><span class="text-olive-500 mt-1 shrink-0">✦</span><span>${inline(line.replace(/^[-*+] /, ''))}</span></li>`);
+      result.push(`<li class="flex gap-2 text-gray-700 leading-relaxed"><span class="text-olive-400 mt-1 shrink-0 select-none">·</span><span>${inline(line.replace(/^[-*+] /, ''))}</span></li>`);
       continue;
     }
 
@@ -341,35 +341,20 @@ export default async function BlogPostPage({ params }: Props) {
         />
       )}
 
-      {/* ── Article Header — clean editorial above image ─────── */}
-      <div className="border-b border-stone-100 bg-white">
-        <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-10 pb-8">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-[11px] font-sans text-stone-400 tracking-wide mb-6">
-            <Link href="/" className="hover:text-olive-600 transition-colors">首頁</Link>
-            <span>/</span>
-            <Link href="/blog" className="hover:text-olive-600 transition-colors">知識庫</Link>
-            <span>/</span>
-            <span className={`font-semibold ${catInfo.accentColor ?? 'text-olive-600'}`}>{catInfo.label}</span>
-          </nav>
-          {/* Title */}
-          <h1 className="text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-5 max-w-[640px]">
-            {post.title}
-          </h1>
-          {/* Byline */}
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] font-sans text-stone-500 border-t border-stone-100 pt-5">
-            <span className="font-medium text-olive-700">{post.author || '知橄生活研究團隊'}</span>
-            <span className="text-stone-300">|</span>
-            <span>{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-            <span className="text-stone-300">|</span>
-            <span>{post.readTime} 分鐘閱讀</span>
-          </div>
-        </div>
+      {/* Breadcrumb — minimal strip above hero */}
+      <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-6">
+        <nav className="flex items-center gap-2 text-[11px] font-sans text-stone-400 tracking-wide">
+          <Link href="/" className="hover:text-olive-600 transition-colors">首頁</Link>
+          <span>/</span>
+          <Link href="/blog" className="hover:text-olive-600 transition-colors">知識庫</Link>
+          <span>/</span>
+          <span className={`font-semibold ${catInfo.accentColor ?? 'text-olive-600'}`}>{catInfo.label}</span>
+        </nav>
       </div>
 
-      {/* Cover Image — full-width, no text overlay */}
+      {/* Cover Image — full-bleed, Kinfolk: image first, title below */}
       {coverImageUrl && (
-        <div className="relative aspect-video md:aspect-auto md:h-[460px] w-full bg-stone-100">
+        <div className="relative w-full aspect-[16/9] md:aspect-auto md:h-[520px] bg-stone-100 mt-4">
           <Image
             src={coverImageUrl}
             alt={post.coverAlt || `${post.title} — 知橄生活 Olive Wisdom`}
@@ -380,6 +365,35 @@ export default async function BlogPostPage({ params }: Props) {
           />
         </div>
       )}
+
+      {/* ── Article Header — below image, editorial ─────────────── */}
+      <div className="border-b border-stone-100 bg-white">
+        <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-8 pb-8">
+          {/* Category + read time */}
+          <div className="flex items-center gap-3 mb-5">
+            <span className={`text-[10px] font-sans font-semibold tracking-[0.2em] uppercase ${catInfo.accentColor ?? 'text-olive-600'}`}>
+              {catInfo.label}
+            </span>
+            <span className="text-stone-200">·</span>
+            <span className="text-[10px] font-sans text-stone-400 tracking-wide">{post.readTime} 分鐘閱讀</span>
+          </div>
+          {/* Title */}
+          <h1 className="text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-6 max-w-[640px]">
+            {post.title}
+          </h1>
+          {/* Byline + Olive Dr. badge */}
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-sans text-stone-500 border-t border-stone-100 pt-5">
+            <span className="font-medium text-olive-700">{post.author || '知橄生活研究團隊'}</span>
+            <span className="text-stone-300">|</span>
+            <span>{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            {(post.category === 'science' || post.category === 'health') && (
+              <span className="inline-flex items-center gap-1 text-[11px] bg-olive-50 text-olive-700 px-2.5 py-1 rounded-full font-medium border border-olive-200">
+                🫒 Olive Dr. 科學審閱
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
 
       {/* Table of Contents */}
       <TableOfContents htmlContent={htmlContent} />

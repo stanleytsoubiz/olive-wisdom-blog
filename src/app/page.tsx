@@ -232,7 +232,7 @@ export default async function HomePage() {
             {/* Secondary articles — NYT-style borderless grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
               {restPosts.slice(0, 4).map((post) => {
-                const catLabel = { science:'科學萃取', lifestyle:'餐桌美學', health:'品味鑑賞', culture:'知性史詩', heritage:'知性史詩', guide:'選購指南' }[post.category] ?? post.category;
+                const catLabel = { science:'科學查證', lifestyle:'餐桌應用', health:'品油筆記', culture:'產地探訪', heritage:'產地探訪', guide:'選購指南' }[post.category] ?? post.category;
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                     <article>

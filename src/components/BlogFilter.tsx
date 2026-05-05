@@ -16,6 +16,16 @@ const CATEGORY_MAP: Record<string, { label: string; en: string }> = {
   guide:     { label: '選購指南', en: 'Guide'      },
 };
 
+// 內容性質標籤 — 讓讀者在列表頁就能判斷閱讀目的（Heho benchmark）
+const NATURE_LABEL: Record<string, string> = {
+  science:   '科學查證',
+  health:    '品油筆記',
+  lifestyle: '餐桌應用',
+  culture:   '產地探訪',
+  heritage:  '產地探訪',
+  guide:     '選購指南',
+};
+
 const CAT_TABS = [
   { key: '', label: '全部' },
   { key: 'science',   label: '科學萃取' },
@@ -182,9 +192,9 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                         </div>
                         {/* Text — stacked, no container box */}
                         <div className="flex flex-col flex-1">
-                          {/* Category label */}
+                          {/* Nature label — content-type signal for readers */}
                           <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-2">
-                            {cat.label}
+                            {NATURE_LABEL[post.category] ?? cat.label}
                           </p>
                           {/* Headline */}
                           <h2 className="text-[1rem] font-bold text-stone-900 leading-snug tracking-tight mb-2 line-clamp-2 flex-1 group-hover:text-olive-800 transition-colors">
