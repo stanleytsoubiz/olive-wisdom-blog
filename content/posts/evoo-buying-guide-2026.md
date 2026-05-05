@@ -1,14 +1,14 @@
 ---
-title: "2026 EVOO Buying Guide: How to Select High-Polyphenol Oils Like a Scientist"
+title: "科學家選油指南：高多酚 EVOO 的五大核心鑑別標準"
 slug: "evoo-buying-guide-2026"
 date: "2026-04-27"
-excerpt: "Learn the 5 critical markers of authentic high-polyphenol Extra Virgin Olive Oil, including IOC laboratory standards and Agtron-equivalent sensory cues."
+excerpt: "IOC 認證評審用哪五個指標鑑別真正的高多酚特級初榨橄欖油？從多酚門檻、採收透明度、品種遺傳到 CoA 解讀，完整科學選購框架。"
 category: "science"
 coverImage: "/images/covers/evoo-buying-guide-2026.jpg"
-author: "Olive Wisdom Editorial"
+author: "知橄生活研究團隊"
 readTime: 10
-tags: ["EVOO", "Polyphenols", "Buying Guide", "IOC Standards"]
-focusKeyword: "EVOO buying guide 2026"
+tags: ["高多酚EVOO", "多酚", "選購指南", "IOC標準", "CoA報告"]
+focusKeyword: "高多酚EVOO選購"
 coverAlt: "High-polyphenol extra virgin olive oil being poured into a tasting glass against natural light"
 sources:
   - "European Commission (2012). Commission Regulation (EU) No 432/2012 establishing a list of permitted health claims made on foods. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
@@ -18,12 +18,14 @@ sources:
   - "Cicerale, S. et al. (2010). Biological Activities of Phenolic Compounds Present in Virgin Olive Oil. International Journal of Molecular Sciences, 11(2):458–479. https://doi.org/10.3390/ijms11020458"
   - "Beauchamp, G.K. et al. (2005). Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil. Nature, 437:45–46. https://doi.org/10.1038/437045a"
 faq:
-  - q: "What is the minimum polyphenol content I should look for in EVOO?"
-    a: "According to EFSA health claim standards, EVOO needs to contain at least 250mg/kg total polyphenols to deliver measurable cardiovascular protection (specifically 5mg/day of hydroxytyrosol and its derivatives). However, for maximum benefit, look for oils with 400-800mg/kg. Top-tier oils certified by NYIOOC Gold Award winners often exceed 500mg/kg. Always request a Certificate of Analysis (CoA) from the supplier to verify polyphenol content before purchasing."
-  - q: "How long does high-polyphenol EVOO stay fresh after opening?"
-    a: "After opening, high-quality EVOO should ideally be consumed within 60-90 days to preserve maximum polyphenol content. Research shows polyphenol levels drop by approximately 40% within 3 months of opening when stored at room temperature. To extend freshness: store in a dark, cool location (ideally 15-18°C), keep the cap tightly sealed after each use, avoid storing near heat sources like stovetops, and consider purchasing smaller bottles (250-500ml) if you don't use olive oil frequently."
-  - q: "Is Italian olive oil really better than Spanish or Greek?"
-    a: "No — this is largely a branding myth. Spain produces approximately 45% of the world's olive oil and consistently wins the most NYIOOC Gold Awards. Greek Koroneiki variety oils frequently achieve the highest polyphenol content of any cultivar globally. Italian olive oil benefits from superior brand recognition and premium pricing, but blind taste tests and chemical analysis consistently show Spanish and Greek oils matching or exceeding Italian quality benchmarks. Focus on harvest date, certifications, and polyphenol data rather than country of origin alone."
+  - q: "選購 EVOO 的多酚含量最低門檻是多少？"
+    a: "依據 EFSA 健康聲明標準，EVOO 需含至少 250mg/kg 總多酚，才能在每日 20ml 攝取量下達到「每日 5mg 羥基酪醇及其衍生物」的心血管保護劑量（EU Regulation No 432/2012）。追求最大健康效益應選擇 400–800mg/kg 等級。頂級 NYIOOC 金牌油通常超過 500mg/kg。購買前務必索取第三方 CoA（Certificate of Analysis）確認多酚數值。"
+  - q: "高多酚 EVOO 開封後多久需用完？"
+    a: "開封後建議在 60–90 天內用完以保留最大多酚活性。研究顯示，室溫儲存 3 個月後多酚含量約下降 40%。延長新鮮度的方法：存放於陰暗涼爽處（理想 15–18°C）、每次使用後立即旋緊瓶蓋、遠離爐灶熱源、選購 250–500ml 小瓶裝（避免長期開封）。"
+  - q: "義大利橄欖油真的比西班牙或希臘更好嗎？"
+    a: "不是——這主要是品牌溢價迷思。西班牙生產全球約 45% 的橄欖油，NYIOOC 金牌得獎數量長期最多；希臘 Koroneiki 品種的多酚含量在所有商業品種中排名頂尖；義大利橄欖油的優勢在於品牌知名度和高端定位，而非化學品質。盲測數據顯示西班牙和希臘油的多酚表現與義大利油相當甚至更高。選油時應關注採收日期、認證和多酚數據，而非僅看產地標示。"
+  - q: "CoA 報告上最重要的幾個數值是什麼？"
+    a: "CoA 必看四項核心數值：(1) 總多酚 TPC ≥300mg/kg（健康補充最低門檻，≥500 為優秀）；(2) 游離酸度（Free Acidity）<0.3%（IOC EVOO 上限為 0.8%）；(3) 過氧化值（Peroxide Value）<10 meq/kg（新鮮度指標）；(4) K270 <0.20（高於此值可能摻有精製油）。CoA 出具日期應在採收當季，批號需與瓶身一致，測試機構應為獨立第三方。"
 ---
 
 # 2026 EVOO Buying Guide: How to Select High-Polyphenol Oils Like a Scientist
@@ -158,5 +160,7 @@ Before purchasing, run through this five-point verification:
 
 ## 延伸閱讀
 
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
-- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油，而您的舌頭可能是最後一道防線？](/blog/olive-oil-fraud-detection-authentic-vs-fake)
+- [橄欖油選購完全指南 2026：五步驟框架，讓您永不踩雷](/blog/olive-oil-complete-buying-guide-2026)
+- [多酚衰減科學：為什麼去年的金牌油，今年可能只是普通烹飪油？](/blog/polyphenol-decay-science-2026)
+- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油？](/blog/olive-oil-fraud-detection-authentic-vs-fake)
+- [橄欖油保存完全指南：五個您一直做錯的儲存習慣](/blog/olive-oil-storage-guide-2026)
