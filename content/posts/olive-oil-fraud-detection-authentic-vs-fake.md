@@ -6,7 +6,7 @@ author: "知橄生活研究團隊"
 category: "selection"
 tags: ["品味鑑賞", "橄欖油真偽", "摻假油", "選購防坑"]
 excerpt: "歐洲食品安全局的調查顯示，市面上標榜「特級初榨」的橄欖油，有高達 50-80% 達不到官方標準。學會這套真偽鑑別系統，讓您不再為劣質油付出高品質的代價。"
-coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/5f267745bd334f2c8c472bbaba2b61f2_db346.png"
+coverImage: "/images/covers/olive-oil-fraud-detection-authentic-vs-fake.jpg"
 readTime: 9
 sources:
   - "Mueller, T. (2011). Extra Virginity: The Sublime and Scandalous World of Olive Oil. W.W. Norton."

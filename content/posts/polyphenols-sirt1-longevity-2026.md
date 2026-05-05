@@ -4,7 +4,7 @@ slug: "polyphenols-sirt1-longevity-2026"
 date: "2026-04-09"
 category: "science"
 excerpt: "最新分子生物學研究揭示，特級初榨橄欖油中的羥基酪醇可活化 SIRT1 長壽蛋白，與限制熱量攝取產生相似的抗衰老效果。本文深度解析背後機制。"
-coverImage: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&auto=format&fit=crop&q=85"
+coverImage: "/images/covers/polyphenols-sirt1-longevity-2026.jpg"
 author: "知橄生活研究團隊"
 readTime: 8
 tags: ["多酚", "SIRT1", "羥基酪醇", "長壽科學"]

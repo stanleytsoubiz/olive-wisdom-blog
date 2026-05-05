@@ -8,7 +8,7 @@ author: "知橄生活 編輯部"
 readTime: 10
 tags: ["PDO認證", "DOP認證", "IGP認證", "橄欖油選購"]
 focusKeyword: "橄欖油PDO DOP IGP認證"
-coverImage: ""
+coverImage: "/images/covers/olive-oil-pdo-dop-igp-certification-guide.jpg"
 coverAlt: "超市貨架上三瓶橄欖油，標籤特寫顯示PDO、DOP、IGP認證標誌，溫暖的自然光線，俯拍構圖｜知橄生活"
 sources:
   - "European Commission (2024). Quality schemes explained: PDO, PGI and TSG. https://agriculture.ec.europa.eu/farming/geographical-indications-and-quality-schemes/geographical-indications-and-quality-schemes-explained_en"

@@ -4,7 +4,7 @@ slug: "oleocanthal-pungency-anti-inflammation"
 date: "2026-04-06"
 category: "science"
 excerpt: "當您吞嚥優質橄欖油時，喉嚨深處那道辛辣感，不是品質缺陷，而是一道分子信號——它的名字，叫做油橄欖醛（Oleocanthal）。2005年《自然》期刊的突破性研究揭示，這個分子的抗炎機制與布洛芬驚人相似，且完全沒有胃腸副作用。"
-coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/5be6f88930b24b40bb22796d30142dd3_86b5d.png"
+coverImage: "/images/covers/oleocanthal-pungency-anti-inflammation.jpg"
 author: "知橄生活研究團隊"
 readTime: 12
 tags: ["科學萃取", "油橄欖醛", "Oleocanthal", "抗炎"]

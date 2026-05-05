@@ -8,7 +8,7 @@ author: "知橄生活研究團隊"
 readTime: 11
 tags: ["橄欖油比較", "酪梨油", "健康食用油", "科學分析"]
 focusKeyword: "橄欖油vs酪梨油"
-coverImage: "https://images.unsplash.com/photo-1506484381205-f7945653044d?w=1200&auto=format&fit=crop&q=80"
+coverImage: "/images/covers/olive-oil-vs-avocado-oil-complete-comparison.jpg"
 coverAlt: "橄欖油與酪梨油兩瓶並排，展示金綠色與淺黃色的色澤對比"
 sources:
   - "Phenolic compounds in avocado oil: A review (Food Chemistry 2023)"

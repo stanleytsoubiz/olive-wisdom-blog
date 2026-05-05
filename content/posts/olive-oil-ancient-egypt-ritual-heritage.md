@@ -4,7 +4,7 @@ slug: "olive-oil-ancient-egypt-ritual-heritage"
 date: "2026-04-14"
 category: "heritage"
 excerpt: "從圖坦卡門陵墓中出土的橄欖油容器，到《埃伯斯紙草卷》中記載的 700 種醫療配方——橄欖油在 4,000 年前的埃及，不只是食物，更是連結生死兩界的神聖媒介。"
-coverImage: "https://images.unsplash.com/photo-1588703851099-c3e5f1e4a9e2?w=1200&q=80"
+coverImage: "/images/covers/olive-oil-ancient-egypt-ritual-heritage.jpg"
 author: "知橄生活研究團隊"
 readTime: 9
 tags: ["古埃及", "歷史", "橄欖油", "文明"]

@@ -4,7 +4,7 @@ slug: "mediterranean-diet-anti-aging-women-2026"
 date: "2026-04-03"
 category: "lifestyle"
 excerpt: "針對 35-55 歲女性族群，地中海飲食在荷爾蒙平衡、骨質保護、皮膚彈性維持等方面展現出強大的科學實證。了解如何以橄欖油為核心，建立抗衰老飲食策略。"
-coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/4e13ed9b8d55434daf1db0fe2d809af1_7e605.png"
+coverImage: "/images/covers/mediterranean-diet-anti-aging-women-2026.jpg"
 author: "知橄生活研究團隊"
 readTime: 7
 tags: ["地中海飲食", "女性健康", "抗衰老", "荷爾蒙"]

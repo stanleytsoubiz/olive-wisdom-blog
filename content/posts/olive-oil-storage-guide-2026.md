@@ -8,7 +8,7 @@ author: "知橄生活研究團隊"
 readTime: 8
 tags: ["橄欖油保存", "保鮮方法", "多酚", "儲存科學"]
 focusKeyword: "橄欖油保存方法"
-coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80"
+coverImage: "/images/covers/olive-oil-storage-guide-2026.jpg"
 coverAlt: "深色玻璃瓶橄欖油放置於涼爽陰暗的廚房角落，旁邊有新鮮橄欖"
 sources:
   - "Reyes-Trujillo, A., Cert, A., & Garrido-Fernández, A. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, 63(29), 6619–6626. https://doi.org/10.1021/acs.jafc.5b02187"

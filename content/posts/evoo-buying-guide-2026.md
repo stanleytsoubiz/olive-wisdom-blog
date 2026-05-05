@@ -4,7 +4,7 @@ slug: "evoo-buying-guide-2026"
 date: "2026-04-27"
 excerpt: "Learn the 5 critical markers of authentic high-polyphenol Extra Virgin Olive Oil, including IOC laboratory standards and Agtron-equivalent sensory cues."
 category: "science"
-coverImage: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80"
+coverImage: "/images/covers/evoo-buying-guide-2026.jpg"
 author: "Olive Wisdom Editorial"
 readTime: 10
 tags: ["EVOO", "Polyphenols", "Buying Guide", "IOC Standards"]

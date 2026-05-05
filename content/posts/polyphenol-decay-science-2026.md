@@ -4,7 +4,7 @@ slug: "polyphenol-decay-science-2026"
 date: "2026-04-30"
 category: "science"
 excerpt: "不談獲獎光環，我們談分子半衰期。解析特級初榨橄欖油中多酚隨時間衰減的物理過程，教您透過數據計算「真正的健康保鮮期」。"
-coverImage: "https://bnotescoffee.com/images/ai/evoo-decay-science.jpg"
+coverImage: "/images/covers/polyphenol-decay-science-2026.jpg"
 author: "知橄生活研究團隊"
 readTime: 9
 tags: ["多酚衰減", "保鮮科學", "羥基酪醇", "2026鑑定"]

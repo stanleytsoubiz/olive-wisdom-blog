@@ -4,7 +4,7 @@ slug: "olive-oil-silk-road-trade-history"
 date: "2026-04-15"
 category: "heritage"
 excerpt: "在漢代張騫出使西域的同一個世紀，地中海商人正用雙耳陶罐將橄欖油運往印度洋港口。這條被考古學家稱為「橄欖油之路」的貿易幹線，比馬可波羅早了一千五百年。"
-coverImage: "https://images.unsplash.com/photo-1569974507005-6dc61f97fb5e?w=1200&q=80"
+coverImage: "/images/covers/olive-oil-silk-road-trade-history.jpg"
 author: "知橄生活研究團隊"
 readTime: 8
 tags: ["絲路", "貿易史", "橄欖油", "文明交流"]

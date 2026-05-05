@@ -4,7 +4,7 @@ slug: "morning-ritual-evoo-metabolism"
 date: "2026-04-04"
 category: "science"
 excerpt: "地中海百歲長者的早晨，往往從一小杯特級初榨橄欖油開始。這個古老習慣如今獲得了現代分子營養學的科學支撐：空腹攝取橄欖油多酚，能在 20 分鐘內啟動 NRF2 通路、啟動膽汁酸分泌、調節餐前血糖——為您的整天代謝定下最佳基調。"
-coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&auto=format&fit=crop&q=85"
+coverImage: "/images/covers/morning-ritual-evoo-metabolism.jpg"
 author: "知橄生活研究團隊"
 readTime: 10
 tags: ["餐桌美學", "晨間儀式", "代謝", "空腹飲油"]

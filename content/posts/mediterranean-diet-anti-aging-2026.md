@@ -8,7 +8,7 @@ author: "知橄生活 編輯部"
 readTime: 10
 tags: ["地中海飲食", "抗老", "橄欖油", "2026 指南"]
 focusKeyword: "地中海飲食抗老"
-coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&auto=format&fit=crop&q=80"
+coverImage: "/images/covers/mediterranean-diet-anti-aging-2026.jpg"
 coverAlt: "色彩豐富的地中海風格餐盤，橄欖油、蔬菜與魚類的健康組合"
 sources:
   - "Estruch, R. et al. (2013). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet. New England Journal of Medicine, 368:1279-1290. https://doi.org/10.1056/NEJMoa1200303"

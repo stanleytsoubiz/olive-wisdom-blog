@@ -4,7 +4,7 @@ slug: "2026-evoo-quality-polyphenol-index"
 date: "2026-04-27"
 category: "science"
 excerpt: "不談口感，我們談數據。解析 2026 年新產季歐盟與 IOC 標準下的高多酚橄欖油趨勢，教您讀懂鑑定報告中的羥基酪醇 (Hydroxytyrosol) 數值。"
-coverImage: "https://bnotescoffee.com/images/ai/evoo-polyphenol-science.jpg"
+coverImage: "/images/covers/2026-evoo-quality-polyphenol-index.jpg"
 author: "知橄生活研究團隊"
 readTime: 10
 tags: ["橄欖油科學", "高多酚", "健康數據", "2026趨勢"]

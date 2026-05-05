@@ -8,7 +8,7 @@ author: "知橄生活研究團隊"
 readTime: 12
 tags: ["橄欖油選購", "選購指南", "高多酚", "EVOO"]
 focusKeyword: "橄欖油選購指南"
-coverImage: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80"
+coverImage: "/images/covers/olive-oil-complete-buying-guide-2026.jpg"
 coverAlt: "橄欖油瓶排列在貨架上，背景為地中海橄欖園"
 sources:
   - "IOC World Olive Oil Quality Standards 2024"

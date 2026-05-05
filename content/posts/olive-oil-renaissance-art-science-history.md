@@ -4,7 +4,7 @@ slug: "olive-oil-renaissance-art-science-history"
 date: "2026-04-16"
 category: "heritage"
 excerpt: "《蒙娜麗莎》背後的暗色光澤、西斯廷禮拜堂穹頂壁畫的持久色彩——文藝復興大師的技術革命，有一半的秘密藏在橄欖油裡。"
-coverImage: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1200&q=80"
+coverImage: "/images/covers/olive-oil-renaissance-art-science-history.jpg"
 author: "知橄生活研究團隊"
 readTime: 8
 tags: ["文藝復興", "藝術史", "橄欖油", "達文西"]

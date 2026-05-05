@@ -6,7 +6,7 @@ author: "知橄生活研究團隊"
 category: "selection"
 tags: ["品味鑑賞", "產地風土", "Terroir", "西班牙橄欖油"]
 excerpt: "法國人用「風土（Terroir）」解釋為何同一品種的葡萄，在不同土地上能釀出截然不同的靈魂。橄欖油的世界，同樣適用這個哲學。一位知性品飲者，必須理解產地才能真正讀懂一瓶油。"
-coverImage: "https://picture-search.skywork.ai/skills/upload/2026-04-17/21efe059834d48fdb33d24f0285fb2de_fe61b.png"
+coverImage: "/images/covers/olive-oil-terroir-spain-greece-italy.jpg"
 readTime: 7
 sources:
   - "International Olive Council (IOC). World Olive Oil Figures 2024-2025."

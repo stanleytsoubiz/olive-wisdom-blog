@@ -6,7 +6,7 @@ author: "知橄生活研究團隊"
 category: "science"
 tags: ["多酚", "心血管健康", "PREDIMED研究", "地中海飲食"]
 excerpt: "特級初榨橄欖油（EVOO）是人類研究最透徹的功能性食品之一，擁有比任何其他食用油都更豐富的臨床試驗佐證。本文系統整理 EFSA、PREDIMED、哈佛醫學院等機構認可的七大健康效益，每一項均附有核心研究的劑量、受試人數和效果量，讓您完整理解 EVOO 科學的現況與邊界。"
-coverImage: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=1200&auto=format&fit=crop&q=80"
+coverImage: "/images/covers/olive-oil-health-benefits-science-complete.jpg"
 readTime: 15
 focusKeyword: "橄欖油功效"
 sources:

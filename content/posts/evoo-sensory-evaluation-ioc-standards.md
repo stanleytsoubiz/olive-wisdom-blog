@@ -6,7 +6,7 @@ author: "知橄生活研究團隊"
 category: "selection"
 tags: ["品味鑑賞", "IOC感官評鑑", "特級初榨", "品油技術"]
 excerpt: "國際橄欖油委員會（IOC）的官方感官評鑑方法，要求品油師在 28°C 的藍色杯中，靜靜感受那三秒的香氣爆發。學會這套語言，您將不再被標籤欺騙。"
-coverImage: "https://bnotescoffee.com/images/ai/evoo-tasting-science.jpg"
+coverImage: "/images/covers/evoo-sensory-evaluation-ioc-standards.jpg"
 readTime: 10
 sources:
   - "IOC (2024). Sensory analysis of olive oil: Method for the organoleptic assessment of virgin olive oil. COI/T.20/Doc. No 15/Rev. 11. International Olive Council. https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards-and-methods/"
