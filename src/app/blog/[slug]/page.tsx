@@ -8,6 +8,7 @@ import ViewTracker from '@/components/ViewTracker';
 import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure';
+import SubscribePopup from '@/components/SubscribePopup';
 
 export const dynamic = 'force-static';
 
@@ -525,6 +526,9 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Subscribe popup — scroll 60% trigger, once per session */}
+      <SubscribePopup />
 
       {/* Related Articles — Kinfolk editorial style */}
       {related.length > 0 && (

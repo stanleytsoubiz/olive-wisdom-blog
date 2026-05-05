@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Suspense } from 'react';
 import { getAllPosts } from '@/lib/posts';
 import { getImages, getHeroImage, getPostImageUrl, type ImagesData } from '@/lib/images';
 import type { Metadata } from 'next';
 import BlogFilter from '@/components/BlogFilter';
+import SearchBar from '@/components/SearchBar';
 
 export const metadata: Metadata = {
   title: '橄欖油知識庫｜科學萃取・品味鑑賞・知性史詩・餐桌美學',
@@ -70,6 +72,13 @@ export default async function BlogPage() {
           </p>
         </div>
       </section>
+
+      {/* Search bar — above category tabs */}
+      <div className="bg-[#fafaf7] px-6 pt-8 pb-4">
+        <Suspense fallback={null}>
+          <SearchBar placeholder="搜尋橄欖油科學・地中海飲食・品飲鑑賞…" />
+        </Suspense>
+      </div>
 
       {/* Client-side filter + grid */}
       <BlogFilter posts={posts} imagesData={imagesData} />

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "lastUpdated": "2026-05-04",
+    "lastUpdated": "2026-05-05",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-04T14:28:05.601Z",
+      "date": "2026-05-05T03:39:03.398Z",
       "generated": 1,
-      "total_articles": 31
+      "total_articles": 32
     }
   },
   "hero": {
@@ -322,6 +322,14 @@
       "generated_at": "2026-05-04",
       "quality_score": 9,
       "prompt": "three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracott"
+    },
+    "olive-oil-stir-fry-cancer-myth-debunked": {
+      "url": "/images/covers/olive-oil-stir-fry-cancer-myth-debunked.jpg",
+      "alt": "Olive Oil Stir Fry Cancer Myth Debunked",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "cast iron skillet with golden olive oil shimmering on worn wooden surface, fresh garlic and cherry tomatoes beside, warm"
     }
   },
   "fallback": {

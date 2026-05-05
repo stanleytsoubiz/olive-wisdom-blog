@@ -162,6 +162,11 @@ const COVER_PROMPTS = {
   'olive-oil-cooking-science-can-evoo-stir-fry':
     'cast iron skillet with golden olive oil shimmering on wooden kitchen surface, fresh garlic cloves and rosemary sprig beside, warm morning window light from side, Mediterranean home cooking still life, editorial food photography, no smoke no fire',
 
+
+  // ── 新增 2026-05-05 ────────────────────────────────────────────
+  'olive-oil-stir-fry-cancer-myth-debunked':
+    'cast iron skillet with golden olive oil shimmering on worn wooden surface, fresh garlic and cherry tomatoes beside, warm morning kitchen window light, Mediterranean home cooking still life, reassuring and calm atmosphere, Kinfolk editorial food photography, film grain, no smoke, no flames, no text',
+
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',
