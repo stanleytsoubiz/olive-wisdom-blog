@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # need previous commit to detect changed files
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
@@ -33,3 +35,46 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy out --project-name=olive-wisdom --branch=main
+
+      # ── IndexNow: auto-ping Google/Bing/Yandex for new/changed articles ──
+      - name: IndexNow ping for new/updated articles
+        run: |
+          INDEXNOW_KEY="6d2ae74844cd4130a2c21736a99a7dfc"
+          BASE_URL="https://olive-wisdom.com"
+
+          # Detect changed markdown files in content/posts/
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'content/posts/*.md' 2>/dev/null || echo "")
+
+          # On workflow_dispatch or first push, ping all articles
+          if [ -z "$CHANGED" ]; then
+            echo "No changed posts detected — pinging sitemap instead"
+            curl -s -o /dev/null -w "Sitemap ping HTTP %{http_code}\n" \
+              "https://www.bing.com/ping?sitemap=${BASE_URL}/sitemap.xml"
+            exit 0
+          fi
+
+          # Build URL list from changed .md files
+          URL_LIST=""
+          for f in $CHANGED; do
+            SLUG=$(basename "$f" .md)
+            URL="${BASE_URL}/blog/${SLUG}/"
+            URL_LIST="${URL_LIST}\"${URL}\","
+            echo "  → Queuing: $URL"
+          done
+          URL_LIST="[${URL_LIST%,}]"
+
+          # Ping IndexNow (covers Google, Bing, Yandex via api.indexnow.org)
+          PAYLOAD=$(printf '{"host":"%s","key":"%s","keyLocation":"%s/%s.txt","urlList":%s}' \
+            "olive-wisdom.com" "$INDEXNOW_KEY" "$BASE_URL" "$INDEXNOW_KEY" "$URL_LIST")
+
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD")
+
+          echo "IndexNow response: HTTP $HTTP_CODE"
+          if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "202" ]; then
+            echo "✅ IndexNow ping successful — Google/Bing/Yandex notified"
+          else
+            echo "⚠️  IndexNow ping returned $HTTP_CODE (non-blocking)"
+          fi
