@@ -36,6 +36,22 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy out --project-name=olive-wisdom --branch=main
 
+      # ── Sitemap auto-ping (every deploy) ─────────────────────────────────────
+      - name: Ping sitemaps to Google & Bing
+        run: |
+          BASE_URL="https://olive-wisdom.com"
+          SITEMAP="${BASE_URL}/sitemap.xml"
+
+          echo "📡 Pinging sitemaps..."
+          BING=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.bing.com/ping?sitemap=${SITEMAP}")
+          echo "  Bing sitemap ping: HTTP $BING"
+
+          # Google ping endpoint (submit sitemap notification)
+          GOOGLE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.google.com/ping?sitemap=${SITEMAP}")
+          echo "  Google sitemap ping: HTTP $GOOGLE"
+
       # ── IndexNow: auto-ping Google/Bing/Yandex for new/changed articles ──
       - name: IndexNow ping for new/updated articles
         run: |
@@ -45,23 +61,28 @@ jobs:
           # Detect changed markdown files in content/posts/
           CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'content/posts/*.md' 2>/dev/null || echo "")
 
-          # On workflow_dispatch or first push, ping all articles
+          # On workflow_dispatch or no changed posts — submit full URL list via IndexNow
           if [ -z "$CHANGED" ]; then
-            echo "No changed posts detected — pinging sitemap instead"
-            curl -s -o /dev/null -w "Sitemap ping HTTP %{http_code}\n" \
-              "https://www.bing.com/ping?sitemap=${BASE_URL}/sitemap.xml"
-            exit 0
+            echo "No changed posts — submitting all article URLs via IndexNow"
+            # Collect all slugs from content/posts/
+            URL_LIST=""
+            for f in content/posts/*.md; do
+              SLUG=$(basename "$f" .md)
+              URL="${BASE_URL}/blog/${SLUG}/"
+              URL_LIST="${URL_LIST}\"${URL}\","
+            done
+            URL_LIST="[${URL_LIST%,}]"
+          else
+            # Build URL list from changed .md files only
+            URL_LIST=""
+            for f in $CHANGED; do
+              SLUG=$(basename "$f" .md)
+              URL="${BASE_URL}/blog/${SLUG}/"
+              URL_LIST="${URL_LIST}\"${URL}\","
+              echo "  → Queuing: $URL"
+            done
+            URL_LIST="[${URL_LIST%,}]"
           fi
-
-          # Build URL list from changed .md files
-          URL_LIST=""
-          for f in $CHANGED; do
-            SLUG=$(basename "$f" .md)
-            URL="${BASE_URL}/blog/${SLUG}/"
-            URL_LIST="${URL_LIST}\"${URL}\","
-            echo "  → Queuing: $URL"
-          done
-          URL_LIST="[${URL_LIST%,}]"
 
           # Ping IndexNow (covers Google, Bing, Yandex via api.indexnow.org)
           PAYLOAD=$(printf '{"host":"%s","key":"%s","keyLocation":"%s/%s.txt","urlList":%s}' \
