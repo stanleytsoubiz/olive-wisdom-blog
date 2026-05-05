@@ -99,9 +99,9 @@ faq:
 
 ## 延伸閱讀
 
-- [如何從外觀與標示辨認一瓶真正的特級初榨橄欖油](/blog/how-to-identify-real-extra-virgin-olive-oil)
-- [橄欖油的發煙點迷思：高溫烹調該選哪一種？](/blog/olive-oil-smoke-point-cooking-guide)
-- [多酚含量怎麼看？橄欖油標示完全解讀](/blog/olive-oil-polyphenol-label-guide)
+- [PREDIMED 研究完整解析：追蹤 7447 人如何改寫橄欖油科學史](/blog/predimed-study-complete-explainer-olive-oil-heart)
+- [橄欖油可以加熱嗎？發煙點與氧化穩定性完整指南](/blog/olive-oil-cooking-heat-stability-smoke-point)
+- [橄欖油多酚含量驗證：如何確認你的油真的含有標示的多酚](/blog/olive-oil-polyphenol-content-how-to-verify)
 
 ---
 

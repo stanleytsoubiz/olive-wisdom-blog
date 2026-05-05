@@ -136,8 +136,9 @@ IOC 感官系統將苦辣強度分三級（Robust >6.0、Medium 3.0–6.0、Deli
 
 ## 延伸閱讀
 
-- [特級初榨橄欖油的多酚：你需要知道的完整指南](/blog/olive-oil-polyphenols-complete-guide)
-- [如何看懂橄欖油標籤：IOC 認證、產地與採收日期全解析](/blog/how-to-read-olive-oil-labels)
+- [橄欖油等級分類完整指南：IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
+- [2026 橄欖油多酚品質指數：高多酚才是真正的品質標籤](/blog/2026-evoo-quality-polyphenol-index)
+- [IOC 感官評鑑標準詳解](/blog/evoo-sensory-evaluation-ioc-standards)
 
 ---
 

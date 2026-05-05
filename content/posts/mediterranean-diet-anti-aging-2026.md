@@ -28,7 +28,7 @@ faq:
 
 # 2026 地中海抗老實踐手冊：如何在都市生活中達成 100% 橄欖多酚覆蓋
 
-在 2026 年，**「地中海飲食 (Mediterranean Diet)」** 已被公認為對抗都市文明病與延緩細胞衰老的最優方案。多項大型人體試驗——包括西班牙的 PREDIMED、義大利的 EPIC 和希臘的 ATTICA 研究——均確認了其對心血管疾病、認知衰退和代謝症候群的保護效果。
+在 2026 年，**「地中海飲食 (Mediterranean Diet)」** 已被公認為對抗都市文明病與延緩細胞衰老的最優方案。多項大型人體試驗——包括西班牙的 [PREDIMED 研究](/blog/predimed-study-complete-explainer-olive-oil-heart)、義大利的 EPIC 和希臘的 ATTICA 研究——均確認了其對心血管疾病、認知衰退和代謝症候群的保護效果。
 
 然而，要在繁忙的台灣都市生活中完全實踐這套飲食法，需要的不是「偶爾吃沙拉」，而是一套**數據化的操作策略**。
 
@@ -42,7 +42,7 @@ PREDIMED-Plus 研究（Boccardi et al., 2021）探討地中海飲食、熱量限
 
 ### 機制二：粒線體功能維護（細胞能量引擎）
 
-橄欖油多酚（特別是 Hydroxytyrosol）能激活 **SIRT1/AMPK 信號通路**，而這條通路被稱為「長壽基因調控軸」：
+橄欖油多酚（特別是 Hydroxytyrosol）能激活 **SIRT1/AMPK 信號通路**，而這條通路被稱為「長壽基因調控軸」。關於羥基酪醇的神經保護機制與劑量計算，可參考[羥基酪醇與腦健康科學實踐](/blog/hydroxytyrosol-brain-cognition-memory)。多酚與長壽的分子生物學基礎，則可參考[多酚與 SIRT1 長壽研究](/blog/polyphenols-sirt1-longevity-2026)。：
 
 - **SIRT1 去乙醯化酶：** 調控 DNA 修復、基因表達和代謝效率
 - **AMPK（AMP 活化蛋白激酶）：** 感測細胞能量狀態，優化粒線體功能並啟動細胞自噬（Autophagy）
