@@ -2,7 +2,7 @@
 
 import Script from 'next/script';
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-JWJE0S46SE';
 
 // ── GoogleAnalytics Component ─────────────────────────────────────────────────
 // Inject GA4 only when NEXT_PUBLIC_GA_ID is set.
