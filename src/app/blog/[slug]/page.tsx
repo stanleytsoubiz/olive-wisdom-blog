@@ -193,6 +193,8 @@ const CATEGORY_MAP: Record<string, { label: string; badgeClass: string; accentCo
   science:   { label: '科學萃取', badgeClass: 'bg-olive-100 text-olive-800',  accentColor: 'text-olive-600' },
   lifestyle: { label: '餐桌美學', badgeClass: 'bg-gold-100 text-gold-800',    accentColor: 'text-gold-600' },
   health:    { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
+  selection: { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
+  guide:     { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
   culture:   { label: '知性史詩', badgeClass: 'bg-stone-100 text-stone-700',  accentColor: 'text-stone-600' },
   heritage:  { label: '知性史詩', badgeClass: 'bg-stone-100 text-stone-700',  accentColor: 'text-stone-600' },
 };

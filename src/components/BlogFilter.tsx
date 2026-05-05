@@ -11,19 +11,21 @@ const CATEGORY_MAP: Record<string, { label: string; en: string }> = {
   science:   { label: '科學萃取', en: 'Science'   },
   lifestyle: { label: '餐桌美學', en: 'Lifestyle'  },
   health:    { label: '品味鑑賞', en: 'Selection'  },
+  selection: { label: '品味鑑賞', en: 'Selection'  },
+  guide:     { label: '品味鑑賞', en: 'Selection'  },
   culture:   { label: '知性史詩', en: 'Heritage'   },
   heritage:  { label: '知性史詩', en: 'Heritage'   },
-  guide:     { label: '選購指南', en: 'Guide'      },
 };
 
 // 內容性質標籤 — 讓讀者在列表頁就能判斷閱讀目的（Heho benchmark）
 const NATURE_LABEL: Record<string, string> = {
   science:   '科學查證',
   health:    '品油筆記',
+  selection: '選購指南',
+  guide:     '使用指南',
   lifestyle: '餐桌應用',
   culture:   '產地探訪',
   heritage:  '產地探訪',
-  guide:     '選購指南',
 };
 
 const CAT_TABS = [
@@ -51,6 +53,8 @@ export default function BlogFilter({ posts, imagesData }: Props) {
     const matchesCat = activeCat
       ? (activeCat === 'culture'
           ? (p.category === 'culture' || p.category === 'heritage')
+          : activeCat === 'health'
+          ? (p.category === 'health' || p.category === 'selection' || p.category === 'guide')
           : p.category === activeCat)
       : true;
     const matchesSearch = searchQuery
