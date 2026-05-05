@@ -66,6 +66,9 @@ export const metadata: Metadata = {
       'x-default': 'https://olive-wisdom.com',
     },
   },
+  verification: {
+    google: 'M59hCe9kdllyuhUHkoWUZdkDEp-0ONqeS3I7EIt9cTs',
+  },
 };
 
 const NAV_LINKS = [

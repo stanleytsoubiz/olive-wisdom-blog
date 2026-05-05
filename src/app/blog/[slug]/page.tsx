@@ -29,11 +29,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? coverPath
     : `https://olive-wisdom.com${coverPath}`;
 
+  // Use focusKeyword in title for SEO signal: "主關鍵字 — 文章標題｜知橄生活"
+  const seoTitle = post.focusKeyword && post.focusKeyword !== post.title
+    ? `${post.focusKeyword}：${post.title}｜知橄生活`
+    : `${post.title}｜知橄生活`;
+
   return {
-    title: `${post.title}｜知橄生活`,
+    title: seoTitle,
     description: post.excerpt,
+    keywords: post.tags ?? [],
     openGraph: {
-      title: post.title,
+      title: seoTitle,
       description: post.excerpt,
       url: `https://olive-wisdom.com/blog/${slug}`,
       type: 'article',
