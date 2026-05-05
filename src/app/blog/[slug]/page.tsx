@@ -369,14 +369,8 @@ export default async function BlogPostPage({ params }: Props) {
       {/* ── Article Header — below image, editorial ─────────────── */}
       <div className="border-b border-stone-100 bg-white">
         <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-8 pb-8">
-          {/* Category + read time */}
-          <div className="flex items-center gap-3 mb-5">
-            <span className={`text-[10px] font-sans font-semibold tracking-[0.2em] uppercase ${catInfo.accentColor ?? 'text-olive-600'}`}>
-              {catInfo.label}
-            </span>
-            <span className="text-stone-200">·</span>
-            <span className="text-[10px] font-sans text-stone-400 tracking-wide">{post.readTime} 分鐘閱讀</span>
-          </div>
+          {/* Read time — category already shown in breadcrumb above */}
+          <p className="text-[11px] font-sans text-stone-400 tracking-wide mb-5">{post.readTime} 分鐘閱讀</p>
           {/* Title */}
           <h1 className="text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-6 max-w-[640px]">
             {post.title}
