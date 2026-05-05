@@ -269,31 +269,32 @@ export default async function HomePage() {
       )}
 
       {/* 科學數據帶 */}
-      <section className="bg-olive-800 text-white py-16 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 text-center">
+      <section className="bg-olive-800 text-white py-12 md:py-16 px-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
           {[
             { num: '7,447', label: '位', desc: 'PREDIMED 研究受試者', sub: '史上最大地中海飲食研究' },
             { num: '30%', label: '', desc: '心血管風險降低', sub: '高多酚 EVOO 組別數據' },
             { num: '250mg', label: '/kg+', desc: '高多酚標準含量', sub: 'EFSA 認可健康聲稱門檻' },
             { num: '3000', label: '年', desc: '橄欖樹文明歷史', sub: '克里特島古木仍在結果' },
           ].map((stat) => (
-            <div key={stat.desc}>
-              <div className="text-4xl font-bold text-gold-400 mb-1">{stat.num}<span className="text-2xl">{stat.label}</span></div>
-              <div className="font-medium text-white text-sm mb-1">{stat.desc}</div>
-              <div className="text-xs text-olive-300">{stat.sub}</div>
+            <div key={stat.desc} className="py-2">
+              <div className="text-3xl md:text-4xl font-bold text-gold-400 mb-2 leading-none">
+                {stat.num}<span className="text-xl md:text-2xl">{stat.label}</span>
+              </div>
+              <div className="font-medium text-white text-sm mb-1 leading-snug">{stat.desc}</div>
+              <div className="text-xs text-olive-300 leading-relaxed">{stat.sub}</div>
             </div>
           ))}
         </div>
       </section>
 
       {/* 訂閱 */}
-      <section id="subscribe" className="bg-gradient-to-br from-olive-100 to-gold-50 py-20 px-6 text-center">
-        <p className="text-gold-600 text-sm font-medium tracking-widest uppercase mb-3">加入知橄家族</p>
-        <h2 className="text-4xl font-bold text-olive-800 mb-4">訂閱知橄週報</h2>
-        <p className="text-gray-500 mb-8 max-w-lg mx-auto">
-          每週一封，精選最新橄欖油研究、地中海生活美學靈感，直送您的信箱。<br />
-          訂閱即贈《橄欖油品飲師口袋手冊》PDF。<br />
-          <span className="text-olive-600 font-medium">持續成長的知性讀者社群，每週與我們一同探索橄欖智慧</span>
+      <section id="subscribe" className="bg-gradient-to-br from-olive-100 to-gold-50 py-14 md:py-20 px-6 text-center">
+        <p className="text-gold-600 text-xs font-medium tracking-[0.25em] uppercase mb-4">加入知橄家族</p>
+        <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">訂閱知橄週報</h2>
+        <p className="text-stone-500 text-sm md:text-base leading-relaxed mb-8 max-w-md mx-auto font-sans">
+          每週一封，精選最新橄欖油研究與地中海生活美學靈感。
+          訂閱即贈《橄欖油品飲師口袋手冊》PDF。
         </p>
         <SubscribeForm />
       </section>
