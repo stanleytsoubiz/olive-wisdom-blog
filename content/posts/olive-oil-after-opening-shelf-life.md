@@ -116,14 +116,4 @@ Aparicio-Ruiz et al.（2015）在 18 個月的多溫度儲存試驗中發現，2
 
 ---
 
-## 參考文獻
-
-Aparicio-Ruiz, R., Mínguez-Mosquera, M. I., & Gandul-Rojas, B. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, *63*(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187
-
-Méndez, A. I., & Falqué, E. (2007). Effect of storage time and container type on the quality of extra-virgin olive oil. *Food Control*, *18*(5), 521–529. https://doi.org/10.1016/j.foodcont.2005.12.012
-
-Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission properties on quality characteristics of extra virgin olive oil. *Food Control*, *21*(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.011
-
----
-
 **公正聲明：** 本文無品牌贊助。所有保存建議基於 IOC 指引與同儕審查學術文獻，不代表任何品牌或包裝廠商立場。所有觀點為知橄生活編輯團隊獨立判斷。

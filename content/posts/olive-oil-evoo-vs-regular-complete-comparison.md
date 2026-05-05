@@ -119,17 +119,5 @@ readingTime: "8 分鐘"
 
 ---
 
-## 參考文獻
-
-International Olive Council. (2021). *Trade standard applying to olive oils and olive-pomace oils* (COI/T.15/NC No 3/Rev. 16). International Olive Council. https://www.internationaloliveoil.org/wp-content/uploads/2022/05/COI-T15-NC3-REV-16-2021-_ENG.pdf
-
-Pontillo, A., Carocho, M., Barros, L., & Ferreira, I. C. F. R. (2020). Effect of the refining process on total hydroxytyrosol, tyrosol, and tocopherol contents of olive oil. *Foods*, *9*(3), 292. https://doi.org/10.3390/foods9030292
-
-Aparicio, R., Morales, M. T., Aparicio-Ruiz, R., Tena, N., & García-González, D. L. (2013). Authenticity of olive oil: Mapping and comparing official methods and promising alternatives. *Food Research International*, *54*(2), 2025–2038. https://doi.org/10.1016/j.foodres.2013.07.039
-
-European Commission. (1991). *Commission Regulation (EEC) No 2568/91 of 11 July 1991 on the characteristics of olive oil and olive-residue oil and on the relevant methods of analysis*. Official Journal of the European Communities, L 248, 1–83. https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:31991R2568
-
----
-
 > **公正聲明**
 > 本文無任何品牌贊助或廠商利益關係。所有產品資訊與數值均來自 IOC 官方標準文件、歐盟法規及同儕審查學術文獻。知橄生活的推薦基於公開可查核的知識標準。

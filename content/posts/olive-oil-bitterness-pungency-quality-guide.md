@@ -142,18 +142,4 @@ IOC 感官系統將苦辣強度分三級（Robust >6.0、Medium 3.0–6.0、Deli
 
 ---
 
-## 參考文獻
-
-Beauchamp, G. K., Keast, R. S. J., Morel, D., Lin, J., Pika, J., Han, Q., Lee, C.-H., Smith, A. B., & Breslin, P. A. S. (2005). Ibuprofen-like activity in extra-virgin olive oil. *Nature*, *437*(7055), 45–46. https://doi.org/10.1038/437045a
-
-Cicerale, S., Lucas, L., & Keast, R. S. J. (2010). Biological activities of phenolic compounds present in virgin olive oil. *International Journal of Molecular Sciences*, *11*(2), 458–479. https://doi.org/10.3390/ijms11020458
-
-Cicerale, S., Lucas, L. J., & Keast, R. S. J. (2012). Antimicrobial, antioxidant and anti-inflammatory phenolic activities in extra virgin olive oil. *Current Opinion in Biotechnology*, *23*(2), 129–135. https://doi.org/10.1016/j.copbio.2011.09.006
-
-International Olive Council. (2018). *Sensory analysis of olive oil: Method for the organoleptic assessment of virgin olive oil* (COI/T.20/Doc. No 15/Rev. 10). https://www.internationaloliveoil.org/wp-content/uploads/2019/11/COI-T20-Doc.-15-REV-10-2018-Eng.pdf
-
-Ghreishi Rad, A., et al. (2023). Maturity impact on physicochemical composition and polyphenol properties of extra virgin olive oils obtained from Manzanilla, Arbequina, and Koroneiki varieties. *Food Science & Nutrition*, *11*(9). https://doi.org/10.1002/fsn3.3497
-
----
-
 > **公正聲明：** 本文無任何品牌贊助，所有內容與推薦均基於已發表的同儕審閱研究與 IOC 官方標準。延伸閱讀中的產品連結若涉及聯盟行銷，將於個別文章頁面明確揭露。

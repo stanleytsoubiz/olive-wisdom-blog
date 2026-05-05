@@ -124,14 +124,4 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 
 ---
 
-## 參考文獻
-
-Estruch, R., Ros, E., Salas-Salvadó, J., Covas, M.-I., Corella, D., Arós, F., ... & PREDIMED Study Investigators. (2018). Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. *New England Journal of Medicine*, *378*(25), e34. https://doi.org/10.1056/NEJMoa1800389
-
-Paniagua, J. A., de la Sacristana, A. G., Sánchez, E., Romero, I., Vidal-Puig, A., Berral, F. J., ... & Pérez-Martínez, P. (2007). A MUFA-rich diet improves posprandial glucose, lipid and GLP-1 responses in insulin-resistant subjects. *Journal of the American College of Nutrition*, *26*(5), 434–444. https://doi.org/10.1080/07315724.2007.10719633
-
-Schwingshackl, L., Hoffmann, G., Kalle-Uhlmann, T., Arregui, M., Buijsse, B., & Boeing, H. (2015). Fruit and vegetable consumption and changes in anthropometric variables in adult populations: a systematic review and meta-analysis of prospective cohort studies. *PLOS ONE*, *10*(10), e0140846. https://doi.org/10.1371/journal.pone.0140846
-
----
-
 **公正聲明：** 本文無品牌贊助。所有推薦與分析基於同儕審查學術文獻，不代表任何品牌立場。本文內容僅供飲食知識參考，不構成醫療或減重建議。任何體重管理計畫請諮詢醫師或合格營養師。

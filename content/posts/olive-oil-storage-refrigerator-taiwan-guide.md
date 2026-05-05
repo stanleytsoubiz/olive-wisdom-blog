@@ -99,18 +99,6 @@ faq:
 
 ---
 
-## 參考文獻
-
-Aparicio-Ruiz, R., Mínguez-Mosquera, M. I., & Gandul-Rojas, B. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, *63*(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187
-
-Coutelieris, F. A., & Kanavouras, A. (2006). Experimental and theoretical investigation of packaged olive oil: Development of a quality indicator based on mathematical predictions. *Journal of Food Engineering*, *73*(1), 85–92. https://doi.org/10.1016/j.jfoodeng.2005.01.008
-
-Lazarou, V., Koidis, A., & Georgiadou, E. C. (2024). Long-term stability of extra virgin olive oil: effects of filtration and refrigeration storage on the Kolovi variety. *Journal of the Science of Food and Agriculture*, *104*(15), 9673–9683. https://doi.org/10.1002/jsfa.13792
-
-Méndez, A. I., & Falqué, E. (2007). Effect of storage time and container type on the quality of extra-virgin olive oil. *Food Control*, *18*(5), 521–529. https://doi.org/10.1016/j.foodcont.2005.12.012
-
----
-
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 *最後更新：2026-05-05｜知橄生活研究團隊審核*

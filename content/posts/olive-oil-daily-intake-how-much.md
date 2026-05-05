@@ -105,16 +105,4 @@ faq:
 
 ---
 
-## 參考文獻
-
-Covas, M.-I., Nyyssönen, K., Poulsen, H. E., Kaikkonen, J., Zunft, H.-J. F., Kiesewetter, H., ... & Marrugat, J. (2006). The effect of polyphenols in olive oil on heart disease risk factors: a randomized trial. *Annals of Internal Medicine*, *145*(5), 333–341. https://doi.org/10.7326/0003-4819-145-5-200609050-00006
-
-Estruch, R., Ros, E., Salas-Salvadó, J., Covas, M.-I., Corella, D., Arós, F., ... & PREDIMED Study Investigators. (2018). Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. *New England Journal of Medicine*, *378*(25), e34. https://doi.org/10.1056/NEJMoa1800389
-
-Guasch-Ferré, M., Hu, F. B., Martínez-González, M. A., Fitó, M., Bulló, M., Estruch, R., ... & Salas-Salvadó, J. (2014). Olive oil intake and risk of cardiovascular disease and mortality in the PREDIMED Study. *BMC Medicine*, *12*, 78. https://doi.org/10.1186/1741-7015-12-78
-
-Schwingshackl, L., Christoph, M., & Hoffmann, G. (2022). Effect of olive oil consumption on cardiovascular disease, cancer, type 2 diabetes, and all-cause mortality: a systematic review and meta-analysis. *Clinical Nutrition*, *42*(1), 498–507. https://doi.org/10.1016/j.clnu.2022.10.001
-
----
-
 **公正聲明：** 本文無品牌贊助。所有產品類別描述與劑量資訊均基於同儕審查學術文獻，不代表任何品牌立場。本文內容僅供飲食知識參考，不構成醫療建議。
