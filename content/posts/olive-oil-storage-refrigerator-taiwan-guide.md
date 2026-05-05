@@ -12,7 +12,7 @@ focusKeyword: "橄欖油要放冰箱嗎"
 coverAlt: "一瓶深色玻璃瓶裝的特級初榨橄欖油，放置於陰暗廚房櫃子中，旁邊沒有爐火或陽光"
 sources:
   - "Méndez, A. I., & Falqué, E. (2007). Effect of storage time and container type on the quality of extra-virgin olive oil. Food Control, 18(5), 521–529. https://doi.org/10.1016/j.foodcont.2005.12.012"
-  - "Aparicio-Ruiz, R., Mínguez-Mosquera, M. I., & Gandul-Rojas, B. (2015). Stability of Virgin Olive Oil Phenolic Compounds during Long-Term Storage (18 Months) at Temperatures of 5–50 °C. Journal of Agricultural and Food Chemistry, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"
+  - "Krichene, D., Salvador, M. D., & Fregapane, G. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. Journal of Agricultural and Food Chemistry, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"
   - "Lazarou, V., Koidis, A., & Georgiadou, E. C. (2024). Long-term stability of extra virgin olive oil: effects of filtration and refrigeration storage on the Kolovi variety. Journal of the Science of Food and Agriculture, 104(15), 9673–9683. https://doi.org/10.1002/jsfa.13792"
   - "Coutelieris, F. A., & Kanavouras, A. (2006). Experimental and theoretical investigation of packaged olive oil: Development of a quality indicator based on mathematical predictions. Journal of Food Engineering, 73(1), 85–92. https://doi.org/10.1016/j.jfoodeng.2005.01.008"
 faq:

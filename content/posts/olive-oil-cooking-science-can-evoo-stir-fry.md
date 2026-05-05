@@ -12,7 +12,7 @@ focusKeyword: "橄欖油炒菜"
 coverAlt: "特級初榨橄欖油在鑄鐵鍋中加熱，地中海陽光灑落廚房場景"
 sources:
   - "Kiritsakis, A. et al. (1998). Volatile compounds in olive oils from different varieties of Cretan olive trees. Grasas y Aceites, 49(3-4), 322–328."
-  - "Daskalaki, D. et al. (2009). Effect of heating and storage on the phenolic profile of olive oil. Journal of Agricultural and Food Chemistry, 57(23), 11220–11229. https://doi.org/10.1021/jf9026517"
+  - "Daskalaki, D., Kefi, G., Kotsiou, K., & Tasioula-Margari, M. (2009). Evaluation of phenolic compounds degradation in virgin olive oil during storage and heating. Journal of Food and Nutrition Research, 48(1), 42–50."
   - "IOC (2019). Trade Standard Applying to Olive Oils. COI/T.15/NC No 3/Rev. 17. https://www.internationaloliveoil.org/"
   - "Kalogeropoulos, N. & Tsimidou, M.Z. (2014). Antioxidants in Greek Virgin Olive Oils. Antioxidants, 3(2), 387–413. https://doi.org/10.3390/antiox3020387"
   - "Totani, N. et al. (2012). Deterioration of Heated Frying Oils. Journal of Oleo Science, 61(11), 601–607."

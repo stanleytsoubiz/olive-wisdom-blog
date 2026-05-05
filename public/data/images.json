@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-05T04:20:27.828Z",
+      "date": "2026-05-05T07:10:47.828Z",
       "generated": 1,
-      "total_articles": 36
+      "total_articles": 39
     }
   },
   "hero": {
@@ -361,6 +361,30 @@
       "generated_at": "2026-05-05",
       "quality_score": 9,
       "prompt": "two premium olive oil bottles side by side on aged marble — one dark glass labeled extra virgin, one lighter — split com"
+    },
+    "olive-oil-after-opening-shelf-life": {
+      "url": "/images/covers/olive-oil-after-opening-shelf-life.jpg",
+      "alt": "Olive Oil After Opening Shelf Life",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "half-opened premium dark glass olive oil bottle on warm wooden kitchen windowsill, soft afternoon light, subtle oxidatio"
+    },
+    "olive-oil-calories-fatty-acid-composition": {
+      "url": "/images/covers/olive-oil-calories-fatty-acid-composition.jpg",
+      "alt": "Olive Oil Calories Fatty Acid Composition",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "wooden measuring spoon filled with golden extra virgin olive oil beside a small scientific notebook showing molecular di"
+    },
+    "olive-oil-weight-loss-science": {
+      "url": "/images/covers/olive-oil-weight-loss-science.jpg",
+      "alt": "Olive Oil Weight Loss Science",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "fresh Mediterranean salad bowl with arugula, cherry tomatoes, and a generous drizzle of golden extra virgin olive oil, w"
     }
   },
   "fallback": {

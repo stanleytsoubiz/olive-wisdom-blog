@@ -17,8 +17,8 @@ tags:
   - "特級初榨橄欖油"
 sources:
   - "Méndez, A. I., & Falqué, E. (2007). Effect of storage time and container type on the quality of extra-virgin olive oil. Food Control, 18(5), 521–529. https://doi.org/10.1016/j.foodcont.2005.12.012"
-  - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission properties on quality characteristics of extra virgin olive oil. Food Control, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.011"
-  - "Aparicio-Ruiz, R., Mínguez-Mosquera, M. I., & Gandul-Rojas, B. (2015). Stability of Virgin Olive Oil Phenolic Compounds during Long-Term Storage (18 Months) at Temperatures of 5–50 °C. Journal of Agricultural and Food Chemistry, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"
+  - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission, temperature and storage time on quality characteristics of extra virgin olive oil. Food Control, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.019"
+  - "Krichene, D., Salvador, M. D., & Fregapane, G. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. Journal of Agricultural and Food Chemistry, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"
 faq:
   - q: "橄欖油開封後最多可以放多久？"
     a: "IOC（國際橄欖理事會）建議特級初榨橄欖油開封後應在 3–6 個月內用完。若儲存環境溫度超過 25°C（如台灣夏季廚房），建議縮短為 2–3 個月，以確保多酚活性與風味品質。"

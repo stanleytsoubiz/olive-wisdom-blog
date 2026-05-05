@@ -12,7 +12,7 @@ focusKeyword: "羥基酪醇腦健康"
 sources:
   - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
   - "European Commission (2012). Commission Regulation (EU) No 432/2012 establishing a list of permitted health claims made on foods. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
-  - "Fernandez-Real, J.M. et al. (2012). A diet supplemented with hydroxytyrosol ameliorates dyslipidemia and reduces oxidative stress in healthy subjects. Journal of Nutrition, 142(8), 1390-1395. https://doi.org/10.3945/jn.111.148239"
+  - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological activities of phenolic compounds present in virgin olive oil. International Journal of Molecular Sciences, 11(2), 458–479. https://doi.org/10.3390/ijms11020458"
   - "Caruso, D. et al. (2023). Hydroxytyrosol Interference with Inflammaging via Modulation of Inflammation and Autophagy. Nutrients, 15(4):1070. https://pmc.ncbi.nlm.nih.gov/articles/PMC10096543/"
   - "Morris, M.C. et al. (2023). Trial of the MIND Diet for Prevention of Cognitive Decline in Older Persons. New England Journal of Medicine, 389(7):602-611. https://pubmed.ncbi.nlm.nih.gov/37466280/"
   - "Tejada, S. et al. (2021). Neuroprotective Effects of Hydroxytyrosol. Current Medicinal Chemistry, 28(17):3441-3460."

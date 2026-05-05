@@ -10,7 +10,7 @@ readTime: 10
 tags: ["橄欖油科學", "高多酚", "健康數據", "2026趨勢"]
 sources:
   - "European Commission (2012). Commission Regulation (EU) No 432/2012 of 16 May 2012 establishing a list of permitted health claims made on foods. *Official Journal of the European Union*, L 136, 1–40. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
-  - "Gorzynik-Debicka, M., Przychodzen, P., Cappello, F., Kuban-Jankowska, A., Marino Gammazza, A., Knap, N., Wozniak, M., & Gorska-Ponikowska, M. (2019). Potential health benefits of olive oil and plant polyphenols. *International Journal of Molecular Sciences*, 20(3), 686. https://doi.org/10.3390/ijms20030686"
+  - "Gorzynik-Debicka, M., Przychodzen, P., Cappello, F., Kuban-Jankowska, A., Marino Gammazza, A., Knap, N., Wozniak, M., & Gorska-Ponikowska, M. (2018). Potential health benefits of olive oil and plant polyphenols. *International Journal of Molecular Sciences*, 19(3), 686. https://doi.org/10.3390/ijms19030686"
   - "IOC (2025). World olive oil figures 2024/2025. International Olive Council. https://www.internationaloliveoil.org/what-we-do/statistics/"
   - "Visioli, F., & Galli, C. (1998). Olive oil phenols and their potential effects on human health. *Journal of Agricultural and Food Chemistry*, 46(10), 4292–4296. https://doi.org/10.1021/jf980049c"
 coverAlt: "專業實驗室背景下的橄欖油樣品，展示多酚檢測數據"

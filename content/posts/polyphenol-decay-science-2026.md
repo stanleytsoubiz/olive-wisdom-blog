@@ -10,7 +10,7 @@ readTime: 9
 tags: ["多酚衰減", "保鮮科學", "羥基酪醇", "2026鑑定"]
 sources:
   - "Daskalaki, D., Kefi, G., Kotsiou, K., & Tasioula-Margari, M. (2009). Evaluation of phenolic compounds degradation in virgin olive oil during storage and heating. *Journal of Food and Nutrition Research*, 48(1), 31–41."
-  - "Reyes-Trujillo, A., Cert, A., & Garrido-Fernández, A. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, 63(29), 6619–6626. https://doi.org/10.1021/acs.jafc.5b02187"
+  - "Krichene, D., Salvador, M. D., & Fregapane, G. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"
   - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission, temperature and storage time on quality characteristics of extra virgin olive oil. *Food Control*, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.019"
   - "Visioli, F., & Galli, C. (1998). Olive oil phenols and their potential effects on human health. *Journal of Agricultural and Food Chemistry*, 46(10), 4292–4296. https://doi.org/10.1021/jf980049c"
 coverAlt: "微觀下的橄欖油分子結構與時間流逝的意象圖"
