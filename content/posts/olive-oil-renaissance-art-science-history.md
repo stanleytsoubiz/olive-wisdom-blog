@@ -9,8 +9,9 @@ author: "知橄生活研究團隊"
 readTime: 8
 tags: ["文藝復興", "藝術史", "橄欖油", "達文西"]
 sources:
-  - "Finaldi, G. (2000). The Image of Christ"
-  - "Cennini, C. (c.1400). Il Libro dell'Arte"
+  - "Cennini, C. d'A. (1954). *The craftsman's handbook: The Italian 'Il libro dell'arte'* (D. V. Thompson Jr., Trans.). Dover Publications. (Original work c. 1400)"
+  - "Broecke, L. (Trans.). (2015). *Cennino Cennini's Il libro dell'arte: A new English language translation and commentary with Italian transcription*. Archetype Publications."
+  - "Finaldi, G. (Ed.). (2000). *The image of Christ*. National Gallery Company."
 published: true
 coverAlt: "文藝復興風格油畫質感背景，達文西時代的橄欖油顏料調色藝術歷史場景｜知橄生活"
 focusKeyword: "文藝復興橄欖油"

@@ -9,8 +9,9 @@ author: "知橄生活研究團隊"
 readTime: 8
 tags: ["絲路", "貿易史", "橄欖油", "文明交流"]
 sources:
-  - "Seland, E.H. (2016). The Silk Road Origins"
-  - "Tchernia, A. (1986). Le vin de l'Italie romaine"
+  - "Seland, E. H. (2014). Archaeology of trade in the western Indian Ocean, 300 BC–AD 700. *Journal of Archaeological Research*, 22(4), 367–402. https://doi.org/10.1007/s10814-014-9075-7"
+  - "Tchernia, A. (1986). *Le vin de l'Italie romaine: Essai d'histoire économique d'après les amphores* (Bibliothèque des Écoles françaises d'Athènes et de Rome, 261). École française de Rome."
+  - "Ridgway, D. (1992). *The first western Greeks*. Cambridge University Press."
 published: true
 coverAlt: "古代絲路貿易路線地圖與橄欖油陶罐，東西方文明交流的液態黃金歷史｜知橄生活"
 focusKeyword: "絲路橄欖油歷史"

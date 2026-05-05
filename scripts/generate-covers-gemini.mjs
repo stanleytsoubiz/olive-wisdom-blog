@@ -167,6 +167,9 @@ const COVER_PROMPTS = {
   'olive-oil-stir-fry-cancer-myth-debunked':
     'cast iron skillet with golden olive oil shimmering on worn wooden surface, fresh garlic and cherry tomatoes beside, warm morning kitchen window light, Mediterranean home cooking still life, reassuring and calm atmosphere, Kinfolk editorial food photography, film grain, no smoke, no flames, no text',
 
+  'olive-oil-storage-refrigerator-taiwan-guide':
+    'dark glass bottle of premium extra virgin olive oil placed inside a shadowy kitchen cabinet away from light, cool and calm interior atmosphere, soft diffused natural light, food preservation editorial concept, Kinfolk still life photography, muted earth tones, no text',
+
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',

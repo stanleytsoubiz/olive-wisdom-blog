@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-05T03:39:03.398Z",
-      "generated": 1,
-      "total_articles": 32
+      "date": "2026-05-05T03:54:40.671Z",
+      "generated": 2,
+      "total_articles": 33
     }
   },
   "hero": {
@@ -155,13 +155,12 @@
       "prompt": "elegant morning ritual tablespoon of golden EVOO, white ceramic spoon soft sunrise light, minimalist lifestyle photograp"
     },
     "evoo-sensory-evaluation-ioc-standards": {
-      "url": "https://picture-search.skywork.ai/skills/upload/2026-04-17/1bf7c22a57b7469d8d47e9ec5ade4473_dfdf0.png",
-      "alt": "橄欖油感官評鑑 IOC 標準",
-      "credit": "Unsplash",
-      "source": "skywork_ai",
-      "prompt": "professional olive oil tasting, expert smelling cobalt blue glass, sensory evaluation, white tablecloth, warm studio lighting, sommelier aesthetic, food photography",
-      "generated_at": "2026-04-17",
-      "quality_score": 9
+      "url": "/images/covers/evoo-sensory-evaluation-ioc-standards.jpg",
+      "alt": "Evoo Sensory Evaluation Ioc Standards",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "cobalt blue professional olive oil tasting glass filled with golden oil, white linen napkin, tasting notes notebook and "
     },
     "olive-oil-fraud-detection-authentic-vs-fake": {
       "url": "/images/covers/olive-oil-fraud-detection-authentic-vs-fake.jpg",
@@ -330,6 +329,14 @@
       "generated_at": "2026-05-05",
       "quality_score": 9,
       "prompt": "cast iron skillet with golden olive oil shimmering on worn wooden surface, fresh garlic and cherry tomatoes beside, warm"
+    },
+    "olive-oil-storage-refrigerator-taiwan-guide": {
+      "url": "/images/covers/olive-oil-storage-refrigerator-taiwan-guide.jpg",
+      "alt": "Olive Oil Storage Refrigerator Taiwan Guide",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "dark glass bottle of premium extra virgin olive oil placed inside a shadowy kitchen cabinet away from light, cool and ca"
     }
   },
   "fallback": {

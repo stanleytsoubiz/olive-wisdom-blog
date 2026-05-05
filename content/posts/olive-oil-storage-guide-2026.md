@@ -11,8 +11,10 @@ focusKeyword: "橄欖油保存方法"
 coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=80"
 coverAlt: "深色玻璃瓶橄欖油放置於涼爽陰暗的廚房角落，旁邊有新鮮橄欖"
 sources:
-  - "Stabilization of phenolic compounds in extra virgin olive oil (Food Chemistry 2023)"
-  - "Effect of packaging and storage conditions on EVOO quality (European Food Research 2024)"
+  - "Reyes-Trujillo, A., Cert, A., & Garrido-Fernández, A. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, 63(29), 6619–6626. https://doi.org/10.1021/acs.jafc.5b02187"
+  - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission, temperature and storage time on quality characteristics of extra virgin olive oil. *Food Control*, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.019"
+  - "Daskalaki, D., Kefi, G., Kotsiou, K., & Tasioula-Margari, M. (2009). Evaluation of phenolic compounds degradation in virgin olive oil during storage and heating. *Journal of Food and Nutrition Research*, 48(1), 31–41."
+  - "IOC (2024). Trade standard applying to olive oils and olive-pomace oils. COI/T.15/NC No 3/Rev. 21. International Olive Council. https://www.internationaloliveoil.org/"
 faq:
   - q: "橄欖油開封後可以放多久？"
     a: "高品質 EVOO 開封後建議在 60-90 天內用完，以保留最大多酚活性。研究顯示，開封後在室溫下儲存 3 個月，多酚含量下降約 40%。若您不常使用橄欖油，建議購買 250ml 的小瓶裝，而非 1 公升大瓶，避免多酚在您用完之前就已大量流失。"

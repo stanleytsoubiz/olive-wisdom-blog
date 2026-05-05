@@ -9,8 +9,9 @@ author: "知橄生活研究團隊"
 readTime: 9
 tags: ["古埃及", "歷史", "橄欖油", "文明"]
 sources:
-  - "J. Matalas, Olive Oil in Ancient Egypt, 2018"
-  - "Ebers Papyrus (c.1550 BC)"
+  - "Bryan, C. P. (Trans.). (1974). *The Papyrus Ebers*. Ares Publishers. (Original work c. 1550 BC)"
+  - "Ridgway, D. (1992). *The first western Greeks*. Cambridge University Press."
+  - "Zohary, D., Hopf, M., & Weiss, E. (2012). *Domestication of plants in the Old World: The origin and spread of domesticated plants in Southwest Asia, Europe, and the Mediterranean Basin* (4th ed.). Oxford University Press."
 published: true
 coverAlt: "古埃及風格的橄欖油陶罐與象形文字石刻，法老時代的聖油儀式歷史場景｜知橄生活"
 focusKeyword: "古埃及橄欖油"
