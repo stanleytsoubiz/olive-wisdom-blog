@@ -170,6 +170,9 @@ const COVER_PROMPTS = {
   'olive-oil-storage-refrigerator-taiwan-guide':
     'dark glass bottle of premium extra virgin olive oil placed inside a shadowy kitchen cabinet away from light, cool and calm interior atmosphere, soft diffused natural light, food preservation editorial concept, Kinfolk still life photography, muted earth tones, no text',
 
+  'olive-oil-daily-intake-how-much':
+    'white marble table with a premium extra virgin olive oil bottle and a measuring spoon beside a small shallow dish filled with golden olive oil, warm morning light, Mediterranean healthy lifestyle editorial, clean minimalist composition, Kinfolk food photography, no text',
+
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',

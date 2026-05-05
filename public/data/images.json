@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-05T03:54:40.671Z",
-      "generated": 2,
-      "total_articles": 33
+      "date": "2026-05-05T03:56:44.914Z",
+      "generated": 1,
+      "total_articles": 34
     }
   },
   "hero": {
@@ -337,6 +337,14 @@
       "generated_at": "2026-05-05",
       "quality_score": 9,
       "prompt": "dark glass bottle of premium extra virgin olive oil placed inside a shadowy kitchen cabinet away from light, cool and ca"
+    },
+    "olive-oil-daily-intake-how-much": {
+      "url": "/images/covers/olive-oil-daily-intake-how-much.jpg",
+      "alt": "Olive Oil Daily Intake How Much",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "white marble table with a premium extra virgin olive oil bottle and a measuring spoon beside a small shallow dish filled"
     }
   },
   "fallback": {
