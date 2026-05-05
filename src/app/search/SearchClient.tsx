@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { trackSearch } from '@/components/GoogleAnalytics';
 
 interface PagefindResult {
   id: string;
@@ -61,6 +62,7 @@ export default function SearchClient() {
     }
     setLoading(true);
     setSearched(true);
+    if (q.trim().length >= 2) trackSearch(q.trim());
     try {
       const response = await pagefindRef.current.search(q);
       const data = await Promise.all(
