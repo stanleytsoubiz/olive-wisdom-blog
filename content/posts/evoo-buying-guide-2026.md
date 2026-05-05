@@ -148,13 +148,13 @@ Before purchasing, run through this five-point verification:
 ☐ **Polyphenol claim** supported by third-party CoA (>300mg/kg minimum)  
 ☐ **Packaging** in dark glass or tin—clear glass is disqualifying  
 ☐ **Cultivar disclosed**—ideally Koroneiki, Picual, or Coratina  
-☐ **Price reality check**—authentic high-polyphenol EVOO costs $20–$60/500ml
+☐ **Price reality check**—authentic high-polyphenol EVOO costs $20–$60/500ml---
+
+
 
 ---
 
-*Disclosure: This guide is for educational purposes. Some product links may be affiliate links, which support our science-based editorial mission. Always consult with a healthcare provider before starting high-dosage polyphenol regimens.*
-
----
+**公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ## 延伸閱讀
 
