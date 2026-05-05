@@ -253,7 +253,10 @@ export default async function HomePage() {
                                      group-hover:text-olive-800 transition-colors tracking-tight line-clamp-2">
                         {post.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400 pt-3 border-t border-stone-100 mt-3">
+                      <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed font-sans mb-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400 pt-3 border-t border-stone-100">
                         <span>{post.readTime} min</span>
                         <span className="text-stone-200">·</span>
                         <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
