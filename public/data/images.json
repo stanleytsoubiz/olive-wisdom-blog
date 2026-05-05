@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-05T03:56:44.914Z",
+      "date": "2026-05-05T04:05:36.844Z",
       "generated": 1,
-      "total_articles": 34
+      "total_articles": 35
     }
   },
   "hero": {
@@ -345,6 +345,14 @@
       "generated_at": "2026-05-05",
       "quality_score": 9,
       "prompt": "white marble table with a premium extra virgin olive oil bottle and a measuring spoon beside a small shallow dish filled"
+    },
+    "olive-oil-bitterness-pungency-quality-guide": {
+      "url": "/images/covers/olive-oil-bitterness-pungency-quality-guide.jpg",
+      "alt": "Olive Oil Bitterness Pungency Quality Guide",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-05",
+      "quality_score": 9,
+      "prompt": "close-up tasting moment of extra virgin olive oil poured into a small cobalt blue glass tasting cup, slightly green-gold"
     }
   },
   "fallback": {

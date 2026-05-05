@@ -173,6 +173,12 @@ const COVER_PROMPTS = {
   'olive-oil-daily-intake-how-much':
     'white marble table with a premium extra virgin olive oil bottle and a measuring spoon beside a small shallow dish filled with golden olive oil, warm morning light, Mediterranean healthy lifestyle editorial, clean minimalist composition, Kinfolk food photography, no text',
 
+  'olive-oil-bitterness-pungency-quality-guide':
+    'close-up tasting moment of extra virgin olive oil poured into a small cobalt blue glass tasting cup, slightly green-gold oil catching warm side light, rustic wooden table, sensory evaluation concept, olive harvest backdrop, Kinfolk editorial still life, muted tones, no text',
+
+  'olive-oil-evoo-vs-regular-complete-comparison':
+    'two premium olive oil bottles side by side on aged marble — one dark glass labeled extra virgin, one lighter — split composition with warm afternoon light, quality comparison editorial concept, Mediterranean kitchen backdrop, Kinfolk photography style, no text',
+
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',
