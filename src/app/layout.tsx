@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import BottomNav from '@/components/BottomNav';
 import SubscribeForm from '@/components/SubscribeForm';
 import ScrollHeader from '@/components/ScrollHeader';
 import MobileMenu from '@/components/MobileMenu';
@@ -176,13 +175,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </div>
         </ScrollHeader>
 
-        {/* Page Content — add bottom padding on mobile for BottomNav */}
-        <div className="flex-1 pb-[60px] md:pb-0" style={{ paddingBottom: 'max(60px, calc(60px + env(safe-area-inset-bottom)))' }}>
+        {/* Page Content */}
+        <div className="flex-1">
           {children}
         </div>
-
-        {/* Bottom Navigation — mobile only */}
-        <BottomNav />
 
         {/* Global Footer */}
         <footer className="bg-olive-900 text-olive-200" data-pagefind-ignore>

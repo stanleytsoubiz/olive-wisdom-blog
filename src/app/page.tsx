@@ -97,7 +97,7 @@ export default async function HomePage() {
       }) }} />
 
       {/* Hero — Kinfolk 底部錨定式 editorial */}
-      <section className="relative h-[88vh] min-h-[520px] max-h-[800px] overflow-hidden">
+      <section className="relative h-[52vh] md:h-[88vh] min-h-[360px] md:min-h-[520px] max-h-[520px] md:max-h-[800px] overflow-hidden">
         <Image src={heroSrc} alt={heroAlt} fill className="object-cover object-center" priority sizes="100vw" quality={90} />
         {/* Bottom-anchored gradient — darkens bottom for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -139,7 +139,7 @@ export default async function HomePage() {
 
       {/* ── 意圖入口導航 — "我想找什麼" ────────────────────────── */}
       <section id="intent" className="bg-white border-b border-stone-100">
-        <div className="max-w-5xl mx-auto px-5 md:px-6 py-12">
+        <div className="max-w-5xl mx-auto px-5 md:px-6 py-6 md:py-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-stone-200" />
             <p className="text-xs font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase whitespace-nowrap">
