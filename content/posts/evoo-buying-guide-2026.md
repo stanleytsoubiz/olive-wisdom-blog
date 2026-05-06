@@ -19,7 +19,7 @@ sources:
   - "Beauchamp, G.K. et al. (2005). Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil. Nature, 437:45–46. https://doi.org/10.1038/437045a"
 faq:
   - q: "選購 EVOO 的多酚含量最低門檻是多少？"
-    a: "依據 EFSA 健康聲明標準，EVOO 需含至少 250mg/kg 總多酚，才能在每日 20ml 攝取量下達到「每日 5mg 羥基酪醇及其衍生物」的心血管保護劑量（EU Regulation No 432/2012）。追求最大健康效益應選擇 400–800mg/kg 等級。頂級 NYIOOC 金牌油通常超過 500mg/kg。購買前務必索取第三方 CoA（Certificate of Analysis）確認多酚數值。"
+    a: "依據 EFSA 健康聲明標準，EVOO 需含至少 250mg/kg 總多酚，才能在每日 20ml 攝取量下達到「每日 5mg 羥基酪醇及其衍生物」的心血管保護劑量（EU Regulation No 432/2012）。追求最大健康效益應選擇 400–800mg/kg 等級。頂級 NYIOOC 金牌油通常超過 500mg/kg。購買前務必索取第三方 CoA（Certificate of Analysis）確認多酚數值。我們的建議是：日常料理兼顧健康→優先找 ≥250mg/kg 且有採收日期的油；以神經保護或抗炎為明確目標→門檻提升至 ≥400mg/kg，CoA 核實必做。"
   - q: "高多酚 EVOO 開封後多久需用完？"
     a: "開封後建議在 60–90 天內用完以保留最大多酚活性。研究顯示，室溫儲存 3 個月後多酚含量約下降 40%。延長新鮮度的方法：存放於陰暗涼爽處（理想 15–18°C）、每次使用後立即旋緊瓶蓋、遠離爐灶熱源、選購 250–500ml 小瓶裝（避免長期開封）。"
   - q: "義大利橄欖油真的比西班牙或希臘更好嗎？"
@@ -52,6 +52,8 @@ Not all Extra Virgin Olive Oils are created equal. The EU regulation that define
 | Basic | <100 mg/kg | Many blended oils | Not worth a health premium |
 
 **The Winners in 2026:** Brands like *Gaea* (Greek Koroneiki) and specific early-harvest *Picual* cultivars from Jaén, Spain, regularly exceed 500mg/kg. Single-estate *Coratina* from Puglia, Italy, has been recorded at over 800mg/kg in exceptional harvests.
+
+**In other words, the tier system clarifies what you're actually buying: below 100mg/kg is a cooking oil decision, 250–500mg/kg is a health decision, and above 500mg/kg is a therapeutic decision—each demands a different level of sourcing rigor.**
 
 **Scientific mechanism:** Polyphenols—particularly Oleocanthal—inhibit the COX-1 and COX-2 enzymes, producing an anti-inflammatory effect chemically analogous to low-dose ibuprofen. At 50ml/day of a high-polyphenol EVOO, the Oleocanthal dose approaches the equivalent of ~10% of a standard ibuprofen tablet.
 
@@ -150,7 +152,11 @@ Before purchasing, run through this five-point verification:
 ☐ **Polyphenol claim** supported by third-party CoA (>300mg/kg minimum)  
 ☐ **Packaging** in dark glass or tin—clear glass is disqualifying  
 ☐ **Cultivar disclosed**—ideally Koroneiki, Picual, or Coratina  
-☐ **Price reality check**—authentic high-polyphenol EVOO costs $20–$60/500ml---
+☐ **Price reality check**—authentic high-polyphenol EVOO costs $20–$60/500ml
+
+**If you remember one thing: the harvest date and a third-party CoA are non-negotiable for therapeutic-grade EVOO—every other label claim is secondary until these two are verified.**
+
+---
 
 
 
