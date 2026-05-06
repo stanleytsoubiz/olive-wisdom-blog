@@ -75,15 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  // Tag pages — collect all unique tags
-  const tagSet = new Set<string>();
-  posts.forEach((p) => (p.tags || []).forEach((t) => tagSet.add(t)));
-  const tagPages: MetadataRoute.Sitemap = Array.from(tagSet).map((tag) => ({
-    url: `${baseUrl}/tags/${encodeURIComponent(tag)}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.65,
-  }));
+  // Tag pages excluded from sitemap — thin content, noindexed, conserve crawl budget
 
-  return [...staticPages, ...articlePages, ...tagPages];
+  return [...staticPages, ...articlePages];
 }
