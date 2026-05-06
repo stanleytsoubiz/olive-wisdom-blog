@@ -15,7 +15,7 @@ sources:
   - "Boccardi, V. et al. (2021). Modulation of Telomere Length by Mediterranean Diet, Caloric Restriction, and Exercise: Results from PREDIMED-Plus Study. Antioxidants, 10(10):1596. https://pubmed.ncbi.nlm.nih.gov/34679731/"
   - "Canudas, S. et al. (2020). Mediterranean Diet and Telomere Length: A Systematic Review and Meta-Analysis. Advances in Nutrition, 11(6):1544-1554. https://pmc.ncbi.nlm.nih.gov/articles/PMC7666892/"
   - "Caruso, D. et al. (2023). Hydroxytyrosol Interference with Inflammaging via Modulation of Inflammation and Autophagy. Nutrients, 15(4):1070. https://pmc.ncbi.nlm.nih.gov/articles/PMC10096543/"
-  - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033."
+  - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
   - "European Commission (2012). Commission Regulation (EU) No 432/2012. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
 faq:
   - q: "地中海飲食的抗老相關機制有哪些？"
@@ -32,7 +32,7 @@ faq:
 
 這個動作，在西班牙、希臘、義大利的廚房裡，每天早晨重複五百年。在 2026 年的台北，要把它變成日常底色，需要的不是「偶爾吃沙拉」的浪漫，而是一套**數據化的廚房操作策略**——從那一茶匙油的多酚含量、到一週幾次青背魚、到一年下來端粒長度的相關訊號。
 
-多項大型人體試驗——西班牙 [PREDIMED 研究](/blog/predimed-study-complete-explainer-olive-oil-heart)、義大利 EPIC 研究、希臘 ATTICA 研究——觀察到地中海飲食模式與心血管疾病、認知衰退、代謝症候群指標較低之間，有穩定的相關性。本文要做的，是把這些研究訊號，翻譯成你明天早上可以在廚房裡執行的具體動作。
+多項大型人體試驗——西班牙 [PREDIMED 研究](/blog/predimed-study-complete-explainer-olive-oil-heart)（**7,447 人、4.8 年追蹤，EVOO 組心血管事件風險約低 30%**）、義大利 EPIC 研究、希臘 ATTICA 研究——觀察到地中海飲食模式與心血管疾病、認知衰退、代謝症候群指標較低之間，有穩定的相關性。本文要做的，是把這些研究訊號，翻譯成你明天早上可以在廚房裡執行的具體動作。
 
 ## 地中海飲食的三組抗老相關機制
 

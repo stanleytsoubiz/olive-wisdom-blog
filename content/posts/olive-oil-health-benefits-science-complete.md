@@ -10,14 +10,14 @@ coverImage: "/images/covers/olive-oil-health-benefits-science-complete.jpg"
 readTime: 15
 focusKeyword: "橄欖油功效"
 sources:
-  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34."
-  - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033."
-  - "Martínez-González, M.A., et al. (2015). Olive oil consumption and risk of CHD and/or stroke: a meta-analysis of case-control, cohort and intervention studies. British Journal of Nutrition, 114(7), 1–12."
-  - "Abuznait, A. H., et al. (2013). Olive-Oil-Derived Oleocanthal Enhances β-Amyloid Clearance as a Potential Neuroprotective Mechanism against Alzheimer's Disease. ACS Chemical Neuroscience, 4(6), 973–982."
-  - "Konstantinidou, V., et al. (2010). In vivo nutrigenomic effects of virgin olive oil polyphenols within the frame of the Mediterranean diet: a randomized controlled trial. The FASEB Journal, 24(7), 2546–2557."
-  - "Psaltopoulou, T., et al. (2011). Olive oil intake is inversely related to cancer prevalence: a systematic review and a meta-analysis of 13,800 patients and 23,340 controls in 19 observational studies. Lipids in Health and Disease, 10, 127."
-  - "Barbaro, B., et al. (2014). Effects of the Olive-Derived Polyphenol Oleuropein on Human Health. International Journal of Molecular Sciences, 15(10), 18508–18524."
-  - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological Activities of Phenolic Compounds Present in Virgin Olive Oil. International Journal of Molecular Sciences, 11(2), 458–479."
+  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
+  - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
+  - "Martínez-González, M.A., et al. (2015). Olive oil consumption and risk of CHD and/or stroke: a meta-analysis of case-control, cohort and intervention studies. British Journal of Nutrition, 114(7), 1–12. https://doi.org/10.1017/S0007114515002452"
+  - "Abuznait, A. H., et al. (2013). Olive-Oil-Derived Oleocanthal Enhances β-Amyloid Clearance as a Potential Neuroprotective Mechanism against Alzheimer's Disease. ACS Chemical Neuroscience, 4(6), 973–982. https://doi.org/10.1021/cn400024q"
+  - "Konstantinidou, V., et al. (2010). In vivo nutrigenomic effects of virgin olive oil polyphenols within the frame of the Mediterranean diet: a randomized controlled trial. The FASEB Journal, 24(7), 2546–2557. https://doi.org/10.1096/fj.09-148452"
+  - "Psaltopoulou, T., et al. (2011). Olive oil intake is inversely related to cancer prevalence: a systematic review and a meta-analysis of 13,800 patients and 23,340 controls in 19 observational studies. Lipids in Health and Disease, 10, 127. https://doi.org/10.1186/1476-511X-10-127"
+  - "Barbaro, B., et al. (2014). Effects of the Olive-Derived Polyphenol Oleuropein on Human Health. International Journal of Molecular Sciences, 15(10), 18508–18524. https://doi.org/10.3390/ijms151018508"
+  - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological Activities of Phenolic Compounds Present in Virgin Olive Oil. International Journal of Molecular Sciences, 11(2), 458–479. https://doi.org/10.3390/ijms11020458"
 faq:
   - q: "橄欖油最主要的健康關聯效益是什麼？"
     a: "目前證據最完整的關聯包含：(1) 與心血管事件較低風險相關（PREDIMED 研究：複合心血管事件發生率減少約 30%）；(2) 與 LDL 脂蛋白較低氧化程度相關（EFSA 正式認可的健康聲稱）；(3) 與抗炎指標改善相關（Oleocanthal 對 COX 酶活性的抑制機理）；(4) 與認知功能維持相關（β-澱粉樣蛋白清除研究）；(5) 與細胞氧化壓力降低相關（多酚對 DNA 氧化損傷的研究）。"
@@ -37,7 +37,7 @@ faq:
 
 「這個嗆，就是多酚在跟你打招呼。」
 
-那一刻我們意識到，橄欖油的「科學」不是抽象的概念。它是可以聞到、嘗到、刻在喉頭的真實分子訊號。從 1958 年 Ancel Keys 的「七國研究」（Seven Countries Study）到 2003–2013 年追蹤 7,447 人的 PREDIMED 隨機對照試驗，橄欖油累積了超過 60 年的同儕審查文獻——這不是行銷話術，而是 PubMed 資料庫中可查到的 15,000 篇以上研究論文。
+那一刻我們意識到，橄欖油的「科學」不是抽象的概念。它是可以聞到、嘗到、刻在喉頭的真實分子訊號。從 1958 年 Ancel Keys 的「七國研究」（Seven Countries Study）到 2003–2013 年追蹤 **7,447 人、歷時 4.8 年**的 PREDIMED 隨機對照試驗（EVOO 補充組與複合心血管事件較低風險 **30%** 相關，HR=0.69），橄欖油累積了超過 60 年的同儕審查文獻——這不是行銷話術，而是 PubMed 資料庫中可查到的 15,000 篇以上研究論文。
 
 但科學的複雜性在於：不是所有聲稱都有同等品質的證據支持。本文以分級框架呈現現有研究：
 

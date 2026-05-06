@@ -10,11 +10,11 @@ coverImage: "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jp
 readTime: 13
 focusKeyword: "PREDIMED研究"
 sources:
-  - "Estruch, R., et al. (2013). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet. New England Journal of Medicine, 368(14), 1279–1290."
-  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. [Corrected and Republished]"
-  - "Guasch-Ferré, M., et al. (2014). Olive oil intake and risk of cardiovascular disease and mortality in the PREDIMED Study. BMC Medicine, 12, 78."
-  - "Martínez-González, M.A., et al. (2017). Benefits of the Mediterranean Diet: Insights From the PREDIMED Study. Progress in Cardiovascular Diseases, 58(1), 50–60."
-  - "Schwingshackl, L., & Hoffmann, G. (2014). Monounsaturated fatty acids, olive oil and health status: a systematic review and meta-analysis of cohort studies. Lipids in Health and Disease, 13, 154."
+  - "Estruch, R., et al. (2013). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet. New England Journal of Medicine, 368(14), 1279–1290. https://doi.org/10.1056/NEJMoa1200303"
+  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. [Corrected and Republished] https://doi.org/10.1056/NEJMoa1800389"
+  - "Guasch-Ferré, M., et al. (2014). Olive oil intake and risk of cardiovascular disease and mortality in the PREDIMED Study. BMC Medicine, 12, 78. https://doi.org/10.1186/1741-7015-12-78"
+  - "Martínez-González, M.A., et al. (2017). Benefits of the Mediterranean Diet: Insights From the PREDIMED Study. Progress in Cardiovascular Diseases, 58(1), 50–60. https://doi.org/10.1016/j.pcad.2015.04.003"
+  - "Schwingshackl, L., & Hoffmann, G. (2014). Monounsaturated fatty acids, olive oil and health status: a systematic review and meta-analysis of cohort studies. Lipids in Health and Disease, 13, 154. https://doi.org/10.1186/1476-511X-13-154"
 faq:
   - q: "PREDIMED 研究的主要發現是什麼？"
     a: "PREDIMED 研究觀察到，補充特級初榨橄欖油（EVOO）的地中海飲食組，與低脂飲食組相比，心血管事件（心臟病發作、中風、心血管疾病死亡）發生率約低 30%（HR 0.69），是迄今最大規模的地中海飲食隨機對照試驗之一。"
@@ -34,7 +34,7 @@ faq:
 
 那一年的 2 月 25 日，《新英格蘭醫學期刊》（NEJM）刊出論文，把那杯帶著青草氣與微微嗆喉的西班牙橄欖油，從廚房擺到了循證醫學的最高殿堂。核心數據：補充特級初榨橄欖油的地中海飲食組，與心血管事件（心肌梗塞、中風、心血管疾病死亡）較低發生率顯著相關，相對風險約低 **30%**。
 
-這不是實驗室裡幾隻老鼠的數據，也不是觀察性研究的問卷推論。這是 7,447 名真實受試者、近五年追蹤、由倫理委員會親手叫停的隨機對照試驗。
+這不是實驗室裡幾隻老鼠的數據，也不是觀察性研究的問卷推論。這是 **7,447 名**真實受試者、**4.8 年**追蹤、由倫理委員會親手叫停的隨機對照試驗。補充 EVOO 組的複合心血管事件風險約低 **30%**，中風風險約低 **39%**（HR 0.61）。
 
 ## PREDIMED：研究背景與設計
 

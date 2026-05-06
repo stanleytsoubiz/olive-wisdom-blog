@@ -10,11 +10,11 @@ coverImage: "/images/covers/olive-oil-daily-intake-dosage-science.jpg"
 readTime: 9
 focusKeyword: "橄欖油每天攝取量"
 sources:
-  - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033."
-  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34."
-  - "Zamora-Ros, R., et al. (2016). Dietary intake and food sources of individual dietary polyphenols in a sample of UK adults. European Journal of Nutrition, 55(5), 1775–1788."
-  - "Beauchamp, G. K., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature, 437(7055), 45–46."
-  - "Keys, A. (1970). Coronary heart disease in seven countries. Circulation, 41(Suppl 1), I1–I211."
+  - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
+  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
+  - "Zamora-Ros, R., et al. (2016). Dietary intake and food sources of individual dietary polyphenols in a sample of UK adults. European Journal of Nutrition, 55(5), 1775–1788. https://doi.org/10.1007/s00394-015-0981-1"
+  - "Beauchamp, G. K., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature, 437(7055), 45–46. https://doi.org/10.1038/437045a"
+  - "Keys, A. (1970). Coronary heart disease in seven countries. Circulation, 41(Suppl 1), I1–I211. https://doi.org/10.1161/01.CIR.41.4S1.I-1"
 faq:
   - q: "每天吃多少橄欖油最好？"
     a: "根據 EFSA（歐盟食品安全局）的健康聲稱規定，每天攝取 20ml（約 1.5 湯匙）的特級初榨橄欖油，與血脂氧化保護的多酚攝入量達標相關（前提是 EVOO 的多酚含量 ≥250mg/kg）。PREDIMED 研究中受試者平均每天攝入約 50ml（約 4 湯匙），以烹飪為主。對於一般健康成年人，建議每天 1–4 湯匙（15–60ml）作為主要烹飪用油。我們的建議是：日常保健為主→以 20–30ml 取代現有烹飪用油，確保多酚 ≥250mg/kg；積極追求抗炎或心血管保護→每日 40–50ml，與 PREDIMED 設計劑量接近，但務必確認整體熱量不超標。"

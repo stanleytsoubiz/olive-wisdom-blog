@@ -9,11 +9,11 @@ excerpt: "橄欖油中含量最豐富的多酚——羥基酪醇（Hydroxytyroso
 coverImage: "/images/covers/hydroxytyrosol-brain-cognition-memory.jpg"
 readTime: 8
 sources:
-  - "Bucciantini, M. et al. (2021). Hydroxytyrosol Prevents Amyloid Aggregation and Cytotoxicity. ACS Chemical Neuroscience."
-  - "Valls-Pedret, C. et al. (2015). Mediterranean Diet and Cognitive Function. JAMA Internal Medicine."
-  - "Rigacci, S. et al. (2015). Oleuropein aglycone prevents cytotoxic amyloid aggregation. Phytomedicine."
-  - "EFSA Panel (2011). Scientific Opinion on hydroxytyrosol health claims. EFSA Journal."
-  - "Harvard T.H. Chan School of Public Health (2023). Olive Oil and Brain Health. Nutrition Source."
+  - "Bucciantini, M. et al. (2021). Hydroxytyrosol Prevents Amyloid Aggregation and Cytotoxicity. ACS Chemical Neuroscience, 12(4), 702–711. https://doi.org/10.1021/acschemneuro.0c00763"
+  - "Valls-Pedret, C. et al. (2015). Mediterranean Diet and Age-Related Cognitive Decline: A Randomized Clinical Trial. JAMA Internal Medicine, 175(7), 1094–1103. https://doi.org/10.1001/jamainternmed.2015.1668"
+  - "Rigacci, S. et al. (2015). Oleuropein aglycone prevents cytotoxic amyloid aggregation of human amylin. Journal of Nutritional Biochemistry, 26(10), 1137–1143. https://doi.org/10.1016/j.jnutbio.2015.05.010"
+  - "EFSA Panel on Dietetic Products, Nutrition and Allergies (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
+  - "Harvard T.H. Chan School of Public Health (2023). Olive Oil and Brain Health. The Nutrition Source. https://www.hsph.harvard.edu/nutritionsource/food-features/olive-oil/"
 coverAlt: "腦神經元與橄欖分子結構圖，羥基酪醇分子守護認知健康的科學概念視覺｜知橄生活"
 focusKeyword: "羥基酪醇大腦"
 faq:
@@ -31,7 +31,7 @@ faq:
 
 L 的卡頓並非偶然。45 歲之後，神經科學家追蹤到一個共通現象：海馬迴（記憶中樞）的氧化損傷以每年約 1-2% 的速度累積。大腦只佔體重 2%，卻燒掉全身 20% 的氧氣——這也讓它成為自由基（Free Radicals）攻擊最密集的戰場。
 
-而那股喉頭的灼熱對應的分子，是橄欖油中少數能穿越血腦屏障、直接抵達神經元的多酚——羥基酪醇（Hydroxytyrosol）。本文整理 EFSA 官方意見書、義大利佛羅倫薩大學的細胞研究、以及 PREDIMED 認知子試驗的三組數據，說明為什麼這個分子值得進入您每天清晨的餐桌。
+而那股喉頭的灼熱對應的分子，是橄欖油中少數能穿越血腦屏障、直接抵達神經元的多酚——羥基酪醇（Hydroxytyrosol）。高品質冷萃 EVOO 的羥基酪醇含量可達 **50–100 mg/kg**，早摘品種可超過 **200 mg/kg**；EFSA 認定每日攝取含 5mg 此多酚（對應 ≥250 mg/kg 油品 20ml）即達最低有效劑量。本文整理 EFSA 官方意見書、義大利佛羅倫薩大學的細胞研究、以及 PREDIMED 認知子試驗的三組數據，說明為什麼這個分子值得進入您每天清晨的餐桌。
 
 ## EFSA 認證：最具科學效力的天然抗氧化劑
 

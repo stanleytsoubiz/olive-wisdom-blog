@@ -15,7 +15,7 @@ sources:
   - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological activities of phenolic compounds present in virgin olive oil. International Journal of Molecular Sciences, 11(2), 458–479. https://doi.org/10.3390/ijms11020458"
   - "Caruso, D. et al. (2023). Hydroxytyrosol Interference with Inflammaging via Modulation of Inflammation and Autophagy. Nutrients, 15(4):1070. https://pmc.ncbi.nlm.nih.gov/articles/PMC10096543/"
   - "Morris, M.C. et al. (2023). Trial of the MIND Diet for Prevention of Cognitive Decline in Older Persons. New England Journal of Medicine, 389(7):602-611. https://pubmed.ncbi.nlm.nih.gov/37466280/"
-  - "Tejada, S. et al. (2021). Neuroprotective Effects of Hydroxytyrosol. Current Medicinal Chemistry, 28(17):3441-3460."
+  - "Tejada, S. et al. (2021). Neuroprotective Effects of Hydroxytyrosol. Current Medicinal Chemistry, 28(17):3441-3460. https://doi.org/10.2174/0929867327666200714145545"
 faq:
   - q: "目前有哪些關於羥基酪醇與認知健康的科學研究？"
     a: "羥基酪醇的神經相關研究分兩個方向：（1）細胞與動物模型——多項研究觀察到羥基酪醇與 Amyloid-beta 聚集抑制有相關、與 NF-κB 炎症路徑下調有相關、與促炎細胞因子（IL-6、TNF-α）較低水準有相關；（2）飲食模式研究——MIND 飲食（地中海+DASH 結合）的大型 RCT 已於 2023 年在 NEJM 發表（Rush × Harvard，604 人，3 年），顯示飲食介入與認知功能指標較佳有相關。目前尚未有以高多酚 EVOO 為單一介入、以 MCI 患者為對象的大型 RCT，現有人體試驗多為探索性研究。我們的建議是：希望從日常飲食獲取神經相關保護訊號→每日高多酚 EVOO（≥400mg/kg）+ 整體地中海飲食模式為優先，而非單純依賴補充劑。"

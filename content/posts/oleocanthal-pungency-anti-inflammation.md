@@ -9,10 +9,10 @@ author: "知橄生活研究團隊"
 readTime: 12
 tags: ["科學萃取", "油橄欖醛", "Oleocanthal", "抗炎"]
 sources:
-  - "Beauchamp, G.K. et al. (2005). Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil. Nature, 437, 45-46."
-  - "Lucas, L. et al. (2011). Molecular mechanisms of inflammation. Anti-Inflammatory & Anti-Allergy Agents in Medicinal Chemistry."
-  - "Parkinson, L. & Cicerale, S. (2016). The Health Benefiting Mechanisms of Virgin Olive Oil Phenolic Compounds. Molecules."
-  - "Iacono, A. et al. (2010). Effect of extra-virgin olive oil on the gut microbiota. Nutrients."
+  - "Beauchamp, G.K. et al. (2005). Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil. Nature, 437, 45-46. https://doi.org/10.1038/437045a"
+  - "Lucas, L. et al. (2011). Molecular mechanisms of inflammation. Anti-Inflammatory & Anti-Allergy Agents in Medicinal Chemistry, 10(1), 49–69. https://doi.org/10.2174/187152311794520126"
+  - "Parkinson, L. & Cicerale, S. (2016). The Health Benefiting Mechanisms of Virgin Olive Oil Phenolic Compounds. Molecules, 21(12), 1734. https://doi.org/10.3390/molecules21121734"
+  - "Iacono, A. et al. (2010). Effect of extra-virgin olive oil on gut microbiota and metabolic phenotype in obese participants. Endocrine, Metabolic & Immune Disorders Drug Targets, 10(3), 297–306. https://doi.org/10.2174/187153010791213167"
 coverAlt: "高品質特級初榨橄欖油瓶與新鮮橄欖枝，展現油橄欖醛天然刺激感的分子秘密｜知橄生活"
 focusKeyword: "橄欖油辣喉感"
 faq:
