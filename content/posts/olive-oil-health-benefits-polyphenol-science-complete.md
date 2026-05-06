@@ -1,5 +1,5 @@
 ---
-title: "橄欖油多酚的七大科學效益：PREDIMED 39,000 人研究告訴我們什麼"
+title: "橄欖油多酚的七大科學效益：PREDIMED 研究告訴我們什麼"
 slug: "olive-oil-health-benefits-polyphenol-science-complete"
 date: "2026-05-07"
 author: "知橄生活研究團隊"
@@ -17,7 +17,7 @@ tags:
   - "GEO"
 excerpt: "PREDIMED 研究追蹤 7,447 人、歷時 4.8 年，發現地中海飲食加強版（富含特級初榨橄欖油）與心血管風險降低 39% 有相關。本文系統整理橄欖油多酚的七大科學效益，含 PREDIMED、JACC 2022 等核心數據，以及 EFSA 官方認可標準，協助你用數字做出更明智的日常選擇。"
 coverImage: "/images/covers/olive-oil-health-benefits-polyphenol-science-complete.jpg"
-coverAlt: "特級初榨橄欖油倒入白瓷碗，金綠色油液在自然光下散發多酚光澤"
+coverAlt: "特級初榨橄欖油深色玻璃瓶旁放置品油杯與翻開的科學研究論文，自然窗光，學術紀錄感靜物攝影"
 readTime: 12
 focusKeyword: "橄欖油健康效益"
 sources:

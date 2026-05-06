@@ -197,6 +197,10 @@ const COVER_PROMPTS = {
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',
 
+  // ── 新增 2026-05-07 ────────────────────────────────────────────
+  'polyphenol-predimed-seven-benefits-science':
+    'seven small amber glass vials with golden olive polyphenol extracts arranged in a gentle arc on white marble desk, open clinical research binder with participant data charts and highlighted findings beside premium dark glass EVOO bottle, fresh olive sprig resting across vials, warm scholarly window light from left, scientific breadth and Mediterranean nature in one frame, Kinfolk meets academic documentation, no text overlay',
+
   // ── 新增 2026-05-06 ────────────────────────────────────────────
   'olive-oil-cooking-polyphenol-retention-japan':
     'Japanese kitchen scene, golden extra virgin olive oil being drizzled into a hot ceramic pan with vibrant vegetables, soft natural morning light filtering through shoji screen, gentle steam rising, clean white ceramic surfaces and wooden chopsticks nearby, Mediterranean meets Japanese wabi-sabi aesthetic, still life editorial food photography, no text',

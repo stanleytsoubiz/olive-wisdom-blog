@@ -1,10 +1,10 @@
 ---
 title: "亞洲最挑剔市場的選油標準：日本消費者如何用 CoA 驗證特級初榨橄欖油"
 slug: "japan-coa-verification-olive-oil-guide"
-pubDate: 2026-05-06
+date: "2026-05-06"
 category: "selection"
-description: "日本消費者購買橄欖油必看 CoA（品質分析報告）。我們解析 5 個關鍵數字：游離酸度、過氧化值、多酚含量、K268、採收年份，教你用日本標準選出真正的特級初榨橄欖油。"
-heroImage: "/images/covers/japan-coa-verification-olive-oil-guide.jpg"
+excerpt: "日本消費者購買橄欖油必看 CoA（品質分析報告）。我們解析 5 個關鍵數字：游離酸度、過氧化值、多酚含量、K268、採收年份，教你用日本標準選出真正的特級初榨橄欖油。"
+coverImage: "/images/covers/japan-coa-verification-olive-oil-guide.jpg"
 author: "知橄生活研究團隊"
 readTime: 10
 tags: ["CoA", "日本", "特級初榨", "選購指南", "品質驗證", "多酚"]
