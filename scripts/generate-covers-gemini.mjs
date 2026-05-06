@@ -68,7 +68,7 @@ const BRAND_DNA = [
 const COVER_PROMPTS = {
   // ── 科學萃取 ───────────────────────────────────────────────────
   'polyphenols-sirt1-longevity-2026':
-    'golden extra virgin olive oil poured into small glass vial on white marble, dried botanical herbs scattered nearby, open scientific journal, warm afternoon window light still life, macro close-up',
+    'tiny dark glass vial of concentrated olive polyphenol extract beside aged olive branch and open longevity research journal on white marble, molecular science meets Mediterranean nature, warm afternoon side light, premium bioactive ingredient editorial, macro close-up still life',
 
   'hydroxytyrosol-brain-cognition-memory':
     'small amber glass bottles with golden olive extract on linen cloth, fresh olive sprig, white ceramic mortar with herbs, soft natural light flat lay, apothecary still life',
@@ -121,7 +121,7 @@ const COVER_PROMPTS = {
     'four olive oil bottles lined up from premium dark glass to light plastic, grade comparison concept, white marble surface, clean studio light, product classification editorial',
 
   'predimed-study-complete-explainer-olive-oil-heart':
-    'heart-healthy Mediterranean breakfast spread, EVOO bottle, fresh tomatoes, whole grain bread, olives, nuts on rustic wooden table, warm morning light, diet science editorial',
+    'open clinical research binder with data charts beside premium dark glass EVOO bottle on clean academic desk, Spanish Mediterranean context, olive branch resting on pages, warm scholarly side light, science meets Mediterranean lifestyle editorial, documentary still life',
 
   'olive-oil-shelf-life-oxidation-storage':
     'two olive oil bottles on windowsill, one fresh vibrant gold one oxidized amber, calendar page beside, soft natural light, freshness and time concept still life',
@@ -130,7 +130,7 @@ const COVER_PROMPTS = {
     'elegant wooden tablespoon filled with golden extra virgin olive oil resting on white linen, morning light casting soft shadow, minimalist dosage ritual photography',
 
   'olive-oil-health-benefits-science-complete':
-    'lush Mediterranean breakfast scene: EVOO bottle, fresh olives, green vegetables, almonds, tomatoes, whole grain on white marble, health and vitality editorial flat lay',
+    'premium EVOO bottle beside stacked peer-reviewed health journals on white marble, small glass dish of golden olive oil with olive branch, warm natural light, evidence-based health science editorial, research credibility concept, Kinfolk documentary still life',
 
   // ── 餐桌美學 Lifestyle ─────────────────────────────────────────
   'morning-ritual-evoo-metabolism':
@@ -181,13 +181,17 @@ const COVER_PROMPTS = {
 
   // ── 新文章 2026-05-05 ──────────────────────────────────────────
   'olive-oil-weight-loss-science':
-    'fresh Mediterranean salad bowl with arugula, cherry tomatoes, and a generous drizzle of golden extra virgin olive oil, white ceramic bowl on aged marble surface, soft natural light, healthy Mediterranean lifestyle editorial, Kinfolk food photography style, no text',
+    'premium EVOO bottle beside a small kitchen scale and measuring tape on white marble, golden olive oil in shallow ceramic dish, clean science-meets-kitchen concept, soft natural morning light, evidence-based nutrition editorial, Kinfolk minimalist still life, no text',
 
   'olive-oil-after-opening-shelf-life':
     'half-opened premium dark glass olive oil bottle on warm wooden kitchen windowsill, soft afternoon light, subtle oxidation concept, Mediterranean kitchen atmosphere, Kinfolk editorial still life, muted earth tones, no text',
 
   'olive-oil-calories-fatty-acid-composition':
     'wooden measuring spoon filled with golden extra virgin olive oil beside a small scientific notebook showing molecular diagrams, clean white marble surface, warm diffused light, nutrition science editorial concept, Kinfolk minimalist style, no text',
+
+  // ── 健康多酚完整版 ─────────────────────────────────────────────
+  'olive-oil-health-benefits-polyphenol-science-complete':
+    'premium dark glass EVOO bottle with polyphenol-rich golden oil in small tasting glass, open scientific research paper showing molecular structure diagrams, fresh olive sprig, white marble desk, warm scholarly window light, evidence-based health science editorial, Kinfolk meets academic documentation, no text',
 
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':

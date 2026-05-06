@@ -37,7 +37,7 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-06T15:59:19.835Z",
+      "date": "2026-05-06T22:14:06.150Z",
       "generated": 1,
       "total_articles": 42
     }
@@ -74,12 +74,11 @@
   "posts": {
     "polyphenols-sirt1-longevity-2026": {
       "url": "/images/covers/polyphenols-sirt1-longevity-2026.jpg",
-      "alt": "多酚與 SIRT1：橄欖油如何啟動長壽基因的科學解析",
-      "credit": "Unsplash",
-      "source": "pollinations_ai_local",
-      "generated_at": "2026-04-29",
-      "quality_score": 8.5,
-      "prompt": "glowing DNA double helix surrounded by olive oil polyphenol molecules, SIRT1 longevity gene activation concept, bioluminescent molecular structure, scientific visualization macro"
+      "alt": "Polyphenols Sirt1 Longevity 2026",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-06",
+      "quality_score": 9,
+      "prompt": "tiny dark glass vial of concentrated olive polyphenol extract beside aged olive branch and open longevity research journ"
     },
     "evoo-buying-guide-2026": {
       "url": "/images/covers/evoo-buying-guide-2026.jpg",
@@ -286,9 +285,9 @@
       "url": "/images/covers/olive-oil-health-benefits-science-complete.jpg",
       "alt": "Olive Oil Health Benefits Science Complete",
       "source": "google_imagen4",
-      "generated_at": "2026-05-01",
+      "generated_at": "2026-05-06",
       "quality_score": 9,
-      "prompt": "dynamic body silhouette with seven glowing health benefit zones highlighted, olive branch and molecular structure overla"
+      "prompt": "premium EVOO bottle beside stacked peer-reviewed health journals on white marble, small glass dish of golden olive oil w"
     },
     "olive-oil-shelf-life-oxidation-storage": {
       "url": "/images/covers/olive-oil-shelf-life-oxidation-storage.jpg",
@@ -302,9 +301,9 @@
       "url": "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jpg",
       "alt": "Predimed Study Complete Explainer Olive Oil Heart",
       "source": "google_imagen4",
-      "generated_at": "2026-05-04",
+      "generated_at": "2026-05-06",
       "quality_score": 9,
-      "prompt": "heart-healthy Mediterranean breakfast spread, EVOO bottle, fresh tomatoes, whole grain bread, olives, nuts on rustic woo"
+      "prompt": "open clinical research binder with data charts beside premium dark glass EVOO bottle on clean academic desk, Spanish Med"
     },
     "olive-oil-cooking-science-can-evoo-stir-fry": {
       "url": "/images/covers/olive-oil-cooking-science-can-evoo-stir-fry.jpg",
@@ -382,9 +381,9 @@
       "url": "/images/covers/olive-oil-weight-loss-science.jpg",
       "alt": "Olive Oil Weight Loss Science",
       "source": "google_imagen4",
-      "generated_at": "2026-05-05",
+      "generated_at": "2026-05-06",
       "quality_score": 9,
-      "prompt": "fresh Mediterranean salad bowl with arugula, cherry tomatoes, and a generous drizzle of golden extra virgin olive oil, w"
+      "prompt": "premium EVOO bottle beside a small kitchen scale and measuring tape on white marble, golden olive oil in shallow ceramic"
     },
     "olive-oil-cooking-polyphenol-retention-japan": {
       "url": "/images/covers/olive-oil-cooking-polyphenol-retention-japan.jpg",
@@ -401,6 +400,14 @@
       "generated_at": "2026-05-06",
       "quality_score": 9,
       "prompt": "Japanese consumer holding a Certificate of Analysis document beside premium olive oil bottle on clean wooden desk, soft "
+    },
+    "olive-oil-health-benefits-polyphenol-science-complete": {
+      "url": "/images/covers/olive-oil-health-benefits-polyphenol-science-complete.jpg",
+      "alt": "Olive Oil Health Benefits Polyphenol Science Complete",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-06",
+      "quality_score": 9,
+      "prompt": "premium dark glass EVOO bottle with polyphenol-rich golden oil in small tasting glass, open scientific research paper sh"
     }
   },
   "fallback": {
