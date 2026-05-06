@@ -192,6 +192,16 @@ const COVER_PROMPTS = {
   // ── 認證指南 ───────────────────────────────────────────────────
   'olive-oil-pdo-dop-igp-certification-guide':
     'three premium olive oil bottles with official PDO DOP IGP certification seals on aged oak shelf, Mediterranean terracotta tiles background, warm amber afternoon light, editorial product photography, European certification concept',
+
+  // ── 新增 2026-05-06 ────────────────────────────────────────────
+  'olive-oil-cooking-polyphenol-retention-japan':
+    'Japanese kitchen scene, golden extra virgin olive oil being drizzled into a hot ceramic pan with vibrant vegetables, soft natural morning light filtering through shoji screen, gentle steam rising, clean white ceramic surfaces and wooden chopsticks nearby, Mediterranean meets Japanese wabi-sabi aesthetic, still life editorial food photography, no text',
+
+  'japan-coa-verification-olive-oil-guide':
+    'Japanese consumer holding a Certificate of Analysis document beside premium olive oil bottle on clean wooden desk, soft natural window light, authentication and trust concept, minimalist Japanese stationery aesthetic, Kinfolk editorial still life, warm tones, no text',
+
+  'coa-complete-reading-guide-olive-oil':
+    'Certificate of Analysis document unfolded on white marble desk beside premium dark glass olive oil bottle, magnifying glass resting on key numbers, five highlighted data points concept, clean natural light, scientific credibility editorial, Kinfolk still life, no text',
 };
 
 // ── Hero 圖片 Prompts ────────────────────────────────────────────

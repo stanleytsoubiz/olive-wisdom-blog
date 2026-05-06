@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "lastUpdated": "2026-05-05",
+    "lastUpdated": "2026-05-06",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-05T07:10:47.828Z",
+      "date": "2026-05-06T15:59:19.835Z",
       "generated": 1,
-      "total_articles": 39
+      "total_articles": 42
     }
   },
   "hero": {
@@ -385,6 +385,22 @@
       "generated_at": "2026-05-05",
       "quality_score": 9,
       "prompt": "fresh Mediterranean salad bowl with arugula, cherry tomatoes, and a generous drizzle of golden extra virgin olive oil, w"
+    },
+    "olive-oil-cooking-polyphenol-retention-japan": {
+      "url": "/images/covers/olive-oil-cooking-polyphenol-retention-japan.jpg",
+      "alt": "Olive Oil Cooking Polyphenol Retention Japan",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-06",
+      "quality_score": 9,
+      "prompt": "Japanese kitchen scene, golden extra virgin olive oil being drizzled into a hot ceramic pan with vibrant vegetables, sof"
+    },
+    "japan-coa-verification-olive-oil-guide": {
+      "url": "/images/covers/japan-coa-verification-olive-oil-guide.jpg",
+      "alt": "Japan Coa Verification Olive Oil Guide",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-06",
+      "quality_score": 9,
+      "prompt": "Japanese consumer holding a Certificate of Analysis document beside premium olive oil bottle on clean wooden desk, soft "
     }
   },
   "fallback": {
