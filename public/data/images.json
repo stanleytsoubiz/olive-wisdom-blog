@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "lastUpdated": "2026-05-06",
+    "lastUpdated": "2026-05-07",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-06T22:18:13.795Z",
+      "date": "2026-05-07T00:33:07.517Z",
       "generated": 1,
-      "total_articles": 42
+      "total_articles": 43
     }
   },
   "hero": {
@@ -416,6 +416,14 @@
       "generated_at": "2026-05-06",
       "quality_score": 9,
       "prompt": "seven small amber glass vials with golden olive polyphenol extracts arranged in a gentle arc on white marble desk, open "
+    },
+    "coa-complete-reading-guide-olive-oil": {
+      "url": "/images/covers/coa-complete-reading-guide-olive-oil.jpg",
+      "alt": "Coa Complete Reading Guide Olive Oil",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-07",
+      "quality_score": 9,
+      "prompt": "Certificate of Analysis document unfolded on white marble desk beside premium dark glass olive oil bottle, magnifying gl"
     }
   },
   "fallback": {
