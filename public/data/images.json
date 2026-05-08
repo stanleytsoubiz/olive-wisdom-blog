@@ -432,6 +432,14 @@
       "generated_at": "2026-05-08",
       "quality_score": 9,
       "prompt": "Documentary photograph of Shodoshima island olive grove in Japan, ancient gnarled olive trees with twisted silver-grey trunks against the Seto Inland Sea backdrop, early morning golden light filtering through olive branches with small green olives visible, traditional Japanese farming landscape, atmospheric mist over calm sea in background, cinematic composition, high contrast natural lighting, film photography aesthetic, 16:9 aspect ratio, photorealistic"
+    },
+    "evoo-gut-microbiome-predimed-plus-mechanism": {
+      "url": "/images/covers/evoo-gut-microbiome-predimed-plus-mechanism.jpg",
+      "alt": "玻璃瓶特級初榨橄欖油與腸道健康科學研究視覺——多酚、益生菌、認知功能的科學圖像",
+      "source": "google_imagen4",
+      "generated_at": "2026-05-08",
+      "quality_score": 9,
+      "prompt": "seven small amber glass vials with golden olive polyphenol extracts arranged in a gentle arc on white marble desk, open "
     }
   },
   "fallback": {
