@@ -4,7 +4,7 @@ slug: "olive-oil-cooking-polyphenol-retention-japan"
 date: 2026-05-06
 category: "lifestyle"
 excerpt: "橄欖油加熱真的會破壞多酚嗎？研究數據告訴你，180°C 炒菜後多酚保留率與正確用油方式。"
-coverImage: "/images/covers/olive-oil-cooking-polyphenol-retention-japan.jpg"
+coverImage: "/images/covers/olive-oil-cooking-polyphenol-retention-japan-v2.jpg"
 author: "知橄生活研究團隊"
 readTime: 7
 tags: ["多酚", "炒菜", "加熱穩定性", "日本", "料理應用"]
