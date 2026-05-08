@@ -248,6 +248,21 @@ function getExistingSlugs() {
   } catch { return []; }
 }
 
+// ── QC：偵測非 Imagen 4 生成的污染圖片 ─────────────────────────
+// 已知污染特徵：Stable Diffusion / ComfyUI / A1111 輸出時將
+// prompt / negative_prompt / seed / model 文字燒錄至圖片左側像素
+// 防護規則：凡非本腳本生成的圖片（source !== 'google_imagen4'），
+//           強制觸發重新生成，不允許手動放置外部工具產出圖片
+function detectExternalToolArtifact(imagesJson, slug) {
+  const record = imagesJson.posts?.[slug];
+  if (!record) return true; // 無記錄 → 視為未知來源 → 重新生成
+  if (record.source !== 'google_imagen4') {
+    log('🚨', `[QC] ${slug} — source="${record.source}" 非 Imagen 4，強制重新生成`);
+    return true;
+  }
+  return false;
+}
+
 // ── 核心：呼叫 Imagen 4 ─────────────────────────────────────────
 async function generateImage(ai, prompt, outputPath, label) {
   const fullPrompt = `${prompt}, ${BRAND_DNA}`;
@@ -341,10 +356,15 @@ async function main() {
       continue;
     }
 
-    if (!FORCE && hasFile && hasJson) {
+    // QC：偵測非 Imagen 4 來源圖片，強制重新生成
+    const isExternal = detectExternalToolArtifact(imagesJson, slug);
+    if (!FORCE && hasFile && hasJson && !isExternal) {
       log('⏭️ ', `Already exists: ${slug}`);
       stats.skipped++;
       continue;
+    }
+    if (isExternal && hasFile) {
+      log('⚠️ ', `[QC] 偵測到非 Imagen 4 圖片，強制覆蓋: ${slug}`);
     }
 
     stats.attempted++;
