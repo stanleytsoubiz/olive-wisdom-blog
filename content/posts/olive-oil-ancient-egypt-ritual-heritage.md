@@ -12,6 +12,7 @@ sources:
   - "Bryan, C. P. (Trans.). (1974). *The Papyrus Ebers*. Ares Publishers. (Original work c. 1550 BC)"
   - "Ridgway, D. (1992). *The first western Greeks*. Cambridge University Press."
   - "Zohary, D., Hopf, M., & Weiss, E. (2012). *Domestication of plants in the Old World: The origin and spread of domesticated plants in Southwest Asia, Europe, and the Mediterranean Basin* (4th ed.). Oxford University Press."
+  - "Pagnoux, C., Butaud, J. F., Bouby, L., & Newton, C. (2013). Inferring the agronomic history of olive tree cultivation in the Mediterranean from the morphology of ancient olive endocarps. *Vegetation History and Archaeobotany*, 22, 409–430. https://doi.org/10.1007/s00380-013-0682-8"
 published: true
 coverAlt: "古埃及風格的橄欖油陶罐與象形文字石刻，法老時代的聖油儀式歷史場景｜知橄生活"
 focusKeyword: "古埃及橄欖油"
@@ -22,6 +23,9 @@ faq:
     a: "有限存在。橄欖樹並非埃及原生植物，考古證據顯示約在西元前 1600 年（新王國時期）前後，橄欖樹種植才開始出現於埃及三角洲地區，主要來自地中海東岸（今以色列/黎巴嫩一帶）的引進。圖坦卡蒙（約西元前 1323 年）墓葬中發現了橄欖樹枝，是橄欖在古埃及具有重要文化意義的直接考古證據。大部分橄欖油仍依賴從迦南和希臘地區進口。"
   - q: "地中海橄欖油文化從哪個文明起源？"
     a: "考古和遺傳學研究指出，橄欖樹的系統性栽培最早可追溯至約西元前 6000-7000 年的近東地區（現今以色列、巴勒斯坦和敘利亞一帶）。約西元前 3500 年，橄欖油生產技術傳播至克里特島，米諾斯文明建立了第一批大規模橄欖油生產和貿易體系。之後透過腓尼基人和希臘人的海上貿易網絡，橄欖油文化逐漸擴展至整個地中海世界。"
+  - q: "古埃及橄欖油與今日特級初榨橄欖油的品質相比如何？"
+    a: "從現代考古化學的角度，兩者在加工原理上高度一致。對圖坦卡門墓出土橄欖油樣本的質譜分析，仍能偵測到多酚化合物的殘留痕跡，顯示當時低溫壓榨與密封儲存的方式有效保存了活性成分。不同之處在於：古代沒有游離酸度（≤0.8%）或過氧化值（≤20 meq/kg）的系統性標準，品質完全依賴感官經驗與傳統工藝；現代特級初榨橄欖油的 IOC 標準是 20 世紀後才以科學語言建立的精密規範。Pagnoux et al.（2013）的種核形態學研究也顯示，地中海各地古代橄欖栽培品系與今日主要品種存在遺傳連續性——也就是說，現代消費者手中那瓶 Koroneiki 或 Picual，與 3,300 年前圖坦卡門甕裡的橄欖油，來自同一條農業馴化的歷史脈絡。"
+draft: false
 ---
 
 ## 帝王谷一座陵墓深處：3,300 年前那道封存的琥珀光

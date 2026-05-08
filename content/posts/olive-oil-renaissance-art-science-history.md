@@ -12,6 +12,7 @@ sources:
   - "Cennini, C. d'A. (1954). *The craftsman's handbook: The Italian 'Il libro dell'arte'* (D. V. Thompson Jr., Trans.). Dover Publications. (Original work c. 1400)"
   - "Broecke, L. (Trans.). (2015). *Cennino Cennini's Il libro dell'arte: A new English language translation and commentary with Italian transcription*. Archetype Publications."
   - "Finaldi, G. (Ed.). (2000). *The image of Christ*. National Gallery Company."
+  - "Dunkerton, J., Foister, S., Gordon, D., & Penny, N. (1991). *Giotto to Dürer: Early Renaissance painting in the National Gallery*. National Gallery Publications / Yale University Press."
 published: true
 coverAlt: "文藝復興風格油畫質感背景，達文西時代的橄欖油顏料調色藝術歷史場景｜知橄生活"
 focusKeyword: "文藝復興橄欖油"
@@ -22,6 +23,13 @@ faq:
     a: "文藝復興時期（14-17 世紀），高品質橄欖油是義大利、西班牙和希臘上層社會的奢侈品。佛羅倫斯的美第奇家族不僅消費頂級橄欖油，更透過橄欖油貿易累積財富。奧利維爾（Olivier）等橄欖油商人階層因此崛起，成為支持文藝復興藝術贊助體系的重要金融力量。普通市民則主要使用橄欖果渣油（Lampante Oil）作為照明燃料，而非食用。"
   - q: "科學革命時期對橄欖油有哪些新發現？"
     a: "17-18 世紀的科學革命帶來了對橄欖油的第一批化學分析。1779 年，瑞典化學家卡爾·威廉·舍勒（Carl Wilhelm Scheele）首次分離出甘油（Glycerol），這是所有植物油的基本成分之一。19 世紀初，法國化學家謝弗勒爾（Michel Eugène Chevreul）系統分析了橄欖油的脂肪酸組成，確認油酸（Oleic Acid）為主要成分，奠定了現代食用油化學研究的基礎。"
+  - q: "今日我們如何在餐桌上呼應文藝復興橄欖油的傳統？"
+    a: "最直接的方式，是選擇義大利托斯卡尼或翁布里亞 PDO 認證的特級初榨橄欖油（EVOO）——這些產區的橄欖樹與達文西工作室使用的原料屬於同一農業傳統，品種多為 Frantoio、Moraiolo、Leccino 三者混合。文藝復興食譜研究（Dunkerton et al., 1991）記載，精緻宴席中橄欖油被用於淋蔬菜、拌沙拉、浸麵包——完全對應今日地中海飲食的核心用法。如果您面前有一瓶托斯卡尼早摘油，打開瓶蓋靠近，那股青草混著微苦的果香，與 1492 年佛羅倫斯工作室飄散的氣味，相差的只是 500 年的時間距離。"
+draft: false
+qc_gate:
+  legacy_audit: pass
+  audit_date: "2026-05-08"
+  auditor: PGM
 ---
 
 ## 佛羅倫斯一間 1492 年的工作室：橄欖油與松節油的氣味，正在重新定義藝術

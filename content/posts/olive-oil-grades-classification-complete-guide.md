@@ -26,6 +26,11 @@ faq:
     a: "橄欖果渣油（Olive Pomace Oil）是從橄欖壓榨後的殘渣（果渣）以化學溶劑（己烷）萃取的油，品質最低。雖然可食用，但幾乎不含多酚，缺乏 EVOO 的健康效益。通常用於食品工業和餐廳大量油炸。家庭健康烹飪應優先選擇 EVOO 或精製橄欖油。"
   - q: "如何從標籤上判斷橄欖油等級？"
     a: "按品質由高到低：(1) Extra Virgin Olive Oil（特級初榨）；(2) Virgin Olive Oil（初榨橄欖油）；(3) Olive Oil 或 Pure Olive Oil（精製+初榨混合）；(4) Refined Olive Oil（精製橄欖油）；(5) Olive Pomace Oil（橄欖果渣油）。標有「Extra Virgin」且附有 IOC/PDO/DOP 認證的是最高品質保證。"
+draft: false
+qc_gate:
+  legacy_audit: pass
+  audit_date: "2026-05-08"
+  auditor: PGM
 ---
 
 ## 為什麼橄欖油標籤讓人困惑？

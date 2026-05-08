@@ -12,6 +12,7 @@ sources:
   - "Mueller, T. (2011). Extra Virginity: The Sublime and Scandalous World of Olive Oil. W.W. Norton."
   - "UC Davis Olive Center (2011). Evaluation of Extra-Virgin Olive Oil Sold in California."
   - "European Commission (2022). Better Training for Safer Food: Olive Oil Fraud."
+  - "Gurdeniz, G., & Ozen, B. (2009). Detection of adulteration of extra-virgin olive oil by chemometric analysis of mid-infrared spectral data. *Food Chemistry*, 116(2), 519–525. https://doi.org/10.1016/j.foodchem.2009.02.068"
 coverAlt: "對比兩瓶橄欖油的色澤與標籤，真偽鑑別科學檢測的視覺對比圖｜知橄生活"
 focusKeyword: "橄欖油真假辨別"
 faq:
@@ -25,6 +26,7 @@ faq:
     a: "橄欖油在低溫（4-10°C）下確實會開始凝固或出現蠟質沉澱，這是橄欖油中飽和脂肪酸和蠟質的自然現象。但這並非可靠的真偽鑑別方法，因為部分調和油也可能在低溫下凝固。最可靠的鑑別方式仍是認證標籤、採收年份標示、來源追溯和感官測試（嗆感與苦味）。"
   - q: "買橄欖油應該在哪裡購買最安全？"
     a: "最安全的購買管道優先順序為：(1) 具備完整 CoA 多酚檢測報告的專業進口商；(2) 具 NYIOOC 或 EVOOLEUM 獲獎紀錄的品牌官方通路；(3) 有信譽的大型有機食品店（如 Jason's、棉花田）；(4) 品牌官方網站或授權電商。應避免：無明確品牌的散裝油、來源不明的網路低價油、無採收年份標示的產品。"
+draft: false
 ---
 
 ## 一個令人不安的數字

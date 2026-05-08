@@ -31,6 +31,11 @@ sources:
   - "Cicerale, S., Lucas, L. J., & Keast, R. S. J. (2012). Antimicrobial, antioxidant and anti-inflammatory phenolic activities in extra virgin olive oil. Current Opinion in Biotechnology, 23(2), 129–135. https://doi.org/10.1016/j.copbio.2011.09.006"
   - "International Olive Council. (2018). Sensory analysis of olive oil: Method for the organoleptic assessment of virgin olive oil (COI/T.20/Doc. No 15/Rev. 10). https://www.internationaloliveoil.org/wp-content/uploads/2019/11/COI-T20-Doc.-15-REV-10-2018-Eng.pdf"
   - "Ghreishi Rad, A., et al. (2023). Maturity impact on physicochemical composition and polyphenol properties of extra virgin olive oils obtained from Manzanilla, Arbequina, and Koroneiki varieties. Food Science & Nutrition, 11(9). https://doi.org/10.1002/fsn3.3497"
+draft: false
+qc_gate:
+  legacy_audit: pass
+  audit_date: "2026-05-08"
+  auditor: PGM
 ---
 
 第一次在義大利農莊試油，主人遞過來一小杯剛榨的 Picual，我們含一口入喉，整個喉嚨像被人輕輕捏了一下——辣、苦、草葉的澀。第一個反應是皺眉，以為這是壞掉的油。

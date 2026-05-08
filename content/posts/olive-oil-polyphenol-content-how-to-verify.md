@@ -12,6 +12,7 @@ sources:
   - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
   - "Visioli, F. et al. (2021). Olive oil: Composition, quality criteria, and biomedical implications. European Journal of Lipid Science and Technology, 123(3), 2000178. https://doi.org/10.1002/ejlt.202000178"
   - "Boskou, D. (2015). Olive Oil: Minor Constituents and Health. CRC Press. https://www.internationaloliveoil.org/"
+  - "Lozano-Castellon, J. et al. (2020). Health-promoting properties of oleocanthal and oleacein: Two secoiridoids from extra-virgin olive oil. *Critical Reviews in Food Science and Nutrition*, 60(15), 2532–2548. https://doi.org/10.1080/10408398.2019.1650715"
 coverAlt: "橄欖油品質分析數據與試管，多酚含量科學驗證的實驗室視覺概念｜知橄生活"
 focusKeyword: "橄欖油多酚含量"
 faq:
@@ -23,6 +24,11 @@ faq:
     a: "是的，多酚含量在開封後會因氧化而持續下降。研究顯示，橄欖油多酚在採收後每 12 個月約流失 30-50%；開封後應在 2-3 個月內使用完畢，且需避光（深色瓶或錫罐）、避熱（室溫陰涼處）、避免接觸氧氣（用後立即蓋緊）。超過採收後 18 個月的橄欖油，即使未開封，多酚功效也大幅衰退。"
   - q: "標籤上標示「初榨」和「特級初榨」有什麼差別？"
     a: "根據 IOC 標準：特級初榨橄欖油（Extra Virgin Olive Oil, EVOO）要求游離酸度 ≤0.8%、過氧化值 ≤20 meq/kg，且通過感官評鑑無缺陷；初榨橄欖油（Virgin Olive Oil）酸度 ≤2%，允許輕微感官缺陷；精製橄欖油（Refined Olive Oil）經化學或物理精製，多酚幾乎為零，健康功效極低。購買時只有 EVOO 才值得為健康功效付費。"
+draft: false
+qc_gate:
+  legacy_audit: pass
+  audit_date: "2026-05-08"
+  auditor: PGM
 ---
 
 讀者 N 上週站在台北 City Super 進口食品區，手機傳來一張照片：兩瓶並排在貨架上的義大利 EVOO，左邊 NT$420、瓶身標示「Premium Cold Pressed Extra Virgin」，右邊 NT$1,180、瓶頸貼著一張小卡寫著「TPC: 487 mg/kg, Hydroxytyrosol: 23 mg/kg」。「兩瓶差快三倍，瓶身上的字看起來都很高級——我怎麼知道哪瓶是真的？」她問。

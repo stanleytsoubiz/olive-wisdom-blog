@@ -13,6 +13,7 @@ sources:
   - "International Olive Council (IOC). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 16 – 2019."
   - "European Commission Regulation (EEC) No 2568/91 on the characteristics of olive oil and olive-residue oil."
   - "Servili, M., et al. (2014). Phenolic compounds in olive oil: antioxidant, health and organoleptic activities according to their chemical structure. Inflammopharmacology."
+  - "Gomez-Alonso, S., Mancebo-Campos, V., Salvador, M. D., & Fregapane, G. (2007). Evolution of major and minor components and oxidation indices of virgin olive oil during 21 months storage at three different temperatures. *Food Chemistry*, 100(1), 36–42. https://doi.org/10.1016/j.foodchem.2005.09.006"
 faq:
   - q: "顏色越深代表橄欖油品質越好嗎？"
     a: "不一定。橄欖油顏色（金黃到深綠）主要反映品種、熟成度與產地，而非品質高低。顏色無法作為 EVOO 品質判斷依據，化學指標（酸度 ≤0.8%、過氧化值 ≤20、K270 ≤0.22）與感官評鑑才是關鍵。我們的建議是：選油時翻看化學指標數字，而非觀察油液顏色。"
@@ -22,6 +23,11 @@ faq:
     a: "依市售標示觀察，台灣超市 100–200 元區間橄欖油多屬「混合橄欖油」（Olive Oil），即精製橄欖油混合少量初榨油。真正符合 IOC EVOO 標準的產品售價通常在 300 元以上，但仍需查核認證與來源才能確認品質。"
   - q: "橄欖渣油（Pomace Oil）可以食用嗎？"
     a: "符合法規的精製橄欖渣油是可食用的，但多酚損失最為徹底，且歷史上曾發生溶劑殘留食安事件。我們的建議是：一般家庭選用至少 VOO 以上等級，避免使用橄欖渣油作為日常食用油。"
+draft: false
+qc_gate:
+  legacy_audit: pass
+  audit_date: "2026-05-08"
+  auditor: PGM
 ---
 
 週六下午兩點，台北家樂福橄欖油貨架前。讀者 P 站著拿起兩瓶——左手 NT$199 的義大利「Pure Olive Oil」、右手 NT$580 的西班牙「Extra Virgin Olive Oil」。她拍照傳給我們：「同樣是橄欖油，差快三倍價錢，差別在哪？」
