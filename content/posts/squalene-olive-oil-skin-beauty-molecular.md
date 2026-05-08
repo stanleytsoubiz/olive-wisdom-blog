@@ -65,7 +65,7 @@ faq:
 
 ## 橄欖油的雙重護膚路徑：由外到內，由內到外
 
-橄欖油護膚，有兩個同樣有效但機制不同的路徑：
+橄欖油護膚，有兩個同樣有效但機制不同的路徑。除角鯊烯外，EVOO 中的多酚成分（Hydroxytyrosol、Oleocanthal 等）同樣對皮膚氧化損傷有保護相關性，完整的科學效益可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)：
 
 ### 路徑一：外用塗抹
 
@@ -74,7 +74,7 @@ faq:
 **外用建議**：
 - 清潔後，在仍微濕的皮膚上，以 2-3 滴的高多酚 EVOO 輕壓按摩，特別適合乾燥的眼周和頸部。
 - 可作為晚間修護的最後一個步驟，在所有水性保養品之後使用（遵循「水先油後」的層次邏輯）。
-- **請選用高品質 EVOO**，而非精製橄欖油——精製過程會破壞多酚和天然抗氧化物，只留下油脂成分。
+- **請選用高品質 EVOO**，而非精製橄欖油——精製過程會破壞多酚和天然抗氧化物，只留下油脂成分。如何確認選購的 EVOO 多酚含量真實可信，可參考[多酚含量的真相與驗證方法](/posts/olive-oil-polyphenol-content-how-to-verify)。
 
 ### 路徑二：內服攝取
 
@@ -122,6 +122,6 @@ faq:
 
 ## 延伸閱讀
 
-- [羥基酪醇與大腦記憶：為什麼哈佛神經科學家將這個橄欖分子視為認知老化的分子守護者？](/blog/hydroxytyrosol-brain-cognition-memory)
-- [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/blog/mediterranean-diet-anti-aging-women-2026)
-- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？](/blog/morning-ritual-evoo-metabolism)
+- [羥基酪醇與大腦記憶：為什麼哈佛神經科學家將這個橄欖分子視為認知老化的分子守護者？](/posts/hydroxytyrosol-brain-cognition-memory)
+- [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/posts/mediterranean-diet-anti-aging-women-2026)
+- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？](/posts/morning-ritual-evoo-metabolism)

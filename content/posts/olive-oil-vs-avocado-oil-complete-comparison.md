@@ -87,7 +87,7 @@ faq:
 
 高品質 EVOO 的總多酚含量（250-700mg/kg）是冷壓酪梨油（10-30mg/kg）的 **10-70 倍**。
 
-**換句話說，在多酚生物活性這個維度，兩種油不在同一個數量級——選油目的若包含多酚相關的飲食效益，高品質 EVOO 是文獻支持度唯一具壓倒性優勢的選擇。**
+**換句話說，在多酚生物活性這個維度，兩種油不在同一個數量級——選油目的若包含多酚相關的飲食效益，高品質 EVOO 是文獻支持度唯一具壓倒性優勢的選擇。** 這些多酚化合物的七大科學效益詳細解析，可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
 
 **這回合：橄欖油壓倒性勝出**
 
@@ -132,7 +132,7 @@ faq:
 
 ### 橄欖油的研究基礎
 
-- **PREDIMED 研究**（2013，7,447 名受試者，5 年追蹤）：高 EVOO 攝取組與心血管事件較低發生率有顯著相關，相對風險約低 30%，是迄今最大型的橄欖油人體介入研究
+- **PREDIMED 研究**（2013，7,447 名受試者，5 年追蹤）：高 EVOO 攝取組與心血管事件較低發生率有顯著相關，相對風險約低 30%，是迄今最大型的橄欖油人體介入研究（完整背景可參考 [PREDIMED 研究完整解析](/posts/predimed-study-complete-explainer-olive-oil-heart)）
 - **EFSA 健康聲明**（EU Regulation No 432/2012）：橄欖油多酚與 LDL 氧化指標較低有相關
 - **超過 5,000 篇** 同行評審研究，涵蓋心血管、認知、抗炎、抗腫瘤等領域
 
@@ -152,7 +152,7 @@ faq:
 
 ### EVOO 的造假問題
 
-橄欖油市場存在摻假問題——用精製油或其他植物油冒充 EVOO，已有大量報導。這正是知橄生活一直強調「選擇附有 CoA 報告的品牌」的原因。辨別真偽的完整方法，可參考[橄欖油真假鑑別指南](/blog/olive-oil-fraud-detection-authentic-vs-fake)。
+橄欖油市場存在摻假問題——用精製油或其他植物油冒充 EVOO，已有大量報導。這正是知橄生活一直強調「選擇附有 CoA 報告的品牌」的原因。辨別真偽的完整方法，可參考[橄欖油真假鑑別指南](/posts/olive-oil-fraud-detection-authentic-vs-fake)。購買前確認 CoA 數據的具體步驟，可參考[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)。
 
 ### 酪梨油的更大透明度問題
 
@@ -206,7 +206,7 @@ faq:
 
 明天早上炒青菜時，倒一湯匙看一眼。讓那股喉嚨後段的灼熱感告訴你，這瓶油的多酚還在工作。
 
-橄欖油七大健康功效的完整科學文獻，可參考[橄欖油健康效益科學完整指南](/blog/olive-oil-health-benefits-science-complete)。選購具有多酚驗證的優質 EVOO，可參考[2026 EVOO 完整選購指南](/blog/olive-oil-complete-buying-guide-2026)。
+橄欖油七大健康功效的完整科學文獻，可參考[橄欖油健康效益科學完整指南](/posts/olive-oil-health-benefits-science-complete)。選購具有多酚驗證的優質 EVOO，可參考[2026 EVOO 完整選購指南](/posts/olive-oil-complete-buying-guide-2026)。
 
 ---
 

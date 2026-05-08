@@ -76,7 +76,7 @@ faq:
 
 ## 多酚含量：精製過程的最大損失
 
-多酚（包括羥基酪醇、橄欖苦苷等化合物）是橄欖油中備受研究關注的成分，也是 EVOO 與精製橄欖油最顯著的差異所在。想深入了解如何驗證購買的油是否真的含有標示的多酚量，可參考[橄欖油多酚含量驗證完整指南](/blog/olive-oil-polyphenol-content-how-to-verify)。
+多酚（包括羥基酪醇、橄欖苦苷等化合物）是橄欖油中備受研究關注的成分，也是 EVOO 與精製橄欖油最顯著的差異所在。想深入了解如何驗證購買的油是否真的含有標示的多酚量，可參考[橄欖油多酚含量驗證完整指南](/posts/olive-oil-polyphenol-content-how-to-verify)。
 
 根據 Pontillo 等人（2020）發表於 *Foods* 期刊的研究，精製過程對多酚的破壞極為徹底：
 - **化學中和（脫酸）步驟**：損失約 63% 的多酚化合物
@@ -116,7 +116,7 @@ faq:
 
 ## FAQ：消費者最常問的四個問題
 
-橄欖油的苦味與辛辣感是判斷多酚含量的重要感官線索，詳情可參考[橄欖油苦澀辣口品質指南](/blog/olive-oil-bitterness-pungency-quality-guide)。另外，關於各等級橄欖油的完整 IOC 分類體系，請見[橄欖油等級分類完整指南](/blog/olive-oil-grades-classification-complete-guide)。
+橄欖油的苦味與辛辣感是判斷多酚含量的重要感官線索，詳情可參考[橄欖油苦澀辣口品質指南](/posts/olive-oil-bitterness-pungency-quality-guide)。另外，關於各等級橄欖油的完整 IOC 分類體系，請見[橄欖油等級分類完整指南](/posts/olive-oil-grades-classification-complete-guide)。
 
 **Q1：顏色越深代表品質越好嗎？**
 不一定。橄欖油的顏色（金黃到深綠）主要反映橄欖品種、熟成度與產地，而非品質高低。部分品種天然產出深綠色油品，另一些則偏金黃。顏色無法作為 EVOO 品質的判斷依據，化學指標與感官評鑑才是關鍵。
@@ -146,8 +146,8 @@ faq:
 
 ## 延伸閱讀
 
-- [橄欖油保存完整指南：光線、溫度與容器如何影響品質](/blog/olive-oil-storage-complete-guide)
-- [橄欖油產地全解析：西班牙、義大利、希臘、突尼西亞的風味差異](/blog/olive-oil-origin-flavor-comparison)
+- [橄欖油保存完整指南：光線、溫度與容器如何影響品質](/posts/olive-oil-storage-guide-complete)
+- [橄欖油產地全解析：西班牙、義大利、希臘、突尼西亞的風味差異](/posts/olive-oil-origin-flavor-comparison)
 
 ---
 

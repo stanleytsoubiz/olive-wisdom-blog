@@ -43,7 +43,7 @@ faq:
 
 > **知橄生活筆記：** 以「高多酚 EVOO 單一介入 + MCI 患者」為設計的大型 RCT 數量仍有限。現有最穩定的人體訊號來自飲食模式層面（MIND、PREDIMED），而非單一成分的隔離試驗。這不削弱羥基酪醇的研究價值，而是提醒：整體飲食模式的協同相關性，可能才是神經健康指標背後最穩定的訊號。
 
-羥基酪醇在抗炎研究中的夥伴化合物 Oleocanthal，研究觀察到與神經保護指標亦有相關，詳見[Oleocanthal 抗炎與腦部保護研究](/blog/oleocanthal-anti-inflammation-brain-protection)。
+羥基酪醇在抗炎研究中的夥伴化合物 Oleocanthal，研究觀察到與神經保護指標亦有相關，詳見[Oleocanthal 抗炎與腦部保護研究](/posts/oleocanthal-anti-inflammation-brain-protection)。
 
 ## 2. 線粒體：大腦能量引擎與多酚的對話
 
@@ -98,7 +98,7 @@ EFSA（歐盟食品安全局）的健康聲明標準是每日攝取 **5mg 羥基
 
 **如果只記得一件事：神經保護研究的有效劑量起點是每日 30ml 且多酚 ≥400mg/kg——任何低於這個組合的攝取方式，都達不到現有研究觀察到的相關性門檻。**
 
-關於多酚隨時間衰減的速率數據，可參考[多酚衰減科學完整解析](/blog/polyphenol-decay-science-2026)。以羥基酪醇為核心的地中海飲食模式與細胞老化指標的相關研究，可閱讀[2026 地中海飲食抗衰老指南](/blog/mediterranean-diet-anti-aging-women-2026)。
+關於多酚隨時間衰減的速率數據，可參考[多酚衰減科學完整解析](/posts/polyphenol-decay-science-2026)。以羥基酪醇為核心的地中海飲食模式與細胞老化指標的相關研究，可閱讀[2026 地中海飲食抗衰老指南](/posts/mediterranean-diet-anti-aging-women-2026)。
 
 ## 結語：把那滴實驗室的訊號，倒進明天早晨的湯匙
 

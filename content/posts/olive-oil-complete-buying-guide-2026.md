@@ -113,7 +113,7 @@ faq:
 - 「義大利/希臘/西班牙製造（Product of ...）」：中等可信度，可能是混合油
 - 「歐盟多國混合（Product of multiple EU countries）」：低可信度，難以溯源
 
-**換句話說，品種選擇決定了多酚含量的上限，採收時機決定是否達到上限——Coratina 早摘可達 800mg/kg，Arbequina 晚摘可能只有 80mg/kg，同樣都是「義大利特級初榨橄欖油」。**
+**換句話說，品種選擇決定了多酚含量的上限，採收時機決定是否達到上限——Coratina 早摘可達 800mg/kg，Arbequina 晚摘可能只有 80mg/kg，同樣都是「義大利特級初榨橄欖油」。** 多酚對健康的具體作用機制，可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
 
 ---
 
@@ -123,7 +123,7 @@ faq:
 
 | 認證 | 頒發機構 | 意義 |
 |:---|:---|:---|
-| PDO（受保護原產地名稱） | 歐盟 | 產地受保護，生產過程受監管 |
+| [PDO（受保護原產地名稱）](/posts/olive-oil-pdo-dop-igp-certification-guide) | 歐盟 | 產地受保護，生產過程受監管 |
 | PGI（受保護地理標示） | 歐盟 | 產地連結受保護 |
 | NYIOOC Gold | 紐約國際橄欖油大賽 | 年度最大型國際感官評鑑，含品質門檻 |
 | EVOOLEUM Top 100 | EVOOLEUM | 世界頂尖 100 款 EVOO 年度評選 |
@@ -139,7 +139,7 @@ faq:
 
 ### STEP 5：索取 CoA 或驗證多酚數據（進階驗證，值得為健康投資）
 
-對於要作為健康補充用途的油，CoA（Certificate of Analysis）是終極驗證工具。
+對於要作為健康補充用途的油，CoA（Certificate of Analysis）是終極驗證工具。[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)說明了每一個關鍵數值的判讀方法。
 
 **如何取得 CoA：**
 - 直接詢問購買通路（實體店或網路商家）
@@ -256,9 +256,9 @@ Q4: 價格 ≥ NT$350 / 500ml 嗎？
 
 ## 延伸閱讀
 
-- [多酚衰減科學：為什麼去年的金牌油，今年可能只是普通烹飪油？](/blog/polyphenol-decay-science-2026)
-- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油？](/blog/olive-oil-fraud-detection-authentic-vs-fake)
-- [如何驗證多酚含量：讀懂 CoA 報告的完整指南](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [多酚衰減科學：為什麼去年的金牌油，今年可能只是普通烹飪油？](/posts/polyphenol-decay-science-2026)
+- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油？](/posts/olive-oil-fraud-detection-authentic-vs-fake)
+- [如何驗證多酚含量：讀懂 CoA 報告的完整指南](/posts/olive-oil-polyphenol-content-how-to-verify)
 
 ---
 

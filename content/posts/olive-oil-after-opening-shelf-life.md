@@ -68,7 +68,7 @@ Aparicio-Ruiz et al.（2015）在 18 個月的多溫度儲存試驗中發現，2
 
 這意味著 IOC 的 3–6 個月建議，是以歐洲氣候（常溫約 15–20°C）為基準制定的。在台灣夏季廚房環境下，這個時間窗口應保守縮短為 **2–3 個月**，甚至更短。
 
-更詳細的台灣氣候下橄欖油保存策略，可參考[橄欖油要放冰箱嗎？台灣氣候下的正確保存法](/blog/olive-oil-storage-refrigerator-taiwan-guide)。
+更詳細的台灣氣候下橄欖油保存策略，可參考[橄欖油要放冰箱嗎？台灣氣候下的正確保存法](/posts/olive-oil-storage-refrigerator-taiwan-guide)。全面的五大保存原則，則可參考[橄欖油保存完全指南](/posts/olive-oil-storage-guide-2026)。
 
 ## 容量選擇：500ml vs 750ml 的新鮮度邏輯
 
@@ -85,9 +85,9 @@ Aparicio-Ruiz et al.（2015）在 18 個月的多溫度儲存試驗中發現，2
 
 **實際建議**：估算家庭每週用量後，選擇能在 **4–6 週內用完**的容量，而非以單位價格作為唯一考量。特別是高多酚 EVOO（多酚 ≥300 mg/kg 的品項），更應優先保鮮而非儲量。
 
-**換句話說，在台灣夏季廚房，一瓶 750ml 高多酚 EVOO 的「有效多酚壽命」可能比歐盟標準縮短一半——「划算」的算術應從多酚保留率開始，不是從單位售價開始。**
+**換句話說，在台灣夏季廚房，一瓶 750ml 高多酚 EVOO 的「有效多酚壽命」可能比歐盟標準縮短一半——「划算」的算術應從多酚保留率開始，不是從單位售價開始。** 多酚在不同儲存條件下的具體殘留率數據，可參考[多酚衰減科學完整解析](/posts/polyphenol-decay-science-2026)。
 
-關於橄欖油氧化的完整科學機制，可參考[橄欖油貨架壽命與氧化儲存完整指南](/blog/olive-oil-shelf-life-oxidation-storage)。
+關於橄欖油氧化的完整科學機制，可參考[橄欖油貨架壽命與氧化儲存完整指南](/posts/olive-oil-shelf-life-oxidation-storage)。
 
 ## 五感判斷法：開封後的氧化警報訊號
 
@@ -110,13 +110,13 @@ Aparicio-Ruiz et al.（2015）在 18 個月的多溫度儲存試驗中發現，2
 
 顏色從金黃轉為深褐，透明度下降（出現非溫度造成的渾濁），可能是氧化的視覺訊號，但並非可靠的單一判斷依據——有些新鮮過濾不完全的 EVOO 本身就略顯渾濁。
 
-**如果只記得一件事：開封後每次使用前先聞一下、喝一口感受喉嚨嗆感——這兩個動作比記住任何日期都可靠，氣味和嗆感消退的那天，就是這瓶油應該加速用完或考慮換新的訊號。**
+**如果只記得一件事：開封後每次使用前先聞一下、喝一口感受喉嚨嗆感——這兩個動作比記住任何日期都可靠，氣味和嗆感消退的那天，就是這瓶油應該加速用完或考慮換新的訊號。** 下一瓶選購時，可透過[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)提前確認油品的初始多酚含量，才能更準確估算開封後的有效使用窗口。
 
 ## 延伸閱讀
 
-- [橄欖油要放冰箱嗎？台灣氣候下的正確保存法](/blog/olive-oil-storage-refrigerator-taiwan-guide)
-- [橄欖油貨架壽命與氧化儲存完整指南](/blog/olive-oil-shelf-life-oxidation-storage)
-- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
+- [橄欖油要放冰箱嗎？台灣氣候下的正確保存法](/posts/olive-oil-storage-refrigerator-taiwan-guide)
+- [橄欖油貨架壽命與氧化儲存完整指南](/posts/olive-oil-shelf-life-oxidation-storage)
+- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/posts/olive-oil-grades-classification-complete-guide)
 
 ---
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。

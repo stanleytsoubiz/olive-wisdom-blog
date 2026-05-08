@@ -39,7 +39,7 @@ faq:
 
 NRF2（Nuclear Factor Erythroid 2-Related Factor 2）是細胞抗氧化防禦系統的主要調控因子，被科學家稱為「細胞的主電源開關」。
 
-當您空腹攝取橄欖油多酚（特別是羥基酪醇和橄欖苦苷），腸道黏膜細胞會在 15-30 分鐘內開始吸收這些多酚分子，並觸發 NRF2 的核轉位（nuclear translocation）——這個過程，會啟動一連串抗氧化酵素的生產，包括：
+當您空腹攝取橄欖油多酚（特別是羥基酪醇和橄欖苦苷），腸道黏膜細胞會在 15-30 分鐘內開始吸收這些多酚分子，並觸發 NRF2 的核轉位（nuclear translocation）——這個過程，會啟動一連串抗氧化酵素的生產。關於這些多酚成分在人體各系統的科學效益，[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)有系統性的文獻整理，包括：
 
 - **超氧化物歧化酶（SOD）**：清除自由基的第一道防線
 - **過氧化氫酶（Catalase）**：分解氧化性過氧化氫
@@ -79,7 +79,7 @@ NRF2（Nuclear Factor Erythroid 2-Related Factor 2）是細胞抗氧化防禦系
 讓身體自然甦醒，不要立刻飲用。起床後先喝 200ml 溫水，讓胃黏膜輕度潤濕。
 
 **步驟二（30秒）：量取 15-20ml**
-使用量匙確保劑量，初次嘗試者建議從 10ml（約 2 小茶匙）開始，逐週增加。
+使用量匙確保劑量，初次嘗試者建議從 10ml（約 2 小茶匙）開始，逐週增加。不同使用目標的每日用量邏輯，可參考[每天應該吃多少橄欖油](/posts/olive-oil-daily-intake-dosage-science)的 EFSA 與 PREDIMED 劑量框架。
 
 **步驟三（1分鐘）：品飲，感受分子對話**
 將油含在口中 10-15 秒，讓黏膜吸收部分多酚。感受：
@@ -89,7 +89,7 @@ NRF2（Nuclear Factor Erythroid 2-Related Factor 2）是細胞抗氧化防禦系
 **步驟四（1分鐘）：等待吸收**
 飲用後靜候 15-20 分鐘再進食早餐，讓多酚完成初步吸收。
 
-**如果只記得一件事：晨飲橄欖油的前提是「多酚必須夠高」——多酚 <150mg/kg 的油空腹喝，NRF2 和膽汁酸機制都無法被有效觸發，只是多了一份熱量而已。**
+**如果只記得一件事：晨飲橄欖油的前提是「多酚必須夠高」——多酚 <150mg/kg 的油空腹喝，NRF2 和膽汁酸機制都無法被有效觸發，只是多了一份熱量而已。** 如何驗證手上那瓶油的多酚含量是否真實，可參考[多酚含量的真相與驗證方法](/posts/olive-oil-polyphenol-content-how-to-verify)。
 
 ### 適合搭配的早餐
 
@@ -130,6 +130,6 @@ NRF2（Nuclear Factor Erythroid 2-Related Factor 2）是細胞抗氧化防禦系
 
 ## 延伸閱讀
 
-- [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/blog/evoo-buying-guide-2026)
-- [多酚與 SIRT1：橄欖油如何啟動長壽基因的科學解析](/blog/polyphenols-sirt1-longevity-2026)
-- [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/blog/mediterranean-diet-anti-aging-women-2026)
+- [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/posts/evoo-buying-guide-2026)
+- [多酚與 SIRT1：橄欖油如何啟動長壽基因的科學解析](/posts/polyphenols-sirt1-longevity-2026)
+- [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/posts/mediterranean-diet-anti-aging-women-2026)

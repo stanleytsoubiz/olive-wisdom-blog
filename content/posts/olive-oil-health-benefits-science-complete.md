@@ -108,7 +108,7 @@ Konstantinidou 等（2010）的 FASEB Journal RCT（240 名受試者）發現，
 
 在一場橄欖油品評會上，我們第一次聽到有人這樣解釋 Oleocanthal。講師舉起一小杯油，要在場者含一口、慢慢吞下。三秒後，喉頭傳來一陣熟悉的灼熱——「那就是 Oleocanthal 在跟 COX-2 結合，」她說，「跟你吃布洛芬的時候是同一個受體位置。」
 
-Beauchamp 等（2005）在《Nature》的研究發現，Oleocanthal 以非共價方式抑制 COX-1 與 COX-2 酶活性，與布洛芬（Ibuprofen）的作用機理相似——這正是高多酚 EVOO 在喉嚨後段產生嗆感的分子原因。Oleocanthal 完整的抗炎與腦保護機理，可參考[Oleocanthal 抗炎與腦部保護研究](/blog/oleocanthal-anti-inflammation-brain-protection)。
+Beauchamp 等（2005）在《Nature》的研究發現，Oleocanthal 以非共價方式抑制 COX-1 與 COX-2 酶活性，與布洛芬（Ibuprofen）的作用機理相似——這正是高多酚 EVOO 在喉嚨後段產生嗆感的分子原因。Oleocanthal 完整的抗炎與腦保護機理，可參考[Oleocanthal 抗炎與腦部保護研究](/posts/oleocanthal-anti-inflammation-brain-protection)。
 
 **量化對比**：50g EVOO 中的 Oleocanthal 含量，研究估計約相當於 1/10 的成人布洛芬劑量。這一劑量在長期、規律攝取的框架下，與抗炎指標累積改善有關，但不能替代急性炎症的藥物治療。
 
@@ -171,7 +171,7 @@ PREDIMED 研究的子分析（Fernandez-Real et al., 2012, *JCEM*）發現，攝
 
 精製橄欖油（Pure Olive Oil）、Light Olive Oil、橄欖果渣油在精製過程中失去了絕大多數多酚，相關健康研究數據有限。
 
-一個簡單的感官判斷原則：將油含於口中，若喉嚨後段感受不到嗆感，多酚含量可能不足以達到 EFSA 認可的閾值。苦辣感與多酚含量的科學關係，可參考[橄欖油苦澀辣口品質指南](/blog/olive-oil-bitterness-pungency-quality-guide)。橄欖油角鯊烯（Squalene）在護膚方面的分子機制，可閱讀[角鯊烯橄欖油護膚科學](/blog/squalene-olive-oil-skin-beauty-molecular)。
+一個簡單的感官判斷原則：將油含於口中，若喉嚨後段感受不到嗆感，多酚含量可能不足以達到 EFSA 認可的閾值。苦辣感與多酚含量的科學關係，可參考[橄欖油苦澀辣口品質指南](/posts/olive-oil-bitterness-pungency-quality-guide)。橄欖油角鯊烯（Squalene）在護膚方面的分子機制，可閱讀[角鯊烯橄欖油護膚科學](/posts/squalene-olive-oil-skin-beauty-molecular)。
 
 ---
 

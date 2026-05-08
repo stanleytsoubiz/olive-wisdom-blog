@@ -62,13 +62,13 @@ faq:
 
 ## 光、熱、氧：三個你每天都在忽略的殺手
 
-好的橄欖油之所以昂貴，核心在於其多酚含量。多酚賦予油品辛辣感與苦味，也是[抗氧化活性的主要來源](/blog/olive-oil-polyphenol-content-how-to-verify)。而多酚最怕的三件事，分別是光線、熱源、與氧氣——恰好都是台灣廚房的日常配備。
+好的橄欖油之所以昂貴，核心在於其多酚含量。多酚賦予油品辛辣感與苦味，也是[抗氧化活性的主要來源](/posts/olive-oil-polyphenol-content-how-to-verify)。多酚在不同溫度下的衰減速率，可參考[多酚衰減科學完整解析](/posts/polyphenol-decay-science-2026)中的具體數據。而多酚最怕的三件事，分別是光線、熱源、與氧氣——恰好都是台灣廚房的日常配備。
 
 **光線**：紫外線直接分解油脂中的酚類化合物。透明玻璃瓶或放在窗邊，等於讓你的橄欖油在緩慢曬傷。
 
 **熱源**：爐火旁的位置，溫度可高達 40–50°C 甚至更高。研究顯示，50°C 的儲存條件下，多酚的降解速率比 5°C 高出數倍。
 
-**氧氣**：每次開瓶後沒有立刻旋緊，瓶內空間的氧氣就在與油脂進行氧化反應。瓶子越大、用量越少，殘餘空氣的比例越高，[氧化速度越快](/blog/olive-oil-shelf-life-oxidation-storage)。
+**氧氣**：每次開瓶後沒有立刻旋緊，瓶內空間的氧氣就在與油脂進行氧化反應。瓶子越大、用量越少，殘餘空氣的比例越高，[氧化速度越快](/posts/olive-oil-shelf-life-oxidation-storage)。保存的完整五個動作可參考[橄欖油保存完全指南](/posts/olive-oil-storage-guide-2026)。
 
 ## 台灣特殊情境下的保存策略
 
@@ -108,8 +108,8 @@ faq:
 
 ## 延伸閱讀
 
-- [橄欖油的氧化機制與貨架壽命：開封後發生了什麼？](/blog/olive-oil-shelf-life-oxidation-storage)
-- [如何驗證橄欖油的多酚含量：標示、檢測報告與選購指南](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [橄欖油的氧化機制與貨架壽命：開封後發生了什麼？](/posts/olive-oil-shelf-life-oxidation-storage)
+- [如何驗證橄欖油的多酚含量：標示、檢測報告與選購指南](/posts/olive-oil-polyphenol-content-how-to-verify)
 
 ---
 
