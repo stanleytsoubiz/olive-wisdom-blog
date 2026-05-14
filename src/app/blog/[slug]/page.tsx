@@ -361,17 +361,22 @@ export default async function BlogPostPage({ params }: Props) {
         </nav>
       </div>
 
-      {/* Cover Image — full-bleed, Kinfolk: image first, title below */}
+      {/* Cover Image — preserves source aspect ratio (1408×768 ≈ 11:6), no cropping
+          mobile: native ratio for snug fit
+          desktop: native ratio capped by max-width container (max-w-6xl) — avoids ultrawide stretch
+          Golden Template v1: 2026-05-14 — fix for cropped headers from object-cover on fixed-height container */}
       {coverImageUrl && (
-        <div className="relative w-full aspect-[16/9] md:aspect-auto md:h-[520px] bg-stone-100 mt-4">
-          <Image
-            src={coverImageUrl}
-            alt={post.coverAlt || `${post.title} — 知橄生活 Olive Wisdom`}
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
+        <div className="bg-stone-100 mt-4 mx-auto max-w-6xl">
+          <div className="relative w-full aspect-[1408/768] overflow-hidden">
+            <Image
+              src={coverImageUrl}
+              alt={post.coverAlt || `${post.title} — 知橄生活 Olive Wisdom`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1152px) 100vw, 1152px"
+              priority
+            />
+          </div>
         </div>
       )}
 

@@ -153,7 +153,7 @@ const COVER_PROMPTS = {
     'amber cosmetic vial of olive squalene beside fresh olive sprig on white marble, small green leaves, soft natural light close-up, luxury beauty ingredient still life',
 
   'mediterranean-diet-anti-aging-2026':
-    'vibrant Mediterranean longevity food spread: EVOO bottle, colorful vegetables, fresh herbs, olive branch, ceramic bowls on white linen, warm golden natural light flat lay',
+    'vibrant Mediterranean food spread on white linen tablecloth, completely unlabeled plain dark green glass bottle of olive oil with a simple cork stopper in center, the bottle has no label no sticker no print no writing of any kind on the glass surface, surrounded by colorful fresh vegetables tomatoes peppers eggplant cucumber, fresh basil rosemary thyme herbs, olive branch with green olives, rustic terracotta and white ceramic bowls with kalamata olives, warm golden natural afternoon sunlight, overhead flat lay top-down composition, editorial food photography style, raw natural ingredients only, absolutely no text no letters no characters no words no hashtags no symbols no writing no labels no signs no logos no branding no typography of any kind anywhere in the entire image, pure visual photograph only',
 
   'mediterranean-diet-anti-aging-women-2026':
     'Mediterranean morning wellness scene: golden olive oil, fresh figs, pomegranate, herbs, ceramic cup on terracotta tile, warm feminine lifestyle editorial photography',

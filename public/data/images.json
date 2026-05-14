@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "lastUpdated": "2026-05-08",
+    "lastUpdated": "2026-05-13",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -37,9 +37,9 @@
       "total_articles": 23
     },
     "last_google_imagen_run": {
-      "date": "2026-05-08T02:48:53.914Z",
+      "date": "2026-05-13T16:04:49.757Z",
       "generated": 1,
-      "total_articles": 44
+      "total_articles": 45
     }
   },
   "hero": {
@@ -197,9 +197,9 @@
       "url": "/images/covers/mediterranean-diet-anti-aging-2026.jpg",
       "alt": "Mediterranean Diet Anti Aging 2026",
       "source": "google_imagen4",
-      "generated_at": "2026-05-01",
+      "generated_at": "2026-05-13",
       "quality_score": 9,
-      "prompt": "mediterranean longevity concept, elegant 40+ lifestyle, olive branches, colorful vegetables, EVOO bottle, golden light, "
+      "prompt": "vibrant Mediterranean food spread on white linen tablecloth, completely unlabeled plain dark green glass bottle of olive"
     },
     "polyphenol-decay-science-2026": {
       "url": "/images/covers/polyphenol-decay-science-2026.jpg",
