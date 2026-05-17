@@ -121,7 +121,7 @@ const COVER_PROMPTS = {
     'four olive oil bottles lined up from premium dark glass to light plastic, grade comparison concept, white marble surface, clean studio light, product classification editorial',
 
   'predimed-study-complete-explainer-olive-oil-heart':
-    'open clinical research binder with data charts beside premium dark glass EVOO bottle on clean academic desk, Spanish Mediterranean context, olive branch resting on pages, warm scholarly side light, science meets Mediterranean lifestyle editorial, documentary still life',
+    'elegant still life on white marble surface, completely unlabeled plain dark green glass bottle of olive oil with simple cork stopper as centerpiece, the bottle has no label no sticker no print no writing of any kind, fresh olive branch with green olives draped beside it, a few clean empty transparent laboratory glass vials and a small clear glass beaker arranged nearby suggesting scientific rigor, scattered fresh whole olives, soft warm natural side window light, shallow depth of field, Spanish Mediterranean science editorial aesthetic, premium documentary still life photography, raw objects only, absolutely no text no letters no characters no words no numbers no hashtags no symbols no writing no labels no charts no graphs no diagrams no documents no books no paper no signs no logos no branding no typography of any kind anywhere in the entire image, pure visual photograph only',
 
   'olive-oil-shelf-life-oxidation-storage':
     'two olive oil bottles on windowsill, one fresh vibrant gold one oxidized amber, calendar page beside, soft natural light, freshness and time concept still life',
