@@ -246,7 +246,7 @@ export default async function BlogPostPage({ params }: Props) {
               caption: `${post.title} — 知橄生活 Olive Wisdom`,
             },
             datePublished: post.date,
-            dateModified: post.date,
+            dateModified: post.updated || post.date,
             author: {
               '@type': 'Organization',
               name: post.author || '知橄生活研究團隊',
