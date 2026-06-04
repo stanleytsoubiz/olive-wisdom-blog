@@ -6,53 +6,60 @@ export const dynamic = 'force-static';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts();
   const baseUrl = 'https://olive-wisdom.com';
+  const canonicalUrl = (path = '') => `${baseUrl}${path}/`;
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: canonicalUrl(),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: canonicalUrl('/blog'),
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/about`,
+      url: canonicalUrl('/about'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/search`,
+      url: canonicalUrl('/search'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/topics`,
+      url: canonicalUrl('/topics'),
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/editorial-standards`,
+      url: canonicalUrl('/authority'),
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: canonicalUrl('/editorial-standards'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/privacy`,
+      url: canonicalUrl('/privacy'),
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/terms`,
+      url: canonicalUrl('/terms'),
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
@@ -68,7 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const age = now - postDate.getTime();
     const priority = age < SIX_MONTHS ? 0.9 : 0.75;
     return {
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: canonicalUrl(`/blog/${post.slug}`),
       lastModified: postDate,
       changeFrequency: 'monthly' as const,
       priority,
