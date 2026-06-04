@@ -19,6 +19,7 @@ export interface PostFrontmatter {
   title: string;
   slug: string;
   date: string;
+  updated?: string;
   category: string;
   excerpt: string;
   coverImage: string;

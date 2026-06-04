@@ -71,12 +71,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const SIX_MONTHS = 1000 * 60 * 60 * 24 * 180;
 
   const articlePages: MetadataRoute.Sitemap = posts.map((post) => {
+    const lastModifiedDate = post.updated || post.date;
     const postDate = post.date ? new Date(post.date) : new Date();
+    const lastModified = lastModifiedDate ? new Date(lastModifiedDate) : new Date();
     const age = now - postDate.getTime();
     const priority = age < SIX_MONTHS ? 0.9 : 0.75;
     return {
       url: canonicalUrl(`/blog/${post.slug}`),
-      lastModified: postDate,
+      lastModified,
       changeFrequency: 'monthly' as const,
       priority,
     };
