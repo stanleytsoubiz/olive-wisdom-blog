@@ -132,7 +132,7 @@ CoA（Certificate of Analysis，品質分析報告）是針對特定批次的油
 3. **看瓶子與產地。** 深色瓶或鐵罐擋光；產地要寫「種在哪、榨在哪」，不只是「裝在哪」。
 4. **找 CoA。** 掃瓶身 QR Code 或上品牌官網找批次號碼，確認報告對得上你手上的批次，數字落在標準內。
 
-完整的真偽檢查方法，見本站〈橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油，而您的舌頭可能是最後一道防線？〉（/posts/olive-oil-fraud-detection-authentic-vs-fake）。
+完整的真偽檢查方法，見本站〈橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油，而您的舌頭可能是最後一道防線？〉（/blog/olive-oil-fraud-detection-authentic-vs-fake）。
 
 ---
 
@@ -146,6 +146,6 @@ CoA（Certificate of Analysis，品質分析報告）是針對特定批次的油
 
 ## 延伸閱讀
 
-- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/posts/coa-complete-reading-guide-olive-oil)
-- [2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰](/posts/evoo-buying-guide-2026)
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
+- [2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰](/blog/evoo-buying-guide-2026)
 ---

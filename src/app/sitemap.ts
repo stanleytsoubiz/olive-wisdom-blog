@@ -3,58 +3,77 @@ import { getAllPosts } from '@/lib/posts';
 
 export const dynamic = 'force-static';
 
+// Last content-change dates for pages that don't change with article
+// publishing. Update the date here when the page itself is edited — do NOT
+// stamp "today" on every build, or search engines can't tell what changed.
+// (Dates verified from git history, 2026-11-22.)
+const STATIC_PAGE_DATES: Record<string, string> = {
+  '/about': '2026-11-22',
+  '/privacy': '2026-11-22',
+  '/terms': '2026-11-22',
+  '/contact': '2026-06-04',
+};
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = getAllPosts();
   const baseUrl = 'https://olive-wisdom.com';
   const canonicalUrl = (path = '') => `${baseUrl}${path}/`;
 
-  // Static pages
+  // Pages that list content change whenever an article is published or
+  // updated, so their lastModified is the newest article date.
+  const latestPostDate = posts.reduce((latest: Date, post) => {
+    const d = new Date(post.updated || post.date);
+    return d > latest ? d : latest;
+  }, new Date(0));
+
+  // Static pages — /search is intentionally excluded (thin search page,
+  // should not consume crawl budget); /contact is included.
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: canonicalUrl(),
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: canonicalUrl('/blog'),
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
       url: canonicalUrl('/about'),
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_PAGE_DATES['/about']),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: canonicalUrl('/search'),
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    },
-    {
       url: canonicalUrl('/topics'),
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
       url: canonicalUrl('/evidence'),
-      lastModified: new Date(),
+      lastModified: latestPostDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
+      url: canonicalUrl('/contact'),
+      lastModified: new Date(STATIC_PAGE_DATES['/contact']),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
       url: canonicalUrl('/privacy'),
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_PAGE_DATES['/privacy']),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
       url: canonicalUrl('/terms'),
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_PAGE_DATES['/terms']),
       changeFrequency: 'yearly',
       priority: 0.3,
     },

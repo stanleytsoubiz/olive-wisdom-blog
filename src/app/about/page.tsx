@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { getAllPosts } from '@/lib/posts';
 
 export const dynamic = 'force-static';
 
@@ -16,6 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  // Article count is computed from the content bundle so it never goes
+  // stale again (was hard-coded "45 篇" while the site had 52).
+  const articleCount = getAllPosts().length;
   return (
     <main className="min-h-screen bg-[#fafaf7]">
       {/* E-E-A-T Organization Schema */}
@@ -274,7 +278,7 @@ export default function AboutPage() {
           <p className="text-olive-600 text-xs font-medium tracking-widest uppercase mb-3">Learning Paths</p>
           <h2 className="text-3xl font-bold text-olive-800 mb-4">學習路徑：先懂證據，再選油</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-2xl">
-            把 45 篇文章整理成五條路徑：每一條都從入門讀到研究級，讀完就能自己判斷一瓶油。健康知識最容易被誇大，所以我們先把證據分層——哪些結論來自大型人體研究，哪些只是機理或初步觀察，哪些不能被說成治療或預防疾病。
+            把 {articleCount} 篇文章整理成五條路徑：每一條都從入門讀到研究級，讀完就能自己判斷一瓶油。健康知識最容易被誇大，所以我們先把證據分層——哪些結論來自大型人體研究，哪些只是機理或初步觀察，哪些不能被說成治療或預防疾病。
           </p>
 
           {/* 五條路徑 */}

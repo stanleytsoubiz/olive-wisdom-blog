@@ -5,6 +5,22 @@
   X-XSS-Protection: 1; mode=block
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  # Content-Security-Policy — added 2026-11-22 (Batch 3).
+  # 'unsafe-inline' is required for scripts and styles: Next.js static
+  # export injects inline scripts, and styled-jsx / inline style props
+  # need inline styles. The policy still blocks everything else that
+  # matters here: no plugins/embeds, no foreign frames, no foreign form
+  # targets, and scripts/styles/images/fonts/connections only from the
+  # sources the site actually uses (self, GA, Supabase, image CDNs).
+  # If Turnstile is added later, add https://challenges.cloudflare.com
+  # to script-src and frame-src.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# ── 文章封面圖（24h 可更新）── 必須放在廣泛的 /*.jpg 規則之前：
+# Cloudflare Pages 以先比對到的規則優先，之前這條寫在後面，封面
+# 實際可能被快取 1 年，換圖不會生效 ──────────────────────────
+/images/covers/*
+  Cache-Control: public, max-age=86400, must-revalidate
 
 # ── JS/CSS/靜態資源（hash 名稱 = immutable）────────────────────
 /_next/static/*
@@ -15,7 +31,7 @@
   Cache-Control: public, max-age=31536000, immutable
   Vary: Accept-Encoding
 
-# ── 其他圖片快取 1 年（先設定廣規則）──────────────────────────
+# ── 其他圖片快取 1 年 ──────────────────────────────────────────
 /*.jpg
   Cache-Control: public, max-age=31536000, immutable
 
@@ -28,15 +44,11 @@
 /*.ico
   Cache-Control: public, max-age=31536000, immutable
 
-# ── 文章封面圖（後覆蓋，24h 可更新）── 必須在 /*.jpg 之後 ────
-/images/covers/*
-  Cache-Control: public, max-age=86400, must-revalidate
-
 # ── 字型快取 1 年 ──────────────────────────────────────────────
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
-# ── 資料 JSON：短快取（Admin 更新 5 分鐘內生效）──────────────
+# ── 資料 JSON：短快取（5 分鐘內生效）──────────────────────────
 /data/*.json
   Cache-Control: public, max-age=300, must-revalidate
   Vary: Accept-Encoding
@@ -52,8 +64,3 @@
 # ── enhancements.js 短快取 ─────────────────────────────────────
 /enhancements.js
   Cache-Control: public, max-age=3600, must-revalidate
-
-# ── Admin：不快取、不索引 ──────────────────────────────────────
-/admin/*
-  X-Robots-Tag: noindex, nofollow
-  Cache-Control: no-store, no-cache

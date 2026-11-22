@@ -60,7 +60,7 @@ draft: false
 
 對克里特人來說，橄欖油一開始不只是食物。它是光（油燈）、是藥（塗抹身體）、是禮物（獻給神明的供品）。一瓶油同時是廚房用品、照明工具與宗教器物，這種「多重身份」，是橄欖油文化的起點。
 
-想深入了解橄欖樹與地中海文明的關係，可參考[橄欖樹與世界文明](/posts/olive-tree-ancient-civilization-heritage)。
+想深入了解橄欖樹與地中海文明的關係，可參考[橄欖樹與世界文明](/blog/olive-tree-ancient-civilization-heritage)。
 
 ## 埃及與希臘羅馬：油不只是食物
 
@@ -70,7 +70,7 @@ draft: false
 
 羅馬人把橄欖油變成帝國生意。羅馬城外的泰斯塔喬山，是一座由碎陶罐堆成的山丘——那些陶罐，裝的幾乎都是從西班牙與北非運來的橄欖油。一座山的陶罐碎片，就是一座帝國的進口帳本。
 
-詳細故事，可參考[法老的聖油：古埃及橄欖油](/posts/olive-oil-ancient-egypt-ritual-heritage)與[絲路上的橄欖油](/posts/olive-oil-silk-road-trade-history)。
+詳細故事，可參考[法老的聖油：古埃及橄欖油](/blog/olive-oil-ancient-egypt-ritual-heritage)與[絲路上的橄欖油](/blog/olive-oil-silk-road-trade-history)。
 
 ## 貿易：陶罐、港口與一座陶罐山
 
@@ -86,7 +86,7 @@ draft: false
 
 切尼尼（Cennino Cennini）在《藝匠之書》（約 1400 年）裡寫了油畫的調製方法；同一時期，托斯卡尼的農家餐桌上，麵包沾橄欖油是最日常的一餐。同一瓶油，一邊在畫布上發光，一邊在麵包上發光。
 
-詳細故事，可參考[文藝復興的橄欖油](/posts/olive-oil-renaissance-art-science-history)。
+詳細故事，可參考[文藝復興的橄欖油](/blog/olive-oil-renaissance-art-science-history)。
 
 ## 走向世界：美洲、日本與今天的餐桌
 
@@ -96,19 +96,19 @@ draft: false
 
 而今天，橄欖油走進了全世界的廚房——包括你家的廚房。從克里特島的古樹，到你手上這瓶油，中間隔著三千年、四條路、無數個港口與餐桌。
 
-想了解小豆島的故事，可參考[小豆島為什麼成為日本橄欖油代表？](/posts/shodoshima-olive-oil-history-terroir/)。
+想了解小豆島的故事，可參考[小豆島為什麼成為日本橄欖油代表？](/blog/shodoshima-olive-oil-history-terroir/)。
 
 ## 文化層的閱讀路徑：從這篇出發
 
 這篇文章是文化層的入口。如果你想繼續往下讀，建議照這個順序：
 
 1. **入門**：本文——橄欖油怎麼走到今天
-2. **文明**：[橄欖樹與世界文明](/posts/olive-tree-ancient-civilization-heritage)——橄欖樹如何連接飲食、宗教與貿易
-3. **貿易**：[絲路上的橄欖油](/posts/olive-oil-silk-road-trade-history)——陶罐、港口與泰斯塔喬山
-4. **儀式**：[法老的聖油：古埃及橄欖油](/posts/olive-oil-ancient-egypt-ritual-heritage)——油在尼羅河文明裡的角色
-5. **藝術**：[文藝復興的橄欖油](/posts/olive-oil-renaissance-art-science-history)——從祭壇到餐桌
-6. **風土**：[橄欖油風土解析：西班牙、希臘、義大利為什麼風味不同？](/posts/olive-oil-terroir-spain-greece-italy)——產地如何決定風味
-7. **品種**：[品種決定風味：Picual、Koroneiki、Frantoio，三個主要品種一次認識](/posts/olive-oil-varieties-picual-koroneiki-frantoio-guide)——從歷史走回你手上的那瓶油
+2. **文明**：[橄欖樹與世界文明](/blog/olive-tree-ancient-civilization-heritage)——橄欖樹如何連接飲食、宗教與貿易
+3. **貿易**：[絲路上的橄欖油](/blog/olive-oil-silk-road-trade-history)——陶罐、港口與泰斯塔喬山
+4. **儀式**：[法老的聖油：古埃及橄欖油](/blog/olive-oil-ancient-egypt-ritual-heritage)——油在尼羅河文明裡的角色
+5. **藝術**：[文藝復興的橄欖油](/blog/olive-oil-renaissance-art-science-history)——從祭壇到餐桌
+6. **風土**：[橄欖油風土解析：西班牙、希臘、義大利為什麼風味不同？](/blog/olive-oil-terroir-spain-greece-italy)——產地如何決定風味
+7. **品種**：[品種決定風味：Picual、Koroneiki、Frantoio，三個主要品種一次認識](/blog/olive-oil-varieties-picual-koroneiki-frantoio-guide)——從歷史走回你手上的那瓶油
 
 讀完這條路徑，你會知道：橄欖油的價值，從來不只在瓶子裡，而在產地、品種、採收與製程。
 
@@ -118,9 +118,9 @@ draft: false
 
 ## 延伸閱讀
 
-- [絲路上的橄欖油](/posts/olive-oil-silk-road-trade-history)
-- [法老的聖油：古埃及橄欖油](/posts/olive-oil-ancient-egypt-ritual-heritage)
-- [文藝復興的橄欖油](/posts/olive-oil-renaissance-art-science-history)
+- [絲路上的橄欖油](/blog/olive-oil-silk-road-trade-history)
+- [法老的聖油：古埃及橄欖油](/blog/olive-oil-ancient-egypt-ritual-heritage)
+- [文藝復興的橄欖油](/blog/olive-oil-renaissance-art-science-history)
 
 **來源與證據評級：** 本文的等級標準與證據分級，見[證據圖書館](/evidence/)。
 

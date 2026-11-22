@@ -14,9 +14,10 @@ const nextConfig = {
     minimumCacheTTL: 86400,
   },
 
-  // ── Build tolerances ──────────────────────────────────────────────────────
-  typescript: { ignoreBuildErrors: true },
-  eslint:     { ignoreDuringBuilds: true },
+  // ── Build checks ────────────────────────────────────────────────────────
+  // TypeScript and ESLint run on every build (re-enabled 2026-11-22,
+  // Batch 3). Do NOT set ignoreBuildErrors / ignoreDuringBuilds to
+  // silence failures — fix the error instead.
 };
 
 module.exports = nextConfig;

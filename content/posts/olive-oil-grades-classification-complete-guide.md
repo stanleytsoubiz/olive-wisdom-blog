@@ -84,7 +84,7 @@ IOC（International Olive Council，國際橄欖理事會）是全球橄欖油�
 
 **適用場合**：涼拌、沾醬、低中溫烹飪、義大利麵收尾、直接口服（空腹 1–2 匙）
 
-**選購標誌**：標示「Extra Virgin」+ IOC 認證 / PDO / DOP / PGI 認證 + 採收年份（Harvest Date）。購買前如何進一步辨別真假，可參考[橄欖油真假鑑別完整指南](/posts/olive-oil-fraud-detection-authentic-vs-fake)。
+**選購標誌**：標示「Extra Virgin」+ IOC 認證 / PDO / DOP / PGI 認證 + 採收年份（Harvest Date）。購買前如何進一步辨別真假，可參考[橄欖油真假鑑別完整指南](/blog/olive-oil-fraud-detection-authentic-vs-fake)。
 
 ---
 
@@ -177,7 +177,7 @@ Light Olive Oil 是更高度精製的橄欖油，幾乎無色無味，多酚含�
 | Light | 淡味橄欖油 | 高度精製 | ≤0.3% | 幾乎無 | 中性口味需求 |
 | Pomace | 橄欖果渣油 | 溶劑浸提+精製 | ≤0.3% | 無 | 食品工業（不建議家用）|
 
-**換句話說，IOC 六級分類體系中，只有 Extra Virgin 等級強制要求機械冷壓、游離酸度 ≤0.8% 且感官無缺陷——從 Virgin 往下的所有等級，多酚含量均呈現數量級下降，與高品質 EVOO 相關的健康研究結果不可套用於其他等級。** 多酚的健康研究基礎，可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
+**換句話說，IOC 六級分類體系中，只有 Extra Virgin 等級強制要求機械冷壓、游離酸度 ≤0.8% 且感官無缺陷——從 Virgin 往下的所有等級，多酚含量均呈現數量級下降，與高品質 EVOO 相關的健康研究結果不可套用於其他等級。** 多酚的健康研究基礎，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 ---
 
@@ -188,7 +188,7 @@ Light Olive Oil 是更高度精製的橄欖油，幾乎無色無味，多酚含�
 
 **Step 2：查看認證標誌**
 - **IOC 認證標誌**：在 IOC 官網可查詢認可品牌
-- **PDO（Protected Designation of Origin）/ DOP（Denominazione di Origine Protetta）**：歐盟原產地保護認證，確保特定產區來源（詳細解讀可參考 [PDO、DOP、IGP 認證完整指南](/posts/olive-oil-pdo-dop-igp-certification-guide)）
+- **PDO（Protected Designation of Origin）/ DOP（Denominazione di Origine Protetta）**：歐盟原產地保護認證，確保特定產區來源（詳細解讀可參考 [PDO、DOP、IGP 認證完整指南](/blog/olive-oil-pdo-dop-igp-certification-guide)）
 - **PGI（Protected Geographical Indication）**：歐盟地理標誌保護
 - **NYIOOC / EVOOLEUM 金獎**：全球最重要的橄欖油品質競賽，得獎代表感官評鑑通過
 
@@ -214,7 +214,7 @@ EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用
 
 **如果只記得一件事：瓶身沒有「Extra Virgin」字樣的橄欖油，不管標示 Pure、Light 還是只寫 Olive Oil，多酚含量均低於 50mg/kg，遠低於 EFSA 健康聲明所需的 250mg/kg 門檻——我們團隊建議，貨架上若找不到 Extra Virgin 標示，寧可不買橄欖油，也不要買標榜「純粹」或「淡味」的精製品。**
 
-分類體系讀懂了，選購橄欖油就不再需要依賴行銷話術和廣告承諾。科學標準在那裡，答案是清晰的。高品質 EVOO 的苦味與辛辣感是多酚含量的感官指標，詳情可參考[橄欖油苦澀辣口品質科學解說](/posts/olive-oil-bitterness-pungency-quality-guide)。確認等級後，可進一步使用[特級初榨橄欖油選購完全指南](/posts/evoo-buying-guide-2026)來做最終選擇。
+分類體系讀懂了，選購橄欖油就不再需要依賴行銷話術和廣告承諾。科學標準在那裡，答案是清晰的。高品質 EVOO 的苦味與辛辣感是多酚含量的感官指標，詳情可參考[橄欖油苦澀辣口品質科學解說](/blog/olive-oil-bitterness-pungency-quality-guide)。確認等級後，可進一步使用[特級初榨橄欖油選購完全指南](/blog/evoo-buying-guide-2026)來做最終選擇。
 
 ---
 

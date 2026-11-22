@@ -148,7 +148,7 @@ CoA（Certificate of Analysis，品質分析報告）是針對特定批次的油
 
 ## 延伸閱讀
 
-- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/posts/coa-complete-reading-guide-olive-oil)
-- [2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰](/posts/evoo-buying-guide-2026)
-- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/posts/olive-oil-terroir-spain-greece-italy)
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
+- [2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰](/blog/evoo-buying-guide-2026)
+- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
 ---

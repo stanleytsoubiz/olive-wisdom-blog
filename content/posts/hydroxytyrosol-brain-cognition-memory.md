@@ -77,11 +77,11 @@ L 的卡頓並非偶然。大腦只佔體重 2%，卻燒掉全身 20% 的氧氣�
 
 結果：**橄欖油組在記憶與執行功能的複合評分上，比低脂對照組表現較佳（中位數追蹤 4.1 年，447 人）。** 這是飲食模式層面的結果——整套地中海飲食加橄欖油，不是單一油品的效果。
 
-**換句話說，這個差距要成立，前提是整套飲食模式——每天那瓶油的多酚含量是否真的達到 ≥250mg/kg，只是其中一個條件。** 如何驗證手上那瓶油的多酚含量是否真實達標，請參考[橄欖油多酚含量驗證完整指南](/posts/olive-oil-polyphenol-content-how-to-verify)。
+**換句話說，這個差距要成立，前提是整套飲食模式——每天那瓶油的多酚含量是否真的達到 ≥250mg/kg，只是其中一個條件。** 如何驗證手上那瓶油的多酚含量是否真實達標，請參考[橄欖油多酚含量驗證完整指南](/blog/olive-oil-polyphenol-content-how-to-verify)。
 
 ## 實踐：為你的大腦設計一套多酚保護計畫
 
-羥基酪醇的保護效果是累積性的，而非即時的。這意味著，它需要成為你生活中的長期習慣，而非偶爾的補充。多酚如何隨儲存時間衰減、影響實際攝取劑量，可參考[多酚衰減科學完整解析](/posts/polyphenol-decay-science-2026)。
+羥基酪醇的保護效果是累積性的，而非即時的。這意味著，它需要成為你生活中的長期習慣，而非偶爾的補充。多酚如何隨儲存時間衰減、影響實際攝取劑量，可參考[多酚衰減科學完整解析](/blog/polyphenol-decay-science-2026)。
 
 **每日建議攝取量（依據 EFSA 標準）**：
 確保每日攝取的橄欖油含有至少 5mg 的羥基酪醇及其衍生物。以高多酚 EVOO（多酚含量 > 250mg/kg）計算，每日約 2 大匙（30ml）即可達標。
@@ -115,6 +115,6 @@ PREDIMED 的認知差距，不是奇蹟，是多年飲食模式累積出來的�
 
 ## 延伸閱讀
 
-- [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/posts/polyphenols-sirt1-longevity-2026)
-- [Oleocanthal 與大腦研究怎麼看？喉頭的嗆感與神經保護線索](/posts/oleocanthal-anti-inflammation-brain-protection)
-- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？](/posts/morning-ritual-evoo-metabolism)
+- [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026)
+- [Oleocanthal 與大腦研究怎麼看？喉頭的嗆感與神經保護線索](/blog/oleocanthal-anti-inflammation-brain-protection)
+- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？](/blog/morning-ritual-evoo-metabolism)

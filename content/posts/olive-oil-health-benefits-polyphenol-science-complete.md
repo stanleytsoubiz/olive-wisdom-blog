@@ -85,7 +85,7 @@ PREDIMED（Prevención con Dieta Mediterránea）是一項在西班牙執行、�
 - 高密度脂蛋白（HDL）功能性指標較佳
 - 收縮壓指標下降趨勢（在高多酚 EVOO 介入組中觀察到）
 
-**數據收束：PREDIMED 的 7,447 人規模與 4.8 年追蹤長度，是橄欖油心血管效益研究中規模最大的隨機對照試驗之一。**關於 PREDIMED 的研究設計、2018 年修正版爭議與完整數據解讀，可參考[PREDIMED 研究完整解析](/posts/predimed-study-complete-explainer-olive-oil-heart)。
+**數據收束：PREDIMED 的 7,447 人規模與 4.8 年追蹤長度，是橄欖油心血管效益研究中規模最大的隨機對照試驗之一。**關於 PREDIMED 的研究設計、2018 年修正版爭議與完整數據解讀，可參考[PREDIMED 研究完整解析](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
 ---
 
@@ -115,7 +115,7 @@ PREDIMED（Prevención con Dieta Mediterránea）是一項在西班牙執行、�
 
 ### 量化視角
 
-高品質特級初榨橄欖油中 Oleocanthal 含量約為 50–200mg/kg，視品種（Koroneiki、Picual、Coratina 通常含量較高）、採收時機（青熟期偏高）及儲存條件而異。每日攝取 50ml 高多酚 EVOO，約可攝取 5–10mg Oleocanthal——遠低於消炎藥劑量，但研究認為長期累積效應可能具有慢性炎症調節意義。關於多酚含量如何隨時間衰減，以及如何在日常使用中最大程度保留 Oleocanthal，可參考[多酚衰減科學](/posts/polyphenol-decay-science-2026)。
+高品質特級初榨橄欖油中 Oleocanthal 含量約為 50–200mg/kg，視品種（Koroneiki、Picual、Coratina 通常含量較高）、採收時機（青熟期偏高）及儲存條件而異。每日攝取 50ml 高多酚 EVOO，約可攝取 5–10mg Oleocanthal——遠低於消炎藥劑量，但研究認為長期累積效應可能具有慢性炎症調節意義。關於多酚含量如何隨時間衰減，以及如何在日常使用中最大程度保留 Oleocanthal，可參考[多酚衰減科學](/blog/polyphenol-decay-science-2026)。
 
 **數據收束：Oleocanthal 的 COX-1/COX-2 抑制相關性目前主要來自體外研究，人體試驗中的抗炎生物標記物（如 CRP、IL-6）降低趨勢在多項小型 RCT 中獲得觀察，但大規模 RCT 數量仍有限——這是目前的科學邊界，也是需要誠實告知的資訊。**
 
@@ -233,7 +233,7 @@ PREDIMED 研究在西班牙 Navarra 地區的子試驗中，針對 522 名受試
 
 台灣市售大多數「特級初榨橄欖油」的多酚含量在 50–150mg/kg 之間（本站估計，未經系統抽查），達到 EFSA 標準的比例估計低於 20%（同上）。以下是識別高多酚 EVOO 的實用指標：
 
-1. **第三方多酚檢測報告**：廠商應可提供批次多酚含量（mg/kg）數字，[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)說明了如何驗證一份 CoA 的真實性與時效性
+1. **第三方多酚檢測報告**：廠商應可提供批次多酚含量（mg/kg）數字，[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)說明了如何驗證一份 CoA 的真實性與時效性
 2. **採收年份標示**：多酚隨儲存時間衰減，採收後 12 個月內品質最穩定
 3. **感官指標**：喉頭後段的苦感、辛辣感是 Oleocanthal 和 Oleuropein 存在的感官訊號
 
@@ -253,8 +253,8 @@ PREDIMED 研究在西班牙 Navarra 地區的子試驗中，針對 522 名受試
 
 ## 延伸閱讀
 
-- [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/posts/predimed-study-complete-explainer-olive-oil-heart)
-- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/posts/coa-complete-reading-guide-olive-oil)
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/posts/olive-oil-polyphenol-content-how-to-verify)
+- [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
+- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
 
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。

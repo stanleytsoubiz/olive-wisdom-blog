@@ -68,11 +68,11 @@ SIRT1（Sirtuin 1）是一種 NAD+ 依賴性的去乙醯化酶（Deacetylase，�
 
 2013 年發表於《新英格蘭醫學期刊》（NEJM）的 PREDIMED 研究，追蹤 7,447 名心血管高風險者長達 4.8 年。地中海飲食＋EVOO 補充組與心血管事件較低風險約 **30%** 有相關（整體飲食模式的結果，非單一油品效果）——這個數字在 2013 年震撼了全球醫學界，也是後續所有「橄欖油與長壽」研究的引用起點。
 
-關於 PREDIMED 的完整設計、數據與 2018 年因隨機分組瑕疵而修正再發表的歷程，可參考[PREDIMED 研究完整解析](/posts/predimed-study-complete-explainer-olive-oil-heart)。
+關於 PREDIMED 的完整設計、數據與 2018 年因隨機分組瑕疵而修正再發表的歷程，可參考[PREDIMED 研究完整解析](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
 ## 如何選擇真正含有「對話分子」的油
 
-並非所有橄欖油都含有足以與 SIRT1 對話的多酚。選油時如何用 CoA 報告核實多酚數值，可參考[橄欖油多酚含量驗證完整指南](/posts/olive-oil-polyphenol-content-how-to-verify)。挑選要點：
+並非所有橄欖油都含有足以與 SIRT1 對話的多酚。選油時如何用 CoA 報告核實多酚數值，可參考[橄欖油多酚含量驗證完整指南](/blog/olive-oil-polyphenol-content-how-to-verify)。挑選要點：
 
 - **採收時間**：10–11 月青橄欖期採收，與最高多酚含量有相關
 - **冷壓初榨**：溫度控制在 27°C 以下，與多酚保留有相關
@@ -105,6 +105,6 @@ SIRT1（Sirtuin 1）是一種 NAD+ 依賴性的去乙醯化酶（Deacetylase，�
 
 ## 延伸閱讀
 
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/posts/hydroxytyrosol-brain-cognition-memory)
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/posts/olive-oil-polyphenol-content-how-to-verify)
-- [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/posts/mediterranean-diet-anti-aging-women-2026)
+- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/blog/mediterranean-diet-anti-aging-women-2026)

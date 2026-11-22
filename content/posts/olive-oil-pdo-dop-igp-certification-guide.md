@@ -134,7 +134,7 @@ Koroneiki 品種是全球公認多酚含量最高的商業品種之一。早摘�
 **西班牙 Priego de Córdoba DOP 和 Sierra Mágina DOP**  
 Picual 品種主導，以高油酸（Oleic Acid）和良好的氧化穩定性見稱，多酚含量穩定在 200–450mg/kg 範圍，是料理用途的可靠選擇。口感上帶著清晰的青草香與中等辣感，比 Koroneiki 溫和，比 Arbequina 有力——入門者容易接受，進階者不嫌淡。
 
-即便在上述高潛力產區，採收時機和生產者的個別選擇，仍然是決定最終多酚含量的關鍵變數。一份來自生產者的 Certificate of Analysis（化驗報告）——上面有具體的 Total Polyphenols（總多酚）數值——永遠比任何認證標誌更直接。如何讀懂這份報告的每一個欄位，可參考[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)。
+即便在上述高潛力產區，採收時機和生產者的個別選擇，仍然是決定最終多酚含量的關鍵變數。一份來自生產者的 Certificate of Analysis（化驗報告）——上面有具體的 Total Polyphenols（總多酚）數值——永遠比任何認證標誌更直接。如何讀懂這份報告的每一個欄位，可參考[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)。
 
 ---
 
@@ -154,7 +154,7 @@ Koroneiki、Coratina、Picual、早摘的 Frantoio——這些品種有多酚的
 **第四關：PDO/DOP/IGP 認證**  
 在前三關都通過的情況下，PDO 認證是產地真實性的加分保障。在前三關不確定的情況下，PDO 標誌無法替代那三個問題的答案。
 
-**如果只記得一件事：選購橄欖油時，採收日期和 CoA 多酚數值是不可省略的前兩關，PDO/DOP 認證是錦上添花而非替代——我們團隊的立場是，一瓶無認證但有 CoA 顯示多酚 ≥400mg/kg 且採收在 12 個月內的油，比一瓶有 DOP 標章但無多酚數據的油，在健康選購邏輯上更有說服力。** 完整的五步驟選購框架可參考[橄欖油選購完全指南](/posts/olive-oil-complete-buying-guide-2026)。
+**如果只記得一件事：選購橄欖油時，採收日期和 CoA 多酚數值是不可省略的前兩關，PDO/DOP 認證是錦上添花而非替代——我們團隊的立場是，一瓶無認證但有 CoA 顯示多酚 ≥400mg/kg 且採收在 12 個月內的油，比一瓶有 DOP 標章但無多酚數據的油，在健康選購邏輯上更有說服力。** 完整的五步驟選購框架可參考[橄欖油選購完全指南](/blog/olive-oil-complete-buying-guide-2026)。
 
 ---
 
@@ -185,6 +185,6 @@ Koroneiki、Coratina、Picual、早摘的 Frantoio——這些品種有多酚的
 
 ### 延伸閱讀
 
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/posts/olive-oil-polyphenol-content-how-to-verify)
-- [橄欖油的風土密碼：西班牙、希臘與義大利的同種橄欖，為何有截然不同的靈魂？](/posts/olive-oil-terroir-spain-greece-italy)
-- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油？](/posts/olive-oil-fraud-detection-authentic-vs-fake)
+- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [橄欖油的風土密碼：西班牙、希臘與義大利的同種橄欖，為何有截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
+- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油？](/blog/olive-oil-fraud-detection-authentic-vs-fake)

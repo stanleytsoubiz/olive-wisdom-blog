@@ -129,11 +129,11 @@ Barrera-Chamorro et al. (2025) 在 Food & Function 的研究進一步整理了�
 
 **第二關：你選的那一瓶。** 即使是 EVOO，多酚含量也差異懸殊。目前最可靠的驗證方式是尋找標注 TPC（Total Polyphenol Content，總多酚含量）或 COA（Certificate of Analysis，第三方分析証書）的產品。如果喉嚨後段有輕微刺激感——那個「嗆喉」——通常是 Oleocanthal 濃度的感官信號，含量 ≥ 250 mg/kg 的油，這個刺感會比較明顯。
 
-若你想深入了解如何從產品標籤和 COA 報告讀取多酚數據，請參考我們整理的 [COA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)。
+若你想深入了解如何從產品標籤和 COA 報告讀取多酚數據，請參考我們整理的 [COA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)。
 
 目前無針對腸道菌相的官方最低有效劑量標準，但現有研究框架提供了可操作的參考起點：PREDIMED 試驗補充 EVOO 組每日約攝取 50 mL（等於 4 湯匙，這是臨床試驗劑量，不是一般日常攝取）；地中海人群的自然觀察數據顯示，每日 25–50 mL（約含 9 mg 酚類，換算基準同上，依多酚濃度約 250–300 mg/kg 的 EVOO 計算）與腸道益菌相關指標改善有關。
 
-實踐建議，以台灣的飲食語境來說：每日 1–2 湯匙（15–30 mL）的多酚含量 ≥250 mg/kg 的特級初榨橄欖油，作為涼拌、淋醬或低溫烹調的主要用油，是目前科學依據最穩健的日常起點。若要了解多酚的完整健康研究圖像，包括與心血管、炎症反應等面向的關聯數據，可以查閱我們的深度整理 [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
+實踐建議，以台灣的飲食語境來說：每日 1–2 湯匙（15–30 mL）的多酚含量 ≥250 mg/kg 的特級初榨橄欖油，作為涼拌、淋醬或低溫烹調的主要用油，是目前科學依據最穩健的日常起點。若要了解多酚的完整健康研究圖像，包括與心血管、炎症反應等面向的關聯數據，可以查閱我們的深度整理 [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 如果只記住一件事：多酚含量決定到腸道的有效劑量。選油的起點，就是那個數字。
 

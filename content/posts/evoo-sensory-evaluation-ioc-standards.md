@@ -61,7 +61,7 @@ PREDIMED 研究的西班牙橄欖油化學家 María-Isabel Mínguez-Mosquera �
 
 辣感（Pungency）在橄欖油語境中特指**喉嚨後部的辛辣刺激感**，有別於胡椒的舌尖辛辣或薑的口腔熱感。2005 年《自然》期刊的突破性研究指出，這種感覺的分子根源是 **Oleocanthal**，其作用機制與布洛芬的 COX 抑制路徑高度相似。
 
-IOC 標準中，辣感與苦味一樣是正面屬性。「雙咳油（Two-cough oil）」——即喝下後引發連續兩聲咳嗽的橄欖油——往往被品油師視為高多酚含量的標誌。[橄欖油苦澀辣口的品質科學](/posts/olive-oil-bitterness-pungency-quality-guide)詳細解析了為什麼這種感官反應是選油時的正向訊號，而非缺陷。
+IOC 標準中，辣感與苦味一樣是正面屬性。「雙咳油（Two-cough oil）」——即喝下後引發連續兩聲咳嗽的橄欖油——往往被品油師視為高多酚含量的標誌。[橄欖油苦澀辣口的品質科學](/blog/olive-oil-bitterness-pungency-quality-guide)詳細解析了為什麼這種感官反應是選油時的正向訊號，而非缺陷。
 
 **換句話說，果香是新鮮度指標、苦味是多酚存量指標、辣感是 Oleocanthal 活性指標——三者同時存在且清晰，才代表這瓶油的感官與化學品質真正對齊。**
 
@@ -89,7 +89,7 @@ IOC 感官評鑑體系的另一大支柱，是精確定義各種**缺陷（Defec
 
 **品油師的秘訣：** 每次評鑑前以室溫水潤喉，並在評鑑不同油品之間以蘋果片（含果膠）清潔口腔，效果遠優於清水或麵包。
 
-**如果只記得一件事：喉嚨那道嗆感是最誠實的多酚測試——不需要實驗室，那道感覺消失的那天，就是那瓶油的健康功效實際到期的日子。** 若想以數字確認感官評估的結果，可向廠商索取[橄欖油 CoA 報告](/posts/coa-complete-reading-guide-olive-oil)，Oleocanthal 和 Hydroxytyrosol 的具體數值會與喉嗆感強度呈現一致的對應關係。
+**如果只記得一件事：喉嚨那道嗆感是最誠實的多酚測試——不需要實驗室，那道感覺消失的那天，就是那瓶油的健康功效實際到期的日子。** 若想以數字確認感官評估的結果，可向廠商索取[橄欖油 CoA 報告](/blog/coa-complete-reading-guide-olive-oil)，Oleocanthal 和 Hydroxytyrosol 的具體數值會與喉嗆感強度呈現一致的對應關係。
 
 ## 從語言到選擇，您就是自己的品油師
 
@@ -112,6 +112,6 @@ IOC 感官評鑑語言的真正價值，不在於讓您通過考試，而在於�
 
 ## 延伸閱讀
 
-- [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/posts/evoo-buying-guide-2026)
-- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/posts/olive-oil-terroir-spain-greece-italy)
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/posts/olive-oil-polyphenol-content-how-to-verify)
+- [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/blog/evoo-buying-guide-2026)
+- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
+- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)

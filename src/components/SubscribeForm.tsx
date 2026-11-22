@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { trackSubscribe } from '@/components/GoogleAnalytics';
+import { isHoneypotFilled, checkThrottle } from '@/lib/form-guard';
 
 const SUPABASE_URL  = process.env.NEXT_PUBLIC_SUPABASE_URL  || '';
 const SUPABASE_ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -15,6 +16,8 @@ export default function SubscribeForm() {
   const [status,  setStatus]  = useState<'idle'|'loading'|'success'|'error'>('idle');
   const [message, setMessage] = useState('');
   const [touched, setTouched] = useState(false);
+  // Honeypot — see src/lib/form-guard.ts. Humans never see or fill this.
+  const [website, setWebsite] = useState('');
 
   const emailError = touched && !isValidEmail(email)
     ? '請輸入有效的電子信箱' : '';
@@ -23,6 +26,18 @@ export default function SubscribeForm() {
     e.preventDefault();
     setTouched(true);
     if (!isValidEmail(email)) return;
+    // Honeypot filled → bot. Fake success, write nothing.
+    if (isHoneypotFilled(website)) {
+      setStatus('success');
+      setMessage('🎉 訂閱成功！歡迎加入知橄生活家族，下期週報見 🫒');
+      setEmail('');
+      return;
+    }
+    if (!checkThrottle('subscribe')) {
+      setStatus('error');
+      setMessage('送出太頻繁，請稍後再試。');
+      return;
+    }
     setStatus('loading');
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
@@ -69,6 +84,17 @@ export default function SubscribeForm() {
   return (
     <div className="max-w-md mx-auto">
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+        {/* Honeypot — hidden from humans (see src/lib/form-guard.ts) */}
+        <input
+          type="text"
+          name="website"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+          autoComplete="off"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="absolute opacity-0 pointer-events-none h-0 w-0"
+        />
         <div className="flex-1">
           <input
             type="email"

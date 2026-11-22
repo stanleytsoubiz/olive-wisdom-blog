@@ -3,11 +3,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const NAV_LINKS = [
+  { href: '/search', label: '搜尋文章' },
   { href: '/blog', label: '所有文章' },
   { href: '/blog/?cat=science', label: '科學萃取' },
   { href: '/blog/?cat=lifestyle', label: '餐桌美學' },
   { href: '/blog/?cat=health', label: '品味鑑賞' },
   { href: '/blog/?cat=culture', label: '知性史詩' },
+  { href: '/topics', label: '所有主題' },
+  { href: '/evidence', label: '證據圖書館' },
   { href: '/about', label: '關於知橄' },
 ];
 
