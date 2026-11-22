@@ -187,6 +187,6 @@ EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 2
 ## 延伸閱讀
 
 - [科學家選油指南：高多酚 EVOO 的五大核心鑑別標準](/posts/evoo-buying-guide-2026)
-- [橄欖油多酚的七大科學效益：PREDIMED 39,000 人研究告訴我們什麼](/posts/olive-oil-health-benefits-polyphenol-science-complete)
+- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/posts/olive-oil-health-benefits-polyphenol-science-complete)
 - [橄欖油感官評鑑 IOC 標準全解析](/posts/evoo-sensory-evaluation-ioc-standards)
 - [2026 高多酚 EVOO 品質多酚指數](/posts/2026-evoo-quality-polyphenol-index)

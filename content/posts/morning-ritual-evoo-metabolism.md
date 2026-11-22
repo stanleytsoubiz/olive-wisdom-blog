@@ -132,5 +132,5 @@ NRF2（Nuclear Factor Erythroid 2-Related Factor 2）是細胞抗氧化防禦系
 ## 延伸閱讀
 
 - [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/posts/evoo-buying-guide-2026)
-- [多酚與 SIRT1：橄欖油如何啟動長壽基因的科學解析](/posts/polyphenols-sirt1-longevity-2026)
+- [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/posts/polyphenols-sirt1-longevity-2026)
 - [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/posts/mediterranean-diet-anti-aging-women-2026)
