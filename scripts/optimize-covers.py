@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-optimize-covers.py — convert local article covers JPG -> WebP (one-time).
+optimize-covers.py — one-time JPG -> WebP conversion (SUPERSEDED).
 
-Why this exists: the site is a static export (next.config.js:
-output 'export' + images.unoptimized), so next/image cannot optimise
-anything — covers were served as 1408px JPG originals (~16 MB for
-46 files). The fix is to optimise the assets themselves:
-  * max width 1200px (largest display is the 1152px article hero),
-  * WebP quality 82 (visually identical for these AI-generated covers),
-  * references rewritten in content/posts frontmatter + public/data/images.json,
-  * original JPGs deleted (orphan JPGs in the folder are deleted too).
+SUPERSEDED by build-time conversion: scripts/optimize-covers-build.mjs
+(sharp) now converts the covers on every build, and scripts/build.mjs
+rewrites the .jpg references in the generated files the build consumes.
+The WebP files are build artifacts (see .gitignore) and are never
+committed — the GitHub connector used to push this repo can only push
+UTF-8 text, so committed binaries were never pushable (see
+research_notes/olive-wisdom-tech-batch1-20261122/report.md, section A).
 
-Usage: python3 scripts/optimize-covers.py
-Requires: Pillow (pip install pillow). Re-running after a conversion is
-a no-op (no .jpg covers left). New covers added later as JPG: run again.
+This script is kept for reference only: it documents the conversion
+parameters (max width 1200px, WebP quality 82) and the one-time manual
+method. Do not run it — it deletes the committed JPGs and rewrites
+frontmatter + images.json in the working tree.
 """
 import glob
 import json
