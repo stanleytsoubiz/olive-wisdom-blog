@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   // Title template in layout.tsx adds "｜知橄生活 Olive Wisdom" once.
   title: '搜尋文章',
   description: '搜尋知橄生活所有橄欖油科學、地中海飲食、品飲鑑賞深度文章。',
-  // Temporary safety measure (2026-11-22): noindex until a real-browser
-  // keyword test confirms the pagefind search works end to end.
-  robots: { index: false, follow: true },
+  // Search verified working live (2026-11-22): /search/?q=多酚 returns
+  // 12 articles with no errors, so the page may be indexed.
+  robots: { index: true, follow: true },
   alternates: { canonical: 'https://olive-wisdom.com/search' },
 };
 
