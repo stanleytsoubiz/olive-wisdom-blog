@@ -233,7 +233,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               >
                 前往訂閱 →
               </Link>
-              <p className="text-xs text-olive-400 mt-3">訂閱即贈《橄欖油品飲師口袋手冊》PDF</p>
             </div>
           </div>
 

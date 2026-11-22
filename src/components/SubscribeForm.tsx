@@ -61,7 +61,7 @@ export default function SubscribeForm() {
     return (
       <div className="bg-olive-50 border border-olive-300 text-olive-800 rounded-2xl px-6 py-5 max-w-md mx-auto text-center">
         <p className="font-semibold text-lg">{message}</p>
-        <p className="text-sm text-olive-600 mt-2">📄 訂閱者可獲得《橄欖油品飲師口袋手冊》PDF</p>
+        <p className="text-sm text-olive-600 mt-2">每週一封，隨時可取消訂閱。</p>
       </div>
     );
   }
@@ -104,7 +104,7 @@ export default function SubscribeForm() {
         <p className="text-sm text-red-500 text-center mt-2">{message}</p>
       )}
       <p className="text-xs text-olive-500 text-center mt-3 font-sans">
-        訂閱即贈《橄欖油品飲師口袋手冊》PDF · 隨時可取消
+        免費訂閱 · 每週一封 · 隨時可取消
       </p>
     </div>
   );

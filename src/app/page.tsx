@@ -303,7 +303,6 @@ export default async function HomePage() {
         <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">訂閱知橄週報</h2>
         <p className="text-stone-500 text-sm md:text-base leading-relaxed mb-8 max-w-md mx-auto font-sans">
           每週一封，精選最新橄欖油研究與地中海生活美學靈感。
-          訂閱即贈《橄欖油品飲師口袋手冊》PDF。
         </p>
         <SubscribeForm />
       </section>
