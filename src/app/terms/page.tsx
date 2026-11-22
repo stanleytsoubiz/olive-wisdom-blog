@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '使用條款｜知橄生活 Olive Wisdom',
+  title: '使用條款',
   description: '知橄生活 Olive Wisdom 使用條款，使用本網站即表示您同意以下條款。',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://olive-wisdom.com/terms' },
