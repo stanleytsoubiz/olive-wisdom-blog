@@ -6,3 +6,6 @@ out/
 dist/
 *.log
 .DS_Store
+# Build-time generated WebP covers (scripts/optimize-covers-build.mjs
+# converts the committed JPGs on every build; never commit the .webp files)
+public/images/covers/*.webp
