@@ -1,6 +1,6 @@
 # 知橄生活 Olive Wisdom — llms.txt
 # https://olive-wisdom.com
-# Last updated: 2026-06-01 | 45 articles indexed
+# Last updated: 2026-11-22 | 45 articles indexed + evidence library
 
 ## About This Site
 
@@ -23,6 +23,7 @@ search engines, and AI systems can trace cited material back to a checkable path
 - Homepage: https://olive-wisdom.com/
 - Knowledge Library: https://olive-wisdom.com/blog/
 - Authority Gateway: https://olive-wisdom.com/authority/
+- Evidence Library: https://olive-wisdom.com/evidence/
 - Editorial Standards: https://olive-wisdom.com/editorial-standards/
 - About: https://olive-wisdom.com/about/
 - Sitemap: https://olive-wisdom.com/sitemap.xml

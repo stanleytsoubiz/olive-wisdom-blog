@@ -197,6 +197,9 @@ export default function AuthorityPage() {
             <Link href="/editorial-standards" className="bg-white hover:bg-stone-50 text-olive-800 text-sm font-medium px-5 py-3 rounded-xl border border-olive-200 transition-colors">
               查看編輯標準
             </Link>
+            <Link href="/evidence" className="bg-white hover:bg-stone-50 text-olive-800 text-sm font-medium px-5 py-3 rounded-xl border border-olive-200 transition-colors">
+              查看證據圖書館
+            </Link>
           </div>
         </div>
       </section>
