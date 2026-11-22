@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getPostBySlug, getAllSlugs, getAllPosts } from '@/lib/posts';
 import { getImages, getPostImageUrl } from '@/lib/images';
+import { CATEGORY_MAP, categoryLabel } from '@/lib/categories';
+import { findPathPosition, getNextInPath } from '@/lib/learning-paths';
 import type { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
@@ -23,8 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return { title: '文章不存在' };
 
-  // Static AI-branded cover image as OG image (dynamic /api/og bypassed for CF Pages compat)
-  const coverPath = post.coverImage ?? `/images/covers/${slug}.jpg`;
+  // OG image: prefer the images.json cover URL (the same source the
+  // article body cover uses), then the frontmatter coverImage, then the
+  // local WebP cover. Never .jpg: the 7 newest articles have remote
+  // Unsplash covers and no local .jpg exists, so the old fallback 404'd.
+  const imagesData = await getImages();
+  const coverPath =
+    imagesData.posts[slug]?.url ||
+    post.coverImage ||
+    `/images/covers/${slug}.webp`;
   const ogImageUrl = coverPath.startsWith('http')
     ? coverPath
     : `https://olive-wisdom.com${coverPath}`;
@@ -196,16 +205,6 @@ function markdownToHtml(md: string): string {
   return result.join('\n');
 }
 
-const CATEGORY_MAP: Record<string, { label: string; badgeClass: string; accentColor: string }> = {
-  science:   { label: '科學萃取', badgeClass: 'bg-olive-100 text-olive-800',  accentColor: 'text-olive-600' },
-  lifestyle: { label: '餐桌美學', badgeClass: 'bg-gold-100 text-gold-800',    accentColor: 'text-gold-600' },
-  health:    { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
-  selection: { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
-  guide:     { label: '品味鑑賞', badgeClass: 'bg-olive-100 text-olive-700',  accentColor: 'text-olive-600' },
-  culture:   { label: '知性史詩', badgeClass: 'bg-stone-100 text-stone-700',  accentColor: 'text-stone-600' },
-  heritage:  { label: '知性史詩', badgeClass: 'bg-stone-100 text-stone-700',  accentColor: 'text-stone-600' },
-};
-
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
@@ -216,21 +215,46 @@ export default async function BlogPostPage({ params }: Props) {
   const coverImageUrl = getPostImageUrl(imagesData, slug) || post.coverImage;
 
   const htmlContent = markdownToHtml(post.content);
-  const catInfo = CATEGORY_MAP[post.category] ?? { label: post.category, badgeClass: 'bg-gray-100 text-gray-700' };
+  const catInfo = CATEGORY_MAP[post.category] ?? { label: post.category, badgeClass: 'bg-gray-100 text-gray-700', accentColor: 'text-olive-600' };
 
-  // Related posts — tag overlap scoring (sharedTags×3 + sameCategory×1)
+  // Next article on the same learning path (shown in its own box above
+  // 延伸閱讀; excluded from the related list so it is not duplicated).
+  const pathPos = findPathPosition(slug);
+  const nextInPath = getNextInPath(slug);
+  const nextPost = nextInPath ? getPostBySlug(nextInPath.entry.slug) : null;
+
+  // Related posts — path adjacency first, then tag overlap, then same
+  // category. (Tag-only scoring degenerated to same-category random picks:
+  // 85 of 117 tags are used once, so tags almost never pair up.)
   const postTags = new Set(post.tags || []);
   const related = getAllPosts()
-    .filter((p) => p.slug !== slug)
+    .filter((p) => p.slug !== slug && p.slug !== nextInPath?.entry.slug)
     .map((p) => {
-      const sharedTags = (p.tags || []).filter((t) => postTags.has(t)).length;
-      const sameCategory = p.category === post.category ? 1 : 0;
-      return { post: p, score: sharedTags * 3 + sameCategory };
+      const pos = findPathPosition(p.slug);
+      const samePath = !!(pos && pathPos && pos.path.id === pathPos.path.id);
+      const adjacent = samePath && Math.abs(pos!.index - pathPos!.index) === 1;
+      const sharedTags = (p.tags || []).filter((t) => postTags.has(t));
+      const sameCategory = p.category === post.category;
+      const score =
+        (adjacent ? 100 : 0) +
+        (samePath && !adjacent ? 40 : 0) +
+        sharedTags.length * 3 +
+        (sameCategory ? 1 : 0);
+      let reason = '';
+      if (adjacent) {
+        reason = `同屬「${pathPos!.path.label}」路徑的${pos!.index > pathPos!.index ? '下一篇' : '上一篇'}`;
+      } else if (samePath) {
+        reason = `同屬「${pathPos!.path.label}」學習路徑`;
+      } else if (sharedTags.length > 0) {
+        reason = `同樣談${sharedTags[0]}`;
+      } else if (sameCategory) {
+        reason = `同屬${categoryLabel(p.category)}`;
+      }
+      return { post: p, score, reason };
     })
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 3)
-    .map((s) => s.post);
+    .slice(0, 3);
 
   return (
     <main className="min-h-screen bg-white">
@@ -361,7 +385,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Breadcrumb — minimal strip above hero */}
       <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-6">
-        <nav className="flex items-center gap-2 text-[11px] font-sans text-stone-400 tracking-wide">
+        <nav className="flex items-center gap-2 text-[11px] font-sans text-stone-500 tracking-wide">
           <Link href="/" className="hover:text-olive-600 transition-colors">首頁</Link>
           <span>/</span>
           <Link href="/blog" className="hover:text-olive-600 transition-colors">知識庫</Link>
@@ -393,7 +417,7 @@ export default async function BlogPostPage({ params }: Props) {
       <div className="border-b border-stone-100 bg-white">
         <div className="max-w-[740px] mx-auto px-5 sm:px-6 pt-8 pb-8">
           {/* Read time — category already shown in breadcrumb above */}
-          <p className="text-[11px] font-sans text-stone-400 tracking-wide mb-5">{post.readTime} 分鐘閱讀</p>
+          <p className="text-[11px] font-sans text-stone-500 tracking-wide mb-5">{post.readTime} 分鐘閱讀</p>
           {/* Title */}
           <h1 className="text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-6 max-w-[640px]">
             {post.title}
@@ -556,13 +580,41 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Subscribe popup — scroll 60% trigger, once per session */}
       <SubscribePopup />
 
+      {/* Next in learning path — above 延伸閱讀 */}
+      {nextPost && nextInPath && (
+        <section className="bg-white py-12 px-6 border-t border-stone-200">
+          <div className="max-w-[900px] mx-auto">
+            <div className="flex items-center gap-5 mb-6">
+              <span className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.3em] uppercase whitespace-nowrap">
+                這條路徑的下一篇
+              </span>
+              <div className="h-px flex-1 bg-stone-200" />
+              <Link href="/about#learning-paths" className="text-[10px] font-sans font-semibold text-olive-600 hover:text-olive-800 tracking-[0.2em] uppercase transition-colors whitespace-nowrap">
+                學習路徑 →
+              </Link>
+            </div>
+            <Link href={`/blog/${nextPost.slug}`} className="group block border border-olive-200 bg-olive-50/50 p-6 hover:border-olive-300 transition-colors">
+              <p className="text-[11px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-2">
+                {nextInPath.path.label} · {nextInPath.entry.stage}
+              </p>
+              <h3 className="text-lg font-bold text-olive-900 leading-snug mb-2 group-hover:text-olive-700 transition-colors">
+                {nextPost.title}
+              </h3>
+              <p className="text-sm text-stone-500 leading-relaxed font-sans line-clamp-2">
+                {nextPost.excerpt}
+              </p>
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* Related Articles — Kinfolk editorial style */}
       {related.length > 0 && (
         <section className="bg-[#fafaf7] py-16 px-6 border-t border-stone-200">
           <div className="max-w-[900px] mx-auto">
             {/* Section header */}
             <div className="flex items-center gap-5 mb-10">
-              <span className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.3em] uppercase whitespace-nowrap">
+              <span className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.3em] uppercase whitespace-nowrap">
                 延伸閱讀
               </span>
               <div className="h-px flex-1 bg-stone-200" />
@@ -571,27 +623,36 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              {related.map((rel, i) => (
-                <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group">
+              {related.map((rel) => (
+                <Link key={rel.post.slug} href={`/blog/${rel.post.slug}`} className="group">
                   <article>
                     {/* Image */}
-                    {(imagesData.posts?.[rel.slug]?.url || rel.coverImage) && (
+                    {(imagesData.posts?.[rel.post.slug]?.url || rel.post.coverImage) && (
                       <div className="relative aspect-video overflow-hidden bg-stone-200 mb-4">
                         <Image
-                          src={imagesData.posts?.[rel.slug]?.url || rel.coverImage || ''}
-                          alt={`${rel.title} — 知橄生活 Olive Wisdom`}
+                          src={imagesData.posts?.[rel.post.slug]?.url || rel.post.coverImage || ''}
+                          alt={`${rel.post.title} — 知橄生活 Olive Wisdom`}
                           fill
                           className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
                           sizes="(max-width: 768px) 100vw, 33vw"
                         />
                       </div>
                     )}
+                    <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-2">
+                      {categoryLabel(rel.post.category)}
+                    </p>
                     <h3 className="text-[0.95rem] font-bold text-olive-900 leading-snug line-clamp-2 mb-2
                                    group-hover:text-olive-700 transition-colors tracking-tight">
-                      {rel.title}
+                      {rel.post.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400">
-                      <span>{rel.readTime} MIN</span>
+                    <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed font-sans mb-3">
+                      {rel.post.excerpt}
+                    </p>
+                    {rel.reason && (
+                      <p className="text-[11px] font-sans text-olive-600 mb-3">{rel.reason}</p>
+                    )}
+                    <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500">
+                      <span>{rel.post.readTime} MIN</span>
                       <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
                       <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
                     </div>

@@ -6,35 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { PostFrontmatter } from '@/lib/posts';
 import type { ImagesData } from '@/lib/images';
-
-const CATEGORY_MAP: Record<string, { label: string; en: string }> = {
-  science:   { label: '科學萃取', en: 'Science'   },
-  lifestyle: { label: '餐桌美學', en: 'Lifestyle'  },
-  health:    { label: '品味鑑賞', en: 'Selection'  },
-  selection: { label: '品味鑑賞', en: 'Selection'  },
-  guide:     { label: '品味鑑賞', en: 'Selection'  },
-  culture:   { label: '知性史詩', en: 'Heritage'   },
-  heritage:  { label: '知性史詩', en: 'Heritage'   },
-};
-
-// 內容性質標籤 — 讓讀者在列表頁就能判斷閱讀目的（Heho benchmark）
-const NATURE_LABEL: Record<string, string> = {
-  science:   '科學查證',
-  health:    '品油筆記',
-  selection: '選購指南',
-  guide:     '使用指南',
-  lifestyle: '餐桌應用',
-  culture:   '產地探訪',
-  heritage:  '產地探訪',
-};
-
-const CAT_TABS = [
-  { key: '', label: '全部' },
-  { key: 'science',   label: '科學萃取' },
-  { key: 'health',    label: '品味鑑賞' },
-  { key: 'lifestyle', label: '餐桌美學' },
-  { key: 'culture',   label: '知性史詩' },
-];
+import { CATEGORY_MAP, NATURE_LABEL, CAT_TABS, matchesColumn } from '@/lib/categories';
 
 interface Props {
   posts: PostFrontmatter[];
@@ -51,16 +23,9 @@ export default function BlogFilter({ posts, imagesData }: Props) {
   // NOTE: search is NOT filtered here. All search goes through /search
   // (pagefind full-text index); /blog only filters by category, so there
   // is one search behaviour site-wide. A ?q= param on /blog is ignored.
-  const filtered = posts.filter((p) => {
-    const matchesCat = activeCat
-      ? (activeCat === 'culture'
-          ? (p.category === 'culture' || p.category === 'heritage')
-          : activeCat === 'health'
-          ? (p.category === 'health' || p.category === 'selection' || p.category === 'guide')
-          : p.category === activeCat)
-      : true;
-    return matchesCat;
-  });
+  // Column groupings live in lib/categories.ts (matchesColumn) and are
+  // unchanged: culture → culture|heritage, health → health|selection|guide.
+  const filtered = posts.filter((p) => matchesColumn(p.category, activeCat));
 
   const [featured, ...rest] = filtered;
 
@@ -90,7 +55,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                 </button>
               );
             })}
-            <div className="ml-auto pl-4 py-4 text-[11px] font-sans text-stone-400 whitespace-nowrap flex-shrink-0">
+            <div className="ml-auto pl-4 py-4 text-[11px] font-sans text-stone-500 whitespace-nowrap flex-shrink-0">
               {filtered.length} 篇
             </div>
           </div>
@@ -135,7 +100,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                         {CATEGORY_MAP[featured.category]?.label ?? featured.category}
                       </span>
                       <span className="text-stone-200">—</span>
-                      <span className="text-[10px] font-sans text-stone-400 tracking-wide">
+                      <span className="text-[10px] font-sans text-stone-500 tracking-wide">
                         {featured.readTime} min read
                       </span>
                     </div>
@@ -165,7 +130,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
             {rest.length > 0 && featured && (
               <div className="flex items-center gap-5 mb-12">
                 <div className="h-px flex-1 bg-stone-200" />
-                <span className="font-sans text-[10px] tracking-[0.25em] text-stone-400 uppercase">更多文章</span>
+                <span className="font-sans text-[10px] tracking-[0.25em] text-stone-500 uppercase">更多文章</span>
                 <div className="h-px flex-1 bg-stone-200" />
               </div>
             )}
@@ -207,7 +172,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                           </p>
                           {/* Byline */}
                           <div className="flex items-center justify-between pt-3 border-t border-stone-100">
-                            <span className="font-sans text-[11px] text-stone-400">
+                            <span className="font-sans text-[11px] text-stone-500">
                               {new Date(post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}
                               <span className="mx-2 text-stone-200">·</span>
                               {post.readTime} min

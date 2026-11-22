@@ -5,6 +5,7 @@ import ScrollHeader from '@/components/ScrollHeader';
 import MobileMenu from '@/components/MobileMenu';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
+import { CATEGORY_COLUMNS } from '@/lib/categories';
 import './globals.css';
 
 const notoSerifTC = Noto_Serif_TC({
@@ -63,10 +64,7 @@ export const metadata: Metadata = {
 };
 
 const NAV_LINKS = [
-  { href: '/blog?cat=science', label: '科學萃取' },
-  { href: '/blog?cat=health', label: '品味鑑賞' },
-  { href: '/blog?cat=lifestyle', label: '餐桌美學' },
-  { href: '/blog?cat=culture', label: '知性史詩' },
+  ...CATEGORY_COLUMNS.map((c) => ({ href: c.href, label: c.label })),
   { href: '/topics', label: '所有主題' },
   { href: '/about', label: '關於知橄' },
 ];
@@ -100,7 +98,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               alternateName: ['Olive Wisdom', '知橄生活'],
               url: 'https://olive-wisdom.com',
               logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico', caption: '知橄生活 Olive Wisdom' },
-              description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等 150+ 篇學術文獻的橄欖油知識平台。',
+              description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等權威機構研究文獻的橄欖油知識平台。',
               knowsAbout: ['橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚', '羥基酪醇', 'PREDIMED 研究', '抗老化科學'],
               sameAs: ['https://olive-wisdom.com', 'https://olive-wisdom.com/about'],
               publishingPrinciples: 'https://olive-wisdom.com/about#editorial-standards',
@@ -195,10 +193,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <div>
               <p className="text-white font-semibold text-sm mb-4">專欄導覽</p>
               <ul className="space-y-2 text-sm text-olive-300">
-                <li><Link href="/blog?cat=culture" className="hover:text-white transition-colors">知性史詩</Link></li>
-                <li><Link href="/blog?cat=science" className="hover:text-white transition-colors">科學萃取</Link></li>
-                <li><Link href="/blog?cat=health" className="hover:text-white transition-colors">品味鑑賞</Link></li>
-                <li><Link href="/blog?cat=lifestyle" className="hover:text-white transition-colors">餐桌美學</Link></li>
+                {CATEGORY_COLUMNS.map((col) => (
+                  <li key={col.key}><Link href={col.href} className="hover:text-white transition-colors">{col.label}</Link></li>
+                ))}
               </ul>
             </div>
 
