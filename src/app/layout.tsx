@@ -4,7 +4,6 @@ import SubscribeForm from '@/components/SubscribeForm';
 import ScrollHeader from '@/components/ScrollHeader';
 import MobileMenu from '@/components/MobileMenu';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import { getAllPosts } from '@/lib/posts';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import './globals.css';
 
@@ -51,14 +50,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@OliveWisdomTW',
-    creator: '@OliveWisdomTW',
-    title: '知橄生活 Olive Wisdom',
-    description: '為 35+ 知性追求者打造的橄欖油科學與美學空間',
-    images: ['https://olive-wisdom.com/hero-grove.webp'],
-  },
   alternates: {
     canonical: 'https://olive-wisdom.com',
     languages: {
@@ -81,8 +72,6 @@ const NAV_LINKS = [
 ];
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // Dynamic footer: show 4 most recent posts
-  const recentPosts = getAllPosts().slice(0, 4);
   return (
     <html lang="zh-TW" className={`${notoSerifTC.variable} ${notoSansTC.variable}`}>
       <head>
@@ -113,10 +102,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico', caption: '知橄生活 Olive Wisdom' },
               description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等 150+ 篇學術文獻的橄欖油知識平台。',
               knowsAbout: ['橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚', '羥基酪醇', 'PREDIMED 研究', '抗老化科學'],
-              sameAs: ['https://olive-wisdom.com', 'https://olive-wisdom.com/about', 'https://olive-wisdom.com/editorial-standards'],
-              publishingPrinciples: 'https://olive-wisdom.com/editorial-standards',
-              ethicsPolicy: 'https://olive-wisdom.com/editorial-standards',
-              correctionsPolicy: 'https://olive-wisdom.com/editorial-standards',
+              sameAs: ['https://olive-wisdom.com', 'https://olive-wisdom.com/about'],
+              publishingPrinciples: 'https://olive-wisdom.com/about#editorial-standards',
+              ethicsPolicy: 'https://olive-wisdom.com/about#editorial-standards',
+              correctionsPolicy: 'https://olive-wisdom.com/about#editorial-standards',
             }),
           }}
         />
@@ -167,12 +156,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </svg>
             </Link>
 
-            {/* CTA */}
+            {/* CTA — plain text link to the homepage subscribe section */}
             <Link
               href="/#subscribe"
-              className="hidden md:inline-flex items-center gap-1 bg-olive-700 hover:bg-olive-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              className="hidden md:inline-flex items-center gap-1 text-olive-700 hover:text-olive-900 text-sm font-medium transition-colors"
             >
-              訂閱專欄
+              訂閱週報 →
             </Link>
 
             {/* Mobile hamburger menu */}
@@ -198,8 +187,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 </div>
               </div>
               <p className="text-sm text-olive-300 leading-relaxed">
-                以科學與美學，精煉您的健康時光。<br />
-                為 35+ 知性人士打造的橄欖油科學與美學空間。
+                以科學與美學，精煉您的健康時光。
               </p>
             </div>
 
@@ -214,11 +202,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </ul>
             </div>
 
-            {/* 最新文章 — dynamic */}
+            {/* 編輯精選 — closest to a purchase decision, not the latest posts */}
             <div>
-              <p className="text-white font-semibold text-sm mb-4">最新文章</p>
+              <p className="text-white font-semibold text-sm mb-4">編輯精選</p>
               <ul className="space-y-3 text-sm">
-                {recentPosts.map((post) => (
+                {[
+                  { slug: 'olive-oil-complete-buying-guide-2026', title: '橄欖油選購完全指南 2026：從超市到頂級莊園油，一次學會不踩雷的五步驟框架' },
+                  { slug: 'coa-complete-reading-guide-olive-oil', title: '橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質' },
+                  { slug: 'evoo-buying-guide-2026', title: '2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰' },
+                ].map((post) => (
                   <li key={post.slug}>
                     <Link
                       href={`/blog/${post.slug}`}
@@ -231,15 +223,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </ul>
             </div>
 
-            {/* 訂閱 */}
+            {/* 訂閱 — plain text link to the homepage subscribe section */}
             <div>
               <p className="text-white font-semibold text-sm mb-3">訂閱知橄週報</p>
               <p className="text-xs text-olive-300 mb-4 leading-relaxed">每週精選橄欖油研究・免費・隨時可取消</p>
               <Link
                 href="/#subscribe"
-                className="inline-flex items-center gap-2 bg-gold-400 hover:bg-gold-300 text-olive-900 text-sm font-bold px-5 py-2.5 rounded-xl transition-colors"
+                className="text-sm font-medium text-gold-400 hover:text-gold-300 transition-colors"
               >
-                🫒 立即訂閱
+                前往訂閱 →
               </Link>
               <p className="text-xs text-olive-400 mt-3">訂閱即贈《橄欖油品飲師口袋手冊》PDF</p>
             </div>
@@ -250,7 +242,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-olive-200 text-center sm:text-left">
               <p>© 2026 知橄生活 OLIVE WISDOM. ALL RIGHTS RESERVED.</p>
               <div className="flex flex-wrap gap-4 justify-center sm:justify-end">
-                <Link href="/editorial-standards" className="hover:text-white transition-colors">編輯標準</Link>
+                <Link href="/about#editorial-standards" className="hover:text-white transition-colors">編輯標準</Link>
                 <Link href="/topics" className="hover:text-white transition-colors">所有主題</Link>
                 <Link href="/privacy" className="hover:text-white transition-colors">隱私政策</Link>
                 <Link href="/terms" className="hover:text-white transition-colors">使用條款</Link>

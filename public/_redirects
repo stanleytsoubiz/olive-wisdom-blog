@@ -3,6 +3,11 @@
 # Live serves /posts/<slug> as 200 today via an uncommitted rule; canonicalise to /blog/
 # so a redeploy from this repo does not turn them into 404s.
 /posts/* /blog/:splat 301
+# Trust pages merged into /about (2026-11-22 consolidation)
+/authority /about 301
+/editorial-standards /about 301
+# Tag pages merged into /topics (2026-11-22 consolidation)
+/tags/* /topics 301
 # Slug renames — 301 permanent redirects
 /blog/predimed-study-explained /blog/predimed-study-explained/ 301
 /blog/predimed-study-explained/ /blog/ 301

@@ -115,8 +115,8 @@ export default async function HomePage() {
             </h1>
             <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-8">
               <p className="text-olive-200 text-base md:text-lg max-w-md leading-relaxed">
-                華語世界最公正的橄欖油知識平台——<br className="hidden sm:block" />
-                不接業配・引用學術・敢說真話
+                華語世界的橄欖油知識平台——<br className="hidden sm:block" />
+                不接業配・引用學術・說清楚證據邊界
               </p>
               <div className="flex gap-3 flex-shrink-0">
                 <Link href="/blog"
@@ -214,7 +214,7 @@ export default async function HomePage() {
                       {featuredPost.excerpt}
                     </p>
                     <div className="flex items-center gap-3 text-[11px] font-sans text-stone-400 mb-6 pt-5 border-t border-stone-100">
-                      <span className="text-olive-600 font-medium">{featuredPost.author || '知橄研究室'}</span>
+                      <span className="text-olive-600 font-medium">{featuredPost.author || '知橄生活研究團隊'}</span>
                       <span className="text-stone-200">·</span>
                       <span>{featuredPost.readTime} min read</span>
                       <span className="text-stone-200">·</span>
@@ -231,7 +231,7 @@ export default async function HomePage() {
 
             {/* Secondary articles — NYT-style borderless grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-              {restPosts.slice(0, 4).map((post) => {
+              {restPosts.slice(0, 5).map((post) => {
                 const catLabel = { science:'科學查證', lifestyle:'餐桌應用', health:'品油筆記', culture:'產地探訪', heritage:'產地探訪', guide:'選購指南' }[post.category] ?? post.category;
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
@@ -276,7 +276,7 @@ export default async function HomePage() {
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
           {[
             { num: '7,447', label: '位', desc: 'PREDIMED 研究受試者', sub: '史上最大地中海飲食研究' },
-            { num: '30%', label: '', desc: '心血管風險降低', sub: '高多酚 EVOO 組別數據' },
+            { num: '約 30%', label: '', desc: 'PREDIMED：地中海飲食組心血管事件減少', sub: '整體飲食模式結果，非單一油品效果' },
             { num: '250mg', label: '/kg+', desc: '高多酚標準含量', sub: 'EFSA 認可健康聲稱門檻' },
             { num: '3000', label: '年', desc: '橄欖樹文明歷史', sub: '克里特島古木仍在結果' },
           ].map((stat) => (
@@ -308,15 +308,6 @@ export default async function HomePage() {
         <SubscribeForm />
       </section>
 
-      {/* 聯絡入口 */}
-      <section className="py-10 px-6 text-center border-t border-stone-100">
-        <p className="text-sm font-sans text-stone-400">
-          有合作提案或讀者迴響？
-          <a href="/contact" className="text-olive-600 hover:text-olive-800 underline underline-offset-4 ml-1 transition-colors">
-            聯絡我們
-          </a>
-        </p>
-      </section>
     </main>
   );
 }
