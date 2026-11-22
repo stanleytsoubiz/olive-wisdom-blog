@@ -1,14 +1,16 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { CATEGORY_COLUMNS } from '@/lib/categories';
 
+// Column links come from the shared category source of truth
+// (src/lib/categories.ts). The '/blog/?cat=…' form (trailing slash
+// before the query) is kept so the mobile menu links exactly what it
+// linked before — only the labels' source changed, not the URLs.
 const NAV_LINKS = [
   { href: '/search', label: '搜尋文章' },
   { href: '/blog', label: '所有文章' },
-  { href: '/blog/?cat=science', label: '科學萃取' },
-  { href: '/blog/?cat=lifestyle', label: '餐桌美學' },
-  { href: '/blog/?cat=health', label: '品味鑑賞' },
-  { href: '/blog/?cat=culture', label: '知性史詩' },
+  ...CATEGORY_COLUMNS.map((c) => ({ href: c.href.replace('/blog?', '/blog/?'), label: c.label })),
   { href: '/topics', label: '所有主題' },
   { href: '/evidence', label: '證據圖書館' },
   { href: '/about', label: '關於知橄' },
