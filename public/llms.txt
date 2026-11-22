@@ -22,9 +22,8 @@ search engines, and AI systems can trace cited material back to a checkable path
 
 - Homepage: https://olive-wisdom.com/
 - Knowledge Library: https://olive-wisdom.com/blog/
-- Authority Gateway: https://olive-wisdom.com/authority/
+- About, editorial standards & learning paths: https://olive-wisdom.com/about/
 - Evidence Library: https://olive-wisdom.com/evidence/
-- Editorial Standards: https://olive-wisdom.com/editorial-standards/
 - About: https://olive-wisdom.com/about/
 - Sitemap: https://olive-wisdom.com/sitemap.xml
 

@@ -121,16 +121,15 @@ export default function TopicsPage() {
                       ? 'text-sm'
                       : 'text-sm';
                   return (
-                    <Link
+                    <span
                       key={tag}
-                      href={`/tags/${encodeURIComponent(tag)}`}
-                      className={`bg-olive-50 hover:bg-olive-100 border border-olive-200 text-olive-800 font-semibold ${textSize} px-4 py-2 rounded-full transition-all hover:border-olive-300 hover:shadow-sm`}
+                      className={`bg-olive-50 border border-olive-200 text-olive-800 font-semibold ${textSize} px-4 py-2 rounded-full`}
                     >
                       #{tag}
                       <span className="ml-1.5 text-olive-500 font-normal text-xs">
                         {count}篇
                       </span>
-                    </Link>
+                    </span>
                   );
                 })}
               </div>
@@ -151,13 +150,12 @@ export default function TopicsPage() {
             <div className="border-t border-stone-200 pt-6">
               <div className="flex flex-wrap gap-2">
                 {minorTags.map(([tag]) => (
-                  <Link
+                  <span
                     key={tag}
-                    href={`/tags/${encodeURIComponent(tag)}`}
-                    className="bg-stone-50 hover:bg-stone-100 border border-stone-200 text-stone-600 hover:text-stone-800 font-medium text-xs px-3 py-1.5 rounded-full transition-all hover:border-stone-300"
+                    className="bg-stone-50 border border-stone-200 text-stone-600 font-medium text-xs px-3 py-1.5 rounded-full"
                   >
                     #{tag}
-                  </Link>
+                  </span>
                 ))}
               </div>
             </div>

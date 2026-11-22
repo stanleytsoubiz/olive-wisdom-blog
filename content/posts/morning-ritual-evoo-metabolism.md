@@ -7,7 +7,7 @@ excerpt: "地中海百歲長者的早晨，往往從一小杯特級初榨橄欖�
 coverImage: "/images/covers/morning-ritual-evoo-metabolism.jpg"
 author: "知橄生活研究團隊"
 readTime: 10
-tags: ["餐桌美學", "晨間儀式", "代謝", "空腹飲油"]
+tags: ["晨間儀式", "代謝", "空腹飲油"]
 sources:
   - "Guasch-Ferré, M. et al. (2022). Olive Oil Consumption and Cardiovascular Risk. JACC."
   - "Tripoli, E. et al. (2005). The phenolic compounds of olive oil. Nutrition Research Reviews."

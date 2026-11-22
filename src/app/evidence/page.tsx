@@ -293,7 +293,7 @@ export default function EvidencePage() {
             <Link href="/blog" className="bg-olive-800 hover:bg-olive-900 text-white text-sm font-medium px-5 py-3 rounded-xl transition-colors">
               回知識庫
             </Link>
-            <Link href="/editorial-standards" className="bg-white hover:bg-stone-50 text-olive-800 text-sm font-medium px-5 py-3 rounded-xl border border-olive-200 transition-colors">
+            <Link href="/about#editorial-standards" className="bg-white hover:bg-stone-50 text-olive-800 text-sm font-medium px-5 py-3 rounded-xl border border-olive-200 transition-colors">
               查看編輯標準
             </Link>
           </div>
@@ -588,7 +588,7 @@ export default function EvidencePage() {
           <p className="text-sm font-sans text-stone-500 mt-6">
             <Link href="/blog" className="text-olive-600 hover:text-olive-800 font-medium hover:underline">← 返回知識庫</Link>
             <span className="mx-3 text-stone-300">|</span>
-            <Link href="/authority" className="text-olive-600 hover:text-olive-800 font-medium hover:underline">權威入口 →</Link>
+            <Link href="/about#learning-paths" className="text-olive-600 hover:text-olive-800 font-medium hover:underline">學習路徑 →</Link>
           </p>
         </div>
       </section>

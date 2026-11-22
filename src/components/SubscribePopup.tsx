@@ -117,7 +117,7 @@ export default function SubscribePopup() {
             <div className="text-center py-3">
               <p className="text-2xl mb-2">🫒</p>
               <p className="font-semibold text-olive-800">{message}</p>
-              <p className="text-xs text-stone-400 font-sans mt-1">《橄欖油品飲師口袋手冊》PDF 即將寄出</p>
+              <p className="text-xs text-stone-400 font-sans mt-1">每週一封，歡迎加入。</p>
             </div>
           ) : (
             <>
@@ -161,7 +161,7 @@ export default function SubscribePopup() {
               )}
 
               <p className="text-[11px] text-stone-400 font-sans mt-3 text-center">
-                贈《橄欖油品飲師口袋手冊》PDF · 隨時可取消
+                免費訂閱 · 隨時可取消
               </p>
             </>
           )}

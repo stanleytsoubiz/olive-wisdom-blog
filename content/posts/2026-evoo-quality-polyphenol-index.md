@@ -7,7 +7,7 @@ excerpt: "不談口感，我們談數據。解析 2026 年新產季歐盟與 IOC
 coverImage: "/images/covers/2026-evoo-quality-polyphenol-index.jpg"
 author: "知橄生活研究團隊"
 readTime: 10
-tags: ["橄欖油科學", "高多酚", "健康數據", "2026趨勢"]
+tags: ["橄欖油科學", "高多酚", "健康數據"]
 sources:
   - "European Commission (2012). Commission Regulation (EU) No 432/2012 of 16 May 2012 establishing a list of permitted health claims made on foods. *Official Journal of the European Union*, L 136, 1–40. https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2012:136:0001:0040:en:PDF"
   - "Gorzynik-Debicka, M., Przychodzen, P., Cappello, F., Kuban-Jankowska, A., Marino Gammazza, A., Knap, N., Wozniak, M., & Gorska-Ponikowska, M. (2018). Potential health benefits of olive oil and plant polyphenols. *International Journal of Molecular Sciences*, 19(3), 686. https://doi.org/10.3390/ijms19030686"

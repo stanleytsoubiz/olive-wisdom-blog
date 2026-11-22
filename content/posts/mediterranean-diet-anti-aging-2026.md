@@ -6,7 +6,7 @@ excerpt: "地中海飲食不僅僅是關於橄欖油。本手冊教您如何在 
 category: "lifestyle"
 author: "知橄生活研究團隊"
 readTime: 10
-tags: ["地中海飲食", "抗老", "橄欖油", "2026 指南"]
+tags: ["地中海飲食", "抗老", "橄欖油"]
 focusKeyword: "地中海飲食實踐"
 coverImage: "/images/covers/mediterranean-diet-anti-aging-2026.jpg"
 coverAlt: "色彩豐富的地中海風格餐盤，橄欖油、蔬菜與魚類的健康組合"

@@ -428,13 +428,13 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Affiliate Disclosure */}
         <AffiliateDisclosure content={post.content} />
 
-        {/* Tags — each links to topic hub page */}
+        {/* Tags — each links to the topics hub */}
         {post.tags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-8">
             {post.tags.map((tag) => (
               <Link
                 key={tag}
-                href={`/tags/${encodeURIComponent(tag)}`}
+                href="/topics"
                 className="text-xs bg-olive-100 hover:bg-olive-200 text-olive-700 hover:text-olive-900 px-3 py-1 rounded-full font-medium transition-colors"
               >
                 #{tag}
@@ -548,7 +548,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
           {/* Bottom row */}
           <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <a href="/editorial-standards" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
+            <a href="/about#editorial-standards" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
               編輯標準與公正聲明 →
             </a>
             <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />

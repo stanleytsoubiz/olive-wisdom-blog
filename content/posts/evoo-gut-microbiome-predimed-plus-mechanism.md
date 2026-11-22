@@ -1,7 +1,7 @@
 ---
 title: "656 人、2 年追蹤：特級初榨橄欖油如何透過腸道菌重塑認知軌跡"
 slug: "evoo-gut-microbiome-predimed-plus-mechanism"
-date: 2026-05-08
+date: "2026-05-08"
 category: "science"
 excerpt: "PREDIMED-Plus 最新研究（2026, Microbiome 期刊）追蹤 656 名受試者，發現特級初榨橄欖油與腸道多樣性提升及認知保護相關——而精製橄欖油與認知退化加速相關。多酚究竟如何在腸道中改變菌相生態，最終影響大腦？本文深潛機制。"
 coverImage: "/images/covers/evoo-gut-microbiome-predimed-plus-mechanism.jpg"
