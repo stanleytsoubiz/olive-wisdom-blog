@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '頁面不存在｜知橄生活',
+  title: '頁面不存在',
   description: '很抱歉，您訪問的頁面不存在。探索我們的橄欖油知識庫，找到您需要的健康智慧。',
   robots: { index: false, follow: false },
 };

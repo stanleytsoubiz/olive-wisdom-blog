@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import SearchClient from './SearchClient';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '搜尋文章｜知橄生活 Olive Wisdom',
+  // Title template in layout.tsx adds "｜知橄生活 Olive Wisdom" once.
+  title: '搜尋文章',
   description: '搜尋知橄生活所有橄欖油科學、地中海飲食、品飲鑑賞深度文章。',
-  robots: { index: true, follow: true },
+  // Temporary safety measure (2026-11-22): noindex until a real-browser
+  // keyword test confirms the pagefind search works end to end.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://olive-wisdom.com/search' },
 };
 

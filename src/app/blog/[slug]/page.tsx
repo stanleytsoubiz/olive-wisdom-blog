@@ -29,17 +29,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? coverPath
     : `https://olive-wisdom.com${coverPath}`;
 
-  // Use focusKeyword in title for SEO signal: "主關鍵字 — 文章標題｜知橄生活"
+  // Use focusKeyword in title for SEO signal: "主關鍵字：文章標題"
+  // NOTE: do NOT append "｜知橄生活" here — layout.tsx title template
+  // ("%s｜知橄生活 Olive Wisdom") adds the site suffix once.
   const seoTitle = post.focusKeyword && post.focusKeyword !== post.title
-    ? `${post.focusKeyword}：${post.title}｜知橄生活`
-    : `${post.title}｜知橄生活`;
+    ? `${post.focusKeyword}：${post.title}`
+    : post.title;
 
   return {
     title: seoTitle,
     description: post.excerpt,
     keywords: post.tags ?? [],
     openGraph: {
-      title: seoTitle,
+      title: `${seoTitle}｜知橄生活 Olive Wisdom`,
       description: post.excerpt,
       url: `https://olive-wisdom.com/blog/${slug}`,
       type: 'article',
@@ -95,7 +97,14 @@ function markdownToHtml(md: string): string {
       .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-olive-900">$1</strong>')
       .replace(/\*(.+?)\*/g, '<em class="italic">$1</em>')
       .replace(/`([^`]+)`/g, '<code class="bg-olive-100 text-olive-800 px-1.5 py-0.5 rounded text-sm font-mono">$1</code>')
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-olive-600 underline hover:text-olive-800" target="_blank" rel="noopener noreferrer">$1</a>');
+      // Internal links stay in the same tab; only external links open a new tab.
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, text: string, href: string) => {
+        const internal = href.startsWith('/') || href.startsWith('https://olive-wisdom.com');
+        const attrs = internal
+          ? ''
+          : ' target="_blank" rel="noopener noreferrer"';
+        return `<a href="${href}" class="text-olive-600 underline hover:text-olive-800"${attrs}>${text}</a>`;
+      });
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -256,12 +265,14 @@ export default async function BlogPostPage({ params }: Props) {
               '@type': 'Organization',
               name: '知橄生活 Olive Wisdom',
               url: 'https://olive-wisdom.com',
-              logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico' },
+              logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/icon-512.png' },
             },
             url: `https://olive-wisdom.com/blog/${slug}`,
             mainEntityOfPage: { '@type': 'WebPage', '@id': `https://olive-wisdom.com/blog/${slug}` },
             inLanguage: 'zh-TW',
-            wordCount: post.content ? post.content.split(/\s+/).length : undefined,
+            // Chinese has no word spaces, so split(/\s+/) counts lines, not
+            // words — use character count instead.
+            wordCount: post.content ? post.content.length : undefined,
             keywords: (post.tags || []).join(', '),
             about: { '@type': 'Thing', name: '特級初榨橄欖油', sameAs: 'https://www.wikidata.org/wiki/Q192698' },
             speakable: {

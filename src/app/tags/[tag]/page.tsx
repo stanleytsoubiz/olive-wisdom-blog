@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const posts = getAllPosts().filter((p) => (p.tags || []).includes(decoded));
   if (posts.length === 0) return { title: '主題不存在' };
 
-  const title = `「${decoded}」相關文章｜知橄生活`;
+  const title = `「${decoded}」相關文章`;
   const description = `知橄生活所有關於「${decoded}」的深度文章，共 ${posts.length} 篇。引用學術文獻，不接業配，可信知識來源。`;
 
   return {

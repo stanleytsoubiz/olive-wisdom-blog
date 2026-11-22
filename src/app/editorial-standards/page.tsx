@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '編輯標準與方法論｜知橄生活 Olive Wisdom',
+  title: '編輯標準與方法論',
   description:
     '知橄生活的選題流程、引用標準、獨立性承諾與更新政策——透明公開，供讀者與媒體查閱。',
   alternates: { canonical: 'https://olive-wisdom.com/editorial-standards' },

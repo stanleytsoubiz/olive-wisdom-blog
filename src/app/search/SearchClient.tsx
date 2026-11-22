@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { trackSearch } from '@/components/GoogleAnalytics';
 
 interface PagefindResult {
@@ -27,34 +28,42 @@ declare global {
   }
 }
 
-export default function SearchClient() {
-  const [query, setQuery] = useState('');
+function SearchClientInner() {
+  const searchParams = useSearchParams();
+  const initialQ = searchParams.get('q') ?? '';
+  const [query, setQuery] = useState(initialQ);
   const [results, setResults] = useState<Array<{
     url: string; title: string; excerpt: string; image?: string;
   }>>([]);
   const [loading, setLoading] = useState(false);
-  const [ready, setReady] = useState(false);
+  // 'loading' while the pagefind index loads, 'ready' once loaded,
+  // 'error' only if the index genuinely fails to load.
+  const [indexState, setIndexState] = useState<'loading' | 'ready' | 'error'>('loading');
   const [searched, setSearched] = useState(false);
   const pagefindRef = useRef<PagefindAPI | null>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const initialQRef = useRef(initialQ);
 
   // Load Pagefind on mount via script injection (avoids compile-time resolution warning)
   useEffect(() => {
+    let cancelled = false;
     const load = async () => {
       try {
         // pagefind.js is generated at build time into /pagefind/ — load dynamically
         // eslint-disable-next-line @typescript-eslint/no-implied-eval
         const pf = await new Function('return import("/pagefind/pagefind.js")')() as PagefindAPI;
+        if (cancelled) return;
         pagefindRef.current = pf;
-        setReady(true);
+        setIndexState('ready');
       } catch {
-        // Pagefind not yet built (dev mode) — silently ignore
+        if (!cancelled) setIndexState('error');
       }
     };
     load();
+    return () => { cancelled = true; };
   }, []);
 
-  const runSearch = async (q: string) => {
+  const runSearch = useCallback(async (q: string) => {
     if (!pagefindRef.current || !q.trim()) {
       setResults([]);
       setSearched(false);
@@ -82,12 +91,38 @@ export default function SearchClient() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  // Auto-run the search from ?q= once the index is ready.
+  useEffect(() => {
+    if (indexState === 'ready' && initialQRef.current.trim()) {
+      runSearch(initialQRef.current);
+    }
+  }, [indexState, runSearch]);
 
   const handleChange = (v: string) => {
     setQuery(v);
+    // Keep the URL in sync so a search can be shared / bookmarked.
+    const url = v.trim()
+      ? `/search?q=${encodeURIComponent(v.trim())}`
+      : '/search';
+    window.history.replaceState(null, '', url);
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => runSearch(v), 300);
+  };
+
+  const retryLoad = () => {
+    setIndexState('loading');
+    (async () => {
+      try {
+        // eslint-disable-next-line @typescript-eslint/no-implied-eval
+        const pf = await new Function('return import("/pagefind/pagefind.js")')() as PagefindAPI;
+        pagefindRef.current = pf;
+        setIndexState('ready');
+      } catch {
+        setIndexState('error');
+      }
+    })();
   };
 
   const SUGGESTIONS = ['多酚', '羥基酪醇', 'PREDIMED', '地中海飲食', '特級初榨', '橄欖油鑑別', '料理溫度'];
@@ -116,8 +151,29 @@ export default function SearchClient() {
         </div>
       </div>
 
+      {/* Index loading / error states — shown only while the index loads
+          or if it genuinely fails; never the old "run npm run build" text. */}
+      {indexState === 'loading' && (
+        <div className="text-center py-12">
+          <p className="text-stone-400 font-sans text-sm">正在載入搜尋索引…</p>
+        </div>
+      )}
+      {indexState === 'error' && (
+        <div className="text-center py-12">
+          <p className="text-stone-500 font-sans text-sm mb-4">
+            搜尋索引載入失敗，請重新整理頁面再試一次。
+          </p>
+          <button
+            onClick={retryLoad}
+            className="text-sm font-sans bg-olive-700 hover:bg-olive-800 text-white px-5 py-2.5 rounded-xl transition-colors"
+          >
+            重新載入搜尋
+          </button>
+        </div>
+      )}
+
       {/* Suggestions (shown when no query) */}
-      {!query && (
+      {!query && indexState === 'ready' && (
         <div className="mb-10">
           <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase mb-4">
             熱門搜尋
@@ -179,15 +235,15 @@ export default function SearchClient() {
           })}
         </div>
       )}
-
-      {/* Dev-mode notice */}
-      {!ready && (
-        <div className="text-center py-12">
-          <p className="text-stone-400 font-sans text-sm">
-            搜尋功能需要先執行 <code className="bg-stone-100 px-2 py-0.5 rounded text-xs">npm run build</code> 建立索引
-          </p>
-        </div>
-      )}
     </div>
+  );
+}
+
+export default function SearchClient() {
+  // useSearchParams requires a Suspense boundary for static export.
+  return (
+    <Suspense fallback={<p className="text-center py-12 text-stone-400 font-sans text-sm">正在載入搜尋…</p>}>
+      <SearchClientInner />
+    </Suspense>
   );
 }

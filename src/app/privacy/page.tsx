@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '隱私政策｜知橄生活 Olive Wisdom',
+  title: '隱私政策',
   description: '知橄生活 Olive Wisdom 隱私政策，說明我們如何收集、使用及保護您的個人資料。',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://olive-wisdom.com/privacy' },

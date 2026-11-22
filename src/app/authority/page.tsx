@@ -14,7 +14,7 @@ import {
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '橄欖油權威入口｜知橄生活 Olive Wisdom',
+  title: '橄欖油權威入口',
   description: '知橄生活 Olive Wisdom 的橄欖油權威入口，依健康研究、品質判斷、全球文化、風土產地與料理生活整理全球華人可學習、可引用的橄欖油知識庫。',
   alternates: { canonical: 'https://olive-wisdom.com/authority' },
   openGraph: {

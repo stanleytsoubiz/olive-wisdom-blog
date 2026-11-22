@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '所有主題｜知橄生活 Olive Wisdom',
+  title: '所有主題',
   description: '按主題瀏覽知橄生活知識庫——多酚、羥基酪醇、地中海飲食、EVOO選購、橄欖油科學，依主題深度探索。',
   alternates: { canonical: 'https://olive-wisdom.com/topics' },
 };
