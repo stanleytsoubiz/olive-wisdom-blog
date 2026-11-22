@@ -1,4 +1,8 @@
 /admin/* /admin/index.html 200
+# Legacy /posts/ URLs (used by 217 internal links in content/posts/*.md)
+# Live serves /posts/<slug> as 200 today via an uncommitted rule; canonicalise to /blog/
+# so a redeploy from this repo does not turn them into 404s.
+/posts/* /blog/:splat 301
 # Slug renames — 301 permanent redirects
 /blog/predimed-study-explained /blog/predimed-study-explained/ 301
 /blog/predimed-study-explained/ /blog/ 301

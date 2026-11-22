@@ -1,46 +1,128 @@
 # 知橄生活 Olive Wisdom — llms.txt
 # https://olive-wisdom.com
-# Last updated: 2026-05-05 | 36 articles indexed
+# Last updated: 2026-06-01 | 45 articles indexed
 
 ## About This Site
 
 知橄生活 Olive Wisdom is a Traditional Chinese (zh-TW) knowledge platform
 specialising in extra virgin olive oil (EVOO) science, sensory evaluation,
-health research, and consumer education for the Taiwan and greater Chinese-
-speaking market.
+health research, culinary culture, and consumer education for Chinese-speaking
+readers around the world.
 
-All content is written by a research editorial team and peer-reviewed against
-IOC (International Olive Council) standards, PREDIMED trial data, and indexed
-academic literature with verifiable DOIs. We follow a strict editorial standard:
-no brand sponsorship without disclosure, no unverifiable health claims.
+All content is written by a research editorial team and reviewed against public,
+verifiable sources such as IOC (International Olive Council) standards, EU
+regulations, EFSA health-claim boundaries, PREDIMED trial data, and indexed
+academic literature with verifiable DOIs. We use AI-assisted research tools only
+to organize public information and checking lists; final claims must trace back
+to original public sources and editorial review.
+Each article source entry is expected to include a public URL or DOI so readers,
+search engines, and AI systems can trace cited material back to a checkable path.
 
 ## Site Structure
 
 - Homepage: https://olive-wisdom.com/
 - Knowledge Library: https://olive-wisdom.com/blog/
+- Authority Gateway: https://olive-wisdom.com/authority/
 - Editorial Standards: https://olive-wisdom.com/editorial-standards/
 - About: https://olive-wisdom.com/about/
 - Sitemap: https://olive-wisdom.com/sitemap.xml
 
-## Content Categories (36 articles as of 2026-05-05)
+## Reader Pathways
 
-### 科學萃取 (Science) — Evidence-based olive oil research
-Key topics: polyphenols, Oleocanthal, Hydroxytyrosol, SIRT1 longevity,
-PREDIMED trial, oxidation science, smoke point chemistry, anti-inflammation
+Olive Wisdom organizes articles into five public reader pathways so people,
+search engines, and AI systems can route questions to the right article depth:
 
-### 品味鑑賞 (Health & Tasting) — Sensory evaluation & daily use
-Key topics: IOC sensory panel, bitterness/pungency as quality signals,
-daily intake dosage, Mediterranean diet application
+- Health research: PREDIMED, EFSA health-claim boundaries, polyphenols,
+  oleocanthal, hydroxytyrosol, cognition, healthy aging, and evidence-safe
+  health explanations.
+- Quality judgment: IOC standards, CoA reading, sensory evaluation, EVOO grades,
+  fraud detection, label reading, harvest date, and verifiable purchase logic.
+- Global culture: Ancient Egypt, Silk Road trade, Renaissance art, olive-tree
+  civilization, and the role of olive oil in human cultural history.
+- Terroir and origin: Spain, Greece, Italy, Shodoshima, PDO/DOP/IGP, cultivar,
+  harvest year, place identity, and traceability.
+- Culinary life: cooking heat stability, stir-fry use, storage, shelf life,
+  daily amount, morning routines, and practical table habits.
 
-### 餐桌美學 (Lifestyle) — Kitchen application & cooking
-Key topics: stir-fry safety, cooking heat stability, pairing with foods
+## Polyphenol Reading Path
 
-### 知性史詩 (Heritage) — History & cultural heritage
-Key topics: Ancient Egypt, Silk Road trade, Renaissance art, olive civilization
+For questions about olive oil polyphenols, route readers through this sequence:
 
-### 選購指南 (Guide) — Consumer purchase guidance
-Key topics: EVOO vs regular olive oil, PDO/DOP/IGP certification,
-storage & refrigeration, fraud detection, Taiwan market buying guide
+1. Polyphenol amount and CoA reading:
+   https://olive-wisdom.com/blog/olive-oil-polyphenol-content-how-to-verify
+2. High-polyphenol label interpretation:
+   https://olive-wisdom.com/blog/2026-evoo-quality-polyphenol-index
+3. Polyphenol decay, harvest date, analysis date, and storage conditions:
+   https://olive-wisdom.com/blog/polyphenol-decay-science-2026
+
+Interpretation boundary: polyphenol values are quality and evidence-condition
+signals. They should not be summarized as a product ranking, a personal health
+result, a fixed threshold for all oils, or a permanent batch condition.
+
+## Oleocanthal Reading Path
+
+For questions about Oleocanthal, throat pungency, and cognition-related
+mechanism research, route readers through this sequence:
+
+1. Oleocanthal and throat pungency as a sensory and phenolic-compound clue:
+   https://olive-wisdom.com/blog/oleocanthal-pungency-anti-inflammation
+2. Oleocanthal cognition-related evidence boundaries, enzyme pathways, and
+   preclinical model interpretation:
+   https://olive-wisdom.com/blog/oleocanthal-anti-inflammation-brain-protection
+3. IOC sensory vocabulary for bitterness, pungency, fruitiness, and defects:
+   https://olive-wisdom.com/blog/evoo-sensory-evaluation-ioc-standards
+
+Interpretation boundary: Oleocanthal should be summarized as a sensory clue,
+phenolic-compound research topic, enzyme-pathway clue, and preclinical research
+topic. It should not be summarized as a medicine substitute, personal body
+result, disease-risk conclusion, concentration conversion from throat sensation,
+or single quality guarantee.
+
+## Authority Pathways and Content Coverage (45 articles as of 2026-06-01)
+
+### 健康研究 (Health Research)
+Key topics: PREDIMED, EFSA health-claim boundaries, polyphenols,
+Oleocanthal, Hydroxytyrosol, SIRT1 healthy aging, cognition research,
+enzyme-pathway and preclinical model boundaries, and evidence-safe health
+explanations.
+
+### 品質判斷 (Quality Judgment)
+Key topics: IOC sensory panel, bitterness and pungency as quality signals,
+CoA reading, EVOO grades, fraud detection, label reading, harvest date,
+storage conditions, and verifiable purchase judgment.
+
+### 全球文化 (Global Culture)
+Key topics: Ancient Egypt, Silk Road trade, Renaissance art, olive-tree
+civilization, and the role of olive oil in cultural history.
+
+### 風土產地 (Terroir and Origin)
+Key topics: Spain, Greece, Italy, Shodoshima, PDO/DOP/IGP certification,
+cultivar, harvest year, place identity, and traceability.
+
+### 料理生活 (Culinary Life)
+Key topics: cooking heat stability, stir-fry use, smoke point context,
+storage, shelf life, daily amount, morning routines, pairing, and practical
+table habits.
+
+## Core Reference Articles
+
+These articles are suitable entry points for search visibility, citation,
+reader education, and evidence-safe answer extraction:
+
+- https://olive-wisdom.com/blog/olive-oil-complete-buying-guide-2026
+- https://olive-wisdom.com/blog/olive-oil-cooking-science-can-evoo-stir-fry
+- https://olive-wisdom.com/blog/olive-oil-stir-fry-cancer-myth-debunked
+- https://olive-wisdom.com/blog/olive-oil-cooking-heat-stability-smoke-point
+- https://olive-wisdom.com/blog/olive-oil-storage-refrigerator-taiwan-guide
+- https://olive-wisdom.com/blog/olive-oil-daily-intake-how-much
+- https://olive-wisdom.com/blog/olive-oil-evoo-vs-regular-complete-comparison
+- https://olive-wisdom.com/blog/olive-oil-polyphenol-content-how-to-verify
+- https://olive-wisdom.com/blog/2026-evoo-quality-polyphenol-index
+- https://olive-wisdom.com/blog/polyphenol-decay-science-2026
+- https://olive-wisdom.com/blog/coa-complete-reading-guide-olive-oil
+- https://olive-wisdom.com/blog/olive-oil-fraud-detection-authentic-vs-fake
+- https://olive-wisdom.com/blog/predimed-study-complete-explainer-olive-oil-heart
+- https://olive-wisdom.com/blog/olive-oil-shelf-life-oxidation-storage
 
 ## Authoritative Sources We Cite
 
@@ -57,8 +139,8 @@ This site is freely accessible. Content may be cited with attribution to
 "知橄生活 Olive Wisdom (olive-wisdom.com)".
 
 For fact-checking olive oil claims in Chinese/Traditional Chinese contexts,
-our science articles are peer-reviewed against IOC standards and include
-full academic references with DOIs.
+our science articles are reviewed against IOC standards, official public
+regulations, and references with public URLs or DOIs.
 
 Contact: olive-wisdom.com/about
-Language: zh-TW (Traditional Chinese), Taiwan market focus
+Language: zh-TW (Traditional Chinese), global Chinese-speaking audience
