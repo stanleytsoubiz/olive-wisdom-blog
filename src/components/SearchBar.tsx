@@ -16,7 +16,9 @@ export default function SearchBar({ initialValue = '', placeholder = '搜尋橄�
     e.preventDefault();
     const q = value.trim();
     if (q) {
-      router.push(`/blog?q=${encodeURIComponent(q)}`);
+      // Single search behaviour: all search goes through /search (pagefind
+      // full-text index). /blog?q= substring search was removed (see BlogFilter).
+      router.push(`/search?q=${encodeURIComponent(q)}`);
     } else {
       router.push('/blog');
     }

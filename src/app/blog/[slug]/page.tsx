@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { getPostBySlug, getAllSlugs, getAllPosts } from '@/lib/posts';
 import { getImages, getPostImageUrl } from '@/lib/images';
 import type { Metadata } from 'next';
-import ViewTracker from '@/components/ViewTracker';
 import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure';
@@ -60,7 +59,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@OliveWisdomTW',
       title: post.title,
       description: post.excerpt,
       images: [ogImageUrl],
@@ -132,8 +130,7 @@ function markdownToHtml(md: string): string {
     }
     if (/^# (.+)$/.test(line)) {
       closeList(); closeTable(); closeBlockquote();
-      result.push(`<h1 class="text-3xl font-bold text-olive-900 mt-8 mb-4">${inline(line.replace(/^# /, ''))}</h1>
-        <ViewTracker slug={slug} />`);
+      result.push(`<h1 class="text-3xl font-bold text-olive-900 mt-8 mb-4">${inline(line.replace(/^# /, ''))}</h1>`);
       continue;
     }
 

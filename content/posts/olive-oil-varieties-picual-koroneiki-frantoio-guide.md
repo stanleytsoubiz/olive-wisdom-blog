@@ -127,7 +127,7 @@ Frantoio 也是義大利混榨的骨架品種。托斯卡尼很多知名的特�
 
 ## 延伸閱讀
 
-- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/posts/olive-oil-terroir-spain-greece-italy)
-- [橄欖油苦澀辣口是好是壞？感官評鑑的科學解釋](/posts/olive-oil-bitterness-pungency-quality-guide)
-- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/posts/coa-complete-reading-guide-olive-oil)
+- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
+- [橄欖油苦澀辣口是好是壞？感官評鑑的科學解釋](/blog/olive-oil-bitterness-pungency-quality-guide)
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
 ---

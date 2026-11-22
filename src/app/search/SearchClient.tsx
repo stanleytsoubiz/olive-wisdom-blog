@@ -50,7 +50,6 @@ function SearchClientInner() {
     const load = async () => {
       try {
         // pagefind.js is generated at build time into /pagefind/ — load dynamically
-        // eslint-disable-next-line @typescript-eslint/no-implied-eval
         const pf = await new Function('return import("/pagefind/pagefind.js")')() as PagefindAPI;
         if (cancelled) return;
         pagefindRef.current = pf;
@@ -115,7 +114,6 @@ function SearchClientInner() {
     setIndexState('loading');
     (async () => {
       try {
-        // eslint-disable-next-line @typescript-eslint/no-implied-eval
         const pf = await new Function('return import("/pagefind/pagefind.js")')() as PagefindAPI;
         pagefindRef.current = pf;
         setIndexState('ready');

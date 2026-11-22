@@ -38,7 +38,7 @@ draft: false
 
 那一道嗆，愈強烈，代表這瓶油愈珍貴。
 
-那是一個叫做**油橄欖醛（Oleocanthal）** 的分子，正在與你咽喉黏膜的 TRPA1 受體結合，發出的感覺信號。而在這個感覺發生的同時，它正在你的細胞內，啟動一連串有可能保護你大腦數十年的分子事件。關於這道嗆感的感官科學與 Oleocanthal 濃度對照，可進一步閱讀[橄欖油的辣喉感背後的分子秘密](/posts/oleocanthal-pungency-anti-inflammation)。
+那是一個叫做**油橄欖醛（Oleocanthal）** 的分子，正在與你咽喉黏膜的 TRPA1 受體結合，發出的感覺信號。而在這個感覺發生的同時，它正在你的細胞內，啟動一連串有可能保護你大腦數十年的分子事件。關於這道嗆感的感官科學與 Oleocanthal 濃度對照，可進一步閱讀[橄欖油的辣喉感背後的分子秘密](/blog/oleocanthal-pungency-anti-inflammation)。
 
 ## 2005年《自然》期刊：一個意外發現改變了一切
 
@@ -71,7 +71,7 @@ draft: false
 > 「我們現在相信，幾乎所有與老化相關的慢性病，都有慢性低度發炎的參與。」
 > — 哈佛醫學院免疫學教授 Charles Serhan，2022 年訪談
 
-Oleocanthal 的意義，在此背景下變得格外深刻。它不是一種治療藥物，而是一種**每日小劑量、長期累積的分子防禦**——把發炎的火焰，在它燃起之前就悄悄澆熄。橄欖油多酚在抗炎之外的六項科學效益（含 PREDIMED 的心血管數據與 JACC 的認知健康數據），已在[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)中系統整理。
+Oleocanthal 的意義，在此背景下變得格外深刻。它不是一種治療藥物，而是一種**每日小劑量、長期累積的分子防禦**——把發炎的火焰，在它燃起之前就悄悄澆熄。橄欖油多酚在抗炎之外的六項科學效益（含 PREDIMED 的心血管數據與 JACC 的認知健康數據），已在[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)中系統整理。
 
 ## 大腦的守護：Oleocanthal 與阿茲海默症的最新研究
 
@@ -103,7 +103,7 @@ Kaddoumi 的解釋：Oleocanthal 似乎能同時從「減少生產」與「加�
 
 **儲存條件**：避光、避熱、避空氣。深色瓶或鐵罐比透明玻璃瓶更能避光，有助保留多酚。
 
-**實際建議**：每日空腹或搭配早餐，攝取 1–2 大匙（15–30ml）的高多酚特級初榨橄欖油。尋找標示多酚含量高於 250mg/kg 的產品，或在品嚐時感受那道清晰的「喉嗆感」——那是 Oleocanthal 存在的自然指標。關於羥基酪醇對大腦記憶與認知老化的最新研究，可進一步閱讀[羥基酪醇與大腦記憶](/posts/hydroxytyrosol-brain-cognition-memory)。
+**實際建議**：每日空腹或搭配早餐，攝取 1–2 大匙（15–30ml）的高多酚特級初榨橄欖油。尋找標示多酚含量高於 250mg/kg 的產品，或在品嚐時感受那道清晰的「喉嗆感」——那是 Oleocanthal 存在的自然指標。關於羥基酪醇對大腦記憶與認知老化的最新研究，可進一步閱讀[羥基酪醇與大腦記憶](/blog/hydroxytyrosol-brain-cognition-memory)。
 
 **如果只記得一件事：選油時優先找 Koroneiki 早摘、Picual 早摘或 Coratina 品種，因為這三種品種的 Oleocanthal 含量在現有商業品種中相對更穩定——品種對了，嗆感才有可能持續、清晰、真實。**
 
@@ -128,6 +128,6 @@ Oleocanthal 告訴我們：三千年前地中海人的日常食物，已在無�
 
 ## 延伸閱讀
 
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/posts/hydroxytyrosol-brain-cognition-memory)
-- [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/posts/polyphenols-sirt1-longevity-2026)
-- [橄欖油的辣喉感是什麼？Oleocanthal 與喉頭那道嗆的關係](/posts/oleocanthal-pungency-anti-inflammation)
+- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026)
+- [橄欖油的辣喉感是什麼？Oleocanthal 與喉頭那道嗆的關係](/blog/oleocanthal-pungency-anti-inflammation)

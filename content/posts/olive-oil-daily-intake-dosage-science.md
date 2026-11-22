@@ -39,8 +39,8 @@ qc_gate:
 
 「每天要吃多少橄欖油才有效？」——這是橄欖油知識庫中被問最多、但也最難給出精確答案的問題。難在哪裡？因為「有效」的定義因人而異：
 
-- 追求**多酚的抗氧化保護**？→ 需要達到 EFSA 的多酚最低劑量。橄欖油多酚在人體各系統的科學效益，可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
-- 追求與**心血管事件較低發生率有關**的飲食模式（PREDIMED 研究結果）？→ 需要達到 PREDIMED 的劑量設計。[PREDIMED 研究完整解析](/posts/predimed-study-complete-explainer-olive-oil-heart)有詳細設計背景。
+- 追求**多酚的抗氧化保護**？→ 需要達到 EFSA 的多酚最低劑量。橄欖油多酚在人體各系統的科學效益，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
+- 追求與**心血管事件較低發生率有關**的飲食模式（PREDIMED 研究結果）？→ 需要達到 PREDIMED 的劑量設計。[PREDIMED 研究完整解析](/blog/predimed-study-complete-explainer-olive-oil-heart)有詳細設計背景。
 - 只是想**用更穩定的油脂替代**精製植物油？→ 任何量都有意義，關鍵是替代而非增加
 
 我們把這三個框架分開解析。
@@ -58,11 +58,11 @@ qc_gate:
 
 這是 EFSA 認可的**最低有效劑量**，達到此量可標示「與抗 LDL 氧化有相關」的健康聲稱。
 
-**重要說明**：大多數市售橄欖油（特別是 "Pure Olive Oil" 和 "Light Olive Oil"）的多酚含量遠低於 250mg/kg，無法達到此健康效益閾值。這條規定實際上是 EFSA 要求標榜多酚健康效益的產品必須使用高品質 EVOO。如何透過 CoA 報告驗證一瓶油的多酚含量是否達標，可參考[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)。
+**重要說明**：大多數市售橄欖油（特別是 "Pure Olive Oil" 和 "Light Olive Oil"）的多酚含量遠低於 250mg/kg，無法達到此健康效益閾值。這條規定實際上是 EFSA 要求標榜多酚健康效益的產品必須使用高品質 EVOO。如何透過 CoA 報告驗證一瓶油的多酚含量是否達標，可參考[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)。
 
 ## 框架二：PREDIMED 研究的實際攝入量
 
-關於 PREDIMED 研究的完整設計、爭議與修正過程，可參考[PREDIMED 研究完整解析](/posts/predimed-study-complete-explainer-olive-oil-heart)。
+關於 PREDIMED 研究的完整設計、爭議與修正過程，可參考[PREDIMED 研究完整解析](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
 PREDIMED 研究（7447 名受試者，追蹤 4.8 年）中，EVOO 補充組的設計是：
 
@@ -113,7 +113,7 @@ PREDIMED 的結論（與心血管事件較低發生率有顯著相關，相對�
 
 ### 晨間空腹攝取
 
-地中海傳統中有晨間空腹攝取一湯匙橄欖油的習慣。早晨空腹攝取的代謝效益與實際操作方法，可參考[早晨空腹橄欖油代謝指南](/posts/morning-ritual-evoo-metabolism)。雖然直接比對空腹與隨餐攝取的 RCT 研究有限，但理論上有以下可能相關性：
+地中海傳統中有晨間空腹攝取一湯匙橄欖油的習慣。早晨空腹攝取的代謝效益與實際操作方法，可參考[早晨空腹橄欖油代謝指南](/blog/morning-ritual-evoo-metabolism)。雖然直接比對空腹與隨餐攝取的 RCT 研究有限，但理論上有以下可能相關性：
 - 空腹時腸道對多酚的吸收環境較單純
 - 與膽汁分泌刺激有相關，連動全天脂溶性維生素吸收
 - 建立日常習慣的錨點（行為設計角度）

@@ -43,12 +43,14 @@ interface Props {
 
 export default function BlogFilter({ posts, imagesData }: Props) {
   const searchParams = useSearchParams();
-  const searchQuery  = searchParams.get('q') || '';
   const initialCat   = searchParams.get('cat') || '';
   const [activeCat, setActiveCat] = useState(initialCat);
 
   useEffect(() => { if (initialCat) setActiveCat(initialCat); }, [initialCat]);
 
+  // NOTE: search is NOT filtered here. All search goes through /search
+  // (pagefind full-text index); /blog only filters by category, so there
+  // is one search behaviour site-wide. A ?q= param on /blog is ignored.
   const filtered = posts.filter((p) => {
     const matchesCat = activeCat
       ? (activeCat === 'culture'
@@ -57,12 +59,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
           ? (p.category === 'health' || p.category === 'selection' || p.category === 'guide')
           : p.category === activeCat)
       : true;
-    const matchesSearch = searchQuery
-      ? (p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-         p.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-         (p.tags || []).some(t => t.toLowerCase().includes(searchQuery.toLowerCase())))
-      : true;
-    return matchesCat && matchesSearch;
+    return matchesCat;
   });
 
   const [featured, ...rest] = filtered;

@@ -38,11 +38,25 @@ async function main() {
     .filter((f) => f.endsWith('.md') || f.endsWith('.mdx'));
 
   const posts = [];
+  // Build guard: no internal link may use the legacy /posts/ path any more.
+  // All article links were rewritten to /blog/ (2026-11-22); the /posts/ →
+  // /blog/ 301 in public/_redirects exists only for old external links.
+  // Fail loudly here so a bad link never ships.
+  const legacyLinkViolations = [];
   for (const fileName of fileNames) {
     const fullPath = path.join(postsDirectory, fileName);
     const raw = fs.readFileSync(fullPath, 'utf8');
+    if (raw.includes('/posts/')) {
+      const count = raw.split('/posts/').length - 1;
+      legacyLinkViolations.push(`${fileName} (${count}×)`);
+    }
     const { data, content } = await parseFrontmatter(raw);
     posts.push({ ...data, content });
+  }
+  if (legacyLinkViolations.length > 0) {
+    console.error('[build-posts-data] ERROR: legacy /posts/ links found — rewrite them to /blog/:');
+    for (const v of legacyLinkViolations) console.error(`  - ${v}`);
+    process.exit(1);
   }
 
   // Sort newest-first by publication date; slug breaks ties deterministically.

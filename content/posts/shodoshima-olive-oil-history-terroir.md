@@ -96,7 +96,7 @@ draft: false
 
 Lucca 是目前最重要的榨油品種，25% 的油脂含量——意思是每 100 公斤的成熟橄欖果，可以榨出約 25 公斤的油——這個數字接近義大利托斯卡納主要品種 Frantoio 的表現，說明小豆島橄欖在生理條件上並非「弱化的亞洲版」，而是具備實質的油脂生產效率。
 
-Nevadillo Blanco 近年受到更多關注，因為它的多酚含量相對較高，壓榨出的橄欖油在喉嚨後段有明顯的辛辣感——這正是 [Oleocanthal（橄欖刺激醛）感官表現的訊號，也是辨別高品質 EVOO 的關鍵指標](/posts/olive-oil-bitterness-pungency-quality-guide)。
+Nevadillo Blanco 近年受到更多關注，因為它的多酚含量相對較高，壓榨出的橄欖油在喉嚨後段有明顯的辛辣感——這正是 [Oleocanthal（橄欖刺激醛）感官表現的訊號，也是辨別高品質 EVOO 的關鍵指標](/blog/olive-oil-bitterness-pungency-quality-guide)。
 
 ### 品種演化背後的農業邏輯
 
@@ -134,7 +134,7 @@ Nevadillo Blanco 近年受到更多關注，因為它的多酚含量相對較高
 | Extra | ≤0.50% | 通過官方品評 |
 | Standard | ≤0.80% | 符合基本 IOC EVOO 規範 |
 
-這套認證制度由香川縣政府監管，是目前日本唯一具備官方法律效力的橄欖油品質分級系統。如果你手上有一瓶標示「香川縣 Premium」的橄欖油，那個標誌背後是有具體可測量的化學指標，而不只是行銷文案——要驗證真偽，可以參考 [CoA（品質分析證書）完整閱讀指南](/posts/japan-coa-verification-olive-oil-guide)，了解如何自行核實酸值數據。
+這套認證制度由香川縣政府監管，是目前日本唯一具備官方法律效力的橄欖油品質分級系統。如果你手上有一瓶標示「香川縣 Premium」的橄欖油，那個標誌背後是有具體可測量的化學指標，而不只是行銷文案——要驗證真偽，可以參考 [CoA（品質分析證書）完整閱讀指南](/blog/japan-coa-verification-olive-oil-guide)，了解如何自行核實酸值數據。
 
 ### NYIOOC 金牌：國際感官驗證
 

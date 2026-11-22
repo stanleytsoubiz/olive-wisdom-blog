@@ -106,9 +106,9 @@ draft: false
 
 ## 延伸閱讀
 
-- [橄欖油 vs 酪梨油怎麼選？](/posts/olive-oil-vs-avocado-oil-complete-comparison)
-- [從發煙點到氧化穩定性：橄欖油日常加熱判斷](/posts/olive-oil-cooking-heat-stability-smoke-point)
-- [特級初榨橄欖油可以炒菜嗎？](/posts/olive-oil-cooking-science-can-evoo-stir-fry)
+- [橄欖油 vs 酪梨油怎麼選？](/blog/olive-oil-vs-avocado-oil-complete-comparison)
+- [從發煙點到氧化穩定性：橄欖油日常加熱判斷](/blog/olive-oil-cooking-heat-stability-smoke-point)
+- [特級初榨橄欖油可以炒菜嗎？](/blog/olive-oil-cooking-science-can-evoo-stir-fry)
 
 **來源與證據評級：** 本文的等級標準與證據分級，見[證據圖書館](/evidence/)。
 

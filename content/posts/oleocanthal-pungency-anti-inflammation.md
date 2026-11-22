@@ -33,7 +33,7 @@ draft: false
 
 當你第一次品嚐一瓶來自克里特島或托斯卡尼的高多酚特級初榨橄欖油，喉嚨深處那道突如其來的辛辣感——許多初學者的本能反應，是皺眉，認為「這油品質不好，有刺激感」。
 
-他們錯了。那一道嗆，不是雜質，不是氧化的跡象。那是一個有名字的分子，正在與你的細胞展開一場分子對話，而它的名字，叫做**油橄欖醛（Oleocanthal）**。苦澀辣口與品質之間的關係——包括什麼程度的辣感對應什麼品質等級——可進一步閱讀[橄欖油苦澀辣口是好是壞](/posts/olive-oil-bitterness-pungency-quality-guide)。
+他們錯了。那一道嗆，不是雜質，不是氧化的跡象。那是一個有名字的分子，正在與你的細胞展開一場分子對話，而它的名字，叫做**油橄欖醛（Oleocanthal）**。苦澀辣口與品質之間的關係——包括什麼程度的辣感對應什麼品質等級——可進一步閱讀[橄欖油苦澀辣口是好是壞](/blog/olive-oil-bitterness-pungency-quality-guide)。
 
 這個發現，改寫了科學界對食物中天然抗炎分子的認知。
 
@@ -68,13 +68,13 @@ Oleocanthal 的作用路徑與布洛芬幾乎相同，但由於它來自食物�
 
 現代醫學越來越認識到，**慢性低度炎症（Chronic Low-grade Inflammation）** 才是大多數文明病的根源：心血管疾病、第二型糖尿病、阿茲海默症、多種癌症，都與長期發炎狀態高度相關。
 
-每天一到兩湯匙的高多酚特級初榨橄欖油，是一種簡單的日常做法。Oleocanthal 只是橄欖油多酚家族的其中一員，關於七大科學效益的完整文獻地圖，可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
+每天一到兩湯匙的高多酚特級初榨橄欖油，是一種簡單的日常做法。Oleocanthal 只是橄欖油多酚家族的其中一員，關於七大科學效益的完整文獻地圖，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 ## 如何確認你的橄欖油含有 Oleocanthal？
 
 最直接的方式，就是你的喉嚨感受：
 
-若想用 CoA 數字確認 Oleocanthal 的實際含量，而不只是依靠感官估算，[多酚含量的真相](/posts/olive-oil-polyphenol-content-how-to-verify)說明了如何解讀和取得相關數據。
+若想用 CoA 數字確認 Oleocanthal 的實際含量，而不只是依靠感官估算，[多酚含量的真相](/blog/olive-oil-polyphenol-content-how-to-verify)說明了如何解讀和取得相關數據。
 
 **嗆感強度評分（Oleocanthal 含量指標）**
 
@@ -127,6 +127,6 @@ Oleocanthal 的作用路徑與布洛芬幾乎相同，但由於它來自食物�
 
 ## 延伸閱讀
 
-- [Oleocanthal 與大腦研究怎麼看？喉頭的嗆感與神經保護線索](/posts/oleocanthal-anti-inflammation-brain-protection)
-- [IOC 感官評鑑全解析：為什麼一瓶橄欖油的靈魂，藏在鼻尖的三秒鐘？](/posts/evoo-sensory-evaluation-ioc-standards)
-- [多酚含量的真相：為什麼標籤上的數字，可能是你最重要的健康決策依據？](/posts/olive-oil-polyphenol-content-how-to-verify)
+- [Oleocanthal 與大腦研究怎麼看？喉頭的嗆感與神經保護線索](/blog/oleocanthal-anti-inflammation-brain-protection)
+- [IOC 感官評鑑全解析：為什麼一瓶橄欖油的靈魂，藏在鼻尖的三秒鐘？](/blog/evoo-sensory-evaluation-ioc-standards)
+- [多酚含量的真相：為什麼標籤上的數字，可能是你最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)

@@ -96,9 +96,9 @@ draft: false
 
 ## 延伸閱讀
 
-- [早晨橄欖油怎麼用？](/posts/morning-ritual-evoo-metabolism)
-- [橄欖油一天用多少才合理？](/posts/olive-oil-daily-intake-how-much)
-- [橄欖油每日用量研究怎麼看？](/posts/olive-oil-daily-intake-dosage-science)
+- [早晨橄欖油怎麼用？](/blog/morning-ritual-evoo-metabolism)
+- [橄欖油一天用多少才合理？](/blog/olive-oil-daily-intake-how-much)
+- [橄欖油每日用量研究怎麼看？](/blog/olive-oil-daily-intake-dosage-science)
 
 **來源與證據評級：** 本文的等級標準與證據分級，見[證據圖書館](/evidence/)。
 

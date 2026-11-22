@@ -151,7 +151,7 @@ CoA 的五個數字：酸值 ≤0.8%、過氧化值 ≤20、K232 ≤2.50、K270 
 
 ## 延伸閱讀
 
-- [橄欖油要放冰箱嗎？台灣與濕熱城市的保存判斷](/posts/olive-oil-storage-refrigerator-taiwan-guide)
-- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/posts/coa-complete-reading-guide-olive-oil)
-- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油，而您的舌頭可能是最後一道防線？](/posts/olive-oil-fraud-detection-authentic-vs-fake)
+- [橄欖油要放冰箱嗎？台灣與濕熱城市的保存判斷](/blog/olive-oil-storage-refrigerator-taiwan-guide)
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
+- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油，而您的舌頭可能是最後一道防線？](/blog/olive-oil-fraud-detection-authentic-vs-fake)
 ---

@@ -110,7 +110,7 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 
 207 大卡佔一般成人每日建議攝取量（2000 kcal）的約 10%，若這些油脂是取代了原本的奶油、豬油或其他植物油，淨熱量變化有限，但脂肪酸組成已大幅改善。
 
-關於每日橄欖油建議攝取量的研究依據（20–30ml），請參考[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/posts/olive-oil-daily-intake-how-much)。此外，EVOO 多酚組成對健康指標的影響，詳見[橄欖油多酚健康科學完整指南](/posts/evoo-polyphenol-complete-health-guide)。
+關於每日橄欖油建議攝取量的研究依據（20–30ml），請參考[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)。此外，EVOO 多酚組成對健康指標的影響，詳見[橄欖油多酚健康科學完整指南](/blog/evoo-polyphenol-complete-health-guide)。
 
 ## 同等熱量下，EVOO 的多酚額外效益
 
@@ -141,7 +141,7 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 
 **不適合**：高溫油炸（需 220°C 以上），建議改用發煙點更高的精製橄欖油或酪梨油。
 
-關於橄欖油等級分類和 IOC 官方脂肪酸標準的完整說明，可參考[橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/posts/olive-oil-grades-classification-complete-guide)。了解 EVOO 與一般橄欖油在多酚與脂肪酸組成上的本質差異，可延伸閱讀[特級初榨橄欖油與一般橄欖油完整比較](/posts/olive-oil-evoo-vs-regular-complete-comparison)。
+關於橄欖油等級分類和 IOC 官方脂肪酸標準的完整說明，可參考[橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)。了解 EVOO 與一般橄欖油在多酚與脂肪酸組成上的本質差異，可延伸閱讀[特級初榨橄欖油與一般橄欖油完整比較](/blog/olive-oil-evoo-vs-regular-complete-comparison)。
 
 ## 結語：把熱量倒進那只湯匙
 
@@ -153,9 +153,9 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 
 ## 延伸閱讀
 
-- [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/posts/olive-oil-daily-intake-how-much)
-- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/posts/olive-oil-grades-classification-complete-guide)
-- [橄欖油真的能幫助減肥嗎？油酸、飽足感與代謝的科學解析](/posts/olive-oil-weight-loss-science)
+- [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)
+- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
+- [橄欖油真的能幫助減肥嗎？油酸、飽足感與代謝的科學解析](/blog/olive-oil-weight-loss-science)
 
 ---
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。

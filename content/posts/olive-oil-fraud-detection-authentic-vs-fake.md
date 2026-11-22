@@ -73,7 +73,7 @@ draft: false
 
 這些數據理論上應由廠商自主公開，但市面上主動標示的品牌仍屬少數。
 
-**換句話說，UC Davis（2011）的調查顯示市售「特級初榨」橄欖油有 69% 不符合 IOC 化學指標——消費者主動索取 CoA 報告、對照游離酸度（≤0.8%）與過氧化值（≤20 meq/kg）兩項核心指標，是目前最可操作的自保行為。**如果你不熟悉 CoA 上每個數字的意義，[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)提供了逐項說明與真實案例對照。
+**換句話說，UC Davis（2011）的調查顯示市售「特級初榨」橄欖油有 69% 不符合 IOC 化學指標——消費者主動索取 CoA 報告、對照游離酸度（≤0.8%）與過氧化值（≤20 meq/kg）兩項核心指標，是目前最可操作的自保行為。**如果你不熟悉 CoA 上每個數字的意義，[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)提供了逐項說明與真實案例對照。
 
 ### 第二層：標籤詳讀指引
 
@@ -97,7 +97,7 @@ draft: false
 
 **嗅覺測試：** 優質 EVOO 應有清晰的青草、朝鮮薊、番茄葉或杏仁香氣；若出現醃漬味、金屬味、發酵味或哈喇味，是明確缺陷訊號。
 
-**口腔測試：** 取 3-5ml 讓油液覆蓋整個口腔，評估是否有苦味（舌根）和辣感（喉部後段）。完全沒有苦辣感的「特級初榨」，多酚含量往往不達標。關於這套感官測試背後的多酚科學依據，可進一步閱讀[多酚含量的真相](/posts/olive-oil-polyphenol-content-how-to-verify)。
+**口腔測試：** 取 3-5ml 讓油液覆蓋整個口腔，評估是否有苦味（舌根）和辣感（喉部後段）。完全沒有苦辣感的「特級初榨」，多酚含量往往不達標。關於這套感官測試背後的多酚科學依據，可進一步閱讀[多酚含量的真相](/blog/olive-oil-polyphenol-content-how-to-verify)。
 
 ### 第四層：認證與溯源核驗
 
@@ -145,6 +145,6 @@ Tom Mueller 在其深度調查著作《Extra Virginity》（2011）中，記錄�
 
 ## 延伸閱讀
 
-- [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/posts/evoo-buying-guide-2026)
-- [IOC 感官評鑑全解析：為什麼一瓶橄欖油的靈魂，藏在鼻尖的三秒鐘？](/posts/evoo-sensory-evaluation-ioc-standards)
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/posts/olive-oil-polyphenol-content-how-to-verify)
+- [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/blog/evoo-buying-guide-2026)
+- [IOC 感官評鑑全解析：為什麼一瓶橄欖油的靈魂，藏在鼻尖的三秒鐘？](/blog/evoo-sensory-evaluation-ioc-standards)
+- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)

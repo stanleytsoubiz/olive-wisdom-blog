@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { isHoneypotFilled, checkThrottle } from '@/lib/form-guard';
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const SUPABASE_ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -9,9 +10,23 @@ export default function ContactForm() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [msg, setMsg] = useState('');
+  // Honeypot — see src/lib/form-guard.ts. Humans never see or fill this.
+  const [website, setWebsite] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Honeypot filled → bot. Fake success, write nothing.
+    if (isHoneypotFilled(website)) {
+      setStatus('success');
+      setMsg('感謝您的訊息！我們將在 2 個工作天內回覆您。');
+      setForm({ name: '', email: '', message: '' });
+      return;
+    }
+    if (!checkThrottle('contact')) {
+      setStatus('error');
+      setMsg('送出太頻繁，請稍後再試。');
+      return;
+    }
     setStatus('loading');
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/contact_messages`, {
@@ -56,6 +71,17 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot — hidden from humans (see src/lib/form-guard.ts) */}
+      <input
+        type="text"
+        name="website"
+        value={website}
+        onChange={(e) => setWebsite(e.target.value)}
+        autoComplete="off"
+        tabIndex={-1}
+        aria-hidden="true"
+        className="absolute opacity-0 pointer-events-none h-0 w-0"
+      />
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">姓名</label>
         <input

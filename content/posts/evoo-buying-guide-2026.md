@@ -97,7 +97,7 @@ PDO 和 DOP 是同一件事的不同語言表達——你在義大利瓶身上�
 
 ## 四、多酚含量判斷：CoA 文件與 TPC 數值
 
-CoA（Certificate of Analysis，成分分析報告）是品牌向第三方實驗室送樣後取得的化學分析文件。對高品質 EVOO 而言，這是最可靠的品質憑證。[橄欖油 CoA 完整解讀指南](/posts/coa-complete-reading-guide-olive-oil)詳細說明報告中每一個數值的意義與判讀方式。
+CoA（Certificate of Analysis，成分分析報告）是品牌向第三方實驗室送樣後取得的化學分析文件。對高品質 EVOO 而言，這是最可靠的品質憑證。[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)詳細說明報告中每一個數值的意義與判讀方式。
 
 ### TPC 數值的意義
 
@@ -110,7 +110,7 @@ TPC（Total Polyphenol Content，總多酚含量）是 CoA 中最關鍵的健康
 | 標準 | 100–249 mg/kg | 日常料理選擇 |
 | 基礎 | <100 mg/kg | 多數調配油或過期油的實際範圍 |
 
-EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 20ml、多酚含量 ≥250 mg/kg 的 EVOO，其中羥基酪醇（Hydroxytyrosol）及其衍生物合計 ≥5mg，與保護 LDL 免受氧化有相關（EFSA Journal 9(4):2033）。關於如何驗證標籤上的多酚聲稱是否有依據，可參考[多酚含量的真相：如何驗證橄欖油的多酚數據](/posts/olive-oil-polyphenol-content-how-to-verify)。
+EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 20ml、多酚含量 ≥250 mg/kg 的 EVOO，其中羥基酪醇（Hydroxytyrosol）及其衍生物合計 ≥5mg，與保護 LDL 免受氧化有相關（EFSA Journal 9(4):2033）。關於如何驗證標籤上的多酚聲稱是否有依據，可參考[多酚含量的真相：如何驗證橄欖油的多酚數據](/blog/olive-oil-polyphenol-content-how-to-verify)。
 
 ### 如何取得 CoA
 
@@ -146,7 +146,7 @@ EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 2
 台灣消費者面對的不僅是品質問題，更有標示不透明的結構性挑戰。我們在評測中觀察到以下最常見的市場陷阱：
 
 **陷阱一：「100% 義大利橄欖油」但無產區細節**
-義大利進口 ≠ 義大利橄欖製作。若無 PDO/IGP 認證，「義大利橄欖油」可能是從多個國家進口橄欖原油、在義大利裝瓶的調配產品，法律上允許但容易誤導消費者。全球橄欖油摻假的規模與手法，可參考[橄欖油真偽鑑別：如何辨別真假 EVOO](/posts/olive-oil-fraud-detection-authentic-vs-fake)。
+義大利進口 ≠ 義大利橄欖製作。若無 PDO/IGP 認證，「義大利橄欖油」可能是從多個國家進口橄欖原油、在義大利裝瓶的調配產品，法律上允許但容易誤導消費者。全球橄欖油摻假的規模與手法，可參考[橄欖油真偽鑑別：如何辨別真假 EVOO](/blog/olive-oil-fraud-detection-authentic-vs-fake)。
 
 **陷阱二：「純橄欖油」用中文呈現品質感**
 如上所述，「Pure Olive Oil」是精製混調油，中文標示「純橄欖油」往往遮蓋了這個分類訊息。
@@ -186,7 +186,7 @@ EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 2
 
 ## 延伸閱讀
 
-- [科學家選油指南：高多酚 EVOO 的五大核心鑑別標準](/posts/evoo-buying-guide-2026)
-- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/posts/olive-oil-health-benefits-polyphenol-science-complete)
-- [橄欖油感官評鑑 IOC 標準全解析](/posts/evoo-sensory-evaluation-ioc-standards)
-- [2026 高多酚 EVOO 品質多酚指數](/posts/2026-evoo-quality-polyphenol-index)
+- [科學家選油指南：高多酚 EVOO 的五大核心鑑別標準](/blog/evoo-buying-guide-2026)
+- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)
+- [橄欖油感官評鑑 IOC 標準全解析](/blog/evoo-sensory-evaluation-ioc-standards)
+- [2026 高多酚 EVOO 品質多酚指數](/blog/2026-evoo-quality-polyphenol-index)

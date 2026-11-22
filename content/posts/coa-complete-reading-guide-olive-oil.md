@@ -62,7 +62,7 @@ CoA 的價值不在於把每個數字都拿來排高低，而是把行銷說法�
 
 **如果只記得一件事：CoA 不是用來崇拜某個漂亮數字，而是用來確認這瓶油的批次、時間、氧化狀態與品質邊界是否說得通。**
 
-把 CoA 放進選油路徑時，請和其他證據分工：PDO / DOP / IGP 說明產地與規範，[EVOO 與一般橄欖油差異](/posts/olive-oil-evoo-vs-regular-complete-comparison)說明等級與製程，[橄欖油等級分類](/posts/olive-oil-grades-classification-complete-guide)說明 IOC 分級，而 CoA 只回答同批次在分析日期當下的品質邊界。即使多酚數字漂亮，也不能直接推論疾病預防、治療效果或永久品質保證。
+把 CoA 放進選油路徑時，請和其他證據分工：PDO / DOP / IGP 說明產地與規範，[EVOO 與一般橄欖油差異](/blog/olive-oil-evoo-vs-regular-complete-comparison)說明等級與製程，[橄欖油等級分類](/blog/olive-oil-grades-classification-complete-guide)說明 IOC 分級，而 CoA 只回答同批次在分析日期當下的品質邊界。即使多酚數字漂亮，也不能直接推論疾病預防、治療效果或永久品質保證。
 
 下面這張表可以先當成「讀報告的翻譯表」。不必一次記住所有縮寫，只要先知道每個數字在幫你看哪一件事。
 
@@ -84,7 +84,7 @@ CoA 的價值不在於把每個數字都拿來排高低，而是把行銷說法�
 | 送禮或收藏 | 採收年份、裝瓶日期、保存條件 | 舊 CoA 或舊批次不代表當下品質 |
 | 第一次索取 CoA | 批次號、分析日期、實驗室名稱 | 先做三項基本核對，就能排除多數不透明產品 |
 
-如果你還不熟悉特級初榨、初榨、精製與果渣油的等級差異，可以先讀[橄欖油等級怎麼分？用 IOC 標準看懂 EVOO、初榨、精製與果渣油](/posts/olive-oil-grades-classification-complete-guide)；如果正在準備選購，則可搭配[特級初榨橄欖油怎麼選？用 IOC 標準、採收年份與 CoA 看懂 EVOO](/posts/evoo-buying-guide-2026)。CoA 不是取代感官、產地與用途，而是讓這些判斷多一層可查核基礎。
+如果你還不熟悉特級初榨、初榨、精製與果渣油的等級差異，可以先讀[橄欖油等級怎麼分？用 IOC 標準看懂 EVOO、初榨、精製與果渣油](/blog/olive-oil-grades-classification-complete-guide)；如果正在準備選購，則可搭配[特級初榨橄欖油怎麼選？用 IOC 標準、採收年份與 CoA 看懂 EVOO](/blog/evoo-buying-guide-2026)。CoA 不是取代感官、產地與用途，而是讓這些判斷多一層可查核基礎。
 
 ## CoA 是什麼？一份文件，五個你需要知道的數字
 
@@ -108,7 +108,7 @@ CoA 不應只是品牌自己整理的一張漂亮表格。較具公信力的 CoA
 
 **第四個：多酚含量（Total Polyphenols / Biophenols）**
 
-多酚是理解特級初榨橄欖油苦味、喉頭辛辣感、氧化穩定性與部分健康聲稱條件的重要線索。不過，數字本身不能單獨代表一瓶油的全部品質，也不能直接推出個人健康結果。關於 CoA 上的多酚數字，可接著讀[橄欖油多酚含量怎麼看？用 CoA、辛辣感與保存條件判讀品質](/posts/olive-oil-polyphenol-content-how-to-verify)。
+多酚是理解特級初榨橄欖油苦味、喉頭辛辣感、氧化穩定性與部分健康聲稱條件的重要線索。不過，數字本身不能單獨代表一瓶油的全部品質，也不能直接推出個人健康結果。關於 CoA 上的多酚數字，可接著讀[橄欖油多酚含量怎麼看？用 CoA、辛辣感與保存條件判讀品質](/blog/olive-oil-polyphenol-content-how-to-verify)。
 
 ---
 
@@ -180,7 +180,7 @@ K 值可以把它理解成更細的「氧化痕跡掃描」。有些油表面看
 
 CoA 的分析日期是一個被嚴重低估的資訊點。較穩健的做法是：選油時確認 CoA 日期距今不會過久，同時確認這份報告的分析時間點對應的是你手上的同批次產品。
 
-若你想理解多酚數字如何隨時間與保存條件改變，可接著讀[橄欖油多酚會衰減嗎？從採收日期、CoA 與保存條件看懂變化](/posts/polyphenol-decay-science-2026)。如果瓶身主打高多酚，也可搭配[高多酚橄欖油怎麼看？用 CoA、採收年份與保存條件判讀品質](/posts/2026-evoo-quality-polyphenol-index)。
+若你想理解多酚數字如何隨時間與保存條件改變，可接著讀[橄欖油多酚會衰減嗎？從採收日期、CoA 與保存條件看懂變化](/blog/polyphenol-decay-science-2026)。如果瓶身主打高多酚，也可搭配[高多酚橄欖油怎麼看？用 CoA、採收年份與保存條件判讀品質](/blog/2026-evoo-quality-polyphenol-index)。
 
 **錯誤三：沒有確認出具機構**
 
@@ -204,7 +204,7 @@ CoA 上一定會有一組批次號碼（Lot Number 或 Batch Number）。打開�
 
 CoA 的分析日期通常應在採收後三個月內。地中海橄欖油的主要採收期是每年十月至十二月。如果你在 2026 年五月收到一份分析日期為 2024 年九月的報告，這份報告描述的已經是兩年前的油，與你手上這瓶的實際品質可能毫無關聯。
 
-如果你想更系統地了解這套驗證邏輯如何在實際市場中運作，[日本橄欖油 CoA 怎麼看？從小豆島、批次到透明度學習](/posts/japan-coa-verification-olive-oil-guide)提供了一個亞洲同儕市場的參照，重點是學習如何把採收、批次、CoA、保存與感官放在同一條透明度鏈上。
+如果你想更系統地了解這套驗證邏輯如何在實際市場中運作，[日本橄欖油 CoA 怎麼看？從小豆島、批次到透明度學習](/blog/japan-coa-verification-olive-oil-guide)提供了一個亞洲同儕市場的參照，重點是學習如何把採收、批次、CoA、保存與感官放在同一條透明度鏈上。
 
 ---
 
@@ -224,7 +224,7 @@ CoA 的分析日期通常應在採收後三個月內。地中海橄欖油的主�
 
 如果一款油願意公開批次、採收年份、分析日期與第三方實驗室資訊，它至少通過了透明度的第一關。接下來，才值得談風味、品種、產區與價格是否符合你的使用情境。
 
-關於 CoA 上的多酚數字，可先讀[橄欖油多酚含量怎麼看？用 CoA、辛辣感與保存條件判讀品質](/posts/olive-oil-polyphenol-content-how-to-verify)；若看到高多酚標示，可接著看[高多酚橄欖油怎麼看？用 CoA、採收年份與保存條件判讀品質](/posts/2026-evoo-quality-polyphenol-index)；若想理解數字時效，則可讀[橄欖油多酚會衰減嗎？從採收日期、CoA 與保存條件看懂變化](/posts/polyphenol-decay-science-2026)。若想進一步理解 PDO、DOP、IGP 這類地理認證和 CoA 的差別，也可以延伸閱讀 [PDO、DOP、IGP 怎麼看？橄欖油產地標章與品質證據的差別](/posts/olive-oil-pdo-dop-igp-certification-guide)；若擔心標示與實際品質不一致，可參考[橄欖油真假怎麼看？用標籤、CoA、感官與來源透明度判斷](/posts/olive-oil-fraud-detection-authentic-vs-fake)。
+關於 CoA 上的多酚數字，可先讀[橄欖油多酚含量怎麼看？用 CoA、辛辣感與保存條件判讀品質](/blog/olive-oil-polyphenol-content-how-to-verify)；若看到高多酚標示，可接著看[高多酚橄欖油怎麼看？用 CoA、採收年份與保存條件判讀品質](/blog/2026-evoo-quality-polyphenol-index)；若想理解數字時效，則可讀[橄欖油多酚會衰減嗎？從採收日期、CoA 與保存條件看懂變化](/blog/polyphenol-decay-science-2026)。若想進一步理解 PDO、DOP、IGP 這類地理認證和 CoA 的差別，也可以延伸閱讀 [PDO、DOP、IGP 怎麼看？橄欖油產地標章與品質證據的差別](/blog/olive-oil-pdo-dop-igp-certification-guide)；若擔心標示與實際品質不一致，可參考[橄欖油真假怎麼看？用標籤、CoA、感官與來源透明度判斷](/blog/olive-oil-fraud-detection-authentic-vs-fake)。
 
 ## 把 CoA 變成你的選油工具
 

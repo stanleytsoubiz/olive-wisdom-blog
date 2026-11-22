@@ -90,7 +90,7 @@ Oleocanthal 的濃度在不同橄欖油之間差異顯著。Koroneiki 品種的�
 
 **Arbequina（阿貝金納）** 來自西班牙加泰隆尼亞，果實小而多汁，出油率低，多酚含量相對較低。口感溫和，苦辣感輕微，帶有成熟果實的甜感和奶油質地，是不習慣苦辣感的消費者的入門選擇。
 
-Ghreishi Rad 等人（2023）對三個品種在不同成熟度採收的研究顯示，採收時機對多酚含量的影響幾乎和品種本身一樣重要。同一品種在偏綠期採收，多酚含量可比完全成熟時高出 30–50%（DOI: 10.1002/fsn3.3497）。橄欖品種、風土與採收對品質的影響，可延伸閱讀[橄欖樹品種、風土與栽培完整指南](/posts/olive-tree-cultivation-variety-terroir-guide)。
+Ghreishi Rad 等人（2023）對三個品種在不同成熟度採收的研究顯示，採收時機對多酚含量的影響幾乎和品種本身一樣重要。同一品種在偏綠期採收，多酚含量可比完全成熟時高出 30–50%（DOI: 10.1002/fsn3.3497）。橄欖品種、風土與採收對品質的影響，可延伸閱讀[橄欖樹品種、風土與栽培完整指南](/blog/olive-tree-cultivation-variety-terroir-guide)。
 
 ---
 
@@ -108,7 +108,7 @@ Ghreishi Rad 等人（2023）對三個品種在不同成熟度採收的研究顯
 
 其中第 1、2、3 種情況，都不是優質的標誌。第 4 種情況並非劣質，只是多酚型態不同，適合用途也有差異。
 
-如果你買到一瓶完全沒有苦辣感的「特級初榨橄欖油」，不一定代表它被標錯了，但它的多酚含量和抗氧化活性，很可能遠低於同等級的強勁型油款。超市橄欖油的選購策略與常見標示陷阱，可參考[超市橄欖油選購完整指南](/posts/olive-oil-selection-supermarket-complete-guide)。
+如果你買到一瓶完全沒有苦辣感的「特級初榨橄欖油」，不一定代表它被標錯了，但它的多酚含量和抗氧化活性，很可能遠低於同等級的強勁型油款。超市橄欖油的選購策略與常見標示陷阱，可參考[超市橄欖油選購完整指南](/blog/olive-oil-selection-supermarket-complete-guide)。
 
 ---
 
@@ -148,9 +148,9 @@ IOC 感官系統將苦辣強度分三級（Robust >6.0、Medium 3.0–6.0、Deli
 
 ## 延伸閱讀
 
-- [橄欖油等級分類完整指南：IOC 官方標準一次看懂](/posts/olive-oil-grades-classification-complete-guide)
-- [2026 橄欖油多酚品質指數：高多酚才是真正的品質標籤](/posts/2026-evoo-quality-polyphenol-index)
-- [IOC 感官評鑑標準詳解](/posts/evoo-sensory-evaluation-ioc-standards)
+- [橄欖油等級分類完整指南：IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
+- [2026 橄欖油多酚品質指數：高多酚才是真正的品質標籤](/blog/2026-evoo-quality-polyphenol-index)
+- [IOC 感官評鑑標準詳解](/blog/evoo-sensory-evaluation-ioc-standards)
 
 ---
 

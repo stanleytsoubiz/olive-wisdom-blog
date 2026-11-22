@@ -46,7 +46,7 @@ PREDIMED 試驗中，補充橄欖油的地中海飲食組受試者每週領回�
 
 ## MUFA 影響飽足感荷爾蒙：Paniagua et al. 2007 的發現
 
-橄欖油的主要脂肪酸是油酸（Oleic Acid），屬於單元不飽和脂肪酸（MUFA），約佔橄欖油脂肪酸組成的 65–80%。這個成分和飽足感之間存在一條科學上可追溯的連結。橄欖油中多酚成分在抗炎與代謝層面的科學效益，可參考[橄欖油多酚的七大科學效益](/posts/olive-oil-health-benefits-polyphenol-science-complete)。
+橄欖油的主要脂肪酸是油酸（Oleic Acid），屬於單元不飽和脂肪酸（MUFA），約佔橄欖油脂肪酸組成的 65–80%。這個成分和飽足感之間存在一條科學上可追溯的連結。橄欖油中多酚成分在抗炎與代謝層面的科學效益，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 2007 年發表於《美國營養學院期刊》的隨機對照試驗（Paniagua et al., 2007）以胰島素阻抗受試者為對象，分別給予三種飲食介入：高碳水化合物飲食、高飽和脂肪（SFA）飲食、以及高 MUFA 飲食（以特級初榨橄欖油為主要脂肪來源）。結果顯示：
 
@@ -58,7 +58,7 @@ PREDIMED 試驗中，補充橄欖油的地中海飲食組受試者每週領回�
 
 ## PREDIMED 試驗：地中海飲食組的體重數據
 
-PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中海飲食隨機對照試驗，追蹤超過 7,400 名受試者長達 4.8 年，主要終點是心血管事件。關於此研究的完整設計、爭議與修正過程，可參考[PREDIMED 研究完整解析](/posts/predimed-study-complete-explainer-olive-oil-heart)。
+PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中海飲食隨機對照試驗，追蹤超過 7,400 名受試者長達 4.8 年，主要終點是心血管事件。關於此研究的完整設計、爭議與修正過程，可參考[PREDIMED 研究完整解析](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
 但 PREDIMED 的體重數據同樣值得關注。Schwingshackl et al.（2015）的系統性回顧與統合分析彙整了地中海飲食介入對人體測量指標的影響，發現：
 
@@ -108,7 +108,7 @@ PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中�
 橄欖油是地中海飲食的核心脂肪來源，但地中海飲食的其他成分（蔬菜、豆類、魚類、全穀）同樣重要。單獨服用橄欖油而不改變整體飲食結構，不能預期相同效果。
 
 **框架三：劑量控制**
-關於每日橄欖油用量的詳細計算，請參閱[每天應該吃多少橄欖油](/posts/olive-oil-daily-intake-dosage-science)，從 EFSA 最低有效劑量到 PREDIMED 研究設計量的完整框架，以及[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/posts/olive-oil-daily-intake-how-much)，20–30ml 是研究中使用的劑量範圍，超出部分沒有額外的體重管理依據。
+關於每日橄欖油用量的詳細計算，請參閱[每天應該吃多少橄欖油](/blog/olive-oil-daily-intake-dosage-science)，從 EFSA 最低有效劑量到 PREDIMED 研究設計量的完整框架，以及[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)，20–30ml 是研究中使用的劑量範圍，超出部分沒有額外的體重管理依據。
 
 **框架四：長期視角**
 PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內的快速見效。體重管理是長期飲食模式的結果，不是單一食材的短期效應。
@@ -125,7 +125,7 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 
 這些侷限不是在否定橄欖油的價值，而是強調：**沒有任何單一食材是體重管理的魔法子彈**，橄欖油也不例外。
 
-關於 PREDIMED 試驗的完整背景與設計，可參考[PREDIMED 研究完整解析：追蹤 7,447 人如何改寫橄欖油科學史](/posts/predimed-study-complete-explainer-olive-oil-heart)。
+關於 PREDIMED 試驗的完整背景與設計，可參考[PREDIMED 研究完整解析：追蹤 7,447 人如何改寫橄欖油科學史](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
 ## 結語：兩個健身工作室外的人
 
@@ -139,9 +139,9 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 
 ## 延伸閱讀
 
-- [PREDIMED 研究完整解析：追蹤 7,447 人如何改寫橄欖油科學史](/posts/predimed-study-complete-explainer-olive-oil-heart)
-- [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/posts/olive-oil-daily-intake-how-much)
-- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/posts/olive-oil-grades-classification-complete-guide)
+- [PREDIMED 研究完整解析：追蹤 7,447 人如何改寫橄欖油科學史](/blog/predimed-study-complete-explainer-olive-oil-heart)
+- [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)
+- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
 
 ---
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
