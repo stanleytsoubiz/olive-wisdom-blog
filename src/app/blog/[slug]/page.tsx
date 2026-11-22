@@ -8,6 +8,7 @@ import ViewTracker from '@/components/ViewTracker';
 import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure';
+import ArticleNewsletterCTA from '@/components/ArticleNewsletterCTA';
 import SubscribePopup from '@/components/SubscribePopup';
 
 export const dynamic = 'force-static';
@@ -493,6 +494,10 @@ export default async function BlogPostPage({ params }: Props) {
             </ol>
           </div>
         )}
+
+        {/* Newsletter CTA — after references, before navigation.
+            Newsletter-first; copy makes no instant-delivery promise. */}
+        <ArticleNewsletterCTA />
 
         {/* Navigation */}
         <div className="mt-10 pt-8 border-t border-gray-100 flex gap-4">

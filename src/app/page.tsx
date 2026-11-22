@@ -289,6 +289,12 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
+        <p className="text-center text-xs text-olive-300 font-sans mt-8">
+          以上數據的來源與評級標準，見
+          <a href="/evidence/" className="text-gold-400 hover:text-gold-300 underline underline-offset-4 ml-1">
+            證據圖書館 →
+          </a>
+        </p>
       </section>
 
       {/* 訂閱 */}

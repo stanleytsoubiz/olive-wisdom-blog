@@ -61,7 +61,7 @@ export default function SubscribeForm() {
     return (
       <div className="bg-olive-50 border border-olive-300 text-olive-800 rounded-2xl px-6 py-5 max-w-md mx-auto text-center">
         <p className="font-semibold text-lg">{message}</p>
-        <p className="text-sm text-olive-600 mt-2">📄 《橄欖油品飲師口袋手冊》PDF 即將寄出</p>
+        <p className="text-sm text-olive-600 mt-2">📄 訂閱者可獲得《橄欖油品飲師口袋手冊》PDF</p>
       </div>
     );
   }
