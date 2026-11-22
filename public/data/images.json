@@ -440,6 +440,16 @@
       "generated_at": "2026-05-08",
       "quality_score": 9,
       "prompt": "seven small amber glass vials with golden olive polyphenol extracts arranged in a gentle arc on white marble desk, open "
+    },
+    "taiwan-fake-olive-oil-supermarket-picking-guide": {
+      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Supermarket shelf of extra virgin olive oil bottles",
+      "source": "unsplash"
+    },
+    "tfda-olive-oil-labelling-reform-2027-guide": {
+      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Reading olive oil labels in the kitchen",
+      "source": "unsplash"
     }
   },
   "fallback": {
