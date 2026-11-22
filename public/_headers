@@ -60,7 +60,3 @@
 /
   Cache-Control: no-cache, no-store, must-revalidate
   Link: </hero-grove.webp>; rel=preload; as=image; type="image/webp"
-
-# ── enhancements.js 短快取 ─────────────────────────────────────
-/enhancements.js
-  Cache-Control: public, max-age=3600, must-revalidate

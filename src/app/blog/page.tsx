@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: ['橄欖油知識庫', '特級初榨橄欖油', '多酚', '地中海飲食', '橄欖油選購', 'EVOO科學'],
   openGraph: {
     title: '知橄生活知識庫 — 橄欖油科學・地中海美學・深度文章',
-    description: '深度文章庫，引用 150+ 篇學術文獻，探索橄欖油分子科學、歷史文化與生活美學。',
+    description: '深度文章庫：每篇文章皆可溯源至學術文獻，探索橄欖油分子科學、歷史文化與生活美學。',
     url: 'https://olive-wisdom.com/blog',
     type: 'website',
     images: [{ url: 'https://olive-wisdom.com/hero-grove.webp', width: 1200, height: 630, alt: '知橄生活知識庫' }],

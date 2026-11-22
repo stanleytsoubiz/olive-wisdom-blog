@@ -2,15 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getAllPosts } from '@/lib/posts';
+import { LEARNING_PATHS, POLYPHENOL_PATH, GUARDRAIL_QUESTIONS } from '@/lib/learning-paths';
+import { CATEGORY_COLUMNS } from '@/lib/categories';
 
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: '關於知橄生活｜編輯團隊與專業資歷',
-  description: '知橄生活 Olive Wisdom 由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等 150+ 篇學術文獻，提供可追溯來源的橄欖油知識。',
+  description: '知橄生活 Olive Wisdom 由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等權威機構研究文獻，提供可追溯來源的橄欖油知識。',
   openGraph: {
     title: '關於知橄生活 Olive Wisdom — 研究團隊與專業資歷',
-    description: '由科學審核委員會、歷史文化研究組、感官鑑賞認證組組成的專業編輯團隊，引用 150+ 篇同行評審文獻。',
+    description: '由科學審核委員會、歷史文化研究組、感官鑑賞認證組組成的專業編輯團隊，引用來源與證據等級見證據圖書館。',
     url: 'https://olive-wisdom.com/about',
     type: 'website',
   },
@@ -37,7 +39,7 @@ export default function AboutPage() {
               url: 'https://olive-wisdom.com/favicon.ico',
               caption: '知橄生活 Olive Wisdom — 橄欖油知識平台',
             },
-            description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA、IOC 等 150+ 篇學術文獻的橄欖油知識平台。',
+            description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA、IOC 等權威機構研究文獻的橄欖油知識平台。',
             knowsAbout: [
               '橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚 Polyphenols',
               '羥基酪醇 Hydroxytyrosol', 'PREDIMED 研究', '橄欖油感官評鑑 IOC', '抗老化科學',
@@ -123,19 +125,23 @@ export default function AboutPage() {
           <p className="text-gold-400 text-xs font-medium tracking-widest uppercase mb-3 text-center">知識體系</p>
           <h2 className="text-3xl font-bold text-center mb-10">四大知識欄目</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: '🏛️', label: '知性史詩', en: 'Heritage', desc: '橄欖油與文明的交織敘事；荷馬史詩、腓尼基貿易、考古新發現' },
-              { icon: '🔬', label: '科學萃取', en: 'Science', desc: '分子醫學、多酚機制、學術研究解析；深度科普' },
-              { icon: '🏆', label: '品味鑑賞', en: 'Selection', desc: '感官鑑賞、IOC 評分標準、產地風土、辨別真偽' },
-              { icon: '✨', label: '餐桌美學', en: 'Lifestyle', desc: '晨間儀式、烹飪技法、護膚程序、藍區飲食' },
-            ].map((col) => (
-              <div key={col.en} className="bg-olive-700/50 rounded-xl p-5 border border-olive-600">
-                <span className="text-3xl">{col.icon}</span>
-                <p className="text-xs text-olive-400 tracking-widest uppercase mt-2">{col.en}</p>
-                <h3 className="text-lg font-bold text-white mt-1 mb-2">{col.label}</h3>
-                <p className="text-sm text-olive-300 leading-relaxed">{col.desc}</p>
-              </div>
-            ))}
+            {(['culture', 'science', 'health', 'lifestyle'] as const).map((key) => {
+              const col = CATEGORY_COLUMNS.find((c) => c.key === key)!;
+              const meta: Record<string, { icon: string; desc: string }> = {
+                culture: { icon: '🏛️', desc: '橄欖油與文明的交織敘事；荷馬史詩、腓尼基貿易、考古新發現' },
+                science: { icon: '🔬', desc: '分子醫學、多酚機制、學術研究解析；深度科普' },
+                health: { icon: '🏆', desc: '感官鑑賞、IOC 評分標準、產地風土、辨別真偽' },
+                lifestyle: { icon: '✨', desc: '晨間儀式、烹飪技法、護膚程序、藍區飲食' },
+              };
+              return (
+                <Link key={col.key} href={col.href} className="block bg-olive-700/50 rounded-xl p-5 border border-olive-600 hover:bg-olive-700 transition-colors">
+                  <span className="text-3xl">{meta[key].icon}</span>
+                  <p className="text-xs text-olive-400 tracking-widest uppercase mt-2">{col.en}</p>
+                  <h3 className="text-lg font-bold text-white mt-1 mb-2">{col.label}</h3>
+                  <p className="text-sm text-olive-300 leading-relaxed">{meta[key].desc}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -160,7 +166,8 @@ export default function AboutPage() {
               role: 'Science Review Board',
               expertise: '食品化學 · 分子生物學 · 營養流行病學',
               credentials: ['PREDIMED 研究方法論', 'EFSA 健康聲稱評估框架', '橄欖油多酚分析標準 COI/T.20'],
-              publications: '審核並引用 150+ 篇同行評審文獻',
+              publications: '引用來源與證據等級，見證據圖書館',
+              publicationsHref: '/evidence',
             },
             {
               emoji: '🏛️',
@@ -183,7 +190,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-6">
                 <div className="text-4xl shrink-0 mt-1">{member.emoji}</div>
                 <div className="flex-1">
-                  <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase mb-1">{member.role}</p>
+                  <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase mb-1">{member.role}</p>
                   <h3 className="font-bold text-olive-900 text-xl mb-1">{member.name}</h3>
                   <p className="text-sm text-olive-600 font-sans mb-3">{member.expertise}</p>
                   <ul className="space-y-1 mb-3">
@@ -193,7 +200,13 @@ export default function AboutPage() {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs font-sans font-semibold text-olive-600">{member.publications}</p>
+                  {(member as { publicationsHref?: string }).publicationsHref ? (
+                    <Link href={(member as { publicationsHref: string }).publicationsHref} className="text-xs font-sans font-semibold text-olive-600 hover:text-olive-800 underline underline-offset-4">
+                      {member.publications} →
+                    </Link>
+                  ) : (
+                    <p className="text-xs font-sans font-semibold text-olive-600">{member.publications}</p>
+                  )}
                 </div>
               </div>
             </div>
@@ -264,7 +277,7 @@ export default function AboutPage() {
             },
           ].map((item) => (
             <div key={item.label} className="border-b border-stone-200 pb-8 last:border-0">
-              <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase mb-2">{item.label}</p>
+              <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase mb-2">{item.label}</p>
               <h3 className="font-bold text-olive-900 text-xl mb-3">{item.title}</h3>
               <p className="text-sm text-stone-600 leading-relaxed">{item.body}</p>
             </div>
@@ -281,22 +294,16 @@ export default function AboutPage() {
             把 {articleCount} 篇文章整理成五條路徑：每一條都從入門讀到研究級，讀完就能自己判斷一瓶油。健康知識最容易被誇大，所以我們先把證據分層——哪些結論來自大型人體研究，哪些只是機理或初步觀察，哪些不能被說成治療或預防疾病。
           </p>
 
-          {/* 五條路徑 */}
+          {/* 五條路徑 — 內容見 src/lib/learning-paths.ts */}
           <div className="grid md:grid-cols-5 gap-5 mb-14">
-            {[
-              { label: '健康研究', entries: [['入門', '健康研究七大脈絡', 'olive-oil-health-benefits-science-complete'], ['深入', '多酚與 PREDIMED 研究', 'olive-oil-health-benefits-polyphenol-science-complete'], ['研究', 'PREDIMED 完整解析', 'predimed-study-complete-explainer-olive-oil-heart']] },
-              { label: '品質判斷', entries: [['入門', 'EVOO 與一般橄欖油差異', 'olive-oil-evoo-vs-regular-complete-comparison'], ['深入', '公正選購五步驟', 'olive-oil-complete-buying-guide-2026'], ['研究', 'CoA 五個數字解讀', 'coa-complete-reading-guide-olive-oil']] },
-              { label: '全球文化', entries: [['入門', '橄欖樹與古文明', 'olive-tree-ancient-civilization-heritage'], ['深入', '古埃及儀式、香料與文明記憶', 'olive-oil-ancient-egypt-ritual-heritage'], ['研究', '絲路貿易與東西方連結', 'olive-oil-silk-road-trade-history']] },
-              { label: '風土產地', entries: [['入門', 'PDO/DOP/IGP 地理認證', 'olive-oil-pdo-dop-igp-certification-guide'], ['深入', '西班牙、希臘與義大利風土', 'olive-oil-terroir-spain-greece-italy'], ['研究', '小豆島 118 年風土實驗', 'shodoshima-olive-oil-history-terroir']] },
-              { label: '料理生活', entries: [['入門', '每日用量與日常使用', 'olive-oil-daily-intake-how-much'], ['深入', '特級初榨能不能炒菜', 'olive-oil-cooking-science-can-evoo-stir-fry'], ['研究', '加熱穩定性與發煙點', 'olive-oil-cooking-heat-stability-smoke-point']] },
-            ].map((path) => (
-              <article key={path.label} className="border border-stone-200 p-5">
+            {LEARNING_PATHS.map((path) => (
+              <article key={path.id} className="border border-stone-200 p-5">
                 <h3 className="font-bold text-olive-900 mb-4">{path.label}</h3>
                 <div className="space-y-4">
-                  {path.entries.map(([stage, title, slug]) => (
-                    <Link key={slug} href={`/blog/${slug}`} className="block group border-t border-stone-100 pt-3">
-                      <p className="text-[11px] font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-1">{stage}</p>
-                      <p className="text-sm font-semibold text-stone-900 leading-snug group-hover:text-olive-700 transition-colors">{title}</p>
+                  {path.entries.map((entry) => (
+                    <Link key={entry.slug} href={`/blog/${entry.slug}`} className="block group border-t border-stone-100 pt-3">
+                      <p className="text-[11px] font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-1">{entry.stage}</p>
+                      <p className="text-sm font-semibold text-stone-900 leading-snug group-hover:text-olive-700 transition-colors">{entry.title}</p>
                     </Link>
                   ))}
                 </div>
@@ -310,11 +317,7 @@ export default function AboutPage() {
             多酚是理解 EVOO 品質、感官與部分健康聲稱條件的重要線索，但不能單獨代表一瓶油的全部。這三篇依序回答數字、標示與時間變化，讓讀者能把 CoA、採收年份、保存條件與感官狀態一起讀。
           </p>
           <div className="grid sm:grid-cols-3 gap-4 mb-14">
-            {[
-              { stage: '先讀數字', title: '多酚含量怎麼判讀', slug: 'olive-oil-polyphenol-content-how-to-verify', note: '從 CoA、檢測日期、辛辣感與 EFSA／EU 聲稱邊界，理解多酚不是單一品質分數。' },
-              { stage: '再看標示', title: '高多酚標示怎麼看', slug: '2026-evoo-quality-polyphenol-index', note: '把高多酚放回批次、採收年份、保存、感官與用途，不把數字當成排行榜。' },
-              { stage: '最後看時間', title: '多酚會如何衰減', slug: 'polyphenol-decay-science-2026', note: '確認 CoA 是時間點資料，光線、溫度、氧氣、開封與保存會改變今日狀態。' },
-            ].map((entry) => (
+            {POLYPHENOL_PATH.map((entry) => (
               <Link key={entry.slug} href={`/blog/${entry.slug}`} className="group border border-stone-200 p-5 hover:border-olive-300 transition-colors">
                 <p className="text-[10px] font-sans font-semibold text-gold-500 tracking-[0.25em] uppercase mb-3">{entry.stage}</p>
                 <h4 className="font-bold text-olive-950 leading-snug mb-3 group-hover:text-olive-700 transition-colors">{entry.title}</h4>
@@ -329,11 +332,7 @@ export default function AboutPage() {
             保存、炒菜與 CoA 多酚，是橄欖油內容最容易被簡化的三個問題。先看正確邊界，再讀主文。
           </p>
           <div className="space-y-4">
-            {[
-              { query: '橄欖油要放冰箱嗎', title: '保存與冰箱判斷', slug: 'olive-oil-storage-refrigerator-taiwan-guide', guardrail: '陰涼、避光、密封是主線；冷藏可能凝固或混濁，不能當成真偽測試，也要避免水氣、異味與溫度反覆波動。' },
-              { query: '橄欖油炒菜會致癌嗎', title: '炒菜與加熱風險', slug: 'olive-oil-stir-fry-cancer-myth-debunked', guardrail: '日常家庭烹調不等於致癌；真正要避開的是冒煙過熱、反覆高溫回炸與長時間油煙暴露。' },
-              { query: '橄欖油 CoA 多酚怎麼看', title: 'CoA 與多酚判讀', slug: 'coa-complete-reading-guide-olive-oil', guardrail: '多酚要和批次、檢測日期、酸價、過氧化值、感官與保存一起看；不能寫成健康保證或唯一品質指標。' },
-            ].map((entry) => (
+            {GUARDRAIL_QUESTIONS.map((entry) => (
               <Link key={entry.slug} href={`/blog/${entry.slug}`} className="block group border border-stone-200 p-5 hover:border-olive-300 transition-colors">
                 <p className="text-[11px] font-sans font-semibold text-gold-500 tracking-[0.22em] uppercase mb-2">{entry.query}</p>
                 <h4 className="font-bold text-olive-950 leading-snug mb-2 group-hover:text-olive-700 transition-colors">{entry.title}</h4>

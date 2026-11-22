@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getAllPosts } from '@/lib/posts';
 import { getImages, getHeroImage } from '@/lib/images';
+import { LEARNING_PATHS } from '@/lib/learning-paths';
+import { categoryLabel } from '@/lib/categories';
 import SubscribeForm from '@/components/SubscribeForm';
 import type { Metadata } from 'next';
 
@@ -152,7 +154,7 @@ export default async function HomePage() {
               <Link key={hub.href} href={hub.href} className="group">
                 <div className={`h-full border-t-[2px] ${hub.accent} bg-white hover:bg-stone-50
                                  p-5 transition-all duration-200 hover:shadow-sm`}>
-                  <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-3">
+                  <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-3">
                     {hub.tag}
                   </p>
                   <h3 className="font-bold text-olive-900 text-base leading-snug mb-2 group-hover:text-olive-700 transition-colors">
@@ -171,6 +173,43 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── 我是新手，從這裡開始 — 學習路徑入口 ─────────────────── */}
+      <section className="bg-[#FAF8F4] border-b border-stone-100">
+        <div className="max-w-5xl mx-auto px-5 md:px-6 py-6 md:py-12">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="h-px flex-1 bg-stone-200" />
+            <p className="text-xs font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase whitespace-nowrap">
+              我是新手，從這裡開始
+            </p>
+            <div className="h-px flex-1 bg-stone-200" />
+          </div>
+          <p className="text-sm text-stone-500 leading-relaxed font-sans max-w-2xl mb-8 -mt-4">
+            不知道先讀哪一篇？五條學習路徑都從入門讀到研究級，讀完就能自己判斷一瓶油。
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {LEARNING_PATHS.map((path) => (
+              <Link key={path.id} href="/about#learning-paths" className="group">
+                <div className="h-full border-t-[2px] border-olive-400 bg-white hover:bg-stone-50
+                                 p-5 transition-all duration-200 hover:shadow-sm">
+                  <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-3">
+                    學習路徑
+                  </p>
+                  <h3 className="font-bold text-olive-900 text-base leading-snug mb-2 group-hover:text-olive-700 transition-colors">
+                    {path.label}
+                  </h3>
+                  <p className="text-xs text-stone-500 leading-relaxed font-sans">
+                    {path.desc}
+                  </p>
+                  <p className="text-xs text-olive-600 font-medium font-sans mt-4 group-hover:text-olive-800 transition-colors">
+                    入門：{path.entries[0].title} →
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 精選知識 — Kinfolk Editorial Layout ─────────────────── */}
       {latestPosts.length > 0 && (
         <section className="bg-[#FAF8F4] py-16 px-5 md:px-6">
@@ -178,7 +217,7 @@ export default async function HomePage() {
 
             {/* Section header — minimal editorial */}
             <div className="flex items-center gap-5 mb-14">
-              <span className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.3em] uppercase whitespace-nowrap">
+              <span className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.3em] uppercase whitespace-nowrap">
                 最新深度報導
               </span>
               <div className="h-px flex-1 bg-stone-200" />
@@ -213,7 +252,7 @@ export default async function HomePage() {
                     <p className="text-stone-500 text-sm leading-[1.85] mb-6 line-clamp-4 font-sans">
                       {featuredPost.excerpt}
                     </p>
-                    <div className="flex items-center gap-3 text-[11px] font-sans text-stone-400 mb-6 pt-5 border-t border-stone-100">
+                    <div className="flex items-center gap-3 text-[11px] font-sans text-stone-500 mb-6 pt-5 border-t border-stone-100">
                       <span className="text-olive-600 font-medium">{featuredPost.author || '知橄生活研究團隊'}</span>
                       <span className="text-stone-200">·</span>
                       <span>{featuredPost.readTime} min read</span>
@@ -232,7 +271,7 @@ export default async function HomePage() {
             {/* Secondary articles — NYT-style borderless grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
               {restPosts.slice(0, 5).map((post) => {
-                const catLabel = { science:'科學查證', lifestyle:'餐桌應用', health:'品油筆記', culture:'產地探訪', heritage:'產地探訪', guide:'選購指南' }[post.category] ?? post.category;
+                const catLabel = categoryLabel(post.category);
                 return (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                     <article>
@@ -256,7 +295,7 @@ export default async function HomePage() {
                       <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed font-sans mb-3">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center gap-2 text-[10px] font-sans text-stone-400 pt-3 border-t border-stone-100">
+                      <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500 pt-3 border-t border-stone-100">
                         <span>{post.readTime} min</span>
                         <span className="text-stone-200">·</span>
                         <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
