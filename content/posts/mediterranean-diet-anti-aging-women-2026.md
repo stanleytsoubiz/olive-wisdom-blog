@@ -139,6 +139,6 @@ EVOO 中約 73% 的脂肪酸為油酸（Omega-9）。研究觀察到油酸與下
 
 ## 延伸閱讀
 
-- [多酚與 SIRT1：橄欖油如何啟動長壽基因的科學解析](/posts/polyphenols-sirt1-longevity-2026)
-- [羥基酪醇與大腦記憶：為什麼哈佛神經科學家將這個橄欖分子視為認知老化的分子守護者？](/posts/hydroxytyrosol-brain-cognition-memory)
+- [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/posts/polyphenols-sirt1-longevity-2026)
+- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/posts/hydroxytyrosol-brain-cognition-memory)
 - [橄欖油護膚的分子美學：為什麼角鯊烯（Squalene）是您肌膚最親密的仿生防護盾？](/posts/squalene-olive-oil-skin-beauty-molecular)

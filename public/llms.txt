@@ -1,6 +1,6 @@
 # 知橄生活 Olive Wisdom — llms.txt
 # https://olive-wisdom.com
-# Last updated: 2026-11-22 | 49 articles indexed + evidence library
+# Last updated: 2026-11-22 | 52 articles indexed + evidence library
 
 ## About This Site
 
@@ -127,6 +127,9 @@ reader education, and evidence-safe answer extraction:
 - https://olive-wisdom.com/blog/olive-oil-fridge-test-myth-debunked
 - https://olive-wisdom.com/blog/predimed-study-complete-explainer-olive-oil-heart
 - https://olive-wisdom.com/blog/olive-oil-shelf-life-oxidation-storage
+- https://olive-wisdom.com/blog/olive-oil-morning-fasting-spoon-myth
+- https://olive-wisdom.com/blog/olive-oil-vs-camellia-rapeseed-oil-guide
+- https://olive-wisdom.com/blog/olive-oil-millennium-journey-mediterranean-to-table
 
 ## Authoritative Sources We Cite
 
