@@ -5,7 +5,7 @@ date: "2026-05-01"
 updated: "2026-06-04"
 author: "知橄生活研究團隊"
 category: "science"
-tags: ["科學萃取", "PREDIMED研究", "地中海飲食", "心血管健康"]
+tags: ["PREDIMED研究", "地中海飲食", "心血管健康"]
 excerpt: "PREDIMED 是橄欖油與地中海飲食研究中最常被引用的臨床試驗之一。本文整理 7,447 名高心血管風險受試者、4.8 年追蹤、2018 年修正版，以及「約 30%」相對風險數字該如何正確理解。"
 coverImage: "/images/covers/predimed-study-complete-explainer-olive-oil-heart-v2.jpg"
 readTime: 13

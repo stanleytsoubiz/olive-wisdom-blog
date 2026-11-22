@@ -7,7 +7,7 @@ excerpt: "不談獲獎光環，我們談分子半衰期。解析特級初榨橄�
 coverImage: "/images/covers/polyphenol-decay-science-2026.jpg"
 author: "知橄生活研究團隊"
 readTime: 9
-tags: ["多酚衰減", "保鮮科學", "羥基酪醇", "2026鑑定"]
+tags: ["多酚衰減", "保鮮科學", "羥基酪醇"]
 sources:
   - "Daskalaki, D., Kefi, G., Kotsiou, K., & Tasioula-Margari, M. (2009). Evaluation of phenolic compounds degradation in virgin olive oil during storage and heating. *Journal of Food and Nutrition Research*, 48(1), 31–41."
   - "Krichene, D., Salvador, M. D., & Fregapane, G. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"

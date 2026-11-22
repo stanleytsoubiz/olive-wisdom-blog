@@ -233,7 +233,8 @@ export default function AboutPage() {
         <h2 className="text-3xl font-bold text-olive-800 mb-4">編輯標準：數字能追溯，才敢寫出來</h2>
         <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-2xl">
           以下四條是知橄生活的編輯運作方式——從選題、查核到更新——供讀者、研究者及引用者查閱。完整證據來源與評級標準見
-          <Link href="/evidence" className="text-olive-700 underline underline-offset-4 ml-1">證據圖書館</Link>。
+          <Link href="/evidence" className="text-olive-700 underline underline-offset-4 ml-1">證據圖書館</Link>；寫作語氣、標題與聲稱規則見
+          <a href="https://github.com/stanleytsoubiz/olive-wisdom-blog/blob/main/docs/editorial-style-guide.md" className="text-olive-700 underline underline-offset-4 ml-1">編輯風格指南</a>。
         </p>
         <div className="space-y-10">
           {[

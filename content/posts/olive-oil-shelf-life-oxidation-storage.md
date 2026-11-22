@@ -3,8 +3,8 @@ title: "橄欖油保存期限完整指南：開封後多久用完？如何判斷
 slug: "olive-oil-shelf-life-oxidation-storage"
 date: "2026-05-01"
 author: "知橄生活研究團隊"
-category: "health"
-tags: ["品味鑑賞", "橄欖油保存", "氧化", "保存期限"]
+category: "guide"
+tags: ["橄欖油保存", "氧化", "保存期限"]
 excerpt: "許多人家中的橄欖油一用就是半年、一年——殊不知橄欖油開封後的氧化速度遠比我們想像的快。本文從過氧化值、游離脂肪酸、感官評鑑三個維度，科學解析橄欖油的保質期、開封後的最佳使用時限，以及五個判斷橄欖油是否已劣化的實用方法。"
 coverImage: "/images/covers/olive-oil-shelf-life-oxidation-storage.jpg"
 readTime: 8

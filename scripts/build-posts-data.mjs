@@ -45,8 +45,11 @@ async function main() {
     posts.push({ ...data, content });
   }
 
-  // Sort newest-first (same as getAllPosts())
-  posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  // Sort newest-first by publication date; slug breaks ties deterministically.
+  // (Dates must compare as dates, not raw values: frontmatter dates arrive as
+  // a mix of strings and Date objects, and raw comparison mis-sorts them.)
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    || String(a.slug).localeCompare(String(b.slug)));
 
   // Ensure output directory exists
   const outputDir = path.dirname(outputPath);

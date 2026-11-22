@@ -4,7 +4,7 @@ slug: "squalene-olive-oil-skin-beauty-molecular"
 date: "2026-04-10"
 author: "知橄生活研究團隊"
 category: "lifestyle"
-tags: ["餐桌美學", "角鯊烯", "Squalene", "護膚"]
+tags: ["角鯊烯", "Squalene", "護膚"]
 excerpt: "您皮膚的皮脂中，天然就含有角鯊烯（Squalene），佔皮脂腺分泌物的13%。橄欖油是植物界含量最豐富的角鯊烯來源。這種驚人的生物相容性，正是為什麼地中海女性幾千年來的護膚秘密，正在被現代皮膚科學一一驗證。"
 coverImage: "/images/covers/squalene-olive-oil-skin-beauty-molecular.jpg"
 readTime: 7

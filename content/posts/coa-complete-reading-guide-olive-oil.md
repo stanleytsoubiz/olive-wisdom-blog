@@ -261,3 +261,5 @@ CoA 是你讀懂紙上語言的工具。手心的溫度，是最終的感官驗�
 5. Boskou, D. (Ed.) (2006). *Olive Oil: Chemistry and Technology*, 2nd ed. AOCS Press.
 
 6. Frankel, E. N. (2005). *Lipid Oxidation*, 2nd ed. Woodhead Publishing.
+
+**公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。

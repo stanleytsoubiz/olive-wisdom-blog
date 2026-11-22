@@ -3,7 +3,7 @@ title: "橄欖油保存完全指南：五個你一直做錯的儲存習慣，正
 slug: "olive-oil-storage-guide-2026"
 date: "2026-04-29"
 excerpt: "你花了大錢買高多酚橄欖油，卻把它放在爐灶旁的透明瓶裡。本指南揭露五個最常見的保存錯誤，以及科學驗證的最佳儲存方案。"
-category: "lifestyle"
+category: "guide"
 author: "知橄生活研究團隊"
 readTime: 8
 tags: ["橄欖油保存", "保鮮方法", "多酚", "儲存科學"]

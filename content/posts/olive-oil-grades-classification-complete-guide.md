@@ -3,8 +3,8 @@ title: "橄欖油分類完整指南：特級初榨、初榨、精製、果渣油
 slug: "olive-oil-grades-classification-complete-guide"
 date: "2026-05-01"
 author: "知橄生活研究團隊"
-category: "health"
-tags: ["品味鑑賞", "橄欖油分類", "特級初榨橄欖油", "IOC標準"]
+category: "guide"
+tags: ["橄欖油分類", "特級初榨橄欖油", "IOC標準"]
 excerpt: "市面上橄欖油標籤琳瑯滿目：Extra Virgin、Pure Olive Oil、Pomace Oil……每一種背後是截然不同的品質標準與健康效益。本文依據 IOC 官方標準，系統解析橄欖油完整分類體系，讓您選購不再困惑。"
 coverImage: "/images/covers/olive-oil-grades-classification-complete-guide.jpg"
 readTime: 10

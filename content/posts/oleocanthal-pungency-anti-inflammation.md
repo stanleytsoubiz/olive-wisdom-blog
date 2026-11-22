@@ -7,7 +7,7 @@ excerpt: "當您吞嚥優質橄欖油時，喉嚨深處那道辛辣感，不是�
 coverImage: "/images/covers/oleocanthal-pungency-anti-inflammation.jpg"
 author: "知橄生活研究團隊"
 readTime: 12
-tags: ["科學萃取", "油橄欖醛", "Oleocanthal", "抗炎"]
+tags: ["油橄欖醛", "Oleocanthal", "抗炎"]
 sources:
   - "Beauchamp, G.K. et al. (2005). Phytochemistry: Ibuprofen-like activity in extra-virgin olive oil. Nature, 437, 45-46. https://doi.org/10.1038/437045a"
   - "Lucas, L. et al. (2011). Molecular mechanisms of inflammation. Anti-Inflammatory & Anti-Allergy Agents in Medicinal Chemistry, 10(1), 49–69. https://doi.org/10.2174/187152311794520126"

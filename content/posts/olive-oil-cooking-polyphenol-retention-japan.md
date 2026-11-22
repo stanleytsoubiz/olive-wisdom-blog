@@ -1,7 +1,7 @@
 ---
-title: "橄欖油炒菜，多酚還剩多少？日本主婦的廚房實測告訴你真相"
+title: "橄欖油炒菜，多酚還剩多少？從日本家庭廚房看加熱後的保留率"
 slug: "olive-oil-cooking-polyphenol-retention-japan"
-date: 2026-05-06
+date: "2026-05-06"
 category: "lifestyle"
 excerpt: "橄欖油加熱真的會破壞多酚嗎？研究數據告訴你，180°C 炒菜後多酚保留率與正確用油方式。"
 coverImage: "/images/covers/olive-oil-cooking-polyphenol-retention-japan-v2.jpg"
@@ -33,7 +33,7 @@ faq:
 draft: false
 ---
 
-# 橄欖油炒菜，多酚還剩多少？日本主婦的廚房實測告訴你真相
+# 橄欖油炒菜，多酚還剩多少？從日本家庭廚房看加熱後的保留率
 
 橄欖油倒進熱鍋的那一刻，很多人心裡都閃過同一個問題：這樣加熱，多酚不就全毀了嗎？
 

@@ -1,13 +1,13 @@
 ---
 title: "小豆島橄欖118年：日本唯一成功的風土實驗，究竟有何不同？"
 slug: "shodoshima-olive-oil-history-terroir"
-date: 2026-05-08
-category: "lifestyle"
+date: "2026-05-08"
+category: "heritage"
 excerpt: "1908年，日本政府在三縣同時試驗橄欖栽培，只有小豆島成功。118年後，這座島嶼生產全日本84.6%的橄欖，並在世界頂級油賽連年奪金。深入解析小豆島的風土、品種與品質密碼。"
 coverImage: "/images/covers/shodoshima-olive-oil-history-terroir.jpg"
 author: "知橄生活研究團隊"
 readTime: 9
-tags: ["小豆島", "日本橄欖油", "風土", "Heritage", "橄欖栽培史"]
+tags: ["小豆島", "日本橄欖油", "風土", "橄欖栽培史"]
 sources:
   - "Jiang, L., Yamaguchi, T., Takamura, H., & Matoba, T. (2005). Characteristics of Shodo Island Olive Oils in Japan: Fatty Acid Composition and Antioxidative Compounds. Food Science and Technology Research, 11(3), 254-260. https://doi.org/10.3136/fstr.11.254"
   - "香川縣農政水產部（2022）。オリーブの収穫量（特産果樹生産動態等調査）。香川縣官方統計。https://www.pref.kagawa.lg.jp/"

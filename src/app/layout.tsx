@@ -208,8 +208,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <ul className="space-y-3 text-sm">
                 {[
                   { slug: 'olive-oil-complete-buying-guide-2026', title: '橄欖油選購完全指南 2026：從超市到頂級莊園油，一次學會不踩雷的五步驟框架' },
-                  { slug: 'coa-complete-reading-guide-olive-oil', title: '橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質' },
-                  { slug: 'evoo-buying-guide-2026', title: '2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰' },
+                  { slug: 'olive-oil-cooking-polyphenol-retention-japan', title: '橄欖油炒菜，多酚還剩多少？從日本家庭廚房看加熱後的保留率' },
+                  { slug: 'predimed-study-complete-explainer-olive-oil-heart', title: 'PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據' },
                 ].map((post) => (
                   <li key={post.slug}>
                     <Link
