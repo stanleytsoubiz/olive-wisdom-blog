@@ -5,7 +5,8 @@ import Link from 'next/link';
  *
  * 放在每篇文章「參考文獻」之後、導覽之前。站長已定調：本站不收集
  * 讀者信箱、不寄送電子報（2026-11-22 起移除留信箱表單）。此框只做
- * 兩件事——引導讀者回本站與官方社群追蹤新文章，並指向證據圖書館。
+ * 兩件事——引導讀者回本站追蹤新文章（官方社群與 LINE 尚在籌備，
+ * 文案不得宣稱已開通），並指向證據圖書館。
  */
 export default function ArticleNewsletterCTA() {
   return (
@@ -17,7 +18,7 @@ export default function ArticleNewsletterCTA() {
         喜歡這篇文章？把知橄生活加入你的追蹤清單
       </h2>
       <p className="text-sm text-stone-600 leading-relaxed font-sans max-w-[560px]">
-        新文章與研究更新會公布在網站與官方社群，歡迎常回來看看。
+        新文章與研究更新會公布在網站上；官方社群與 LINE 正在籌備中，開通後會在此公布，歡迎常回來看看。
       </p>
       <p className="text-xs text-stone-500 leading-relaxed font-sans mt-6 pt-5 border-t border-olive-200">
         證據來源與評級標準：

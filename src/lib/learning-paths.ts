@@ -80,6 +80,8 @@ export const LEARNING_PATHS: LearningPath[] = [
       { stage: '延伸', title: '橄欖油 vs 苦茶油、芥花油', slug: 'olive-oil-vs-camellia-rapeseed-oil-guide' },
       { stage: '延伸', title: '橄欖油 vs 酪梨油', slug: 'olive-oil-vs-avocado-oil-complete-comparison' },
       { stage: '延伸', title: '送禮送橄欖油怎麼挑', slug: 'olive-oil-gift-guide-how-to-choose' },
+      { stage: '延伸', title: '橄欖油是怎麼做成的', slug: 'olive-oil-how-its-made-harvest-to-bottle' },
+      { stage: '延伸', title: '新油季與未過濾橄欖油', slug: 'olio-nuovo-unfiltered-olive-oil-guide' },
     ],
   },
   {
@@ -104,6 +106,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       { stage: '研究', title: '小豆島 118 年風土實驗', slug: 'shodoshima-olive-oil-history-terroir' },
       { stage: '延伸', title: '品種指南：Picual、Koroneiki、Frantoio', slug: 'olive-oil-varieties-picual-koroneiki-frantoio-guide' },
       { stage: '延伸', title: '三大產地巡禮', slug: 'olive-oil-terroir-tour-andalusia-crete-tuscany' },
+      { stage: '延伸', title: '世界橄欖油地圖：產量與消費', slug: 'olive-oil-world-map-production-consumption' },
     ],
   },
   {

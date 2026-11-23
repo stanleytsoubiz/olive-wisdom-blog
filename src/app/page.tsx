@@ -340,7 +340,7 @@ export default async function HomePage() {
         <p className="text-gold-600 text-xs font-medium tracking-[0.25em] uppercase mb-4">加入知橄家族</p>
         <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">追蹤知橄生活</h2>
         <p className="text-stone-500 text-sm md:text-base leading-relaxed max-w-md mx-auto font-sans">
-          新文章與研究更新會公布在網站與官方社群。歡迎常回來看看，也把知橄生活分享給同樣在意吃一瓶好油的朋友。
+          新文章與研究更新都會公布在網站上；官方社群與 LINE 正在籌備中，開通後會在這裡公布。歡迎常回來看看，也把知橄生活分享給同樣在意吃一瓶好油的朋友。
         </p>
       </section>
 
