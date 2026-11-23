@@ -12,7 +12,7 @@ focusKeyword: "特級初榨橄欖油和一般橄欖油差別"
 sources:
   - "International Olive Council (IOC). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 16 – 2019."
   - "European Commission Regulation (EEC) No 2568/91 on the characteristics of olive oil and olive-residue oil."
-  - "Servili, M., et al. (2014). Phenolic compounds in olive oil: antioxidant, health and organoleptic activities according to their chemical structure. Inflammopharmacology."
+  - "Lucci, P., Bertoz, V., Pacetti, D., Moret, S., & Conte, L. (2020). Effect of the Refining Process on Total Hydroxytyrosol, Tyrosol, and Tocopherol Contents of Olive Oil. Foods, 9(3), 292. https://doi.org/10.3390/foods9030292"
   - "Gomez-Alonso, S., Mancebo-Campos, V., Salvador, M. D., & Fregapane, G. (2007). Evolution of major and minor components and oxidation indices of virgin olive oil during 21 months storage at three different temperatures. *Food Chemistry*, 100(1), 36–42. https://doi.org/10.1016/j.foodchem.2005.09.006"
 faq:
   - q: "顏色越深代表橄欖油品質越好嗎？"
@@ -36,13 +36,15 @@ qc_gate:
 
 「兩瓶都叫橄欖油，可是嘴巴裡的故事完全不一樣。」P 在咖啡店裡這樣說。
 
-事實是，99% 的台灣消費者並不知道「特級初榨橄欖油」在國際上有法定的化學指標標準。這不是行銷說詞，而是國際橄欖油理事會（IOC，International Olive Council）明文規定的技術規範——酸度必須 ≤0.8%、過氧化值必須 ≤20 mEq/kg、K270 紫外線吸光度必須 ≤0.22。達不到這三個數字，就不能叫做 Extra Virgin。
+先給你一句話答案：**EVOO 與一般橄欖油的差別不在名字，在數字——酸度 ≤0.8%、過氧化值 ≤20、K270 ≤0.22，且多酚以百計。精製過程幾乎去除了所有多酚，兩者根本不是同一類產品。**
+
+事實是，多數台灣消費者可能不知道「特級初榨橄欖油」在國際上有法定的化學指標標準。這不是行銷說詞，而是國際橄欖油理事會（IOC，International Olive Council）明文規定的技術規範——酸度必須 ≤0.8%、過氧化值必須 ≤20 mEq/kg、K270 紫外線吸光度必須 ≤0.22。達不到這三個數字，就不能叫做 Extra Virgin。
 
 ---
 
 ## IOC 四級分類：橄欖油不是只有「初榨」和「非初榨」
 
-根據 IOC 貿易標準 COI/T.15/NC No 3/Rev. 16（2021），橄欖油依生產方式與品質被區分為九個細項等級，但對一般消費者最相關的是以下四大類：
+根據 IOC 貿易標準 COI/T.15/NC No 3/Rev. 16（2019），橄欖油依生產方式與品質被區分為九個細項等級，但對一般消費者最相關的是以下四大類：
 
 ### 1. Extra Virgin Olive Oil（特級初榨橄欖油，EVOO）
 直接以物理方式（冷壓或冷萃）從橄欖果實中取得，完全不經化學處理。必須同時通過化學檢測與官方感官評鑑（品評小組確認無缺陷風味）。
@@ -84,14 +86,9 @@ qc_gate:
 
 多酚（包括羥基酪醇、橄欖苦苷等化合物）是橄欖油中備受研究關注的成分，也是 EVOO 與精製橄欖油最顯著的差異所在。想深入了解如何驗證購買的油是否真的含有標示的多酚量，可參考[橄欖油多酚含量驗證完整指南](/blog/olive-oil-polyphenol-content-how-to-verify)。
 
-根據 Pontillo 等人（2020）發表於 *Foods* 期刊的研究，精製過程對多酚的破壞極為徹底：
-- **化學中和（脫酸）步驟**：損失約 63% 的多酚化合物
-- **漂白（脫色）步驟**：再損失約 16%
-- **脫臭（高溫處理）步驟**：損失再達 67%
+根據 Lucci 等人（2020）發表於 *Foods* 期刊的研究，精製過程對多酚的破壞極為徹底：羥基酪醇與酪醇在精製的早期步驟就幾乎被完全去除。一般 EVOO 多酚含量在 100–800 mg/kg 之間，精製油則常低於 10–50 mg/kg。
 
-三個步驟累計後，**精製橄欖油的多酚含量可降至 EVOO 的 1/10 甚至更低**。一般 EVOO 多酚含量在 100–800 mg/kg 之間，精製油則常低於 10–50 mg/kg。
-
-**換句話說，精製製程的脫酸→漂白→脫臭三步驟合計損失多酚超過 90%，一瓶多酚僅剩 10–50mg/kg 的「混合橄欖油」，在 EFSA 的健康聲明框架下不具備任何多酚相關效益的聲稱資格——兩瓶都叫「橄欖油」，但在多酚這個維度，它們根本不是同一類產品。**
+**換句話說，精製過程在早期步驟就幾乎完全去除羥基酪醇與酪醇，一瓶多酚僅剩 10–50mg/kg 的「混合橄欖油」，在 EFSA 的健康聲明框架下不具備任何多酚相關效益的聲稱資格——兩瓶都叫「橄欖油」，但在多酚這個維度，它們根本不是同一類產品。**
 
 重要聲明：歐盟（EC No 432/2012）允許在橄欖油標籤上標示與多酚相關的健康聲稱，但有嚴格條件限制——多酚含量需 ≥250 mg/kg，且每日攝取量需達 20g。本文不對任何健康功效作出承諾，相關資訊僅供參考。
 
@@ -120,24 +117,6 @@ qc_gate:
 
 ---
 
-## FAQ：消費者最常問的四個問題
-
-橄欖油的苦味與辛辣感是判斷多酚含量的重要感官線索，詳情可參考[橄欖油苦澀辣口品質指南](/blog/olive-oil-bitterness-pungency-quality-guide)。另外，關於各等級橄欖油的完整 IOC 分類體系，請見[橄欖油等級分類完整指南](/blog/olive-oil-grades-classification-complete-guide)。
-
-**Q1：顏色越深代表品質越好嗎？**
-不一定。橄欖油的顏色（金黃到深綠）主要反映橄欖品種、熟成度與產地，而非品質高低。部分品種天然產出深綠色油品，另一些則偏金黃。顏色無法作為 EVOO 品質的判斷依據，化學指標與感官評鑑才是關鍵。
-
-**Q2：「冷壓」和「冷萃」有什麼不同？**
-「冷壓」（Cold Pressed）指使用石磨或鋼輪施壓榨油，「冷萃」（Cold Extracted）則指現代離心分離技術，兩者都屬於物理萃取。IOC 標準規定，EVOO 萃取過程中溫度不得超過 27°C（80°F），兩種方式只要符合溫度限制都可合法標示。
-
-**Q3：台灣市場上的「橄欖油」大部分是什麼等級？**
-依據市售產品標示觀察，台灣超市貨架上售價 100–200 元區間的橄欖油，多數屬於「混合橄欖油」（Olive Oil）類別，即精製橄欖油混合少量初榨油的產品。真正符合 IOC EVOO 標準的產品售價通常在 300 元以上，但售價高不代表品質一定達標，仍需查核認證與來源。
-
-**Q4：橄欖渣油可以食用嗎？**
-橄欖渣油（Pomace Oil）依規定須精製後才能販售，符合法規者是可食用的。但因其生產過程使用溶劑萃取，多酚等成分損失最為徹底，且歷史上曾發生使用不當溶劑（苯並芘超標）的食安事件。知橄生活建議一般家庭選用至少 VOO 以上等級的橄欖油。
-
----
-
 ## 結語：把那瓶 NT$199 留在貨架上，把瓶身那三個數字帶回家
 
 回到家樂福橄欖油貨架前。P 兩個月後傳來一張照片：她家廚房檯面上一瓶西班牙 Picual EVOO，瓶頸貼著「Acidity 0.21%, Peroxide Value 8.4, K270 0.16」的小卡——「現在拿起任何一瓶橄欖油，我先翻瓶身找這三個數字，找不到就放回去。」她寫。
@@ -152,8 +131,10 @@ qc_gate:
 
 ## 延伸閱讀
 
-- [橄欖油保存完整指南：光線、溫度與容器如何影響品質](/blog/olive-oil-storage-guide-complete)
-- [橄欖油產地全解析：西班牙、義大利、希臘、突尼西亞的風味差異](/blog/olive-oil-origin-flavor-comparison)
+- [橄欖油保存完全指南：五個常見錯誤與科學儲存方案](/blog/olive-oil-storage-guide-2026)
+- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
+- [橄欖油苦澀辣口是好是壞？感官評鑑的科學解釋](/blog/olive-oil-bitterness-pungency-quality-guide)
+- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
 
 ---
 

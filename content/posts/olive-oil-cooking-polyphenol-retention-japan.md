@@ -108,8 +108,6 @@ draft: false
 
 油的故事不在瓶子裡，在鍋和餐桌之間的那段距離。下次炒菜的時候，不妨讓一瓶好油也參與其中。
 
-<!-- 聯盟連結 placeholder：建議3款適合炒菜的EVOO，一週後補入 -->
-
 ---
 
 **公正聲明：** 本文無品牌贊助。所有內容依據同儕審查學術文獻與公開機構數據撰寫，引用來源詳列於文章 frontmatter。本文不含聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
@@ -118,4 +116,4 @@ draft: false
 
 - [多酚衰減科學：為什麼去年的「金牌油」，今年可能只是普通烹飪油？](/blog/polyphenol-decay-science-2026)
 - [2026 特級初榨橄欖油多酚完整解析：什麼是真正的高品質指標？](/blog/2026-evoo-quality-polyphenol-index)
-- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？](/blog/morning-ritual-evoo-metabolism)
+- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟你一整天的代謝引擎？](/blog/morning-ritual-evoo-metabolism)
