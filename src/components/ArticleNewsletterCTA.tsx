@@ -2,24 +2,25 @@ import Link from 'next/link';
 import SubscribeForm from '@/components/SubscribeForm';
 
 /**
- * ArticleNewsletterCTA — 文末訂閱框（訂閱優先）。
+ * ArticleNewsletterCTA — 文末追蹤框。
  *
- * 放在每篇文章「參考文獻」之後、導覽之前。訂閱只承諾每週一封週報：
- * PDF 贈品已依站長決定暫停，不再於站內提及；歡迎信的實際寄送
- * 亦不在本階段處理（已知缺口，見研究報告）。
+ * 放在每篇文章「參考文獻」之後、導覽之前。站長已定調：電郵訂閱
+ * 沒有效益，本站不寄送電子報。此框只做兩件事——引導讀者回本站與
+ * 官方社群追蹤新文章；願意留信箱者加入讀者名單（寫入 Supabase），
+ * 前端不承諾任何寄信。
  */
 export default function ArticleNewsletterCTA() {
   return (
     <section className="mt-12 rounded-2xl border border-olive-200 bg-olive-50 px-6 py-8 sm:px-8">
       <p className="text-[11px] font-sans font-semibold text-olive-600 tracking-[0.25em] uppercase mb-3">
-        知橄週報
+        追蹤知橄生活
       </p>
       <h2 className="text-xl font-bold text-olive-900 leading-snug mb-3 tracking-tight">
-        喜歡這篇文章？訂閱知橄週報
+        喜歡這篇文章？把知橄生活加入你的追蹤清單
       </h2>
       <p className="text-sm text-stone-600 leading-relaxed font-sans mb-6 max-w-[560px]">
-        每週一封，精選最新橄欖油研究、品質判讀與地中海生活美學。
-        隨時可取消訂閱。
+        新文章與研究更新會公布在網站與官方社群。你也可以留下信箱加入讀者名單——
+        本站目前不寄送電子報，加入名單是讓我們知道，這些整理值得繼續做下去。
       </p>
       <SubscribeForm />
       <p className="text-xs text-stone-500 leading-relaxed font-sans mt-6 pt-5 border-t border-olive-200">

@@ -358,7 +358,7 @@ export default function AboutPage() {
             href="/#subscribe"
             className="inline-block border-2 border-olive-700 text-olive-700 hover:bg-olive-700 hover:text-white font-semibold px-8 py-3 rounded-xl transition-colors"
           >
-            訂閱週報 🫒
+            追蹤知橄生活 🫒
           </Link>
         </div>
       </section>
