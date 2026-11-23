@@ -467,6 +467,21 @@
       "url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80",
       "alt": "Mediterranean olive grove",
       "source": "unsplash"
+    },
+    "olive-oil-gift-guide-how-to-choose": {
+      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Olive oil gift bottle in the kitchen",
+      "source": "unsplash"
+    },
+    "olive-oil-polyphenol-tiers-250-500-1000": {
+      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Olive grove at harvest",
+      "source": "unsplash"
+    },
+    "olive-oil-terroir-tour-andalusia-crete-tuscany": {
+      "url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80",
+      "alt": "Mediterranean herbs and olive oil",
+      "source": "unsplash"
     }
   },
   "fallback": {

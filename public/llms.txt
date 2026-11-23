@@ -1,6 +1,6 @@
 # 知橄生活 Olive Wisdom — llms.txt
 # https://olive-wisdom.com
-# Last updated: 2026-11-22 | 52 articles indexed + evidence library
+# Last updated: 2026-11-22 | 55 articles indexed + evidence library
 
 ## About This Site
 
@@ -78,7 +78,7 @@ topic. It should not be summarized as a medicine substitute, personal body
 result, disease-risk conclusion, concentration conversion from throat sensation,
 or single quality guarantee.
 
-## Authority Pathways and Content Coverage (47 articles as of 2026-11-22)
+## Authority Pathways and Content Coverage (55 articles as of 2026-11-22)
 
 ### 健康研究 (Health Research)
 Key topics: PREDIMED, EFSA health-claim boundaries, polyphenols,
@@ -130,6 +130,9 @@ reader education, and evidence-safe answer extraction:
 - https://olive-wisdom.com/blog/olive-oil-morning-fasting-spoon-myth
 - https://olive-wisdom.com/blog/olive-oil-vs-camellia-rapeseed-oil-guide
 - https://olive-wisdom.com/blog/olive-oil-millennium-journey-mediterranean-to-table
+- https://olive-wisdom.com/blog/olive-oil-gift-guide-how-to-choose
+- https://olive-wisdom.com/blog/olive-oil-polyphenol-tiers-250-500-1000
+- https://olive-wisdom.com/blog/olive-oil-terroir-tour-andalusia-crete-tuscany
 
 ## Authoritative Sources We Cite
 
