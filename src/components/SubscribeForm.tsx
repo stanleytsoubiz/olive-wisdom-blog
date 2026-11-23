@@ -29,7 +29,7 @@ export default function SubscribeForm() {
     // Honeypot filled → bot. Fake success, write nothing.
     if (isHoneypotFilled(website)) {
       setStatus('success');
-      setMessage('🎉 訂閱成功！歡迎加入知橄生活家族，下期週報見 🫒');
+      setMessage('🎉 已加入讀者名單，謝謝你 🫒');
       setEmail('');
       return;
     }
@@ -56,15 +56,15 @@ export default function SubscribeForm() {
       });
       if (res.ok || res.status === 201 || res.status === 204) {
         setStatus('success');
-        setMessage('🎉 訂閱成功！歡迎加入知橄生活家族，下期週報見 🫒');
+        setMessage('🎉 已加入讀者名單，謝謝你 🫒');
         setEmail('');
         trackSubscribe('footer_form');
       } else if (res.status === 409) {
         setStatus('success');
-        setMessage('您已是知橄週報訂閱者 🫒 感謝您的持續支持！');
+        setMessage('這個信箱已經在讀者名單裡了，謝謝你的支持 🫒');
       } else {
         setStatus('error');
-        setMessage('訂閱暫時無法處理，請稍後再試。');
+        setMessage('暫時無法處理，請稍後再試。');
       }
     } catch {
       setStatus('error');
@@ -76,7 +76,7 @@ export default function SubscribeForm() {
     return (
       <div className="bg-olive-50 border border-olive-300 text-olive-800 rounded-2xl px-6 py-5 max-w-md mx-auto text-center">
         <p className="font-semibold text-lg">{message}</p>
-        <p className="text-sm text-olive-600 mt-2">每週一封，隨時可取消訂閱。</p>
+        <p className="text-sm text-olive-600 mt-2">本站目前不寄送電子報。新文章會公布在網站與官方社群，歡迎常回來看看。</p>
       </div>
     );
   }
@@ -102,7 +102,7 @@ export default function SubscribeForm() {
             onChange={(e) => { setEmail(e.target.value); setTouched(false); }}
             onBlur={() => setTouched(true)}
             required
-            placeholder="您的電子信箱"
+            placeholder="你的電子信箱"
             disabled={status === 'loading'}
             className={`w-full border rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-olive-500 disabled:opacity-60 transition ${
               emailError ? 'border-red-400 focus:ring-red-400' : 'border-olive-300'
@@ -121,16 +121,16 @@ export default function SubscribeForm() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
               </svg>
-              訂閱中…
+              加入中…
             </span>
-          ) : '免費訂閱 🫒'}
+          ) : '加入讀者名單 🫒'}
         </button>
       </form>
       {status === 'error' && (
         <p className="text-sm text-red-500 text-center mt-2">{message}</p>
       )}
       <p className="text-xs text-olive-500 text-center mt-3 font-sans">
-        免費訂閱 · 每週一封 · 隨時可取消
+        加入讀者名單 · 本站不寄送電子報 · 不寄廣告信
       </p>
     </div>
   );

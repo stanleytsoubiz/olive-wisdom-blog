@@ -336,12 +336,12 @@ export default async function HomePage() {
         </p>
       </section>
 
-      {/* 訂閱 */}
+      {/* 追蹤／讀者名單 */}
       <section id="subscribe" className="bg-gradient-to-br from-olive-100 to-gold-50 py-14 md:py-20 px-6 text-center">
         <p className="text-gold-600 text-xs font-medium tracking-[0.25em] uppercase mb-4">加入知橄家族</p>
-        <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">訂閱知橄週報</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">追蹤知橄生活</h2>
         <p className="text-stone-500 text-sm md:text-base leading-relaxed mb-8 max-w-md mx-auto font-sans">
-          每週一封，精選最新橄欖油研究與地中海生活美學靈感。
+          新文章與研究更新會公布在網站與官方社群。留下信箱加入讀者名單，支持我們繼續把橄欖油的專業知識整理清楚。
         </p>
         <SubscribeForm />
       </section>

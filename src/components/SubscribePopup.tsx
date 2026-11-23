@@ -49,7 +49,7 @@ export default function SubscribePopup() {
     // Honeypot filled → bot. Fake success, write nothing.
     if (isHoneypotFilled(website)) {
       setStatus('success');
-      setMessage('訂閱成功！下期週報見 🫒');
+      setMessage('已加入讀者名單，謝謝你 🫒');
       return;
     }
     if (!checkThrottle('subscribe')) {
@@ -76,11 +76,11 @@ export default function SubscribePopup() {
       });
       if (res.ok || res.status === 201 || res.status === 204) {
         setStatus('success');
-        setMessage('訂閱成功！下期週報見 🫒');
+        setMessage('已加入讀者名單，謝謝你 🫒');
         trackSubscribe('popup');
       } else if (res.status === 409) {
         setStatus('success');
-        setMessage('您已是知橄週報訂閱者 🫒');
+        setMessage('這個信箱已經在讀者名單裡了 🫒');
       } else {
         setStatus('error');
         setMessage('暫時無法處理，請稍後再試。');
@@ -108,7 +108,7 @@ export default function SubscribePopup() {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="訂閱知橄週報"
+        aria-label="加入知橄生活讀者名單"
         className="fixed bottom-0 left-0 right-0 z-50 animate-slide-up"
         style={{ animation: 'slideUp 0.35s cubic-bezier(0.32,0.72,0,1) both' }}
       >
@@ -131,7 +131,7 @@ export default function SubscribePopup() {
             <div className="text-center py-3">
               <p className="text-2xl mb-2">🫒</p>
               <p className="font-semibold text-olive-800">{message}</p>
-              <p className="text-xs text-stone-400 font-sans mt-1">每週一封，歡迎加入。</p>
+              <p className="text-xs text-stone-400 font-sans mt-1">本站不寄送電子報，新文章公布在網站與官方社群。</p>
             </div>
           ) : (
             <>
@@ -140,7 +140,7 @@ export default function SubscribePopup() {
                 喜歡這篇文章嗎？
               </p>
               <p className="text-sm text-stone-500 font-sans mb-4 leading-relaxed">
-                每週一封橄欖油知識信，直送信箱
+                留下信箱加入讀者名單，支持我們繼續整理有憑據的橄欖油知識。本站目前不寄送電子報，新文章公布在網站與官方社群。
               </p>
 
               {/* Form */}
@@ -162,7 +162,7 @@ export default function SubscribePopup() {
                     value={email}
                     onChange={(e) => { setEmail(e.target.value); setTouched(false); }}
                     onBlur={() => setTouched(true)}
-                    placeholder="您的電子信箱"
+                    placeholder="你的電子信箱"
                     disabled={status === 'loading'}
                     className={`w-full border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-olive-500 disabled:opacity-60 transition ${
                       emailError ? 'border-red-400' : 'border-olive-300'
@@ -177,7 +177,7 @@ export default function SubscribePopup() {
                   disabled={status === 'loading'}
                   className="bg-olive-700 hover:bg-olive-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors disabled:opacity-60"
                 >
-                  {status === 'loading' ? '…' : '免費訂閱'}
+                  {status === 'loading' ? '…' : '加入名單'}
                 </button>
               </form>
 
@@ -186,7 +186,7 @@ export default function SubscribePopup() {
               )}
 
               <p className="text-[11px] text-stone-400 font-sans mt-3 text-center">
-                免費訂閱 · 隨時可取消
+                免費加入 · 本站不寄送電子報
               </p>
             </>
           )}

@@ -153,12 +153,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </svg>
             </Link>
 
-            {/* CTA — plain text link to the homepage subscribe section */}
+            {/* CTA — plain text link to the homepage follow section */}
             <Link
               href="/#subscribe"
               className="hidden md:inline-flex items-center gap-1 text-olive-700 hover:text-olive-900 text-sm font-medium transition-colors"
             >
-              訂閱週報 →
+              追蹤知橄生活 →
             </Link>
 
             {/* Mobile hamburger menu */}
@@ -219,15 +219,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </ul>
             </div>
 
-            {/* 訂閱 — plain text link to the homepage subscribe section */}
+            {/* 追蹤 — plain text link to the homepage follow section */}
             <div>
-              <p className="text-white font-semibold text-sm mb-3">訂閱知橄週報</p>
-              <p className="text-xs text-olive-300 mb-4 leading-relaxed">每週精選橄欖油研究・免費・隨時可取消</p>
+              <p className="text-white font-semibold text-sm mb-3">追蹤知橄生活</p>
+              <p className="text-xs text-olive-300 mb-4 leading-relaxed">新文章公布在網站與官方社群・歡迎加入讀者名單</p>
               <Link
                 href="/#subscribe"
                 className="text-sm font-medium text-gold-400 hover:text-gold-300 transition-colors"
               >
-                前往訂閱 →
+                加入讀者名單 →
               </Link>
             </div>
           </div>

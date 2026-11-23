@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-bold text-olive-700 mb-3">2. 資料使用目的</h2>
           <p>我們收集的資料僅用於：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-            <li>發送您訂閱的知橄週報</li>
+            <li>讀者名單管理（本站目前不寄送電子報）</li>
             <li>回覆您的聯絡訊息</li>
             <li>改善網站內容與使用者體驗</li>
             <li>防範惡意行為及網路攻擊</li>
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-bold text-olive-700 mb-3">3. 資料儲存與安全</h2>
-          <p>訂閱資料儲存於 Supabase（PostgreSQL 資料庫，位於歐洲地區伺服器），並採用 SSL/TLS 加密傳輸。我們依據 GDPR 及台灣個人資料保護法相關規定處理您的資料。</p>
+          <p>讀者名單資料儲存於 Supabase（PostgreSQL 資料庫，位於歐洲地區伺服器），並採用 SSL/TLS 加密傳輸。我們依據 GDPR 及台灣個人資料保護法相關規定處理您的資料。</p>
         </section>
 
         <section>

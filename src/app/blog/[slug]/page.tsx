@@ -540,7 +540,7 @@ export default async function BlogPostPage({ params }: Props) {
             href="/#subscribe"
             className="ml-auto inline-flex items-center gap-2 bg-olive-700 hover:bg-olive-800 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-colors"
           >
-            訂閱知橄週報 🫒
+            追蹤知橄生活 🫒
           </Link>
         </div>
       </article>
