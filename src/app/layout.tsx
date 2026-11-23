@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import SubscribeForm from '@/components/SubscribeForm';
 import ScrollHeader from '@/components/ScrollHeader';
 import MobileMenu from '@/components/MobileMenu';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
