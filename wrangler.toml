@@ -1,6 +1,19 @@
+# Cloudflare Workers configuration (OpenNext) — migrated 2026-11-22, PR #16.
+# Was a Pages project (`pages_build_output_dir = "out"`); that line made
+# wrangler refuse Worker commands ("run a Workers-specific command in a
+# Pages project"), so it is gone. The Pages project itself is NOT deleted
+# — it stays as the rollback target until the domain is switched (owner).
 name = "olive-wisdom"
-compatibility_date = "2024-09-23"
-pages_build_output_dir = "out"
+compatibility_date = "2026-04-26"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+main = ".open-next/worker.js"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[images]
+binding = "IMAGES"
 
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://olive-wisdom.com"

@@ -32,10 +32,14 @@
   Vary: Accept-Encoding
 
 # ── 其他圖片快取 1 年 ──────────────────────────────────────────
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.webp
+# 注意：這裡刻意沒有全域的 /*.jpg / *.webp 規則。Workers 下
+# _headers 的多條規則會同時生效（不像 Pages 是先比對到的贏），
+# 全域規則會跟上面的 /images/covers/* 24 小時規則疊成雙值
+# Cache-Control（兩個 max-age 並存，語義不明，2026-11-22 評估實測）。
+# 站上唯一的非封面 jpg/webp 是首頁 hero 圖，單獨列在下面；封面
+# 圖（jpg＋build 產生的 webp）只吃 /images/covers/* 的 24 小時規則。
+# 新增非封面圖片時，在此補一條明確路徑，不要加回全域規則。
+/hero-grove.webp
   Cache-Control: public, max-age=31536000, immutable
 
 /*.png

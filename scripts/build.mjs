@@ -12,7 +12,23 @@
  * tree is therefore never left dirty by a build.
  *
  *   node scripts/build.mjs static   # npm run build:  next build + pagefind
- *   node scripts/build.mjs cf       # npm run build:cf: opennextjs-cloudflare build
+ *                                    # (Cloudflare Pages static export;
+ *                                    #  BROKEN once next.config.js drops
+ *                                    #  `output: 'export'` — kept only as
+ *                                    #  a fallback while the OpenNext
+ *                                    #  migration is unmerged)
+ *   node scripts/build.mjs server   # server build for OpenNext:
+ *                                    # prepare → next build → restore.
+ *                                    # Run by OpenNext via buildCommand in
+ *                                    # open-next.config.ts — do NOT call
+ *                                    # `next build` directly for the
+ *                                    # Worker path.
+ *   node scripts/build.mjs cf       # npm run build:cf: OpenNext build
+ *                                    # (which runs `server` itself via
+ *                                    # buildCommand) + pagefind re-index
+ *                                    # into .open-next/assets/pagefind.
+ *                                    # No prepare step here — the inner
+ *                                    # server build already did it.
  *
  * If the process itself is killed mid-build (SIGKILL, machine crash), the
  * finally block cannot run and images.json may be left with .webp refs.
@@ -62,9 +78,22 @@ function run(label, command, args) {
 
 function main() {
   const mode = process.argv[2] || 'static';
-  if (mode !== 'static' && mode !== 'cf') {
-    console.error('[build] Usage: node scripts/build.mjs <static|cf>');
+  if (mode !== 'static' && mode !== 'server' && mode !== 'cf') {
+    console.error('[build] Usage: node scripts/build.mjs <static|server|cf>');
     process.exit(1);
+  }
+
+  // The cf mode runs no prepare step of its own (the inner server build
+  // does it via buildCommand), so there is nothing to back up or restore.
+  if (mode === 'cf') {
+    try {
+      run('opennextjs-cloudflare build', 'npx', ['opennextjs-cloudflare', 'build']);
+      run('pagefind (opennext)', process.execPath, ['scripts/pagefind-opennext.mjs']);
+    } catch (err) {
+      console.error('[build] ERROR:', err.message);
+      process.exit(err.exitCode || 1);
+    }
+    process.exit(0);
   }
 
   // Back up the files the prepare step will rewrite, into a temp dir
@@ -87,7 +116,8 @@ function main() {
       run('next build', 'npx', ['next', 'build']);
       run('pagefind', 'npx', ['pagefind', '--site', 'out', '--output-path', 'out/pagefind']);
     } else {
-      run('opennextjs-cloudflare build', 'npx', ['opennextjs-cloudflare', 'build']);
+      // server: the plain Next.js server build OpenNext bundles.
+      run('next build', 'npx', ['next', 'build']);
     }
   } catch (err) {
     console.error('[build] ERROR:', err.message);

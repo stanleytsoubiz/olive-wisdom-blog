@@ -11,6 +11,8 @@ dist/
 # 2026-11-22. Removing the already-tracked files needs `git rm -r --cached
 # .open-next` on a git-authorized machine; this line stops new ones.)
 .open-next/
+# Wrangler local state (preview/dev cache, D1/KV/R2 emulators) — never commit.
+.wrangler/
 # Build-time generated WebP covers (scripts/optimize-covers-build.mjs
 # converts the committed JPGs on every build; never commit the .webp files)
 public/images/covers/*.webp
