@@ -14,14 +14,13 @@ export default function PrivacyPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
       <h1 className="text-3xl font-bold text-olive-800 mb-2">隱私政策</h1>
-      <p className="text-gray-400 text-sm mb-10">最後更新：2026 年 4 月 10 日</p>
+      <p className="text-gray-400 text-sm mb-10">最後更新：2026 年 11 月 22 日</p>
 
       <div className="prose-custom space-y-8 text-gray-700 leading-relaxed">
         <section>
           <h2 className="text-xl font-bold text-olive-700 mb-3">1. 資料收集</h2>
           <p>知橄生活（Olive Wisdom，以下簡稱「本站」）僅在您主動提供時收集以下個人資料：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-            <li>電子郵件地址（訂閱電子報時）</li>
             <li>姓名及聯絡資訊（透過聯絡表單時）</li>
             <li>網站使用數據（透過 Google Analytics，匿名化處理）</li>
             <li>Cloudflare 自動收集的技術性日誌（IP 位址、瀏覽器類型，用於安全防護）</li>
@@ -32,17 +31,17 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-bold text-olive-700 mb-3">2. 資料使用目的</h2>
           <p>我們收集的資料僅用於：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-            <li>讀者名單管理（本站目前不寄送電子報）</li>
             <li>回覆您的聯絡訊息</li>
             <li>改善網站內容與使用者體驗</li>
             <li>防範惡意行為及網路攻擊</li>
           </ul>
           <p className="mt-3">本站不會將您的個人資料出售、租用或以任何商業目的轉讓給第三方。</p>
+          <p className="mt-3">本站目前不收集讀者信箱，亦不寄送電子報。</p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold text-olive-700 mb-3">3. 資料儲存與安全</h2>
-          <p>讀者名單資料儲存於 Supabase（PostgreSQL 資料庫，位於歐洲地區伺服器），並採用 SSL/TLS 加密傳輸。我們依據 GDPR 及台灣個人資料保護法相關規定處理您的資料。</p>
+          <p>透過聯絡表單提供的資料儲存於 Supabase（PostgreSQL 資料庫，位於歐洲地區伺服器），並採用 SSL/TLS 加密傳輸。我們依據 GDPR 及台灣個人資料保護法相關規定處理您的資料。</p>
         </section>
 
         <section>
@@ -59,7 +58,6 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-bold text-olive-700 mb-3">5. 您的權利</h2>
           <p>您可隨時：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
-            <li>透過電子報底部連結取消訂閱</li>
             <li>要求查閱、更正或刪除您的個人資料</li>
             <li>反對特定資料處理行為</li>
           </ul>

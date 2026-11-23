@@ -223,10 +223,8 @@ export default function SelectionPage() {
             也不會以「評選中」名義公開任何候選產品——未查驗，不背書。
           </p>
           <p className="text-sm md:text-base text-stone-700 leading-relaxed font-sans mt-4">
-            名單公布時，我們會同步公開每支產品的查驗數字與合作關係。
-            想收到公布通知，請
-            <Link href="/#subscribe" className="text-olive-700 underline underline-offset-4 mx-1">加入讀者名單</Link>
-            。
+            名單公布時，我們會同步公開每支產品的查驗數字與合作關係；
+            公布消息會放在本頁與網站上，歡迎隨時回來查看。
           </p>
         </div>
       </section>

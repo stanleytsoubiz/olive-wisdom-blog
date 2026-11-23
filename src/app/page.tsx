@@ -4,7 +4,6 @@ import { getAllPosts } from '@/lib/posts';
 import { getImages, getHeroImage } from '@/lib/images';
 import { LEARNING_PATHS } from '@/lib/learning-paths';
 import { categoryLabel } from '@/lib/categories';
-import SubscribeForm from '@/components/SubscribeForm';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -336,14 +335,13 @@ export default async function HomePage() {
         </p>
       </section>
 
-      {/* 追蹤／讀者名單 */}
-      <section id="subscribe" className="bg-gradient-to-br from-olive-100 to-gold-50 py-14 md:py-20 px-6 text-center">
+      {/* 追蹤知橄生活 */}
+      <section id="follow" className="bg-gradient-to-br from-olive-100 to-gold-50 py-14 md:py-20 px-6 text-center">
         <p className="text-gold-600 text-xs font-medium tracking-[0.25em] uppercase mb-4">加入知橄家族</p>
         <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">追蹤知橄生活</h2>
-        <p className="text-stone-500 text-sm md:text-base leading-relaxed mb-8 max-w-md mx-auto font-sans">
-          新文章與研究更新會公布在網站與官方社群。留下信箱加入讀者名單，支持我們繼續把橄欖油的專業知識整理清楚。
+        <p className="text-stone-500 text-sm md:text-base leading-relaxed max-w-md mx-auto font-sans">
+          新文章與研究更新會公布在網站與官方社群。歡迎常回來看看，也把知橄生活分享給同樣在意吃一瓶好油的朋友。
         </p>
-        <SubscribeForm />
       </section>
 
     </main>

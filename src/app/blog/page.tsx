@@ -86,12 +86,12 @@ export default async function BlogPage() {
       {/* CTA */}
       <section className="bg-olive-100 py-14 px-6 text-center">
         <h2 className="text-2xl font-bold text-olive-800 mb-3">持續跟上橄欖油新知</h2>
-        <p className="text-gray-600 mb-6 text-sm">新文章公布在網站與官方社群，也可以留下信箱加入讀者名單</p>
+        <p className="text-gray-600 mb-6 text-sm">新文章公布在網站與官方社群，歡迎常回來看看</p>
         <Link
-          href="/#subscribe"
+          href="/#follow"
           className="inline-block bg-olive-700 hover:bg-olive-800 text-white px-8 py-3 rounded-xl font-medium transition-colors"
         >
-          加入讀者名單 🫒
+          追蹤知橄生活 🫒
         </Link>
       </section>
     </main>

@@ -52,7 +52,7 @@ const TABS = [
     ),
   },
   {
-    href: '/#subscribe',
+    href: '/#follow',
     label: '追蹤',
     icon: (active: boolean) => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill={active ? 'currentColor' : 'none'}

@@ -10,7 +10,6 @@ import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 import ArticleNewsletterCTA from '@/components/ArticleNewsletterCTA';
-import SubscribePopup from '@/components/SubscribePopup';
 
 export const dynamic = 'force-static';
 
@@ -524,8 +523,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        {/* Newsletter CTA — after references, before navigation.
-            Newsletter-first; copy makes no instant-delivery promise. */}
+        {/* Follow CTA — after references, before navigation. */}
         <ArticleNewsletterCTA />
 
         {/* Navigation */}
@@ -537,7 +535,7 @@ export default async function BlogPostPage({ params }: Props) {
             ← 返回文章列表
           </Link>
           <Link
-            href="/#subscribe"
+            href="/#follow"
             className="ml-auto inline-flex items-center gap-2 bg-olive-700 hover:bg-olive-800 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-colors"
           >
             追蹤知橄生活 🫒
@@ -584,9 +582,6 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      {/* Subscribe popup — scroll 60% trigger, once per session */}
-      <SubscribePopup />
 
       {/* Next in learning path — above 延伸閱讀 */}
       {nextPost && nextInPath && (
