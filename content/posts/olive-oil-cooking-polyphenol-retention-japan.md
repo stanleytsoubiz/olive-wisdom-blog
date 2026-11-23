@@ -116,4 +116,4 @@ draft: false
 
 - [多酚衰減科學：為什麼去年的「金牌油」，今年可能只是普通烹飪油？](/blog/polyphenol-decay-science-2026)
 - [2026 特級初榨橄欖油多酚完整解析：什麼是真正的高品質指標？](/blog/2026-evoo-quality-polyphenol-index)
-- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟你一整天的代謝引擎？](/blog/morning-ritual-evoo-metabolism)
+- [每日晨飲橄欖油：三分鐘儀式，真的能重啟一整天的代謝嗎？](/blog/morning-ritual-evoo-metabolism)

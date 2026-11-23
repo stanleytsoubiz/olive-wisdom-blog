@@ -17,7 +17,7 @@ tags:
   - "體重管理"
   - "GLP-1"
 sources:
-  - "Schwingshackl, L., Hoffmann, G., Kalle-Uhlmann, T., Arregui, M., Buijsse, B., & Boeing, H. (2015). Fruit and vegetable consumption and changes in anthropometric variables in adult populations: a systematic review and meta-analysis of prospective cohort studies. PLOS ONE, 10(10), e0140846. https://doi.org/10.1371/journal.pone.0140846"
+  - "Mancini, J. G., Filion, K. B., Atallah, R., & Eisenberg, M. J. (2016). Systematic review of the Mediterranean diet for long-term weight loss. American Journal of Medicine, 129(4), 407–415. https://doi.org/10.1016/j.amjmed.2015.11.028"
   - "Paniagua, J. A., de la Sacristana, A. G., Sánchez, E., Romero, I., Vidal-Puig, A., Berral, F. J., ... & Pérez-Martínez, P. (2007). A MUFA-rich diet improves posprandial glucose, lipid and GLP-1 responses in insulin-resistant subjects. Journal of the American College of Nutrition, 26(5), 434–444. https://doi.org/10.1080/07315724.2007.10719633"
   - "Estruch, R., Ros, E., Salas-Salvadó, J., Covas, M.-I., Corella, D., Arós, F., ... & PREDIMED Study Investigators. (2018). Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
 faq:
@@ -44,9 +44,11 @@ PREDIMED 試驗中，補充橄欖油的地中海飲食組受試者每週領回�
 
 然而，「橄欖油與體重管理有關」這個說法也並非空穴來風——它只是被說對了一半，忽略了最關鍵的前提條件。
 
+先給你一句話答案：**橄欖油不是減肥食品，單獨加油不會瘦。研究支持的用法只有一種：用 EVOO「取代」奶油、豬油等其他油脂，總熱量不變——地中海飲食在這種前提下，長期減重效果不輸低脂飲食。**
+
 ## MUFA 影響飽足感荷爾蒙：Paniagua et al. 2007 的發現
 
-橄欖油的主要脂肪酸是油酸（Oleic Acid），屬於單元不飽和脂肪酸（MUFA），約佔橄欖油脂肪酸組成的 65–80%。這個成分和飽足感之間存在一條科學上可追溯的連結。橄欖油中多酚成分在抗炎與代謝層面的科學效益，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
+橄欖油的主要脂肪酸是油酸（Oleic Acid），屬於單元不飽和脂肪酸（MUFA），約佔橄欖油脂肪酸組成的 65–80%。這個成分和飽足感之間存在一條科學上可追溯的連結。橄欖油中多酚成分在抗炎與代謝層面的科學效益，可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 2007 年發表於《美國營養學院期刊》的隨機對照試驗（Paniagua et al., 2007）以胰島素阻抗受試者為對象，分別給予三種飲食介入：高碳水化合物飲食、高飽和脂肪（SFA）飲食、以及高 MUFA 飲食（以特級初榨橄欖油為主要脂肪來源）。結果顯示：
 
@@ -56,14 +58,15 @@ PREDIMED 試驗中，補充橄欖油的地中海飲食組受試者每週領回�
 
 這個機制不是說「吃橄欖油會瘦」，而是說：**以 MUFA 取代 SFA 作為脂肪來源時，研究觀察到飽足感調節反應與較佳的指標有關**。這是飲食品質的問題，不是單一食材的神奇功效。
 
-## PREDIMED 試驗：地中海飲食組的體重數據
+## PREDIMED 試驗與長期減重：Mancini et al. 2016 的發現
 
-PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中海飲食隨機對照試驗，追蹤超過 7,400 名受試者長達 4.8 年，主要終點是心血管事件。關於此研究的完整設計、爭議與修正過程，可參考[PREDIMED 研究完整解析](/blog/predimed-study-complete-explainer-olive-oil-heart)。
+PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中海飲食隨機對照試驗，追蹤超過 7,400 名受試者長達 4.8 年，主要終點是心血管事件。關於此研究的完整設計、爭議與修正過程，可參考[PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
-但 PREDIMED 的體重數據同樣值得關注。Schwingshackl et al.（2015）的系統性回顧與統合分析彙整了地中海飲食介入對人體測量指標的影響，發現：
+但地中海飲食的體重數據，同樣值得關注。Mancini 等人 2016 年發表於《美國醫學期刊》的系統性回顧，彙整了 5 項追蹤 12 個月以上的隨機對照試驗（共 998 名超重或肥胖受試者），發現：
 
-- 地中海飲食組相較於**低脂飲食組**，體重並未顯著增加——儘管橄欖油攝取量更高、整體脂肪比例更高
-- 在部分亞組分析中，地中海飲食組的腰圍縮減甚至優於低脂組，提示**飲食組成（脂肪種類）比總脂肪量更能影響腹部脂肪累積**
+- 地中海飲食組相較於**低脂飲食組**，12 個月後的減重更多（地中海組平均減 4.1–10.1 公斤，低脂組減 5.0 公斤至增加 2.9 公斤）
+- 與低碳水化合物飲食或美國糖尿病學會飲食相比，地中海飲食的減重效果相近
+- 在血壓、血脂等心血管風險指標的改善上，地中海飲食與對照飲食大致相當
 
 這個結果在直覺上令人困惑：吃更多脂肪，為什麼體重不比吃更少脂肪的人更重？答案藏在飲食整體的代謝效應中：
 
@@ -108,7 +111,7 @@ PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中�
 橄欖油是地中海飲食的核心脂肪來源，但地中海飲食的其他成分（蔬菜、豆類、魚類、全穀）同樣重要。單獨服用橄欖油而不改變整體飲食結構，不能預期相同效果。
 
 **框架三：劑量控制**
-關於每日橄欖油用量的詳細計算，請參閱[每天應該吃多少橄欖油](/blog/olive-oil-daily-intake-dosage-science)，從 EFSA 最低有效劑量到 PREDIMED 研究設計量的完整框架，以及[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)，20–30ml 是研究中使用的劑量範圍，超出部分沒有額外的體重管理依據。
+關於每日橄欖油用量的詳細計算，請參閱[每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)，從 EFSA 最低有效劑量到 PREDIMED 研究設計量的完整框架，以及[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)，20–30ml 是研究中使用的劑量範圍，超出部分沒有額外的體重管理依據。
 
 **框架四：長期視角**
 PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內的快速見效。體重管理是長期飲食模式的結果，不是單一食材的短期效應。
@@ -125,7 +128,7 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 
 這些侷限不是在否定橄欖油的價值，而是強調：**沒有任何單一食材是體重管理的魔法子彈**，橄欖油也不例外。
 
-關於 PREDIMED 試驗的完整背景與設計，可參考[PREDIMED 研究完整解析：追蹤 7,447 人如何改寫橄欖油科學史](/blog/predimed-study-complete-explainer-olive-oil-heart)。
+關於 PREDIMED 試驗的完整背景與設計，可參考[PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)。
 
 ## 結語：兩個健身工作室外的人
 
@@ -139,7 +142,7 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 
 ## 延伸閱讀
 
-- [PREDIMED 研究完整解析：追蹤 7,447 人如何改寫橄欖油科學史](/blog/predimed-study-complete-explainer-olive-oil-heart)
+- [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
 - [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)
 - [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
 

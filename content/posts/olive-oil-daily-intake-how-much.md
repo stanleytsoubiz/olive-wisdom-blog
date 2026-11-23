@@ -19,7 +19,7 @@ sources:
   - "Estruch, R., Ros, E., Salas-Salvadó, J., Covas, M.-I., Corella, D., Arós, F., ... & PREDIMED Study Investigators. (2018). Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
   - "Guasch-Ferré, M., Hu, F. B., Martínez-González, M. A., Fitó, M., Bulló, M., Estruch, R., ... & Salas-Salvadó, J. (2014). Olive oil intake and risk of cardiovascular disease and mortality in the PREDIMED Study. BMC Medicine, 12, 78. https://doi.org/10.1186/1741-7015-12-78"
   - "Covas, M.-I., Nyyssönen, K., Poulsen, H. E., Kaikkonen, J., Zunft, H.-J. F., Kiesewetter, H., ... & Marrugat, J. (2006). The effect of polyphenols in olive oil on heart disease risk factors: a randomized trial. Annals of Internal Medicine, 145(5), 333–341. https://doi.org/10.7326/0003-4819-145-5-200609050-00006"
-  - "Schwingshackl, L., Christoph, M., & Hoffmann, G. (2022). Effect of olive oil consumption on cardiovascular disease, cancer, type 2 diabetes, and all-cause mortality: a systematic review and meta-analysis. Clinical Nutrition, 42(1), 498–507. https://doi.org/10.1016/j.clnu.2022.10.001"
+  - "Martínez-González, M. A., Sayón-Orea, C., Bullón-Vela, V., Bes-Rastrollo, M., Rodríguez-Artalejo, F., Yusta-Boyo, M. J., & García-Solano, M. (2022). Effect of olive oil consumption on cardiovascular disease, cancer, type 2 diabetes, and all-cause mortality: a systematic review and meta-analysis. Clinical Nutrition, 41(12), 2659–2682. https://doi.org/10.1016/j.clnu.2022.10.001"
 faq:
   - q: "橄欖油一天喝多少最適合？"
     a: "根據地中海飲食研究及 PREDIMED 試驗的設計，每日攝取約 20–30 ml（約 2–3 湯匙）特級初榨橄欖油是研究中最常使用的劑量範圍。建議分散於三餐使用，而非集中單次攝取。我們的建議是：一般成年人以健康維持為目標→20–25ml/日分三餐使用，以替換其他油脂為前提；已有明確健康目的（心血管高風險族群）→建議先閱讀 PREDIMED 研究設計細節，並在醫師指導下納入整體飲食計畫，橄欖油是飲食工具而非藥物介入。"
@@ -28,7 +28,7 @@ faq:
   - q: "橄欖油喝太多會胖嗎？"
     a: "橄欖油屬於高熱量食物，每湯匙（15ml）約 120 大卡。PREDIMED 試驗中補充大量橄欖油的組別，體重並未顯著高於對照組，但這與整體飲食模式有關。若只是在既有飲食上額外添加，熱量仍會累積。關鍵在於「替換」其他油脂，而非疊加。"
   - q: "糖尿病或高血壓患者可以每天喝橄欖油嗎？"
-    a: "現有系統性回顧（Schwingshackl et al., 2022）顯示每日 10–20g 橄欖油攝取與較低的第二型糖尿病風險有關聯。但橄欖油不是藥物，無法取代醫師指示的治療方案。有慢性病的讀者，任何飲食調整都應先諮詢主治醫師。"
+    a: "現有系統性回顧（Martínez-González et al., 2022）顯示每日 10–20g 橄欖油攝取與較低的第二型糖尿病風險有關聯。但橄欖油不是藥物，無法取代醫師指示的治療方案。有慢性病的讀者，任何飲食調整都應先諮詢主治醫師。"
 draft: false
 qc_gate:
   legacy_audit: pass
@@ -40,11 +40,13 @@ qc_gate:
 
 這是橄欖油消費裡最被低估的問題。一瓶好油花了 800 元，捨不得用是浪費，用太兇又怕熱量超標。**研究告訴我們的答案，不是「越多越好」，也不是市場流傳的「每天空腹兩湯匙」——而是一個有上限的劑量區間。**
 
+先給你一句話答案：**每天 20–30ml（約 1.5–2 湯匙），分三餐用，而且是「取代」其他油脂，不是額外疊加。空腹喝不是必須的，從 5ml 開始試耐受度就好。**
+
 把油倒進湯匙裡看一眼：淡綠色油液在金屬底面凝住一瞬，表面浮著一層極薄的青草氣。這一茶匙約 5 毫升、40 大卡；一湯匙約 15 毫升、120 大卡。每天到底需要幾匙？早上空腹灌兩湯匙、料理大方倒、沙拉收尾再淋一圈——這三種用法的邏輯完全不同，總量加起來可能早就超標，也可能根本不夠。
 
 ## 研究怎麼說：20–30ml 是關鍵劑量區間
 
-迄今規模最大的橄欖油隨機對照試驗是西班牙的 PREDIMED 計畫。這項研究追蹤超過 7,400 名具有心血管風險的受試者，平均 4.8 年，其中「地中海飲食 + 額外補充特級初榨橄欖油」組每週補充約 1 公升橄欖油（折算約每天 **20–25ml**），結果觀察到與心血管事件較低發生率顯著相關，相對風險比對照組低約 30%（Estruch et al., 2018）。若想進一步了解這個劑量背後的 EFSA 多酚標準與 Oleocanthal 嗆感閾值框架，可參考[每天應該吃多少橄欖油](/blog/olive-oil-daily-intake-dosage-science)的三框架完整分析。
+迄今規模最大的橄欖油隨機對照試驗是西班牙的 PREDIMED 計畫。這項研究追蹤超過 7,400 名具有心血管風險的受試者，平均 4.8 年，其中「地中海飲食 + 額外補充特級初榨橄欖油」組每週補充約 1 公升橄欖油（折算約每天 **20–25ml**），結果觀察到與心血管事件較低發生率顯著相關，相對風險比對照組低約 30%（Estruch et al., 2018）。若想進一步了解這個劑量背後的 EFSA 多酚標準與 Oleocanthal 嗆感閾值框架，可參考[每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)的三框架完整分析。
 
 另一項從 PREDIMED 資料庫延伸的觀察性分析（Guasch-Ferré et al., 2014）進一步量化：**每日多攝取 10g/2000kcal 橄欖油，與較低全因死亡率（約低 7%）及較低心血管死亡率（約低 13%）相關**。但這個關聯在超過某個攝取閾值後趨於平緩，並非線性遞增——也就是說，多不一定更好。
 
@@ -60,7 +62,7 @@ qc_gate:
 
 ### 飯前空腹攝取（5–10ml）
 
-空腹喝橄欖油的習慣在南歐地區流傳已久，理論基礎是：油脂在胃空時與胃黏膜的接觸較直接，同時與膽汁、消化酶分泌的刺激相關，為一天的消化做準備。晨飲橄欖油的 NRF2 通路、膽汁酸暖機與血糖穩定三項分子機制，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)的詳細解析。EUROLIVE 試驗（Covas et al., 2006）使用的每日劑量為 25ml，雖非專為空腹設計，但研究觀察到攝取高多酚橄欖油組與氧化壓力標記物顯著較低有關，且 HDL 膽固醇出現上升。
+空腹喝橄欖油的習慣在南歐地區流傳已久，理論基礎是：油脂在胃空時與胃黏膜的接觸較直接，同時與膽汁、消化酶分泌的刺激相關，為一天的消化做準備。晨飲橄欖油的 NRF2 通路、膽汁酸暖機與血糖穩定三項分子機制，可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)的詳細解析。EUROLIVE 試驗（Covas et al., 2006）使用的每日劑量為 25ml，雖非專為空腹設計，但研究觀察到攝取高多酚橄欖油組與氧化壓力標記物顯著較低有關，且 HDL 膽固醇出現上升。
 
 **台灣消費者須注意：** 空腹油脂刺激容易引起腸胃不適，尤其有胃食道逆流或胃炎病史者。建議從 **5ml（1 茶匙）** 開始評估耐受度，再逐步調整。空腹攝取的橄欖油應選擇多酚含量較高的特級初榨等級，才能讓這個習慣有研究依據支撐。
 
@@ -72,7 +74,7 @@ qc_gate:
 
 ### 淋食物收尾（5–10ml）
 
-沙拉、麵包、湯品、烤蔬菜收尾淋油，是保留多酚含量最完整的方式——橄欖油在未受熱或低溫狀態下，油酸酚（oleocanthal）、羥基酪醇等抗氧化物質的活性相對穩定。如何驗證手上那瓶油的多酚含量是否真實，可參考[多酚含量的真相與驗證方法](/blog/olive-oil-polyphenol-content-how-to-verify)。研究文獻顯示，若要最大化保留功能性成分，這是最直接的途徑。一匙剛淋上熱湯的 EVOO，會在湯面散開一圈金綠色油花，青草氣與番茄葉的香氣隨熱氣往鼻腔深處鑽——那也是多酚還活著的訊號。
+沙拉、麵包、湯品、烤蔬菜收尾淋油，是保留多酚含量最完整的方式——橄欖油在未受熱或低溫狀態下，油酸酚（oleocanthal）、羥基酪醇等抗氧化物質的活性相對穩定。如何驗證手上那瓶油的多酚含量是否真實，可參考[橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)。研究文獻顯示，若要最大化保留功能性成分，這是最直接的途徑。一匙剛淋上熱湯的 EVOO，會在湯面散開一圈金綠色油花，青草氣與番茄葉的香氣隨熱氣往鼻腔深處鑽——那也是多酚還活著的訊號。
 
 ## 常見誤解：台灣消費者最容易走偏的兩個方向
 
@@ -82,13 +84,13 @@ qc_gate:
 
 **誤解二：喝橄欖油一定會胖**
 
-這個擔憂忽略了「替換」的概念。2022 年發表於 *Clinical Nutrition* 的系統性回顧與統合分析（Schwingshackl et al., 2022）彙整 36 篇研究，研究發現規律攝取橄欖油與全因死亡率、心血管疾病風險、第二型糖尿病風險呈負相關，且在整體飲食模式良好的前提下，橄欖油攝取與體重增加未觀察到顯著相關。
+這個擔憂忽略了「替換」的概念。2022 年發表於 *Clinical Nutrition* 的系統性回顧與統合分析（Martínez-González et al., 2022）彙整 36 篇研究，研究發現規律攝取橄欖油與全因死亡率、心血管疾病風險、第二型糖尿病風險呈負相關，且在整體飲食模式良好的前提下，橄欖油攝取與體重增加未觀察到顯著相關。
 
 ## 特殊族群：慢性病患者的使用原則
 
 以下資訊僅為飲食知識參考，**橄欖油不是藥物，不能取代任何醫療處置**。
 
-**糖尿病患者：** 現有文獻（包括 Schwingshackl et al., 2022）顯示每日 10–20g 橄欖油攝取與較低的第二型糖尿病發生風險有統計相關。但橄欖油的熱量密度高，若血糖控制需要精算熱量，務必將油脂計入每日總量。
+**糖尿病患者：** 現有文獻（包括 Martínez-González et al., 2022）顯示每日 10–20g 橄欖油攝取與較低的第二型糖尿病發生風險有統計相關。但橄欖油的熱量密度高，若血糖控制需要精算熱量，務必將油脂計入每日總量。
 
 **高血壓患者：** 部分介入性試驗觀察到橄欖油中的油酸與多酚成分與血壓指標的輕微變化相關，但效果量不一。任何飲食調整都不應取代已開立的降壓藥物，請在主治醫師評估下進行。
 
@@ -118,9 +120,9 @@ qc_gate:
 
 ## 延伸閱讀
 
-- [PREDIMED 研究完整解析：追蹤 7447 人如何改寫橄欖油科學史](/blog/predimed-study-complete-explainer-olive-oil-heart)
-- [橄欖油可以加熱嗎？發煙點與氧化穩定性完整指南](/blog/olive-oil-cooking-heat-stability-smoke-point)
-- [橄欖油多酚含量驗證：如何確認你的油真的含有標示的多酚](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
+- [橄欖油可以加熱嗎？科學解答：發煙點、氧化穩定性與高溫烹飪完整指南](/blog/olive-oil-cooking-heat-stability-smoke-point)
+- [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
 
 ---
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
