@@ -34,6 +34,8 @@ draft: false
 
 我們放下那瓶 PDO，帶走了右邊那瓶。不是因為便宜行事——而是因為我們知道，那個紅色的歐盟標章，保護的是橄欖的出生地，不是你喉嚨後面那道辛辣感。
 
+先給你一句話答案：**PDO/DOP/IGP 保護的是產地真實性，不是多酚含量。選油先看採收日期與 CoA 多酚數值，認證只是加分。**
+
 ## 讀完這篇，你會知道：
 
 · PDO / DOP / IGP 三個認證的具體差異，以及它們不保護什麼  
@@ -117,7 +119,7 @@ draft: false
 
 **風味一致性** — 同一個 PDO 區域、同一套規範，消費者對風味有一定預期。這在餐廳採購和料理搭配上有實用價值。
 
-對我而言，PDO/DOP 是一個**必要條件的加分項**——它確認了油的產地故事是真的。但它不是健康選購的終點，只是起點。
+對我們而言，PDO/DOP 是一個**必要條件的加分項**——它確認了油的產地故事是真的。但它不是健康選購的終點，只是起點。
 
 ---
 
@@ -126,13 +128,13 @@ draft: false
 雖然認證不保證多酚，但某些 PDO 產區因為品種和氣候的先天優勢，獲得高多酚的機率確實更高。
 
 **希臘 Kalamata PDO 和 Crete PDO**  
-Koroneiki 品種是全球公認多酚含量最高的商業品種之一。早摘的 Koroneiki 多酚可達 400–700mg/kg。希臘的 PDO 認證區域幾乎都以 Koroneiki 為主力，先天起點高。
+Koroneiki 品種是全球公認多酚含量最高的商業品種之一。早摘的 Koroneiki 多酚常見範圍 400–700mg/kg。希臘的 PDO 認證區域幾乎都以 Koroneiki 為主力，先天起點高。
 
 **義大利 Terra di Bari DOP**  
-以 Coratina 品種為主，是義大利多酚含量最高的品種之一，成熟油的多酚可達 500–800mg/kg。Coratina 的風味極具個性：濃烈的朝鮮薊香氣，苦感強悍，喉嚨後面的辣感能持續將近一分鐘——第一次嚐的人往往以為油壞了，那其實是高 Oleocanthal 的信號。但需注意採收時機——晚摘的 Coratina 同樣會降到 150mg/kg 以下，那股特有的野性也會消失。
+以 Coratina 品種為主，是義大利多酚含量最高的品種之一，成熟油的多酚常見範圍 500–800mg/kg。Coratina 的風味極具個性：濃烈的朝鮮薊香氣，苦感強悍，喉嚨後面的辣感持續較久——第一次嚐的人往往以為油壞了，那其實是高 Oleocanthal 的信號。但需注意採收時機——晚摘的 Coratina 多酚也會明顯下降，那股特有的野性也會消失。
 
 **西班牙 Priego de Córdoba DOP 和 Sierra Mágina DOP**  
-Picual 品種主導，以高油酸（Oleic Acid）和良好的氧化穩定性見稱，多酚含量穩定在 200–450mg/kg 範圍，是料理用途的可靠選擇。口感上帶著清晰的青草香與中等辣感，比 Koroneiki 溫和，比 Arbequina 有力——入門者容易接受，進階者不嫌淡。
+Picual 品種主導，以高油酸（Oleic Acid）和良好的氧化穩定性見稱，多酚含量常見範圍 200–450mg/kg，是料理用途的可靠選擇。口感上帶著清晰的青草香與中等辣感，比 Koroneiki 溫和，比 Arbequina 有力——入門者容易接受，進階者不嫌淡。
 
 即便在上述高潛力產區，採收時機和生產者的個別選擇，仍然是決定最終多酚含量的關鍵變數。一份來自生產者的 Certificate of Analysis（化驗報告）——上面有具體的 Total Polyphenols（總多酚）數值——永遠比任何認證標誌更直接。如何讀懂這份報告的每一個欄位，可參考[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)。
 
@@ -175,6 +177,6 @@ Koroneiki、Coratina、Picual、早摘的 Frantoio——這些品種有多酚的
 
 ### 延伸閱讀
 
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
-- [橄欖油的風土密碼：西班牙、希臘與義大利的同種橄欖，為何有截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
-- [橄欖油真偽鑑別：為什麼歐盟每年查獲數十噸摻假油？](/blog/olive-oil-fraud-detection-authentic-vs-fake)
+- [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
+- [橄欖油真偽怎麼鑑別？CoA、採收年份與五層防禦](/blog/olive-oil-fraud-detection-authentic-vs-fake)
