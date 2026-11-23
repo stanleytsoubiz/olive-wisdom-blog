@@ -13,6 +13,7 @@ const NAV_LINKS = [
   ...CATEGORY_COLUMNS.map((c) => ({ href: c.href.replace('/blog?', '/blog/?'), label: c.label })),
   { href: '/topics', label: '所有主題' },
   { href: '/evidence', label: '證據圖書館' },
+  { href: '/selection', label: '選品標準' },
   { href: '/about', label: '關於知橄' },
 ];
 

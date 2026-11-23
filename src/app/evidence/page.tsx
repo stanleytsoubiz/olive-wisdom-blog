@@ -552,7 +552,7 @@ export default function EvidencePage() {
           <SectionHead
             eyebrow="Selection Criteria"
             title="選油標準：每一條都追溯到標準"
-            intro="未來本站推薦的每一支油，都要通過以下標準。標準的每一條都追溯到本頁的 IOC／Codex／EFSA 來源，而不是「我們覺得好」。選油頁上線後，將在此連結。"
+            intro="未來本站推薦的每一支油，都要通過以下標準。標準的每一條都追溯到本頁的 IOC／Codex／EFSA 來源，而不是「我們覺得好」。完整選品標準、評選流程與公正原則，見「選品標準」頁：https://olive-wisdom.com/selection"
           />
           <DataTable
             headers={['選油標準', '追溯來源', '門檻']}
