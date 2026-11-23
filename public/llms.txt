@@ -1,6 +1,6 @@
 # 知橄生活 Olive Wisdom — llms.txt
 # https://olive-wisdom.com
-# Last updated: 2026-11-22 | 55 articles indexed + evidence library
+# Last updated: 2026-11-23 | 58 articles indexed + evidence library
 
 ## About This Site
 
@@ -133,6 +133,9 @@ reader education, and evidence-safe answer extraction:
 - https://olive-wisdom.com/blog/olive-oil-gift-guide-how-to-choose
 - https://olive-wisdom.com/blog/olive-oil-polyphenol-tiers-250-500-1000
 - https://olive-wisdom.com/blog/olive-oil-terroir-tour-andalusia-crete-tuscany
+- https://olive-wisdom.com/blog/olive-oil-how-its-made-harvest-to-bottle
+- https://olive-wisdom.com/blog/olive-oil-world-map-production-consumption
+- https://olive-wisdom.com/blog/olio-nuovo-unfiltered-olive-oil-guide
 
 ## Authoritative Sources We Cite
 
