@@ -1,15 +1,20 @@
+# Redirects — read by both Cloudflare Pages and the Workers runtime.
+# Order (2026-11-22, OpenNext migration): non-splat rules first, splat
+# rules after — wrangler's recommendation (a splat rule listed first can
+# shadow the specific rules below it). Semantics unchanged from before.
 # Legacy /posts/ URLs — kept for old external links only. No internal link
 # in content/posts/ uses /posts/ any more (all rewritten to /blog/ on
 # 2026-11-22, and scripts/build-posts-data.mjs fails the build if one
 # reappears). Keep this rule so old shared links don't 404.
-/posts/* /blog/:splat 301
 # Trust pages merged into /about (2026-11-22 consolidation)
 /authority /about 301
 /editorial-standards /about 301
-# Tag pages merged into /topics (2026-11-22 consolidation)
-/tags/* /topics 301
 # Slug renames — 301 permanent redirects (single hop: the old predimed
 # slug goes straight to /blog/, not via its trailing-slash variant)
 /blog/predimed-study-explained /blog/ 301
 /blog/predimed-study-explained/ /blog/ 301
+# Splats last
+/posts/* /blog/:splat 301
+# Tag pages merged into /topics (2026-11-22 consolidation)
+/tags/* /topics 301
 # /* /index.html 200
