@@ -9,6 +9,7 @@ export const dynamic = 'force-static';
 // (Dates verified from git history, 2026-11-22.)
 const STATIC_PAGE_DATES: Record<string, string> = {
   '/about': '2026-11-22',
+  '/selection': '2026-11-22',
   '/privacy': '2026-11-22',
   '/terms': '2026-11-22',
   '/contact': '2026-06-04',
@@ -58,6 +59,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: latestPostDate,
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: canonicalUrl('/selection'),
+      lastModified: new Date(STATIC_PAGE_DATES['/selection']),
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: canonicalUrl('/contact'),
