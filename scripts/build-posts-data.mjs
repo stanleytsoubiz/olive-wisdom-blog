@@ -43,6 +43,10 @@ async function main() {
   // /blog/ 301 in public/_redirects exists only for old external links.
   // Fail loudly here so a bad link never ships.
   const legacyLinkViolations = [];
+  // Build guard: affiliate marketing is paused (2026-11-22) — no article may
+  // claim affiliate links or carry an affiliate tracking tag. Fail loudly so
+  // a paused-program claim never ships.
+  const affiliateViolations = [];
   for (const fileName of fileNames) {
     const fullPath = path.join(postsDirectory, fileName);
     const raw = fs.readFileSync(fullPath, 'utf8');
@@ -50,12 +54,20 @@ async function main() {
       const count = raw.split('/posts/').length - 1;
       legacyLinkViolations.push(`${fileName} (${count}×)`);
     }
+    if (raw.includes('本文含聯盟行銷連結') || raw.includes('tag=olivewisdom')) {
+      affiliateViolations.push(fileName);
+    }
     const { data, content } = await parseFrontmatter(raw);
     posts.push({ ...data, content });
   }
   if (legacyLinkViolations.length > 0) {
     console.error('[build-posts-data] ERROR: legacy /posts/ links found — rewrite them to /blog/:');
     for (const v of legacyLinkViolations) console.error(`  - ${v}`);
+    process.exit(1);
+  }
+  if (affiliateViolations.length > 0) {
+    console.error('[build-posts-data] ERROR: affiliate claims found while affiliate marketing is paused — remove the claim / tracking tag:');
+    for (const v of affiliateViolations) console.error(`  - ${v}`);
     process.exit(1);
   }
 

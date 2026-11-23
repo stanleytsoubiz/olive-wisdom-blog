@@ -168,17 +168,7 @@ Koroneiki、Coratina、Picual、早摘的 Frantoio——這些品種有多酚的
 
 ---
 
-## 文中提及的 PDO/DOP 認證橄欖油（知橄選品）
 
-如果你想從認證產區的早摘油開始嘗試，以下三瓶都附有第三方 CoA 且多酚含量公開：
-
-- [【待補】Kalamata PDO 早摘 Koroneiki（多酚 ≥400mg/kg）](#)
-- [【待補】Terra di Bari DOP Coratina 早摘（多酚 ≥500mg/kg）](#)
-- [【待補】Priego de Córdoba DOP Picual（多酚 ≥300mg/kg）](#)
-
-*B7 執行：請在聯盟帳號就緒後，將以上 `#` 佔位符替換為 Amazon Associates (TW) 或 momo 聯盟的實際產品連結，並確認所選產品確實具備 PDO/DOP 認證及可查 CoA。*
-
----
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
