@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Suspense } from 'react';
 import { getAllPosts } from '@/lib/posts';
-import { getImages, getHeroImage, getPostImageUrl, type ImagesData } from '@/lib/images';
+import { getImages, getHeroImage } from '@/lib/images';
 import type { Metadata } from 'next';
 import BlogFilter from '@/components/BlogFilter';
 import SearchBar from '@/components/SearchBar';

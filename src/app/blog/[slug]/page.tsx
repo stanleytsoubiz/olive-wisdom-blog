@@ -166,7 +166,15 @@ function markdownToHtml(md: string): string {
       closeList(); closeBlockquote();
       inTable = true;
       const cells = line.split('|').filter(c => c.trim()).map(c => c.trim());
-      if (/^[-:\s|]+$/.test(line.replace(/\|/g, ''))) {
+      // Table separator row: after removing pipes, only -, : and whitespace
+      // remain. Written as a char-set test, NOT a regex character-class
+      // literal: Tailwind's content scanner would read such a literal as
+      // an arbitrary-property class and emit invalid CSS, which Turbopack
+      // (Next 16's default bundler) refuses to parse. Do not reintroduce
+      // the bracket form here, not even inside a comment.
+      const stripped = line.replace(/\|/g, '');
+      const isSeparatorRow = stripped.length > 0 && [...stripped].every(c => '-: \t\r'.includes(c));
+      if (isSeparatorRow) {
         // separator row — make previous row a header
         if (tableRows.length > 0) {
           const lastRow = tableRows[tableRows.length - 1];

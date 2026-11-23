@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,8 +17,14 @@ export default function BlogFilter({ posts, imagesData }: Props) {
   const searchParams = useSearchParams();
   const initialCat   = searchParams.get('cat') || '';
   const [activeCat, setActiveCat] = useState(initialCat);
-
-  useEffect(() => { if (initialCat) setActiveCat(initialCat); }, [initialCat]);
+  // Sync when ?cat= changes without a remount: adjust state during render
+  // (React 19 recommended pattern — NOT a setState-in-effect, which the
+  // React 19 eslint plugin now flags as an error).
+  const [prevCat, setPrevCat] = useState(initialCat);
+  if (prevCat !== initialCat) {
+    setPrevCat(initialCat);
+    setActiveCat(initialCat);
+  }
 
   // NOTE: search is NOT filtered here. All search goes through /search
   // (pagefind full-text index); /blog only filters by category, so there

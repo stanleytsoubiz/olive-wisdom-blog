@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
 import SearchClient from './SearchClient';
 
 export const dynamic = 'force-static';
