@@ -132,7 +132,7 @@ Tom Mueller 在其深度調查著作《Extra Virginity》（2011）中，記錄�
 
 > **選購原則**：以下為知橄生活編輯團隊依 IOC 標準篩選之參考通路，購買前請自行確認採收年份與 CoA 報告。
 
-- 🫒 [在 Amazon.co.jp 搜尋 NYIOOC 獲獎橄欖油](https://www.amazon.co.jp/s?k=extra+virgin+olive+oil+award&tag=olivewisdom-22) — 日本亞馬遜可寄台灣，部分品牌有完整認證資訊
+- 🫒 [在 Amazon.co.jp 搜尋 NYIOOC 獲獎橄欖油](https://www.amazon.co.jp/s?k=extra+virgin+olive+oil+award) — 日本亞馬遜可寄台灣，部分品牌有完整認證資訊
 - 🫒 [Jason's Market Place 進口食品](https://www.jasons.com.tw/) — 台灣實體通路，可現場確認標籤
 
 ---
