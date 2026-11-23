@@ -12,7 +12,14 @@
  * tree is therefore never left dirty by a build.
  *
  *   node scripts/build.mjs static   # npm run build:  next build + pagefind
- *   node scripts/build.mjs cf       # npm run build:cf: opennextjs-cloudflare build
+ *   node scripts/build.mjs server   # OpenNext buildCommand only: posts-data
+ *                                   #   + covers + `next build` with
+ *                                   #   OW_BUILD_TARGET=cf (server output).
+ *                                   #   Never call this directly to deploy.
+ *   node scripts/build.mjs cf       # npm run build:cf: opennextjs-cloudflare
+ *                                   #   build (which runs the `server` mode
+ *                                   #   above via open-next.config.ts
+ *                                   #   buildCommand) + pagefind-opennext
  *
  * If the process itself is killed mid-build (SIGKILL, machine crash), the
  * finally block cannot run and images.json may be left with .webp refs.
@@ -62,8 +69,8 @@ function run(label, command, args) {
 
 function main() {
   const mode = process.argv[2] || 'static';
-  if (mode !== 'static' && mode !== 'cf') {
-    console.error('[build] Usage: node scripts/build.mjs <static|cf>');
+  if (mode !== 'static' && mode !== 'cf' && mode !== 'server') {
+    console.error('[build] Usage: node scripts/build.mjs <static|cf|server>');
     process.exit(1);
   }
 
@@ -81,13 +88,27 @@ function main() {
 
   let exitCode = 0;
   try {
-    run('build-posts-data', process.execPath, ['scripts/build-posts-data.mjs']);
-    run('optimize-covers', process.execPath, ['scripts/optimize-covers-build.mjs']);
-    if (mode === 'static') {
+    if (mode === 'server') {
+      // Invoked by OpenNext as its buildCommand (open-next.config.ts).
+      // OW_BUILD_TARGET=cf makes next.config.js produce the server
+      // build; spawnSync children inherit process.env, so setting it
+      // here is enough. The prepare steps run here (not in `cf` mode)
+      // so they execute exactly once per OpenNext build.
+      process.env.OW_BUILD_TARGET = 'cf';
+      run('build-posts-data', process.execPath, ['scripts/build-posts-data.mjs']);
+      run('optimize-covers', process.execPath, ['scripts/optimize-covers-build.mjs']);
+      run('next build (server)', 'npx', ['next', 'build']);
+    } else if (mode === 'static') {
+      run('build-posts-data', process.execPath, ['scripts/build-posts-data.mjs']);
+      run('optimize-covers', process.execPath, ['scripts/optimize-covers-build.mjs']);
       run('next build', 'npx', ['next', 'build']);
       run('pagefind', 'npx', ['pagefind', '--site', 'out', '--output-path', 'out/pagefind']);
     } else {
+      // cf: OpenNext runs the prepare steps + server build itself via
+      // buildCommand; afterwards the search index is rebuilt against
+      // the prerendered server HTML (no out/ exists in this pipeline).
       run('opennextjs-cloudflare build', 'npx', ['opennextjs-cloudflare', 'build']);
+      run('pagefind-opennext', process.execPath, ['scripts/pagefind-opennext.mjs']);
     }
   } catch (err) {
     console.error('[build] ERROR:', err.message);
