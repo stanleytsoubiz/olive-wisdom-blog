@@ -223,7 +223,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* 追蹤 — plain text link to the homepage follow section */}
             <div>
               <p className="text-white font-semibold text-sm mb-3">追蹤知橄生活</p>
-              <p className="text-xs text-olive-300 mb-4 leading-relaxed">新文章公布在網站與官方社群，歡迎常回來看看</p>
+              <p className="text-xs text-olive-300 mb-4 leading-relaxed">新文章公布在網站上，官方社群與 LINE 正在籌備中，歡迎常回來看看</p>
               <Link
                 href="/#follow"
                 className="text-sm font-medium text-gold-400 hover:text-gold-300 transition-colors"
