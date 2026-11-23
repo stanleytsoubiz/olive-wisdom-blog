@@ -156,7 +156,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
             {/* CTA — plain text link to the homepage follow section */}
             <Link
-              href="/#subscribe"
+              href="/#follow"
               className="hidden md:inline-flex items-center gap-1 text-olive-700 hover:text-olive-900 text-sm font-medium transition-colors"
             >
               追蹤知橄生活 →
@@ -223,12 +223,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* 追蹤 — plain text link to the homepage follow section */}
             <div>
               <p className="text-white font-semibold text-sm mb-3">追蹤知橄生活</p>
-              <p className="text-xs text-olive-300 mb-4 leading-relaxed">新文章公布在網站與官方社群・歡迎加入讀者名單</p>
+              <p className="text-xs text-olive-300 mb-4 leading-relaxed">新文章公布在網站與官方社群，歡迎常回來看看</p>
               <Link
-                href="/#subscribe"
+                href="/#follow"
                 className="text-sm font-medium text-gold-400 hover:text-gold-300 transition-colors"
               >
-                加入讀者名單 →
+                追蹤知橄生活 →
               </Link>
             </div>
           </div>
