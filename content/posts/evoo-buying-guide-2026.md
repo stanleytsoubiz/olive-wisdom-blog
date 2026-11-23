@@ -110,7 +110,7 @@ TPC（Total Polyphenol Content，總多酚含量）是 CoA 中最關鍵的健康
 | 標準 | 100–249 mg/kg | 日常料理選擇 |
 | 基礎 | <100 mg/kg | 多數調配油或過期油的實際範圍 |
 
-EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 20ml、多酚含量 ≥250 mg/kg 的 EVOO，其中羥基酪醇（Hydroxytyrosol）及其衍生物合計 ≥5mg，與保護 LDL 免受氧化有相關（EFSA Journal 9(4):2033）。關於如何驗證標籤上的多酚聲稱是否有依據，可參考[多酚含量的真相：如何驗證橄欖油的多酚數據](/blog/olive-oil-polyphenol-content-how-to-verify)。
+EFSA（歐洲食品安全局）2011 年的科學意見書確認：每日攝取 20ml、多酚含量 ≥250 mg/kg 的 EVOO，其中羥基酪醇（Hydroxytyrosol）及其衍生物合計 ≥5mg，與保護 LDL 免受氧化有相關（EFSA Journal 9(4):2033）。關於如何驗證標籤上的多酚聲稱是否有依據，可參考[橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)。
 
 ### 如何取得 CoA
 
