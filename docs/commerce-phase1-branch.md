@@ -20,6 +20,15 @@ placeholder/test data.
 | Product page skeleton + Buy Now (hosted checkout, no cart) | `src/app/shop/[slug]/page.tsx`, `src/components/BuyNowButton.tsx` |
 | Payment-result landing page | `src/app/checkout/result/page.tsx` |
 | Sandbox test chain | `scripts/test-ecpay-chain.mjs` (+ `.entry.ts`) |
+| Transactional email (Resend): mail module + order-confirmation / shipping-notice templates | `src/lib/mail/` (templates in `src/lib/mail/templates/`) |
+
+Email wiring: the ECPay webhook sends the order confirmation only on the
+fresh pending → paid transition (duplicate callbacks do not re-send).
+`sendShippingNotification` + template are ready; the call site waits for a
+fulfilment flow that can transition an order to `shipped` (none in Phase 1).
+**Env gate:** without `RESEND_API_KEY` every send is a logged no-op — the
+current expected state until Resend signup + domain verification finish
+and the key is set in the Worker env.
 
 ## Test chain result (2026-11-22)
 
@@ -52,3 +61,6 @@ deployed to a test URL — do it together with the OpenNext workers.dev test).
 8. Store pages required by ECPay review: product/refund/privacy/terms/contact
    (privacy/terms/contact exist; a commerce-specific refund policy page is
    still to be written).
+9. Resend account + olive-wisdom.com domain verification (owner, in
+   browser) and `RESEND_API_KEY` set in the Worker env — until then all
+   transactional email stays a logged no-op by design.
