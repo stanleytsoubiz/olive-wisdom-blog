@@ -124,7 +124,7 @@ draft: false
 
 **如果只記得一件事：選購橄欖油時，先問採收日期而非「最佳食用日期」，再確認包裝是深色玻璃或馬口鐵——我們團隊認為，這兩個問題的答案，比任何獲獎標籤更能預測你手上那瓶油的多酚實際殘留量。**
 
-選購時如何解讀多酚品質分級與 CoA 報告，可參考[2026 橄欖油多酚品質指數](/blog/2026-evoo-quality-polyphenol-index)。購入後如何確認你手中的油仍在有效多酚範圍內，可閱讀[橄欖油保存期限與氧化判斷指南](/blog/olive-oil-shelf-life-oxidation-storage)。
+選購時如何解讀多酚品質分級與 CoA 報告，可參考[2026 橄欖油品質指數：多酚分級怎麼看？四個等級與 CoA 判讀](/blog/2026-evoo-quality-polyphenol-index)。購入後如何確認你手中的油仍在有效多酚範圍內，可閱讀[橄欖油保存期限與氧化判斷指南](/blog/olive-oil-shelf-life-oxidation-storage)。
 
 ## 結語：把那枚一年半前的金牌從決策清單上拿下來
 
