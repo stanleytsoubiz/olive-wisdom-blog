@@ -291,7 +291,7 @@ export default function AboutPage() {
           <p className="text-olive-600 text-xs font-medium tracking-widest uppercase mb-3">Learning Paths</p>
           <h2 className="text-3xl font-bold text-olive-800 mb-4">學習路徑：先懂證據，再選油</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-2xl">
-            把 {articleCount} 篇文章整理成五條路徑：每一條都從入門讀到研究級，讀完就能自己判斷一瓶油。健康知識最容易被誇大，所以我們先把證據分層——哪些結論來自大型人體研究，哪些只是機理或初步觀察，哪些不能被說成治療或預防疾病。
+            本站 {articleCount} 篇文章全數編入五條路徑：每一條都從入門讀到研究級，讀完就能自己判斷一瓶油。健康知識最容易被誇大，所以我們先把證據分層——哪些結論來自大型人體研究，哪些只是機理或初步觀察，哪些不能被說成治療或預防疾病。
           </p>
 
           {/* 五條路徑 — 內容見 src/lib/learning-paths.ts */}

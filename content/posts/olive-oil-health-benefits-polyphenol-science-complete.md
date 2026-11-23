@@ -255,6 +255,6 @@ PREDIMED 研究在西班牙 Navarra 地區的子試驗中，針對 522 名受試
 
 - [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
 - [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
-- [多酚含量的真相：為什麼標籤上的數字，可能是您最重要的健康決策依據？](/blog/olive-oil-polyphenol-content-how-to-verify)
+- [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
 
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
