@@ -117,4 +117,4 @@ PREDIMED 的認知差距，不是奇蹟，是多年飲食模式累積出來的�
 
 - [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026)
 - [Oleocanthal 與大腦研究怎麼看？喉頭的嗆感與神經保護線索](/blog/oleocanthal-anti-inflammation-brain-protection)
-- [每日晨飲橄欖油：為什麼這個三分鐘儀式能重啟您一整天的代謝引擎？](/blog/morning-ritual-evoo-metabolism)
+- [每日晨飲橄欖油：三分鐘儀式，真的能重啟一整天的代謝嗎？](/blog/morning-ritual-evoo-metabolism)

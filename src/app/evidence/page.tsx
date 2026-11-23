@@ -403,6 +403,9 @@ export default function EvidencePage() {
           <p className="text-sm text-stone-500 leading-relaxed font-sans mt-6">
             本站實務：向任何實驗室索取報告時，要求（a）報告日期所屬期間的現行 IOC 名單登載與檢驗類型，（b）ISO 17025 認可範圍涵蓋該特定方法。去年的名單不夠。
           </p>
+          <p className="text-sm text-stone-500 leading-relaxed font-sans mt-3 border-l-2 border-olive-300 pl-4">
+            時效註記：現行名單（Rev. 28）效期至 2026-11-30。下一年度名單由 IOC 於 11 月會議後發布；新名單一發布，本頁即同步更新。在新名單發布前引用本頁名單時，請留意上述效期。
+          </p>
         </div>
       </section>
 

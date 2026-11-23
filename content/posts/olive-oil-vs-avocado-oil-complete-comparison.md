@@ -209,7 +209,7 @@ draft: false
 
 明天早上炒青菜時，倒一湯匙看一眼。讓那股喉嚨後段的灼熱感告訴你，這瓶油的多酚還在工作。
 
-橄欖油七大健康功效的完整科學文獻，可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)。選購具有多酚驗證的優質 EVOO，可參考[橄欖油選購完全指南 2026：從超市到頂級莊園油，一次學會不踩雷的五步驟框架](/blog/olive-oil-complete-buying-guide-2026)。
+橄欖油七大健康功效的完整科學文獻，可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)。選購具有多酚驗證的優質 EVOO，可參考[橄欖油選購完全指南 2026：從超市到莊園油，五步驟自己判斷](/blog/olive-oil-complete-buying-guide-2026)。
 
 ---
 
