@@ -22,7 +22,7 @@
     "ws": "^8.20.0"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.0.0",
+    "@opennextjs/cloudflare": "^1.20.18",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
