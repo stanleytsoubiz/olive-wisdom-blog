@@ -82,6 +82,8 @@ export const LEARNING_PATHS: LearningPath[] = [
       { stage: '延伸', title: '送禮送橄欖油怎麼挑', slug: 'olive-oil-gift-guide-how-to-choose' },
       { stage: '延伸', title: '橄欖油是怎麼做成的', slug: 'olive-oil-how-its-made-harvest-to-bottle' },
       { stage: '延伸', title: '新油季與未過濾橄欖油', slug: 'olio-nuovo-unfiltered-olive-oil-guide' },
+      { stage: '延伸', title: '比賽金牌怎麼讀', slug: 'olive-oil-competitions-awards-how-to-read' },
+      { stage: '延伸', title: '有機標章保證什麼', slug: 'organic-olive-oil-label-what-it-guarantees' },
     ],
   },
   {
@@ -107,6 +109,7 @@ export const LEARNING_PATHS: LearningPath[] = [
       { stage: '延伸', title: '品種指南：Picual、Koroneiki、Frantoio', slug: 'olive-oil-varieties-picual-koroneiki-frantoio-guide' },
       { stage: '延伸', title: '三大產地巡禮', slug: 'olive-oil-terroir-tour-andalusia-crete-tuscany' },
       { stage: '延伸', title: '世界橄欖油地圖：產量與消費', slug: 'olive-oil-world-map-production-consumption' },
+      { stage: '延伸', title: '產區警訊：乾旱與 Xylella', slug: 'olive-regions-under-threat-drought-xylella' },
     ],
   },
   {
