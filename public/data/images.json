@@ -484,19 +484,34 @@
       "source": "unsplash"
     },
     "olive-oil-how-its-made-harvest-to-bottle": {
-      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olive-oil-how-its-made-harvest-to-bottle.jpg",
       "alt": "Olive oil with fresh olives",
-      "source": "unsplash"
+      "source": "custom"
     },
     "olive-oil-world-map-production-consumption": {
-      "url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olive-oil-world-map-production-consumption.jpg",
       "alt": "Mediterranean olive grove",
-      "source": "unsplash"
+      "source": "custom"
     },
     "olio-nuovo-unfiltered-olive-oil-guide": {
-      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olio-nuovo-unfiltered-olive-oil-guide.jpg",
       "alt": "Olive oil in the kitchen",
-      "source": "unsplash"
+      "source": "custom"
+    },
+    "olive-regions-under-threat-drought-xylella": {
+      "url": "/images/covers/olive-regions-under-threat-drought-xylella.jpg",
+      "alt": "Drought-stricken olive grove with cracked dry earth",
+      "source": "custom"
+    },
+    "olive-oil-competitions-awards-how-to-read": {
+      "url": "/images/covers/olive-oil-competitions-awards-how-to-read.jpg",
+      "alt": "Cobalt-blue tasting glasses on an olive oil judging table",
+      "source": "custom"
+    },
+    "organic-olive-oil-label-what-it-guarantees": {
+      "url": "/images/covers/organic-olive-oil-label-what-it-guarantees.jpg",
+      "alt": "Lush organic olive grove with wildflowers in morning light",
+      "source": "custom"
     }
   },
   "fallback": {
