@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { getAllPosts } from '@/lib/posts';
 import { LEARNING_PATHS, POLYPHENOL_PATH, GUARDRAIL_QUESTIONS } from '@/lib/learning-paths';
 import { CATEGORY_COLUMNS } from '@/lib/categories';
@@ -15,8 +16,104 @@ export const metadata: Metadata = {
     description: '由科學審核委員會、歷史文化研究組、感官鑑賞認證組組成的專業編輯團隊，引用來源與證據等級見證據圖書館。',
     url: 'https://olive-wisdom.com/about',
     type: 'website',
+    images: [
+      {
+        url: 'https://olive-wisdom.com/hero-grove.webp',
+        width: 1200,
+        height: 630,
+        alt: '關於知橄生活 Olive Wisdom',
+      },
+    ],
   },
 };
+
+/* Line icons (Lucide-style stroke paths) — emoji retired from the UI
+   (blueprint 3.5-4); one icon language across the whole page. */
+const ICON_PATHS: Record<string, ReactNode> = {
+  flask: (
+    <>
+      <path d="M10 2v7.5L4.6 19a2 2 0 0 0 1.8 3h11.2a2 2 0 0 0 1.8-3L14 9.5V2" />
+      <path d="M8.5 2h7" />
+      <path d="M7 15h10" />
+    </>
+  ),
+  pen: (
+    <>
+      <path d="M12 20h9" />
+      <path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L8 18l-4.2 1.2L5 15Z" />
+    </>
+  ),
+  home: (
+    <>
+      <path d="M3 10.5L12 3l9 7.5" />
+      <path d="M5 9.5V21h14V9.5" />
+      <path d="M9.5 21v-6h5v6" />
+    </>
+  ),
+  landmark: (
+    <>
+      <path d="M12 2L2 7h20L12 2z" />
+      <path d="M6 11v7" />
+      <path d="M10 11v7" />
+      <path d="M14 11v7" />
+      <path d="M18 11v7" />
+      <path d="M2 18h20" />
+      <path d="M2 22h20" />
+    </>
+  ),
+  trophy: (
+    <>
+      <path d="M8 21h8" />
+      <path d="M12 17v4" />
+      <path d="M7 4h10v6a5 5 0 0 1-10 0V4z" />
+      <path d="M7 6H4a2 2 0 0 0 0 4h3" />
+      <path d="M17 6h3a2 2 0 0 1 0 4h-3" />
+    </>
+  ),
+  sparkles: (
+    <>
+      <path d="M12 3l1.9 5.7 5.7 1.9-5.7 1.9L12 18.2l-1.9-5.7L4.4 10.6l5.7-1.9L12 3z" />
+      <path d="M19 3v3" />
+      <path d="M20.5 4.5h-3" />
+    </>
+  ),
+  book: (
+    <>
+      <path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2V4z" />
+      <path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7V4z" />
+    </>
+  ),
+  ban: (
+    <>
+      <circle cx="12" cy="12" r="9.5" />
+      <path d="M5.5 5.5l13 13" />
+    </>
+  ),
+  cap: (
+    <>
+      <path d="M22 9L12 4 2 9l10 5 10-5z" />
+      <path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" />
+      <path d="M22 9v5" />
+    </>
+  ),
+};
+
+function AboutIcon({ name, className }: { name: string; className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      {ICON_PATHS[name]}
+    </svg>
+  );
+}
 
 export default function AboutPage() {
   // Article count is computed from the content bundle so it never goes
@@ -42,7 +139,7 @@ export default function AboutPage() {
             description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA、IOC 等權威機構研究文獻的橄欖油知識平台。',
             knowsAbout: [
               '橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚 Polyphenols',
-              '羥基酪醇 Hydroxytyrosol', 'PREDIMED 研究', '橄欖油感官評鑑 IOC', '抗老化科學',
+              '羥基酪醇 Hydroxytyrosol', 'PREDIMED 研究', '橄欖油感官評鑑 IOC', '證據分級判讀',
               '食品科學', '分子生物學', '營養流行病學',
             ],
             sameAs: [
@@ -74,7 +171,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-8">
           <div className="max-w-5xl mx-auto">
             <p className="text-gold-400 text-[10px] font-sans font-semibold tracking-[0.35em] uppercase mb-3">About Us</p>
-            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2">關於知橄生活</h1>
+            <h1 className="font-serif text-4xl md:text-[2.5rem] font-bold text-white tracking-tight mb-2">關於知橄生活</h1>
             <p className="text-olive-200 text-base font-sans">真正的選擇，始於真正的理解。</p>
           </div>
         </div>
@@ -91,7 +188,7 @@ export default function AboutPage() {
                 橄欖油的世界，充斥著行銷話術與知識斷層。我們的讀者——35 歲以上、重視健康品質、願意深入理解的知性人士——值得更好的資訊環境。
               </p>
               <p>
-                知橄生活不是另一個「10 個橄欖油好處」的清單部落格。我們是一個知識深潛基地，帶您了解「羥基酪醇如何透過 Nrf2 通路在 DNA 層級建立抗老防護」這種層次的知識。
+                知橄生活不是另一個「10 個橄欖油好處」的清單部落格。我們是一個知識深潛基地，帶你了解羥基酪醇與 Nrf2 通路這類機制研究能說到哪裡、不能說到哪裡——這種層次的知識。
               </p>
               <p>
                 每一篇文章，都錨定在可追溯的學術文獻上；每一個健康聲稱，都需要 PREDIMED、哈佛醫學院、EFSA 的研究數據支撐。
@@ -102,12 +199,14 @@ export default function AboutPage() {
             <h3 className="text-lg font-bold text-olive-800 mb-6">品牌三位一體</h3>
             <div className="space-y-5">
               {[
-                { icon: '🔬', title: '科學嚴謹', desc: '每個主張必須可溯源至學術文獻（PREDIMED、哈佛、EFSA、IOC）' },
-                { icon: '✍️', title: '知性優雅', desc: '語言如散文，不像說明書；如導師，不像廣告' },
-                { icon: '🏡', title: '生活美學', desc: '將知識轉化為可實踐的生活儀式感' },
+                { icon: 'flask', title: '科學嚴謹', desc: '每個主張必須可溯源至學術文獻（PREDIMED、哈佛、EFSA、IOC）' },
+                { icon: 'pen', title: '知性優雅', desc: '語言如散文，不像說明書；如導師，不像廣告' },
+                { icon: 'home', title: '生活美學', desc: '將知識轉化為可實踐的生活儀式感' },
               ].map((item) => (
                 <div key={item.title} className="flex gap-4">
-                  <span className="text-2xl shrink-0">{item.icon}</span>
+                  <span className="shrink-0 w-10 h-10 rounded-full bg-olive-100 text-olive-700 flex items-center justify-center">
+                    <AboutIcon name={item.icon} className="w-5 h-5" />
+                  </span>
                   <div>
                     <p className="font-bold text-olive-700 mb-1">{item.title}</p>
                     <p className="text-sm text-gray-500">{item.desc}</p>
@@ -128,14 +227,16 @@ export default function AboutPage() {
             {(['culture', 'science', 'health', 'lifestyle'] as const).map((key) => {
               const col = CATEGORY_COLUMNS.find((c) => c.key === key)!;
               const meta: Record<string, { icon: string; desc: string }> = {
-                culture: { icon: '🏛️', desc: '橄欖油與文明的交織敘事；荷馬史詩、腓尼基貿易、考古新發現' },
-                science: { icon: '🔬', desc: '分子醫學、多酚機制、學術研究解析；深度科普' },
-                health: { icon: '🏆', desc: '感官鑑賞、IOC 評分標準、產地風土、辨別真偽' },
-                lifestyle: { icon: '✨', desc: '晨間儀式、烹飪技法、護膚程序、藍區飲食' },
+                culture: { icon: 'landmark', desc: '橄欖油與文明的交織敘事；荷馬史詩、腓尼基貿易、考古新發現' },
+                science: { icon: 'flask', desc: '分子醫學、多酚機制、學術研究解析；深度科普' },
+                health: { icon: 'trophy', desc: '感官鑑賞、IOC 評分標準、產地風土、辨別真偽' },
+                lifestyle: { icon: 'sparkles', desc: '晨間儀式、烹飪技法、護膚程序、藍區飲食' },
               };
               return (
                 <Link key={col.key} href={col.href} className="block bg-olive-700/50 rounded-xl p-5 border border-olive-600 hover:bg-olive-700 transition-colors">
-                  <span className="text-3xl">{meta[key].icon}</span>
+                  <span className="text-olive-200 block">
+                    <AboutIcon name={meta[key].icon} className="w-8 h-8" />
+                  </span>
                   <p className="text-xs text-olive-400 tracking-widest uppercase mt-2">{col.en}</p>
                   <h3 className="text-lg font-bold text-white mt-1 mb-2">{col.label}</h3>
                   <p className="text-sm text-olive-300 leading-relaxed">{meta[key].desc}</p>
@@ -161,7 +262,7 @@ export default function AboutPage() {
         <div className="space-y-10 mb-16">
           {[
             {
-              emoji: '🔬',
+              icon: 'flask',
               name: '科學審核委員會',
               role: 'Science Review Board',
               expertise: '食品化學 · 分子生物學 · 營養流行病學',
@@ -170,7 +271,7 @@ export default function AboutPage() {
               publicationsHref: '/evidence',
             },
             {
-              emoji: '🏛️',
+              icon: 'landmark',
               name: '歷史與文化研究組',
               role: 'Heritage Research Group',
               expertise: '地中海考古 · 食物文化史 · 古典文獻學',
@@ -178,7 +279,7 @@ export default function AboutPage() {
               publications: '涵蓋 3,000 年橄欖油文明史脈絡',
             },
             {
-              emoji: '🏆',
+              icon: 'trophy',
               name: '感官鑑賞認證組',
               role: 'Sensory Evaluation Unit',
               expertise: 'IOC 感官評鑑 · 產地風土分析 · 品質認證標準',
@@ -188,7 +289,9 @@ export default function AboutPage() {
           ].map((member) => (
             <div key={member.role} className="border-b border-stone-200 pb-10 last:border-0">
               <div className="flex items-start gap-6">
-                <div className="text-4xl shrink-0 mt-1">{member.emoji}</div>
+                <div className="shrink-0 mt-1 w-12 h-12 rounded-full bg-olive-100 text-olive-700 flex items-center justify-center">
+                  <AboutIcon name={member.icon} className="w-6 h-6" />
+                </div>
                 <div className="flex-1">
                   <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase mb-1">{member.role}</p>
                   <h3 className="font-bold text-olive-900 text-xl mb-1">{member.name}</h3>
@@ -215,7 +318,7 @@ export default function AboutPage() {
 
         {/* 引用機構信賴標章 */}
         <div className="border border-stone-200 bg-white px-8 py-6">
-          <p className="text-center text-xs text-olive-600 tracking-widest uppercase mb-6">引用來源與合作機構</p>
+          <p className="text-center text-xs text-olive-600 tracking-widest uppercase mb-6">引用來源機構</p>
           <div className="flex flex-wrap justify-center gap-4">
             {['PREDIMED Study', 'Harvard T.H. Chan', 'EFSA', 'IOC', 'NEJM', 'JAMA Internal Medicine', 'Frontiers in Nutrition', 'Nature Medicine'].map((org) => (
               <span key={org} className="bg-white text-olive-700 text-sm font-medium px-4 py-2 rounded-full border border-olive-200 shadow-sm">
@@ -231,12 +334,14 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold text-olive-800 mb-6 text-center">我們對讀者的承諾</h2>
         <div className="grid md:grid-cols-3 gap-0 border border-stone-200 divide-x divide-stone-200">
           {[
-            { icon: '📖', title: '引用透明', desc: '每篇文章附完整參考文獻，數字可追溯' },
-            { icon: '🚫', title: '不接業配', desc: '知橄生活不接受橄欖油品牌廣告，確保客觀立場' },
-            { icon: '🎓', title: '持續深耕', desc: '深度研究文章，依新證據定期更新' },
+            { icon: 'book', title: '引用透明', desc: '每篇文章附完整參考文獻，數字可追溯' },
+            { icon: 'ban', title: '不接業配', desc: '知橄生活不接受橄欖油品牌廣告，確保客觀立場' },
+            { icon: 'cap', title: '持續深耕', desc: '深度研究文章，依新證據定期更新' },
           ].map((item) => (
             <div key={item.title} className="px-8 py-6">
-              <span className="text-2xl">{item.icon}</span>
+              <span className="text-olive-600 block">
+                <AboutIcon name={item.icon} className="w-6 h-6" />
+              </span>
               <h3 className="font-bold text-olive-900 mt-3 mb-2">{item.title}</h3>
               <p className="text-sm text-stone-500 leading-relaxed">{item.desc}</p>
             </div>
@@ -274,13 +379,26 @@ export default function AboutPage() {
             {
               label: '更新與更正',
               title: '寫錯了就公開改，不靜默修改',
-              body: '科學是持續演進的。若文章發布後有新研究顯著推翻或修正既有觀點，我們承諾在 30 天內完成更新，並在文章末尾標註修訂日期與修訂摘要；若更正涉及實質性事實錯誤，會在文章頂部加上醒目的「更正說明」區塊。引用超過 3 年的研究數據會進入定期審查程序。若您發現事實錯誤或引用失效的連結，請透過聯絡頁面告訴我們，我們承諾在收到通知後的 7 個工作天內回覆。',
+              body: '科學是持續演進的。若文章發布後有新研究顯著推翻或修正既有觀點，我們承諾在 30 天內完成更新，並在文章末尾標註修訂日期與修訂摘要；若更正涉及實質性事實錯誤，會在文章頂部加上醒目的「更正說明」區塊。引用超過 3 年的研究數據會進入定期審查程序。若你發現事實錯誤或引用失效的連結，請透過聯絡頁面告訴我們，我們承諾在收到通知後的 7 個工作天內回覆。',
             },
           ].map((item) => (
             <div key={item.label} className="border-b border-stone-200 pb-8 last:border-0">
               <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase mb-2">{item.label}</p>
               <h3 className="font-bold text-olive-900 text-xl mb-3">{item.title}</h3>
-              <p className="text-sm text-stone-600 leading-relaxed">{item.body}</p>
+              <p className="text-sm text-stone-600 leading-relaxed">
+                {/* The corrections promise names the 聯絡頁面 — render that
+                    mention as a live link to /contact (audit P0-2) */}
+                {item.body.split('聯絡頁面').map((part, j, arr) => (
+                  <span key={j}>
+                    {part}
+                    {j < arr.length - 1 && (
+                      <Link href="/contact" className="text-olive-700 hover:text-olive-900 font-medium underline underline-offset-4">
+                        聯絡頁面
+                      </Link>
+                    )}
+                  </span>
+                ))}
+              </p>
             </div>
           ))}
         </div>
@@ -346,8 +464,8 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="bg-gradient-to-br from-olive-100 to-gold-50 py-16 px-6 text-center">
-        <h2 className="text-2xl font-bold text-olive-800 mb-4">開始您的知橄旅程</h2>
-        <p className="text-gray-500 mb-8">從一篇文章開始，讓科學與美學重新定義您對橄欖油的認識。</p>
+        <h2 className="text-2xl font-bold text-olive-800 mb-4">開始你的知橄旅程</h2>
+        <p className="text-gray-500 mb-8">從一篇文章開始，讓科學與美學重新定義你對橄欖油的認識。</p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Link
             href="/blog"
@@ -359,7 +477,7 @@ export default function AboutPage() {
             href="/#follow"
             className="inline-block border-2 border-olive-700 text-olive-700 hover:bg-olive-700 hover:text-white font-semibold px-8 py-3 rounded-xl transition-colors"
           >
-            追蹤知橄生活 🫒
+            追蹤知橄生活
           </Link>
         </div>
       </section>

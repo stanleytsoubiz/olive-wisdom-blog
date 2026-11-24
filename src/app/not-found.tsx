@@ -19,7 +19,7 @@ export default function NotFound() {
           頁面不存在
         </p>
 
-        <h1 className="text-6xl font-bold text-olive-800 mb-4">404</h1>
+        <h1 className="font-serif text-6xl font-bold text-olive-800 mb-4">404</h1>
 
         <p className="text-xl text-gray-600 mb-3 font-serif">
           這片橄欖園的小徑還未開闢…

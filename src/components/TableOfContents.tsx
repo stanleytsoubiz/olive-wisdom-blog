@@ -67,8 +67,8 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
         {progress > 20 && (
           <button
             onClick={() => setMobileOpen(true)}
-            style={{ bottom: 'max(24px, env(safe-area-inset-bottom, 24px))' }}
-            className="fixed right-4 md:right-6 z-40
+            style={{ bottom: 'max(84px, env(safe-area-inset-bottom, 84px))' }}
+            className="fixed right-4 md:right-6 z-40 md:!bottom-6
                        bg-olive-700 text-white rounded-full
                        w-11 h-11 flex items-center justify-center
                        shadow-lg shadow-olive-900/20
@@ -85,13 +85,14 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
         {/* Slide-up drawer */}
         {mobileOpen && (
           <>
-            {/* Backdrop */}
+            {/* Backdrop — z raised above the mobile BottomNav (z-50) so the
+                open drawer behaves as a true modal over it */}
             <div
-              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+              className="fixed inset-0 z-[65] bg-black/40 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
             {/* Drawer */}
-            <div className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-3xl shadow-2xl
+            <div className="fixed bottom-0 left-0 right-0 z-[70] bg-white rounded-t-3xl shadow-2xl
                             p-6 pb-10 max-h-[70vh] overflow-y-auto">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-sm font-bold text-olive-800">文章目錄</p>

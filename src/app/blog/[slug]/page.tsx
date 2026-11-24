@@ -10,6 +10,8 @@ import TableOfContents from '@/components/TableOfContents';
 import ShareButtons from '@/components/ShareButtons';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 import ArticleNewsletterCTA from '@/components/ArticleNewsletterCTA';
+import VerdictCard from '@/components/VerdictCard';
+import { getVerdict } from '@/lib/verdicts';
 
 export const dynamic = 'force-static';
 
@@ -133,12 +135,12 @@ function markdownToHtml(md: string): string {
       closeList(); closeTable(); closeBlockquote();
       const _h2t = line.replace(/^## /, '');
       const _h2id = 'h-' + _h2t.replace(/[^\w\u4e00-\u9fff]/g,'').slice(0,20).toLowerCase() + '-' + result.length;
-      result.push(`<h2 id="${_h2id}" class="text-2xl font-bold text-olive-800 mt-12 mb-4">${inline(_h2t)}</h2>`);
+      result.push(`<h2 id="${_h2id}" class="font-serif text-2xl font-bold text-olive-800 mt-[2.2em] mb-[0.8em]">${inline(_h2t)}</h2>`);
       continue;
     }
     if (/^# (.+)$/.test(line)) {
       closeList(); closeTable(); closeBlockquote();
-      result.push(`<h1 class="text-3xl font-bold text-olive-900 mt-8 mb-4">${inline(line.replace(/^# /, ''))}</h1>`);
+      result.push(`<h1 class="font-serif text-3xl font-bold text-olive-900 mt-8 mb-4">${inline(line.replace(/^# /, ''))}</h1>`);
       continue;
     }
 
@@ -153,7 +155,7 @@ function markdownToHtml(md: string): string {
     if (/^> (.+)$/.test(line)) {
       closeList(); closeTable();
       if (!inBlockquote) {
-        result.push('<blockquote class="border-l-[3px] border-gold-400 pl-6 my-8 italic text-olive-900 text-[1.125rem] leading-[1.75]">');
+        result.push('<blockquote class="font-serif border-l-[3px] border-gold-400 pl-6 my-8 italic text-olive-900 text-[1.125rem] leading-[1.75]">');
         inBlockquote = true;
       }
       result.push(`<p class="mb-1">${inline(line.replace(/^> /, ''))}</p>`);
@@ -212,6 +214,31 @@ function markdownToHtml(md: string): string {
   return result.join('\n');
 }
 
+/**
+ * Drop the in-body 「延伸閱讀」 H2 section at render time (blueprint 2.2-9:
+ * only ONE related-reading block per article — the template's card grid).
+ * The source markdown is untouched; the curated links remain available to
+ * the card grid's path/tag algorithm. Trailing trust lines that some
+ * articles place AFTER the 延伸閱讀 list （來源與證據評級／公正聲明／
+ * 利益揭露） are preserved — they belong to the article's fixed ending.
+ */
+function stripRelatedSection(md: string): string {
+  const lines = md.split('\n');
+  const out: string[] = [];
+  let skipping = false;
+  for (const line of lines) {
+    if (/^## /.test(line)) {
+      skipping = line.trim() === '## 延伸閱讀';
+      if (skipping) continue;
+    }
+    if (skipping && !/^\*\*(來源與證據評級|公正聲明|利益揭露)/.test(line)) {
+      continue;
+    }
+    out.push(line);
+  }
+  return out.join('\n');
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
@@ -221,7 +248,8 @@ export default async function BlogPostPage({ params }: Props) {
   const imagesData = await getImages();
   const coverImageUrl = getPostImageUrl(imagesData, slug) || post.coverImage;
 
-  const htmlContent = markdownToHtml(post.content);
+  const htmlContent = markdownToHtml(stripRelatedSection(post.content));
+  const verdict = getVerdict(slug);
   const catInfo = CATEGORY_MAP[post.category] ?? { label: post.category, badgeClass: 'bg-gray-100 text-gray-700', accentColor: 'text-olive-600' };
 
   // Next article on the same learning path (shown in its own box above
@@ -332,8 +360,13 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
 
-      {/* FAQ Schema — article-specific when faq[] present, fallback to category defaults */}
-      {(post.faq && post.faq.length > 0) ? (
+      {/* FAQ Schema — article-specific only. The old category-default
+          fallback asserted claims EFSA has rejected (anti-inflammatory /
+          cardiovascular efficacy, morning fasting spoon advice); it never
+          fired while 61/61 articles carry their own faq[], but it was a
+          landmine for any future article without one. Removed (audit P0-7):
+          no faq[] in frontmatter → no FAQPage schema, full stop. */}
+      {post.faq && post.faq.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -345,46 +378,6 @@ export default async function BlogPostPage({ params }: Props) {
                 name: item.q,
                 acceptedAnswer: { '@type': 'Answer', text: item.a },
               })),
-            }),
-          }}
-        />
-      ) : (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: post.category === 'science'
-                    ? '橄欖油的多酚和健康功效有科學根據嗎？'
-                    : post.category === 'heritage' || post.category === 'culture'
-                    ? '橄欖油在歷史上扮演什麼角色？'
-                    : post.category === 'lifestyle'
-                    ? '如何在日常生活中正確使用特級初榨橄欖油？'
-                    : '如何選購真正高品質的特級初榨橄欖油？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: post.category === 'science'
-                      ? '是的。根據 PREDIMED 研究（發表於 NEJM）、哈佛醫學院和 EFSA 的研究，特級初榨橄欖油中的多酚化合物具有科學支持的抗炎、抗氧化和心血管保護功效。'
-                      : post.category === 'heritage' || post.category === 'culture'
-                      ? '橄欖油在人類文明中已有 3,000 年以上的歷史，從古埃及的聖禮儀式、希臘羅馬的經濟命脈到文藝復興藝術，均有深刻記載。'
-                      : post.category === 'lifestyle'
-                      ? '建議每日晨間空腹攝取 1-2 湯匙高多酚特級初榨橄欖油，用於涼拌和低溫烹飪，避免高溫煎炸破壞多酚活性成分。'
-                      : '選購時注意：(1) 標示「特級初榨 Extra Virgin」認證，(2) 確認酸度 ≤0.8%，(3) 標示收穫年份和多酚含量，(4) 選擇遮光深色玻璃瓶裝。',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: '知橄生活的橄欖油推薦有商業利益衝突嗎？',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: '知橄生活所有內容均基於 IOC 國際橄欖理事會標準與學術文獻，公正聲明載於每篇文章底部。目前本站文章不含聯盟行銷連結；若未來引入任何聯盟行銷合作，會在文章開頭以明確文字揭露。',
-                  },
-                },
-              ],
             }),
           }}
         />
@@ -426,7 +419,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Read time — category already shown in breadcrumb above */}
           <p className="text-[11px] font-sans text-stone-500 tracking-wide mb-5">{post.readTime} 分鐘閱讀</p>
           {/* Title */}
-          <h1 className="text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-6 max-w-[640px]">
+          <h1 className="font-serif text-3xl md:text-[2.5rem] font-bold text-olive-950 leading-[1.2] tracking-tight mb-6 max-w-[640px]">
             {post.title}
           </h1>
           {/* Byline + Olive Dr. badge */}
@@ -434,12 +427,22 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="font-medium text-olive-700">{post.author || '知橄生活研究團隊'}</span>
             <span className="text-stone-300">|</span>
             <span>{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            {post.updated && post.updated !== post.date && (
+              <>
+                <span className="text-stone-300">|</span>
+                <span>更新於 {new Date(post.updated).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              </>
+            )}
             {(post.category === 'science' || post.category === 'health') && (
               <span className="inline-flex items-center gap-1 text-[11px] bg-olive-50 text-olive-700 px-2.5 py-1 rounded-full font-medium border border-olive-200">
-                🫒 Olive Dr. 科學審閱
+                Olive Dr. 科學審閱
               </span>
             )}
           </div>
+
+          {/* 本文判讀卡 — pilot (blueprint 2.3-1); renders only for articles
+              whose main evidence carries a grade recorded in /evidence */}
+          {verdict && <VerdictCard verdict={verdict} />}
         </div>
       </div>
 
@@ -476,6 +479,16 @@ export default async function BlogPostPage({ params }: Props) {
           className="prose-custom"
           dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
+
+        {/* Share row — directly after the article's fixed ending
+            （一句話總結 → 來源與證據評級 → 公正聲明）, before the CTA
+            (blueprint 2.2-7; was buried at the very bottom of the page) */}
+        <div className="mt-10 pt-6 border-t border-olive-100">
+          <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />
+        </div>
+
+        {/* Single follow CTA (blueprint 2.2-8) */}
+        <ArticleNewsletterCTA />
 
         {/* FAQ Accordion — article-specific Q&A for SEO Featured Snippets */}
         {post.faq && post.faq.length > 0 && (
@@ -523,24 +536,6 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        {/* Follow CTA — after references, before navigation. */}
-        <ArticleNewsletterCTA />
-
-        {/* Navigation */}
-        <div className="mt-10 pt-8 border-t border-gray-100 flex gap-4">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-olive-600 hover:text-olive-800 font-medium hover:underline"
-          >
-            ← 返回文章列表
-          </Link>
-          <Link
-            href="/#follow"
-            className="ml-auto inline-flex items-center gap-2 bg-olive-700 hover:bg-olive-800 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-colors"
-          >
-            追蹤知橄生活 🫒
-          </Link>
-        </div>
       </article>
 
       {/* Author Trust Block — editorial byline style */}
@@ -578,7 +573,9 @@ export default async function BlogPostPage({ params }: Props) {
             <a href="/about#editorial-standards" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
               編輯標準與公正聲明 →
             </a>
-            <ShareButtons title={post.title} url={`https://olive-wisdom.com/blog/${slug}`} />
+            <Link href="/blog" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
+              ← 返回文章列表
+            </Link>
           </div>
         </div>
       </section>

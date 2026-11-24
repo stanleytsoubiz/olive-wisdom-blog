@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollHeader from '@/components/ScrollHeader';
 import MobileMenu from '@/components/MobileMenu';
+import BottomNav from '@/components/BottomNav';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import { CATEGORY_COLUMNS } from '@/lib/categories';
@@ -23,20 +24,20 @@ const notoSansTC = Noto_Sans_TC({
 
 export const metadata: Metadata = {
   title: {
-    default: '知橄生活 Olive Wisdom — 以科學與美學，精煉您的健康時光',
+    default: '知橄生活 Olive Wisdom — 華語世界的橄欖油知識平台',
     template: '%s｜知橄生活 Olive Wisdom',
   },
   description:
-    '知橄生活 Olive Wisdom，為 35+ 知性追求者打造的橄欖油科學與美學空間。以嚴謹科研實證，引導您認識液態黃金的健康奧秘：多酚、SIRT1、羥基酪醇、地中海飲食完整知識庫。',
+    '知橄生活 Olive Wisdom，華語世界的橄欖油知識平台——不接業配・引用學術・說清楚證據邊界。以 IOC 國際標準與同儕審查文獻，判讀多酚、羥基酪醇與地中海飲食的證據強度。',
   metadataBase: new URL('https://olive-wisdom.com'),
-  keywords: ['橄欖油', '特級初榨橄欖油', 'EVOO', '地中海飲食', '抗衰老', '多酚', '羥基酪醇', 'SIRT1', '健康飲食'],
+  keywords: ['橄欖油', '特級初榨橄欖油', 'EVOO', '地中海飲食', '多酚', '羥基酪醇', '證據判讀', 'IOC 標準', '健康飲食'],
   authors: [{ name: '知橄生活研究團隊', url: 'https://olive-wisdom.com' }],
   creator: '知橄生活 Olive Wisdom',
   publisher: '知橄生活 Olive Wisdom',
   robots: { index: true, follow: true },
   openGraph: {
-    title: '知橄生活 Olive Wisdom — 以科學與美學，精煉您的健康時光',
-    description: '為 35+ 知性追求者打造的橄欖油科學與美學空間，以嚴謹科研實證探索地中海飲食與長壽之道。',
+    title: '知橄生活 Olive Wisdom — 華語世界的橄欖油知識平台',
+    description: '不接業配・引用學術・說清楚證據邊界。以 IOC 標準與同儕審查文獻，判讀每一項橄欖油主張的證據等級。',
     url: 'https://olive-wisdom.com',
     siteName: '知橄生活 Olive Wisdom',
     locale: 'zh_TW',
@@ -66,6 +67,7 @@ const NAV_LINKS = [
   ...CATEGORY_COLUMNS.map((c) => ({ href: c.href, label: c.label })),
   { href: '/topics', label: '所有主題' },
   { href: '/selection', label: '選品標準' },
+  { href: '/evidence', label: '證據圖書館' },
   { href: '/about', label: '關於知橄' },
 ];
 
@@ -99,7 +101,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               url: 'https://olive-wisdom.com',
               logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico', caption: '知橄生活 Olive Wisdom' },
               description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等權威機構研究文獻的橄欖油知識平台。',
-              knowsAbout: ['橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚', '羥基酪醇', 'PREDIMED 研究', '抗老化科學'],
+              knowsAbout: ['橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚', '羥基酪醇', 'PREDIMED 研究', '證據分級判讀'],
               sameAs: ['https://olive-wisdom.com', 'https://olive-wisdom.com/about'],
               publishingPrinciples: 'https://olive-wisdom.com/about#editorial-standards',
               ethicsPolicy: 'https://olive-wisdom.com/about#editorial-standards',
@@ -129,8 +131,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               </div>
             </Link>
 
-            {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-6">
+            {/* Desktop Nav — lg breakpoint: with 證據圖書館 added, eight links
+                no longer fit beside logo + search + CTA at md widths */}
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
@@ -147,7 +150,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Link
               href="/search"
               aria-label="搜尋文章"
-              className="hidden md:flex items-center justify-center w-9 h-9 rounded-lg hover:bg-olive-50 transition-colors text-stone-500 hover:text-olive-700"
+              className="hidden lg:flex items-center justify-center w-9 h-9 rounded-lg hover:bg-olive-50 transition-colors text-stone-500 hover:text-olive-700"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -157,9 +160,21 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* CTA — plain text link to the homepage follow section */}
             <Link
               href="/#follow"
-              className="hidden md:inline-flex items-center gap-1 text-olive-700 hover:text-olive-900 text-sm font-medium transition-colors"
+              className="hidden lg:inline-flex items-center gap-1 text-olive-700 hover:text-olive-900 text-sm font-medium transition-colors"
             >
               追蹤知橄生活 →
+            </Link>
+
+            {/* Mobile search icon — restored as a permanent header entry
+                (blueprint 2.6); search is no longer only inside the menu */}
+            <Link
+              href="/search"
+              aria-label="搜尋文章"
+              className="lg:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-olive-50 transition-colors text-olive-700"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
             </Link>
 
             {/* Mobile hamburger menu */}
@@ -178,14 +193,19 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-2xl">🫒</span>
+                {/* SVG olive mark — same mark as the header logo (emoji retired, blueprint 3.5) */}
+                <svg width="26" height="26" viewBox="0 0 28 28" fill="none" className="flex-shrink-0">
+                  <ellipse cx="14" cy="14" rx="5" ry="8" fill="#8fa63f" transform="rotate(-20 14 14)" />
+                  <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#c4a96a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+                  <path d="M14 8 Q9 6 8 12" stroke="#a3b86b" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.7"/>
+                </svg>
                 <div>
                   <p className="font-bold text-white text-sm">知橄生活</p>
                   <p className="text-xs text-olive-400 tracking-widest uppercase">Olive Wisdom</p>
                 </div>
               </div>
               <p className="text-sm text-olive-300 leading-relaxed">
-                以科學與美學，精煉您的健康時光。
+                用證據判讀橄欖油——不接業配・引用學術・說清楚證據邊界。
               </p>
             </div>
 
@@ -239,7 +259,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <p>© 2026 知橄生活 OLIVE WISDOM. ALL RIGHTS RESERVED.</p>
               <div className="flex flex-wrap gap-4 justify-center sm:justify-end">
                 <Link href="/about#editorial-standards" className="hover:text-white transition-colors">編輯標準</Link>
+                <Link href="/evidence" className="hover:text-white transition-colors">證據圖書館</Link>
                 <Link href="/topics" className="hover:text-white transition-colors">所有主題</Link>
+                <Link href="/contact" className="hover:text-white transition-colors">聯絡我們</Link>
                 <Link href="/privacy" className="hover:text-white transition-colors">隱私政策</Link>
                 <Link href="/terms" className="hover:text-white transition-colors">使用條款</Link>
                 <Link href="/about" className="hover:text-white transition-colors">關於知橄</Link>
@@ -247,6 +269,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </div>
         </footer>
+
+        {/* Mobile bottom navigation (blueprint 2.6) + spacer so the fixed
+            bar never covers footer content on mobile */}
+        <div className="md:hidden" style={{ height: 'calc(60px + env(safe-area-inset-bottom))' }} aria-hidden="true" />
+        <BottomNav />
       </body>
     </html>
   );

@@ -10,6 +10,27 @@
   --surface:       #FAF8F4;
 }
 
+/* ── Design language spec (world-class blueprint ch.3, Phase A 定版) ──
+   Type scale — five fixed steps, ratio ≈1.25, no ad-hoc sizes:
+     H1 34–40px serif / H2 24–26px serif / body 17–18px / captions 13–14px /
+     eyebrow 12–13px, letter-spacing 0.15–0.25em.
+   Serif (Noto Serif TC) = H1, H2, verdict lines, pull quotes.
+   Sans (Noto Sans TC) = body, UI, data.
+   Paragraph rhythm: H2 margin-top 2.2em / margin-bottom 0.8em — the
+   "breathing" of a page comes from the large space BEFORE a heading.
+   Colour discipline 90/9/1: warm paper + ink ≈90%, olive ≈9%, gold ≈1%.
+   Evidence grades A–D use olive depth + weight only — never rainbow.
+   Motion: opacity/transform only, 150–250ms ease-out, no parallax;
+   hover changes colour/underline only; all motion off under
+   prefers-reduced-motion (see the media query at the end of this block). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* P2-13: visible keyboard focus — zero visual change for mouse users. */
 :focus-visible {
   outline: 2px solid #4a5824;
@@ -89,11 +110,12 @@ body {
   }
 }
 .prose-custom h2 {
+  font-family: var(--font-serif), 'Noto Serif TC', serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #2d3b0f;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 2.2em;
+  margin-bottom: 0.8em;
   padding-left: 14px;
   border-left: 3px solid #5C6B2E;
   line-height: 1.3;
@@ -110,6 +132,7 @@ body {
 .prose-custom ol { margin: 1rem 0 1.25rem; padding-left: 1.5rem; }
 .prose-custom li { margin-bottom: 0.5rem; }
 .prose-custom blockquote {
+  font-family: var(--font-serif), 'Noto Serif TC', serif;
   border-left: 3px solid #c4a96a;
   padding: 0.5rem 0 0.5rem 1.5rem;
   margin: 2rem 0;

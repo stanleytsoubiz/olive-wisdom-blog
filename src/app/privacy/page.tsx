@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold text-olive-800 mb-2">隱私政策</h1>
+      <h1 className="font-serif text-4xl font-bold text-olive-800 mb-2">隱私政策</h1>
       <p className="text-gray-400 text-sm mb-10">最後更新：2026 年 11 月 22 日</p>
 
       <div className="prose-custom space-y-8 text-gray-700 leading-relaxed">
