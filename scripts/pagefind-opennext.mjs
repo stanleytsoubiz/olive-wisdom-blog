@@ -30,11 +30,11 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.join(__dirname, '..');
 
-// Expected indexed pages = number of articles (55 as of 2026-11-22).
+// Expected indexed pages = number of articles (61 as of 2026-11-23).
 // This is a build guard, not a magic number: keep it in sync with the
 // article count. `scripts/build-posts-data.mjs` prints the count on
 // every build — if it changes, update this number in the same commit.
-const EXPECTED_PAGES = 55;
+const EXPECTED_PAGES = 61;
 
 const appDir = path.join(projectRoot, '.next', 'server', 'app');
 const outDir = path.join(projectRoot, '.open-next', 'assets', 'pagefind');
