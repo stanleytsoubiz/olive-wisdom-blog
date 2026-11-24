@@ -9,8 +9,8 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: '知橄生活 Olive Wisdom — 以科學與美學，精煉您的健康時光',
-  description: '知橄生活 Olive Wisdom，為 35+ 知性追求者打造的橄欖油科學與美學空間。探索多酚、SIRT1、羥基酪醇、地中海飲食完整知識庫。',
+  title: '知橄生活 Olive Wisdom — 華語世界的橄欖油知識平台',
+  description: '華語世界的橄欖油知識平台：多酚與羥基酪醇的證據判讀、IOC 選油標準、地中海飲食研究解析——不接業配・引用學術・說清楚證據邊界。',
 };
 
 // 意圖入口導航
@@ -61,7 +61,7 @@ export default async function HomePage() {
         '@context': 'https://schema.org', '@type': 'WebSite',
         name: '知橄生活 Olive Wisdom', alternateName: 'Olive Wisdom',
         url: 'https://olive-wisdom.com',
-        description: '為 35+ 知性追求者打造的橄欖油科學與美學空間，以嚴謹科研實證探索地中海飲食與長壽之道。',
+        description: '華語世界的橄欖油知識平台——不接業配・引用學術・說清楚證據邊界。',
         inLanguage: 'zh-TW',
         potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: 'https://olive-wisdom.com/search?q={search_term_string}' }, 'query-input': 'required name=search_term_string' },
       }) }} />
@@ -108,14 +108,14 @@ export default async function HomePage() {
         {/* Kinfolk-style bottom-anchored headline */}
         <div className="absolute bottom-0 left-0 right-0 px-5 md:px-6 pb-10 md:pb-14">
           <div className="max-w-5xl mx-auto">
-            <p className="text-gold-400 text-[11px] font-sans font-semibold tracking-[0.35em] uppercase mb-4">
-              以科學與美學，精煉您的健康時光
+            <p className="text-gold-400 text-xs font-sans font-semibold tracking-[0.3em] uppercase mb-4">
+              Olive Oil, Explained with Evidence／證據判讀
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.02] tracking-tight mb-4">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.02] tracking-tight mb-4">
               知橄生活
             </h1>
             <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-8">
-              <p className="text-olive-200 text-base md:text-lg max-w-md leading-relaxed">
+              <p className="text-white text-lg md:text-2xl font-medium max-w-lg leading-relaxed">
                 華語世界的橄欖油知識平台——<br className="hidden sm:block" />
                 不接業配・引用學術・說清楚證據邊界
               </p>
@@ -144,7 +144,7 @@ export default async function HomePage() {
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-stone-200" />
             <p className="text-xs font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase whitespace-nowrap">
-              您今天想要…
+              你今天想要…
             </p>
             <div className="h-px flex-1 bg-stone-200" />
           </div>

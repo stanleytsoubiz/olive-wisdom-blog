@@ -10,8 +10,7 @@ const AffiliateDisclosure: React.FC<{ content: string }> = ({ content }) => {
   return (
     <div className="bg-olive-50/50 border-l-4 border-olive-400 rounded-r-xl px-6 py-4 mb-8 text-sm text-gray-500 leading-relaxed shadow-sm">
       <p>
-        <strong className="text-olive-800">☕ 利益揭露：</strong>
-        本篇文章包含聯盟行銷連結。若您透過連結購買，我們可能會獲得小額佣金，這有助於維持 <strong>知橄生活 (Olive Wisdom)</strong> 的優質內容營運，且不會增加您的購買成本。感謝您的支持！
+        利益揭露：知橄生活不接受品牌付費置入或廣告委刊。若文章中的購買連結產生佣金（聯盟行銷），該佣金不影響選油標準——推薦只依 IOC 標準、採收年份與 CoA 數據決定。
       </p>
     </div>
   );

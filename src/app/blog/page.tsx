@@ -9,7 +9,7 @@ import SearchBar from '@/components/SearchBar';
 
 export const metadata: Metadata = {
   title: '橄欖油知識庫｜科學萃取・品味鑑賞・知性史詩・餐桌美學',
-  description: '知橄生活深度文章庫：多酚 SIRT1 抗衰老、羥基酪醇腦保護、地中海飲食女性研究、IOC 感官評鑑標準、橄欖油真偽鑑別——引用 PREDIMED、哈佛、EFSA 科學文獻。',
+  description: '知橄生活深度文章庫：多酚與羥基酪醇的證據判讀、IOC 感官評鑑標準、橄欖油真偽鑑別、地中海飲食研究解析——引用 PREDIMED、EFSA 與同儕審查文獻，每項主張標明證據等級。',
   keywords: ['橄欖油知識庫', '特級初榨橄欖油', '多酚', '地中海飲食', '橄欖油選購', 'EVOO科學'],
   openGraph: {
     title: '知橄生活知識庫 — 橄欖油科學・地中海美學・深度文章',
@@ -64,7 +64,7 @@ export default async function BlogPage() {
           <p className="text-gold-400 text-[10px] font-sans font-semibold tracking-[0.35em] uppercase mb-3">
             知橄生活 · 知識庫
           </p>
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-2">
+          <h1 className="font-serif text-4xl md:text-[2.5rem] font-bold text-white leading-tight tracking-tight mb-2">
             深度文章
           </h1>
           <p className="text-olive-200 text-sm md:text-base font-sans max-w-md leading-relaxed">

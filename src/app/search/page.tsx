@@ -22,7 +22,7 @@ export default function SearchPage() {
           <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.3em] uppercase mb-3">
             知橄生活 · 全文搜尋
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-olive-900 tracking-tight mb-3">
+          <h1 className="font-serif text-4xl md:text-[2.5rem] font-bold text-olive-900 tracking-tight mb-3">
             搜尋文章
           </h1>
           <p className="text-stone-500 font-sans text-sm">

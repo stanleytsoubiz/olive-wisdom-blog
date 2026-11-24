@@ -79,7 +79,7 @@ export default function TopicsPage() {
           <p className="text-gold-500 text-[10px] font-sans font-semibold tracking-[0.35em] uppercase mb-4">
             知識索引
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-3">
+          <h1 className="font-serif text-4xl md:text-[2.5rem] font-bold text-stone-900 leading-tight mb-3">
             所有主題
           </h1>
           <p className="text-stone-500 font-sans text-sm mb-6">

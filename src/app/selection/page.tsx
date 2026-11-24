@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: '知橄生活 Olive Wisdom',
     locale: 'zh_TW',
+    images: [
+      {
+        url: 'https://olive-wisdom.com/hero-grove.webp',
+        width: 1200,
+        height: 630,
+        alt: '知橄生活選品標準',
+      },
+    ],
   },
 };
 
@@ -139,7 +147,7 @@ export default function SelectionPage() {
       {/* Hero */}
       <section className="max-w-5xl mx-auto px-6 pt-16 pb-10 md:pt-20">
         <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.3em] uppercase mb-3">Selection Standards</p>
-        <h1 className="font-serif text-4xl md:text-5xl font-semibold text-stone-900 leading-tight mb-6">
+        <h1 className="font-serif text-4xl md:text-[2.5rem] font-semibold text-stone-900 leading-tight mb-6">
           選品標準：先過查驗，才談上架
         </h1>
         <p className="text-base md:text-lg text-stone-600 leading-relaxed font-sans max-w-3xl">
@@ -239,7 +247,21 @@ export default function SelectionPage() {
                 <span className="font-semibold text-olive-800 text-sm leading-relaxed pr-4">{item.q}</span>
                 <span className="text-olive-500 shrink-0 text-lg group-open:rotate-180 transition-transform duration-200">▾</span>
               </summary>
-              <div className="px-5 py-4 text-gray-600 text-sm leading-relaxed bg-white">{item.a}</div>
+              <div className="px-5 py-4 text-gray-600 text-sm leading-relaxed bg-white">
+                {/* The 「聯絡頁」 mention in the sample-submission answer is
+                    rendered as a live link to /contact — it was plain text
+                    pointing nowhere (audit P0-2) */}
+                {item.a.split('聯絡頁').map((part, j, arr) => (
+                  <span key={j}>
+                    {part}
+                    {j < arr.length - 1 && (
+                      <Link href="/contact" className="text-olive-700 hover:text-olive-900 font-medium underline underline-offset-4">
+                        聯絡頁
+                      </Link>
+                    )}
+                  </span>
+                ))}
+              </div>
             </details>
           ))}
         </div>

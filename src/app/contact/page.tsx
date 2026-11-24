@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: '聯絡知橄生活 — Olive Wisdom',
+  title: '聯絡我們',
   description: '有合作提案、讀者迴響或問題，歡迎與知橄生活團隊聯繫。',
   alternates: { canonical: 'https://olive-wisdom.com/contact' },
 };
@@ -17,7 +17,7 @@ export default function ContactPage() {
           <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.3em] uppercase mb-4">
             知橄生活
           </p>
-          <h1 className="text-4xl font-bold text-olive-800 mb-4">聯絡我們</h1>
+          <h1 className="font-serif text-4xl font-bold text-olive-800 mb-4">聯絡我們</h1>
           <p className="text-stone-500 font-sans leading-relaxed">
             有合作提案、讀者迴響或問題，歡迎與我們聯繫
           </p>

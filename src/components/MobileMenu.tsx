@@ -27,10 +27,10 @@ export default function MobileMenu() {
 
   return (
     <>
-      {/* Hamburger button — mobile only */}
+      {/* Hamburger button — below lg (desktop nav takes over at lg) */}
       <button
         onClick={() => setOpen(true)}
-        className="md:hidden p-2 text-olive-700"
+        className="lg:hidden p-2 text-olive-700"
         aria-label="開啟選單"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

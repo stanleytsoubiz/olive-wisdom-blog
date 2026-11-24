@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: '知橄生活 Olive Wisdom',
     locale: 'zh_TW',
+    images: [
+      {
+        url: 'https://olive-wisdom.com/hero-grove.webp',
+        width: 1200,
+        height: 630,
+        alt: '知橄生活證據圖書館',
+      },
+    ],
   },
 };
 
@@ -280,7 +288,7 @@ export default function EvidencePage() {
           <p className="text-gold-500 text-[10px] font-sans font-semibold tracking-[0.35em] uppercase mb-4">
             Evidence Library
           </p>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-stone-900 leading-tight mb-5">證據圖書館</h1>
+          <h1 className="font-serif text-4xl md:text-[2.5rem] font-bold text-stone-900 leading-tight mb-5">證據圖書館</h1>
           <p className="text-stone-600 text-base md:text-lg leading-relaxed max-w-2xl font-sans">
             本站所有主張的來源與評級標準。我們不找個人背書——權威來自可查證的原始來源：
             國際標準、歐盟法規、學術研究與檢驗報告。每一項主張都能在這裡找到出處與證據等級。
