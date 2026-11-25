@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "3.0.0",
-    "lastUpdated": "2026-05-17",
+    "lastUpdated": "2026-11-25",
     "description": "知橄生活 Olive Wisdom — 圖片資源管理中心。可透過 Admin 後台修改，無需重新 build。",
     "adminEditable": true,
     "schema": "url + alt + source + prompt + generated_at + quality_score",
@@ -429,8 +429,8 @@
     },
     "tfda-olive-oil-labelling-reform-2027-guide": {
       "url": "/images/covers/tfda-olive-oil-labelling-reform-2027-guide.jpg",
-      "alt": "Reading olive oil labels in the kitchen",
-      "source": "unsplash"
+      "alt": "放大鏡旁的空白標籤橄欖油瓶",
+      "source": "google_imagen4"
     },
     "olive-oil-price-guide-why-so-expensive": {
       "url": "/images/covers/olive-oil-price-guide-why-so-expensive.jpg",
@@ -452,8 +452,8 @@
     },
     "olive-oil-morning-fasting-spoon-myth": {
       "url": "/images/covers/olive-oil-morning-fasting-spoon-myth.jpg",
-      "alt": "Olive oil in the kitchen",
-      "source": "unsplash"
+      "alt": "晨光木桌上的一匙橄欖油與油瓶",
+      "source": "google_imagen4"
     },
     "olive-oil-vs-camellia-rapeseed-oil-guide": {
       "url": "/images/covers/olive-oil-vs-camellia-rapeseed-oil-guide.jpg",
@@ -463,13 +463,13 @@
     },
     "olive-oil-millennium-journey-mediterranean-to-table": {
       "url": "/images/covers/olive-oil-millennium-journey-mediterranean-to-table.jpg",
-      "alt": "Mediterranean olive grove",
-      "source": "unsplash"
+      "alt": "地中海海岸前的陶甕與橄欖油瓶",
+      "source": "google_imagen4"
     },
     "olive-oil-gift-guide-how-to-choose": {
       "url": "/images/covers/olive-oil-gift-guide-how-to-choose.jpg",
-      "alt": "Olive oil gift bottle in the kitchen",
-      "source": "unsplash"
+      "alt": "深綠禮盒中的橄欖油與金色緞帶",
+      "source": "google_imagen4"
     },
     "olive-oil-polyphenol-tiers-250-500-1000": {
       "url": "/images/covers/olive-oil-polyphenol-tiers-250-500-1000.jpg",
@@ -479,8 +479,8 @@
     },
     "olive-oil-terroir-tour-andalusia-crete-tuscany": {
       "url": "/images/covers/olive-oil-terroir-tour-andalusia-crete-tuscany.jpg",
-      "alt": "Mediterranean herbs and olive oil",
-      "source": "unsplash"
+      "alt": "三大產區地景前並排的三瓶橄欖油",
+      "source": "google_imagen4"
     },
     "olive-oil-how-its-made-harvest-to-bottle": {
       "url": "/images/covers/olive-oil-how-its-made-harvest-to-bottle.jpg",
