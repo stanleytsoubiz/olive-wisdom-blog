@@ -139,11 +139,9 @@
     },
     "oleocanthal-pungency-anti-inflammation": {
       "url": "/images/covers/oleocanthal-pungency-anti-inflammation.jpg",
-      "alt": "Oleocanthal Pungency Anti Inflammation",
-      "source": "google_imagen4",
-      "generated_at": "2026-05-01",
-      "quality_score": 9,
-      "prompt": "extreme macro fresh green olive cross-section on dark slate, golden oil droplet emerging from center, shallow depth of f"
+      "alt": "青橄欖微距與發光分子模型",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "morning-ritual-evoo-metabolism": {
       "url": "/images/covers/morning-ritual-evoo-metabolism.jpg",
@@ -179,11 +177,9 @@
     },
     "2026-evoo-quality-polyphenol-index": {
       "url": "/images/covers/2026-evoo-quality-polyphenol-index.jpg",
-      "alt": "2026 Evoo Quality Polyphenol Index",
-      "source": "google_imagen4",
-      "generated_at": "2026-05-01",
-      "quality_score": 9,
-      "prompt": "single artisan dark glass EVOO bottle with quality seal on white marble, sprig of olive branch, warm side light, minimal"
+      "alt": "實驗室滴管將橄欖油滴入樣品瓶",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "hydroxytyrosol-brain-cognition-2026": {
       "url": "/images/covers/hydroxytyrosol-brain-cognition-2026.jpg",
@@ -298,12 +294,10 @@
       "prompt": "two olive oil bottles on windowsill, one fresh vibrant gold one oxidized amber, calendar page beside, soft natural light"
     },
     "predimed-study-complete-explainer-olive-oil-heart": {
-      "url": "/images/covers/predimed-study-complete-explainer-olive-oil-heart-v2.jpg",
-      "alt": "Predimed Study Complete Explainer Olive Oil Heart",
-      "source": "google_imagen4",
-      "generated_at": "2026-05-17",
-      "quality_score": 9,
-      "prompt": "elegant still life on white marble surface, completely unlabeled plain dark green glass bottle of olive oil with simple "
+      "url": "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jpg",
+      "alt": "橄欖油注入量杯與分子光斑示意",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-cooking-science-can-evoo-stir-fry": {
       "url": "/images/covers/olive-oil-cooking-science-can-evoo-stir-fry.jpg",
@@ -449,9 +443,10 @@
       "source": "unsplash"
     },
     "olive-oil-fridge-test-myth-debunked": {
-      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
-      "alt": "Olive oil in the kitchen",
-      "source": "unsplash"
+      "url": "/images/covers/olive-oil-fridge-test-myth-debunked.jpg",
+      "alt": "冰箱中凝固混濁的橄欖油瓶",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-morning-fasting-spoon-myth": {
       "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
@@ -474,9 +469,10 @@
       "source": "unsplash"
     },
     "olive-oil-polyphenol-tiers-250-500-1000": {
-      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
-      "alt": "Olive grove at harvest",
-      "source": "unsplash"
+      "url": "/images/covers/olive-oil-polyphenol-tiers-250-500-1000.jpg",
+      "alt": "三瓶橄欖油色澤遞升，象徵多酚三檔",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-terroir-tour-andalusia-crete-tuscany": {
       "url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80",
@@ -485,18 +481,21 @@
     },
     "olive-oil-how-its-made-harvest-to-bottle": {
       "url": "/images/covers/olive-oil-how-its-made-harvest-to-bottle.jpg",
-      "alt": "Olive oil with fresh olives",
-      "source": "custom"
+      "alt": "磨坊前的橄欖木箱與新裝瓶橄欖油",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-world-map-production-consumption": {
       "url": "/images/covers/olive-oil-world-map-production-consumption.jpg",
-      "alt": "Mediterranean olive grove",
-      "source": "custom"
+      "alt": "梯田橄欖園向遠海延伸的黃昏全景",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olio-nuovo-unfiltered-olive-oil-guide": {
       "url": "/images/covers/olio-nuovo-unfiltered-olive-oil-guide.jpg",
-      "alt": "Olive oil in the kitchen",
-      "source": "custom"
+      "alt": "榨油機口流出的翠綠新油與晨光果園",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-regions-under-threat-drought-xylella": {
       "url": "/images/covers/olive-regions-under-threat-drought-xylella.jpg",
@@ -505,13 +504,15 @@
     },
     "olive-oil-competitions-awards-how-to-read": {
       "url": "/images/covers/olive-oil-competitions-awards-how-to-read.jpg",
-      "alt": "Cobalt-blue tasting glasses on an olive oil judging table",
-      "source": "custom"
+      "alt": "空白標籤油瓶、素面金牌與品油杯",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "organic-olive-oil-label-what-it-guarantees": {
       "url": "/images/covers/organic-olive-oil-label-what-it-guarantees.jpg",
-      "alt": "Lush organic olive grove with wildflowers in morning light",
-      "source": "custom"
+      "alt": "空白標籤特寫、橄欖葉與黃銅放大鏡",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     }
   },
   "fallback": {
