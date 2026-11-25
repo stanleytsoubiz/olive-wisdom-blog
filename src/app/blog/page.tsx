@@ -33,9 +33,27 @@ export const metadata: Metadata = {
 export const dynamic = 'force-static';
 
 export default async function BlogPage() {
-  const posts = getAllPosts();
+  const allPosts = getAllPosts();
   const imagesData = await getImages();
   const blogHero = getHeroImage(imagesData, 'blog');
+
+  // Slim payload for the client filter: only the fields the cards render.
+  // Full frontmatter (faq ≈122KB, sources ≈55KB across 61 posts) and the
+  // images.json metadata (prompt/source/…) must not be serialized into
+  // the list page HTML — it grows linearly with the article count.
+  const posts = allPosts.map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    date: p.date,
+    category: p.category,
+    excerpt: p.excerpt,
+    coverImage: p.coverImage,
+    readTime: p.readTime,
+  }));
+  const imageUrls: Record<string, string> = {};
+  for (const [slug, img] of Object.entries(imagesData.posts ?? {})) {
+    if (img?.url) imageUrls[slug] = img.url;
+  }
 
   return (
     <main className="min-h-screen bg-[#fafaf7]">
@@ -81,7 +99,7 @@ export default async function BlogPage() {
       </div>
 
       {/* Client-side filter + grid */}
-      <BlogFilter posts={posts} imagesData={imagesData} />
+      <BlogFilter posts={posts} imageUrls={imageUrls} />
 
       {/* CTA */}
       <section className="bg-olive-100 py-14 px-6 text-center">

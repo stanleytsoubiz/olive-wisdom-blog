@@ -5,15 +5,23 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { PostFrontmatter } from '@/lib/posts';
-import type { ImagesData } from '@/lib/images';
 import { CATEGORY_MAP, NATURE_LABEL, CAT_TABS, matchesColumn } from '@/lib/categories';
 
+// Card-only view of a post: the list payload must stay lean (it is
+// serialized into the page HTML for hydration). Heavy frontmatter
+// fields (faq, sources, tags…) belong to the article page, not here.
+export type BlogCardPost = Pick<
+  PostFrontmatter,
+  'slug' | 'title' | 'date' | 'category' | 'excerpt' | 'coverImage' | 'readTime'
+>;
+
 interface Props {
-  posts: PostFrontmatter[];
-  imagesData?: ImagesData;
+  posts: BlogCardPost[];
+  /** slug → cover URL overrides from images.json (URL only, no metadata) */
+  imageUrls?: Record<string, string>;
 }
 
-export default function BlogFilter({ posts, imagesData }: Props) {
+export default function BlogFilter({ posts, imageUrls }: Props) {
   const searchParams = useSearchParams();
   const initialCat   = searchParams.get('cat') || '';
   const [activeCat, setActiveCat] = useState(initialCat);
@@ -90,7 +98,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                   {/* Image — 3/5, no rounded corners, no border */}
                   <div className="relative md:col-span-3 aspect-video md:aspect-auto md:h-[420px] overflow-hidden bg-stone-100">
                     <Image
-                      src={(imagesData?.posts?.[featured.slug]?.url) || featured.coverImage || ''}
+                      src={imageUrls?.[featured.slug] || featured.coverImage || ''}
                       alt={featured.title}
                       fill
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
@@ -146,7 +154,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
                 {rest.map((post) => {
                   const cat = CATEGORY_MAP[post.category] ?? { label: post.category, en: 'Article' };
-                  const imgUrl = (imagesData?.posts?.[post.slug]?.url) || post.coverImage || '';
+                  const imgUrl = imageUrls?.[post.slug] || post.coverImage || '';
                   return (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                       <article className="flex flex-col h-full">
