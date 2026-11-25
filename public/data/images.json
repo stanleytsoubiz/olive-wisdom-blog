@@ -428,19 +428,21 @@
       "prompt": "seven small amber glass vials with golden olive polyphenol extracts arranged in a gentle arc on white marble desk, open "
     },
     "tfda-olive-oil-labelling-reform-2027-guide": {
-      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/tfda-olive-oil-labelling-reform-2027-guide.jpg",
       "alt": "Reading olive oil labels in the kitchen",
       "source": "unsplash"
     },
     "olive-oil-price-guide-why-so-expensive": {
-      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
-      "alt": "Olive oil bottles on a shelf",
-      "source": "unsplash"
+      "url": "/images/covers/olive-oil-price-guide-why-so-expensive.jpg",
+      "alt": "三瓶無標籤橄欖油瓶陳列石檯與一碗橄欖",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-varieties-picual-koroneiki-frantoio-guide": {
-      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
-      "alt": "Olive grove and olive oil bottle",
-      "source": "unsplash"
+      "url": "/images/covers/olive-oil-varieties-picual-koroneiki-frantoio-guide.jpg",
+      "alt": "黃昏梯田橄欖園前並置的三品種橄欖枝條",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-fridge-test-myth-debunked": {
       "url": "/images/covers/olive-oil-fridge-test-myth-debunked.jpg",
@@ -449,22 +451,23 @@
       "generated_at": "2026-11-24"
     },
     "olive-oil-morning-fasting-spoon-myth": {
-      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olive-oil-morning-fasting-spoon-myth.jpg",
       "alt": "Olive oil in the kitchen",
       "source": "unsplash"
     },
     "olive-oil-vs-camellia-rapeseed-oil-guide": {
-      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=1200&auto=format&fit=crop&q=80",
-      "alt": "Olive oil bottles on a shelf",
-      "source": "unsplash"
+      "url": "/images/covers/olive-oil-vs-camellia-rapeseed-oil-guide.jpg",
+      "alt": "橄欖枝與茶花、油菜花的油瓶對照",
+      "source": "pollinations_ai_local",
+      "generated_at": "2026-11-24"
     },
     "olive-oil-millennium-journey-mediterranean-to-table": {
-      "url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olive-oil-millennium-journey-mediterranean-to-table.jpg",
       "alt": "Mediterranean olive grove",
       "source": "unsplash"
     },
     "olive-oil-gift-guide-how-to-choose": {
-      "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olive-oil-gift-guide-how-to-choose.jpg",
       "alt": "Olive oil gift bottle in the kitchen",
       "source": "unsplash"
     },
@@ -475,7 +478,7 @@
       "generated_at": "2026-11-24"
     },
     "olive-oil-terroir-tour-andalusia-crete-tuscany": {
-      "url": "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1200&auto=format&fit=crop&q=80",
+      "url": "/images/covers/olive-oil-terroir-tour-andalusia-crete-tuscany.jpg",
       "alt": "Mediterranean herbs and olive oil",
       "source": "unsplash"
     },
