@@ -6,6 +6,7 @@ import { LEARNING_PATHS } from '@/lib/learning-paths';
 import { categoryLabel } from '@/lib/categories';
 import { formatPostDate } from '@/lib/format';
 import PodcastHomeSection from '@/components/PodcastHomeSection';
+import SearchBar from '@/components/SearchBar';
 import { EVIDENCE_LAST_CHECKED } from '@/lib/evidence';
 import type { Metadata } from 'next';
 
@@ -15,6 +16,17 @@ export const metadata: Metadata = {
   title: '知橄生活 Olive Wisdom — 華語世界的橄欖油知識平台',
   description: '華語世界的橄欖油知識平台：多酚與羥基酪醇的證據判讀、IOC 選油標準、地中海飲食研究解析——不接業配・引用學術・說清楚證據邊界。',
 };
+
+// 編輯精選 — same curation as the footer rail （選購完全指南 + PREDIMED
+// 解析 + 加熱多酚保留率）, extended with the grades and fraud guides:
+// the evergreen pieces closest to a reader's own buying decision.
+const EDITORS_PICK_SLUGS = [
+  'olive-oil-complete-buying-guide-2026',
+  'predimed-study-complete-explainer-olive-oil-heart',
+  'olive-oil-grades-classification-complete-guide',
+  'olive-oil-fraud-detection-authentic-vs-fake',
+  'olive-oil-cooking-polyphenol-retention-japan',
+];
 
 // 意圖入口導航
 const INTENT_HUBS = [
@@ -49,7 +61,11 @@ const INTENT_HUBS = [
 ];
 
 export default async function HomePage() {
-  const latestPosts = getAllPosts().slice(0, 6);
+  const allPosts = getAllPosts();
+  const latestPosts = allPosts.slice(0, 6);
+  const editorsPicks = EDITORS_PICK_SLUGS
+    .map((slug) => allPosts.find((p) => p.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
   const featuredPost = latestPosts[0];
   const restPosts = latestPosts.slice(1, 6);
   const imagesData = await getImages();
@@ -103,15 +119,19 @@ export default async function HomePage() {
       {/* Hero — Kinfolk 底部錨定式 editorial */}
       <section className="relative h-[52vh] md:h-[88vh] min-h-[360px] md:min-h-[520px] max-h-[520px] md:max-h-[800px] overflow-hidden">
         <Image src={heroSrc} alt={heroAlt} fill className="object-cover object-center" priority sizes="100vw" quality={90} />
-        {/* Bottom-anchored gradient — darkens bottom for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        {/* Bottom-anchored gradient — darkens bottom for text legibility.
+            Wave 1: deepened + a diagonal scrim behind the text block —
+            the grove photo is busy and the gold eyebrow washed out
+            against sky/leaves. */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-black/55 via-black/10 to-transparent" />
         {/* Top strip — subtle brand */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent" />
 
         {/* Kinfolk-style bottom-anchored headline */}
         <div className="absolute bottom-0 left-0 right-0 px-5 md:px-6 pb-10 md:pb-14">
           <div className="max-w-5xl mx-auto">
-            <p className="text-gold-400 text-xs font-sans font-semibold tracking-[0.3em] uppercase mb-4">
+            <p className="text-gold-300 text-xs font-sans font-semibold tracking-[0.3em] uppercase mb-4 [text-shadow:0_1px_10px_rgba(0,0,0,0.6)]">
               Olive Oil, Explained with Evidence／證據判讀
             </p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.02] tracking-tight mb-4">
@@ -129,12 +149,15 @@ export default async function HomePage() {
                              hover:shadow-lg hover:-translate-y-0.5 active:scale-95">
                   探索知識庫 →
                 </Link>
-                <a href="#intent"
-                  className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur
-                             text-white text-sm font-medium px-6 py-3 rounded-xl
-                             border border-white/30 transition-all">
-                  我想找什麼
-                </a>
+                <Link href="/search"
+                  className="inline-flex items-center gap-2 bg-white hover:bg-olive-50
+                             text-olive-900 text-sm font-semibold px-6 py-3 rounded-xl
+                             shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 active:scale-95">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  搜尋文章
+                </Link>
               </div>
             </div>
           </div>
@@ -144,17 +167,17 @@ export default async function HomePage() {
       {/* 品類基準數據帶 (blueprint 2.1／2.3-4): directly under the hero.
           Only benchmark figures already published in /evidence, each with
           source + date labels; no market prices or live data. */}
-      <section className="bg-olive-800 text-white py-10 md:py-14 px-6">
-        <p className="text-center text-[11px] font-sans font-semibold text-olive-300 tracking-[0.25em] uppercase mb-6 md:mb-8">
+      <section className="bg-olive-800 text-white py-7 md:py-14 px-6">
+        <p className="text-center text-[11px] font-sans font-semibold text-olive-300 tracking-[0.25em] uppercase mb-4 md:mb-8">
           本站判讀所依據的基準數字
         </p>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 text-center divide-y divide-olive-700/70 md:divide-y-0">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-6 text-center divide-y divide-olive-700/70 md:divide-y-0">
           {[
             { num: '≤0.8', label: '%', desc: '特級初榨游離酸度上限', sub: 'IOC 貿易標準 COI/T.15/NC No. 3/Rev. 22（2026-06）・Codex CXS 33' },
             { num: '5', label: ' mg／20 g', desc: 'EFSA 核准多酚聲稱門檻', sub: '羥基酪醇及衍生物（≈≥250 mg/kg）・EFSA 意見（2011）・Reg. (EU) No 432/2012' },
             { num: '0.69', label: ' HR', desc: 'PREDIMED 主要終點風險比', sub: '7,447 人・2018 年重分析（原始 0.70）；整體飲食模式結果，非單一油品效果' },
           ].map((stat) => (
-            <div key={stat.desc} className="py-4 md:py-2 first:pt-0 last:pb-0 md:first:pt-2 md:last:pb-2">
+            <div key={stat.desc} className="py-3 md:py-2 first:pt-0 last:pb-0 md:first:pt-2 md:last:pb-2">
               <div className="text-3xl md:text-4xl font-bold text-gold-400 mb-2 leading-none">
                 {stat.num}<span className="text-xl md:text-2xl">{stat.label}</span>
               </div>
@@ -163,7 +186,7 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
-        <p className="text-center text-xs text-olive-300 font-sans mt-8">
+        <p className="text-center text-xs text-olive-300 font-sans mt-5 md:mt-8">
           數字查核日期：{EVIDENCE_LAST_CHECKED}・來源與評級標準，見
           <a href="/evidence/" className="text-gold-400 hover:text-gold-300 underline underline-offset-4 ml-1">
             證據圖書館 →
@@ -180,6 +203,24 @@ export default async function HomePage() {
               你今天想要…
             </p>
             <div className="h-px flex-1 bg-stone-200" />
+          </div>
+          {/* Homepage search entry (wave 1): visible on the homepage
+              itself, submits to /search via SearchBar; hot terms are
+              one-tap links into the same full-text search. */}
+          <div className="mb-10">
+            <SearchBar placeholder="搜尋橄欖油知識：多酚、選購、發煙點…" />
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+              <span className="text-[11px] font-sans text-stone-400 mr-1">熱門：</span>
+              {['多酚', '羥基酪醇', '選購指南', '發煙點', 'PREDIMED', '假油辨識'].map((term) => (
+                <Link
+                  key={term}
+                  href={`/search?q=${encodeURIComponent(term)}`}
+                  className="text-[11px] font-sans font-medium text-olive-700 bg-olive-50 hover:bg-olive-100 border border-olive-100 px-3 py-1.5 rounded-full transition-colors"
+                >
+                  {term}
+                </Link>
+              ))}
+            </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {INTENT_HUBS.map((hub) => (
@@ -327,12 +368,19 @@ export default async function HomePage() {
                       <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed font-sans mb-3">
                         {post.excerpt}
                       </p>
-                      <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500 pt-3 border-t border-stone-100">
-                        <span>{formatPostDate(post.date)}</span>
-                        <span className="text-stone-200">·</span>
-                        <span>{post.readTime} 分鐘閱讀</span>
-                        <span className="text-stone-200">·</span>
-                        <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
+                      <div className="pt-3 border-t border-stone-100">
+                        {/* Byline on every card (wave 1) — matches the
+                            featured card: 知橄生活研究團隊 */}
+                        <p className="text-[10px] font-sans text-olive-600 font-medium mb-1.5">
+                          {post.author || '知橄生活研究團隊'}
+                        </p>
+                        <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500">
+                          <span>{formatPostDate(post.date)}</span>
+                          <span className="text-stone-200">·</span>
+                          <span>{post.readTime} 分鐘閱讀</span>
+                          <span className="text-stone-200">·</span>
+                          <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
+                        </div>
                       </div>
                     </article>
                   </Link>
@@ -340,6 +388,56 @@ export default async function HomePage() {
               })}
             </div>
 
+          </div>
+        </section>
+      )}
+
+      {/* ── 編輯精選 — evergreen guides rail (wave 1) ─────────────── */}
+      {editorsPicks.length > 0 && (
+        <section className="bg-white border-b border-stone-100 py-14 md:py-16 px-5 md:px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex items-center gap-5 mb-10">
+              <span className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.3em] uppercase whitespace-nowrap">
+                編輯精選
+              </span>
+              <div className="h-px flex-1 bg-stone-200" />
+              <Link href="/blog" className="text-[10px] font-sans font-semibold text-olive-600 hover:text-olive-800 tracking-[0.2em] uppercase transition-colors whitespace-nowrap">
+                瀏覽全部 →
+              </Link>
+            </div>
+            {/* Rail: horizontal snap-scroll on mobile, 5-up grid on lg */}
+            <div className="flex gap-6 overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory lg:mx-0 lg:px-0 lg:pb-0 lg:grid lg:grid-cols-5 lg:overflow-visible">
+              {editorsPicks.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group shrink-0 w-[240px] snap-start lg:w-auto"
+                >
+                  <article>
+                    <div className="relative aspect-video overflow-hidden bg-stone-100 mb-4">
+                      <Image
+                        src={(imagesData.posts?.[post.slug]?.url) || post.coverImage}
+                        alt={post.title} fill
+                        className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+                        sizes="(max-width: 1024px) 240px, 20vw"
+                      />
+                    </div>
+                    <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-2">
+                      {categoryLabel(post.category)}
+                    </p>
+                    <h3 className="font-bold text-stone-900 text-[0.95rem] leading-snug mb-2
+                                   group-hover:text-olive-800 transition-colors tracking-tight line-clamp-3">
+                      {post.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500 pt-3 border-t border-stone-100">
+                      <span className="text-olive-600 font-medium">{post.author || '知橄生活研究團隊'}</span>
+                      <span className="text-stone-200">·</span>
+                      <span>{post.readTime} 分鐘閱讀</span>
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       )}

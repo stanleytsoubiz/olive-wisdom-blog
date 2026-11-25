@@ -76,6 +76,11 @@ const nextConfig = {
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
+    // Wave 1: Next's default deviceSizes run to 3840, so the hero and
+    // covers were requested at w=3840 regardless of display size.
+    // Cap at 1920 (full-viewport hero max); cards resolve to the small
+    // end via their `sizes` attributes.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
   },
 
   // ── Build checks ────────────────────────────────────────────────────────
