@@ -88,7 +88,7 @@ export default function TopicsPage() {
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1.5 text-stone-400 hover:text-olive-700 font-sans text-sm transition-colors"
+            className="inline-flex items-center gap-1.5 text-stone-500 hover:text-olive-700 font-sans text-sm transition-colors"
           >
             <span aria-hidden="true">←</span>
             <span>知識庫</span>
@@ -103,7 +103,7 @@ export default function TopicsPage() {
           <section>
             {/* Section header */}
             <div className="mb-6">
-              <p className="text-stone-400 text-[9px] font-sans font-semibold tracking-[0.3em] uppercase mb-1.5">
+              <p className="text-stone-500 text-[9px] font-sans font-semibold tracking-[0.3em] uppercase mb-1.5">
                 Topic Groups
               </p>
               <h2 className="font-serif text-xl font-semibold text-stone-800">核心主題</h2>
@@ -142,7 +142,7 @@ export default function TopicsPage() {
           <section>
             {/* Section header */}
             <div className="mb-6">
-              <p className="text-stone-400 text-[9px] font-sans font-semibold tracking-[0.3em] uppercase mb-1.5">
+              <p className="text-stone-500 text-[9px] font-sans font-semibold tracking-[0.3em] uppercase mb-1.5">
                 Extended Topics
               </p>
               <h2 className="font-serif text-xl font-semibold text-stone-800">延伸主題</h2>
@@ -165,7 +165,7 @@ export default function TopicsPage() {
         {/* ── Category quick nav ── */}
         <section>
           <div className="mb-6">
-            <p className="text-stone-400 text-[9px] font-sans font-semibold tracking-[0.3em] uppercase mb-1.5">
+            <p className="text-stone-500 text-[9px] font-sans font-semibold tracking-[0.3em] uppercase mb-1.5">
               By Category
             </p>
             <h2 className="font-serif text-xl font-semibold text-stone-800">依欄目瀏覽</h2>

@@ -142,7 +142,7 @@ function SearchClientInner() {
                      focus:outline-none focus:ring-2 focus:ring-olive-500 focus:border-olive-500
                      bg-white shadow-sm font-sans transition"
         />
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-400 text-xl pointer-events-none">
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-500 text-xl pointer-events-none">
           {loading ? (
             <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
@@ -156,7 +156,7 @@ function SearchClientInner() {
           or if it genuinely fails; never the old "run npm run build" text. */}
       {indexState === 'loading' && (
         <div className="text-center py-12">
-          <p className="text-stone-400 font-sans text-sm">正在載入搜尋索引…</p>
+          <p className="text-stone-500 font-sans text-sm">正在載入搜尋索引…</p>
         </div>
       )}
       {indexState === 'error' && (
@@ -176,7 +176,7 @@ function SearchClientInner() {
       {/* Suggestions (shown when no query) */}
       {!query && indexState === 'ready' && (
         <div className="mb-10">
-          <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase mb-4">
+          <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase mb-4">
             熱門搜尋
           </p>
           <div className="flex flex-wrap gap-2">
@@ -206,14 +206,14 @@ function SearchClientInner() {
             </svg>
           </div>
           <p className="text-stone-500 font-sans">找不到「{query}」相關文章</p>
-          <p className="text-stone-400 text-sm mt-2 font-sans">試試其他關鍵字，或瀏覽<Link href="/blog" className="text-olive-600 hover:underline mx-1">所有文章</Link></p>
+          <p className="text-stone-500 text-sm mt-2 font-sans">試試其他關鍵字，或瀏覽<Link href="/blog" className="text-olive-600 hover:underline mx-1">所有文章</Link></p>
         </div>
       )}
 
       {/* Results */}
       {results.length > 0 && (
         <div className="space-y-6">
-          <p className="text-[11px] font-sans text-stone-400 tracking-widest uppercase">
+          <p className="text-[11px] font-sans text-stone-500 tracking-widest uppercase">
             找到 {results.length} 篇文章
           </p>
           {results.map((r) => {
@@ -249,7 +249,7 @@ function SearchClientInner() {
 export default function SearchClient() {
   // useSearchParams requires a Suspense boundary for static export.
   return (
-    <Suspense fallback={<p className="text-center py-12 text-stone-400 font-sans text-sm">正在載入搜尋…</p>}>
+    <Suspense fallback={<p className="text-center py-12 text-stone-500 font-sans text-sm">正在載入搜尋…</p>}>
       <SearchClientInner />
     </Suspense>
   );
