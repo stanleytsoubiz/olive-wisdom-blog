@@ -1,0 +1,19 @@
+# Dependabot — added 2026-11-25 (upgrade wave 2).
+# Weekly update PRs. npm minor/patch are grouped into a single PR to
+# keep review noise low; majors arrive individually. GitHub Actions
+# updates arrive individually (few actions, each worth a look).
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
