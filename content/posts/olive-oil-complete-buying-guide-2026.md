@@ -276,3 +276,9 @@ Q4: 價格 ≥ NT$350 / 500ml 嗎？
 - [多酚衰減科學：為什麼去年的金牌油，今年可能只是普通烹飪油？](/blog/polyphenol-decay-science-2026)
 - [橄欖油真偽怎麼鑑別？CoA、採收年份與五層防禦](/blog/olive-oil-fraud-detection-authentic-vs-fake)
 - [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
+
+---
+
+## 一句話總結
+
+選油先過深色瓶與採收日期 12 個月內這兩關，再依序認品種、查認證、要 CoA，行銷話術不如瓶身數字可信。
