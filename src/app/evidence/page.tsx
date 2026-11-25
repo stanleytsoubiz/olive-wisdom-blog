@@ -123,7 +123,7 @@ export default function EvidencePage() {
             關鍵原則：<strong className="text-stone-700">等級由 IOC／Codex／EU 定義；健康聲稱由 EFSA／法規決定；效果證據由研究決定；品質數據由 CoA 決定。</strong>
             四者不可互相替代。
           </p>
-          <p className="text-xs text-stone-400 font-sans mt-5">
+          <p className="text-xs text-stone-500 font-sans mt-5">
             最後查核：{EVIDENCE_LAST_CHECKED}・查核節奏：{EVIDENCE_CHECK_CADENCE}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -450,7 +450,7 @@ export default function EvidencePage() {
             <li><strong className="text-stone-800">2026-11-22</strong> — 證據圖書館建立：IOC 貿易標準 Rev. 22（2026-06）、Codex CXS 33（2024 修訂）、EFSA 多酚聲稱、PREDIMED／EPIC／哈佛世代／EUROLIVE／油橄欖苦素研究、TFDA 品名新制草案。</li>
             <li><strong className="text-stone-800">年度覆核</strong> — IOC 標準與認可實驗室名單每年更新（現行實驗室名單效期至 2026-11-30）；TFDA 新制待二次預告與正式公告後再確認。本頁每年至少覆核一次。</li>
           </ul>
-          <p className="text-xs text-stone-400 leading-relaxed font-sans mt-6">
+          <p className="text-xs text-stone-500 leading-relaxed font-sans mt-6">
             免責聲明：本站內容為知識分享，非醫療建議；如有健康問題請諮詢醫師。標準與法規以官方最新公告為準；TFDA 新制目前仍為草案。
           </p>
           <p className="text-sm font-sans text-stone-500 mt-6">
