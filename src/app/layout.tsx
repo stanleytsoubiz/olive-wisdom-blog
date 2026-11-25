@@ -112,6 +112,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <GoogleAnalytics />
       <body className={`bg-[#FAF8F4] text-[#2C2416] font-sans antialiased min-h-screen flex flex-col ${notoSerifTC.variable} ${notoSansTC.variable}`}>
+        {/* Skip link (a11y): visually hidden until keyboard focus */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-olive-800 focus:text-white focus:text-sm focus:font-medium focus:px-4 focus:py-2 focus:rounded-lg"
+        >
+          跳到主要內容
+        </a>
         {/* Global Header */}
         <ScrollHeader>
           <div className="max-w-6xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
@@ -183,7 +190,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         </ScrollHeader>
 
         {/* Page Content */}
-        <div className="flex-1">
+        <div className="flex-1" id="main-content" tabIndex={-1}>
           {children}
         </div>
 

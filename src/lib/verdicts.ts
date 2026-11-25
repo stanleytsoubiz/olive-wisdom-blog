@@ -63,6 +63,7 @@ export const ARTICLE_VERDICTS: Record<string, ArticleVerdict> = {
       '歐盟唯一核准的多酚聲稱是「有助於保護血脂免受氧化壓力」，條件為每 20 g 油含至少 5 mg 羥基酪醇及其衍生物；門檻是法規條件，不是療效保證。',
   },
   // 來源：/evidence STUDIES「油橄欖苦素（oleocanthal）–COX 機制」grade D
+  // （用詞統一：判讀卡與正文一律作「油橄欖醛」，/evidence 研究名保留原名）
   // （result／limit 原文）；本文正文即以 Beauchamp et al. 2005 為主軸
   'oleocanthal-pungency-anti-inflammation': {
     kind: 'grade',
@@ -70,7 +71,7 @@ export const ARTICLE_VERDICTS: Record<string, ArticleVerdict> = {
     gradeType: '機制／體外研究',
     topic: '喉頭嗆感的來源：oleocanthal 與 COX 抑制機制',
     verdict:
-      '喉頭那道嗆來自 oleocanthal（油橄欖苦素）；2005 年《自然》研究在體外觀察到它抑制 COX-1／COX-2，作用方式類似布洛芬。',
+      '喉頭那道嗆來自 oleocanthal（油橄欖醛）；2005 年《自然》研究在體外觀察到它抑制 COX-1／COX-2，作用方式類似布洛芬。',
     boundary:
       '這是體外機制證據：飲食劑量約為治療劑量的 10%，人體生物利用度未證實，只能作機制說明，不可作抗發炎療效宣稱。',
   },

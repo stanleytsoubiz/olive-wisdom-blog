@@ -107,7 +107,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                       </span>
                       <span className="text-stone-200">—</span>
                       <span className="text-[10px] font-sans text-stone-500 tracking-wide">
-                        {featured.readTime} min read
+                        {featured.readTime} 分鐘閱讀
                       </span>
                     </div>
                     {/* Headline */}
@@ -121,7 +121,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                     {/* Byline */}
                     <div className="flex items-center justify-between border-t border-stone-100 pt-5">
                       <span className="font-sans text-xs text-stone-400">
-                        {new Date(featured.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+                        {new Date(featured.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}
                       </span>
                       <span className="font-sans text-sm text-olive-700 font-medium group-hover:text-olive-900 transition-colors">
                         閱讀全文 →
@@ -181,7 +181,7 @@ export default function BlogFilter({ posts, imagesData }: Props) {
                             <span className="font-sans text-[11px] text-stone-500">
                               {new Date(post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}
                               <span className="mx-2 text-stone-200">·</span>
-                              {post.readTime} min
+                              {post.readTime} 分鐘閱讀
                             </span>
                             <span className="font-sans text-[11px] text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">
                               閱讀 →

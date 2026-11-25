@@ -198,7 +198,13 @@ function SearchClientInner() {
       {/* No results */}
       {searched && !loading && results.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-4xl mb-4">🫒</p>
+          <div className="mb-4 flex justify-center" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 28 28" fill="none">
+              <ellipse cx="14" cy="14" rx="5" ry="8" fill="#4a5824" transform="rotate(-20 14 14)" />
+              <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#7a8f3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+              <path d="M14 8 Q9 6 8 12" stroke="#4a5824" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.7"/>
+            </svg>
+          </div>
           <p className="text-stone-500 font-sans">找不到「{query}」相關文章</p>
           <p className="text-stone-400 text-sm mt-2 font-sans">試試其他關鍵字，或瀏覽<Link href="/blog" className="text-olive-600 hover:underline mx-1">所有文章</Link></p>
         </div>

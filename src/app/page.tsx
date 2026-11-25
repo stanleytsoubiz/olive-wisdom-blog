@@ -143,17 +143,17 @@ export default async function HomePage() {
       {/* 品類基準數據帶 (blueprint 2.1／2.3-4): directly under the hero.
           Only benchmark figures already published in /evidence, each with
           source + date labels; no market prices or live data. */}
-      <section className="bg-olive-800 text-white py-12 md:py-14 px-6">
-        <p className="text-center text-[11px] font-sans font-semibold text-olive-300 tracking-[0.25em] uppercase mb-8">
+      <section className="bg-olive-800 text-white py-10 md:py-14 px-6">
+        <p className="text-center text-[11px] font-sans font-semibold text-olive-300 tracking-[0.25em] uppercase mb-6 md:mb-8">
           本站判讀所依據的基準數字
         </p>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 text-center">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 text-center divide-y divide-olive-700/70 md:divide-y-0">
           {[
             { num: '≤0.8', label: '%', desc: '特級初榨游離酸度上限', sub: 'IOC 貿易標準 COI/T.15/NC No. 3/Rev. 22（2026-06）・Codex CXS 33' },
             { num: '5', label: ' mg／20 g', desc: 'EFSA 核准多酚聲稱門檻', sub: '羥基酪醇及衍生物（≈≥250 mg/kg）・EFSA 意見（2011）・Reg. (EU) No 432/2012' },
             { num: '0.69', label: ' HR', desc: 'PREDIMED 主要終點風險比', sub: '7,447 人・2018 年重分析（原始 0.70）；整體飲食模式結果，非單一油品效果' },
           ].map((stat) => (
-            <div key={stat.desc} className="py-2">
+            <div key={stat.desc} className="py-4 md:py-2 first:pt-0 last:pb-0 md:first:pt-2 md:last:pb-2">
               <div className="text-3xl md:text-4xl font-bold text-gold-400 mb-2 leading-none">
                 {stat.num}<span className="text-xl md:text-2xl">{stat.label}</span>
               </div>
@@ -219,7 +219,7 @@ export default async function HomePage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {LEARNING_PATHS.map((path) => (
-              <Link key={path.id} href="/about#learning-paths" className="group">
+              <Link key={path.id} href={`/blog/${path.entries[0].slug}`} className="group">
                 <div className="h-full border-t-[2px] border-olive-400 bg-white hover:bg-stone-50
                                  p-5 transition-all duration-200 hover:shadow-sm">
                   <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-3">
@@ -286,7 +286,7 @@ export default async function HomePage() {
                     <div className="flex items-center gap-3 text-[11px] font-sans text-stone-500 mb-6 pt-5 border-t border-stone-100">
                       <span className="text-olive-600 font-medium">{featuredPost.author || '知橄生活研究團隊'}</span>
                       <span className="text-stone-200">·</span>
-                      <span>{featuredPost.readTime} min read</span>
+                      <span>{featuredPost.readTime} 分鐘閱讀</span>
                       <span className="text-stone-200">·</span>
                       <span>{new Date(featuredPost.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
                     </div>
@@ -327,7 +327,9 @@ export default async function HomePage() {
                         {post.excerpt}
                       </p>
                       <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500 pt-3 border-t border-stone-100">
-                        <span>{post.readTime} min</span>
+                        <span>{new Date(post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
+                        <span className="text-stone-200">·</span>
+                        <span>{post.readTime} 分鐘閱讀</span>
                         <span className="text-stone-200">·</span>
                         <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
                       </div>
