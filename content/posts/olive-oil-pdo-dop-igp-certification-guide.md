@@ -174,9 +174,3 @@ Koroneiki、Coratina、Picual、早摘的 Frantoio——這些品種有多酚的
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
-
-### 延伸閱讀
-
-- [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
-- [橄欖油的風土密碼：為什麼西班牙、希臘與義大利的同種橄欖，能孕育出截然不同的靈魂？](/blog/olive-oil-terroir-spain-greece-italy)
-- [橄欖油真偽怎麼鑑別？CoA、採收年份與五層防禦](/blog/olive-oil-fraud-detection-authentic-vs-fake)

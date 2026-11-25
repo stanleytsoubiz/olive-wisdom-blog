@@ -18,6 +18,9 @@ export interface PostImage {
   url: string;
   alt: string;
   credit?: string;
+  /** 圖片來源代碼（google_imagen4／unsplash／custom／pollinations_ai_local…），
+      供封面圖說標示使用，見 src/lib/covers.ts */
+  source?: string;
 }
 
 export interface ImagesData {

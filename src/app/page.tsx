@@ -4,6 +4,8 @@ import { getAllPosts } from '@/lib/posts';
 import { getImages, getHeroImage } from '@/lib/images';
 import { LEARNING_PATHS } from '@/lib/learning-paths';
 import { categoryLabel } from '@/lib/categories';
+import PodcastHomeSection from '@/components/PodcastHomeSection';
+import { EVIDENCE_LAST_CHECKED } from '@/lib/evidence';
 import type { Metadata } from 'next';
 
 export const dynamic = 'force-static';
@@ -138,6 +140,36 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* 品類基準數據帶 (blueprint 2.1／2.3-4): directly under the hero.
+          Only benchmark figures already published in /evidence, each with
+          source + date labels; no market prices or live data. */}
+      <section className="bg-olive-800 text-white py-12 md:py-14 px-6">
+        <p className="text-center text-[11px] font-sans font-semibold text-olive-300 tracking-[0.25em] uppercase mb-8">
+          本站判讀所依據的基準數字
+        </p>
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 text-center">
+          {[
+            { num: '≤0.8', label: '%', desc: '特級初榨游離酸度上限', sub: 'IOC 貿易標準 COI/T.15/NC No. 3/Rev. 22（2026-06）・Codex CXS 33' },
+            { num: '5', label: ' mg／20 g', desc: 'EFSA 核准多酚聲稱門檻', sub: '羥基酪醇及衍生物（≈≥250 mg/kg）・EFSA 意見（2011）・Reg. (EU) No 432/2012' },
+            { num: '0.69', label: ' HR', desc: 'PREDIMED 主要終點風險比', sub: '7,447 人・2018 年重分析（原始 0.70）；整體飲食模式結果，非單一油品效果' },
+          ].map((stat) => (
+            <div key={stat.desc} className="py-2">
+              <div className="text-3xl md:text-4xl font-bold text-gold-400 mb-2 leading-none">
+                {stat.num}<span className="text-xl md:text-2xl">{stat.label}</span>
+              </div>
+              <div className="font-medium text-white text-sm mb-1 leading-snug">{stat.desc}</div>
+              <div className="text-xs text-olive-300 leading-relaxed">{stat.sub}</div>
+            </div>
+          ))}
+        </div>
+        <p className="text-center text-xs text-olive-300 font-sans mt-8">
+          數字查核日期：{EVIDENCE_LAST_CHECKED}・來源與評級標準，見
+          <a href="/evidence/" className="text-gold-400 hover:text-gold-300 underline underline-offset-4 ml-1">
+            證據圖書館 →
+          </a>
+        </p>
+      </section>
+
       {/* ── 意圖入口導航 — "我想找什麼" ────────────────────────── */}
       <section id="intent" className="bg-white border-b border-stone-100">
         <div className="max-w-5xl mx-auto px-5 md:px-6 py-6 md:py-12">
@@ -244,7 +276,7 @@ export default async function HomePage() {
                     <p className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase mb-4">
                       最新深度報導
                     </p>
-                    <h2 className="text-2xl md:text-[1.75rem] font-bold text-stone-900 leading-[1.25] mb-4
+                    <h2 className="font-serif text-2xl md:text-[1.75rem] font-bold text-stone-900 leading-[1.25] mb-4
                                    group-hover:text-olive-800 transition-colors tracking-tight">
                       {featuredPost.title}
                     </h2>
@@ -309,36 +341,14 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* 科學數據帶 */}
-      <section className="bg-olive-800 text-white py-12 md:py-16 px-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
-          {[
-            { num: '7,447', label: '位', desc: 'PREDIMED 研究受試者', sub: '史上最大地中海飲食研究' },
-            { num: '約 30%', label: '', desc: 'PREDIMED：地中海飲食組心血管事件減少', sub: '整體飲食模式結果，非單一油品效果' },
-            { num: '250mg', label: '/kg+', desc: '高多酚標準含量', sub: 'EFSA 認可健康聲稱門檻' },
-            { num: '3000', label: '年', desc: '橄欖樹文明歷史', sub: '克里特島古木仍在結果' },
-          ].map((stat) => (
-            <div key={stat.desc} className="py-2">
-              <div className="text-3xl md:text-4xl font-bold text-gold-400 mb-2 leading-none">
-                {stat.num}<span className="text-xl md:text-2xl">{stat.label}</span>
-              </div>
-              <div className="font-medium text-white text-sm mb-1 leading-snug">{stat.desc}</div>
-              <div className="text-xs text-olive-300 leading-relaxed">{stat.sub}</div>
-            </div>
-          ))}
-        </div>
-        <p className="text-center text-xs text-olive-300 font-sans mt-8">
-          以上數據的來源與評級標準，見
-          <a href="/evidence/" className="text-gold-400 hover:text-gold-300 underline underline-offset-4 ml-1">
-            證據圖書館 →
-          </a>
-        </p>
-      </section>
+      {/* Podcast 首頁區塊 (blueprint 2.4-4): renders only when episodes
+          are registered in src/lib/podcast.ts */}
+      <PodcastHomeSection />
 
       {/* 追蹤知橄生活 */}
       <section id="follow" className="bg-gradient-to-br from-olive-100 to-gold-50 py-14 md:py-20 px-6 text-center">
         <p className="text-gold-600 text-xs font-medium tracking-[0.25em] uppercase mb-4">加入知橄家族</p>
-        <h2 className="text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">追蹤知橄生活</h2>
+        <h2 className="font-serif text-2xl md:text-4xl font-bold text-olive-800 mb-4 tracking-tight">追蹤知橄生活</h2>
         <p className="text-stone-500 text-sm md:text-base leading-relaxed max-w-md mx-auto font-sans">
           新文章與研究更新都會公布在網站上；官方社群與 LINE 正在籌備中，開通後會在這裡公布。歡迎常回來看看，也把知橄生活分享給同樣在意吃一瓶好油的朋友。
         </p>

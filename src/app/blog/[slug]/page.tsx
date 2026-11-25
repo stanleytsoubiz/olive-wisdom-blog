@@ -12,6 +12,10 @@ import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 import ArticleNewsletterCTA from '@/components/ArticleNewsletterCTA';
 import VerdictCard from '@/components/VerdictCard';
 import { getVerdict } from '@/lib/verdicts';
+import PodcastSlot from '@/components/PodcastSlot';
+import PodcastTimestamps from '@/components/PodcastTimestamps';
+import { getEpisode } from '@/lib/podcast';
+import { getCoverStyle, getCoverSeriesLabel, getCoverSourceLabel } from '@/lib/covers';
 
 export const dynamic = 'force-static';
 
@@ -215,7 +219,7 @@ function markdownToHtml(md: string): string {
 }
 
 /**
- * Drop the in-body 「延伸閱讀」 H2 section at render time (blueprint 2.2-9:
+ * Drop the in-body 「延伸閱讀」 H2 (or H3, Phase B) section at render time (blueprint 2.2-9:
  * only ONE related-reading block per article — the template's card grid).
  * The source markdown is untouched; the curated links remain available to
  * the card grid's path/tag algorithm. Trailing trust lines that some
@@ -226,9 +230,18 @@ function stripRelatedSection(md: string): string {
   const lines = md.split('\n');
   const out: string[] = [];
   let skipping = false;
+  let skipLevel = 2;
   for (const line of lines) {
-    if (/^## /.test(line)) {
-      skipping = line.trim() === '## 延伸閱讀';
+    const isH2 = /^## /.test(line);
+    const isH3 = /^### /.test(line);
+    if (isH2 || isH3) {
+      const level = isH2 ? 2 : 3;
+      if (skipping && level <= skipLevel) skipping = false;
+      if (!skipping && line.trim() === `${'#'.repeat(level)} 延伸閱讀`) {
+        skipping = true;
+        skipLevel = level;
+        continue;
+      }
       if (skipping) continue;
     }
     if (skipping && !/^\*\*(來源與證據評級|公正聲明|利益揭露)/.test(line)) {
@@ -250,6 +263,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   const htmlContent = markdownToHtml(stripRelatedSection(post.content));
   const verdict = getVerdict(slug);
+  const episode = getEpisode(slug);
+  // 封面三式系統 (blueprint 3.4): series assignment + source label
+  const coverStyle = getCoverStyle(post.category);
+  const coverSeriesLabel = getCoverSeriesLabel(post.category);
+  const coverSourceLabel = getCoverSourceLabel(imagesData.posts[slug]?.source);
   const catInfo = CATEGORY_MAP[post.category] ?? { label: post.category, badgeClass: 'bg-gray-100 text-gray-700', accentColor: 'text-olive-600' };
 
   // Next article on the same learning path (shown in its own box above
@@ -341,6 +359,23 @@ export default async function BlogPostPage({ params }: Props) {
               name: '知橄生活 Olive Wisdom',
               url: 'https://olive-wisdom.com/blog',
             },
+            // AudioObject is added only when a real episode with an audio
+            // file is registered for this article (blueprint 2.4-3).
+            ...(episode?.audioUrl
+              ? {
+                  associatedMedia: {
+                    '@type': 'AudioObject',
+                    name: episode.title || post.title,
+                    contentUrl: episode.audioUrl,
+                    ...(episode.durationSec
+                      ? {
+                          duration: `PT${Math.floor(episode.durationSec / 60)}M${episode.durationSec % 60}S`,
+                        }
+                      : {}),
+                    ...(episode.publishedAt ? { uploadDate: episode.publishedAt } : {}),
+                  },
+                }
+              : {}),
           }),
         }}
       />
@@ -399,7 +434,7 @@ export default async function BlogPostPage({ params }: Props) {
           desktop: native ratio capped by max-width container (max-w-6xl) — avoids ultrawide stretch
           Golden Template v1: 2026-05-14 — fix for cropped headers from object-cover on fixed-height container */}
       {coverImageUrl && (
-        <div className="bg-stone-100 mt-4 mx-auto max-w-6xl">
+        <figure className="bg-stone-100 mt-4 mx-auto max-w-6xl">
           <div className="relative w-full aspect-[1408/768] overflow-hidden">
             <Image
               src={coverImageUrl}
@@ -409,8 +444,18 @@ export default async function BlogPostPage({ params }: Props) {
               sizes="(max-width: 1152px) 100vw, 1152px"
               priority
             />
+            {/* Cover series chip (blueprint 3.4): CSS-only series mark,
+                identical treatment on every cover */}
+            {coverSeriesLabel && (
+              <span className="absolute bottom-3 right-3 bg-black/55 text-white text-[10px] font-sans font-semibold tracking-[0.25em] uppercase px-2.5 py-1">
+                {coverSeriesLabel}
+              </span>
+            )}
           </div>
-        </div>
+          <figcaption className="px-4 py-2 text-[11px] text-stone-500 font-sans">
+            封面圖{coverSourceLabel ? `：${coverSourceLabel}` : ''}・{coverStyle.name}
+          </figcaption>
+        </figure>
       )}
 
       {/* ── Article Header — below image, editorial ─────────────── */}
@@ -440,9 +485,13 @@ export default async function BlogPostPage({ params }: Props) {
             )}
           </div>
 
-          {/* 本文判讀卡 — pilot (blueprint 2.3-1); renders only for articles
-              whose main evidence carries a grade recorded in /evidence */}
+          {/* 本文判讀卡 (blueprint 2.3-1); renders for articles with a
+              verdict/basis entry in src/lib/verdicts.ts */}
           {verdict && <VerdictCard verdict={verdict} />}
+
+          {/* Podcast 槽位 (blueprint 2.4-1): renders only when this article
+              has a registered episode in src/lib/podcast.ts */}
+          <PodcastSlot episode={episode} />
         </div>
       </div>
 
@@ -490,6 +539,10 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Single follow CTA (blueprint 2.2-8) */}
         <ArticleNewsletterCTA />
 
+        {/* Podcast 時間戳 (blueprint 2.4-2): anchored to this article's H2s;
+            renders only when an episode with matching timestamps exists */}
+        <PodcastTimestamps episode={episode} htmlContent={htmlContent} />
+
         {/* FAQ Accordion — article-specific Q&A for SEO Featured Snippets */}
         {post.faq && post.faq.length > 0 && (
           <div className="mt-12 pt-8 border-t border-olive-100">
@@ -533,6 +586,27 @@ export default async function BlogPostPage({ params }: Props) {
                 </li>
               ))}
             </ol>
+          </div>
+        )}
+
+        {/* 修訂紀錄 — only when an update date exists and differs from the
+            publish date (blueprint 2.3-5). Frontmatter has no change-note
+            field, so only dates are shown; notes are never fabricated. */}
+        {post.updated && post.updated !== post.date && (
+          <div className="mt-12 pt-8 border-t border-olive-100">
+            <h3 className="text-sm font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-4">
+              修訂紀錄
+            </h3>
+            <ul className="text-sm text-stone-500 font-sans space-y-1">
+              <li>
+                初版發布：
+                {new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </li>
+              <li>
+                最近更新：
+                {new Date(post.updated).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </li>
+            </ul>
           </div>
         )}
 

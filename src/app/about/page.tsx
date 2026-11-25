@@ -182,7 +182,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-olive-600 text-sm font-medium tracking-widest uppercase mb-3">Our Mission</p>
-            <h2 className="text-3xl font-bold text-olive-800 mb-6">為什麼是知橄生活？</h2>
+            <h2 className="font-serif text-3xl font-bold text-olive-800 mb-6">為什麼是知橄生活？</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
                 橄欖油的世界，充斥著行銷話術與知識斷層。我們的讀者——35 歲以上、重視健康品質、願意深入理解的知性人士——值得更好的資訊環境。
@@ -222,7 +222,7 @@ export default function AboutPage() {
       <section className="bg-olive-800 text-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <p className="text-gold-400 text-xs font-medium tracking-widest uppercase mb-3 text-center">知識體系</p>
-          <h2 className="text-3xl font-bold text-center mb-10">四大知識欄目</h2>
+          <h2 className="font-serif text-3xl font-bold text-center mb-10">四大知識欄目</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {(['culture', 'science', 'health', 'lifestyle'] as const).map((key) => {
               const col = CATEGORY_COLUMNS.find((c) => c.key === key)!;
@@ -252,7 +252,7 @@ export default function AboutPage() {
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center mb-12">
           <p className="text-olive-600 text-xs font-medium tracking-widest uppercase mb-3">Editorial Team</p>
-          <h2 className="text-3xl font-bold text-olive-800 mb-4">知橄生活研究團隊</h2>
+          <h2 className="font-serif text-3xl font-bold text-olive-800 mb-4">知橄生活研究團隊</h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
             所有內容均由具備食品科學、分子生物學與地中海飲食研究背景的編輯團隊審核，
             並引用 PREDIMED、哈佛醫學院、EFSA、IOC 等國際權威機構研究文獻。
@@ -331,7 +331,7 @@ export default function AboutPage() {
 
       {/* 我們的承諾 */}
       <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-bold text-olive-800 mb-6 text-center">我們對讀者的承諾</h2>
+        <h2 className="font-serif text-2xl font-bold text-olive-800 mb-6 text-center">我們對讀者的承諾</h2>
         <div className="grid md:grid-cols-3 gap-0 border border-stone-200 divide-x divide-stone-200">
           {[
             { icon: 'book', title: '引用透明', desc: '每篇文章附完整參考文獻，數字可追溯' },
@@ -352,7 +352,7 @@ export default function AboutPage() {
       {/* ── 編輯標準：數字能追溯，才敢寫出來 ── */}
       <section id="editorial-standards" className="max-w-4xl mx-auto px-6 py-20">
         <p className="text-olive-600 text-xs font-medium tracking-widest uppercase mb-3">Editorial Standards</p>
-        <h2 className="text-3xl font-bold text-olive-800 mb-4">編輯標準：數字能追溯，才敢寫出來</h2>
+        <h2 className="font-serif text-3xl font-bold text-olive-800 mb-4">編輯標準：數字能追溯，才敢寫出來</h2>
         <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-2xl">
           以下四條是知橄生活的編輯運作方式——從選題、查核到更新——供讀者、研究者及引用者查閱。完整證據來源與評級標準見
           <Link href="/evidence" className="text-olive-700 underline underline-offset-4 ml-1">證據圖書館</Link>；本站販售產品的選品門檻與查驗流程見
@@ -408,7 +408,7 @@ export default function AboutPage() {
       <section id="learning-paths" className="bg-white border-y border-stone-200 py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <p className="text-olive-600 text-xs font-medium tracking-widest uppercase mb-3">Learning Paths</p>
-          <h2 className="text-3xl font-bold text-olive-800 mb-4">學習路徑：先懂證據，再選油</h2>
+          <h2 className="font-serif text-3xl font-bold text-olive-800 mb-4">學習路徑：先懂證據，再選油</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-2xl">
             本站 {articleCount} 篇文章全數編入五條路徑：每一條都從入門讀到研究級，讀完就能自己判斷一瓶油。健康知識最容易被誇大，所以我們先把證據分層——哪些結論來自大型人體研究，哪些只是機理或初步觀察，哪些不能被說成治療或預防疾病。
           </p>
@@ -464,7 +464,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="bg-gradient-to-br from-olive-100 to-gold-50 py-16 px-6 text-center">
-        <h2 className="text-2xl font-bold text-olive-800 mb-4">開始你的知橄旅程</h2>
+        <h2 className="font-serif text-2xl font-bold text-olive-800 mb-4">開始你的知橄旅程</h2>
         <p className="text-gray-500 mb-8">從一篇文章開始，讓科學與美學重新定義你對橄欖油的認識。</p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Link

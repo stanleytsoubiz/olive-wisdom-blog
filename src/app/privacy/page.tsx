@@ -18,7 +18,7 @@ export default function PrivacyPage() {
 
       <div className="prose-custom space-y-8 text-gray-700 leading-relaxed">
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">1. 資料收集</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">1. 資料收集</h2>
           <p>知橄生活（Olive Wisdom，以下簡稱「本站」）僅在您主動提供時收集以下個人資料：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
             <li>姓名及聯絡資訊（透過聯絡表單時）</li>
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">2. 資料使用目的</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">2. 資料使用目的</h2>
           <p>我們收集的資料僅用於：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
             <li>回覆您的聯絡訊息</li>
@@ -40,12 +40,12 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">3. 資料儲存與安全</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">3. 資料儲存與安全</h2>
           <p>透過聯絡表單提供的資料儲存於 Supabase（PostgreSQL 資料庫，位於歐洲地區伺服器），並採用 SSL/TLS 加密傳輸。我們依據 GDPR 及台灣個人資料保護法相關規定處理您的資料。</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">4. Cookie 使用</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">4. Cookie 使用</h2>
           <p>本站使用以下 Cookie：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
             <li><strong>必要性 Cookie</strong>：確保網站正常運作</li>
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">5. 您的權利</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">5. 您的權利</h2>
           <p>您可隨時：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
             <li>要求查閱、更正或刪除您的個人資料</li>
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">6. 第三方服務</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">6. 第三方服務</h2>
           <p>本站整合以下第三方服務，其各自有獨立的隱私政策：</p>
           <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
             <li>Google Analytics（流量分析）</li>
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold text-olive-700 mb-3">7. 聯絡我們</h2>
+          <h2 className="font-serif text-xl font-bold text-olive-700 mb-3">7. 聯絡我們</h2>
           <p>
             如對本隱私政策有任何疑問，請透過網站<Link href="/#contact" className="text-olive-600 underline">聯絡表單</Link>與我們聯繫。
           </p>
