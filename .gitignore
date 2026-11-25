@@ -1,5 +1,13 @@
 node_modules/
 .next/
+.wrangler/
+# Env files: never commit real env files. Only .env.example (placeholders)
+# and .env.production (intentionally public NEXT_PUBLIC_* config for CI
+# builds — see commit 48a5596) are tracked.
+.env
+.env.*
+!.env.example
+!.env.production
 .env.local
 .env*.local
 out/
