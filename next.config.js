@@ -19,7 +19,7 @@ const isCf = process.env.OW_BUILD_TARGET === 'cf';
 const CSP = [
   "default-src 'self'",
   // challenges.cloudflare.com reserved for Turnstile (assessment step 2-1)
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com",
+  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https:",
   "font-src 'self' data:",

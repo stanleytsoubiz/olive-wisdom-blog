@@ -49,8 +49,10 @@ function SearchClientInner() {
     let cancelled = false;
     const load = async () => {
       try {
-        // pagefind.js is generated at build time into /pagefind/ — load dynamically
-        const pf = await new Function('return import("/pagefind/pagefind.js")')() as PagefindAPI;
+        // pagefind.js is generated at build time into /pagefind/ — load dynamically.
+        // A real dynamic import (not new Function) so the site CSP needs no 'unsafe-eval'.
+        // @ts-expect-error pagefind.js is generated at build time into /pagefind/, not a bundled module
+        const pf = (await import(/* webpackIgnore: true */ '/pagefind/pagefind.js')) as unknown as PagefindAPI;
         if (cancelled) return;
         pagefindRef.current = pf;
         setIndexState('ready');
@@ -114,7 +116,8 @@ function SearchClientInner() {
     setIndexState('loading');
     (async () => {
       try {
-        const pf = await new Function('return import("/pagefind/pagefind.js")')() as PagefindAPI;
+        // @ts-expect-error pagefind.js is generated at build time into /pagefind/, not a bundled module
+        const pf = (await import(/* webpackIgnore: true */ '/pagefind/pagefind.js')) as unknown as PagefindAPI;
         pagefindRef.current = pf;
         setIndexState('ready');
       } catch {

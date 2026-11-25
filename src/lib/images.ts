@@ -4,9 +4,13 @@
  * 負責動態載入 /data/images.json（位於 public/data/images.json）
  * 支援 Server Component（靜態載入）與 Client Component（動態 fetch）
  * 
- * Admin 後台可直接修改 images.json 並推送 GitHub，
- * 前端次次請求都會取得最新版本，無需重新 Build。
+ * Admin 後台可直接修改 images.json 並推送 GitHub；
+ * getImages() 在 build 時把 images.json 靜態打包進 server bundle
+ * （OpenNext Worker 沒有 repo 檔案系統，runtime fs 讀檔永遠失敗），
+ * 因此 images.json 改版需重新 build 才會生效。
  */
+
+import imagesJson from '../../public/data/images.json';
 
 export interface HeroImage {
   url: string;
@@ -18,6 +22,9 @@ export interface PostImage {
   url: string;
   alt: string;
   credit?: string;
+  /** 圖片來源代碼（google_imagen4／unsplash／custom／pollinations_ai_local…），
+      供封面圖說標示使用，見 src/lib/covers.ts */
+  source?: string;
 }
 
 export interface ImagesData {
@@ -65,27 +72,12 @@ const FALLBACK_IMAGES: ImagesData = {
 };
 
 // ── Server-side loader（用於 SSG/SSR Page）─────────────
-// 在 build time 會靜態載入；runtime 動態請求由 getImagesClient 處理
+// images.json 在 build 時靜態打包進 server bundle（見檔頭 import）。
+// 舊作法 runtime 用 fs 讀 public/data/images.json，在 OpenNext Worker
+// 裡讀不到檔案、靜默退回 FALLBACK_IMAGES，導致列表縮圖、內文封面
+// 與 hero 全面退回 fallback 圖 — 2026-11-24 改為靜態 import 修復。
 export async function getImages(): Promise<ImagesData> {
-  try {
-    // 優先嘗試本地 filesystem（build time）
-    if (typeof window === 'undefined') {
-      try {
-        const fs = await import('fs');
-        const path = await import('path');
-        const filePath = path.join(process.cwd(), 'public', 'data', 'images.json');
-        if (fs.existsSync(filePath)) {
-          const raw = fs.readFileSync(filePath, 'utf-8');
-          return JSON.parse(raw) as ImagesData;
-        }
-      } catch {
-        // fall through
-      }
-    }
-    return FALLBACK_IMAGES;
-  } catch {
-    return FALLBACK_IMAGES;
-  }
+  return imagesJson as ImagesData;
 }
 
 // ── Helpers ──────────────────────────────────────────

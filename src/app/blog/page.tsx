@@ -85,7 +85,7 @@ export default async function BlogPage() {
 
       {/* CTA */}
       <section className="bg-olive-100 py-14 px-6 text-center">
-        <h2 className="text-2xl font-bold text-olive-800 mb-3">持續跟上橄欖油新知</h2>
+        <h2 className="font-serif text-2xl font-bold text-olive-800 mb-3">持續跟上橄欖油新知</h2>
         <p className="text-gray-600 mb-6 text-sm">新文章公布在網站上，官方社群與 LINE 正在籌備中，歡迎常回來看看</p>
         <Link
           href="/#follow"

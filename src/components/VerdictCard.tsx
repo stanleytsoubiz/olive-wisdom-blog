@@ -6,29 +6,34 @@ import type { ArticleVerdict } from '@/lib/verdicts';
  * 文章：標題列下方固定版位，等級大字＋一句判語＋證據邊界。
  * 等級色只用橄欖綠深淺與字重區分，不彩虹化（blueprint 3.3-2）。
  * 手機直式堆疊：等級與判語先行（blueprint 2.6-4）。
+ * Phase B：主要證據不在 /evidence 分級範圍內的文章，改顯示「判讀依據」
+ * 四型（法規標準／產量統計／文化敘事／實作指南）——標的是判讀基礎，
+ * 不冒充證據等級。
  */
 export default function VerdictCard({ verdict }: { verdict: ArticleVerdict }) {
-  const isRegulatory = verdict.grade === '法規';
+  const isGrade = verdict.kind === 'grade';
+  const bigText = isGrade ? verdict.grade! : verdict.basis!;
+  const isLongLabel = bigText.length > 1;
   return (
     <section
-      aria-label="本文判讀"
+      aria-label={isGrade ? '本文判讀' : '本文判讀依據'}
       className="mt-6 border border-olive-200 bg-olive-50/60 px-5 py-5 sm:px-6"
     >
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-        {/* Grade block */}
+        {/* Grade / basis block */}
         <div className="flex sm:flex-col items-baseline sm:items-start gap-2 sm:gap-1 shrink-0 sm:w-24">
           <span className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.25em] uppercase">
-            證據等級
+            {isGrade ? '證據等級' : '判讀依據'}
           </span>
           <span
             className={`font-serif font-bold text-olive-800 leading-none ${
-              isRegulatory ? 'text-4xl' : 'text-6xl'
+              isLongLabel ? 'text-4xl' : 'text-6xl'
             }`}
           >
-            {verdict.grade}
+            {bigText}
           </span>
           <span className="text-[11px] font-sans text-stone-500 leading-snug">
-            {verdict.gradeType}
+            {isGrade ? verdict.gradeType : verdict.basisNote}
           </span>
         </div>
 

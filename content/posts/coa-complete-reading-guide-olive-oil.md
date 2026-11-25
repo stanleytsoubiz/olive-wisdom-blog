@@ -116,7 +116,7 @@ CoA 不應只是品牌自己整理的一張漂亮表格。較具公信力的 CoA
 
 ### 酸值：特級初榨的條件，與數字的陷阱
 
-根據國際橄欖油理事會（International Olive Council，IOC）2025 年貿易標準，特級初榨橄欖油（Extra Virgin Olive Oil，EVOO）的游離酸度上限為 **≤0.8%**。這是進入「特級初榨」等級的基本條件之一。
+根據[國際橄欖油理事會（International Olive Council，IOC）2025 年貿易標準](https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards/)，特級初榨橄欖油（Extra Virgin Olive Oil，EVOO）的游離酸度上限為 **≤0.8%**。這是進入「特級初榨」等級的基本條件之一。
 
 用生活語言來說，酸值不是在測「酸不酸」，而是在看橄欖果從採收到壓榨之間有沒有受傷、拖太久或處理不當。它比較像新鮮度與處理品質的警示燈。
 

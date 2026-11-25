@@ -45,7 +45,7 @@ qc_gate:
 
 ## USDA 官方數據：每 15ml 的確切熱量
 
-根據美國農業部 FoodData Central（FDC ID: 171413）的橄欖油營養組成官方數據，每 15ml（一湯匙）橄欖油的主要營養素如下：
+根據[美國農業部 FoodData Central（FDC ID: 171413）](https://fdc.nal.usda.gov/fdc-app.html#/food-details/171413/nutrients)的橄欖油營養組成官方數據，每 15ml（一湯匙）橄欖油的主要營養素如下：
 
 | 營養素 | 每 15ml 含量 |
 |--------|-------------|
