@@ -43,10 +43,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? coverPath
     : `https://olive-wisdom.com${coverPath}`;
 
-  // Use focusKeyword in title for SEO signal: "主關鍵字：文章標題"
+  // Use focusKeyword in title for SEO signal: "主關鍵字：文章標題" —
+  // but never stack it when the title already says it (A8 rule): if every
+  // keyword token already appears in the title (whitespace-insensitive),
+  // or the title opens with the keyword's core phrase, the bare title is
+  // the SEO title. (Was: "PREDIMED研究：PREDIMED 研究完整解析…".)
   // NOTE: do NOT append "｜知橄生活" here — layout.tsx title template
   // ("%s｜知橄生活 Olive Wisdom") adds the site suffix once.
-  const seoTitle = post.focusKeyword && post.focusKeyword !== post.title
+  const norm = (t: string) => t.replace(/[\s　]/g, '').toLowerCase();
+  const fkNorm = post.focusKeyword ? norm(post.focusKeyword) : '';
+  const titleNorm = norm(post.title);
+  const fkTokens = (post.focusKeyword ?? '').split(/[\s　]+/).filter(Boolean);
+  // For long single-phrase keywords, a near-complete core inside the title
+  // also counts as covered (e.g. 差別 vs 到底差在哪裡）.
+  const fkCore =
+    fkNorm.length >= 6
+      ? fkNorm.slice(0, fkNorm.length - (fkNorm.length >= 12 ? 4 : 2))
+      : '';
+  const fkCovered =
+    fkTokens.length > 0 &&
+    (fkTokens.every((t) => titleNorm.includes(norm(t))) ||
+      (fkCore.length >= 4 && titleNorm.includes(fkCore)));
+  const seoTitle = post.focusKeyword && !fkCovered && fkNorm !== titleNorm
     ? `${post.focusKeyword}：${post.title}`
     : post.title;
 
@@ -452,7 +470,7 @@ export default async function BlogPostPage({ params }: Props) {
               </span>
             )}
           </div>
-          <figcaption className="px-4 py-2 text-[11px] text-stone-500 font-sans">
+          <figcaption className="px-4 py-2.5 text-xs text-stone-600 font-sans">
             封面圖{coverSourceLabel ? `：${coverSourceLabel}` : ''}・{coverStyle.name}
           </figcaption>
         </figure>
@@ -499,7 +517,7 @@ export default async function BlogPostPage({ params }: Props) {
       <TableOfContents htmlContent={htmlContent} />
 
       {/* Article Body */}
-      <article className="max-w-[680px] mx-auto px-4 sm:px-6 pt-10 pb-16" data-pagefind-body>
+      <article className="max-w-[720px] mx-auto px-4 sm:px-6 pt-10 pb-16" data-pagefind-body>
         {/* Lead / Excerpt */}
         <p className="article-excerpt text-[1.15rem] text-stone-600 leading-[1.8] mb-10 font-sans border-l-[3px] border-olive-400 pl-5 italic">
           {post.excerpt}
@@ -613,7 +631,7 @@ export default async function BlogPostPage({ params }: Props) {
       </article>
 
       {/* Author Trust Block — editorial byline style */}
-      <section className="max-w-[680px] mx-auto px-4 sm:px-6 py-8">
+      <section className="max-w-[720px] mx-auto px-4 sm:px-6 py-8">
         <div className="border-t border-stone-200 pt-8">
           <div className="flex flex-col sm:flex-row items-start gap-5">
             {/* Avatar — simple monogram */}
@@ -726,7 +744,9 @@ export default async function BlogPostPage({ params }: Props) {
                       <p className="text-[11px] font-sans text-olive-600 mb-3">{rel.reason}</p>
                     )}
                     <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500">
-                      <span>{rel.post.readTime} MIN</span>
+                      <span>{new Date(rel.post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
+                      <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
+                      <span>{rel.post.readTime} 分鐘閱讀</span>
                       <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
                       <span className="text-olive-600 font-semibold group-hover:text-olive-800 transition-colors">閱讀 →</span>
                     </div>

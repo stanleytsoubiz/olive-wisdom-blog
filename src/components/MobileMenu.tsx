@@ -38,7 +38,10 @@ export default function MobileMenu() {
         </svg>
       </button>
 
-      {/* Fullscreen overlay */}
+      {/* Fullscreen overlay — fully opaque on purpose: it must never let
+          the hero show through. (It also relies on the header NOT using
+          backdrop-filter, which would become the containing block for this
+          fixed element and confine it to the header strip.) */}
       {open && (
         <div className="fixed inset-0 z-[60] bg-[#FAF8F4] flex flex-col"
              style={{ animation: 'slideInRight 200ms ease-out' }}>
@@ -68,8 +71,8 @@ export default function MobileMenu() {
 
       <style jsx global>{`
         @keyframes slideInRight {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
+          from { transform: translateX(100%); }
+          to { transform: translateX(0); }
         }
       `}</style>
     </>

@@ -11,8 +11,14 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-olive-50 px-6">
       <div className="max-w-lg text-center">
-        {/* Icon */}
-        <div className="text-8xl mb-6 select-none">🫒</div>
+        {/* Icon — brand olive mark as SVG (emoji retired site-wide) */}
+        <div className="mb-6 flex justify-center select-none" aria-hidden="true">
+          <svg width="88" height="88" viewBox="0 0 28 28" fill="none">
+            <ellipse cx="14" cy="14" rx="5" ry="8" fill="#4a5824" transform="rotate(-20 14 14)" />
+            <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#7a8f3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+            <path d="M14 8 Q9 6 8 12" stroke="#4a5824" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.7"/>
+          </svg>
+        </div>
 
         {/* Error Code */}
         <p className="text-gold-600 text-sm font-medium tracking-[0.3em] uppercase mb-3">
@@ -35,13 +41,13 @@ export default function NotFound() {
             href="/"
             className="inline-flex items-center gap-2 bg-olive-600 hover:bg-olive-700 text-white font-semibold px-8 py-3 rounded-xl transition-all hover:shadow-md"
           >
-            🏡 回到首頁
+            回到首頁
           </Link>
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 bg-white hover:bg-olive-50 text-olive-700 font-medium px-8 py-3 rounded-xl border border-olive-200 transition-all"
           >
-            📚 探索知識庫
+            探索知識庫
           </Link>
         </div>
 

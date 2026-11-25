@@ -2,9 +2,9 @@
  * 封面三式系統（world-class blueprint 3.4）：61 張封面收進三個受控
  * 模板系列，讓圖庫一眼成「一家人」。
  *
- * - 甲式・產地實景：文化／產地／歷史——產地實景與歷史場景。
- * - 乙式・靜物判讀：選購／判讀／生活——瓶身、標籤、倒油、廚房靜物。
- * - 丙式・圖解式：科學／數據——分子、機制、數據意象。
+ * - 產地實景：文化／產地／歷史——產地實景與歷史場景。
+ * - 靜物特寫：選購／判讀／生活——瓶身、標籤、倒油、廚房靜物。
+ * - 圖解示意：科學／數據——分子、機制、數據意象。
  *
  * 系列依文章分類欄位（lib/categories.ts 的 column）自動歸屬；
  * 文章頁封面以 CSS 疊加系列字標（分類英文名）並在圖說標明圖片來源
@@ -24,17 +24,17 @@ export interface CoverStyle {
 export const COVER_STYLES: Record<CoverStyleId, CoverStyle> = {
   landscape: {
     id: 'landscape',
-    name: '甲式・產地實景',
+    name: '產地實景',
     description: '產地實景與歷史場景：橄欖園、產區地景、古文明遺跡',
   },
   'still-life': {
     id: 'still-life',
-    name: '乙式・靜物判讀',
+    name: '靜物特寫',
     description: '靜物判讀：瓶身、標籤、倒油與廚房場景',
   },
   diagram: {
     id: 'diagram',
-    name: '丙式・圖解式',
+    name: '圖解示意',
     description: '圖解式：分子、機制與數據意象',
   },
 };

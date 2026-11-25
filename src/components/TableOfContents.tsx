@@ -19,6 +19,7 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
   const [active, setActive] = useState('');
   const [progress, setProgress] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [footerVisible, setFooterVisible] = useState(false);
   const toc = extractToc(htmlContent);
 
   useEffect(() => {
@@ -38,6 +39,19 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Footer avoidance: once the global footer enters the viewport, the
+  // floating button retires so it never overlaps footer links or text.
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setFooterVisible(entry.isIntersecting),
+      { rootMargin: '0px 0px 96px 0px' }
+    );
+    observer.observe(footer);
+    return () => observer.disconnect();
   }, []);
 
   if (toc.length < 3) return null;
@@ -64,7 +78,7 @@ export default function TableOfContents({ htmlContent }: { htmlContent: string }
       {/* ── Floating TOC button + slide-up drawer (all screens) ── */}
       <div>
         {/* Floating TOC button — appears after scrolling 20%, all screens */}
-        {progress > 20 && (
+        {progress > 20 && !footerVisible && (
           <button
             onClick={() => setMobileOpen(true)}
             style={{ bottom: 'max(84px, env(safe-area-inset-bottom, 84px))' }}

@@ -11,8 +11,8 @@ export default function ScrollHeader({ children }: { children: React.ReactNode }
   return (
     <header
       data-pagefind-ignore
-      className={`sticky top-0 z-50 border-b border-olive-100 transition-shadow duration-200
-      ${scrolled ? 'bg-white/98 shadow-md backdrop-blur-sm' : 'bg-white/95 shadow-none backdrop-blur-sm'}`}
+      className={`sticky top-0 z-50 bg-white border-b transition-shadow duration-200
+      ${scrolled ? 'border-olive-200 shadow-md' : 'border-olive-100 shadow-none'}`}
     >
       {children}
     </header>

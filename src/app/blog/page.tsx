@@ -91,7 +91,7 @@ export default async function BlogPage() {
           href="/#follow"
           className="inline-block bg-olive-700 hover:bg-olive-800 text-white px-8 py-3 rounded-xl font-medium transition-colors"
         >
-          追蹤知橄生活 🫒
+          追蹤知橄生活
         </Link>
       </section>
     </main>

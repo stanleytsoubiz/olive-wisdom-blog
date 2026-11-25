@@ -75,7 +75,7 @@ export default function BottomNav() {
 
   return (
     <nav
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/96 backdrop-blur-md border-t border-stone-100"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-stone-200 shadow-[0_-4px_16px_rgba(44,36,22,0.10)]"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label="底部導航"
     >
