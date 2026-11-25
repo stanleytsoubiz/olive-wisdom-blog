@@ -39,7 +39,7 @@ export default function VerdictCard({ verdict }: { verdict: ArticleVerdict }) {
 
         {/* Verdict body */}
         <div className="flex-1 min-w-0 border-t sm:border-t-0 sm:border-l border-olive-200 pt-4 sm:pt-0 sm:pl-6">
-          <p className="text-[11px] font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-1.5">
+          <p className="text-[11px] font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-1.5">
             本文主題
           </p>
           <p className="text-sm font-sans font-medium text-stone-700 leading-relaxed mb-3">
@@ -55,7 +55,7 @@ export default function VerdictCard({ verdict }: { verdict: ArticleVerdict }) {
         </div>
       </div>
 
-      <p className="mt-4 pt-3 border-t border-olive-200/70 text-[11px] font-sans text-stone-400">
+      <p className="mt-4 pt-3 border-t border-olive-200/70 text-[11px] font-sans text-stone-500">
         分級定義與完整判讀標準，見
         <Link href="/evidence#grades" className="text-olive-700 hover:text-olive-900 underline underline-offset-4 ml-1">
           證據圖書館 →

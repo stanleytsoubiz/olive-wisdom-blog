@@ -4,6 +4,7 @@ import { getAllPosts } from '@/lib/posts';
 import { getImages, getHeroImage } from '@/lib/images';
 import { LEARNING_PATHS } from '@/lib/learning-paths';
 import { categoryLabel } from '@/lib/categories';
+import { formatPostDate } from '@/lib/format';
 import PodcastHomeSection from '@/components/PodcastHomeSection';
 import { EVIDENCE_LAST_CHECKED } from '@/lib/evidence';
 import type { Metadata } from 'next';
@@ -175,7 +176,7 @@ export default async function HomePage() {
         <div className="max-w-5xl mx-auto px-5 md:px-6 py-6 md:py-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-stone-200" />
-            <p className="text-xs font-sans font-semibold text-stone-400 tracking-[0.25em] uppercase whitespace-nowrap">
+            <p className="text-xs font-sans font-semibold text-stone-500 tracking-[0.25em] uppercase whitespace-nowrap">
               你今天想要…
             </p>
             <div className="h-px flex-1 bg-stone-200" />
@@ -288,7 +289,7 @@ export default async function HomePage() {
                       <span className="text-stone-200">·</span>
                       <span>{featuredPost.readTime} 分鐘閱讀</span>
                       <span className="text-stone-200">·</span>
-                      <span>{new Date(featuredPost.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
+                      <span>{formatPostDate(featuredPost.date)}</span>
                     </div>
                     <span className="text-sm font-medium text-olive-700 group-hover:text-olive-900
                                      transition-colors font-sans">
@@ -327,7 +328,7 @@ export default async function HomePage() {
                         {post.excerpt}
                       </p>
                       <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500 pt-3 border-t border-stone-100">
-                        <span>{new Date(post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
+                        <span>{formatPostDate(post.date)}</span>
                         <span className="text-stone-200">·</span>
                         <span>{post.readTime} 分鐘閱讀</span>
                         <span className="text-stone-200">·</span>

@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { CATEGORY_COLUMNS } from '@/lib/categories';
 
@@ -22,7 +23,13 @@ export default function MobileMenu() {
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    if (!open) return () => { document.body.style.overflow = ''; };
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+    };
   }, [open]);
 
   return (
@@ -39,12 +46,17 @@ export default function MobileMenu() {
       </button>
 
       {/* Fullscreen overlay — fully opaque on purpose: it must never let
-          the hero show through. (It also relies on the header NOT using
-          backdrop-filter, which would become the containing block for this
-          fixed element and confine it to the header strip.) */}
-      {open && (
-        <div className="fixed inset-0 z-[60] bg-[#FAF8F4] flex flex-col"
-             style={{ animation: 'slideInRight 200ms ease-out' }}>
+          the page show through. Rendered through a portal to <body> so no
+          ancestor (the sticky header's stacking context, or any future
+          transform/filter/backdrop-filter on an ancestor, which would
+          become the containing block for a fixed element) can confine or
+          re-layer it — the 2026-11-25 recurrence of the see-through menu
+          happened while the overlay lived inside the header. The opaque
+          background is ALSO set inline so it does not depend on a
+          generated utility class reaching the deployed CSS. */}
+      {open && createPortal(
+        <div className="fixed inset-0 z-[9999] bg-[#FAF8F4] flex flex-col"
+             style={{ animation: 'slideInRight 200ms ease-out', backgroundColor: '#FAF8F4', opacity: 1 }}>
           {/* Close button */}
           <div className="flex justify-end p-5">
             <button onClick={() => setOpen(false)} className="p-2 text-olive-700" aria-label="關閉選單">
@@ -66,7 +78,8 @@ export default function MobileMenu() {
               </Link>
             ))}
           </nav>
-        </div>
+        </div>,
+        document.body
       )}
 
       <style jsx global>{`

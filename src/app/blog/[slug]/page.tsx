@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { getPostBySlug, getAllSlugs, getAllPosts } from '@/lib/posts';
 import { getImages, getPostImageUrl } from '@/lib/images';
 import { CATEGORY_MAP, categoryLabel } from '@/lib/categories';
+import { formatPostDate } from '@/lib/format';
 import { findPathPosition, getNextInPath } from '@/lib/learning-paths';
 import type { Metadata } from 'next';
 import TableOfContents from '@/components/TableOfContents';
@@ -43,30 +44,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? coverPath
     : `https://olive-wisdom.com${coverPath}`;
 
-  // Use focusKeyword in title for SEO signal: "主關鍵字：文章標題" —
-  // but never stack it when the title already says it (A8 rule): if every
-  // keyword token already appears in the title (whitespace-insensitive),
-  // or the title opens with the keyword's core phrase, the bare title is
-  // the SEO title. (Was: "PREDIMED研究：PREDIMED 研究完整解析…".)
+  // SEO title = the article's own title, verbatim, for every article.
+  // The previous focusKeyword-prefix heuristic ("主關鍵字：文章標題")
+  // fired on 37 of 61 articles — including keyword strings with spaces
+  // like "橄欖油 比賽 金牌 Mario Solinas…" — leaving the site with two
+  // inconsistent title formats (2026-11-25 audit). Removed: one clean
+  // format site-wide. focusKeyword stays in frontmatter for content use.
   // NOTE: do NOT append "｜知橄生活" here — layout.tsx title template
   // ("%s｜知橄生活 Olive Wisdom") adds the site suffix once.
-  const norm = (t: string) => t.replace(/[\s　]/g, '').toLowerCase();
-  const fkNorm = post.focusKeyword ? norm(post.focusKeyword) : '';
-  const titleNorm = norm(post.title);
-  const fkTokens = (post.focusKeyword ?? '').split(/[\s　]+/).filter(Boolean);
-  // For long single-phrase keywords, a near-complete core inside the title
-  // also counts as covered (e.g. 差別 vs 到底差在哪裡）.
-  const fkCore =
-    fkNorm.length >= 6
-      ? fkNorm.slice(0, fkNorm.length - (fkNorm.length >= 12 ? 4 : 2))
-      : '';
-  const fkCovered =
-    fkTokens.length > 0 &&
-    (fkTokens.every((t) => titleNorm.includes(norm(t))) ||
-      (fkCore.length >= 4 && titleNorm.includes(fkCore)));
-  const seoTitle = post.focusKeyword && !fkCovered && fkNorm !== titleNorm
-    ? `${post.focusKeyword}：${post.title}`
-    : post.title;
+  const seoTitle = post.title;
 
   return {
     title: seoTitle,
@@ -162,7 +148,14 @@ function markdownToHtml(md: string): string {
     }
     if (/^# (.+)$/.test(line)) {
       closeList(); closeTable(); closeBlockquote();
-      result.push(`<h1 class="font-serif text-3xl font-bold text-olive-900 mt-8 mb-4">${inline(line.replace(/^# /, ''))}</h1>`);
+      // In-body H1 → rendered as H2: the template already emits the page's
+      // single <h1> (the article title), and 3 articles repeat their title
+      // as an in-body `# ` line. Demoting at render time keeps exactly one
+      // h1 per page (heading-hierarchy audit, 2026-11-25); source markdown
+      // is untouched.
+      const _h1t = line.replace(/^# /, '');
+      const _h1id = 'h-' + _h1t.replace(/[^\w\u4e00-\u9fff]/g,'').slice(0,20).toLowerCase() + '-' + result.length;
+      result.push(`<h2 id="${_h1id}" class="font-serif text-2xl font-bold text-olive-800 mt-[2.2em] mb-[0.8em]">${inline(_h1t)}</h2>`);
       continue;
     }
 
@@ -489,11 +482,11 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] font-sans text-stone-500 border-t border-stone-100 pt-5">
             <span className="font-medium text-olive-700">{post.author || '知橄生活研究團隊'}</span>
             <span className="text-stone-300">|</span>
-            <span>{new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            <span>{formatPostDate(post.date, true)}</span>
             {post.updated && post.updated !== post.date && (
               <>
                 <span className="text-stone-300">|</span>
-                <span>更新於 {new Date(post.updated).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <span>更新於 {formatPostDate(post.updated, true)}</span>
               </>
             )}
             {(post.category === 'science' || post.category === 'health') && (
@@ -593,7 +586,7 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Sources */}
         {post.sources && post.sources.length > 0 && (
           <div className="mt-12 pt-8 border-t border-olive-100">
-            <h3 className="text-sm font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-4">
+            <h3 className="text-sm font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-4">
               參考文獻
             </h3>
             <ol className="space-y-2">
@@ -612,17 +605,17 @@ export default async function BlogPostPage({ params }: Props) {
             field, so only dates are shown; notes are never fabricated. */}
         {post.updated && post.updated !== post.date && (
           <div className="mt-12 pt-8 border-t border-olive-100">
-            <h3 className="text-sm font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-4">
+            <h3 className="text-sm font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-4">
               修訂紀錄
             </h3>
             <ul className="text-sm text-stone-500 font-sans space-y-1">
               <li>
                 初版發布：
-                {new Date(post.date).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {formatPostDate(post.date, true)}
               </li>
               <li>
                 最近更新：
-                {new Date(post.updated).toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {formatPostDate(post.updated, true)}
               </li>
             </ul>
           </div>
@@ -643,7 +636,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
             <div className="flex-1 min-w-0">
               <p className="font-semibold text-olive-900 text-[0.95rem] mb-0.5">{post.author || '知橄生活研究團隊'}</p>
-              <p className="text-xs text-stone-400 font-sans mb-3 tracking-wide">知橄生活 Olive Wisdom 編輯部</p>
+              <p className="text-xs text-stone-500 font-sans mb-3 tracking-wide">知橄生活 Olive Wisdom 編輯部</p>
               <p className="text-sm text-stone-500 font-sans leading-relaxed">
                 由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，
                 引用 PREDIMED、哈佛醫學院、EFSA、IOC 等學術文獻。
@@ -662,10 +655,10 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
           {/* Bottom row */}
           <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <a href="/about#editorial-standards" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
+            <a href="/about#editorial-standards" className="text-xs text-stone-500 hover:text-olive-600 font-sans transition-colors">
               編輯標準與公正聲明 →
             </a>
-            <Link href="/blog" className="text-xs text-stone-400 hover:text-olive-600 font-sans transition-colors">
+            <Link href="/blog" className="text-xs text-stone-500 hover:text-olive-600 font-sans transition-colors">
               ← 返回文章列表
             </Link>
           </div>
@@ -744,7 +737,7 @@ export default async function BlogPostPage({ params }: Props) {
                       <p className="text-[11px] font-sans text-olive-600 mb-3">{rel.reason}</p>
                     )}
                     <div className="flex items-center gap-2 text-[10px] font-sans text-stone-500">
-                      <span>{new Date(rel.post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}</span>
+                      <span>{formatPostDate(rel.post.date)}</span>
                       <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />
                       <span>{rel.post.readTime} 分鐘閱讀</span>
                       <span className="w-1 h-1 rounded-full bg-stone-300 inline-block" />

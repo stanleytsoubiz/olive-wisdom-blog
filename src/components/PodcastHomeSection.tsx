@@ -28,7 +28,7 @@ export default function PodcastHomeSection() {
               <p className="font-serif text-base font-bold text-stone-900 mt-1.5 leading-snug">
                 {ep.title ?? '本集節目'}
               </p>
-              <p className="text-xs text-stone-400 font-sans mt-3">前往文章頁收聽 →</p>
+              <p className="text-xs text-stone-500 font-sans mt-3">前往文章頁收聽 →</p>
             </Link>
           ))}
         </div>

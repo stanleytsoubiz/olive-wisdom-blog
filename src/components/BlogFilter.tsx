@@ -5,7 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { PostFrontmatter } from '@/lib/posts';
-import { CATEGORY_MAP, NATURE_LABEL, CAT_TABS, matchesColumn } from '@/lib/categories';
+import { CATEGORY_MAP, NATURE_LABEL, CAT_TABS, matchesColumn, categoryLabel } from '@/lib/categories';
+import { formatPostDate } from '@/lib/format';
 
 // Card-only view of a post: the list payload must stay lean (it is
 // serialized into the page HTML for hydration). Heavy frontmatter
@@ -56,7 +57,7 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
                   key={tab.key}
                   onClick={() => setActiveCat(tab.key)}
                   className={`relative px-5 py-4 font-sans text-sm font-medium tracking-wide whitespace-nowrap transition-colors duration-200 ${
-                    isActive ? 'text-olive-900' : 'text-stone-400 hover:text-stone-600'
+                    isActive ? 'text-olive-900' : 'text-stone-500 hover:text-stone-600'
                   }`}
                 >
                   {tab.label}
@@ -80,7 +81,7 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
       <section className="max-w-6xl mx-auto py-14 px-6">
         {filtered.length === 0 ? (
           <div className="text-center py-32">
-            <p className="font-sans text-stone-400 tracking-widest uppercase text-xs mb-4">No Articles</p>
+            <p className="font-sans text-stone-500 tracking-widest uppercase text-xs mb-4">No Articles</p>
             <p className="text-stone-500 mb-6 text-sm">此欄目文章準備中，敬請期待</p>
             <button
               onClick={() => setActiveCat('')}
@@ -108,12 +109,15 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
                   </div>
                   {/* Text panel — 2/5 */}
                   <div className="md:col-span-2 flex flex-col justify-center px-0 md:px-10 py-8 md:py-0">
-                    {/* Category + read time */}
+                    {/* Category + read time — the separator is a middot, not
+                        an em dash: with an em dash here, a missing/empty
+                        label reads as if the label itself were "—"
+                        (2026-11-25 audit finding). */}
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-[10px] font-sans font-semibold text-olive-600 tracking-[0.2em] uppercase">
-                        {CATEGORY_MAP[featured.category]?.label ?? featured.category}
+                        {categoryLabel(featured.category) || '深度文章'}
                       </span>
-                      <span className="text-stone-200">—</span>
+                      <span className="text-stone-300">·</span>
                       <span className="text-[10px] font-sans text-stone-500 tracking-wide">
                         {featured.readTime} 分鐘閱讀
                       </span>
@@ -128,8 +132,8 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
                     </p>
                     {/* Byline */}
                     <div className="flex items-center justify-between border-t border-stone-100 pt-5">
-                      <span className="font-sans text-xs text-stone-400">
-                        {new Date(featured.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}
+                      <span className="font-sans text-xs text-stone-500">
+                        {formatPostDate(featured.date)}
                       </span>
                       <span className="font-sans text-sm text-olive-700 font-medium group-hover:text-olive-900 transition-colors">
                         閱讀全文 →
@@ -187,7 +191,7 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
                           {/* Byline */}
                           <div className="flex items-center justify-between pt-3 border-t border-stone-100">
                             <span className="font-sans text-[11px] text-stone-500">
-                              {new Date(post.date).toLocaleDateString('zh-TW', { month: 'long', day: 'numeric' })}
+                              {formatPostDate(post.date)}
                               <span className="mx-2 text-stone-200">·</span>
                               {post.readTime} 分鐘閱讀
                             </span>

@@ -19,7 +19,7 @@ export default function SearchPage() {
       {/* Masthead */}
       <section className="bg-white border-b border-stone-200 px-6 py-12">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[10px] font-sans font-semibold text-stone-400 tracking-[0.3em] uppercase mb-3">
+          <p className="text-[10px] font-sans font-semibold text-stone-500 tracking-[0.3em] uppercase mb-3">
             知橄生活 · 全文搜尋
           </p>
           <h1 className="font-serif text-4xl md:text-[2.5rem] font-bold text-olive-900 tracking-tight mb-3">
