@@ -102,12 +102,12 @@ export default function BottomNav() {
               href={tab.href}
               aria-label={tab.label}
               className={`flex flex-col items-center justify-center gap-0.5 min-w-[44px] py-2 px-2 transition-colors ${
-                active ? 'text-olive-700' : 'text-stone-400 hover:text-stone-600'
+                active ? 'text-olive-700' : 'text-stone-500 hover:text-stone-600'
               }`}
             >
               {tab.icon(active)}
               <span className={`text-[10px] font-sans font-medium tracking-wide leading-none ${
-                active ? 'text-olive-700' : 'text-stone-400'
+                active ? 'text-olive-700' : 'text-stone-500'
               }`}>
                 {tab.label}
               </span>

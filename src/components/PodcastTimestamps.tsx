@@ -36,7 +36,7 @@ export default function PodcastTimestamps({
   if (rows.length === 0) return null;
   return (
     <div className="mt-12 pt-8 border-t border-olive-100">
-      <h3 className="text-sm font-sans font-semibold text-stone-400 tracking-[0.2em] uppercase mb-4">
+      <h3 className="text-sm font-sans font-semibold text-stone-500 tracking-[0.2em] uppercase mb-4">
         本集時間戳
       </h3>
       <ul className="space-y-2">
