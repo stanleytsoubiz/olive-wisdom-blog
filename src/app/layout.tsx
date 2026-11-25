@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://olive-wisdom.com/hero-grove.webp',
+        url: 'https://olive-wisdom.com/images/og-default.jpg',
         width: 1200,
         height: 630,
         alt: '知橄生活 Olive Wisdom',
@@ -75,8 +75,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="zh-TW" className={`${notoSerifTC.variable} ${notoSansTC.variable}`}>
       <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#4a5824" />
         {/* Preconnect for performance */}
         <link rel="preconnect" href="https://images.unsplash.com" />
@@ -99,7 +101,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               name: '知橄生活 Olive Wisdom',
               alternateName: ['Olive Wisdom', '知橄生活'],
               url: 'https://olive-wisdom.com',
-              logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/favicon.ico', caption: '知橄生活 Olive Wisdom' },
+              logo: { '@type': 'ImageObject', url: 'https://olive-wisdom.com/icon-512.png', caption: '知橄生活 Olive Wisdom' },
               description: '由食品科學、分子生物學與地中海飲食研究背景的編輯團隊撰稿，引用 PREDIMED、哈佛醫學院、EFSA 等權威機構研究文獻的橄欖油知識平台。',
               knowsAbout: ['橄欖油', '特級初榨橄欖油 EVOO', '地中海飲食', '多酚', '羥基酪醇', 'PREDIMED 研究', '證據分級判讀'],
               sameAs: ['https://olive-wisdom.com', 'https://olive-wisdom.com/about'],
@@ -124,11 +126,16 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <div className="max-w-6xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              {/* SVG olive mark */}
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" className="flex-shrink-0">
-                <ellipse cx="14" cy="14" rx="5" ry="8" fill="#4a5824" transform="rotate(-20 14 14)" />
-                <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#7a8f3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-                <path d="M14 8 Q9 6 8 12" stroke="#4a5824" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.7"/>
+              {/* SVG olive branch mark — same mark as favicon.svg / app icons */}
+              <svg width="30" height="30" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
+                <path d="M50 6 C44 20 36 34 22 47" stroke="#4a5824" strokeWidth="3.4" strokeLinecap="round" fill="none" />
+                <path d="M0 0 Q 8.5 -4.6 17 0 Q 8.5 4.6 0 0 Z" transform="translate(46 17) rotate(-140)" fill="#4a5824" />
+                <path d="M0 0 Q 7.5 -4.2 15 0 Q 7.5 4.2 0 0 Z" transform="translate(40 28) rotate(-168)" fill="#7a8f3a" />
+                <path d="M0 0 Q 6.5 -3.8 13 0 Q 6.5 3.8 0 0 Z" transform="translate(43 24) rotate(52)" fill="#4a5824" />
+                <path d="M0 0 Q 6 -3.6 12 0 Q 6 3.6 0 0 Z" transform="translate(34 38) rotate(-152)" fill="#7a8f3a" />
+                <path d="M26.5 42.5 C25.8 44.5 25.4 46 25.2 47.5" stroke="#4a5824" strokeWidth="2.6" strokeLinecap="round" fill="none" />
+                <ellipse cx="25" cy="54" rx="6" ry="7.5" transform="rotate(-12 25 54)" fill="#4a5824" />
+                <circle cx="22.8" cy="50.6" r="1.6" fill="#c9a227" />
               </svg>
               <div className="flex flex-col leading-none gap-0.5">
                 <span className="text-sm font-bold text-olive-900 group-hover:text-olive-700 transition-colors tracking-tight">
@@ -200,11 +207,16 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                {/* SVG olive mark — same mark as the header logo (emoji retired, blueprint 3.5) */}
-                <svg width="26" height="26" viewBox="0 0 28 28" fill="none" className="flex-shrink-0">
-                  <ellipse cx="14" cy="14" rx="5" ry="8" fill="#8fa63f" transform="rotate(-20 14 14)" />
-                  <path d="M14 6 Q18 10 16 16 Q14 20 12 18" stroke="#c4a96a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-                  <path d="M14 8 Q9 6 8 12" stroke="#a3b86b" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.7"/>
+                {/* SVG olive branch mark — same mark as the header logo and favicon.svg */}
+                <svg width="28" height="28" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
+                  <path d="M50 6 C44 20 36 34 22 47" stroke="#f3efdf" strokeWidth="3.4" strokeLinecap="round" fill="none" />
+                  <path d="M0 0 Q 8.5 -4.6 17 0 Q 8.5 4.6 0 0 Z" transform="translate(46 17) rotate(-140)" fill="#f3efdf" />
+                  <path d="M0 0 Q 7.5 -4.2 15 0 Q 7.5 4.2 0 0 Z" transform="translate(40 28) rotate(-168)" fill="#d9c98f" />
+                  <path d="M0 0 Q 6.5 -3.8 13 0 Q 6.5 3.8 0 0 Z" transform="translate(43 24) rotate(52)" fill="#f3efdf" />
+                  <path d="M0 0 Q 6 -3.6 12 0 Q 6 3.6 0 0 Z" transform="translate(34 38) rotate(-152)" fill="#d9c98f" />
+                  <path d="M26.5 42.5 C25.8 44.5 25.4 46 25.2 47.5" stroke="#f3efdf" strokeWidth="2.6" strokeLinecap="round" fill="none" />
+                  <ellipse cx="25" cy="54" rx="6" ry="7.5" transform="rotate(-12 25 54)" fill="#c9a227" />
+                  <circle cx="22.8" cy="50.6" r="1.6" fill="#f3efdf" />
                 </svg>
                 <div>
                   <p className="font-bold text-white text-sm">知橄生活</p>
