@@ -719,7 +719,7 @@ export default async function BlogPostPage({ params }: Props) {
                           alt={`${rel.post.title} — 知橄生活 Olive Wisdom`}
                           fill
                           className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                          sizes="(max-width: 768px) 100vw, 300px"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1000px) 33vw, 300px"
                         />
                       </div>
                     )}
