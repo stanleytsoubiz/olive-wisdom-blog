@@ -103,7 +103,7 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
                       alt={featured.title}
                       fill
                       className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
-                      sizes="(max-width: 768px) 100vw, 60vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 690px"
                       priority
                     />
                   </div>
@@ -170,7 +170,7 @@ export default function BlogFilter({ posts, imageUrls }: Props) {
                               alt={post.title}
                               fill
                               className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
                             />
                           )}
                         </div>
