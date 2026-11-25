@@ -31,6 +31,14 @@
   }
 }
 
+/* Anchor jumps (wave 1): offset targets below the sticky 64px header so
+   #intent / #follow etc. never land with content hidden under the header;
+   bottom clearance for the fixed mobile nav is handled by the spacer in
+   layout.tsx. */
+html {
+  scroll-padding-top: 5.25rem;
+}
+
 /* P2-13: visible keyboard focus — zero visual change for mouse users. */
 :focus-visible {
   outline: 2px solid #4a5824;

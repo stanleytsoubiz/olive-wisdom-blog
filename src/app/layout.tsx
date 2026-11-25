@@ -290,8 +290,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         </footer>
 
         {/* Mobile bottom navigation (blueprint 2.6) + spacer so the fixed
-            bar never covers footer content on mobile */}
-        <div className="md:hidden" style={{ height: 'calc(60px + env(safe-area-inset-bottom))' }} aria-hidden="true" />
+            bar never covers footer content on mobile. Bar is 60px + safe
+            area; spacer adds clearance above that (wave 1) so the last
+            footer line and anchored sections are never hidden behind it. */}
+        <div className="md:hidden" style={{ height: 'calc(84px + env(safe-area-inset-bottom))' }} aria-hidden="true" />
         <BottomNav />
       </body>
     </html>

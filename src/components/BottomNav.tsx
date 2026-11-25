@@ -31,7 +31,7 @@ const TABS = [
     label: '搜尋',
     center: true,
     icon: (_active: boolean) => (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="11" cy="11" r="8"/>
         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -75,7 +75,11 @@ export default function BottomNav() {
 
   return (
     <nav
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-stone-200 shadow-[0_-4px_16px_rgba(44,36,22,0.10)]"
+      // Fully opaque bar (homepage upgrade wave 1): the previous build let
+      // page text show around/behind the oversized raised centre button,
+      // reading as a translucent nav that hid content. Solid white +
+      // a contained centre button fixes both.
+      className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white opacity-100 border-t border-stone-200 shadow-[0_-4px_16px_rgba(44,36,22,0.10)]"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label="底部導航"
     >
@@ -89,7 +93,7 @@ export default function BottomNav() {
                 key={tab.href}
                 href={tab.href}
                 aria-label={tab.label}
-                className="flex flex-col items-center justify-center -mt-4 w-14 h-14 rounded-full bg-olive-700 text-white shadow-lg shadow-olive-700/30 hover:bg-olive-800 transition-colors active:scale-95"
+                className="flex flex-col items-center justify-center -mt-1.5 w-11 h-11 rounded-full bg-olive-700 text-white shadow-md shadow-olive-700/30 hover:bg-olive-800 transition-colors active:scale-95"
               >
                 {tab.icon(true)}
               </Link>
@@ -101,7 +105,7 @@ export default function BottomNav() {
               key={tab.href}
               href={tab.href}
               aria-label={tab.label}
-              className={`flex flex-col items-center justify-center gap-0.5 min-w-[44px] py-2 px-2 transition-colors ${
+              className={`relative flex flex-col items-center justify-center gap-0.5 min-w-[44px] py-2 px-2 transition-colors ${
                 active ? 'text-olive-700' : 'text-stone-500 hover:text-stone-600'
               }`}
             >
