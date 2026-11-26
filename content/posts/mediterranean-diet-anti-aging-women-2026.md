@@ -165,7 +165,7 @@ SWAN 本身不是飲食介入試驗，它告訴我們的是：**更年期轉換�
 ## 延伸閱讀
 
 - [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026)
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [羥基酪醇與腦健康研究怎麼看？先分清細胞研究與人體研究](/blog/hydroxytyrosol-brain-cognition-2026)
 - [橄欖油護膚：角鯊烯真的是肌膚的仿生防護盾嗎？](/blog/squalene-olive-oil-skin-beauty-molecular)
 
 ---

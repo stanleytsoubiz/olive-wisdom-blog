@@ -47,7 +47,6 @@ export const LEARNING_PATHS: LearningPath[] = [
       { stage: '延伸', title: '辣喉感是什麼：Oleocanthal', slug: 'oleocanthal-pungency-anti-inflammation' },
       { stage: '延伸', title: 'Oleocanthal 與大腦研究', slug: 'oleocanthal-anti-inflammation-brain-protection' },
       { stage: '延伸', title: '羥基酪醇與腦健康研究', slug: 'hydroxytyrosol-brain-cognition-2026' },
-      { stage: '延伸', title: '羥基酪醇與記憶研究', slug: 'hydroxytyrosol-brain-cognition-memory' },
       { stage: '延伸', title: '多酚與 SIRT1 研究', slug: 'polyphenols-sirt1-longevity-2026' },
       { stage: '延伸', title: '腸道菌與認知軌跡', slug: 'evoo-gut-microbiome-predimed-plus-mechanism' },
       { stage: '延伸', title: '熱量與脂肪酸組成', slug: 'olive-oil-calories-fatty-acid-composition' },
