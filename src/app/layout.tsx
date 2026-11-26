@@ -271,6 +271,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               <p>© 2026 知橄生活 OLIVE WISDOM. ALL RIGHTS RESERVED.</p>
               <div className="flex flex-wrap gap-4 justify-center sm:justify-end">
                 <Link href="/about#editorial-standards" className="hover:text-white transition-colors">編輯標準</Link>
+                <Link href="/methodology" className="hover:text-white transition-colors">實測方法論</Link>
+                <Link href="/disclosure" className="hover:text-white transition-colors">揭露政策</Link>
+                <Link href="/sponsorship" className="hover:text-white transition-colors">贊助政策</Link>
+                <Link href="/screening" className="hover:text-white transition-colors">篩選框架</Link>
                 <Link href="/evidence" className="hover:text-white transition-colors">證據圖書館</Link>
                 <Link href="/topics" className="hover:text-white transition-colors">所有主題</Link>
                 <Link href="/contact" className="hover:text-white transition-colors">聯絡我們</Link>

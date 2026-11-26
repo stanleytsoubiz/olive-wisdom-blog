@@ -13,6 +13,10 @@ const STATIC_PAGE_DATES: Record<string, string> = {
   '/privacy': '2026-11-22',
   '/terms': '2026-11-22',
   '/contact': '2026-06-04',
+  '/methodology': '2026-11-26',
+  '/disclosure': '2026-11-26',
+  '/sponsorship': '2026-11-26',
+  '/screening': '2026-11-26',
 };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -83,6 +87,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(STATIC_PAGE_DATES['/terms']),
       changeFrequency: 'yearly',
       priority: 0.3,
+    },
+    {
+      url: canonicalUrl('/methodology'),
+      lastModified: new Date(STATIC_PAGE_DATES['/methodology']),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: canonicalUrl('/disclosure'),
+      lastModified: new Date(STATIC_PAGE_DATES['/disclosure']),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: canonicalUrl('/sponsorship'),
+      lastModified: new Date(STATIC_PAGE_DATES['/sponsorship']),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: canonicalUrl('/screening'),
+      lastModified: new Date(STATIC_PAGE_DATES['/screening']),
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
   ];
 
