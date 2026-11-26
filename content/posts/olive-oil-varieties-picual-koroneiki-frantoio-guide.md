@@ -10,7 +10,7 @@ tags: ["產地風土", "Terroir", "特級初榨", "西班牙橄欖油"]
 sources:
   - "Aparicio, R. & Harwood, J. (2013). Handbook of Olive Oil: Analysis and Properties. Springer."
   - "Servili, M. et al. (2016). Phenolic compounds in olive oil: Importance from a health perspective. Molecules."
-  - "Cicerale, S. et al. (2010). Chemistry and health of olive oil phenolics. Critical Reviews in Food Science and Nutrition. https://doi.org/10.3390/ijms11020458"
+  - "Cicerale, S., Conlan, X. A., Sinclair, A. J., & Keast, R. S. J. (2009). Chemistry and health of olive oil phenolics. Critical Reviews in Food Science and Nutrition, 49(3), 218–236. https://doi.org/10.1080/10408390701856223"
   - "International Olive Council (IOC). World Olive Oil Figures 2024-2025."
   - "Ghreishi Rad, A., et al. (2023). Maturity impact on physicochemical composition and polyphenol properties of extra virgin olive oils obtained from Manzanilla, Arbequina, and Koroneiki varieties. Food Science & Nutrition, 11(9). https://doi.org/10.1002/fsn3.3497"
 focusKeyword: "橄欖油 品種 Picual Koroneiki Frantoio"

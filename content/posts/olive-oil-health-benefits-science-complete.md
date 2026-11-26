@@ -18,6 +18,9 @@ sources:
   - "Psaltopoulou, T., et al. (2011). Olive oil intake is inversely related to cancer prevalence: a systematic review and a meta-analysis of 13,800 patients and 23,340 controls in 19 observational studies. Lipids in Health and Disease, 10, 127. https://doi.org/10.1186/1476-511X-10-127"
   - "Barbaro, B., et al. (2014). Effects of the Olive-Derived Polyphenol Oleuropein on Human Health. International Journal of Molecular Sciences, 15(10), 18508–18524. https://doi.org/10.3390/ijms151018508"
   - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological Activities of Phenolic Compounds Present in Virgin Olive Oil. International Journal of Molecular Sciences, 11(2), 458–479. https://doi.org/10.3390/ijms11020458"
+  - "Beauchamp, G. K., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature, 437(7055), 45–46. https://doi.org/10.1038/437045a"
+  - "Salas-Salvadó, J., et al. (2011). Reduction in the Incidence of Type 2 Diabetes with the Mediterranean Diet: Results of the PREDIMED-Reus Nutrition Intervention Randomized Trial. Diabetes Care, 34(1), 14–19. https://doi.org/10.2337/dc10-1288"
+  - "Fernández-Real, J. M., et al. (2012). A Mediterranean Diet Enriched with Olive Oil Is Associated with Higher Serum Total Osteocalcin Levels in Elderly Men at High Cardiovascular Risk. The Journal of Clinical Endocrinology & Metabolism, 97(10), 3792–3798. https://doi.org/10.1210/jc.2012-2221"
 faq:
   - q: "橄欖油最主要的健康關聯效益是什麼？"
     a: "目前證據最完整的關聯包含：(1) 與心血管事件較低風險相關(PREDIMED 研究：複合心血管事件發生率減少約 30%，這是整體地中海飲食模式的結果，不是單一油品的效果）；(2) 與 LDL 脂蛋白較低氧化程度相關（EFSA 正式認可的健康聲稱）；(3) 與抗炎指標改善相關（Oleocanthal 對 COX 酶活性的抑制機理）；(4) 與認知功能維持相關（β-澱粉樣蛋白清除研究）；(5) 與細胞氧化壓力降低相關（多酚對 DNA 氧化損傷的研究）。"
