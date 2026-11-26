@@ -14,7 +14,7 @@ sources:
   - "Foods (2020), 9(12), 1846. Total phenols tracked over 21 months of storage. https://pmc.ncbi.nlm.nih.gov/articles/PMC7763516/"
   - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission, temperature and storage time on quality characteristics of extra virgin olive oil. *Food Control*, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.019"
   - "Visioli, F., & Galli, C. (1998). Olive oil phenols and their potential effects on human health. *Journal of Agricultural and Food Chemistry*, 46(10), 4292–4296. https://doi.org/10.1021/jf980049c"
-coverAlt: "微觀下的橄欖油分子結構與時間流逝的意象圖"
+coverAlt: "窗邊白色大理石上兩瓶無標籤橄欖油並列，左瓶金綠新鮮、右瓶琥珀深沉象徵氧化衰減"
 focusKeyword: "橄欖油多酚衰減"
 faq:
   - q: "橄欖油的多酚含量會隨時間下降多少？"

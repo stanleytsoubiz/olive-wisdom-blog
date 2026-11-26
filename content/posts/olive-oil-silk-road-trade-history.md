@@ -14,7 +14,7 @@ sources:
   - "Ridgway, D. (1992). *The first western Greeks*. Cambridge University Press."
   - "Twede, D. (2002). Commercial amphoras: The earliest consumer packages? *Journal of Macromarketing*, 22(1), 98–108. https://doi.org/10.1177/027467022001009"
 published: true
-coverAlt: "古代絲路貿易路線地圖與橄欖油陶罐，東西方文明交流的液態黃金歷史｜知橄生活"
+coverAlt: "沙漠絲路遺跡旁的素面陶土雙耳瓶與橄欖枝，暖沙與石材色調"
 focusKeyword: "絲路橄欖油歷史"
 faq:
   - q: "橄欖油是如何沿絲路傳播的？"
