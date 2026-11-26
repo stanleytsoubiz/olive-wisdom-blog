@@ -125,7 +125,7 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 
 207 大卡佔一般成人每日建議攝取量（2000 kcal）的約 10%，若這些油脂是取代了原本的奶油、豬油或其他植物油，淨熱量變化有限，但脂肪酸組成已大幅改善。
 
-關於每日橄欖油建議攝取量的研究依據（20–30ml），請參考[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)。此外，EVOO 多酚組成對健康指標的影響，詳見[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
+關於每日橄欖油建議攝取量的研究依據（20–30ml），請參考[每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)。此外，EVOO 多酚組成對健康指標的影響，詳見[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 ## 同等熱量下，EVOO 的多酚額外效益
 
@@ -168,7 +168,7 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 
 ## 延伸閱讀
 
-- [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)
+- [每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)
 - [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
 - [橄欖油真的能幫助減肥嗎？油酸、飽足感與代謝的科學解析](/blog/olive-oil-weight-loss-science)
 

@@ -523,17 +523,6 @@ export const ARTICLE_VERDICTS: Record<string, ArticleVerdict> = {
     boundary:
       'EFSA 的 20 g 是聲稱條件、PREDIMED 的用量是試驗設計，兩者都不是個人處方。',
   },
-  // 來源：本文 excerpt（20 mL 門檻、用法決定邏輯）
-  'olive-oil-daily-intake-how-much': {
-    kind: 'basis',
-    basis: '實作指南',
-    basisNote: '研究劑量整理',
-    topic: '一天用多少才對：用法決定劑量邏輯',
-    verdict:
-      '20 mL 是常被引用的關鍵門檻，超過不一定更好；空腹、隨餐與料理烹調的劑量邏輯完全不同。',
-    boundary:
-      '每匙油的熱量都要計入全日總量；門檻是研究與聲稱條件的整理，不是個人化建議。',
-  },
   // 來源：本文 excerpt 與表格（EFSA 無「空腹」字眼；國健署 3–7 茶匙）
   'olive-oil-morning-fasting-spoon-myth': {
     kind: 'basis',

@@ -12,6 +12,7 @@ focusKeyword: "橄欖油每天攝取量"
 sources:
   - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
   - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
+  - "Guasch-Ferré, M., et al. (2014). Olive oil intake and risk of cardiovascular disease and mortality in the PREDIMED Study. BMC Medicine, 12, 78. https://doi.org/10.1186/1741-7015-12-78"
   - "Beauchamp, G. K., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature, 437(7055), 45–46. https://doi.org/10.1038/437045a"
 faq:
   - q: "每天吃多少橄欖油最好？"
@@ -85,6 +86,8 @@ PREDIMED 研究（7447 名受試者，追蹤 4.8 年）中，EVOO 補充組的�
 
 PREDIMED 的結論（地中海飲食＋EVOO 組主要心血管事件相對風險約低 30%，HR 0.69）是在整套飲食模式下取得的，不是單一油品的效果，攝入框架約為每天 4 湯匙。這一劑量反映的是地中海飲食的傳統用量，在西班牙和希臘，橄欖油幾乎是飲食中唯一的烹飪油脂。
 
+延伸分析也支持「多不一定更好」：Guasch-Ferré 等人（2014）以 PREDIMED 資料分析攝取量與風險的關係，觀察到每日多攝取 10 g（以每 2,000 kcal 飲食計）橄欖油，與全因死亡率約低 7%、心血管死亡率約低 13% 相關，但這個關聯在超過某個攝取閾值後趨於平緩——劑量效益不是線性遞增的。
+
 **台灣消費者的現實**：每天 4 湯匙橄欖油的卡路里約 480 大卡（佔成年人每日建議攝入量的 20–25%），並非所有人的飲食結構都適合這一比例。但 PREDIMED 的精神是「以橄欖油替代其他油脂」，而非「額外增加 4 湯匙的脂肪攝入」。
 
 ## 框架三：Oleocanthal 的飲食等效估算
@@ -150,6 +153,18 @@ PREDIMED 的結論（地中海飲食＋EVOO 組主要心血管事件相對風險
 **正確邏輯**：
 - 將烹飪用油從精製植物油換成 EVOO（等量替代）
 - 若希望直接口服增加多酚攝入，需相應減少其他餐點的油脂用量
+
+## 每日用量的實用分配
+
+把上面的框架換算成一天的實際落點（以每日約 30 ml 為例；1 茶匙約 5 ml、約 40 大卡，1 湯匙約 15 ml、約 120 大卡）：
+
+| 使用時機 | 建議量 | 說明 |
+|----------|--------|------|
+| 早晨空腹（可選） | 5 ml | 1 茶匙，先評估腸胃耐受度；空腹不是必須 |
+| 料理烹調 | 15 ml | 炒菜、燉煮的主力用量，約 1 湯匙 |
+| 淋食物收尾 | 10 ml | 沙拉、湯品、麵包沾食，多酚保留最完整 |
+
+若目標是接近 PREDIMED 的 40–50 ml，按同一比例放大料理與收尾的用量即可；重點始終是把總量分配進三餐，而不是集中在單次大量飲用。
 
 ## 結語：那只朋友從希臘帶回來的瓶子
 
