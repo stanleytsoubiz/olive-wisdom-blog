@@ -139,6 +139,8 @@ draft: false
 
 ## 延伸閱讀
 
+- [橄欖油產地巡禮：安達盧西亞、克里特、托斯卡尼三地對照怎麼讀（應用篇：產地巡禮與跨產地對照）](/blog/olive-oil-terroir-tour-andalusia-crete-tuscany)
+- [小豆島橄欖118年：日本唯一成功的風土實驗，究竟有何不同？（日本案例：單一產地深描）](/blog/shodoshima-olive-oil-history-terroir)
 - [特級初榨橄欖油完全選購指南：從產地到餐桌的品質把關](/blog/evoo-buying-guide-2026)
 - [IOC 感官評鑑全解析：為什麼一瓶橄欖油的靈魂，藏在鼻尖的三秒鐘？](/blog/evoo-sensory-evaluation-ioc-standards)
 - [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
