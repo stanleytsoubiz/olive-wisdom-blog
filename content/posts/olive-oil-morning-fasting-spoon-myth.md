@@ -32,6 +32,8 @@ faq:
   - q: "如果想試晨間喝油，怎麼做比較好？"
     a: "從半茶匙開始，選採收年份新、多酚 ≥250 mg/kg 的特級初榨橄欖油，觀察身體反應。隨餐吃也可以——證據沒有說空腹更好。重點是每天的總量與油的新鮮度，不是幾點鐘喝。"
 draft: false
+coverImage: "/images/covers/olive-oil-morning-fasting-spoon-myth.jpg"
+coverAlt: "晨光木桌上的一匙橄欖油與油瓶"
 ---
 
 早上起床，倒一茶匙橄欖油，直接喝下去——這個畫面，現在 TikTok 上到處都是。

@@ -32,6 +32,7 @@ qc_gate:
   legacy_audit: pass
   audit_date: "2026-05-08"
   auditor: PGM
+coverAlt: "臨床研究情境：橄欖油與地中海食材、聽診器與空白紀錄板"
 ---
 
 ## 快速答案

@@ -31,6 +31,8 @@ faq:
   - q: "讀完歷史，對買油有什麼幫助？"
     a: "有。歷史告訴你，橄欖油的價值從來不只在瓶子裡，而在產地、品種、採收與製程。買油的時候，看採收年份、產地、酸值與 CoA 報告，就是在看這瓶油有沒有承接那三千年的標準。歷史是背景，數字才是判斷。"
 draft: false
+coverImage: "/images/covers/olive-oil-millennium-journey-mediterranean-to-table.jpg"
+coverAlt: "地中海海岸前的陶甕與橄欖油瓶"
 ---
 
 你廚房裡那瓶橄欖油，走過的路比你想的長得多。

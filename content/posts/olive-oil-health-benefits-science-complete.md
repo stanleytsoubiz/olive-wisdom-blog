@@ -34,6 +34,7 @@ qc_gate:
   legacy_audit: pass
   audit_date: "2026-05-08"
   auditor: PGM
+coverAlt: "地中海餐桌：橄欖油、番茄、綠葉蔬菜、核桃、全麥麵包與烤魚"
 ---
 
 ## 一句話答案

@@ -33,6 +33,8 @@ faq:
   - q: "品種和風土，哪一個對風味影響比較大？"
     a: "兩個都有影響，品種是基礎，風土是變化。同一品種在西班牙和希臘種出來，風味會不一樣；同一塊地種不同品種，風味更不一樣。入門先認品種，進階再認產地，風味的層次就是這樣一層一層打開的。"
 draft: false
+coverImage: "/images/covers/olive-oil-varieties-picual-koroneiki-frantoio-guide.jpg"
+coverAlt: "黃昏梯田橄欖園前並置的三品種橄欖枝條"
 ---
 
 橄欖油的風味，從哪裡來？
