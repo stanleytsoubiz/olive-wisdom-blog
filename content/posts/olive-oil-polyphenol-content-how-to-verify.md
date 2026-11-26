@@ -144,7 +144,7 @@ EFSA 那一句「每日 5mg 羥基酪醇」不是醫師的處方，是你每天�
 ## 延伸閱讀
 
 - [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026)
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [羥基酪醇與腦健康研究怎麼看？先分清細胞研究與人體研究](/blog/hydroxytyrosol-brain-cognition-2026)
 - [2026 特級初榨橄欖油選購完全指南：從 IOC 標準到台灣超市實戰](/blog/evoo-buying-guide-2026)
 
 ## 一句話總結

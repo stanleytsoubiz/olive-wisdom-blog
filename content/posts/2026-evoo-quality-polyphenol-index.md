@@ -127,7 +127,7 @@ EVOOLEUM、NYIOOC（紐約國際橄欖油大賽）等國際評鑑的得獎油款
 
 **如果只記得一件事：選購時直接跳過沒有採收日期與多酚數據的油——標籤上的任何行銷詞彙，都比不上瓶頸那張寫有「TPC: Xmg/kg, Harvest: YYYY/MM」小卡的說服力。**
 
-多酚隨儲存時間快速衰減的科學原理，可參考[多酚衰減科學完整解析](/blog/polyphenol-decay-science-2026)。羥基酪醇在神經保護領域的最新研究進展，則可進一步閱讀[羥基酪醇與腦健康](/blog/hydroxytyrosol-brain-cognition-memory)。
+多酚隨儲存時間快速衰減的科學原理，可參考[多酚衰減科學完整解析](/blog/polyphenol-decay-science-2026)。羥基酪醇在神經保護領域的最新研究進展，則可進一步閱讀[羥基酪醇與腦健康](/blog/hydroxytyrosol-brain-cognition-2026)。
 
 ## 結語：把那張小卡上的三個數字，刻進下一次的選購本能
 
