@@ -15,7 +15,6 @@ sources:
   - "Aparicio, R., & Harwood, J. (Eds.). (2013). Handbook of Olive Oil: Analysis and Properties (2nd ed.). Springer. https://doi.org/10.1007/978-1-4614-7777-8"
   - "Beauchamp, G. K., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature, 437, 45–46. https://doi.org/10.1038/437045a"
   - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission, temperature and storage time on quality characteristics of extra virgin olive oil. Food Control, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.019"
-  - "Green, H. S., & Wang, S. C. (2020). First report on quality and purity evaluations of avocado oil sold in the US. Food Control, 116, 107328. https://doi.org/10.1016/j.foodcont.2020.107328"
   - "IOC (2019). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 17. https://www.internationaloliveoil.org/"
 faq:
   - q: "如何在超市快速判斷橄欖油的品質？"
@@ -25,7 +24,7 @@ faq:
   - q: "台灣哪裡可以買到真正高品質的橄欖油？"
     a: "台灣可信管道依序為：進口有機食品專門店（棉花田、主婦聯盟等，通常附 CoA）、橄欖油/葡萄酒專賣店（常引進 NYIOOC 得獎品牌）、品牌官網直購（希臘 GAEA 等有台灣授權）。我們的建議是：避免一般量販超市橄欖油（高多酚選項極少）與夜市地攤（造假風險高）。"
   - q: "NT$200 以下的橄欖油值得買嗎？"
-    a: "NT$200 以下的 500ml EVOO 作為健康補充用途不值得——這個價格區間的油多酚含量通常低於 100mg/kg，且大多為多國混合舊油（採收超過 18 個月），研究觀察到的多酚健康相關性在此劑量無法達成。我們的建議是：烹飪用途此價位可接受（仍優於精製種子油），健康補充用途需 NT$600 以上、附 CoA 的油品。"
+    a: "NT$200 以下的 500ml EVOO 作為健康補充用途不值得——以本站的市場觀察估計（未經系統抽查），這個價格區間的油多酚含量多半偏低（常見低於 100mg/kg），且多為多國混合、採收較久的油，研究觀察到的多酚健康相關性在此含量下難以對應。我們的建議是：烹飪用途此價位可接受（仍優於精製種子油），健康補充用途需 NT$600 以上、附 CoA 的油品。"
 draft: false
 qc_gate:
   legacy_audit: pass
@@ -51,7 +50,7 @@ qc_gate:
 
 「那這跟旁邊 NT$1,200 那瓶的差別在哪？」她拍了一張照片傳給我。
 
-差別就在於：**那 NT$299 的瓶身告訴你的事情，全是行銷話術；那 NT$1,200 的瓶身告訴你的事情，是 CoA 報告上的數字。** 而 90% 的台灣消費者，從來沒被教過該看哪些數字。
+差別就在於：**那 NT$299 的瓶身告訴你的事情，全是行銷話術；那 NT$1,200 的瓶身告訴你的事情，是 CoA 報告上的數字。** 而多數台灣消費者，從來沒被教過該看哪些數字。
 
 歐盟每年查獲數十噸不符合標示的「特級初榨橄欖油」。在監管相對寬鬆的台灣市場，問題更為普遍——超市貨架上「特級初榨」四個字的出現頻率，遠超過真正符合多酚標準的批次。
 
@@ -88,7 +87,7 @@ qc_gate:
 - ❌ 透明玻璃瓶（任何容量）
 - ❌ 透明 PET 塑膠瓶
 
-**為什麼一票否決？** 光線是多酚最快速的殺手。透明容器在貨架上的照明燈下，每天都在消耗多酚。一瓶在貨架上放了 3 個月的透明瓶橄欖油，可能已損失 40% 的多酚——在你買到之前。
+**為什麼一票否決？** 光線是多酚最快速的殺手之一。透明容器在貨架上的照明燈下，每天都在消耗多酚——研究顯示透明瓶在光照下的多酚降解明顯快於深色瓶（Pristouri et al., 2010），也就是說，一瓶透明瓶橄欖油在你買到之前，就已經流失了相當比例的多酚。
 
 **例外：** 如果透明瓶的橄欖油是用於烹飪（不作為健康補充），可以接受——只要確認新鮮度並快速使用完畢。
 
@@ -125,7 +124,7 @@ qc_gate:
 | Arbosana | 西班牙 | ⭐⭐ (150-300mg/kg) | 水果香為主，溫和 |
 
 **產地標示的可信度：**
-- 「單一莊園（Single Estate）」：最高可信度，可追溯
+- 「單一莊園（Single Estate）」：可完整追溯產地與批次
 - 「單一產區（Single Origin）」：高可信度
 - 「義大利/希臘/西班牙製造（Product of ...）」：中等可信度，可能是混合油
 - 「歐盟多國混合（Product of multiple EU countries）」：低可信度，難以溯源
@@ -142,9 +141,9 @@ qc_gate:
 |:---|:---|:---|
 | [PDO（受保護原產地名稱）](/blog/olive-oil-pdo-dop-igp-certification-guide) | 歐盟 | 產地受保護，生產過程受監管 |
 | PGI（受保護地理標示） | 歐盟 | 產地連結受保護 |
-| NYIOOC Gold | 紐約國際橄欖油大賽 | 年度最大型國際感官評鑑，含品質門檻 |
+| NYIOOC Gold | 紐約國際橄欖油大賽 | 大型國際感官評鑑之一，含品質門檻 |
 | EVOOLEUM Top 100 | EVOOLEUM | 世界頂尖 100 款 EVOO 年度評選 |
-| BIOL 有機認證 | 義大利生物農業協會 | 有機 EVOO 的最高認可 |
+| BIOL 有機認證 | 義大利生物農業協會 | 義大利有機 EVOO 認證 |
 | IOC 認定感官評鑑 | 國際橄欖理事會 | 感官評鑑符合 IOC 正式標準 |
 
 **低可信度「認證」（行銷用途為主）：**
