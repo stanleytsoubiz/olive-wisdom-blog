@@ -7,6 +7,7 @@ category: "science"
 tags: ["發煙點", "橄欖油加熱", "烹飪油脂科學"]
 excerpt: "「橄欖油不能加熱」是台灣廚房最流行的誤解之一。發表於《ACTA Scientific Nutritional Health》的研究觀察到，特級初榨橄欖油在高溫下的穩定性與許多「耐高溫」植物油相比表現更佳。本文以氧化穩定性指數（OSI）、極性化合物生成量、和實際烹飪溫度帶，徹底解答這個問題。"
 coverImage: "/images/covers/olive-oil-cooking-heat-stability-smoke-point.jpg"
+coverAlt: "橄欖油注入冒煙的鑄鐵鍋"
 readTime: 11
 focusKeyword: "橄欖油可以加熱嗎"
 sources:

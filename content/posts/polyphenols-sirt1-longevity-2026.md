@@ -13,7 +13,7 @@ sources:
   - "Guasch-Ferré, M., Li, Y., Willett, W. C., Sun, Q., Sampson, L., Salas-Salvadó, J., Martínez-González, M. A., Stampfer, M. J., & Hu, F. B. (2022). Consumption of olive oil and risk of total and cause-specific mortality among U.S. adults. *Journal of the American College of Cardiology*, 79(2), 101–112. https://doi.org/10.1016/j.jacc.2021.10.041"
   - "Visioli, F., & Galli, C. (1998). Olive oil phenols and their potential effects on human health. *Journal of Agricultural and Food Chemistry*, 46(10), 4292–4296. https://doi.org/10.1021/jf980049c"
   - "Gorzynik-Debicka, M., Przychodzen, P., Cappello, F., Kuban-Jankowska, A., Marino Gammazza, A., Knap, N., Wozniak, M., & Gorska-Ponikowska, M. (2018). Potential health benefits of olive oil and plant polyphenols. *International Journal of Molecular Sciences*, 19(3), 686. https://doi.org/10.3390/ijms19030686"
-coverAlt: "橄欖油多酚分子結構與DNA螺旋，SIRT1長壽基因啟動的分子生物學科學概念｜知橄生活"
+coverAlt: "攤開的長壽研究期刊、琥珀色多酚萃取液小瓶與橄欖枝｜知橄生活"
 focusKeyword: "多酚SIRT1長壽"
 faq:
   - q: "SIRT1 基因是什麼，和橄欖油有什麼關係？"
