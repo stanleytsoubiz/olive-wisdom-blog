@@ -15,6 +15,8 @@ sources:
   - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological activities of phenolic compounds present in virgin olive oil. International Journal of Molecular Sciences, 11(2), 458–479. https://doi.org/10.3390/ijms11020458"
   - "Caruso, D. et al. (2023). Hydroxytyrosol Interference with Inflammaging via Modulation of Inflammation and Autophagy. Nutrients, 15(4):1070. https://pmc.ncbi.nlm.nih.gov/articles/PMC10096543/"
   - "Barnes, L.L. et al. (2023). Trial of the MIND Diet for Prevention of Cognitive Decline in Older Persons. New England Journal of Medicine, 389(7):602-611. https://doi.org/10.1056/NEJMoa2302368"
+  - "Bucciantini, M. et al. (2021). Hydroxytyrosol Prevents Amyloid Aggregation and Cytotoxicity. ACS Chemical Neuroscience, 12(4), 702–711. https://doi.org/10.1021/acschemneuro.0c00763"
+  - "Valls-Pedret, C. et al. (2015). Mediterranean Diet and Age-Related Cognitive Decline: A Randomized Clinical Trial. JAMA Internal Medicine, 175(7), 1094–1103. https://doi.org/10.1001/jamainternmed.2015.1668"
   - "Tejada, S. et al. (2021). Neuroprotective Effects of Hydroxytyrosol. Current Medicinal Chemistry, 28(17):3441-3460. https://doi.org/10.2174/0929867327666200714145545"
 faq:
   - q: "目前有哪些關於羥基酪醇與認知健康的科學研究？"
@@ -57,7 +59,10 @@ coverAlt: "實驗桌上的橄欖油錐形瓶、培養皿、滴管與橄欖葉"
 
 - **澱粉樣蛋白聚集**：細胞研究觀察到羥基酪醇與 Amyloid-beta 42 聚集抑制有相關，這是阿茲海默症病理過程的核心關聯機制之一（Tejada et al., 2021）。
 - **神經炎症路徑**：研究觀察到羥基酪醇與 NF-κB 信號路徑下調、促炎細胞因子（TNF-α、IL-6）較低分泌量有顯著相關——此相關性在體外研究及動物模型中已重複觀察到（Caruso et al., 2023）。
+- **抗氧化主開關 Nrf2**：佛羅倫薩大學 Bucciantini 等人（2021）在神經細胞研究中觀察到，羥基酪醇能直接中和細胞內的活性氧、抑制 Amyloid-β 的錯誤摺疊與聚集，並啟動 Nrf2 通路——細胞自身的抗氧化防禦主開關，使神經元強化自我保護能力（Bucciantini et al., 2021）。
 - **飲食模式 RCT 數據**：MIND 飲食（地中海 + DASH 混合飲食）針對 604 名認知未受損、但有失智家族史受試者的 3 年大型 RCT，2023 年發表於 NEJM（Barnes et al., 2023）。主要結果：兩組的整體認知分數都小幅上升（MIND 組 +0.205、對照組 +0.170 標準化單位），組間差異 0.035（95% CI −0.022 至 0.092，P = 0.23），未達統計顯著；腦部 MRI 指標的變化也沒有組間差異。換句話說，這項試驗沒有證明 MIND 飲食優於同樣有輕度熱量限制的對照飲食。
+
+- **PREDIMED 認知子試驗**：Valls-Pedret 等人（2015）追蹤 447 名 55–80 歲、具心血管風險因子的受試者（中位數 4.1 年），觀察到地中海飲食 + 特級初榨橄欖油組在記憶與執行功能的複合評分上，比低脂飲食對照組表現較佳——同樣是整套飲食模式的結果，不是單一成分的效果（Valls-Pedret et al., 2015）。
 
 > **知橄生活筆記：** 以「高多酚 EVOO 單一介入 + MCI 患者」為設計的大型 RCT 數量仍有限。現有最穩定的人體訊號來自飲食模式層面（MIND、PREDIMED），而非單一成分的隔離試驗。這不削弱羥基酪醇的研究價值，而是提醒：整體飲食模式的協同相關性，可能才是神經健康指標背後最穩定的訊號。
 

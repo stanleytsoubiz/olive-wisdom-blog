@@ -121,7 +121,7 @@ SIRT1（Sirtuin 1）是一種 NAD+ 依賴性的去乙醯化酶（Deacetylase，�
 
 ## 延伸閱讀
 
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [羥基酪醇與腦健康研究怎麼看？先分清細胞研究與人體研究](/blog/hydroxytyrosol-brain-cognition-2026)
 - [橄欖油多酚含量怎麼驗證？標籤數字、CoA 與三個感官測試](/blog/olive-oil-polyphenol-content-how-to-verify)
 - [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/blog/mediterranean-diet-anti-aging-women-2026)
 

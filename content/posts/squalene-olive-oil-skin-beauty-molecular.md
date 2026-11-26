@@ -131,7 +131,7 @@ draft: false
 
 ## 延伸閱讀
 
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [羥基酪醇與腦健康研究怎麼看？先分清細胞研究與人體研究](/blog/hydroxytyrosol-brain-cognition-2026)
 - [地中海飲食與女性抗衰老：科學實證的每日飲食策略](/blog/mediterranean-diet-anti-aging-women-2026)
 - [每日晨飲橄欖油：三分鐘儀式，真的能重啟一整天的代謝嗎？](/blog/morning-ritual-evoo-metabolism)
 

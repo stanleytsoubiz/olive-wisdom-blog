@@ -58,7 +58,7 @@ PREDIMED-Plus 研究（Boccardi et al., 2021）探討地中海飲食、熱量限
 
 ### 機制二：粒線體功能指標（細胞能量引擎）
 
-橄欖油多酚（特別是 Hydroxytyrosol）與 **SIRT1/AMPK 信號通路** 活性指標有相關——這條通路被稱為「長壽基因調控軸」。多酚在心血管、抗炎、神經保護各維度的科學文獻，可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete/)的完整整理。關於羥基酪醇的神經相關機制與劑量計算，可參考[羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory/)；多酚與長壽的分子生物學相關研究，可參考[多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026/)：
+橄欖油多酚（特別是 Hydroxytyrosol）與 **SIRT1/AMPK 信號通路** 活性指標有相關——這條通路被稱為「長壽基因調控軸」。多酚在心血管、抗炎、神經保護各維度的科學文獻，可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete/)的完整整理。關於羥基酪醇的神經相關機制與劑量計算，可參考[羥基酪醇與腦健康研究怎麼看？先分清細胞研究與人體研究](/blog/hydroxytyrosol-brain-cognition-2026/)；多酚與長壽的分子生物學相關研究，可參考[多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026/)：
 
 - **SIRT1 去乙醯化酶**：與 DNA 修復、基因表達、代謝效率指標有相關
 - **AMPK（AMP 活化蛋白激酶）**：感測細胞能量狀態，與粒線體功能指標、細胞自噬（Autophagy，即細胞自我清理回收的過程）啟動有相關

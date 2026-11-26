@@ -106,7 +106,7 @@ Oleocanthal 的意義，在此背景下變得格外深刻。它不是一種治�
 
 **儲存條件**：避光、避熱、避空氣。深色瓶或鐵罐比透明玻璃瓶更能避光，有助保留多酚。
 
-**實際建議**：每日空腹或搭配早餐，攝取 1–2 大匙（15–30ml）的高多酚特級初榨橄欖油。尋找標示多酚含量高於 250mg/kg 的產品，或在品嚐時感受那道清晰的「喉嗆感」——那是 Oleocanthal 存在的自然指標。關於羥基酪醇對大腦記憶與認知老化的最新研究，可進一步閱讀[羥基酪醇與大腦記憶](/blog/hydroxytyrosol-brain-cognition-memory)。
+**實際建議**：每日空腹或搭配早餐，攝取 1–2 大匙（15–30ml）的高多酚特級初榨橄欖油。尋找標示多酚含量高於 250mg/kg 的產品，或在品嚐時感受那道清晰的「喉嗆感」——那是 Oleocanthal 存在的自然指標。關於羥基酪醇對大腦記憶與認知老化的最新研究，可進一步閱讀[羥基酪醇與大腦記憶](/blog/hydroxytyrosol-brain-cognition-2026)。
 
 **如果只記得一件事：選油時優先找 Koroneiki 早摘、Picual 早摘或 Coratina 品種，因為這三種品種的 Oleocanthal 含量在現有商業品種中相對更穩定——品種對了，嗆感才有可能持續、清晰、真實。**
 
@@ -135,7 +135,7 @@ Oleocanthal 告訴我們：三千年前地中海人的日常食物，已在無�
 
 ## 延伸閱讀
 
-- [羥基酪醇與大腦記憶研究怎麼看？血腦屏障、細胞研究與人體試驗](/blog/hydroxytyrosol-brain-cognition-memory)
+- [羥基酪醇與腦健康研究怎麼看？先分清細胞研究與人體研究](/blog/hydroxytyrosol-brain-cognition-2026)
 - [多酚與 SIRT1 研究怎麼看？細胞裡的開關與橄欖油的關係](/blog/polyphenols-sirt1-longevity-2026)
 - [橄欖油的辣喉感是什麼？Oleocanthal 與喉頭那道嗆的關係](/blog/oleocanthal-pungency-anti-inflammation)
 
