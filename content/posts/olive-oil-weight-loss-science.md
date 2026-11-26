@@ -123,7 +123,7 @@ PREDIMED（Prevención con Dieta Mediterránea）是全球規模最大的地中�
 橄欖油是地中海飲食的核心脂肪來源，但地中海飲食的其他成分（蔬菜、豆類、魚類、全穀）同樣重要。單獨服用橄欖油而不改變整體飲食結構，不能預期相同效果。
 
 **框架三：劑量控制**
-關於每日橄欖油用量的詳細計算，請參閱[每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)，從 EFSA 最低有效劑量到 PREDIMED 研究設計量的完整框架，以及[橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)，20–30ml 是研究中使用的劑量範圍，超出部分沒有額外的體重管理依據。
+關於每日橄欖油用量的詳細計算，請參閱[每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)，從 EFSA 最低有效劑量到 PREDIMED 研究設計量的完整框架；超出研究劑量範圍的部分，沒有額外的體重管理依據。
 
 **框架四：長期視角**
 PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內的快速見效。體重管理是長期飲食模式的結果，不是單一食材的短期效應。
@@ -155,7 +155,7 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 ## 延伸閱讀
 
 - [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
-- [橄欖油一天喝多少才對？從飯前空腹到料理用量全攻略](/blog/olive-oil-daily-intake-how-much)
+- [每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)
 - [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
 
 ---

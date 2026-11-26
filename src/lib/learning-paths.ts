@@ -117,7 +117,7 @@ export const LEARNING_PATHS: LearningPath[] = [
     label: '料理生活',
     desc: '從每日用量、炒菜到發煙點與保存，把油用對、放對。',
     entries: [
-      { stage: '入門', title: '每日用量與日常使用', slug: 'olive-oil-daily-intake-how-much' },
+      { stage: '入門', title: '每日用量與三個劑量框架', slug: 'olive-oil-daily-intake-dosage-science' },
       { stage: '深入', title: '特級初榨能不能炒菜', slug: 'olive-oil-cooking-science-can-evoo-stir-fry' },
       { stage: '研究', title: '加熱穩定性與發煙點', slug: 'olive-oil-cooking-heat-stability-smoke-point' },
       { stage: '延伸', title: '炒菜會致癌嗎', slug: 'olive-oil-stir-fry-cancer-myth-debunked' },
