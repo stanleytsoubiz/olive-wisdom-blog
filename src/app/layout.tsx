@@ -75,7 +75,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="zh-TW" className={`${notoSerifTC.variable} ${notoSansTC.variable}`}>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
