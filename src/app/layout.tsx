@@ -125,25 +125,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <div className="max-w-6xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              {/* SVG olive cluster mark — one-colour silhouette glyph of the 7D-4 engraved cluster, same mark as favicon.svg / app icons */}
-              <svg width="30" height="30" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
-<path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(32 18) rotate(-4) scale(0.24 0.175)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(30 17) rotate(-48) scale(0.25 0.19)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 20) rotate(-88) scale(0.26 0.225)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(26 27) rotate(-120) scale(0.25 0.21)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 38) rotate(-168) scale(0.25 0.2)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(38 38) rotate(172) scale(0.25 0.2)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(44 34) rotate(138) scale(0.25 0.205)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(45 25) rotate(90) scale(0.24 0.18)" fill="#4A5824"/>
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(34 17) rotate(44) scale(0.25 0.19)" fill="#4A5824"/>
-                <path d="M32 18 L20.5 20.0" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
-                <path d="M32 18 L42.5 21.5" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
-                <path d="M32 18 L24.5 26.0" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
-                <path d="M32 18 L36.5 28.5" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
-                <ellipse cx="20.5" cy="23.5" rx="7.6" ry="6.3" transform="rotate(-14 20.5 23.5)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
-                <ellipse cx="42.5" cy="26.5" rx="8.8" ry="6.9" transform="rotate(22 42.5 26.5)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
-                <ellipse cx="24.5" cy="34.5" rx="8.4" ry="10.3" transform="rotate(-13 24.5 34.5)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
-                <ellipse cx="36.5" cy="38.0" rx="9.0" ry="11.0" transform="rotate(-7 36.5 38.0)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
+              {/* Brand mark — refined B olive-branch mark (true vector) on a cream rounded tile */}
+              <svg width="40" height="40" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
+                <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#F9F5EB" stroke="#D9D2BC" strokeWidth="1.5"/>
+                <g transform="translate(-4.36 -4.09) scale(0.1417)">
+                  <path d="M174.8 116.4 L197.8 117.5 L214.3 121.1 L230.5 126.8 L249.3 136.2 L276.2 158.3 L288.0 172.5 L300.5 191.6 L307.0 196.4 L315.4 199.2 L331.9 196.4 L342.0 190.1 L352.3 179.8 L360.1 169.5 L369.4 151.0 L373.9 134.0 L381.5 133.2 L385.7 134.9 L393.1 144.0 L394.2 148.7 L393.1 153.8 L383.6 172.8 L370.2 189.9 L353.3 207.0 L343.1 225.2 L341.8 232.7 L343.0 251.5 L350.6 274.2 L355.3 295.5 L352.9 321.2 L346.1 339.2 L340.9 339.4 L325.8 320.7 L316.3 299.4 L313.9 287.3 L312.7 268.6 L316.2 247.6 L328.2 221.0 L310.3 229.9 L296.3 240.3 L281.4 257.7 L276.2 267.7 L274.3 276.1 L284.6 282.2 L290.7 288.2 L300.0 303.9 L303.7 320.9 L303.8 337.2 L300.1 354.3 L291.6 371.3 L281.8 382.5 L270.6 389.4 L258.3 393.0 L243.4 391.8 L234.7 388.7 L224.1 379.5 L216.8 368.0 L212.0 351.5 L211.9 329.9 L215.5 313.1 L223.2 298.0 L240.3 280.9 L248.5 276.8 L260.0 274.1 L266.0 258.5 L280.9 237.3 L280.2 235.5 L264.4 239.9 L230.8 268.7 L202.3 283.0 L177.1 289.9 L162.8 291.1 L130.9 290.0 L119.1 286.2 L119.3 282.0 L128.0 268.9 L147.1 247.3 L166.4 232.7 L181.0 225.4 L204.2 218.4 L223.0 216.1 L257.1 219.5 L258.7 221.5 L254.1 225.8 L212.1 240.1 L175.9 258.1 L175.7 260.8 L239.5 235.4 L294.1 219.2 L313.7 210.0 L312.3 207.5 L304.5 206.9 L292.1 200.7 L229.5 159.4 L229.7 162.2 L239.8 171.0 L271.7 193.8 L291.3 204.9 L293.6 208.6 L291.3 210.4 L285.7 210.5 L253.5 207.0 L241.5 203.4 L222.4 193.8 L202.8 177.9 L189.2 160.5 L176.6 137.5 L171.9 123.5 L171.8 118.7 Z" fill="#476533" fillRule="evenodd"/>
+                  <path d="M249.7 293.1 L250.8 294.8 L249.3 298.1 L241.0 308.2 L232.5 322.8 L227.7 343.2 L226.5 328.9 L230.3 313.8 L238.5 300.4 L244.7 294.4 Z" fill="#F9F5EB" fillRule="evenodd"/>
+                </g>
               </svg>
               <div className="flex flex-col leading-none gap-0.5">
                 <span className="text-sm font-bold text-olive-900 group-hover:text-olive-700 transition-colors tracking-tight">
@@ -215,25 +203,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                {/* SVG olive cluster mark — one-colour silhouette glyph, same mark as the header logo and favicon.svg */}
-                <svg width="28" height="28" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
-<path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(32 18) rotate(-4) scale(0.24 0.175)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(30 17) rotate(-48) scale(0.25 0.19)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 20) rotate(-88) scale(0.26 0.225)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(26 27) rotate(-120) scale(0.25 0.21)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 38) rotate(-168) scale(0.25 0.2)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(38 38) rotate(172) scale(0.25 0.2)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(44 34) rotate(138) scale(0.25 0.205)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(45 25) rotate(90) scale(0.24 0.18)" fill="#F3EFDF"/>
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(34 17) rotate(44) scale(0.25 0.19)" fill="#F3EFDF"/>
-                  <path d="M32 18 L20.5 20.0" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
-                  <path d="M32 18 L42.5 21.5" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
-                  <path d="M32 18 L24.5 26.0" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
-                  <path d="M32 18 L36.5 28.5" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
-                  <ellipse cx="20.5" cy="23.5" rx="7.6" ry="6.3" transform="rotate(-14 20.5 23.5)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
-                  <ellipse cx="42.5" cy="26.5" rx="8.8" ry="6.9" transform="rotate(22 42.5 26.5)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
-                  <ellipse cx="24.5" cy="34.5" rx="8.4" ry="10.3" transform="rotate(-13 24.5 34.5)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
-                  <ellipse cx="36.5" cy="38.0" rx="9.0" ry="11.0" transform="rotate(-7 36.5 38.0)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
+                {/* Brand mark — refined B olive-branch mark (true vector) on a cream rounded tile */}
+                <svg width="36" height="36" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
+                  <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#F9F5EB" stroke="#D9D2BC" strokeWidth="1.5"/>
+                  <g transform="translate(-4.36 -4.09) scale(0.1417)">
+                    <path d="M174.8 116.4 L197.8 117.5 L214.3 121.1 L230.5 126.8 L249.3 136.2 L276.2 158.3 L288.0 172.5 L300.5 191.6 L307.0 196.4 L315.4 199.2 L331.9 196.4 L342.0 190.1 L352.3 179.8 L360.1 169.5 L369.4 151.0 L373.9 134.0 L381.5 133.2 L385.7 134.9 L393.1 144.0 L394.2 148.7 L393.1 153.8 L383.6 172.8 L370.2 189.9 L353.3 207.0 L343.1 225.2 L341.8 232.7 L343.0 251.5 L350.6 274.2 L355.3 295.5 L352.9 321.2 L346.1 339.2 L340.9 339.4 L325.8 320.7 L316.3 299.4 L313.9 287.3 L312.7 268.6 L316.2 247.6 L328.2 221.0 L310.3 229.9 L296.3 240.3 L281.4 257.7 L276.2 267.7 L274.3 276.1 L284.6 282.2 L290.7 288.2 L300.0 303.9 L303.7 320.9 L303.8 337.2 L300.1 354.3 L291.6 371.3 L281.8 382.5 L270.6 389.4 L258.3 393.0 L243.4 391.8 L234.7 388.7 L224.1 379.5 L216.8 368.0 L212.0 351.5 L211.9 329.9 L215.5 313.1 L223.2 298.0 L240.3 280.9 L248.5 276.8 L260.0 274.1 L266.0 258.5 L280.9 237.3 L280.2 235.5 L264.4 239.9 L230.8 268.7 L202.3 283.0 L177.1 289.9 L162.8 291.1 L130.9 290.0 L119.1 286.2 L119.3 282.0 L128.0 268.9 L147.1 247.3 L166.4 232.7 L181.0 225.4 L204.2 218.4 L223.0 216.1 L257.1 219.5 L258.7 221.5 L254.1 225.8 L212.1 240.1 L175.9 258.1 L175.7 260.8 L239.5 235.4 L294.1 219.2 L313.7 210.0 L312.3 207.5 L304.5 206.9 L292.1 200.7 L229.5 159.4 L229.7 162.2 L239.8 171.0 L271.7 193.8 L291.3 204.9 L293.6 208.6 L291.3 210.4 L285.7 210.5 L253.5 207.0 L241.5 203.4 L222.4 193.8 L202.8 177.9 L189.2 160.5 L176.6 137.5 L171.9 123.5 L171.8 118.7 Z" fill="#476533" fillRule="evenodd"/>
+                    <path d="M249.7 293.1 L250.8 294.8 L249.3 298.1 L241.0 308.2 L232.5 322.8 L227.7 343.2 L226.5 328.9 L230.3 313.8 L238.5 300.4 L244.7 294.4 Z" fill="#F9F5EB" fillRule="evenodd"/>
+                  </g>
                 </svg>
                 <div>
                   <p className="font-bold text-white text-sm">知橄生活</p>
