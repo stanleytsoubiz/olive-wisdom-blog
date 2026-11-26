@@ -6,6 +6,7 @@ updated: "2026-06-04"
 category: "science"
 excerpt: "一份 CoA 報告，能把橄欖油的品質宣稱轉成可查核數字。這篇文章用酸值、過氧化值、K232/K270、多酚與批次日期，教你讀懂一瓶油的真實品質邊界。"
 coverImage: "/images/covers/coa-complete-reading-guide-olive-oil.jpg"
+coverAlt: "白色大理石桌上無標籤深色橄欖油瓶、黃銅放大鏡與一張完全空白的紙，象徵檢驗報告判讀"
 author: "知橄生活研究團隊"
 readTime: 12
 tags: ["CoA", "特級初榨", "品質驗證", "選購指南", "酸值", "多酚"]

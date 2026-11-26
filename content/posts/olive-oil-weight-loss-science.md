@@ -5,7 +5,7 @@ date: "2026-05-05"
 excerpt: "橄欖油不是減肥食品，但 MUFA 確實影響飽足感荷爾蒙 GLP-1 與 PYY。PREDIMED 數據顯示地中海飲食組體重管理優於低脂組，科學解析背後機制。"
 category: "health"
 coverImage: "/images/covers/olive-oil-weight-loss-science.jpg"
-coverAlt: "白色餐盤上的沙拉淋上橄欖油，清晨光線，極簡健康感"
+coverAlt: "白色大理石與亞麻布上，空白標籤深色橄欖油瓶旁的淺陶碟盛著金色橄欖油與青橄欖，晨光潔淨靜物"
 author: "知橄生活研究團隊"
 readTime: 8
 focusKeyword: "橄欖油減肥"

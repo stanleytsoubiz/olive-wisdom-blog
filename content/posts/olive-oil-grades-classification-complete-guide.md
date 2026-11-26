@@ -7,6 +7,7 @@ category: "guide"
 tags: ["橄欖油分類", "特級初榨橄欖油", "IOC標準"]
 excerpt: "市面上橄欖油標籤琳瑯滿目：Extra Virgin、Pure Olive Oil、Pomace Oil……每一種背後是截然不同的品質標準與健康效益。本文依據 IOC 官方標準，系統解析橄欖油完整分類體系，讓你選購不再困惑。"
 coverImage: "/images/covers/olive-oil-grades-classification-complete-guide.jpg"
+coverAlt: "白色大理石上四瓶無標籤橄欖油由深綠金漸變至淡金色，呈現等級光譜"
 readTime: 10
 focusKeyword: "橄欖油分類"
 sources:
