@@ -34,7 +34,7 @@ const projectRoot = path.join(__dirname, '..');
 // This is a build guard, not a magic number: keep it in sync with the
 // article count. `scripts/build-posts-data.mjs` prints the count on
 // every build — if it changes, update this number in the same commit.
-const EXPECTED_PAGES = 61;
+const EXPECTED_PAGES = 60;
 
 const appDir = path.join(projectRoot, '.next', 'server', 'app');
 const outDir = path.join(projectRoot, '.open-next', 'assets', 'pagefind');
