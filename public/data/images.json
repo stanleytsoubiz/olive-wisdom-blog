@@ -74,7 +74,7 @@
   "posts": {
     "polyphenols-sirt1-longevity-2026": {
       "url": "/images/covers/polyphenols-sirt1-longevity-2026.jpg",
-      "alt": "Polyphenols Sirt1 Longevity 2026",
+      "alt": "攤開的長壽研究期刊、琥珀色多酚萃取液小瓶與橄欖枝",
       "source": "google_imagen4",
       "generated_at": "2026-05-06",
       "quality_score": 9,
@@ -82,7 +82,7 @@
     },
     "evoo-buying-guide-2026": {
       "url": "/images/covers/evoo-buying-guide-2026.jpg",
-      "alt": "Evoo Buying Guide 2026",
+      "alt": "台灣超市橄欖油貨架，三十幾瓶標榜特級初榨的產品排列其中，消費者手持一瓶仔細閱讀標籤",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -90,7 +90,7 @@
     },
     "mediterranean-diet-anti-aging-women-2026": {
       "url": "/images/covers/mediterranean-diet-anti-aging-women-2026.jpg",
-      "alt": "Mediterranean Diet Anti Aging Women 2026",
+      "alt": "地中海風格餐桌，新鮮蔬果橄欖油搭配，女性抗衰老健康飲食美學",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -99,37 +99,43 @@
     "olive-tree-ancient-civilization-heritage": {
       "url": "/images/covers/olive-tree-ancient-civilization-heritage.jpg",
       "alt": "金色夕陽下千年橄欖樹的蒼勁樹幹與樹冠",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "oleocanthal-anti-inflammation-brain-protection": {
       "url": "/images/covers/oleocanthal-anti-inflammation-brain-protection.jpg",
       "alt": "橄欖油注入深藍色專業品油杯與新鮮橄欖",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "hydroxytyrosol-brain-cognition-memory": {
       "url": "/images/covers/hydroxytyrosol-brain-cognition-memory.jpg",
       "alt": "書桌上的橄欖油實驗瓶、沙漏與新鮮橄欖",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "olive-oil-terroir-spain-greece-italy": {
       "url": "/images/covers/olive-oil-terroir-spain-greece-italy.jpg",
       "alt": "西班牙平原、希臘海岸與托斯卡尼丘陵交匯的橄欖園全景",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 8
     },
     "squalene-olive-oil-skin-beauty-molecular": {
       "url": "/images/covers/squalene-olive-oil-skin-beauty-molecular.jpg",
       "alt": "石台上的橄欖油滴管瓶與葉片上的油滴",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "oleocanthal-pungency-anti-inflammation": {
       "url": "/images/covers/oleocanthal-pungency-anti-inflammation.jpg",
       "alt": "青橄欖微距與發光分子模型",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 8
     },
     "morning-ritual-evoo-metabolism": {
       "url": "/images/covers/morning-ritual-evoo-metabolism.jpg",
-      "alt": "Morning Ritual Evoo Metabolism",
+      "alt": "晨光中一匙金黃特級初榨橄欖油，白色餐桌木質背景，晨間儀式",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -137,7 +143,7 @@
     },
     "evoo-sensory-evaluation-ioc-standards": {
       "url": "/images/covers/evoo-sensory-evaluation-ioc-standards.jpg",
-      "alt": "Evoo Sensory Evaluation Ioc Standards",
+      "alt": "專業品油師執行 IOC 橄欖油感官評鑑，玻璃杯中的金黃油液，官方標準鑑定場景",
       "source": "google_imagen4",
       "generated_at": "2026-05-05",
       "quality_score": 9,
@@ -145,7 +151,7 @@
     },
     "olive-oil-fraud-detection-authentic-vs-fake": {
       "url": "/images/covers/olive-oil-fraud-detection-authentic-vs-fake.jpg",
-      "alt": "Olive Oil Fraud Detection Authentic Vs Fake",
+      "alt": "對比兩瓶橄欖油的色澤與標籤，真偽鑑別科學檢測的視覺對比圖",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -153,7 +159,7 @@
     },
     "olive-oil-polyphenol-content-how-to-verify": {
       "url": "/images/covers/olive-oil-polyphenol-content-how-to-verify.jpg",
-      "alt": "Olive Oil Polyphenol Content How To Verify",
+      "alt": "橄欖油品質分析數據與試管，多酚含量科學驗證的實驗室視覺概念",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -163,17 +169,19 @@
       "url": "/images/covers/2026-evoo-quality-polyphenol-index.jpg",
       "alt": "實驗室滴管將橄欖油滴入樣品瓶",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "hydroxytyrosol-brain-cognition-2026": {
       "url": "/images/covers/hydroxytyrosol-brain-cognition-2026.jpg",
       "alt": "實驗桌上的橄欖油錐形瓶、培養皿、滴管與橄欖葉",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "mediterranean-diet-anti-aging-2026": {
       "url": "/images/covers/mediterranean-diet-anti-aging-2026.jpg",
-      "alt": "Mediterranean Diet Anti Aging 2026",
+      "alt": "色彩豐富的地中海風格餐盤，橄欖油、蔬菜與魚類的健康組合",
       "source": "google_imagen4",
       "generated_at": "2026-05-13",
       "quality_score": 9,
@@ -189,7 +197,7 @@
     },
     "olive-oil-ancient-egypt-ritual-heritage": {
       "url": "/images/covers/olive-oil-ancient-egypt-ritual-heritage.jpg",
-      "alt": "Olive Oil Ancient Egypt Ritual Heritage",
+      "alt": "古埃及風格的橄欖油陶罐與象形文字石刻，法老時代的聖油儀式歷史場景",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -197,7 +205,7 @@
     },
     "olive-oil-renaissance-art-science-history": {
       "url": "/images/covers/olive-oil-renaissance-art-science-history.jpg",
-      "alt": "Olive Oil Renaissance Art Science History",
+      "alt": "文藝復興時期畫室與油燈場景，橄欖油在藝術時代的真實角色",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -215,11 +223,12 @@
       "url": "/images/covers/olive-oil-storage-guide-2026.jpg",
       "alt": "陰涼石牆地窖的木架上，橄欖油瓶與金屬油罐整齊存放",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-vs-avocado-oil-complete-comparison": {
       "url": "/images/covers/olive-oil-vs-avocado-oil-complete-comparison.jpg",
-      "alt": "Olive Oil Vs Avocado Oil Complete Comparison",
+      "alt": "橄欖油與酪梨油兩瓶並排，展示金綠色與淺黃色的色澤對比",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -229,17 +238,19 @@
       "url": "/images/covers/olive-oil-complete-buying-guide-2026.jpg",
       "alt": "石階上由高至低排列的空白標籤橄欖油瓶與橄欖枝",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-daily-intake-dosage-science": {
       "url": "/images/covers/olive-oil-daily-intake-dosage-science.jpg",
       "alt": "橄欖油緩緩注入湯匙量測，旁置整齊的量匙組與玻璃碗",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-cooking-heat-stability-smoke-point": {
       "url": "/images/covers/olive-oil-cooking-heat-stability-smoke-point.jpg",
-      "alt": "Olive Oil Cooking Heat Stability Smoke Point",
+      "alt": "橄欖油注入冒煙的鑄鐵鍋",
       "source": "google_imagen4",
       "generated_at": "2026-05-01",
       "quality_score": 9,
@@ -257,22 +268,25 @@
       "url": "/images/covers/olive-oil-health-benefits-science-complete.jpg",
       "alt": "地中海餐桌：橄欖油、番茄、綠葉蔬菜、核桃、全麥麵包與烤魚",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-shelf-life-oxidation-storage": {
       "url": "/images/covers/olive-oil-shelf-life-oxidation-storage.jpg",
       "alt": "陰涼地窖木箱中保存的橄欖油瓶與品油杯",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 8
     },
     "predimed-study-complete-explainer-olive-oil-heart": {
       "url": "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jpg",
       "alt": "臨床研究情境：橄欖油與地中海食材、聽診器與空白紀錄板",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-cooking-science-can-evoo-stir-fry": {
       "url": "/images/covers/olive-oil-cooking-science-can-evoo-stir-fry.jpg",
-      "alt": "Olive Oil Cooking Science Can Evoo Stir Fry",
+      "alt": "特級初榨橄欖油在鑄鐵鍋中加熱，地中海陽光灑落廚房場景",
       "source": "google_imagen4",
       "generated_at": "2026-05-04",
       "quality_score": 9,
@@ -280,7 +294,7 @@
     },
     "olive-oil-pdo-dop-igp-certification-guide": {
       "url": "/images/covers/olive-oil-pdo-dop-igp-certification-guide.jpg",
-      "alt": "Olive Oil Pdo Dop Igp Certification Guide",
+      "alt": "超市貨架上三瓶橄欖油，標籤特寫顯示PDO、DOP、IGP認證標誌，溫暖的自然光線，俯拍構圖",
       "source": "google_imagen4",
       "generated_at": "2026-05-04",
       "quality_score": 9,
@@ -288,7 +302,7 @@
     },
     "olive-oil-stir-fry-cancer-myth-debunked": {
       "url": "/images/covers/olive-oil-stir-fry-cancer-myth-debunked.jpg",
-      "alt": "Olive Oil Stir Fry Cancer Myth Debunked",
+      "alt": "家庭廚房中以橄欖油熱炒蔬菜的畫面，鍋中蒸氣輕盈升起",
       "source": "google_imagen4",
       "generated_at": "2026-05-05",
       "quality_score": 9,
@@ -296,7 +310,7 @@
     },
     "olive-oil-storage-refrigerator-taiwan-guide": {
       "url": "/images/covers/olive-oil-storage-refrigerator-taiwan-guide.jpg",
-      "alt": "Olive Oil Storage Refrigerator Taiwan Guide",
+      "alt": "一瓶深色玻璃瓶裝的特級初榨橄欖油，放置於陰暗廚房櫃子中，旁邊沒有爐火或陽光",
       "source": "google_imagen4",
       "generated_at": "2026-05-05",
       "quality_score": 9,
@@ -304,7 +318,7 @@
     },
     "olive-oil-daily-intake-how-much": {
       "url": "/images/covers/olive-oil-daily-intake-how-much.jpg",
-      "alt": "Olive Oil Daily Intake How Much",
+      "alt": "白色餐桌上一瓶特級初榨橄欖油與量匙並排，旁邊放著一小碟橄欖油",
       "source": "google_imagen4",
       "generated_at": "2026-05-05",
       "quality_score": 9,
@@ -312,7 +326,7 @@
     },
     "olive-oil-bitterness-pungency-quality-guide": {
       "url": "/images/covers/olive-oil-bitterness-pungency-quality-guide.jpg",
-      "alt": "Olive Oil Bitterness Pungency Quality Guide",
+      "alt": "品油師正在評鑑橄欖油的苦澀辣口感受，IOC 感官評鑑標準視覺概念",
       "source": "google_imagen4",
       "generated_at": "2026-05-05",
       "quality_score": 9,
@@ -320,7 +334,7 @@
     },
     "olive-oil-evoo-vs-regular-complete-comparison": {
       "url": "/images/covers/olive-oil-evoo-vs-regular-complete-comparison.jpg",
-      "alt": "Olive Oil Evoo Vs Regular Complete Comparison",
+      "alt": "窗光下並排的兩瓶深色橄欖油",
       "source": "google_imagen4",
       "generated_at": "2026-05-05",
       "quality_score": 9,
@@ -329,13 +343,15 @@
     "olive-oil-after-opening-shelf-life": {
       "url": "/images/covers/olive-oil-after-opening-shelf-life.jpg",
       "alt": "存放在陰涼木櫃中的已開封橄欖油瓶與瓶蓋",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 8
     },
     "olive-oil-calories-fatty-acid-composition": {
       "url": "/images/covers/olive-oil-calories-fatty-acid-composition.jpg",
       "alt": "深色石板上裝著橄欖油的分級量匙、份量小碗與油瓶",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-weight-loss-science": {
       "url": "/images/covers/olive-oil-weight-loss-science.jpg",
@@ -347,7 +363,7 @@
     },
     "olive-oil-cooking-polyphenol-retention-japan": {
       "url": "/images/covers/olive-oil-cooking-polyphenol-retention-japan-v2.jpg",
-      "alt": "Olive Oil Cooking Polyphenol Retention Japan",
+      "alt": "日式廚房裡將橄欖油淋入平底鍋炒蔬菜",
       "source": "google_imagen4",
       "generated_at": "2026-05-08",
       "quality_score": 9,
@@ -355,7 +371,7 @@
     },
     "japan-coa-verification-olive-oil-guide": {
       "url": "/images/covers/japan-coa-verification-olive-oil-guide.jpg",
-      "alt": "Japan Coa Verification Olive Oil Guide",
+      "alt": "木桌上的橄欖油瓶、檢驗文件與橄欖枝",
       "source": "google_imagen4",
       "generated_at": "2026-05-06",
       "quality_score": 9,
@@ -363,7 +379,7 @@
     },
     "olive-oil-health-benefits-polyphenol-science-complete": {
       "url": "/images/covers/olive-oil-health-benefits-polyphenol-science-complete.jpg",
-      "alt": "Olive Oil Health Benefits Polyphenol Science Complete",
+      "alt": "特級初榨橄欖油深色玻璃瓶旁放置品油杯與翻開的科學研究論文，自然窗光，學術紀錄感靜物攝影",
       "source": "google_imagen4",
       "generated_at": "2026-05-06",
       "quality_score": 9,
@@ -389,97 +405,114 @@
       "url": "/images/covers/evoo-gut-microbiome-predimed-plus-mechanism.jpg",
       "alt": "發酵蔬菜玻璃罐、綠葉蔬菜、鷹嘴豆與扁豆、空白標籤橄欖油瓶",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "tfda-olive-oil-labelling-reform-2027-guide": {
       "url": "/images/covers/tfda-olive-oil-labelling-reform-2027-guide.jpg",
       "alt": "放大鏡旁的空白標籤橄欖油瓶",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "olive-oil-price-guide-why-so-expensive": {
       "url": "/images/covers/olive-oil-price-guide-why-so-expensive.jpg",
       "alt": "三瓶無標籤橄欖油瓶陳列石檯與一碗橄欖",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "olive-oil-varieties-picual-koroneiki-frantoio-guide": {
       "url": "/images/covers/olive-oil-varieties-picual-koroneiki-frantoio-guide.jpg",
       "alt": "黃昏梯田橄欖園前並置的三品種橄欖枝條",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "olive-oil-fridge-test-myth-debunked": {
       "url": "/images/covers/olive-oil-fridge-test-myth-debunked.jpg",
       "alt": "冰箱中凝固混濁的橄欖油瓶",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "olive-oil-morning-fasting-spoon-myth": {
       "url": "/images/covers/olive-oil-morning-fasting-spoon-myth.jpg",
       "alt": "晨光木桌上的一匙橄欖油與油瓶",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "olive-oil-vs-camellia-rapeseed-oil-guide": {
       "url": "/images/covers/olive-oil-vs-camellia-rapeseed-oil-guide.jpg",
       "alt": "三種油品對照：橄欖枝、山茶花與油菜花旁的三只玻璃油壺",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olive-oil-millennium-journey-mediterranean-to-table": {
       "url": "/images/covers/olive-oil-millennium-journey-mediterranean-to-table.jpg",
       "alt": "地中海海岸前的陶甕與橄欖油瓶",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "olive-oil-gift-guide-how-to-choose": {
       "url": "/images/covers/olive-oil-gift-guide-how-to-choose.jpg",
       "alt": "深綠禮盒中的橄欖油與金色緞帶",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "olive-oil-polyphenol-tiers-250-500-1000": {
       "url": "/images/covers/olive-oil-polyphenol-tiers-250-500-1000.jpg",
       "alt": "三瓶橄欖油色澤遞升，象徵多酚三檔",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "olive-oil-terroir-tour-andalusia-crete-tuscany": {
       "url": "/images/covers/olive-oil-terroir-tour-andalusia-crete-tuscany.jpg",
       "alt": "三大產區地景前並排的三瓶橄欖油",
-      "source": "google_imagen4"
+      "source": "google_imagen4",
+      "quality_score": 9
     },
     "olive-oil-how-its-made-harvest-to-bottle": {
       "url": "/images/covers/olive-oil-how-its-made-harvest-to-bottle.jpg",
       "alt": "磨坊前的橄欖木箱與新裝瓶橄欖油",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "olive-oil-world-map-production-consumption": {
       "url": "/images/covers/olive-oil-world-map-production-consumption.jpg",
       "alt": "無標記的仿古世界地圖、橄欖油瓶、橄欖枝與黃銅羅盤",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     },
     "olio-nuovo-unfiltered-olive-oil-guide": {
       "url": "/images/covers/olio-nuovo-unfiltered-olive-oil-guide.jpg",
       "alt": "榨油機口流出的翠綠新油與晨光果園",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "olive-regions-under-threat-drought-xylella": {
       "url": "/images/covers/olive-regions-under-threat-drought-xylella.jpg",
-      "alt": "Drought-stricken olive grove with cracked dry earth",
-      "source": "custom"
+      "alt": "乾裂土地上的橄欖樹園",
+      "source": "custom",
+      "quality_score": 9
     },
     "olive-oil-competitions-awards-how-to-read": {
       "url": "/images/covers/olive-oil-competitions-awards-how-to-read.jpg",
       "alt": "空白標籤油瓶、素面金牌與品油杯",
       "source": "pollinations_ai_local",
-      "generated_at": "2026-11-24"
+      "generated_at": "2026-11-24",
+      "quality_score": 9
     },
     "organic-olive-oil-label-what-it-guarantees": {
       "url": "/images/covers/organic-olive-oil-label-what-it-guarantees.jpg",
       "alt": "有機橄欖園清晨：野花與綠草間的深色橄欖油瓶、橄欖枝與落果",
       "source": "google_imagen4",
-      "generated_at": "2026-11-25"
+      "generated_at": "2026-11-25",
+      "quality_score": 9
     }
   },
   "fallback": {

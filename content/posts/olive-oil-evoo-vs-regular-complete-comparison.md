@@ -6,6 +6,7 @@ category: "guide"
 tags: ["特級初榨橄欖油", "橄欖油分級", "IOC標準", "選購指南", "EVOO"]
 excerpt: "EVOO 和一般橄欖油差多少？從 IOC 法定酸度、過氧化值到多酚含量，一篇全解析台灣市場常見標示疑問。"
 coverImage: "/images/covers/olive-oil-evoo-vs-regular-complete-comparison.jpg"
+coverAlt: "窗光下並排的兩瓶深色橄欖油"
 author: "知橄生活研究團隊"
 readTime: 8
 focusKeyword: "特級初榨橄欖油和一般橄欖油差別"

@@ -16,7 +16,7 @@ sources:
   - "Farràs, M. et al. (2013). Olive oil polyphenols enhance the expression of cholesterol efflux related genes in vivo in humans. A randomized controlled trial. Journal of Nutritional Biochemistry, 24(7), 1334–1339. https://doi.org/10.1016/j.jnutbio.2012.10.008"
   - "Salas-Salvadó, J. et al. (2019). Effect of a Lifestyle Intervention Program With Energy-Restricted Mediterranean Diet and Exercise on Weight Loss and Cardiovascular Risk Factors: One-Year Results of the PREDIMED-Plus Trial. Diabetes Care, 42(5), 777–788. https://doi.org/10.2337/dc18-0836"
   - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://doi.org/10.2903/j.efsa.2011.2033"
-coverAlt: "晨光中一匙金黃特級初榨橄欖油，白色餐桌木質背景，代謝啟動的晨間儀式｜知橄生活"
+coverAlt: "晨光中一匙金黃特級初榨橄欖油，白色餐桌木質背景，晨間儀式｜知橄生活"
 focusKeyword: "晨飲橄欖油代謝"
 faq:
   - q: "空腹喝橄欖油有科學根據嗎？"
