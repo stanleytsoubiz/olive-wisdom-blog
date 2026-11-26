@@ -12,8 +12,6 @@ coverImage: "/images/covers/olive-oil-complete-buying-guide-2026.jpg"
 coverAlt: "橄欖油瓶排列在貨架上，背景為地中海橄欖園"
 sources:
   - "EFSA Panel on Dietetic Products, Nutrition and Allergies (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://doi.org/10.2903/j.efsa.2011.2033"
-  - "Aparicio, R., & Harwood, J. (Eds.). (2013). Handbook of Olive Oil: Analysis and Properties (2nd ed.). Springer. https://doi.org/10.1007/978-1-4614-7777-8"
-  - "Beauchamp, G. K., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature, 437, 45–46. https://doi.org/10.1038/437045a"
   - "Pristouri, G., Badeka, A., & Kontominas, M. G. (2010). Effect of packaging material headspace, oxygen and light transmission, temperature and storage time on quality characteristics of extra virgin olive oil. Food Control, 21(4), 412–418. https://doi.org/10.1016/j.foodcont.2009.06.019"
   - "IOC (2019). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 17. https://www.internationaloliveoil.org/"
 faq:
@@ -165,12 +163,12 @@ qc_gate:
 **CoA 核查重點：**
 
 ```
-必看指標（健康性能）：
+核心指標（健康性能）：
 □ 總多酚（TPC）≥ 300 mg/kg → 可接受；≥ 500 mg/kg → 優秀
 □ Hydroxytyrosol 含量 → 計算每日 20ml 攝取量是否達 5mg
 □ Oleocanthal 含量 → 越高越好（直接抗炎活性）
 
-必看指標（新鮮度與真實性）：
+核心指標（新鮮度與真實性）：
 □ 游離酸度（Free Acidity）< 0.3% → 優秀；< 0.8% → IOC 合格
 □ 過氧化值（Peroxide Value）< 10 meq/kg → 優秀；< 20 meq/kg → 合格
 □ K270 < 0.20 → 關鍵：高於此值可能有精製油摻混

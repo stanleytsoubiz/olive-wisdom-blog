@@ -13,6 +13,7 @@ sources:
   - "香川縣農政水產部（2022）。オリーブの収穫量（特産果樹生産動態等調査）。香川縣官方統計。https://www.pref.kagawa.lg.jp/"
   - "香川縣（2014）。香川縣橄欖油標示制度品質規格。https://www.kensanpin.org/en/olive/kagawa-oliveoil/"
   - "小豆島町役場（n.d.）。オリーブについて。https://www.town.shodoshima.lg.jp/"
+  - "De Alzaa, F., Guillaume, C., & Ravetti, L. (2018). Evaluation of Chemical and Physical Changes in Different Commercial Oils during Heating. Acta Scientific Nutritional Health, 2(6), 2–11."
 focusKeyword: "小豆島橄欖油"
 faq:
   - q: "小豆島橄欖油的歷史是從什麼時候開始的？"

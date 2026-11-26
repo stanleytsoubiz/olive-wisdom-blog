@@ -234,7 +234,7 @@ EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用
 
 **避免**：Light Olive Oil（行銷誤導）、Olive Pomace Oil（品質最低、潛在安全疑慮）。
 
-**如果只記得一件事：瓶身沒有「Extra Virgin」字樣的橄欖油，不管標示 Pure、Light 還是只寫 Olive Oil，多酚含量通常遠低於 EVOO，混合油與精製油多在 50mg/kg 以下，遠低於 EFSA 健康聲明所需的 250mg/kg 門檻——我們團隊建議，貨架上若找不到 Extra Virgin 標示，寧可不買橄欖油，也不要買標榜「純粹」或「淡味」的精製品。**
+**如果只記得一件事：瓶身沒有「Extra Virgin」字樣的橄欖油，不管標示 Pure、Light 還是只寫 Olive Oil，多酚含量通常遠低於 EVOO，混合油與精製油多在 50mg/kg 以下，遠低於 EFSA 健康聲明條件約當的總多酚 250mg/kg（每 20 g 油含羥基酪醇及其衍生物 ≥5 mg）——我們團隊建議，貨架上若找不到 Extra Virgin 標示，寧可不買橄欖油，也不要買標榜「純粹」或「淡味」的精製品。**
 
 分類體系讀懂了，選購橄欖油就不再需要依賴行銷話術和廣告承諾。科學標準在那裡，答案是清晰的。高品質 EVOO 的苦味與辛辣感是多酚含量的感官指標，詳情可參考[橄欖油苦澀辣口品質科學解說](/blog/olive-oil-bitterness-pungency-quality-guide)。確認等級後，可進一步使用[特級初榨橄欖油選購完全指南](/blog/evoo-buying-guide-2026)來做最終選擇。
 

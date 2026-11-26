@@ -12,7 +12,7 @@ sources:
   - "Pérez-Jiménez, F. et al. (2020). Antioxidant activity in cooking oils. Food Chemistry. https://doi.org/10.1016/j.foodchem.2019.125726"
   - "Kalogeropoulos, N., & Tsimidou, M. Z. (2014). Antioxidants in Greek virgin olive oils. Antioxidants, 3(2), 387–413. https://doi.org/10.3390/antiox3020387"
   - "Gómez-Alonso, S., Mancebo-Campos, V., Salvador, M. D., & Fregapane, G. (2007). Evolution of major and minor components and oxidation indices of virgin olive oil during 21 months storage at three different temperatures. Food Chemistry, 100(1), 36–42. https://doi.org/10.1016/j.foodchem.2005.09.006"
-  - "Japan Olive Oil Sommelier Association (JOSSA). Consumer Research Report 2023."
+  - "International Olive Council (IOC). Olive Oil Dashboard — Imports by country（日本各年進口量，資料來源含日本財務省貿易統計）. https://www.internationaloliveoil.org/wp-content/uploads/2021/12/IOC-Olive-Oil-Dashboard-1.html"
 focusKeyword: "橄欖油炒菜多酚"
 qc_gate:
   H1: pass
@@ -55,11 +55,11 @@ draft: false
 
 ## 日本主婦怎麼看橄欖油加熱這件事
 
-日本是亞洲最大的橄欖油進口市場，年進口量約 60,000 噸。但日本消費者購買橄欖油的方式，和台灣截然不同：他們普遍要求 CoA（Certificate of Analysis，品質檢驗報告），在意多酚數字，把橄欖油當作功能性食品在選購——而不只是一瓶料理用油。想深入了解如何看懂 CoA 報告上的每個數字，可參考[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)。
+日本是亞洲最大的橄欖油進口市場，依國際橄欖理事會（IOC）統計，年進口量約 6 萬噸（2014/15–2020/21 年間各年約 5.4–7.0 萬噸）。但日本消費者購買橄欖油的方式，和台灣截然不同：他們普遍要求 CoA（Certificate of Analysis，品質檢驗報告），在意多酚數字，把橄欖油當作功能性食品在選購——而不只是一瓶料理用油。想深入了解如何看懂 CoA 報告上的每個數字，可參考[橄欖油 CoA 完整解讀指南](/blog/coa-complete-reading-guide-olive-oil)。
 
 這種消費文化催生了一個獨特的問題：如果我花了這麼多錢買高多酚油，加熱之後，值不值得？
 
-日本橄欖油侍酒師協會（JOSSA）2023 年的消費者調查顯示，超過七成的高端橄欖油購買者，主要使用場合是「沙拉淋油」或「成品增味」——因為他們擔心加熱會摧毀多酚。這個擔心有根據，但也被放大了。
+在日本，橄欖油的主要使用場合是「沙拉淋油」或「成品增味」這類不加熱的吃法——因為消費者擔心加熱會摧毀多酚。這個擔心有根據，但也被放大了。
 
 ## 數字說話：180°C 加熱後，多酚剩下多少？
 

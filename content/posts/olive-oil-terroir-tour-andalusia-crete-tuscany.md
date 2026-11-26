@@ -9,7 +9,7 @@ readTime: 8
 tags: ["產地", "風土", "PDO"]
 sources:
   - "International Olive Council (IOC). World Olive Oil Production Estimates, 2025/26 crop year. https://www.internationaloliveoil.org/"
-  - "European Commission. eAmbrosia — The EU geographical indications register. https://www.tmdn.org/giview/"
+  - "European Commission. eAmbrosia — The EU geographical indications register. https://ec.europa.eu/agriculture/eambrosia/geographical-indications-register/"
   - "UNESCO (2010, 2013). Mediterranean diet inscribed on the Representative List of the Intangible Cultural Heritage of Humanity."
 focusKeyword: "橄欖油產地"
 qc_gate:

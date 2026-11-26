@@ -11,13 +11,13 @@ readTime: 8
 sources:
   - "EFSA (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal 9(4):2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
   - "Visioli, F. et al. (2021). Olive oil: Composition, quality criteria, and biomedical implications. European Journal of Lipid Science and Technology, 123(3), 2000178. https://doi.org/10.1002/ejlt.202000178"
-  - "Boskou, D. (2015). Olive Oil: Minor Constituents and Health. CRC Press. https://www.internationaloliveoil.org/"
+  - "Boskou, D. (Ed.). (2015). Olive and Olive Oil Bioactive Constituents. AOCS Press. https://www.sciencedirect.com/book/edited-volume/9781630670412/olive-and-olive-oil-bioactive-constituents"
   - "Lozano-Castellon, J. et al. (2020). Health-promoting properties of oleocanthal and oleacein: Two secoiridoids from extra-virgin olive oil. *Critical Reviews in Food Science and Nutrition*, 60(15), 2532–2548. https://doi.org/10.1080/10408398.2019.1650715"
 coverAlt: "橄欖油品質分析數據與試管，多酚含量科學驗證的實驗室視覺概念｜知橄生活"
 focusKeyword: "橄欖油多酚含量"
 faq:
   - q: "橄欖油多酚含量多少才算高品質？"
-    a: "根據 EFSA（歐洲食品安全局）的健康宣稱標準，每日攝取含 5mg 羥基酪醇（Hydroxytyrosol）及其衍生物的橄欖油，與保護血脂免受氧化壓力有關。換算成橄欖油，理想的總酚含量（TPC）應在 250mg/kg 以上；高多酚 EVOO 的常見範圍為 400–800mg/kg（不同檢測方法與產季會有差異）。一般市售橄欖油的常見範圍約 50–150mg/kg，差距極大。我們的建議是：以健康效益為目的→只選 TPC ≥250mg/kg、附 CoA 報告的 EVOO，低於此閾值的油品無法對應 EFSA 健康聲明；若無法取得 CoA→改用感官測試（喉頭後段三秒灼熱感）作為現場篩選的必要條件，無嗆感的「特級初榨」幾乎可以排除。"
+    a: "根據 EFSA（歐洲食品安全局）的健康宣稱標準，每日攝取含 5mg 羥基酪醇（Hydroxytyrosol）及其衍生物的橄欖油，與保護血脂免受氧化壓力有關。換算成橄欖油，理想的總酚含量（TPC）應在 250mg/kg 以上；高多酚 EVOO 的常見範圍為 400–800mg/kg（不同檢測方法與產季會有差異）。一般市售橄欖油的常見範圍約 50–150mg/kg，差距極大。我們的建議是：以健康效益為目的→只選 TPC ≥250mg/kg、附 CoA 報告的 EVOO，低於此對應值的油品，難以滿足 EFSA 健康聲明的條件；若無法取得 CoA→改用感官測試（喉頭後段三秒灼熱感）作為現場篩選的必要條件，無嗆感的「特級初榨」幾乎可以排除。"
   - q: "如何在購買時確認橄欖油的多酚含量？"
     a: "有三個實用方法：(1) 直接要求供應商提供 CoA（Certificate of Analysis）分析證明書，查看 TPC（Total Polyphenol Content）數值；(2) 尋找 NYIOOC、EVOOLEUM Guide 等國際競賽金牌得主，這些油款通常有公開的多酚檢測數據；(3) 觀察感官特徵——真正高多酚油在吞嚥後 3-5 秒應有明顯的喉嚨刺激感（Oleocanthal）和苦味（Oleuropein）。"
   - q: "橄欖油開封後多酚含量會下降嗎？"

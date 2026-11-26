@@ -19,6 +19,8 @@ tags:
 sources:
   - "USDA FoodData Central. (2019). Olive oil, salad or cooking. FDC ID: 171413. https://fdc.nal.usda.gov/fdc-app.html#/food-details/171413/nutrients"
   - "International Olive Council. (2019). Trade standard applying to olive oils and olive-pomace oils. COI/T.15/NC No 3/Rev. 16. https://www.internationaloliveoil.org/what-we-do/chemistry-standardisation-unit/standards-and-methods/"
+  - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
+  - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
 faq:
   - q: "橄欖油一湯匙（15ml）有多少大卡？"
     a: "根據 USDA FoodData Central 的官方數據，橄欖油每 15ml（一湯匙）約含 119–124 大卡，脂肪約 13.5g，不含碳水化合物或蛋白質。所有等級的橄欖油（特級初榨、初榨、精製）熱量基本相同，差異在於多酚含量而非熱量。"
@@ -132,7 +134,7 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 精製橄欖油和特級初榨橄欖油的熱量相同（每 15ml 約 119 kcal），但多酚含量差距懸殊（常見範圍）：
 - 精製橄欖油：多酚 < 50 mg/kg
 - 一般 EVOO：多酚 150–300 mg/kg
-- 高多酚 EVOO：多酚 ≥ 250 mg/kg（歐盟健康聲稱門檻）
+- 高多酚 EVOO：多酚 ≥ 250 mg/kg（約當於 EFSA 健康聲稱條件——每 20 g 油含羥基酪醇及其衍生物 ≥5 mg——反推的總多酚對應值）
 
 歐盟 2012 年通過的健康聲稱規範（EC No 432/2012）規定：每日攝取 20g 含多酚 ≥ 250 mg/kg 的橄欖油，其中的羥基酪醇及其衍生物合計 ≥5 mg，「有助於保護血脂免受氧化壓力」。這個聲稱是基於多酚，不是基於油酸或熱量。
 
