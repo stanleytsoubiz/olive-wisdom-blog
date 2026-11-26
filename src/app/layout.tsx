@@ -126,21 +126,25 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <div className="max-w-6xl mx-auto px-5 md:px-6 h-16 flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              {/* SVG olive cluster mark — simplified glyph of the 7D-4 engraved cluster, same mark as favicon.svg / app icons */}
+              {/* SVG olive cluster mark — one-colour silhouette glyph of the 7D-4 engraved cluster, same mark as favicon.svg / app icons */}
               <svg width="30" height="30" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(31 19) rotate(-2) scale(0.170)" fill="#4A5824" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(30 20) rotate(-50) scale(0.180)" fill="#7A8F3A" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(28 22) rotate(-95) scale(0.220)" fill="#4A5824" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 27) rotate(-138) scale(0.200)" fill="#7A8F3A" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(33 19) rotate(44) scale(0.180)" fill="#7A8F3A" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(37 26) rotate(92) scale(0.190)" fill="#4A5824" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(36 34) rotate(140) scale(0.180)" fill="#4A5824" />
-                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(28 38) rotate(-165) scale(0.160)" fill="#7A8F3A" />
-                <ellipse cx="19.5" cy="23" rx="6.8" ry="5.8" transform="rotate(10 19.5 23)" fill="#7A8F3A" />
-                <ellipse cx="41.5" cy="26.5" rx="8.6" ry="6.6" transform="rotate(26 41.5 26.5)" fill="#4A5824" />
-                <ellipse cx="24" cy="34" rx="8.0" ry="9.6" transform="rotate(-15 24 34)" fill="#4A5824" />
-                <ellipse cx="37" cy="38" rx="8.6" ry="10.2" transform="rotate(-11 37 38)" fill="#4A5824" />
-                <circle cx="33.4" cy="32.5" r="1.7" fill="#C9A227" />
+<path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(32 18) rotate(-4) scale(0.24 0.175)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(30 17) rotate(-48) scale(0.25 0.19)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 20) rotate(-88) scale(0.26 0.225)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(26 27) rotate(-120) scale(0.25 0.21)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 38) rotate(-168) scale(0.25 0.2)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(38 38) rotate(172) scale(0.25 0.2)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(44 34) rotate(138) scale(0.25 0.205)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(45 25) rotate(90) scale(0.24 0.18)" fill="#4A5824"/>
+                <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(34 17) rotate(44) scale(0.25 0.19)" fill="#4A5824"/>
+                <path d="M32 18 L20.5 20.0" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
+                <path d="M32 18 L42.5 21.5" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
+                <path d="M32 18 L24.5 26.0" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
+                <path d="M32 18 L36.5 28.5" stroke="#4A5824" strokeWidth="2.6" strokeLinecap="round"/>
+                <ellipse cx="20.5" cy="23.5" rx="7.6" ry="6.3" transform="rotate(-14 20.5 23.5)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
+                <ellipse cx="42.5" cy="26.5" rx="8.8" ry="6.9" transform="rotate(22 42.5 26.5)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
+                <ellipse cx="24.5" cy="34.5" rx="8.4" ry="10.3" transform="rotate(-13 24.5 34.5)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
+                <ellipse cx="36.5" cy="38.0" rx="9.0" ry="11.0" transform="rotate(-7 36.5 38.0)" fill="#4A5824" stroke="#FFFFFF" strokeWidth="3.0"/>
               </svg>
               <div className="flex flex-col leading-none gap-0.5">
                 <span className="text-sm font-bold text-olive-900 group-hover:text-olive-700 transition-colors tracking-tight">
@@ -212,21 +216,25 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* Brand */}
             <div className="md:col-span-1">
               <div className="flex items-center gap-2 mb-3">
-                {/* SVG olive cluster mark — same mark as the header logo and favicon.svg */}
+                {/* SVG olive cluster mark — one-colour silhouette glyph, same mark as the header logo and favicon.svg */}
                 <svg width="28" height="28" viewBox="0 0 64 64" fill="none" className="flex-shrink-0" aria-hidden="true">
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(31 19) rotate(-2) scale(0.170)" fill="#F3EFDF" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(30 20) rotate(-50) scale(0.180)" fill="#D9C98F" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(28 22) rotate(-95) scale(0.220)" fill="#F3EFDF" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 27) rotate(-138) scale(0.200)" fill="#D9C98F" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(33 19) rotate(44) scale(0.180)" fill="#D9C98F" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(37 26) rotate(92) scale(0.190)" fill="#F3EFDF" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(36 34) rotate(140) scale(0.180)" fill="#F3EFDF" />
-                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(28 38) rotate(-165) scale(0.160)" fill="#D9C98F" />
-                  <ellipse cx="19.5" cy="23" rx="6.8" ry="5.8" transform="rotate(10 19.5 23)" fill="#D9C98F" />
-                  <ellipse cx="41.5" cy="26.5" rx="8.6" ry="6.6" transform="rotate(26 41.5 26.5)" fill="#C9A227" />
-                  <ellipse cx="24" cy="34" rx="8.0" ry="9.6" transform="rotate(-15 24 34)" fill="#C9A227" />
-                  <ellipse cx="37" cy="38" rx="8.6" ry="10.2" transform="rotate(-11 37 38)" fill="#C9A227" />
-                  <circle cx="33.4" cy="32.5" r="1.7" fill="#F3EFDF" />
+<path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(32 18) rotate(-4) scale(0.24 0.175)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(30 17) rotate(-48) scale(0.25 0.19)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 20) rotate(-88) scale(0.26 0.225)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(26 27) rotate(-120) scale(0.25 0.21)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(27 38) rotate(-168) scale(0.25 0.2)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(38 38) rotate(172) scale(0.25 0.2)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(44 34) rotate(138) scale(0.25 0.205)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(45 25) rotate(90) scale(0.24 0.18)" fill="#F3EFDF"/>
+                  <path d="M0 0 C 20.7 -30.0, 19.0 -72.0, 0 -100 C -19.0 -72.0, -20.7 -30.0, 0 0 Z" transform="translate(34 17) rotate(44) scale(0.25 0.19)" fill="#F3EFDF"/>
+                  <path d="M32 18 L20.5 20.0" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
+                  <path d="M32 18 L42.5 21.5" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
+                  <path d="M32 18 L24.5 26.0" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
+                  <path d="M32 18 L36.5 28.5" stroke="#F3EFDF" strokeWidth="2.6" strokeLinecap="round"/>
+                  <ellipse cx="20.5" cy="23.5" rx="7.6" ry="6.3" transform="rotate(-14 20.5 23.5)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
+                  <ellipse cx="42.5" cy="26.5" rx="8.8" ry="6.9" transform="rotate(22 42.5 26.5)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
+                  <ellipse cx="24.5" cy="34.5" rx="8.4" ry="10.3" transform="rotate(-13 24.5 34.5)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
+                  <ellipse cx="36.5" cy="38.0" rx="9.0" ry="11.0" transform="rotate(-7 36.5 38.0)" fill="#F3EFDF" stroke="#343D1B" strokeWidth="3.0"/>
                 </svg>
                 <div>
                   <p className="font-bold text-white text-sm">知橄生活</p>
