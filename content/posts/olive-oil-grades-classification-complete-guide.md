@@ -10,14 +10,15 @@ coverImage: "/images/covers/olive-oil-grades-classification-complete-guide.jpg"
 readTime: 10
 focusKeyword: "橄欖油分類"
 sources:
-  - "International Olive Council (IOC). (2015). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 13."
-  - "European Commission Regulation (EU) No 1308/2013. Common Organisation of Agricultural Markets."
+  - "International Olive Council (IOC). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3. https://www.internationaloliveoil.org/"
+  - "European Commission Regulation (EU) No 1308/2013. Common Organisation of Agricultural Markets. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R1308"
+  - "Commission Delegated Regulation (EU) 2022/2104, Article 10（'first cold pressing' 與 'cold extraction' 僅適用於 27 °C 以下取得之油）. https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2104"
   - "Boskou, D. (Ed.). (2006). Olive Oil: Chemistry and Technology (2nd ed.). AOCS Press."
   - "Aparicio, R., & Harwood, J. (Eds.). (2013). Handbook of Olive Oil: Analysis and Properties. Springer."
-  - "Vossen, P. (2007). Olive Oil: History, Production, and Characteristics of the World's Classic Oils. HortScience, 42(5), 1093–1100."
+  - "Vossen, P. (2007). Olive Oil: History, Production, and Characteristics of the World's Classic Oils. HortScience, 42(5), 1093–1100. https://doi.org/10.21273/HORTSCI.42.5.1093"
 faq:
   - q: "特級初榨橄欖油和一般橄欖油有什麼差別？"
-    a: "特級初榨橄欖油（Extra Virgin Olive Oil, EVOO）是橄欖油的最高等級，必須完全以機械冷壓方式萃取（無加熱或化學處理），游離酸度≤0.8%，感官評鑑無缺陷。一般「橄欖油」（Pure Olive Oil）通常是精製橄欖油混入少量初榨橄欖油，酸度<1%，多酚含量和風味均遠低於 EVOO。我們的建議是：日常健康飲食目的→只選 Extra Virgin 等級，多酚含量 ≥250mg/kg 且附採收年份標示；預算有限或需要大量烹飪用油→退而選擇 Pure Olive Oil（橄欖混合油），但不應期待 EVOO 的多酚健康效益，這是完全不同等級的產品。"
+    a: "特級初榨橄欖油（Extra Virgin Olive Oil, EVOO）是橄欖油的最高等級，必須完全以機械方式萃取（不經化學處理），游離酸度≤0.8%，感官評鑑無缺陷。一般「橄欖油」（Pure Olive Oil）通常是精製橄欖油混入少量初榨橄欖油，酸度<1%，多酚含量和風味均遠低於 EVOO。我們的建議是：日常健康飲食目的→只選 Extra Virgin 等級，多酚含量 ≥250mg/kg 且附採收年份標示；預算有限或需要大量烹飪用油→退而選擇 Pure Olive Oil（橄欖混合油），但不應期待 EVOO 的多酚健康效益，這是完全不同等級的產品。"
   - q: "Pure Olive Oil 是純橄欖油嗎？"
     a: "「Pure Olive Oil」並非「純粹的好橄欖油」的意思。這個標籤實際上指的是精製橄欖油（Refined Olive Oil）混合少量初榨橄欖油的產品，品質等級低於特級初榨橄欖油。「Pure」是行銷用詞，不代表品質更好。"
   - q: "Light Olive Oil 熱量比較低嗎？"
@@ -25,7 +26,7 @@ faq:
   - q: "橄欖果渣油（Pomace Oil）可以吃嗎？"
     a: "橄欖果渣油（Olive Pomace Oil）是從橄欖壓榨後的殘渣（果渣）以化學溶劑（己烷）萃取的油，品質最低。雖然可食用，但幾乎不含多酚，缺乏 EVOO 的健康效益。通常用於食品工業和餐廳大量油炸。家庭健康烹飪應優先選擇 EVOO 或精製橄欖油。"
   - q: "如何從標籤上判斷橄欖油等級？"
-    a: "按品質由高到低：(1) Extra Virgin Olive Oil（特級初榨）；(2) Virgin Olive Oil（初榨橄欖油）；(3) Olive Oil 或 Pure Olive Oil（精製+初榨混合）；(4) Refined Olive Oil（精製橄欖油）；(5) Olive Pomace Oil（橄欖果渣油）。標有「Extra Virgin」且附有 IOC/PDO/DOP 認證的是最高品質保證。"
+    a: "按品質由高到低：(1) Extra Virgin Olive Oil（特級初榨）；(2) Virgin Olive Oil（初榨橄欖油）；(3) Olive Oil 或 Pure Olive Oil（精製+初榨混合）；(4) Refined Olive Oil（精製橄欖油）；(5) Olive Pomace Oil（橄欖果渣油）。標有「Extra Virgin」，並附有 PDO/DOP 等產地保護標示、採收年份與 CoA 檢驗資訊的產品，品質資訊最完整。（提醒：IOC 是制定標準的國際組織，本身不核發產品認證。）"
 draft: false
 qc_gate:
   legacy_audit: pass
@@ -55,7 +56,7 @@ qc_gate:
 
 問題在於，台灣的消費者教育長期缺乏對這套分類體系的完整解釋，行銷標語（「Pure」「Light」「天然」）又常常製造誤導。本文完全依照 **IOC（國際橄欖理事會）官方標準**，帶你系統解析。
 
-先給你一句話答案：**只有標示 Extra Virgin 的才是最高等級——機械冷壓、酸度 ≤0.8%、感官無缺陷。Pure、Light、Pomace 都是精製或殘渣油，多酚幾乎沒有。認等級，先認這四個英文字。**
+先給你一句話答案：**只有標示 Extra Virgin 的才是最高等級——機械萃取、酸度 ≤0.8%、感官無缺陷。Pure、Light、Pomace 都是精製或殘渣油，多酚幾乎沒有。認等級，先認這四個英文字。**
 
 ---
 
@@ -63,7 +64,7 @@ qc_gate:
 
 | 問題 | 答案 |
 |---|---|
-| 最高等級是哪一級？ | Extra Virgin（特級初榨）：機械冷壓、酸度 ≤0.8%、感官無缺陷 |
+| 最高等級是哪一級？ | Extra Virgin（特級初榨）：機械萃取、酸度 ≤0.8%、感官無缺陷 |
 | 「Pure Olive Oil」是純的好油嗎？ | 不是，是精製橄欖油混入少量初榨油，等級低於特級初榨 |
 | 「Light」代表熱量低嗎？ | 不是，指顏色淺、味道淡，熱量與其他橄欖油相同，約每湯匙 120 大卡 |
 | 果渣油（Pomace Oil）可以吃嗎？ | 可食用，但幾乎不含多酚，品質最低，家庭烹飪應避免 |
@@ -83,7 +84,9 @@ IOC（International Olive Council，國際橄欖理事會）是橄欖油品質�
 
 **這是橄欖油的最高等級，也是本文反覆強調的核心選購對象。**
 
-**生產工藝**：100% 機械冷壓萃取，全程不加熱（<27°C），絕對不使用任何化學溶劑。橄欖採收後 24 小時內完成壓榨，最大程度保留多酚和天然香氣。
+**生產工藝**：100% 機械方式萃取，絕對不使用任何化學溶劑。橄欖採收後 24 小時內完成壓榨，最大程度保留多酚和天然香氣。
+
+**先澄清一個最常見的誤解**：「冷壓／冷萃」在歐盟法規（Commission Delegated Regulation (EU) 2022/2104 第 10 條）裡是**標籤用語**——只有製程溫度低於 27 °C 取得的油，才可以標示「第一道冷壓」或「冷萃」。27 °C 是使用這兩個詞的門檻，**不是特級初榨的法定條件**：特級初榨的定義只要求「僅以機械方式取得」並通過化學與感官標準，定義裡沒有溫度數字。一瓶油沒寫冷萃，不代表它不是特級初榨。
 
 **IOC 品質要求**：
 - 游離脂肪酸（以油酸計）：≤ 0.8%
@@ -100,13 +103,13 @@ IOC（International Olive Council，國際橄欖理事會）是橄欖油品質�
 
 **適用場合**：涼拌、沾醬、低中溫烹飪、義大利麵收尾、直接口服（空腹 1–2 匙）
 
-**選購標誌**：標示「Extra Virgin」+ IOC 認證 / PDO / DOP / PGI 認證 + 採收年份（Harvest Date）。購買前如何進一步辨別真假，可參考[橄欖油真假鑑別完整指南](/blog/olive-oil-fraud-detection-authentic-vs-fake)。
+**選購標誌**：標示「Extra Virgin」+ PDO / DOP / PGI 產地保護標示 + 採收年份（Harvest Date）。購買前如何進一步辨別真假，可參考[橄欖油真假鑑別完整指南](/blog/olive-oil-fraud-detection-authentic-vs-fake)。
 
 ---
 
 ### 第二級：初榨橄欖油（Virgin Olive Oil）
 
-**生產工藝**：同樣使用機械冷壓萃取，不使用化學溶劑，但品質要求略低於特級初榨。
+**生產工藝**：同樣使用機械方式萃取，不使用化學溶劑，但品質要求略低於特級初榨。
 
 **IOC 品質要求**：
 - 游離脂肪酸：≤ 2.0%
@@ -186,14 +189,14 @@ Light Olive Oil 是更高度精製的橄欖油，幾乎無色無味，多酚含�
 
 | 等級 | 中文名稱 | 萃取方式 | 游離酸度 | 多酚含量 | 建議用途 |
 |---|---|---|---|---|---|
-| Extra Virgin | 特級初榨橄欖油 | 機械冷壓 | ≤0.8% | 高（150–800 mg/kg）| 涼拌、低中溫烹飪、口服 |
-| Virgin | 初榨橄欖油 | 機械冷壓 | ≤2.0% | 中（80–200 mg/kg）| 一般烹飪 |
+| Extra Virgin | 特級初榨橄欖油 | 機械萃取 | ≤0.8% | 高（150–800 mg/kg）| 涼拌、低中溫烹飪、口服 |
+| Virgin | 初榨橄欖油 | 機械萃取 | ≤2.0% | 中（80–200 mg/kg）| 一般烹飪 |
 | Olive Oil | 橄欖油（混合）| 精製+少量初榨 | ≤1.0% | 低（<50 mg/kg）| 中高溫烹飪 |
 | Refined | 精製橄欖油 | 化學/物理精製 | ≤0.3% | 極低 | 工業用途 |
 | Light | 淡味橄欖油 | 高度精製 | ≤0.3% | 幾乎無 | 中性口味需求 |
 | Pomace | 橄欖果渣油 | 溶劑浸提+精製 | ≤0.3% | 無 | 食品工業（不建議家用）|
 
-**換句話說，IOC 六級分類體系中，只有 Extra Virgin 等級強制要求機械冷壓、游離酸度 ≤0.8% 且感官無缺陷——從 Virgin 往下，多酚含量明顯下降，與高品質 EVOO 相關的健康研究結果不可套用於其他等級。** 多酚的健康研究基礎，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
+**換句話說，IOC 六級分類體系中，只有 Extra Virgin 等級強制要求機械萃取、游離酸度 ≤0.8% 且感官無缺陷——從 Virgin 往下，多酚含量明顯下降，與高品質 EVOO 相關的健康研究結果不可套用於其他等級。** 多酚的健康研究基礎，可參考[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 表中多酚含量為常見範圍，不同品種與產季會有差異，判斷以 CoA 為準。
 
@@ -205,13 +208,13 @@ Light Olive Oil 是更高度精製的橄欖油，幾乎無色無味，多酚含�
 看到「Extra Virgin Olive Oil」或「特級初榨橄欖油」才是第一等級。看到「Pure」「Light」「Olive Oil」（無 Extra Virgin 字樣）要降低預期。
 
 **Step 2：查看認證標誌**
-- **IOC 認證標誌**：在 IOC 官網可查詢認可品牌
+- **關於 IOC**：IOC 是制定貿易標準的國際組織，不核發產品認證，市面上沒有「IOC 認證標誌」；判斷依據是等級標示本身與下列各項資訊
 - **PDO（Protected Designation of Origin）/ DOP（Denominazione di Origine Protetta）**：歐盟原產地保護認證，確保特定產區來源（詳細解讀可參考 [PDO、DOP、IGP 認證完整指南](/blog/olive-oil-pdo-dop-igp-certification-guide)）
 - **PGI（Protected Geographical Indication）**：歐盟地理標誌保護
 - **NYIOOC / EVOOLEUM 金獎**：國際知名的橄欖油品質競賽，得獎代表感官評鑑通過
 
 **Step 3：查看採收日期**
-EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用日期（Best Before）。橄欖油開封後建議 3–6 個月內使用完畢。採收日期距今超過 18 個月的 EVOO，多酚已大量降解。
+EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用日期（Best Before）。橄欖油開封後建議 2–3 個月內使用完畢（夏季高溫環境約 2 個月）。採收日期距今超過 18 個月的 EVOO，多酚已大量降解。
 
 **Step 4：查看包裝**
 深色玻璃瓶或不透光包裝為佳，避免透明玻璃（光線加速氧化）和塑料瓶（可能溶出有機物）。
@@ -240,7 +243,7 @@ EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用
 
 1959 年那場馬德里會議裡，八國代表圍著三十幾只玻璃小杯逐一品嘗、爭論、定義——他們在做的不是貿易談判，是在替全人類設計一套讀懂橄欖油品質的共通語言。六十七年過去，這套語言已經變成瓶身上的「Extra Virgin」、「Pure Olive Oil」、「PDO」這幾個英文詞，安靜地擺在台灣每一家超市的進口食品區。
 
-今晚回家後，從廚房櫃子裡拿出你家那瓶橄欖油，先翻瓶身找四個東西：「Extra Virgin」字樣、IOC/PDO/DOP 認證標章、採收年份（Harvest Date）、深色玻璃瓶身。四項齊全，倒一茶匙在白瓷小碟上——金綠色油液在碟底凝住一瞬，青草氣與朝鮮薊的微苦從碟緣升起，含一口入嘴，三秒後喉頭那股嗆浮現。如果四項齊全且喉頭那道嗆誠實出現，你手裡那瓶就是 1959 年馬德里那張橡木桌想保護的同一個品質傳統。
+今晚回家後，從廚房櫃子裡拿出你家那瓶橄欖油，先翻瓶身找四個東西：「Extra Virgin」字樣、PDO/DOP 產地標示、採收年份（Harvest Date）、深色玻璃瓶身。四項齊全，倒一茶匙在白瓷小碟上——金綠色油液在碟底凝住一瞬，青草氣與朝鮮薊的微苦從碟緣升起，含一口入嘴，三秒後喉頭那股嗆浮現。如果四項齊全且喉頭那道嗆誠實出現，你手裡那瓶就是 1959 年馬德里那張橡木桌想保護的同一個品質傳統。
 
 橄欖油的分類體系不是僵硬的法規，是六十七年來地中海八國共同累積的品質誠實——下一次你站在貨架前，請記得：那一串看似冰冷的英文等級分類，背後是三十幾只玻璃杯、八國代表、一整個秋天的午後討論。讀懂它們，就是讓你的廚房真正連上那張橡木桌。
 
@@ -256,4 +259,4 @@ EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用
 
 ## 一句話總結
 
-橄欖油按 IOC 標準分六級，只有 Extra Virgin 是機械冷壓、酸度 ≤0.8%、感官無缺陷的最高等級；Pure、Light、Pomace 都是精製或殘渣油，多酚幾乎沒有，認等級先認瓶身上的英文字。
+橄欖油按 IOC 標準分六級，只有 Extra Virgin 是機械萃取、酸度 ≤0.8%、感官無缺陷的最高等級；Pure、Light、Pomace 都是精製或殘渣油，多酚幾乎沒有，認等級先認瓶身上的英文字。
