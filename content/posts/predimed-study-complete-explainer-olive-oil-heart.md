@@ -7,7 +7,7 @@ author: "知橄生活研究團隊"
 category: "science"
 tags: ["PREDIMED研究", "地中海飲食", "心血管健康"]
 excerpt: "PREDIMED 是橄欖油與地中海飲食研究中最常被引用的臨床試驗之一。本文整理 7,447 名高心血管風險受試者、4.8 年追蹤、2018 年修正版，以及「約 30%」相對風險數字該如何正確理解。"
-coverImage: "/images/covers/predimed-study-complete-explainer-olive-oil-heart-v2.jpg"
+coverImage: "/images/covers/predimed-study-complete-explainer-olive-oil-heart.jpg"
 readTime: 13
 focusKeyword: "PREDIMED研究"
 sources:
@@ -182,7 +182,7 @@ PREDIMED 並未直接把多酚當作單一介入因子來測試。較謹慎的�
 
 **系統性回顧與薈萃分析**：Schwingshackl 等（2014）的薈萃分析納入 32 項前瞻性研究，確認橄欖油攝入量與心血管事件和全因死亡率呈負相關。
 
-**亞洲與全球華人讀者的適用性**：目前尚缺乏直接針對華人族群的大型同等規模 RCT，因此應避免把 PREDIMED 結論簡化成單一食材的保證效果。更合理的應用方式，是把研究放回完整飲食模式中理解：EVOO 作為主要油脂來源，與蔬菜、豆類、魚類、堅果、全穀物和較少精製食品共同作用。關於如何在都市生活中實踐地中海飲食，可參考[女性健康老化與地中海飲食怎麼看？把橄欖油放回長期餐桌](/blog/mediterranean-diet-anti-aging-women-2026)。PREDIMED 研究所涵蓋的健康研究脈絡，則可參考[橄欖油健康研究怎麼看？從 PREDIMED、EFSA 到多酚證據邊界](/blog/olive-oil-health-benefits-science-complete)。
+**亞洲與全球華人讀者的適用性**：目前尚缺乏直接針對華人族群的大型同等規模 RCT，因此應避免把 PREDIMED 結論簡化成單一食材的保證效果。更合理的應用方式，是把研究放回完整飲食模式中理解：EVOO 作為主要油脂來源，與蔬菜、豆類、魚類、堅果、全穀物和較少精製食品共同作用。關於如何在都市生活中實踐地中海飲食，可參考[女性健康老化與地中海飲食怎麼看？把橄欖油放回長期餐桌](/blog/mediterranean-diet-anti-aging-women-2026)。PREDIMED 研究所涵蓋的健康研究脈絡，則可參考[橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
 ## 對日常消費者的實踐意義
 

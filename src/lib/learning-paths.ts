@@ -37,8 +37,7 @@ export const LEARNING_PATHS: LearningPath[] = [
     label: '健康研究',
     desc: '從七大健康主題讀到 PREDIMED，再看多酚成分與劑量，搞懂證據強弱再談功效。',
     entries: [
-      { stage: '入門', title: '健康研究七大脈絡', slug: 'olive-oil-health-benefits-science-complete' },
-      { stage: '深入', title: '多酚與 PREDIMED 研究', slug: 'olive-oil-health-benefits-polyphenol-science-complete' },
+      { stage: '入門', title: '多酚七大科學效益', slug: 'olive-oil-health-benefits-polyphenol-science-complete' },
       { stage: '研究', title: 'PREDIMED 完整解析', slug: 'predimed-study-complete-explainer-olive-oil-heart' },
       { stage: '研究', title: '多酚含量怎麼判讀', slug: 'olive-oil-polyphenol-content-how-to-verify' },
       { stage: '研究', title: '多酚分級 250、500、1000', slug: 'olive-oil-polyphenol-tiers-250-500-1000' },

@@ -28,6 +28,10 @@ sources:
   - "Cicerale, S., Lucas, L., & Keast, R. (2010). Biological activities of phenolic compounds present in virgin olive oil. International Journal of Molecular Sciences, 11(2):458-479. https://doi.org/10.3390/ijms11020458"
   - "Schwingshackl, L. et al. (2017). Olive oil in the prevention and management of type 2 diabetes mellitus: a systematic review and meta-analysis. Nutrition & Diabetes, 7(4):e262. https://doi.org/10.1038/nutd.2017.12"
   - "Razquin, C. et al. (2010). A 3-year Mediterranean-style dietary intervention may modulate the association between adiponectin gene variants and body weight change. European Journal of Nutrition, 49(5):311-319. https://doi.org/10.1007/s00394-009-0090-z"
+  - "Konstantinidou, V. et al. (2010). In vivo nutrigenomic effects of virgin olive oil polyphenols within the frame of the Mediterranean diet: a randomized controlled trial. The FASEB Journal, 24(7), 2546–2557. https://doi.org/10.1096/fj.09-148452"
+  - "Psaltopoulou, T. et al. (2011). Olive oil intake is inversely related to cancer prevalence: a systematic review and a meta-analysis of 13,800 patients and 23,340 controls in 19 observational studies. Lipids in Health and Disease, 10, 127. https://doi.org/10.1186/1476-511X-10-127"
+  - "Salas-Salvadó, J. et al. (2011). Reduction in the Incidence of Type 2 Diabetes with the Mediterranean Diet: Results of the PREDIMED-Reus Nutrition Intervention Randomized Trial. Diabetes Care, 34(1), 14–19. https://doi.org/10.2337/dc10-1288"
+  - "Fernández-Real, J. M. et al. (2012). A Mediterranean Diet Enriched with Olive Oil Is Associated with Higher Serum Total Osteocalcin Levels in Elderly Men at High Cardiovascular Risk. The Journal of Clinical Endocrinology & Metabolism, 97(10), 3792–3798. https://doi.org/10.1210/jc.2012-2221"
   - "Martínez-Lapiscina, E.H. et al. (2013). Mediterranean diet improves cognition: the PREDIMED-NAVARRA randomised trial. Journal of Neurology, Neurosurgery & Psychiatry, 84(12):1318-1325. https://doi.org/10.1136/jnnp-2012-304792"
 faq:
   - q: "橄欖油每天要喝多少才有健康效益？"
@@ -38,6 +42,8 @@ faq:
     a: "Oleocanthal 是特級初榨橄欖油中一種苯乙醇類多酚，Nature（2005）發表的研究觀察到它在體外實驗中與 COX-1 及 COX-2 酶抑制有相關，作用機制與非類固醇消炎藥 Ibuprofen 在結構上有相似之處。然而，橄欖油中 Oleocanthal 的實際濃度（約 50–200mg/kg，視品種與產地而異）遠低於消炎藥劑量；目前人體試驗數量仍有限。我們的建議是：Oleocanthal 的研究訊號是理解橄欖油抗炎潛力的科學基礎，但不可替代臨床藥物或醫師建議。"
   - q: "橄欖油對血糖控制有幫助嗎？"
     a: "油酸（Oleic acid，佔 EVOO 脂肪酸 55–83%）與胰島素敏感性指標改善有相關，為多項系統性回顧與統合分析所觀察（Schwingshackl et al., 2017；涵蓋 29 項研究）。研究觀察到以橄欖油取代飽和脂肪或精製碳水化合物後，空腹血糖及 HbA1c 指標在特定族群中有下降趨勢。效果因整體飲食結構而異。我們的建議是：橄欖油可做為血糖管理飲食的油脂首選，但需搭配整體飲食調整，不宜單一依賴。"
+  - q: "橄欖油與癌症發生率有什麼關係？"
+    a: "觀察性研究發現，較高橄欖油攝入與部分癌症（結直腸癌、乳腺癌）發生率呈負相關（Psaltopoulou et al., 2011，納入 19 項觀察性研究的系統性回顧）。但這些均為觀察性研究，目前尚無高品質 RCT 直接支持因果關係，因此「橄欖油能預防癌症」並非科學上可主張的聲稱。橄欖油多酚的體外實驗顯示抗增殖效果，但體內研究仍在進行中。"
   - q: "橄欖油幫助體重管理的科學基礎是什麼？"
     a: "地中海飲食（高橄欖油攝取）族群的長期體重追蹤研究（含 PREDIMED 子研究）觀察到：儘管橄欖油為高熱量食物（每毫升約 8.4 大卡），長期高攝取者的腰圍指標並未呈現上升趨勢。推測機制包含：單不飽和脂肪酸促進飽足感激素（如 GLP-1）分泌、油酸刺激 PYY 分泌延緩胃排空速度。我們的建議是：橄欖油的「健康脂肪」定位在整體熱量控制的前提下才有效，以橄欖油取代奶油或豬油而非「加法」增加總攝取量。"
   - q: "橄欖油對認知功能的研究現況如何？"
@@ -156,6 +162,8 @@ EFSA 於 2011 年審查橄欖油多酚相關健康聲稱的科學文獻（EFSA J
 - **金屬離子螯合**：與催化 LDL 氧化的過渡金屬離子（如 Fe²⁺、Cu²⁺）結合有相關，降低氧化催化效率
 - **內源性抗氧化系統上調**：研究觀察到羥基酪醇與 Nrf2/ARE 通路活化有相關，促進 SOD、Catalase 等內源性抗氧化酶表達
 
+同一研究領域的營養基因組學試驗（Konstantinidou et al., 2010）也觀察到，攝取高多酚橄欖油後，與氧化壓力及炎症相關的基因表現出現調節——這是首個在人體中直接觀察到橄欖油多酚「營養基因組學」效應的試驗。
+
 **數據收束：羥基酪醇的 LDL 氧化保護效益是唯一通過歐盟監管機構審查並獲官方認可的橄欖油多酚健康聲稱，這代表其科學支持強度超越目前大多數其他植物性多酚的健康宣稱。**
 
 ---
@@ -163,6 +171,8 @@ EFSA 於 2011 年審查橄欖油多酚相關健康聲稱的科學文獻（EFSA J
 ## 效益五：血糖調節【系統性回顧支持｜29 項研究整合】
 
 橄欖油對血糖代謝的影響，主要透過三個機制路徑獲得研究觀察：
+
+在試驗層面，PREDIMED 的子試驗（Salas-Salvadó et al., 2011）觀察到，地中海飲食組的第二型糖尿病發生風險約為低脂飲食對照組的一半（HR 0.48）——同樣是飲食模式的結果，而非單一油品的效果。
 
 **路徑一：油酸與胰島素敏感性**
 
@@ -221,6 +231,16 @@ PREDIMED 研究在西班牙 Navarra 地區的子試驗中，針對 522 名受試
 
 ---
 
+## 附帶線索：癌症發生率與骨骼代謝【初步證據｜觀察性研究】
+
+七大主題之外，還有兩個研究方向常被問起，證據等級明顯較弱，獨立列出以免混淆：
+
+**癌症發生率**：Psaltopoulou 等人（2011）的系統性回顧（19 項觀察性研究、13,800 名患者與 23,340 名對照）顯示，較高橄欖油攝入與結直腸癌（OR 0.64）、乳腺癌（OR 0.68）發生率呈負相關。體外研究觀察到橄欖油多酚在多種癌細胞株中與抗增殖、促凋亡效應相關。但這些都是觀察性與體外證據，存在飲食模式與生活習慣等混淆因子，目前尚無 RCT 支持「攝取橄欖油預防癌症」的因果結論。
+
+**骨骼代謝**：PREDIMED 子分析（Fernández-Real et al., 2012）發現，攝取 EVOO 與骨鈣素（Osteocalcin，骨骼代謝標誌物）濃度呈正相關；動物研究則觀察到橄欖苦苷（Oleuropein）與成骨細胞活性相關。此領域研究規模較小，尚無大規模 RCT 在橄欖油攝入與骨折風險之間建立因果關係。
+
+---
+
 ## 數字總覽：七大效益核心錨點
 
 | 效益 | 核心研究 | 關鍵數字 | 證據強度 |
@@ -232,6 +252,8 @@ PREDIMED 研究在西班牙 Navarra 地區的子試驗中，針對 522 名受試
 | 血糖調節 | Schwingshackl 統合 2017 | 29 項研究、空腹血糖及 HbA1c 較低趨勢 | 【中強效｜系統性回顧】 |
 | 體重管理 | PREDIMED 子研究 2010 | 3 年追蹤、腰圍增加幅度較小 | 【觀察性支持】 |
 | 認知功能 | PREDIMED-NAVARRA 2013 + JACC 2022 | MMSE 較佳、神經退化死亡率降低 29% | 【中強效｜飲食模式 RCT】 |
+| 癌症發生率（附帶線索） | Psaltopoulou 統合 2011 | 19 項觀察性研究、結直腸癌 OR 0.64／乳腺癌 OR 0.68 | 【初步｜觀察性研究】 |
+| 骨骼代謝（附帶線索） | Fernández-Real 2012 | EVOO 攝取與骨鈣素濃度正相關 | 【探索性｜初步研究】 |
 
 ---
 
