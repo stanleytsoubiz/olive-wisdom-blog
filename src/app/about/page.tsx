@@ -356,7 +356,11 @@ export default function AboutPage() {
         <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-2xl">
           以下四條是知橄生活的編輯運作方式——從選題、查核到更新——供讀者、研究者及引用者查閱。完整證據來源與評級標準見
           <Link href="/evidence" className="text-olive-700 underline underline-offset-4 ml-1">證據圖書館</Link>；本站販售產品的選品門檻與查驗流程見
-          <Link href="/selection" className="text-olive-700 underline underline-offset-4 ml-1">選品標準</Link>；寫作語氣、標題與聲稱規則見
+          <Link href="/selection" className="text-olive-700 underline underline-offset-4 ml-1">選品標準</Link>；查核與 CoA 判讀方法見
+          <Link href="/methodology" className="text-olive-700 underline underline-offset-4 ml-1">實測方法論</Link>；商業關係的揭露原則見
+          <Link href="/disclosure" className="text-olive-700 underline underline-offset-4 ml-1">揭露政策</Link>與
+          <Link href="/sponsorship" className="text-olive-700 underline underline-offset-4 ml-1">贊助政策</Link>；評判產品的完整門檻見
+          <Link href="/screening" className="text-olive-700 underline underline-offset-4 ml-1">篩選框架</Link>；寫作語氣、標題與聲稱規則見
           <a href="https://github.com/stanleytsoubiz/olive-wisdom-blog/blob/main/docs/editorial-style-guide.md" className="text-olive-700 underline underline-offset-4 ml-1">編輯風格指南</a>。
         </p>
         <div className="space-y-10">
