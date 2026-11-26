@@ -32,6 +32,8 @@ faq:
   - q: "真正能驗一瓶油品質的方法是什麼？"
     a: "三件事：聞、嚐、看標籤。聞有沒有新鮮果香、沒有油耗味；嚐有沒有苦味與喉頭辣感；看標籤上的採收年份、產地與 CoA 檢驗報告。想驗得更準確，就看 CoA 的五個數字：酸值、過氧化值、K232、K270、ΔK。"
 draft: false
+coverImage: "/images/covers/olive-oil-fridge-test-myth-debunked.jpg"
+coverAlt: "冰箱中凝固混濁的橄欖油瓶"
 ---
 
 你把橄欖油放進冰箱，隔天打開一看：油變白了，倒不出來，像凝固了一樣。

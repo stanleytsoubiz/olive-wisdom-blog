@@ -31,6 +31,8 @@ faq:
   - q: "台灣買得到這三個產地的油嗎？"
     a: "買得到。進口商與超市都有西班牙、希臘、義大利的油，挑選方法一樣：採收年份新、深色瓶、有 CoA 或 PDO/IGP 認證。產地是起點，標籤上的證據才是決定因素。"
 draft: false
+coverImage: "/images/covers/olive-oil-terroir-tour-andalusia-crete-tuscany.jpg"
+coverAlt: "三大產區地景前並排的三瓶橄欖油"
 ---
 
 三瓶油擺在桌上：西班牙的、希臘的、義大利的。標籤上的產地不只是地理位置，是風味的說明書。

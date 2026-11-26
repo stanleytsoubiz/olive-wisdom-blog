@@ -31,6 +31,8 @@ faq:
   - q: "收到禮物油之後怎麼保存？"
     a: "避光、避熱、密封，寫上開封日期，開封後 3–6 個月內用完（IOC 建議）。嗆感消失、出現蠟燭味，就是氧化的信號。"
 draft: false
+coverImage: "/images/covers/olive-oil-gift-guide-how-to-choose.jpg"
+coverAlt: "深綠禮盒中的橄欖油與金色緞帶"
 ---
 
 朋友搬新家、長輩生日、客戶答謝——想送一瓶看起來有份量、對方又真的會用的東西，橄欖油是個好選擇。前提是挑對。

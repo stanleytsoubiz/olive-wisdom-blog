@@ -31,6 +31,7 @@ qc_gate:
   H5: pass
   H6: pass
 draft: false
+coverAlt: "小豆島橄欖樹園與瀨戶內海景色"
 ---
 
 ## 1908 年那個決定：三縣同時起跑，為什麼只有一個到達終點？
