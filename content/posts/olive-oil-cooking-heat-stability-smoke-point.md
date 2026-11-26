@@ -159,10 +159,17 @@ qc_gate:
 
 ---
 
+## 一句話總結
+
+橄欖油可以加熱，判斷一瓶油耐不耐熱要看氧化穩定性而非發煙點——EVOO 在加熱實驗中產生的有害極性化合物，比多數高發煙點的精製植物油更少。
+
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
 
-## 一句話總結
+## 延伸閱讀
 
-橄欖油可以加熱，判斷一瓶油耐不耐熱要看氧化穩定性而非發煙點——EVOO 在加熱實驗中產生的有害極性化合物，比多數高發煙點的精製植物油更少。
+- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)
+- [橄欖油炒菜，多酚還剩多少？從日本家庭廚房看加熱後的保留率](/blog/olive-oil-cooking-polyphenol-retention-japan)
+- [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
+---

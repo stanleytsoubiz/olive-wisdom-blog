@@ -228,10 +228,17 @@ draft: false
 
 ---
 
+## 一句話總結
+
+兩種油的脂肪酸組成相近，但高多酚 EVOO 的多酚含量與研究證據都遠勝酪梨油，日常烹飪選它，只有超過 200°C 的油炸才需要精製酪梨油。
+
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
 
-## 一句話總結
+## 延伸閱讀
 
-兩種油的脂肪酸組成相近，但高多酚 EVOO 的多酚含量與研究證據都遠勝酪梨油，日常烹飪選它，只有超過 200°C 的油炸才需要精製酪梨油。
+- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)
+- [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
+- [橄欖油真偽怎麼鑑別？CoA、採收年份與五層防禦](/blog/olive-oil-fraud-detection-authentic-vs-fake)
+---

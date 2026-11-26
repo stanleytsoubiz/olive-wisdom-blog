@@ -185,10 +185,17 @@ Koroneiki、Coratina、Picual、早摘的 Frantoio——這些品種有多酚的
 ---
 
 
+## 一句話總結
+
+PDO、DOP、IGP 保護的是產地真實性，不是多酚含量；選油先看採收日期與 CoA 多酚數值，認證只是加分，不能替代數字。
+
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
 
-## 一句話總結
+## 延伸閱讀
 
-PDO、DOP、IGP 保護的是產地真實性，不是多酚含量；選油先看採收日期與 CoA 多酚數值，認證只是加分，不能替代數字。
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
+- [橄欖油選購完全指南 2026：從超市到莊園油，五步驟自己判斷](/blog/olive-oil-complete-buying-guide-2026)
+- [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
+---

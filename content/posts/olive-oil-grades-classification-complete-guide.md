@@ -254,10 +254,17 @@ EVOO 應標示「Harvest Date」（採收年份），而非僅標示最佳食用
 
 ---
 
+## 一句話總結
+
+橄欖油按 IOC 標準分六級，只有 Extra Virgin 是機械萃取、酸度 ≤0.8%、感官無缺陷的最高等級；Pure、Light、Pomace 都是精製或殘渣油，多酚幾乎沒有，認等級先認瓶身上的英文字。
+
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
 
-## 一句話總結
+## 延伸閱讀
 
-橄欖油按 IOC 標準分六級，只有 Extra Virgin 是機械萃取、酸度 ≤0.8%、感官無缺陷的最高等級；Pure、Light、Pomace 都是精製或殘渣油，多酚幾乎沒有，認等級先認瓶身上的英文字。
+- [橄欖油真偽怎麼鑑別？CoA、採收年份與五層防禦](/blog/olive-oil-fraud-detection-authentic-vs-fake)
+- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)
+- [PDO、DOP、IGP：超市貨架上那三個縮寫，保護的是產地，不是你的健康](/blog/olive-oil-pdo-dop-igp-certification-guide)
+---
