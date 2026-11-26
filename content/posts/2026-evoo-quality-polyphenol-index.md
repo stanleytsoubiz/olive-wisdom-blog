@@ -139,10 +139,17 @@ EVOOLEUM、NYIOOC（紐約國際橄欖油大賽）等國際評鑑的得獎油款
 
 ---
 
+## 一句話總結
+
+「特級初榨」只保證酸值與感官，不保證多酚；想買高多酚油，要看 CoA 上的 TPC 數字（≥250 mg/kg 才符合 EFSA 聲稱條件）與採收日期，數字沒有 CoA 背書就只是文案。
+
 **公正聲明：** 本文所有內容依據 IOC 國際橄欖理事會標準與同儕審查學術文獻撰寫，引用來源詳列於文末。本文不含品牌贊助或聯盟行銷連結，所有觀點為知橄生活研究團隊獨立判斷。
 
 ---
 
-## 一句話總結
+## 延伸閱讀
 
-「特級初榨」只保證酸值與感官，不保證多酚；想買高多酚油，要看 CoA 上的 TPC 數字（≥250 mg/kg 才符合 EFSA 聲稱條件）與採收日期，數字沒有 CoA 背書就只是文案。
+- [橄欖油苦澀辣口是好是壞？感官評鑑的科學解釋](/blog/olive-oil-bitterness-pungency-quality-guide)
+- [橄欖油多酚有什麼幫助？PREDIMED 研究告訴你什麼](/blog/olive-oil-health-benefits-polyphenol-science-complete)
+- [橄欖油 CoA 怎麼看？用五個數字判斷一瓶油的真實品質](/blog/coa-complete-reading-guide-olive-oil)
+---
