@@ -14,7 +14,6 @@ sources:
   - "Gómez-Alonso, S., Mancebo-Campos, V., Salvador, M. D., & Fregapane, G. (2007). Evolution of major and minor components and oxidation indices of virgin olive oil during 21 months storage at three different temperatures. Food Chemistry, 100(1), 36–42. https://doi.org/10.1016/j.foodchem.2005.09.006"
   - "Krichene, D., Salvador, M. D., & Fregapane, G. (2015). Stability of virgin olive oil phenolic compounds during long-term storage (18 months) at temperatures of 5–50 °C. *Journal of Agricultural and Food Chemistry*, 63(30), 6779–6786. https://doi.org/10.1021/acs.jafc.5b02187"
   - "Foods (2020), 9(12), 1846. Total phenols tracked over 21 months of storage. https://pmc.ncbi.nlm.nih.gov/articles/PMC7763516/"
-  - "Japan Olive Oil Sommelier Association (JOSSA). Consumer Research Report 2023."
 focusKeyword: "橄欖油CoA驗證"
 qc_gate:
   H1: pass
@@ -25,7 +24,7 @@ qc_gate:
   H6: pass
 faq:
   - q: "日本橄欖油市場有什麼特色？為什麼被稱為亞洲最難攻克的市場？"
-    a: "日本是亞洲最大的橄欖油消費市場，年進口量約 60,000 噸（USDA FAS, 2024）。其市場特色在於消費者的自主驗證文化：根據日本橄欖油侍酒師協會（JOSSA）2023 年消費者調查，超過 70% 的高端橄欖油購買者在選購前會確認 CoA（品質分析報告）。這種文化源自 2004 年起日本媒體揭露的多起「標示特級初榨但實際品質不符」事件，促使消費者社群自發形成「買油看 CoA」習慣。日本電商平台的高評分橄欖油商品評論，幾乎都包含對酸度數值的具體討論，反映了消費者把橄欖油視為功能性食品而非單純調味料的消費心態。"
+    a: "日本是亞洲最大的橄欖油消費市場，年進口量約 60,000 噸（USDA FAS, 2024）。其市場特色在於消費者的自主驗證文化：日本的高端橄欖油消費者社群，普遍有在選購前確認 CoA（品質分析報告）的習慣。（說明：坊間流傳「超過 70% 購買者會查 CoA」的說法出自一份無法驗證的調查，本站不引用該數字。）這種文化源自 2004 年起日本媒體揭露的多起「標示特級初榨但實際品質不符」事件，促使消費者社群自發形成「買油看 CoA」習慣。日本電商平台的高評分橄欖油商品評論，幾乎都包含對酸度數值的具體討論，反映了消費者把橄欖油視為功能性食品而非單純調味料的消費心態。"
   - q: "我要怎麼要求橄欖油品牌提供 CoA？有哪些注意事項？"
     a: "向品牌索取 CoA 的正確方式是提供購買批次的 Lot Number（批次號碼，通常印在瓶底或標籤背面），再透過以下管道提出要求：品牌官網客服、電商平台問答區、或直接寄信至品牌業務窗口。有幾點注意事項：第一，要求提供的 CoA 應為獨立第三方實驗室出具，並確認實驗室持有 ISO/IEC 17025 認證；第二，檢查報告上的採樣日期與批次號是否與你購買的產品一致；第三，留意報告是否涵蓋酸值、過氧化值、K270 等 IOC 標準核心指標；若品牌以「商業機密」為由拒絕，應將其視為選購警示訊號。"
   - q: "JOSSA 是什麼組織？他們的認證對選購橄欖油有什麼參考價值？"
@@ -59,7 +58,7 @@ draft: false
 
 和多數市場不同，日本的高端橄欖油購買者已經發展出一套「自主驗證」文化：
 
-- **超過 70% 的高端橄欖油購買者**在選購前會確認 CoA（日本橄欖油侍酒師協會 JOSSA，2023年消費者調查）
+- **相當比例的高端橄欖油購買者**在選購前會確認 CoA，已形成日本市場的消費文化（具體比例缺乏可驗證調查，本站不引用百分比）
 - 許多日本消費者比較不同批次的多酚數字，把橄欖油當作「功能性食品」而非調味料
 - 日本電商平台的高評分橄欖油商品評論，幾乎都包含對酸度數值的具體討論
 
@@ -147,7 +146,7 @@ K270 是紫外線吸光度測試，偵測的是油脂在進一步氧化後產生
 
 ### 數字五：採收日期（Harvest Date）——CoA 的時效性護盾
 
-**說明：** IOC 並未強制要求標示採收年份，但日本市場已形成行業自律規範，JOSSA 認定的優質品牌均標示 Harvest Date。
+**說明：** IOC 並未強制要求標示採收年份，但日本市場的優質品牌多已形成標示 Harvest Date 的自律慣例。
 
 這是五個數字中最容易被忽略、但最關鍵的一個。
 
