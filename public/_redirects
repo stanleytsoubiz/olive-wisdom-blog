@@ -20,3 +20,15 @@
 /blog/hydroxytyrosol-brain-cognition-memory/ /blog/hydroxytyrosol-brain-cognition-2026/ 301
 /blog/olive-oil-health-benefits-science-complete /blog/olive-oil-health-benefits-polyphenol-science-complete/ 301
 /blog/olive-oil-health-benefits-science-complete/ /blog/olive-oil-health-benefits-polyphenol-science-complete/ 301
+# 404 triage 2026-11-26 (tranche 2): formerly published article deleted
+# 2026-11-22 without a redirect, plus misspelled/malformed variants that
+# GSC recorded with real impressions (1 each). All other GSC 404s are
+# historical noise with no internal links (verified by full-repo scan).
+/blog/taiwan-fake-olive-oil-supermarket-picking-guide /blog/olive-oil-fraud-detection-authentic-vs-fake/ 301
+/blog/taiwan-fake-olive-oil-supermarket-picking-guide/ /blog/olive-oil-fraud-detection-authentic-vs-fake/ 301
+/blog/olive-oil-pdo-dop-ipd-certification-guide /blog/olive-oil-pdo-dop-igp-certification-guide/ 301
+/blog/olive-oil-pdo-dop-ipd-certification-guide/ /blog/olive-oil-pdo-dop-igp-certification-guide/ 301
+/blog/olive-oil-pdo-dop-ipg-certification-guide /blog/olive-oil-pdo-dop-igp-certification-guide/ 301
+/blog/olive-oil-pdo-dop-ipg-certification-guide/ /blog/olive-oil-pdo-dop-igp-certification-guide/ 301
+/blog/olive-wisdom.com/blog/olive-oil-bitterness-pungency-quality-guide /blog/olive-oil-bitterness-pungency-quality-guide/ 301
+/blog/olive-wisdom.com/blog/olive-oil-bitterness-pungency-quality-guide/ /blog/olive-oil-bitterness-pungency-quality-guide/ 301
