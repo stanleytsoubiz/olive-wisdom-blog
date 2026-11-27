@@ -1,8 +1,8 @@
 ---
-title: "橄欖油熱量多少？脂肪酸組成與每日用量的完整計算指南"
+title: "橄欖油熱量多少？一湯匙約 119 大卡——脂肪酸組成與每日用量完整計算"
 slug: "olive-oil-calories-fatty-acid-composition"
 date: "2026-05-05"
-excerpt: "橄欖油每 15ml 約 120 大卡，含 73% 油酸（MUFA）。IOC 規範油酸 ≥55%，USDA 數據完整解析脂肪酸組成。附料理用量換算表與每日熱量計算框架。"
+excerpt: "橄欖油熱量一次算清：一湯匙（15ml）約 119 大卡、每 100ml 約 800 大卡，一天用 30–45ml 約 240–360 大卡。熱量與其他植物油相同，差別在油酸（MUFA）與多酚。附用量換算表與每日熱量計算框架，數據源自 USDA 與 IOC。"
 category: "health"
 coverImage: "/images/covers/olive-oil-calories-fatty-acid-composition.jpg"
 coverAlt: "木製量匙盛著金色橄欖油，旁邊有熱量計算本，白色背景"
@@ -22,6 +22,10 @@ sources:
   - "European Food Safety Authority (EFSA). (2011). Scientific Opinion on the substantiation of health claims related to polyphenols in olive oil. EFSA Journal, 9(4), 2033. https://efsa.onlinelibrary.wiley.com/doi/10.2903/j.efsa.2011.2033"
   - "Estruch, R., et al. (2018). Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389"
 faq:
+  - q: "橄欖油熱量是多少？每 100ml 多少大卡？"
+    a: "依 USDA FoodData Central 數據，橄欖油每 100g 約 884 大卡，換算每 100ml 約 800 大卡、每湯匙（15ml）約 119 大卡。所有等級的橄欖油（特級初榨、初榨、精製）熱量都一樣，差別在多酚含量與脂肪酸組成，不在卡路里。"
+  - q: "一天吃橄欖油，大概吃進多少大卡？"
+    a: "以常見用量換算：每天 20ml 約 160 大卡、30ml（2 湯匙）約 240 大卡、45ml 約 360 大卡；EFSA 健康聲稱的條件量是每天 20g，約 177 大卡。只要是取代原本的奶油或精製油，熱量帳大致不變；額外疊加使用，才會多出這筆熱量。"
   - q: "橄欖油一湯匙（15ml）有多少大卡？"
     a: "根據 USDA FoodData Central 的官方數據，橄欖油每 15ml（一湯匙）約含 119–124 大卡，脂肪約 13.5g，不含碳水化合物或蛋白質。所有等級的橄欖油（特級初榨、初榨、精製）熱量基本相同，差異在於多酚含量而非熱量。"
   - q: "橄欖油的脂肪酸組成是什麼？"
@@ -53,6 +57,8 @@ qc_gate:
 | 橄欖油熱量比其他油低嗎？ | 沒有。所有植物油每克都約 9 大卡，每湯匙都約 120 大卡 |
 | 橄欖油的優勢在哪？ | 脂肪酸組成以油酸（MUFA）為主，IOC 規範油酸須 ≥55%；EVOO 還多了多酚 |
 | 每天用兩匙（30ml）負擔大嗎？ | 約 240 大卡；若是取代原本的油脂，淨熱量增加接近零，若是額外疊加，就等同多吃了 240 大卡 |
+| 每 100ml 多少大卡？ | 約 800 大卡（以 USDA 每 100g 約 884 大卡換算），脂肪約 91g |
+| 一天吃多少橄欖油、熱量怎麼算？ | 每天 30ml 約 240 大卡、45ml 約 360 大卡；先決定是取代還是疊加，再談負擔 |
 
 ---
 
@@ -124,6 +130,8 @@ IOC 特別規定油酸下限為 55%，原因是：**油酸比例是橄欖油區�
 - **每人每日合計**：約 **413 kcal 除以 2 人 = 每人約 207 kcal**
 
 207 大卡佔一般成人每日建議攝取量（2000 kcal）的約 10%，若這些油脂是取代了原本的奶油、豬油或其他植物油，淨熱量變化有限，但脂肪酸組成已大幅改善。
+
+如果你的問題其實是「換成橄欖油會不會比較瘦」，那是熱量之外的另一條邏輯：[橄欖油真的能幫助減肥嗎？](/blog/olive-oil-weight-loss-science)解析了飽足感荷爾蒙與替換邏輯——先講結論：替換有幫助，疊加不會。
 
 關於每日橄欖油建議攝取量的研究依據（20–30ml），請參考[每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)。此外，EVOO 多酚組成對健康指標的影響，詳見[橄欖油多酚的七大科學效益](/blog/olive-oil-health-benefits-polyphenol-science-complete)。
 
