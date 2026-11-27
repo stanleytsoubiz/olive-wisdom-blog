@@ -1,41 +1,44 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { TocItem } from '@/lib/toc';
 
-interface TocItem { id: string; text: string; level: number; }
-
-function extractToc(htmlContent: string): TocItem[] {
-  const regex = /<h([23])[^>]*id="([^"]*)"[^>]*>(.*?)<\/h[23]>/gi;
-  const items: TocItem[] = [];
-  let m;
-  while ((m = regex.exec(htmlContent)) !== null) {
-    const text = m[3].replace(/<[^>]+>/g, '').trim();
-    if (text) items.push({ id: m[2], text, level: parseInt(m[1]) });
-  }
-  return items;
-}
-
-export default function TableOfContents({ htmlContent }: { htmlContent: string }) {
+// Perf notes (2026-11-26 tranche):
+// - Headings arrive pre-extracted from the server (src/lib/toc.ts); the
+//   client no longer receives the full article HTML as a prop.
+// - The scroll handler caches the heading elements once and is
+//   rAF-throttled: previously it ran querySelectorAll + setState on every
+//   scroll event, re-rendering this tree continuously while scrolling.
+export default function TableOfContents({ items }: { items: TocItem[] }) {
   const [active, setActive] = useState('');
   const [progress, setProgress] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [footerVisible, setFooterVisible] = useState(false);
-  const toc = extractToc(htmlContent);
+  const toc = items;
+  const headingsRef = useRef<HTMLElement[]>([]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    headingsRef.current = Array.from(document.querySelectorAll<HTMLElement>('h2[id], h3[id]'));
+    let ticking = false;
+    const update = () => {
+      ticking = false;
       const el = document.documentElement;
       const scrollTop = el.scrollTop || document.body.scrollTop;
       const scrollHeight = el.scrollHeight - el.clientHeight;
       setProgress(scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0);
 
-      const headings = document.querySelectorAll('h2[id], h3[id]');
       let current = '';
-      headings.forEach((h) => {
-        const rect = h.getBoundingClientRect();
-        if (rect.top <= 120) current = h.id;
-      });
+      for (const h of headingsRef.current) {
+        if (h.getBoundingClientRect().top <= 120) current = h.id;
+        else break;
+      }
       setActive(current);
+    };
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
