@@ -9,7 +9,7 @@ readTime: 10
 tags: ["地中海飲食", "抗老", "橄欖油"]
 focusKeyword: "地中海飲食實踐"
 coverImage: "/images/covers/mediterranean-diet-anti-aging-2026.jpg"
-coverAlt: "色彩豐富的地中海風格餐盤，橄欖油、蔬菜與魚類的健康組合"
+coverAlt: "深色木桌上的地中海餐桌：烤魚、番茄、麵包、橄欖與橄欖油瓶，暖色側光"
 sources:
   - "Estruch, R. et al. (2018). Primary prevention of cardiovascular disease with a Mediterranean diet supplemented with extra-virgin olive oil or nuts. New England Journal of Medicine, 378(25), e34. https://doi.org/10.1056/NEJMoa1800389（2013 年原版因隨機分派問題撤回，此為 2018 年重分析重刊版）"
   - "Boccardi, V. et al. (2021). Modulation of Telomere Length by Mediterranean Diet, Caloric Restriction, and Exercise: Results from PREDIMED-Plus Study. Antioxidants, 10(10):1596. https://pubmed.ncbi.nlm.nih.gov/34679731/"

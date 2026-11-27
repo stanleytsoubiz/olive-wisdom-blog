@@ -9,7 +9,7 @@ tags: ["選購指南", "IOC標準", "PDO", "特級初榨", "橄欖油真假"]
 author: "知橄生活研究團隊"
 readTime: 10
 focusKeyword: "特級初榨橄欖油選購"
-coverAlt: "台灣超市橄欖油貨架，三十幾瓶標榜特級初榨的產品排列其中，消費者手持一瓶仔細閱讀標籤｜知橄生活"
+coverAlt: "窗光下木桌上並排的三瓶深色橄欖油，素面空白標籤與橄欖枝｜知橄生活"
 sources:
   - "International Olive Council (IOC). Trade Standard Applying to Olive Oils and Olive-Pomace Oils. COI/T.15/NC No 3/Rev. 17 — 2019. https://www.internationaloliveoil.org/"
   - "Boskou, D. (2006). Olive Oil: Chemistry and Technology. AOCS Press."

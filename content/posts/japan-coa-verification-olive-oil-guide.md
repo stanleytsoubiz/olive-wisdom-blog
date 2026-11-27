@@ -5,7 +5,7 @@ date: "2026-05-06"
 category: "selection"
 excerpt: "日本消費者購買橄欖油，先看 CoA（品質分析報告）。我們解析 5 個核心數字：游離酸度、過氧化值、多酚含量、K270、採收年份，教你用日本標準選出真正的特級初榨橄欖油。"
 coverImage: "/images/covers/japan-coa-verification-olive-oil-guide.jpg"
-coverAlt: "木桌上的橄欖油瓶、檢驗文件與橄欖枝"
+coverAlt: "木桌上的橄欖油瓶、空白檢驗文件與橄欖枝"
 author: "知橄生活研究團隊"
 readTime: 10
 tags: ["CoA", "日本", "特級初榨", "選購指南", "品質驗證", "多酚"]
