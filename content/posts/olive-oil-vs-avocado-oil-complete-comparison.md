@@ -9,7 +9,7 @@ readTime: 11
 tags: ["橄欖油比較", "酪梨油", "健康食用油", "科學分析"]
 focusKeyword: "橄欖油vs酪梨油"
 coverImage: "/images/covers/olive-oil-vs-avocado-oil-complete-comparison.jpg"
-coverAlt: "橄欖油與酪梨油兩瓶並排，展示金綠色與淺黃色的色澤對比"
+coverAlt: "橄欖油與酪梨油兩瓶並排，展示金綠色與淺黃色的色澤對比，旁置半顆酪梨"
 sources:
   - "Green, H. S., & Wang, S. C. (2020). First report on quality and purity evaluations of avocado oil sold in the US. Food Control, 116, 107328. https://doi.org/10.1016/j.foodcont.2020.107328"
   - "Lin, X., et al. (2024). Key components and multiple health functions of avocado oil: A review. Journal of Functional Foods, 112, 106494. https://doi.org/10.1016/j.jff.2024.106494"
