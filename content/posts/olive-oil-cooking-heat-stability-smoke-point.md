@@ -1,11 +1,11 @@
 ---
-title: "橄欖油可以加熱嗎？科學解答：發煙點、氧化穩定性與高溫烹飪完整指南"
+title: "橄欖油可以加熱嗎？可以——發煙點 190–210°C 與氧化穩定性的科學解答"
 slug: "olive-oil-cooking-heat-stability-smoke-point"
 date: "2026-05-01"
 author: "知橄生活研究團隊"
 category: "science"
 tags: ["發煙點", "橄欖油加熱", "烹飪油脂科學"]
-excerpt: "「橄欖油不能加熱」是台灣廚房最流行的誤解之一。發表於《ACTA Scientific Nutritional Health》的研究觀察到，特級初榨橄欖油在高溫下的穩定性與許多「耐高溫」植物油相比表現更佳。本文以氧化穩定性指數（OSI）、極性化合物生成量、和實際烹飪溫度帶，徹底解答這個問題。"
+excerpt: "橄欖油可以加熱嗎？先講結論：可以。特級初榨橄欖油發煙點約 190–210°C，家用炒菜（160–180°C）不會超過；而且判斷耐熱不能只看發煙點——在 180°C 加熱實驗中，EVOO 產生的有害極性化合物比多數高發煙點精製植物油更少（De Alzaa et al. 2018）。本文以氧化穩定性指數與實際烹飪溫度帶完整解答。"
 coverImage: "/images/covers/olive-oil-cooking-heat-stability-smoke-point.jpg"
 coverAlt: "橄欖油注入冒煙的鑄鐵鍋"
 readTime: 11
