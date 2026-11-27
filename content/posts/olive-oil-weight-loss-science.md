@@ -42,6 +42,8 @@ PREDIMED 試驗中，補充橄欖油的地中海飲食組受試者每週領回�
 
 橄欖油每克約 9 大卡，每湯匙（15ml）約 120 大卡，這個數字和奶油、豬油沒有太大差異。把橄欖油當成減肥工具「額外添加」到飲食中，只會疊加熱量攝入，不會減少。
 
+（只想查熱量數字：一湯匙、每 100ml、一天份的完整換算在[橄欖油熱量完整計算指南](/blog/olive-oil-calories-fatty-acid-composition)。本篇談的是熱量之外的體重邏輯。）
+
 然而，「橄欖油與體重管理有關」這個說法也並非空穴來風——它只是被說對了一半，忽略了最關鍵的前提條件。
 
 先給你一句話答案：**橄欖油不是減肥食品，單獨加油不會瘦。研究支持的用法只有一種：用 EVOO「取代」奶油、豬油等其他油脂，總熱量不變——地中海飲食在這種前提下，長期減重效果不輸低脂飲食。**
@@ -154,6 +156,7 @@ PREDIMED 的體重效益是在 4.8 年的追蹤中觀察到的，不是幾週內
 
 ## 延伸閱讀
 
+- [橄欖油熱量多少？一湯匙約 119 大卡——脂肪酸組成與每日用量完整計算](/blog/olive-oil-calories-fatty-acid-composition)
 - [PREDIMED 研究完整解析：7,447 人試驗如何理解橄欖油與心血管證據](/blog/predimed-study-complete-explainer-olive-oil-heart)
 - [每天吃多少橄欖油？EFSA、PREDIMED 與三個劑量框架](/blog/olive-oil-daily-intake-dosage-science)
 - [橄欖油分類完整指南：特級初榨、初榨、精製、果渣油，IOC 官方標準一次看懂](/blog/olive-oil-grades-classification-complete-guide)
