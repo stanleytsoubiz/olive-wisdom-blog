@@ -206,13 +206,17 @@ export default function GoogleAnalytics() {
 }
 
 // ── Helper: fire subscribe event from anywhere ────────────────────────────────
+// NOTE: dispatch on `document`, where the GA listeners above are registered.
+// Dispatching on `window` never reaches document listeners (window is the
+// last node in the propagation path), which silently dropped every
+// olive:search event fired via trackSearch in production. Fixed 2026-11-26.
 export function trackSubscribe(source: string) {
   if (typeof window === 'undefined') return;
-  window.dispatchEvent(new CustomEvent('olive:subscribe', { detail: { source } }));
+  document.dispatchEvent(new CustomEvent('olive:subscribe', { detail: { source } }));
 }
 
 // ── Helper: fire search event ─────────────────────────────────────────────────
 export function trackSearch(query: string) {
   if (typeof window === 'undefined') return;
-  window.dispatchEvent(new CustomEvent('olive:search', { detail: { query } }));
+  document.dispatchEvent(new CustomEvent('olive:search', { detail: { query } }));
 }
