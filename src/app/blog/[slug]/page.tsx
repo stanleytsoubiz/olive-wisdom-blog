@@ -7,8 +7,8 @@ import { CATEGORY_MAP, categoryLabel } from '@/lib/categories';
 import { formatPostDate } from '@/lib/format';
 import { findPathPosition, getNextInPath } from '@/lib/learning-paths';
 import type { Metadata } from 'next';
-import TableOfContents from '@/components/TableOfContents';
-import ShareButtons from '@/components/ShareButtons';
+import nextDynamic from 'next/dynamic';
+import { extractTocItems } from '@/lib/toc';
 import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 import ArticleNewsletterCTA from '@/components/ArticleNewsletterCTA';
 import VerdictCard from '@/components/VerdictCard';
@@ -17,6 +17,13 @@ import PodcastSlot from '@/components/PodcastSlot';
 import PodcastTimestamps from '@/components/PodcastTimestamps';
 import { getEpisode } from '@/lib/podcast';
 import { getCoverStyle, getCoverSeriesLabel, getCoverSourceLabel } from '@/lib/covers';
+
+// Perf (2026-11-26 tranche): the two interaction-only widgets on the
+// article page are code-split out of the initial bundle. Both still
+// render on the server (no layout shift, no content loss); their JS
+// chunks load after the article's critical path instead of inside it.
+const TableOfContents = nextDynamic(() => import('@/components/TableOfContents'));
+const ShareButtons = nextDynamic(() => import('@/components/ShareButtons'));
 
 export const dynamic = 'force-static';
 
@@ -506,8 +513,9 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Table of Contents */}
-      <TableOfContents htmlContent={htmlContent} />
+      {/* Table of Contents — headings extracted server-side (lib/toc);
+          the client component no longer receives the full article HTML */}
+      <TableOfContents items={extractTocItems(htmlContent)} />
 
       {/* Article Body */}
       <article className="max-w-[720px] mx-auto px-4 sm:px-6 pt-10 pb-16" data-pagefind-body>

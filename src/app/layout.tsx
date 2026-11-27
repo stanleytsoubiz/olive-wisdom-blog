@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import nextDynamic from 'next/dynamic';
 import ScrollHeader from '@/components/ScrollHeader';
-import MobileMenu from '@/components/MobileMenu';
 import BottomNav from '@/components/BottomNav';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { Noto_Serif_TC, Noto_Sans_TC } from 'next/font/google';
 import { CATEGORY_COLUMNS } from '@/lib/categories';
 import './globals.css';
+
+// Perf (2026-11-26 tranche): MobileMenu is interaction-only (a hamburger
+// button + a portal overlay shown on tap). Code-split it out of the
+// shared initial bundle; it still SSRs the button, and its chunk loads
+// off the critical path on every page.
+const MobileMenu = nextDynamic(() => import('@/components/MobileMenu'));
 
 const notoSerifTC = Noto_Serif_TC({
   subsets: ['latin'],

@@ -4,7 +4,12 @@ import { useEffect, useState } from 'react';
 export default function ScrollHeader({ children }: { children: React.ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 10);
+    // Only setState when the boolean actually flips — previously every
+    // scroll event re-rendered the header (2026-11-26 perf tranche).
+    const handler = () => setScrolled((prev) => {
+      const next = window.scrollY > 10;
+      return next === prev ? prev : next;
+    });
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
