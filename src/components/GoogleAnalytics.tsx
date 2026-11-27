@@ -6,21 +6,65 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-JWJE0S46SE';
 
 // ── GoogleAnalytics Component ─────────────────────────────────────────────────
 // Inject GA4 only when NEXT_PUBLIC_GA_ID is set.
-// Strategy: afterInteractive — safe for static export (Cloudflare Pages).
 // v2.0: △3 三角驗證 GA4 強化 — scroll_depth[25/50/70/90/100] + read_time + internal_link_click + article_slug
+//
+// ── Library loading strategy (2026-11-26 perf tranche, item 3) ──────────────
+// gtag/js is ~179 KiB and cost ~770ms of script evaluation inside the load
+// window (single largest bootup item on article pages). The LIBRARY is now
+// deferred; the MEASUREMENT is not:
+//   - This init script still runs afterInteractive: it defines the dataLayer
+//     stub and registers config + every event listener immediately, so all
+//     calls queue in dataLayer from the first moment (standard gtag async
+//     pattern — the library drains the queue when it arrives).
+//   - The library itself loads on the FIRST of: (a) window load + idle,
+//     (b) first user interaction (pointerdown/keydown/touchstart/scroll),
+//     (c) a hard 4s fallback after init. Pageview therefore fires within
+//     ≤4s of hydration in the worst case, and events can never be lost —
+//     worst case they are delivered a few seconds late.
+// Integrity guardrail: page_view (config, with article_slug), scroll_depth,
+// read_time, internal_link_click / outbound_click / affiliate_click,
+// generate_lead (olive:subscribe) and search (olive:search) must all still
+// reach GA4. Verified pre- and post-deploy by driving a real page load in
+// headless Chrome and asserting the dataLayer entries plus the outgoing
+// /g/collect requests (see perf tranche report, 2026-11-26).
 export default function GoogleAnalytics() {
   if (!GA_ID) return null;
   return (
     <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-        strategy="afterInteractive"
-      />
       <Script id="ga4-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+
+          // ── Deferred library loader (see header comment) ─────────────
+          (function() {
+            var loaded = false;
+            function load() {
+              if (loaded) return;
+              loaded = true;
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
+              document.head.appendChild(s);
+            }
+            // (b) first interaction
+            var evts = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+            var onInteract = function() {
+              evts.forEach(function(e) { window.removeEventListener(e, onInteract); });
+              load();
+            };
+            evts.forEach(function(e) { window.addEventListener(e, onInteract, { passive: true }); });
+            // (a) load + idle
+            var onLoad = function() {
+              if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 1500 });
+              else setTimeout(load, 800);
+            };
+            if (document.readyState === 'complete') onLoad();
+            else window.addEventListener('load', onLoad);
+            // (c) hard fallback
+            setTimeout(load, 4000);
+          })();
 
           // ── Article slug：from /blog/[slug] path (for per-article GA4 drill-down)
           var _slug = (function() {
