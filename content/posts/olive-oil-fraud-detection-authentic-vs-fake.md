@@ -60,7 +60,7 @@ draft: false
 ## 橄欖油詐欺的四大類型
 
 ### 類型一：等級降級（Grade Fraud）
-最普遍的詐欺方式。將「初榨」（Virgin）、「橄欖渣油」（Pomace Oil）甚至精煉橄欖油（Refined Olive Oil）以特級初榨（Extra Virgin）名義販售。這類油在感官上通常較為平淡，苦味與辣感明顯偏弱。
+最普遍的詐欺方式。將「初榨」（Virgin）、「橄欖渣油」（Pomace Oil）甚至精煉橄欖油（Refined Olive Oil）以特級初榨（Extra Virgin）名義販售。這類油在感官上通常較為平淡，苦味與辣感明顯偏弱。要先分清四個等級在 IOC 標準下的正式定義與門檻，才知道「降級」降的是什麼——見[橄欖油分類完整指南](/blog/olive-oil-grades-classification-complete-guide)。
 
 ### 類型二：摻混劣質油（Adulteration）
 以廉價植物油（葵花油、芥花油、玉米油）或精煉橄欖油摻混，再添加葉綠素使顏色更綠，添加β-胡蘿蔔素提升黃色調，以視覺欺騙消費者。
