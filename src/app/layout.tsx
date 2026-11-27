@@ -83,14 +83,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         {/* next/font handles Google Fonts preconnect automatically */}
-        {/* LCP Hero image preload */}
-        <link
-          rel="preload"
-          as="image"
-          href="/hero-grove.webp"
-          type="image/webp"
-          fetchPriority="high"
-        />
+        {/* hero-grove.webp 只在首頁使用（首頁以 next/Image priority 自行
+            preload，另有 _headers 的 Link 標頭兜底）。先前在此全站 preload
+            會讓每篇文章頁都以 high priority 搶下載 252 KiB 首頁圖、與文章
+            封面競速，拖慢文章頁 LCP——2026-11-26 效能基線量測後移除。 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
