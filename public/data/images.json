@@ -72,6 +72,14 @@
     }
   },
   "posts": {
+    "olive-oil-evidence-methodology": {
+      "url": "/images/covers/olive-oil-evidence-methodology.jpg",
+      "alt": "窗邊木桌上的橄欖油瓶、三瓶金色油樣品與攤開的空白筆記本，象徵證據判讀",
+      "source": "custom",
+      "generated_at": "2026-11-26",
+      "quality_score": 9,
+      "prompt": "Kinfolk-style Mediterranean editorial photograph: scholar's desk by a window, dark glass olive oil bottle with completely blank label, three small glass sample vials of golden oil, open blank notebook and pen, olive branch, soft morning light, muted Morandi tones, no text, no people"
+    },
     "polyphenols-sirt1-longevity-2026": {
       "url": "/images/covers/polyphenols-sirt1-longevity-2026.jpg",
       "alt": "攤開的長壽研究期刊、琥珀色多酚萃取液小瓶與橄欖枝",
